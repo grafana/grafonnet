@@ -1,4 +1,4 @@
-local repo = 'github.com/grafana/grafonnet-lib';
+local repo = 'github.com/grafana/grafonnet';
 
 local versionPath(version) =
   std.join('/', [
@@ -40,7 +40,7 @@ local filesFor(version) =
                 subdir: baseDir,
               },
             },
-            version: 'grafonnext',
+            version: 'main',
           },
           {
             source: {

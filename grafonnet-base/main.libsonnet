@@ -25,6 +25,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
               'github.com/grafana/grafonnet-lib/grafonnet/%s' % version,
               '',
               'main.libsonnet',
+              'main',
             )
             + d.package.withUsageTemplate(
               |||
@@ -42,6 +43,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
           'github.com/grafana/grafonnet-lib/grafonnet/%s' % version,
           'Jsonnet library for rendering Grafana resources',
           'main.libsonnet',
+          'main',
         ),
     }
     + veneer
