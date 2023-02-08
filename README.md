@@ -9,7 +9,7 @@ development.
 ## Install
 
 ```console
-jb install github.com/grafana/grafonnet-lib/gen/grafonnet-latest@grafonnext
+jb install github.com/grafana/grafonnet-lib/gen/grafonnet-latest@main
 ```
 
 ## Usage
