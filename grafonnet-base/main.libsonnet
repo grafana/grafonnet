@@ -100,10 +100,10 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         );
 
       parsed.panelLib {
-        [if 'options' in parsed.customLib then 'options']:
-          parsed.customLib.options,
+        [if 'PanelOptions' in parsed.customLib then 'options']:
+          parsed.customLib.PanelOptions,
         [if 'fieldConfig' in parsed.customLib then 'fieldConfig']+: {
-          defaults+: {
+          [if 'defaults' in parsed.customLib.fieldConfig then 'defaults']+: {
             [if 'custom' in parsed.customLib.fieldConfig.defaults then 'custom']:
               parsed.customLib.fieldConfig.defaults.custom,
           },
