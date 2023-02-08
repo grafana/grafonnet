@@ -15,7 +15,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       [schema.info.title]:
         (
           if 'PanelOptions' in schema.components.schemas[schema.info.title].properties
-          then root.panelLib.new(dashboardSchema, schema)
+          then root.panelLib.new(dashboardSchema, schema) + vaneer.panel(schema.info.title)
           else root.coreLib.new(schema)
         )
         + {
@@ -44,7 +44,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
           'main.libsonnet',
         ),
     }
-    + veneer
+    + veneer.core
   ,
 
   docs(main):
