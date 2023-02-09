@@ -22,7 +22,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
           '#':
             d.package.new(
               schema.info.title,
-              'github.com/grafana/grafonnet/grafonnet/%s' % version,
+              'github.com/grafana/grafonnet/gen/grafonnet-%s' % version,
               '',
               'main.libsonnet',
               'main',
@@ -40,7 +40,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       '#':
         d.package.new(
           'grafonnet',
-          'github.com/grafana/grafonnet/grafonnet/%s' % version,
+          'github.com/grafana/grafonnet/gen/grafonnet-%s' % version,
           'Jsonnet library for rendering Grafana resources',
           'main.libsonnet',
           'main',
