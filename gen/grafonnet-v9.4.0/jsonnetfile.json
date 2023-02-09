@@ -3,11 +3,11 @@
     {
       "source": {
         "git": {
-          "remote": "https://github.com/grafana/grafonnet-lib.git",
+          "remote": "https://github.com/grafana/grafonnet.git",
           "subdir": "grafonnet-base"
         }
       },
-      "version": "grafonnext"
+      "version": "main"
     },
     {
       "source": {

@@ -73,7 +73,7 @@ local filesForLatest(version) =
               subdir: versionPath(version),
             },
           },
-          version: 'grafonnext',
+          version: 'main',
         },
       ],
       legacyImports: false,
