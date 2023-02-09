@@ -9,14 +9,14 @@ development.
 ## Install
 
 ```console
-jb install github.com/grafana/grafonnet-lib/gen/grafonnet-latest@main
+jb install github.com/grafana/grafonnet/gen/grafonnet-latest@main
 ```
 
 ## Usage
 
 ```jsonnet
 // dashboard.jsonnet
-local grafonnet = import 'github.com/grafana/grafonnet-lib/gen/grafonnet-latest/main.libsonnet';
+local grafonnet = import 'github.com/grafana/grafonnet/gen/grafonnet-latest/main.libsonnet';
 
 grafonnet.dashboard.new('My Dashboard')
 ```

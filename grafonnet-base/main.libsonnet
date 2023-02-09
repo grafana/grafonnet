@@ -22,14 +22,14 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
           '#':
             d.package.new(
               schema.info.title,
-              'github.com/grafana/grafonnet-lib/grafonnet/%s' % version,
+              'github.com/grafana/grafonnet/grafonnet/%s' % version,
               '',
               'main.libsonnet',
               'main',
             )
             + d.package.withUsageTemplate(
               |||
-                local grafonnet = import 'github.com/grafana/grafonnet-lib/grafonnet/%(version)s/main.libsonnet';
+                local grafonnet = import 'github.com/grafana/grafonnet/gen/grafonnet-%(version)s/main.libsonnet';
                 grafonnet.%(name)s
               ||| % { version: version, name: schema.info.title }
             ),
@@ -40,7 +40,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       '#':
         d.package.new(
           'grafonnet',
-          'github.com/grafana/grafonnet-lib/grafonnet/%s' % version,
+          'github.com/grafana/grafonnet/grafonnet/%s' % version,
           'Jsonnet library for rendering Grafana resources',
           'main.libsonnet',
           'main',
