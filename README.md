@@ -33,4 +33,4 @@ version. These Jsonnet libraries depend on the JSON Schemas from Grok and `grafo
 
 The `grafonnet-base` library provides the logic to convert JSON Schemas to a runtime
 library and adds veneer on top. The veneer is a thin layer on top of the raw library to
-improve the user experiencet.
+improve the user experience.
