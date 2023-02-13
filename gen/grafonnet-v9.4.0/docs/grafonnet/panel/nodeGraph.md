@@ -18,6 +18,7 @@ grafonnet.panel.nodeGraph
 
 ## Index
 
+* [`fn new(title)`](#fn-new)
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withDatasourceMixin(value)`](#fn-withdatasourcemixin)
 * [`fn withDescription(value)`](#fn-withdescription)
@@ -184,6 +185,14 @@ grafonnet.panel.nodeGraph
     * [`fn withOptions(value)`](#fn-transformationsfilterwithoptions)
 
 ## Fields
+
+### fn new
+
+```ts
+new(title)
+```
+
+Creates a new nodeGraph panel with a title.
 
 ### fn withDatasource
 

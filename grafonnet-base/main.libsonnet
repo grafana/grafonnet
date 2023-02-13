@@ -16,13 +16,16 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       general: std.filterMap(
         function(schema)
           !('PanelOptions' in schema.components.schemas[schema.info.title].properties)
+          && !('PanelFieldConfig' in schema.components.schemas[schema.info.title].properties)
           && !('DataQuery' in schema.components.schemas),
         function(schema) root.restructure(schema),
         schemas
       ),
 
       panel: std.filterMap(
-        function(schema) 'PanelOptions' in schema.components.schemas[schema.info.title].properties,
+        function(schema)
+          'PanelOptions' in schema.components.schemas[schema.info.title].properties
+          || 'PanelFieldConfig' in schema.components.schemas[schema.info.title].properties,
         function(schema) root.restructure(schema),
         schemas
       ),

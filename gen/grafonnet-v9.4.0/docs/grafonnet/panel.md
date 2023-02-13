@@ -27,6 +27,7 @@ grafonnet.panel
 * [news](panel/news.md)
 * [nodeGraph](panel/nodeGraph.md)
 * [pieChart](panel/pieChart.md)
+* [row](panel/row.md)
 * [stat](panel/stat.md)
 * [stateTimeline](panel/stateTimeline.md)
 * [statusHistory](panel/statusHistory.md)
