@@ -1,6 +1,7 @@
 local veneer = import './veneer.libsonnet';
 local crdsonnet = import 'github.com/Duologic/crdsonnet/crdsonnet/main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
+local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 
 {
   local root = self,
@@ -12,16 +13,16 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
     )[0];
 
     {
-      [schema.info.title]:
+      [root.formatPanelName(schema.info.title)]:
         (
           if 'PanelOptions' in schema.components.schemas[schema.info.title].properties
-          then root.panelLib.new(dashboardSchema, schema)
-          else root.coreLib.new(schema)
+          then root.panelLib.new(dashboardSchema, root.restructure(schema))
+          else root.coreLib.new(root.restructure(schema))
         )
         + {
           '#':
             d.package.new(
-              schema.info.title,
+              root.formatPanelName(schema.info.title),
               'github.com/grafana/grafonnet/gen/grafonnet-%s' % version,
               '',
               'main.libsonnet',
@@ -31,7 +32,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
               |||
                 local grafonnet = import 'github.com/grafana/grafonnet/gen/grafonnet-%(version)s/main.libsonnet';
                 grafonnet.%(name)s
-              ||| % { version: version, name: schema.info.title }
+              ||| % { version: version, name: root.formatPanelName(schema.info.title) }
             ),
         }
       for schema in schemas
@@ -46,7 +47,29 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
           'main',
         ),
     }
-    + veneer
+    + veneer,
+
+  formatPanelName(name):
+    local woCfg = std.strReplace(name, 'Cfg', '');
+    local split = xtd.camelcase.split(woCfg);
+    std.join(
+      '',
+      [std.asciiLower(split[0])]
+      + split[1:]
+    ),
+
+  restructure(schema):
+    local title = schema.info.title;
+    schema {
+      info+: {
+        title: root.formatPanelName(title),
+      },
+      components+: {
+        schemas+: {
+          [root.formatPanelName(title)]: super[title],
+        },
+      },
+    }
   ,
 
   docs(main):

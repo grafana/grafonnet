@@ -1,18 +1,18 @@
-# package stat
+# package annotationsListPanel
 
 
 
 ## Install
 
 ```
-jb install github.com/grafana/grafonnet-lib/grafonnet/v9.4.0@master
+jb install github.com/grafana/grafonnet/gen/grafonnet-v9.4.0@main
 ```
 
 ## Usage
 
 ```jsonnet
-local grafonnet = import 'github.com/grafana/grafonnet-lib/grafonnet/v9.4.0/main.libsonnet';
-grafonnet.stat
+local grafonnet = import 'github.com/grafana/grafonnet/gen/grafonnet-v9.4.0/main.libsonnet';
+grafonnet.annotationsListPanel
 
 ```
 

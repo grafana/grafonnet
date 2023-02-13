@@ -5,28 +5,34 @@ Jsonnet library for rendering Grafana resources
 ## Install
 
 ```
-jb install github.com/grafana/grafonnet-lib/grafonnet/v9.4.0@master
+jb install github.com/grafana/grafonnet/gen/grafonnet-v9.4.0@main
 ```
 
 ## Usage
 
 ```jsonnet
-local grafonnet = import "github.com/grafana/grafonnet-lib/grafonnet/v9.4.0/main.libsonnet"
+local grafonnet = import "github.com/grafana/grafonnet/gen/grafonnet-v9.4.0/main.libsonnet"
 ```
 
 ## Subpackages
 
-* [annolist](grafonnet/annolist.md)
-* [barchart](grafonnet/barchart.md)
-* [bargauge](grafonnet/bargauge.md)
+* [annotationsListPanel](grafonnet/annotationsListPanel.md)
+* [barChartPanel](grafonnet/barChartPanel.md)
+* [barGaugePanel](grafonnet/barGaugePanel.md)
 * [dashboard](grafonnet/dashboard.md)
-* [dashlist](grafonnet/dashlist.md)
-* [gauge](grafonnet/gauge.md)
-* [histogram](grafonnet/histogram.md)
-* [news](grafonnet/news.md)
-* [piechart](grafonnet/piechart.md)
-* [playlist](grafonnet/playlist.md)
-* [stat](grafonnet/stat.md)
-* [team](grafonnet/team.md)
-* [text](grafonnet/text.md)
+* [dashboardListPanel](grafonnet/dashboardListPanel.md)
+* [gaugePanel](grafonnet/gaugePanel.md)
+* [histogramPanel](grafonnet/histogramPanel.md)
+* [librarypanel](grafonnet/librarypanel.md)
+* [newsPanel](grafonnet/newsPanel.md)
+* [nodeGraphPanel](grafonnet/nodeGraphPanel.md)
+* [phlareDataQuery](grafonnet/phlareDataQuery.md)
+* [pieChartPanel](grafonnet/pieChartPanel.md)
+* [statPanel](grafonnet/statPanel.md)
+* [stateTimelinePanel](grafonnet/stateTimelinePanel.md)
+* [statusHistoryPanel](grafonnet/statusHistoryPanel.md)
+* [tempoDataQuery](grafonnet/tempoDataQuery.md)
+* [testDataDataQuery](grafonnet/testDataDataQuery.md)
+* [textPanel](grafonnet/textPanel.md)
+* [xyChartPanel](grafonnet/xyChartPanel.md)
 

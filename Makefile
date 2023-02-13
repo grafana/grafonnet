@@ -12,6 +12,7 @@ docs:
 		echo "$$f"; \
 		cd "$$f"; \
 		jb install; \
+		jb update; \
 		jsonnet -J vendor -S -m docs -c docs.libsonnet; \
 		cd -; \
 	done;
