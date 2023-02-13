@@ -47,7 +47,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       [k]:
         {
           [schema.info.title]:
-            root.panelLib.new(dashboardSchema, schema)
+            root[k + 'Lib'].new(dashboardSchema, schema)
             + root.packageDocMixin(version, schema.info.title, k + '.')
           for schema in filteredSchemas[k]
         }
@@ -115,6 +115,16 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 
   coreLib: {
     new(schema):
+      crdsonnet.fromOpenAPI(
+        'lib',
+        schema.components.schemas[schema.info.title],
+        schema,
+        render='dynamic',
+      ).lib,
+  },
+
+  queryLib: {
+    new(dashboardSchema, schema):
       crdsonnet.fromOpenAPI(
         'lib',
         schema.components.schemas[schema.info.title],
