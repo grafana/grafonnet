@@ -1,4 +1,4 @@
-# package barGaugePanel
+# package barChart
 
 
 
@@ -12,7 +12,7 @@ jb install github.com/grafana/grafonnet/gen/grafonnet-v9.4.0@main
 
 ```jsonnet
 local grafonnet = import 'github.com/grafana/grafonnet/gen/grafonnet-v9.4.0/main.libsonnet';
-grafonnet.barGaugePanel
+grafonnet.panel.barChart
 
 ```
 

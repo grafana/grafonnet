@@ -1,4 +1,4 @@
-# package histogramPanel
+# package dashboardList
 
 
 
@@ -12,7 +12,7 @@ jb install github.com/grafana/grafonnet/gen/grafonnet-v9.4.0@main
 
 ```jsonnet
 local grafonnet = import 'github.com/grafana/grafonnet/gen/grafonnet-v9.4.0/main.libsonnet';
-grafonnet.histogramPanel
+grafonnet.panel.dashboardList
 
 ```
 

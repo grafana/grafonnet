@@ -12,30 +12,45 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       schemas
     )[0];
 
+    local filteredSchemas = {
+      general: std.filterMap(
+        function(schema)
+          !('PanelOptions' in schema.components.schemas[schema.info.title].properties)
+          && !('DataQuery' in schema.components.schemas),
+        function(schema) root.restructure(schema),
+        schemas
+      ),
+
+      panel: std.filterMap(
+        function(schema) 'PanelOptions' in schema.components.schemas[schema.info.title].properties,
+        function(schema) root.restructure(schema),
+        schemas
+      ),
+
+      query: std.filterMap(
+        function(schema) 'DataQuery' in schema.components.schemas,
+        function(schema) root.restructure(schema),
+        schemas
+      ),
+    };
+
     {
-      [root.formatPanelName(schema.info.title)]:
-        (
-          if 'PanelOptions' in schema.components.schemas[schema.info.title].properties
-          then root.panelLib.new(dashboardSchema, root.restructure(schema))
-          else root.coreLib.new(root.restructure(schema))
-        )
-        + {
-          '#':
-            d.package.new(
-              root.formatPanelName(schema.info.title),
-              'github.com/grafana/grafonnet/gen/grafonnet-%s' % version,
-              '',
-              'main.libsonnet',
-              'main',
-            )
-            + d.package.withUsageTemplate(
-              |||
-                local grafonnet = import 'github.com/grafana/grafonnet/gen/grafonnet-%(version)s/main.libsonnet';
-                grafonnet.%(name)s
-              ||| % { version: version, name: root.formatPanelName(schema.info.title) }
-            ),
+      [schema.info.title]:
+        root.coreLib.new(schema)
+        + root.packageDocMixin(version, schema.info.title, '')
+      for schema in filteredSchemas.general
+    }
+    + {
+      [k]:
+        {
+          [schema.info.title]:
+            root.panelLib.new(dashboardSchema, schema)
+            + root.packageDocMixin(version, schema.info.title, k + '.')
+          for schema in filteredSchemas[k]
         }
-      for schema in schemas
+        + root.packageDocMixin(version, k, '')
+      for k in std.objectFields(filteredSchemas)
+      if k != 'general'
     }
     + {
       '#':
@@ -49,9 +64,29 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
     }
     + veneer,
 
+
+  packageDocMixin(version, name, path):
+    {
+      '#':
+        d.package.new(
+          name,
+          'github.com/grafana/grafonnet/gen/grafonnet-%s' % version,
+          '',
+          'main.libsonnet',
+          'main',
+        )
+        + d.package.withUsageTemplate(
+          |||
+            local grafonnet = import 'github.com/grafana/grafonnet/gen/grafonnet-%(version)s/main.libsonnet';
+            grafonnet.%(path)s%(name)s
+          ||| % { version: version, name: name, path: path }
+        ),
+    },
+
   formatPanelName(name):
-    local woCfg = std.strReplace(name, 'Cfg', '');
-    local split = xtd.camelcase.split(woCfg);
+    local woDataQuery = std.strReplace(name, 'DataQuery', '');
+    local woPanelCfg = std.strReplace(woDataQuery, 'PanelCfg', '');
+    local split = xtd.camelcase.split(woPanelCfg);
     std.join(
       '',
       [std.asciiLower(split[0])]
