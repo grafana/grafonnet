@@ -37,7 +37,7 @@ grafonnet.panel.xyChart
 * [`fn withOptionsMixin(value)`](#fn-withoptionsmixin)
 * [`fn withPluginVersion(value)`](#fn-withpluginversion)
 * [`fn withRepeat(value)`](#fn-withrepeat)
-* [`fn withRepeatDirection(value)`](#fn-withrepeatdirection)
+* [`fn withRepeatDirection(value='h')`](#fn-withrepeatdirection)
 * [`fn withRepeatPanelId(value)`](#fn-withrepeatpanelid)
 * [`fn withTags(value)`](#fn-withtags)
 * [`fn withTagsMixin(value)`](#fn-withtagsmixin)
@@ -52,8 +52,8 @@ grafonnet.panel.xyChart
 * [`fn withTitle(value)`](#fn-withtitle)
 * [`fn withTransformations(value)`](#fn-withtransformations)
 * [`fn withTransformationsMixin(value)`](#fn-withtransformationsmixin)
-* [`fn withTransparent(value)`](#fn-withtransparent)
-* [`fn withType(value)`](#fn-withtype)
+* [`fn withTransparent(value=false)`](#fn-withtransparent)
+* [`fn withType(value='xychart')`](#fn-withtype)
 * [`obj datasource`](#obj-datasource)
   * [`fn withType(value)`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
@@ -87,7 +87,7 @@ grafonnet.panel.xyChart
     * [`obj color`](#obj-fieldconfigdefaultscolor)
       * [`fn withFixedColor(value)`](#fn-fieldconfigdefaultscolorwithfixedcolor)
       * [`fn withMode(value)`](#fn-fieldconfigdefaultscolorwithmode)
-      * [`fn withSeriesBy(value)`](#fn-fieldconfigdefaultscolorwithseriesby)
+      * [`fn withSeriesBy(value='enum[min,max,last]')`](#fn-fieldconfigdefaultscolorwithseriesby)
     * [`obj mappings`](#obj-fieldconfigdefaultsmappings)
       * [`obj RangeMap`](#obj-fieldconfigdefaultsmappingsrangemap)
         * [`fn withOptions(value)`](#fn-fieldconfigdefaultsmappingsrangemapwithoptions)
@@ -121,7 +121,7 @@ grafonnet.panel.xyChart
         * [`fn withOptionsMixin(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapwithoptionsmixin)
         * [`fn withType(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapwithtype)
         * [`obj options`](#obj-fieldconfigdefaultsmappingsspecialvaluemapoptions)
-          * [`fn withMatch(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithmatch)
+          * [`fn withMatch(value='enum[true,false]')`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithmatch)
           * [`fn withPattern(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithpattern)
           * [`fn withResult(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithresult)
           * [`fn withResultMixin(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithresultmixin)
@@ -135,7 +135,7 @@ grafonnet.panel.xyChart
         * [`fn withOptionsMixin(value)`](#fn-fieldconfigdefaultsmappingsvaluemapwithoptionsmixin)
         * [`fn withType(value)`](#fn-fieldconfigdefaultsmappingsvaluemapwithtype)
     * [`obj thresholds`](#obj-fieldconfigdefaultsthresholds)
-      * [`fn withMode(value)`](#fn-fieldconfigdefaultsthresholdswithmode)
+      * [`fn withMode(value='enum[absolute,percentage]')`](#fn-fieldconfigdefaultsthresholdswithmode)
       * [`fn withSteps(value)`](#fn-fieldconfigdefaultsthresholdswithsteps)
       * [`fn withStepsMixin(value)`](#fn-fieldconfigdefaultsthresholdswithstepsmixin)
       * [`obj steps`](#obj-fieldconfigdefaultsthresholdssteps)
@@ -148,142 +148,121 @@ grafonnet.panel.xyChart
     * [`fn withProperties(value)`](#fn-fieldconfigoverrideswithproperties)
     * [`fn withPropertiesMixin(value)`](#fn-fieldconfigoverrideswithpropertiesmixin)
     * [`obj matcher`](#obj-fieldconfigoverridesmatcher)
-      * [`fn withId(value)`](#fn-fieldconfigoverridesmatcherwithid)
+      * [`fn withId(value='')`](#fn-fieldconfigoverridesmatcherwithid)
       * [`fn withOptions(value)`](#fn-fieldconfigoverridesmatcherwithoptions)
     * [`obj properties`](#obj-fieldconfigoverridesproperties)
-      * [`fn withId(value)`](#fn-fieldconfigoverridespropertieswithid)
+      * [`fn withId(value='')`](#fn-fieldconfigoverridespropertieswithid)
       * [`fn withValue(value)`](#fn-fieldconfigoverridespropertieswithvalue)
 * [`obj gridPos`](#obj-gridpos)
-  * [`fn withH(value)`](#fn-gridposwithh)
+  * [`fn withH(value=9)`](#fn-gridposwithh)
   * [`fn withStatic(value)`](#fn-gridposwithstatic)
-  * [`fn withW(value)`](#fn-gridposwithw)
-  * [`fn withX(value)`](#fn-gridposwithx)
-  * [`fn withY(value)`](#fn-gridposwithy)
+  * [`fn withW(value=12)`](#fn-gridposwithw)
+  * [`fn withX(value=0)`](#fn-gridposwithx)
+  * [`fn withY(value=0)`](#fn-gridposwithy)
 * [`obj libraryPanel`](#obj-librarypanel)
   * [`fn withName(value)`](#fn-librarypanelwithname)
   * [`fn withUid(value)`](#fn-librarypanelwithuid)
 * [`obj links`](#obj-links)
-  * [`fn withAsDropdown(value)`](#fn-linkswithasdropdown)
+  * [`fn withAsDropdown(value=false)`](#fn-linkswithasdropdown)
   * [`fn withIcon(value)`](#fn-linkswithicon)
-  * [`fn withIncludeVars(value)`](#fn-linkswithincludevars)
-  * [`fn withKeepTime(value)`](#fn-linkswithkeeptime)
+  * [`fn withIncludeVars(value=false)`](#fn-linkswithincludevars)
+  * [`fn withKeepTime(value=false)`](#fn-linkswithkeeptime)
   * [`fn withTags(value)`](#fn-linkswithtags)
   * [`fn withTagsMixin(value)`](#fn-linkswithtagsmixin)
-  * [`fn withTargetBlank(value)`](#fn-linkswithtargetblank)
+  * [`fn withTargetBlank(value=false)`](#fn-linkswithtargetblank)
   * [`fn withTitle(value)`](#fn-linkswithtitle)
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
-  * [`fn withType(value)`](#fn-linkswithtype)
+  * [`fn withType(value='enum[link,dashboards]')`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
 * [`obj options`](#obj-options)
   * [`fn withDims(value)`](#fn-optionswithdims)
   * [`fn withDimsMixin(value)`](#fn-optionswithdimsmixin)
-  * [`fn withOptionsWithLegend(value)`](#fn-optionswithoptionswithlegend)
-  * [`fn withOptionsWithLegendMixin(value)`](#fn-optionswithoptionswithlegendmixin)
-  * [`fn withOptionsWithTooltip(value)`](#fn-optionswithoptionswithtooltip)
-  * [`fn withOptionsWithTooltipMixin(value)`](#fn-optionswithoptionswithtooltipmixin)
+  * [`fn withLegend(value)`](#fn-optionswithlegend)
+  * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
   * [`fn withSeries(value)`](#fn-optionswithseries)
-  * [`fn withSeriesMapping(value)`](#fn-optionswithseriesmapping)
+  * [`fn withSeriesMapping(value='enum[auto,manual]')`](#fn-optionswithseriesmapping)
   * [`fn withSeriesMixin(value)`](#fn-optionswithseriesmixin)
-  * [`obj OptionsWithLegend`](#obj-optionsoptionswithlegend)
-    * [`fn withLegend(value)`](#fn-optionsoptionswithlegendwithlegend)
-    * [`fn withLegendMixin(value)`](#fn-optionsoptionswithlegendwithlegendmixin)
-    * [`obj legend`](#obj-optionsoptionswithlegendlegend)
-      * [`fn withAsTable(value)`](#fn-optionsoptionswithlegendlegendwithastable)
-      * [`fn withCalcs(value)`](#fn-optionsoptionswithlegendlegendwithcalcs)
-      * [`fn withCalcsMixin(value)`](#fn-optionsoptionswithlegendlegendwithcalcsmixin)
-      * [`fn withDisplayMode(value)`](#fn-optionsoptionswithlegendlegendwithdisplaymode)
-      * [`fn withIsVisible(value)`](#fn-optionsoptionswithlegendlegendwithisvisible)
-      * [`fn withPlacement(value)`](#fn-optionsoptionswithlegendlegendwithplacement)
-      * [`fn withShowLegend(value)`](#fn-optionsoptionswithlegendlegendwithshowlegend)
-      * [`fn withSortBy(value)`](#fn-optionsoptionswithlegendlegendwithsortby)
-      * [`fn withSortDesc(value)`](#fn-optionsoptionswithlegendlegendwithsortdesc)
-      * [`fn withWidth(value)`](#fn-optionsoptionswithlegendlegendwithwidth)
-  * [`obj OptionsWithTooltip`](#obj-optionsoptionswithtooltip)
-    * [`fn withTooltip(value)`](#fn-optionsoptionswithtooltipwithtooltip)
-    * [`fn withTooltipMixin(value)`](#fn-optionsoptionswithtooltipwithtooltipmixin)
-    * [`obj tooltip`](#obj-optionsoptionswithtooltiptooltip)
-      * [`fn withMode(value)`](#fn-optionsoptionswithtooltiptooltipwithmode)
-      * [`fn withSort(value)`](#fn-optionsoptionswithtooltiptooltipwithsort)
+  * [`fn withTooltip(value)`](#fn-optionswithtooltip)
+  * [`fn withTooltipMixin(value)`](#fn-optionswithtooltipmixin)
   * [`obj dims`](#obj-optionsdims)
     * [`fn withExclude(value)`](#fn-optionsdimswithexclude)
     * [`fn withExcludeMixin(value)`](#fn-optionsdimswithexcludemixin)
     * [`fn withFrame(value)`](#fn-optionsdimswithframe)
     * [`fn withX(value)`](#fn-optionsdimswithx)
+  * [`obj legend`](#obj-optionslegend)
+    * [`fn withAsTable(value)`](#fn-optionslegendwithastable)
+    * [`fn withCalcs(value)`](#fn-optionslegendwithcalcs)
+    * [`fn withCalcsMixin(value)`](#fn-optionslegendwithcalcsmixin)
+    * [`fn withDisplayMode(value='enum[list,table,hidden]')`](#fn-optionslegendwithdisplaymode)
+    * [`fn withIsVisible(value)`](#fn-optionslegendwithisvisible)
+    * [`fn withPlacement(value='enum[bottom,right]')`](#fn-optionslegendwithplacement)
+    * [`fn withShowLegend(value)`](#fn-optionslegendwithshowlegend)
+    * [`fn withSortBy(value)`](#fn-optionslegendwithsortby)
+    * [`fn withSortDesc(value)`](#fn-optionslegendwithsortdesc)
+    * [`fn withWidth(value)`](#fn-optionslegendwithwidth)
   * [`obj series`](#obj-optionsseries)
+    * [`fn withAxisCenteredZero(value)`](#fn-optionsserieswithaxiscenteredzero)
+    * [`fn withAxisColorMode(value='enum[text,series]')`](#fn-optionsserieswithaxiscolormode)
+    * [`fn withAxisGridShow(value)`](#fn-optionsserieswithaxisgridshow)
+    * [`fn withAxisLabel(value)`](#fn-optionsserieswithaxislabel)
+    * [`fn withAxisPlacement(value='enum[auto,top,right,bottom,left,hidden]')`](#fn-optionsserieswithaxisplacement)
+    * [`fn withAxisSoftMax(value)`](#fn-optionsserieswithaxissoftmax)
+    * [`fn withAxisSoftMin(value)`](#fn-optionsserieswithaxissoftmin)
+    * [`fn withAxisWidth(value)`](#fn-optionsserieswithaxiswidth)
+    * [`fn withHideFrom(value)`](#fn-optionsserieswithhidefrom)
+    * [`fn withHideFromMixin(value)`](#fn-optionsserieswithhidefrommixin)
+    * [`fn withLabel(value='enum[auto,never,always]')`](#fn-optionsserieswithlabel)
+    * [`fn withLabelValue(value)`](#fn-optionsserieswithlabelvalue)
+    * [`fn withLabelValueMixin(value)`](#fn-optionsserieswithlabelvaluemixin)
+    * [`fn withLineColor(value)`](#fn-optionsserieswithlinecolor)
+    * [`fn withLineColorMixin(value)`](#fn-optionsserieswithlinecolormixin)
+    * [`fn withLineStyle(value)`](#fn-optionsserieswithlinestyle)
+    * [`fn withLineStyleMixin(value)`](#fn-optionsserieswithlinestylemixin)
+    * [`fn withLineWidth(value)`](#fn-optionsserieswithlinewidth)
     * [`fn withName(value)`](#fn-optionsserieswithname)
+    * [`fn withPointColor(value)`](#fn-optionsserieswithpointcolor)
+    * [`fn withPointColorMixin(value)`](#fn-optionsserieswithpointcolormixin)
+    * [`fn withPointSize(value)`](#fn-optionsserieswithpointsize)
+    * [`fn withPointSizeMixin(value)`](#fn-optionsserieswithpointsizemixin)
+    * [`fn withScaleDistribution(value)`](#fn-optionsserieswithscaledistribution)
+    * [`fn withScaleDistributionMixin(value)`](#fn-optionsserieswithscaledistributionmixin)
+    * [`fn withShow(value='enum[points,lines,points+lines]')`](#fn-optionsserieswithshow)
     * [`fn withX(value)`](#fn-optionsserieswithx)
     * [`fn withY(value)`](#fn-optionsserieswithy)
-    * [`obj ScatterFieldConfig`](#obj-optionsseriesscatterfieldconfig)
-      * [`fn withLabel(value)`](#fn-optionsseriesscatterfieldconfigwithlabel)
-      * [`fn withLabelValue(value)`](#fn-optionsseriesscatterfieldconfigwithlabelvalue)
-      * [`fn withLabelValueMixin(value)`](#fn-optionsseriesscatterfieldconfigwithlabelvaluemixin)
-      * [`fn withLineColor(value)`](#fn-optionsseriesscatterfieldconfigwithlinecolor)
-      * [`fn withLineColorMixin(value)`](#fn-optionsseriesscatterfieldconfigwithlinecolormixin)
-      * [`fn withLineStyle(value)`](#fn-optionsseriesscatterfieldconfigwithlinestyle)
-      * [`fn withLineStyleMixin(value)`](#fn-optionsseriesscatterfieldconfigwithlinestylemixin)
-      * [`fn withLineWidth(value)`](#fn-optionsseriesscatterfieldconfigwithlinewidth)
-      * [`fn withPointColor(value)`](#fn-optionsseriesscatterfieldconfigwithpointcolor)
-      * [`fn withPointColorMixin(value)`](#fn-optionsseriesscatterfieldconfigwithpointcolormixin)
-      * [`fn withPointSize(value)`](#fn-optionsseriesscatterfieldconfigwithpointsize)
-      * [`fn withPointSizeMixin(value)`](#fn-optionsseriesscatterfieldconfigwithpointsizemixin)
-      * [`fn withShow(value)`](#fn-optionsseriesscatterfieldconfigwithshow)
-      * [`obj AxisConfig`](#obj-optionsseriesscatterfieldconfigaxisconfig)
-        * [`fn withAxisCenteredZero(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithaxiscenteredzero)
-        * [`fn withAxisColorMode(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithaxiscolormode)
-        * [`fn withAxisGridShow(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithaxisgridshow)
-        * [`fn withAxisLabel(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithaxislabel)
-        * [`fn withAxisPlacement(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithaxisplacement)
-        * [`fn withAxisSoftMax(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithaxissoftmax)
-        * [`fn withAxisSoftMin(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithaxissoftmin)
-        * [`fn withAxisWidth(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithaxiswidth)
-        * [`fn withScaleDistribution(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithscaledistribution)
-        * [`fn withScaleDistributionMixin(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithscaledistributionmixin)
-        * [`obj scaleDistribution`](#obj-optionsseriesscatterfieldconfigaxisconfigscaledistribution)
-          * [`fn withLinearThreshold(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigscaledistributionwithlinearthreshold)
-          * [`fn withLog(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigscaledistributionwithlog)
-          * [`fn withType(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigscaledistributionwithtype)
-      * [`obj HideableFieldConfig`](#obj-optionsseriesscatterfieldconfighideablefieldconfig)
-        * [`fn withHideFrom(value)`](#fn-optionsseriesscatterfieldconfighideablefieldconfigwithhidefrom)
-        * [`fn withHideFromMixin(value)`](#fn-optionsseriesscatterfieldconfighideablefieldconfigwithhidefrommixin)
-        * [`obj hideFrom`](#obj-optionsseriesscatterfieldconfighideablefieldconfighidefrom)
-          * [`fn withLegend(value)`](#fn-optionsseriesscatterfieldconfighideablefieldconfighidefromwithlegend)
-          * [`fn withTooltip(value)`](#fn-optionsseriesscatterfieldconfighideablefieldconfighidefromwithtooltip)
-          * [`fn withViz(value)`](#fn-optionsseriesscatterfieldconfighideablefieldconfighidefromwithviz)
-      * [`obj labelValue`](#obj-optionsseriesscatterfieldconfiglabelvalue)
-        * [`fn withBaseDimensionConfig(value)`](#fn-optionsseriesscatterfieldconfiglabelvaluewithbasedimensionconfig)
-        * [`fn withBaseDimensionConfigMixin(value)`](#fn-optionsseriesscatterfieldconfiglabelvaluewithbasedimensionconfigmixin)
-        * [`fn withMode(value)`](#fn-optionsseriesscatterfieldconfiglabelvaluewithmode)
-        * [`obj BaseDimensionConfig`](#obj-optionsseriesscatterfieldconfiglabelvaluebasedimensionconfig)
-          * [`fn withField(value)`](#fn-optionsseriesscatterfieldconfiglabelvaluebasedimensionconfigwithfield)
-          * [`fn withFixed(value)`](#fn-optionsseriesscatterfieldconfiglabelvaluebasedimensionconfigwithfixed)
-          * [`fn withFixedMixin(value)`](#fn-optionsseriesscatterfieldconfiglabelvaluebasedimensionconfigwithfixedmixin)
-      * [`obj lineColor`](#obj-optionsseriesscatterfieldconfiglinecolor)
-        * [`fn withBaseDimensionConfig(value)`](#fn-optionsseriesscatterfieldconfiglinecolorwithbasedimensionconfig)
-        * [`fn withBaseDimensionConfigMixin(value)`](#fn-optionsseriesscatterfieldconfiglinecolorwithbasedimensionconfigmixin)
-        * [`obj BaseDimensionConfig`](#obj-optionsseriesscatterfieldconfiglinecolorbasedimensionconfig)
-          * [`fn withField(value)`](#fn-optionsseriesscatterfieldconfiglinecolorbasedimensionconfigwithfield)
-          * [`fn withFixed(value)`](#fn-optionsseriesscatterfieldconfiglinecolorbasedimensionconfigwithfixed)
-          * [`fn withFixedMixin(value)`](#fn-optionsseriesscatterfieldconfiglinecolorbasedimensionconfigwithfixedmixin)
-      * [`obj lineStyle`](#obj-optionsseriesscatterfieldconfiglinestyle)
-        * [`fn withDash(value)`](#fn-optionsseriesscatterfieldconfiglinestylewithdash)
-        * [`fn withDashMixin(value)`](#fn-optionsseriesscatterfieldconfiglinestylewithdashmixin)
-        * [`fn withFill(value)`](#fn-optionsseriesscatterfieldconfiglinestylewithfill)
-      * [`obj pointColor`](#obj-optionsseriesscatterfieldconfigpointcolor)
-        * [`fn withBaseDimensionConfig(value)`](#fn-optionsseriesscatterfieldconfigpointcolorwithbasedimensionconfig)
-        * [`fn withBaseDimensionConfigMixin(value)`](#fn-optionsseriesscatterfieldconfigpointcolorwithbasedimensionconfigmixin)
-        * [`obj BaseDimensionConfig`](#obj-optionsseriesscatterfieldconfigpointcolorbasedimensionconfig)
-          * [`fn withField(value)`](#fn-optionsseriesscatterfieldconfigpointcolorbasedimensionconfigwithfield)
-          * [`fn withFixed(value)`](#fn-optionsseriesscatterfieldconfigpointcolorbasedimensionconfigwithfixed)
-          * [`fn withFixedMixin(value)`](#fn-optionsseriesscatterfieldconfigpointcolorbasedimensionconfigwithfixedmixin)
-      * [`obj pointSize`](#obj-optionsseriesscatterfieldconfigpointsize)
-        * [`fn withBaseDimensionConfig(value)`](#fn-optionsseriesscatterfieldconfigpointsizewithbasedimensionconfig)
-        * [`fn withBaseDimensionConfigMixin(value)`](#fn-optionsseriesscatterfieldconfigpointsizewithbasedimensionconfigmixin)
-        * [`fn withMax(value)`](#fn-optionsseriesscatterfieldconfigpointsizewithmax)
-        * [`fn withMin(value)`](#fn-optionsseriesscatterfieldconfigpointsizewithmin)
-        * [`obj BaseDimensionConfig`](#obj-optionsseriesscatterfieldconfigpointsizebasedimensionconfig)
-          * [`fn withField(value)`](#fn-optionsseriesscatterfieldconfigpointsizebasedimensionconfigwithfield)
-          * [`fn withFixed(value)`](#fn-optionsseriesscatterfieldconfigpointsizebasedimensionconfigwithfixed)
-          * [`fn withFixedMixin(value)`](#fn-optionsseriesscatterfieldconfigpointsizebasedimensionconfigwithfixedmixin)
+    * [`obj hideFrom`](#obj-optionsserieshidefrom)
+      * [`fn withLegend(value)`](#fn-optionsserieshidefromwithlegend)
+      * [`fn withTooltip(value)`](#fn-optionsserieshidefromwithtooltip)
+      * [`fn withViz(value)`](#fn-optionsserieshidefromwithviz)
+    * [`obj labelValue`](#obj-optionsserieslabelvalue)
+      * [`fn withField(value)`](#fn-optionsserieslabelvaluewithfield)
+      * [`fn withFixed(value)`](#fn-optionsserieslabelvaluewithfixed)
+      * [`fn withFixedMixin(value)`](#fn-optionsserieslabelvaluewithfixedmixin)
+      * [`fn withMode(value='enum[fixed,field,template]')`](#fn-optionsserieslabelvaluewithmode)
+    * [`obj lineColor`](#obj-optionsserieslinecolor)
+      * [`fn withField(value)`](#fn-optionsserieslinecolorwithfield)
+      * [`fn withFixed(value)`](#fn-optionsserieslinecolorwithfixed)
+      * [`fn withFixedMixin(value)`](#fn-optionsserieslinecolorwithfixedmixin)
+    * [`obj lineStyle`](#obj-optionsserieslinestyle)
+      * [`fn withDash(value)`](#fn-optionsserieslinestylewithdash)
+      * [`fn withDashMixin(value)`](#fn-optionsserieslinestylewithdashmixin)
+      * [`fn withFill(value='enum[solid,dash,dot,square]')`](#fn-optionsserieslinestylewithfill)
+    * [`obj pointColor`](#obj-optionsseriespointcolor)
+      * [`fn withField(value)`](#fn-optionsseriespointcolorwithfield)
+      * [`fn withFixed(value)`](#fn-optionsseriespointcolorwithfixed)
+      * [`fn withFixedMixin(value)`](#fn-optionsseriespointcolorwithfixedmixin)
+    * [`obj pointSize`](#obj-optionsseriespointsize)
+      * [`fn withField(value)`](#fn-optionsseriespointsizewithfield)
+      * [`fn withFixed(value)`](#fn-optionsseriespointsizewithfixed)
+      * [`fn withFixedMixin(value)`](#fn-optionsseriespointsizewithfixedmixin)
+      * [`fn withMax(value)`](#fn-optionsseriespointsizewithmax)
+      * [`fn withMin(value)`](#fn-optionsseriespointsizewithmin)
+    * [`obj scaleDistribution`](#obj-optionsseriesscaledistribution)
+      * [`fn withLinearThreshold(value)`](#fn-optionsseriesscaledistributionwithlinearthreshold)
+      * [`fn withLog(value)`](#fn-optionsseriesscaledistributionwithlog)
+      * [`fn withType(value='enum[linear,log,ordinal,symlog]')`](#fn-optionsseriesscaledistributionwithtype)
+  * [`obj tooltip`](#obj-optionstooltip)
+    * [`fn withMode(value='enum[single,multi,none]')`](#fn-optionstooltipwithmode)
+    * [`fn withSort(value='enum[asc,desc,none]')`](#fn-optionstooltipwithsort)
 * [`obj transformations`](#obj-transformations)
   * [`fn withDisabled(value)`](#fn-transformationswithdisabled)
   * [`fn withFilter(value)`](#fn-transformationswithfilter)
@@ -291,7 +270,7 @@ grafonnet.panel.xyChart
   * [`fn withId(value)`](#fn-transformationswithid)
   * [`fn withOptions(value)`](#fn-transformationswithoptions)
   * [`obj filter`](#obj-transformationsfilter)
-    * [`fn withId(value)`](#fn-transformationsfilterwithid)
+    * [`fn withId(value='')`](#fn-transformationsfilterwithid)
     * [`fn withOptions(value)`](#fn-transformationsfilterwithoptions)
 
 ## Fields
@@ -456,7 +435,7 @@ Name of template variable to repeat for.
 ### fn withRepeatDirection
 
 ```ts
-withRepeatDirection(value)
+withRepeatDirection(value='h')
 ```
 
 Direction to repeat in if 'repeat' is set.
@@ -580,7 +559,7 @@ withTransformationsMixin(value)
 ### fn withTransparent
 
 ```ts
-withTransparent(value)
+withTransparent(value=false)
 ```
 
 Whether to display the panel without a background.
@@ -588,10 +567,10 @@ Whether to display the panel without a background.
 ### fn withType
 
 ```ts
-withType(value)
+withType(value='xychart')
 ```
 
-The panel plugin type id. May not be empty.
+
 
 ### obj datasource
 
@@ -847,7 +826,7 @@ The main color scheme mode
 ###### fn fieldConfig.defaults.color.withSeriesBy
 
 ```ts
-withSeriesBy(value)
+withSeriesBy(value='enum[min,max,last]')
 ```
 
 TODO docs
@@ -1074,7 +1053,7 @@ withType(value)
 ######## fn fieldConfig.defaults.mappings.SpecialValueMap.options.withMatch
 
 ```ts
-withMatch(value)
+withMatch(value='enum[true,false]')
 ```
 
 
@@ -1171,7 +1150,7 @@ withType(value)
 ###### fn fieldConfig.defaults.thresholds.withMode
 
 ```ts
-withMode(value)
+withMode(value='enum[absolute,percentage]')
 ```
 
 
@@ -1263,7 +1242,7 @@ withPropertiesMixin(value)
 ###### fn fieldConfig.overrides.matcher.withId
 
 ```ts
-withId(value)
+withId(value='')
 ```
 
 
@@ -1282,7 +1261,7 @@ withOptions(value)
 ###### fn fieldConfig.overrides.properties.withId
 
 ```ts
-withId(value)
+withId(value='')
 ```
 
 
@@ -1301,7 +1280,7 @@ withValue(value)
 #### fn gridPos.withH
 
 ```ts
-withH(value)
+withH(value=9)
 ```
 
 Panel
@@ -1317,7 +1296,7 @@ true if fixed
 #### fn gridPos.withW
 
 ```ts
-withW(value)
+withW(value=12)
 ```
 
 Panel
@@ -1325,7 +1304,7 @@ Panel
 #### fn gridPos.withX
 
 ```ts
-withX(value)
+withX(value=0)
 ```
 
 Panel x
@@ -1333,7 +1312,7 @@ Panel x
 #### fn gridPos.withY
 
 ```ts
-withY(value)
+withY(value=0)
 ```
 
 Panel y
@@ -1363,7 +1342,7 @@ withUid(value)
 #### fn links.withAsDropdown
 
 ```ts
-withAsDropdown(value)
+withAsDropdown(value=false)
 ```
 
 
@@ -1379,7 +1358,7 @@ withIcon(value)
 #### fn links.withIncludeVars
 
 ```ts
-withIncludeVars(value)
+withIncludeVars(value=false)
 ```
 
 
@@ -1387,7 +1366,7 @@ withIncludeVars(value)
 #### fn links.withKeepTime
 
 ```ts
-withKeepTime(value)
+withKeepTime(value=false)
 ```
 
 
@@ -1411,7 +1390,7 @@ withTagsMixin(value)
 #### fn links.withTargetBlank
 
 ```ts
-withTargetBlank(value)
+withTargetBlank(value=false)
 ```
 
 
@@ -1435,7 +1414,7 @@ withTooltip(value)
 #### fn links.withType
 
 ```ts
-withType(value)
+withType(value='enum[link,dashboards]')
 ```
 
 TODO docs
@@ -1467,34 +1446,18 @@ withDimsMixin(value)
 
 
 
-#### fn options.withOptionsWithLegend
+#### fn options.withLegend
 
 ```ts
-withOptionsWithLegend(value)
+withLegend(value)
 ```
 
 TODO docs
 
-#### fn options.withOptionsWithLegendMixin
+#### fn options.withLegendMixin
 
 ```ts
-withOptionsWithLegendMixin(value)
-```
-
-TODO docs
-
-#### fn options.withOptionsWithTooltip
-
-```ts
-withOptionsWithTooltip(value)
-```
-
-TODO docs
-
-#### fn options.withOptionsWithTooltipMixin
-
-```ts
-withOptionsWithTooltipMixin(value)
+withLegendMixin(value)
 ```
 
 TODO docs
@@ -1510,7 +1473,7 @@ withSeries(value)
 #### fn options.withSeriesMapping
 
 ```ts
-withSeriesMapping(value)
+withSeriesMapping(value='enum[auto,manual]')
 ```
 
 
@@ -1523,113 +1486,7 @@ withSeriesMixin(value)
 
 
 
-#### obj options.OptionsWithLegend
-
-
-##### fn options.OptionsWithLegend.withLegend
-
-```ts
-withLegend(value)
-```
-
-TODO docs
-
-##### fn options.OptionsWithLegend.withLegendMixin
-
-```ts
-withLegendMixin(value)
-```
-
-TODO docs
-
-##### obj options.OptionsWithLegend.legend
-
-
-###### fn options.OptionsWithLegend.legend.withAsTable
-
-```ts
-withAsTable(value)
-```
-
-
-
-###### fn options.OptionsWithLegend.legend.withCalcs
-
-```ts
-withCalcs(value)
-```
-
-
-
-###### fn options.OptionsWithLegend.legend.withCalcsMixin
-
-```ts
-withCalcsMixin(value)
-```
-
-
-
-###### fn options.OptionsWithLegend.legend.withDisplayMode
-
-```ts
-withDisplayMode(value)
-```
-
-TODO docs
-Note: "hidden" needs to remain as an option for plugins compatibility
-
-###### fn options.OptionsWithLegend.legend.withIsVisible
-
-```ts
-withIsVisible(value)
-```
-
-
-
-###### fn options.OptionsWithLegend.legend.withPlacement
-
-```ts
-withPlacement(value)
-```
-
-TODO docs
-
-###### fn options.OptionsWithLegend.legend.withShowLegend
-
-```ts
-withShowLegend(value)
-```
-
-
-
-###### fn options.OptionsWithLegend.legend.withSortBy
-
-```ts
-withSortBy(value)
-```
-
-
-
-###### fn options.OptionsWithLegend.legend.withSortDesc
-
-```ts
-withSortDesc(value)
-```
-
-
-
-###### fn options.OptionsWithLegend.legend.withWidth
-
-```ts
-withWidth(value)
-```
-
-
-
-#### obj options.OptionsWithTooltip
-
-
-##### fn options.OptionsWithTooltip.withTooltip
+#### fn options.withTooltip
 
 ```ts
 withTooltip(value)
@@ -1637,29 +1494,10 @@ withTooltip(value)
 
 TODO docs
 
-##### fn options.OptionsWithTooltip.withTooltipMixin
+#### fn options.withTooltipMixin
 
 ```ts
 withTooltipMixin(value)
-```
-
-TODO docs
-
-##### obj options.OptionsWithTooltip.tooltip
-
-
-###### fn options.OptionsWithTooltip.tooltip.withMode
-
-```ts
-withMode(value)
-```
-
-TODO docs
-
-###### fn options.OptionsWithTooltip.tooltip.withSort
-
-```ts
-withSort(value)
 ```
 
 TODO docs
@@ -1699,13 +1537,297 @@ withX(value)
 
 
 
+#### obj options.legend
+
+
+##### fn options.legend.withAsTable
+
+```ts
+withAsTable(value)
+```
+
+
+
+##### fn options.legend.withCalcs
+
+```ts
+withCalcs(value)
+```
+
+
+
+##### fn options.legend.withCalcsMixin
+
+```ts
+withCalcsMixin(value)
+```
+
+
+
+##### fn options.legend.withDisplayMode
+
+```ts
+withDisplayMode(value='enum[list,table,hidden]')
+```
+
+TODO docs
+Note: "hidden" needs to remain as an option for plugins compatibility
+
+##### fn options.legend.withIsVisible
+
+```ts
+withIsVisible(value)
+```
+
+
+
+##### fn options.legend.withPlacement
+
+```ts
+withPlacement(value='enum[bottom,right]')
+```
+
+TODO docs
+
+##### fn options.legend.withShowLegend
+
+```ts
+withShowLegend(value)
+```
+
+
+
+##### fn options.legend.withSortBy
+
+```ts
+withSortBy(value)
+```
+
+
+
+##### fn options.legend.withSortDesc
+
+```ts
+withSortDesc(value)
+```
+
+
+
+##### fn options.legend.withWidth
+
+```ts
+withWidth(value)
+```
+
+
+
 #### obj options.series
+
+
+##### fn options.series.withAxisCenteredZero
+
+```ts
+withAxisCenteredZero(value)
+```
+
+
+
+##### fn options.series.withAxisColorMode
+
+```ts
+withAxisColorMode(value='enum[text,series]')
+```
+
+TODO docs
+
+##### fn options.series.withAxisGridShow
+
+```ts
+withAxisGridShow(value)
+```
+
+
+
+##### fn options.series.withAxisLabel
+
+```ts
+withAxisLabel(value)
+```
+
+
+
+##### fn options.series.withAxisPlacement
+
+```ts
+withAxisPlacement(value='enum[auto,top,right,bottom,left,hidden]')
+```
+
+TODO docs
+
+##### fn options.series.withAxisSoftMax
+
+```ts
+withAxisSoftMax(value)
+```
+
+
+
+##### fn options.series.withAxisSoftMin
+
+```ts
+withAxisSoftMin(value)
+```
+
+
+
+##### fn options.series.withAxisWidth
+
+```ts
+withAxisWidth(value)
+```
+
+
+
+##### fn options.series.withHideFrom
+
+```ts
+withHideFrom(value)
+```
+
+TODO docs
+
+##### fn options.series.withHideFromMixin
+
+```ts
+withHideFromMixin(value)
+```
+
+TODO docs
+
+##### fn options.series.withLabel
+
+```ts
+withLabel(value='enum[auto,never,always]')
+```
+
+TODO docs
+
+##### fn options.series.withLabelValue
+
+```ts
+withLabelValue(value)
+```
+
+
+
+##### fn options.series.withLabelValueMixin
+
+```ts
+withLabelValueMixin(value)
+```
+
+
+
+##### fn options.series.withLineColor
+
+```ts
+withLineColor(value)
+```
+
+This is actually an empty interface used mainly for naming?
+
+##### fn options.series.withLineColorMixin
+
+```ts
+withLineColorMixin(value)
+```
+
+This is actually an empty interface used mainly for naming?
+
+##### fn options.series.withLineStyle
+
+```ts
+withLineStyle(value)
+```
+
+TODO docs
+
+##### fn options.series.withLineStyleMixin
+
+```ts
+withLineStyleMixin(value)
+```
+
+TODO docs
+
+##### fn options.series.withLineWidth
+
+```ts
+withLineWidth(value)
+```
+
 
 
 ##### fn options.series.withName
 
 ```ts
 withName(value)
+```
+
+
+
+##### fn options.series.withPointColor
+
+```ts
+withPointColor(value)
+```
+
+This is actually an empty interface used mainly for naming?
+
+##### fn options.series.withPointColorMixin
+
+```ts
+withPointColorMixin(value)
+```
+
+This is actually an empty interface used mainly for naming?
+
+##### fn options.series.withPointSize
+
+```ts
+withPointSize(value)
+```
+
+
+
+##### fn options.series.withPointSizeMixin
+
+```ts
+withPointSizeMixin(value)
+```
+
+
+
+##### fn options.series.withScaleDistribution
+
+```ts
+withScaleDistribution(value)
+```
+
+TODO docs
+
+##### fn options.series.withScaleDistributionMixin
+
+```ts
+withScaleDistributionMixin(value)
+```
+
+TODO docs
+
+##### fn options.series.withShow
+
+```ts
+withShow(value='enum[points,lines,points+lines]')
 ```
 
 
@@ -1726,246 +1848,10 @@ withY(value)
 
 
 
-##### obj options.series.ScatterFieldConfig
+##### obj options.series.hideFrom
 
 
-###### fn options.series.ScatterFieldConfig.withLabel
-
-```ts
-withLabel(value)
-```
-
-TODO docs
-
-###### fn options.series.ScatterFieldConfig.withLabelValue
-
-```ts
-withLabelValue(value)
-```
-
-
-
-###### fn options.series.ScatterFieldConfig.withLabelValueMixin
-
-```ts
-withLabelValueMixin(value)
-```
-
-
-
-###### fn options.series.ScatterFieldConfig.withLineColor
-
-```ts
-withLineColor(value)
-```
-
-This is actually an empty interface used mainly for naming?
-
-###### fn options.series.ScatterFieldConfig.withLineColorMixin
-
-```ts
-withLineColorMixin(value)
-```
-
-This is actually an empty interface used mainly for naming?
-
-###### fn options.series.ScatterFieldConfig.withLineStyle
-
-```ts
-withLineStyle(value)
-```
-
-TODO docs
-
-###### fn options.series.ScatterFieldConfig.withLineStyleMixin
-
-```ts
-withLineStyleMixin(value)
-```
-
-TODO docs
-
-###### fn options.series.ScatterFieldConfig.withLineWidth
-
-```ts
-withLineWidth(value)
-```
-
-
-
-###### fn options.series.ScatterFieldConfig.withPointColor
-
-```ts
-withPointColor(value)
-```
-
-This is actually an empty interface used mainly for naming?
-
-###### fn options.series.ScatterFieldConfig.withPointColorMixin
-
-```ts
-withPointColorMixin(value)
-```
-
-This is actually an empty interface used mainly for naming?
-
-###### fn options.series.ScatterFieldConfig.withPointSize
-
-```ts
-withPointSize(value)
-```
-
-
-
-###### fn options.series.ScatterFieldConfig.withPointSizeMixin
-
-```ts
-withPointSizeMixin(value)
-```
-
-
-
-###### fn options.series.ScatterFieldConfig.withShow
-
-```ts
-withShow(value)
-```
-
-
-
-###### obj options.series.ScatterFieldConfig.AxisConfig
-
-
-####### fn options.series.ScatterFieldConfig.AxisConfig.withAxisCenteredZero
-
-```ts
-withAxisCenteredZero(value)
-```
-
-
-
-####### fn options.series.ScatterFieldConfig.AxisConfig.withAxisColorMode
-
-```ts
-withAxisColorMode(value)
-```
-
-TODO docs
-
-####### fn options.series.ScatterFieldConfig.AxisConfig.withAxisGridShow
-
-```ts
-withAxisGridShow(value)
-```
-
-
-
-####### fn options.series.ScatterFieldConfig.AxisConfig.withAxisLabel
-
-```ts
-withAxisLabel(value)
-```
-
-
-
-####### fn options.series.ScatterFieldConfig.AxisConfig.withAxisPlacement
-
-```ts
-withAxisPlacement(value)
-```
-
-TODO docs
-
-####### fn options.series.ScatterFieldConfig.AxisConfig.withAxisSoftMax
-
-```ts
-withAxisSoftMax(value)
-```
-
-
-
-####### fn options.series.ScatterFieldConfig.AxisConfig.withAxisSoftMin
-
-```ts
-withAxisSoftMin(value)
-```
-
-
-
-####### fn options.series.ScatterFieldConfig.AxisConfig.withAxisWidth
-
-```ts
-withAxisWidth(value)
-```
-
-
-
-####### fn options.series.ScatterFieldConfig.AxisConfig.withScaleDistribution
-
-```ts
-withScaleDistribution(value)
-```
-
-TODO docs
-
-####### fn options.series.ScatterFieldConfig.AxisConfig.withScaleDistributionMixin
-
-```ts
-withScaleDistributionMixin(value)
-```
-
-TODO docs
-
-####### obj options.series.ScatterFieldConfig.AxisConfig.scaleDistribution
-
-
-######## fn options.series.ScatterFieldConfig.AxisConfig.scaleDistribution.withLinearThreshold
-
-```ts
-withLinearThreshold(value)
-```
-
-
-
-######## fn options.series.ScatterFieldConfig.AxisConfig.scaleDistribution.withLog
-
-```ts
-withLog(value)
-```
-
-
-
-######## fn options.series.ScatterFieldConfig.AxisConfig.scaleDistribution.withType
-
-```ts
-withType(value)
-```
-
-TODO docs
-
-###### obj options.series.ScatterFieldConfig.HideableFieldConfig
-
-
-####### fn options.series.ScatterFieldConfig.HideableFieldConfig.withHideFrom
-
-```ts
-withHideFrom(value)
-```
-
-TODO docs
-
-####### fn options.series.ScatterFieldConfig.HideableFieldConfig.withHideFromMixin
-
-```ts
-withHideFromMixin(value)
-```
-
-TODO docs
-
-####### obj options.series.ScatterFieldConfig.HideableFieldConfig.hideFrom
-
-
-######## fn options.series.ScatterFieldConfig.HideableFieldConfig.hideFrom.withLegend
+###### fn options.series.hideFrom.withLegend
 
 ```ts
 withLegend(value)
@@ -1973,7 +1859,7 @@ withLegend(value)
 
 
 
-######## fn options.series.ScatterFieldConfig.HideableFieldConfig.hideFrom.withTooltip
+###### fn options.series.hideFrom.withTooltip
 
 ```ts
 withTooltip(value)
@@ -1981,7 +1867,7 @@ withTooltip(value)
 
 
 
-######## fn options.series.ScatterFieldConfig.HideableFieldConfig.hideFrom.withViz
+###### fn options.series.hideFrom.withViz
 
 ```ts
 withViz(value)
@@ -1989,37 +1875,10 @@ withViz(value)
 
 
 
-###### obj options.series.ScatterFieldConfig.labelValue
+##### obj options.series.labelValue
 
 
-####### fn options.series.ScatterFieldConfig.labelValue.withBaseDimensionConfig
-
-```ts
-withBaseDimensionConfig(value)
-```
-
-
-
-####### fn options.series.ScatterFieldConfig.labelValue.withBaseDimensionConfigMixin
-
-```ts
-withBaseDimensionConfigMixin(value)
-```
-
-
-
-####### fn options.series.ScatterFieldConfig.labelValue.withMode
-
-```ts
-withMode(value)
-```
-
-
-
-####### obj options.series.ScatterFieldConfig.labelValue.BaseDimensionConfig
-
-
-######## fn options.series.ScatterFieldConfig.labelValue.BaseDimensionConfig.withField
+###### fn options.series.labelValue.withField
 
 ```ts
 withField(value)
@@ -2027,7 +1886,7 @@ withField(value)
 
 
 
-######## fn options.series.ScatterFieldConfig.labelValue.BaseDimensionConfig.withFixed
+###### fn options.series.labelValue.withFixed
 
 ```ts
 withFixed(value)
@@ -2035,7 +1894,7 @@ withFixed(value)
 
 
 
-######## fn options.series.ScatterFieldConfig.labelValue.BaseDimensionConfig.withFixedMixin
+###### fn options.series.labelValue.withFixedMixin
 
 ```ts
 withFixedMixin(value)
@@ -2043,29 +1902,18 @@ withFixedMixin(value)
 
 
 
-###### obj options.series.ScatterFieldConfig.lineColor
-
-
-####### fn options.series.ScatterFieldConfig.lineColor.withBaseDimensionConfig
+###### fn options.series.labelValue.withMode
 
 ```ts
-withBaseDimensionConfig(value)
+withMode(value='enum[fixed,field,template]')
 ```
 
 
 
-####### fn options.series.ScatterFieldConfig.lineColor.withBaseDimensionConfigMixin
-
-```ts
-withBaseDimensionConfigMixin(value)
-```
+##### obj options.series.lineColor
 
 
-
-####### obj options.series.ScatterFieldConfig.lineColor.BaseDimensionConfig
-
-
-######## fn options.series.ScatterFieldConfig.lineColor.BaseDimensionConfig.withField
+###### fn options.series.lineColor.withField
 
 ```ts
 withField(value)
@@ -2073,7 +1921,7 @@ withField(value)
 
 
 
-######## fn options.series.ScatterFieldConfig.lineColor.BaseDimensionConfig.withFixed
+###### fn options.series.lineColor.withFixed
 
 ```ts
 withFixed(value)
@@ -2081,7 +1929,7 @@ withFixed(value)
 
 
 
-######## fn options.series.ScatterFieldConfig.lineColor.BaseDimensionConfig.withFixedMixin
+###### fn options.series.lineColor.withFixedMixin
 
 ```ts
 withFixedMixin(value)
@@ -2089,10 +1937,10 @@ withFixedMixin(value)
 
 
 
-###### obj options.series.ScatterFieldConfig.lineStyle
+##### obj options.series.lineStyle
 
 
-####### fn options.series.ScatterFieldConfig.lineStyle.withDash
+###### fn options.series.lineStyle.withDash
 
 ```ts
 withDash(value)
@@ -2100,7 +1948,7 @@ withDash(value)
 
 
 
-####### fn options.series.ScatterFieldConfig.lineStyle.withDashMixin
+###### fn options.series.lineStyle.withDashMixin
 
 ```ts
 withDashMixin(value)
@@ -2108,37 +1956,18 @@ withDashMixin(value)
 
 
 
-####### fn options.series.ScatterFieldConfig.lineStyle.withFill
+###### fn options.series.lineStyle.withFill
 
 ```ts
-withFill(value)
+withFill(value='enum[solid,dash,dot,square]')
 ```
 
 
 
-###### obj options.series.ScatterFieldConfig.pointColor
+##### obj options.series.pointColor
 
 
-####### fn options.series.ScatterFieldConfig.pointColor.withBaseDimensionConfig
-
-```ts
-withBaseDimensionConfig(value)
-```
-
-
-
-####### fn options.series.ScatterFieldConfig.pointColor.withBaseDimensionConfigMixin
-
-```ts
-withBaseDimensionConfigMixin(value)
-```
-
-
-
-####### obj options.series.ScatterFieldConfig.pointColor.BaseDimensionConfig
-
-
-######## fn options.series.ScatterFieldConfig.pointColor.BaseDimensionConfig.withField
+###### fn options.series.pointColor.withField
 
 ```ts
 withField(value)
@@ -2146,7 +1975,7 @@ withField(value)
 
 
 
-######## fn options.series.ScatterFieldConfig.pointColor.BaseDimensionConfig.withFixed
+###### fn options.series.pointColor.withFixed
 
 ```ts
 withFixed(value)
@@ -2154,7 +1983,7 @@ withFixed(value)
 
 
 
-######## fn options.series.ScatterFieldConfig.pointColor.BaseDimensionConfig.withFixedMixin
+###### fn options.series.pointColor.withFixedMixin
 
 ```ts
 withFixedMixin(value)
@@ -2162,26 +1991,34 @@ withFixedMixin(value)
 
 
 
-###### obj options.series.ScatterFieldConfig.pointSize
+##### obj options.series.pointSize
 
 
-####### fn options.series.ScatterFieldConfig.pointSize.withBaseDimensionConfig
+###### fn options.series.pointSize.withField
 
 ```ts
-withBaseDimensionConfig(value)
+withField(value)
 ```
 
 
 
-####### fn options.series.ScatterFieldConfig.pointSize.withBaseDimensionConfigMixin
+###### fn options.series.pointSize.withFixed
 
 ```ts
-withBaseDimensionConfigMixin(value)
+withFixed(value)
 ```
 
 
 
-####### fn options.series.ScatterFieldConfig.pointSize.withMax
+###### fn options.series.pointSize.withFixedMixin
+
+```ts
+withFixedMixin(value)
+```
+
+
+
+###### fn options.series.pointSize.withMax
 
 ```ts
 withMax(value)
@@ -2189,7 +2026,7 @@ withMax(value)
 
 
 
-####### fn options.series.ScatterFieldConfig.pointSize.withMin
+###### fn options.series.pointSize.withMin
 
 ```ts
 withMin(value)
@@ -2197,32 +2034,51 @@ withMin(value)
 
 
 
-####### obj options.series.ScatterFieldConfig.pointSize.BaseDimensionConfig
+##### obj options.series.scaleDistribution
 
 
-######## fn options.series.ScatterFieldConfig.pointSize.BaseDimensionConfig.withField
+###### fn options.series.scaleDistribution.withLinearThreshold
 
 ```ts
-withField(value)
+withLinearThreshold(value)
 ```
 
 
 
-######## fn options.series.ScatterFieldConfig.pointSize.BaseDimensionConfig.withFixed
+###### fn options.series.scaleDistribution.withLog
 
 ```ts
-withFixed(value)
+withLog(value)
 ```
 
 
 
-######## fn options.series.ScatterFieldConfig.pointSize.BaseDimensionConfig.withFixedMixin
+###### fn options.series.scaleDistribution.withType
 
 ```ts
-withFixedMixin(value)
+withType(value='enum[linear,log,ordinal,symlog]')
 ```
 
+TODO docs
 
+#### obj options.tooltip
+
+
+##### fn options.tooltip.withMode
+
+```ts
+withMode(value='enum[single,multi,none]')
+```
+
+TODO docs
+
+##### fn options.tooltip.withSort
+
+```ts
+withSort(value='enum[asc,desc,none]')
+```
+
+TODO docs
 
 ### obj transformations
 
@@ -2274,7 +2130,7 @@ Valid options depend on the transformer id
 ##### fn transformations.filter.withId
 
 ```ts
-withId(value)
+withId(value='')
 ```
 
 

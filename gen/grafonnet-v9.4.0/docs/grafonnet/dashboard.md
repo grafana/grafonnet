@@ -22,10 +22,10 @@ grafonnet.dashboard
 * [`fn withAnnotations(value)`](#fn-withannotations)
 * [`fn withAnnotationsMixin(value)`](#fn-withannotationsmixin)
 * [`fn withDescription(value)`](#fn-withdescription)
-* [`fn withEditable(value)`](#fn-witheditable)
-* [`fn withFiscalYearStartMonth(value)`](#fn-withfiscalyearstartmonth)
+* [`fn withEditable(value=true)`](#fn-witheditable)
+* [`fn withFiscalYearStartMonth(value=0)`](#fn-withfiscalyearstartmonth)
 * [`fn withGnetId(value)`](#fn-withgnetid)
-* [`fn withGraphTooltip(value)`](#fn-withgraphtooltip)
+* [`fn withGraphTooltip(value=0)`](#fn-withgraphtooltip)
 * [`fn withId(value)`](#fn-withid)
 * [`fn withLinks(value)`](#fn-withlinks)
 * [`fn withLinksMixin(value)`](#fn-withlinksmixin)
@@ -34,11 +34,11 @@ grafonnet.dashboard
 * [`fn withPanelsMixin(value)`](#fn-withpanelsmixin)
 * [`fn withRefresh(value)`](#fn-withrefresh)
 * [`fn withRefreshMixin(value)`](#fn-withrefreshmixin)
-* [`fn withRevision(value)`](#fn-withrevision)
-* [`fn withSchemaVersion(value)`](#fn-withschemaversion)
+* [`fn withRevision(value=-1)`](#fn-withrevision)
+* [`fn withSchemaVersion(value=36)`](#fn-withschemaversion)
 * [`fn withSnapshot(value)`](#fn-withsnapshot)
 * [`fn withSnapshotMixin(value)`](#fn-withsnapshotmixin)
-* [`fn withStyle(value)`](#fn-withstyle)
+* [`fn withStyle(value='dark')`](#fn-withstyle)
 * [`fn withTags(value)`](#fn-withtags)
 * [`fn withTagsMixin(value)`](#fn-withtagsmixin)
 * [`fn withTemplating(value)`](#fn-withtemplating)
@@ -47,7 +47,7 @@ grafonnet.dashboard
 * [`fn withTimeMixin(value)`](#fn-withtimemixin)
 * [`fn withTimepicker(value)`](#fn-withtimepicker)
 * [`fn withTimepickerMixin(value)`](#fn-withtimepickermixin)
-* [`fn withTimezone(value)`](#fn-withtimezone)
+* [`fn withTimezone(value='browser')`](#fn-withtimezone)
 * [`fn withTitle(value)`](#fn-withtitle)
 * [`fn withUid(value)`](#fn-withuid)
 * [`fn withVersion(value)`](#fn-withversion)
@@ -56,18 +56,18 @@ grafonnet.dashboard
   * [`fn withList(value)`](#fn-annotationswithlist)
   * [`fn withListMixin(value)`](#fn-annotationswithlistmixin)
   * [`obj list`](#obj-annotationslist)
-    * [`fn withBuiltIn(value)`](#fn-annotationslistwithbuiltin)
+    * [`fn withBuiltIn(value=0)`](#fn-annotationslistwithbuiltin)
     * [`fn withDatasource(value)`](#fn-annotationslistwithdatasource)
     * [`fn withDatasourceMixin(value)`](#fn-annotationslistwithdatasourcemixin)
-    * [`fn withEnable(value)`](#fn-annotationslistwithenable)
-    * [`fn withHide(value)`](#fn-annotationslistwithhide)
+    * [`fn withEnable(value=true)`](#fn-annotationslistwithenable)
+    * [`fn withHide(value=false)`](#fn-annotationslistwithhide)
     * [`fn withIconColor(value)`](#fn-annotationslistwithiconcolor)
     * [`fn withName(value)`](#fn-annotationslistwithname)
     * [`fn withRawQuery(value)`](#fn-annotationslistwithrawquery)
-    * [`fn withShowIn(value)`](#fn-annotationslistwithshowin)
+    * [`fn withShowIn(value=0)`](#fn-annotationslistwithshowin)
     * [`fn withTarget(value)`](#fn-annotationslistwithtarget)
     * [`fn withTargetMixin(value)`](#fn-annotationslistwithtargetmixin)
-    * [`fn withType(value)`](#fn-annotationslistwithtype)
+    * [`fn withType(value='dashboard')`](#fn-annotationslistwithtype)
     * [`obj datasource`](#obj-annotationslistdatasource)
       * [`fn withType(value)`](#fn-annotationslistdatasourcewithtype)
       * [`fn withUid(value)`](#fn-annotationslistdatasourcewithuid)
@@ -78,16 +78,16 @@ grafonnet.dashboard
       * [`fn withTagsMixin(value)`](#fn-annotationslisttargetwithtagsmixin)
       * [`fn withType(value)`](#fn-annotationslisttargetwithtype)
 * [`obj links`](#obj-links)
-  * [`fn withAsDropdown(value)`](#fn-linkswithasdropdown)
+  * [`fn withAsDropdown(value=false)`](#fn-linkswithasdropdown)
   * [`fn withIcon(value)`](#fn-linkswithicon)
-  * [`fn withIncludeVars(value)`](#fn-linkswithincludevars)
-  * [`fn withKeepTime(value)`](#fn-linkswithkeeptime)
+  * [`fn withIncludeVars(value=false)`](#fn-linkswithincludevars)
+  * [`fn withKeepTime(value=false)`](#fn-linkswithkeeptime)
   * [`fn withTags(value)`](#fn-linkswithtags)
   * [`fn withTagsMixin(value)`](#fn-linkswithtagsmixin)
-  * [`fn withTargetBlank(value)`](#fn-linkswithtargetblank)
+  * [`fn withTargetBlank(value=false)`](#fn-linkswithtargetblank)
   * [`fn withTitle(value)`](#fn-linkswithtitle)
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
-  * [`fn withType(value)`](#fn-linkswithtype)
+  * [`fn withType(value='enum[link,dashboards]')`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
 * [`obj snapshot`](#obj-snapshot)
   * [`fn withCreated(value)`](#fn-snapshotwithcreated)
@@ -110,32 +110,32 @@ grafonnet.dashboard
     * [`fn withDescription(value)`](#fn-templatinglistwithdescription)
     * [`fn withError(value)`](#fn-templatinglistwitherror)
     * [`fn withErrorMixin(value)`](#fn-templatinglistwitherrormixin)
-    * [`fn withGlobal(value)`](#fn-templatinglistwithglobal)
-    * [`fn withHide(value)`](#fn-templatinglistwithhide)
-    * [`fn withId(value)`](#fn-templatinglistwithid)
-    * [`fn withIndex(value)`](#fn-templatinglistwithindex)
+    * [`fn withGlobal(value=false)`](#fn-templatinglistwithglobal)
+    * [`fn withHide(value=enum[0,1,2])`](#fn-templatinglistwithhide)
+    * [`fn withId(value='00000000-0000-0000-0000-000000000000')`](#fn-templatinglistwithid)
+    * [`fn withIndex(value=-1)`](#fn-templatinglistwithindex)
     * [`fn withLabel(value)`](#fn-templatinglistwithlabel)
     * [`fn withName(value)`](#fn-templatinglistwithname)
     * [`fn withQuery(value)`](#fn-templatinglistwithquery)
     * [`fn withQueryMixin(value)`](#fn-templatinglistwithquerymixin)
     * [`fn withRootStateKey(value)`](#fn-templatinglistwithrootstatekey)
-    * [`fn withSkipUrlSync(value)`](#fn-templatinglistwithskipurlsync)
-    * [`fn withState(value)`](#fn-templatinglistwithstate)
-    * [`fn withType(value)`](#fn-templatinglistwithtype)
+    * [`fn withSkipUrlSync(value=false)`](#fn-templatinglistwithskipurlsync)
+    * [`fn withState(value='enum[NotStarted,Loading,Streaming,Done,Error]')`](#fn-templatinglistwithstate)
+    * [`fn withType(value='enum[query,adhoc,constant,datasource,interval,textbox,custom,system]')`](#fn-templatinglistwithtype)
     * [`obj datasource`](#obj-templatinglistdatasource)
       * [`fn withType(value)`](#fn-templatinglistdatasourcewithtype)
       * [`fn withUid(value)`](#fn-templatinglistdatasourcewithuid)
 * [`obj time`](#obj-time)
-  * [`fn withFrom(value)`](#fn-timewithfrom)
-  * [`fn withTo(value)`](#fn-timewithto)
+  * [`fn withFrom(value='now-6h')`](#fn-timewithfrom)
+  * [`fn withTo(value='now')`](#fn-timewithto)
 * [`obj timepicker`](#obj-timepicker)
-  * [`fn withCollapse(value)`](#fn-timepickerwithcollapse)
-  * [`fn withEnable(value)`](#fn-timepickerwithenable)
-  * [`fn withHidden(value)`](#fn-timepickerwithhidden)
-  * [`fn withRefreshIntervals(value)`](#fn-timepickerwithrefreshintervals)
-  * [`fn withRefreshIntervalsMixin(value)`](#fn-timepickerwithrefreshintervalsmixin)
-  * [`fn withTimeOptions(value)`](#fn-timepickerwithtimeoptions)
-  * [`fn withTimeOptionsMixin(value)`](#fn-timepickerwithtimeoptionsmixin)
+  * [`fn withCollapse(value=false)`](#fn-timepickerwithcollapse)
+  * [`fn withEnable(value=true)`](#fn-timepickerwithenable)
+  * [`fn withHidden(value=false)`](#fn-timepickerwithhidden)
+  * [`fn withRefreshIntervals(value=["5s", "10s", "30s", "1m", "5m", "15m", "30m", "1h", "2h", "1d"])`](#fn-timepickerwithrefreshintervals)
+  * [`fn withRefreshIntervalsMixin(value=["5s", "10s", "30s", "1m", "5m", "15m", "30m", "1h", "2h", "1d"])`](#fn-timepickerwithrefreshintervalsmixin)
+  * [`fn withTimeOptions(value=["5m", "15m", "1h", "6h", "12h", "24h", "2d", "7d", "30d"])`](#fn-timepickerwithtimeoptions)
+  * [`fn withTimeOptionsMixin(value=["5m", "15m", "1h", "6h", "12h", "24h", "2d", "7d", "30d"])`](#fn-timepickerwithtimeoptionsmixin)
 
 ## Fields
 
@@ -174,7 +174,7 @@ Description of dashboard.
 ### fn withEditable
 
 ```ts
-withEditable(value)
+withEditable(value=true)
 ```
 
 Whether a dashboard is editable or not.
@@ -182,7 +182,7 @@ Whether a dashboard is editable or not.
 ### fn withFiscalYearStartMonth
 
 ```ts
-withFiscalYearStartMonth(value)
+withFiscalYearStartMonth(value=0)
 ```
 
 The month that the fiscal year starts on.  0 = January, 11 = December
@@ -198,7 +198,7 @@ withGnetId(value)
 ### fn withGraphTooltip
 
 ```ts
-withGraphTooltip(value)
+withGraphTooltip(value=0)
 ```
 
 0 for no shared crosshair or tooltip (default).
@@ -273,7 +273,7 @@ Refresh rate of dashboard. Represented via interval string, e.g. "5s", "1m", "1h
 ### fn withRevision
 
 ```ts
-withRevision(value)
+withRevision(value=-1)
 ```
 
 Version of the current dashboard data
@@ -281,7 +281,7 @@ Version of the current dashboard data
 ### fn withSchemaVersion
 
 ```ts
-withSchemaVersion(value)
+withSchemaVersion(value=36)
 ```
 
 Version of the JSON schema, incremented each time a Grafana update brings
@@ -307,7 +307,7 @@ TODO docs
 ### fn withStyle
 
 ```ts
-withStyle(value)
+withStyle(value='dark')
 ```
 
 Theme of dashboard.
@@ -381,7 +381,7 @@ TODO this appears to be spread all over in the frontend. Concepts will likely ne
 ### fn withTimezone
 
 ```ts
-withTimezone(value)
+withTimezone(value='browser')
 ```
 
 Timezone of dashboard. Accepts IANA TZDB zone ID or "browser" or "utc".
@@ -443,7 +443,7 @@ withListMixin(value)
 ##### fn annotations.list.withBuiltIn
 
 ```ts
-withBuiltIn(value)
+withBuiltIn(value=0)
 ```
 
 
@@ -467,7 +467,7 @@ Datasource to use for annotation.
 ##### fn annotations.list.withEnable
 
 ```ts
-withEnable(value)
+withEnable(value=true)
 ```
 
 Whether annotation is enabled.
@@ -475,7 +475,7 @@ Whether annotation is enabled.
 ##### fn annotations.list.withHide
 
 ```ts
-withHide(value)
+withHide(value=false)
 ```
 
 Whether to hide annotation.
@@ -507,7 +507,7 @@ Query for annotation data.
 ##### fn annotations.list.withShowIn
 
 ```ts
-withShowIn(value)
+withShowIn(value=0)
 ```
 
 
@@ -531,7 +531,7 @@ TODO docs
 ##### fn annotations.list.withType
 
 ```ts
-withType(value)
+withType(value='dashboard')
 ```
 
 
@@ -604,7 +604,7 @@ withType(value)
 #### fn links.withAsDropdown
 
 ```ts
-withAsDropdown(value)
+withAsDropdown(value=false)
 ```
 
 
@@ -620,7 +620,7 @@ withIcon(value)
 #### fn links.withIncludeVars
 
 ```ts
-withIncludeVars(value)
+withIncludeVars(value=false)
 ```
 
 
@@ -628,7 +628,7 @@ withIncludeVars(value)
 #### fn links.withKeepTime
 
 ```ts
-withKeepTime(value)
+withKeepTime(value=false)
 ```
 
 
@@ -652,7 +652,7 @@ withTagsMixin(value)
 #### fn links.withTargetBlank
 
 ```ts
-withTargetBlank(value)
+withTargetBlank(value=false)
 ```
 
 
@@ -676,7 +676,7 @@ withTooltip(value)
 #### fn links.withType
 
 ```ts
-withType(value)
+withType(value='enum[link,dashboards]')
 ```
 
 TODO docs
@@ -845,7 +845,7 @@ withErrorMixin(value)
 ##### fn templating.list.withGlobal
 
 ```ts
-withGlobal(value)
+withGlobal(value=false)
 ```
 
 
@@ -853,7 +853,7 @@ withGlobal(value)
 ##### fn templating.list.withHide
 
 ```ts
-withHide(value)
+withHide(value=enum[0,1,2])
 ```
 
 
@@ -861,7 +861,7 @@ withHide(value)
 ##### fn templating.list.withId
 
 ```ts
-withId(value)
+withId(value='00000000-0000-0000-0000-000000000000')
 ```
 
 
@@ -869,7 +869,7 @@ withId(value)
 ##### fn templating.list.withIndex
 
 ```ts
-withIndex(value)
+withIndex(value=-1)
 ```
 
 
@@ -917,7 +917,7 @@ withRootStateKey(value)
 ##### fn templating.list.withSkipUrlSync
 
 ```ts
-withSkipUrlSync(value)
+withSkipUrlSync(value=false)
 ```
 
 
@@ -925,7 +925,7 @@ withSkipUrlSync(value)
 ##### fn templating.list.withState
 
 ```ts
-withState(value)
+withState(value='enum[NotStarted,Loading,Streaming,Done,Error]')
 ```
 
 
@@ -933,7 +933,7 @@ withState(value)
 ##### fn templating.list.withType
 
 ```ts
-withType(value)
+withType(value='enum[query,adhoc,constant,datasource,interval,textbox,custom,system]')
 ```
 
 FROM: packages/grafana-data/src/types/templateVars.ts
@@ -965,7 +965,7 @@ Specific datasource instance
 #### fn time.withFrom
 
 ```ts
-withFrom(value)
+withFrom(value='now-6h')
 ```
 
 
@@ -973,7 +973,7 @@ withFrom(value)
 #### fn time.withTo
 
 ```ts
-withTo(value)
+withTo(value='now')
 ```
 
 
@@ -984,7 +984,7 @@ withTo(value)
 #### fn timepicker.withCollapse
 
 ```ts
-withCollapse(value)
+withCollapse(value=false)
 ```
 
 Whether timepicker is collapsed or not.
@@ -992,7 +992,7 @@ Whether timepicker is collapsed or not.
 #### fn timepicker.withEnable
 
 ```ts
-withEnable(value)
+withEnable(value=true)
 ```
 
 Whether timepicker is enabled or not.
@@ -1000,7 +1000,7 @@ Whether timepicker is enabled or not.
 #### fn timepicker.withHidden
 
 ```ts
-withHidden(value)
+withHidden(value=false)
 ```
 
 Whether timepicker is visible or not.
@@ -1008,7 +1008,7 @@ Whether timepicker is visible or not.
 #### fn timepicker.withRefreshIntervals
 
 ```ts
-withRefreshIntervals(value)
+withRefreshIntervals(value=["5s", "10s", "30s", "1m", "5m", "15m", "30m", "1h", "2h", "1d"])
 ```
 
 Selectable intervals for auto-refresh.
@@ -1016,7 +1016,7 @@ Selectable intervals for auto-refresh.
 #### fn timepicker.withRefreshIntervalsMixin
 
 ```ts
-withRefreshIntervalsMixin(value)
+withRefreshIntervalsMixin(value=["5s", "10s", "30s", "1m", "5m", "15m", "30m", "1h", "2h", "1d"])
 ```
 
 Selectable intervals for auto-refresh.
@@ -1024,7 +1024,7 @@ Selectable intervals for auto-refresh.
 #### fn timepicker.withTimeOptions
 
 ```ts
-withTimeOptions(value)
+withTimeOptions(value=["5m", "15m", "1h", "6h", "12h", "24h", "2d", "7d", "30d"])
 ```
 
 TODO docs
@@ -1032,7 +1032,7 @@ TODO docs
 #### fn timepicker.withTimeOptionsMixin
 
 ```ts
-withTimeOptionsMixin(value)
+withTimeOptionsMixin(value=["5m", "15m", "1h", "6h", "12h", "24h", "2d", "7d", "30d"])
 ```
 
 TODO docs

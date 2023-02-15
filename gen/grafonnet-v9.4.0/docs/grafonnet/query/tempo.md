@@ -18,22 +18,48 @@ grafonnet.query.tempo
 
 ## Index
 
+* [`fn withDatasource(value)`](#fn-withdatasource)
+* [`fn withHide(value)`](#fn-withhide)
+* [`fn withKey(value)`](#fn-withkey)
 * [`fn withLimit(value)`](#fn-withlimit)
 * [`fn withMaxDuration(value)`](#fn-withmaxduration)
 * [`fn withMinDuration(value)`](#fn-withminduration)
 * [`fn withQuery(value)`](#fn-withquery)
+* [`fn withQueryType(value)`](#fn-withquerytype)
+* [`fn withRefId(value)`](#fn-withrefid)
 * [`fn withSearch(value)`](#fn-withsearch)
 * [`fn withServiceMapQuery(value)`](#fn-withservicemapquery)
 * [`fn withServiceName(value)`](#fn-withservicename)
 * [`fn withSpanName(value)`](#fn-withspanname)
-* [`obj DataQuery`](#obj-dataquery)
-  * [`fn withDatasource(value)`](#fn-dataquerywithdatasource)
-  * [`fn withHide(value)`](#fn-dataquerywithhide)
-  * [`fn withKey(value)`](#fn-dataquerywithkey)
-  * [`fn withQueryType(value)`](#fn-dataquerywithquerytype)
-  * [`fn withRefId(value)`](#fn-dataquerywithrefid)
 
 ## Fields
+
+### fn withDatasource
+
+```ts
+withDatasource(value)
+```
+
+For mixed data sources the selected datasource is on the query level.
+For non mixed scenarios this is undefined.
+TODO find a better way to do this ^ that's friendly to schema
+TODO this shouldn't be unknown but DataSourceRef | null
+
+### fn withHide
+
+```ts
+withHide(value)
+```
+
+true if query is disabled (ie should not be returned to the dashboard)
+
+### fn withKey
+
+```ts
+withKey(value)
+```
+
+Unique, guid like, string used in explore mode
 
 ### fn withLimit
 
@@ -67,6 +93,23 @@ withQuery(value)
 
 TraceQL query or trace ID
 
+### fn withQueryType
+
+```ts
+withQueryType(value)
+```
+
+Specify the query flavor
+TODO make this required and give it a default
+
+### fn withRefId
+
+```ts
+withRefId(value)
+```
+
+A - Z
+
 ### fn withSearch
 
 ```ts
@@ -98,50 +141,3 @@ withSpanName(value)
 ```
 
 Query traces by span name
-
-### obj DataQuery
-
-
-#### fn DataQuery.withDatasource
-
-```ts
-withDatasource(value)
-```
-
-For mixed data sources the selected datasource is on the query level.
-For non mixed scenarios this is undefined.
-TODO find a better way to do this ^ that's friendly to schema
-TODO this shouldn't be unknown but DataSourceRef | null
-
-#### fn DataQuery.withHide
-
-```ts
-withHide(value)
-```
-
-true if query is disabled (ie should not be returned to the dashboard)
-
-#### fn DataQuery.withKey
-
-```ts
-withKey(value)
-```
-
-Unique, guid like, string used in explore mode
-
-#### fn DataQuery.withQueryType
-
-```ts
-withQueryType(value)
-```
-
-Specify the query flavor
-TODO make this required and give it a default
-
-#### fn DataQuery.withRefId
-
-```ts
-withRefId(value)
-```
-
-A - Z

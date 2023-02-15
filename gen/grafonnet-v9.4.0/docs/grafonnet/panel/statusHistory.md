@@ -37,7 +37,7 @@ grafonnet.panel.statusHistory
 * [`fn withOptionsMixin(value)`](#fn-withoptionsmixin)
 * [`fn withPluginVersion(value)`](#fn-withpluginversion)
 * [`fn withRepeat(value)`](#fn-withrepeat)
-* [`fn withRepeatDirection(value)`](#fn-withrepeatdirection)
+* [`fn withRepeatDirection(value='h')`](#fn-withrepeatdirection)
 * [`fn withRepeatPanelId(value)`](#fn-withrepeatpanelid)
 * [`fn withTags(value)`](#fn-withtags)
 * [`fn withTagsMixin(value)`](#fn-withtagsmixin)
@@ -52,8 +52,8 @@ grafonnet.panel.statusHistory
 * [`fn withTitle(value)`](#fn-withtitle)
 * [`fn withTransformations(value)`](#fn-withtransformations)
 * [`fn withTransformationsMixin(value)`](#fn-withtransformationsmixin)
-* [`fn withTransparent(value)`](#fn-withtransparent)
-* [`fn withType(value)`](#fn-withtype)
+* [`fn withTransparent(value=false)`](#fn-withtransparent)
+* [`fn withType(value='status-history')`](#fn-withtype)
 * [`obj datasource`](#obj-datasource)
   * [`fn withType(value)`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
@@ -87,19 +87,16 @@ grafonnet.panel.statusHistory
     * [`obj color`](#obj-fieldconfigdefaultscolor)
       * [`fn withFixedColor(value)`](#fn-fieldconfigdefaultscolorwithfixedcolor)
       * [`fn withMode(value)`](#fn-fieldconfigdefaultscolorwithmode)
-      * [`fn withSeriesBy(value)`](#fn-fieldconfigdefaultscolorwithseriesby)
+      * [`fn withSeriesBy(value='enum[min,max,last]')`](#fn-fieldconfigdefaultscolorwithseriesby)
     * [`obj custom`](#obj-fieldconfigdefaultscustom)
-      * [`fn withFillOpacity(value)`](#fn-fieldconfigdefaultscustomwithfillopacity)
-      * [`fn withHideableFieldConfig(value)`](#fn-fieldconfigdefaultscustomwithhideablefieldconfig)
-      * [`fn withHideableFieldConfigMixin(value)`](#fn-fieldconfigdefaultscustomwithhideablefieldconfigmixin)
-      * [`fn withLineWidth(value)`](#fn-fieldconfigdefaultscustomwithlinewidth)
-      * [`obj HideableFieldConfig`](#obj-fieldconfigdefaultscustomhideablefieldconfig)
-        * [`fn withHideFrom(value)`](#fn-fieldconfigdefaultscustomhideablefieldconfigwithhidefrom)
-        * [`fn withHideFromMixin(value)`](#fn-fieldconfigdefaultscustomhideablefieldconfigwithhidefrommixin)
-        * [`obj hideFrom`](#obj-fieldconfigdefaultscustomhideablefieldconfighidefrom)
-          * [`fn withLegend(value)`](#fn-fieldconfigdefaultscustomhideablefieldconfighidefromwithlegend)
-          * [`fn withTooltip(value)`](#fn-fieldconfigdefaultscustomhideablefieldconfighidefromwithtooltip)
-          * [`fn withViz(value)`](#fn-fieldconfigdefaultscustomhideablefieldconfighidefromwithviz)
+      * [`fn withFillOpacity(value=70)`](#fn-fieldconfigdefaultscustomwithfillopacity)
+      * [`fn withHideFrom(value)`](#fn-fieldconfigdefaultscustomwithhidefrom)
+      * [`fn withHideFromMixin(value)`](#fn-fieldconfigdefaultscustomwithhidefrommixin)
+      * [`fn withLineWidth(value=1)`](#fn-fieldconfigdefaultscustomwithlinewidth)
+      * [`obj hideFrom`](#obj-fieldconfigdefaultscustomhidefrom)
+        * [`fn withLegend(value)`](#fn-fieldconfigdefaultscustomhidefromwithlegend)
+        * [`fn withTooltip(value)`](#fn-fieldconfigdefaultscustomhidefromwithtooltip)
+        * [`fn withViz(value)`](#fn-fieldconfigdefaultscustomhidefromwithviz)
     * [`obj mappings`](#obj-fieldconfigdefaultsmappings)
       * [`obj RangeMap`](#obj-fieldconfigdefaultsmappingsrangemap)
         * [`fn withOptions(value)`](#fn-fieldconfigdefaultsmappingsrangemapwithoptions)
@@ -133,7 +130,7 @@ grafonnet.panel.statusHistory
         * [`fn withOptionsMixin(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapwithoptionsmixin)
         * [`fn withType(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapwithtype)
         * [`obj options`](#obj-fieldconfigdefaultsmappingsspecialvaluemapoptions)
-          * [`fn withMatch(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithmatch)
+          * [`fn withMatch(value='enum[true,false]')`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithmatch)
           * [`fn withPattern(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithpattern)
           * [`fn withResult(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithresult)
           * [`fn withResultMixin(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithresultmixin)
@@ -147,7 +144,7 @@ grafonnet.panel.statusHistory
         * [`fn withOptionsMixin(value)`](#fn-fieldconfigdefaultsmappingsvaluemapwithoptionsmixin)
         * [`fn withType(value)`](#fn-fieldconfigdefaultsmappingsvaluemapwithtype)
     * [`obj thresholds`](#obj-fieldconfigdefaultsthresholds)
-      * [`fn withMode(value)`](#fn-fieldconfigdefaultsthresholdswithmode)
+      * [`fn withMode(value='enum[absolute,percentage]')`](#fn-fieldconfigdefaultsthresholdswithmode)
       * [`fn withSteps(value)`](#fn-fieldconfigdefaultsthresholdswithsteps)
       * [`fn withStepsMixin(value)`](#fn-fieldconfigdefaultsthresholdswithstepsmixin)
       * [`obj steps`](#obj-fieldconfigdefaultsthresholdssteps)
@@ -160,65 +157,56 @@ grafonnet.panel.statusHistory
     * [`fn withProperties(value)`](#fn-fieldconfigoverrideswithproperties)
     * [`fn withPropertiesMixin(value)`](#fn-fieldconfigoverrideswithpropertiesmixin)
     * [`obj matcher`](#obj-fieldconfigoverridesmatcher)
-      * [`fn withId(value)`](#fn-fieldconfigoverridesmatcherwithid)
+      * [`fn withId(value='')`](#fn-fieldconfigoverridesmatcherwithid)
       * [`fn withOptions(value)`](#fn-fieldconfigoverridesmatcherwithoptions)
     * [`obj properties`](#obj-fieldconfigoverridesproperties)
-      * [`fn withId(value)`](#fn-fieldconfigoverridespropertieswithid)
+      * [`fn withId(value='')`](#fn-fieldconfigoverridespropertieswithid)
       * [`fn withValue(value)`](#fn-fieldconfigoverridespropertieswithvalue)
 * [`obj gridPos`](#obj-gridpos)
-  * [`fn withH(value)`](#fn-gridposwithh)
+  * [`fn withH(value=9)`](#fn-gridposwithh)
   * [`fn withStatic(value)`](#fn-gridposwithstatic)
-  * [`fn withW(value)`](#fn-gridposwithw)
-  * [`fn withX(value)`](#fn-gridposwithx)
-  * [`fn withY(value)`](#fn-gridposwithy)
+  * [`fn withW(value=12)`](#fn-gridposwithw)
+  * [`fn withX(value=0)`](#fn-gridposwithx)
+  * [`fn withY(value=0)`](#fn-gridposwithy)
 * [`obj libraryPanel`](#obj-librarypanel)
   * [`fn withName(value)`](#fn-librarypanelwithname)
   * [`fn withUid(value)`](#fn-librarypanelwithuid)
 * [`obj links`](#obj-links)
-  * [`fn withAsDropdown(value)`](#fn-linkswithasdropdown)
+  * [`fn withAsDropdown(value=false)`](#fn-linkswithasdropdown)
   * [`fn withIcon(value)`](#fn-linkswithicon)
-  * [`fn withIncludeVars(value)`](#fn-linkswithincludevars)
-  * [`fn withKeepTime(value)`](#fn-linkswithkeeptime)
+  * [`fn withIncludeVars(value=false)`](#fn-linkswithincludevars)
+  * [`fn withKeepTime(value=false)`](#fn-linkswithkeeptime)
   * [`fn withTags(value)`](#fn-linkswithtags)
   * [`fn withTagsMixin(value)`](#fn-linkswithtagsmixin)
-  * [`fn withTargetBlank(value)`](#fn-linkswithtargetblank)
+  * [`fn withTargetBlank(value=false)`](#fn-linkswithtargetblank)
   * [`fn withTitle(value)`](#fn-linkswithtitle)
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
-  * [`fn withType(value)`](#fn-linkswithtype)
+  * [`fn withType(value='enum[link,dashboards]')`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
 * [`obj options`](#obj-options)
-  * [`fn withColWidth(value)`](#fn-optionswithcolwidth)
-  * [`fn withOptionsWithLegend(value)`](#fn-optionswithoptionswithlegend)
-  * [`fn withOptionsWithLegendMixin(value)`](#fn-optionswithoptionswithlegendmixin)
-  * [`fn withOptionsWithTimezones(value)`](#fn-optionswithoptionswithtimezones)
-  * [`fn withOptionsWithTimezonesMixin(value)`](#fn-optionswithoptionswithtimezonesmixin)
-  * [`fn withOptionsWithTooltip(value)`](#fn-optionswithoptionswithtooltip)
-  * [`fn withOptionsWithTooltipMixin(value)`](#fn-optionswithoptionswithtooltipmixin)
-  * [`fn withRowHeight(value)`](#fn-optionswithrowheight)
-  * [`fn withShowValue(value)`](#fn-optionswithshowvalue)
-  * [`obj OptionsWithLegend`](#obj-optionsoptionswithlegend)
-    * [`fn withLegend(value)`](#fn-optionsoptionswithlegendwithlegend)
-    * [`fn withLegendMixin(value)`](#fn-optionsoptionswithlegendwithlegendmixin)
-    * [`obj legend`](#obj-optionsoptionswithlegendlegend)
-      * [`fn withAsTable(value)`](#fn-optionsoptionswithlegendlegendwithastable)
-      * [`fn withCalcs(value)`](#fn-optionsoptionswithlegendlegendwithcalcs)
-      * [`fn withCalcsMixin(value)`](#fn-optionsoptionswithlegendlegendwithcalcsmixin)
-      * [`fn withDisplayMode(value)`](#fn-optionsoptionswithlegendlegendwithdisplaymode)
-      * [`fn withIsVisible(value)`](#fn-optionsoptionswithlegendlegendwithisvisible)
-      * [`fn withPlacement(value)`](#fn-optionsoptionswithlegendlegendwithplacement)
-      * [`fn withShowLegend(value)`](#fn-optionsoptionswithlegendlegendwithshowlegend)
-      * [`fn withSortBy(value)`](#fn-optionsoptionswithlegendlegendwithsortby)
-      * [`fn withSortDesc(value)`](#fn-optionsoptionswithlegendlegendwithsortdesc)
-      * [`fn withWidth(value)`](#fn-optionsoptionswithlegendlegendwithwidth)
-  * [`obj OptionsWithTimezones`](#obj-optionsoptionswithtimezones)
-    * [`fn withTimezone(value)`](#fn-optionsoptionswithtimezoneswithtimezone)
-    * [`fn withTimezoneMixin(value)`](#fn-optionsoptionswithtimezoneswithtimezonemixin)
-  * [`obj OptionsWithTooltip`](#obj-optionsoptionswithtooltip)
-    * [`fn withTooltip(value)`](#fn-optionsoptionswithtooltipwithtooltip)
-    * [`fn withTooltipMixin(value)`](#fn-optionsoptionswithtooltipwithtooltipmixin)
-    * [`obj tooltip`](#obj-optionsoptionswithtooltiptooltip)
-      * [`fn withMode(value)`](#fn-optionsoptionswithtooltiptooltipwithmode)
-      * [`fn withSort(value)`](#fn-optionsoptionswithtooltiptooltipwithsort)
+  * [`fn withColWidth(value=0.90000000000000002)`](#fn-optionswithcolwidth)
+  * [`fn withLegend(value)`](#fn-optionswithlegend)
+  * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
+  * [`fn withRowHeight(value=0.90000000000000002)`](#fn-optionswithrowheight)
+  * [`fn withShowValue(value='enum[auto,never,always]')`](#fn-optionswithshowvalue)
+  * [`fn withTimezone(value)`](#fn-optionswithtimezone)
+  * [`fn withTimezoneMixin(value)`](#fn-optionswithtimezonemixin)
+  * [`fn withTooltip(value)`](#fn-optionswithtooltip)
+  * [`fn withTooltipMixin(value)`](#fn-optionswithtooltipmixin)
+  * [`obj legend`](#obj-optionslegend)
+    * [`fn withAsTable(value)`](#fn-optionslegendwithastable)
+    * [`fn withCalcs(value)`](#fn-optionslegendwithcalcs)
+    * [`fn withCalcsMixin(value)`](#fn-optionslegendwithcalcsmixin)
+    * [`fn withDisplayMode(value='enum[list,table,hidden]')`](#fn-optionslegendwithdisplaymode)
+    * [`fn withIsVisible(value)`](#fn-optionslegendwithisvisible)
+    * [`fn withPlacement(value='enum[bottom,right]')`](#fn-optionslegendwithplacement)
+    * [`fn withShowLegend(value)`](#fn-optionslegendwithshowlegend)
+    * [`fn withSortBy(value)`](#fn-optionslegendwithsortby)
+    * [`fn withSortDesc(value)`](#fn-optionslegendwithsortdesc)
+    * [`fn withWidth(value)`](#fn-optionslegendwithwidth)
+  * [`obj tooltip`](#obj-optionstooltip)
+    * [`fn withMode(value='enum[single,multi,none]')`](#fn-optionstooltipwithmode)
+    * [`fn withSort(value='enum[asc,desc,none]')`](#fn-optionstooltipwithsort)
 * [`obj transformations`](#obj-transformations)
   * [`fn withDisabled(value)`](#fn-transformationswithdisabled)
   * [`fn withFilter(value)`](#fn-transformationswithfilter)
@@ -226,7 +214,7 @@ grafonnet.panel.statusHistory
   * [`fn withId(value)`](#fn-transformationswithid)
   * [`fn withOptions(value)`](#fn-transformationswithoptions)
   * [`obj filter`](#obj-transformationsfilter)
-    * [`fn withId(value)`](#fn-transformationsfilterwithid)
+    * [`fn withId(value='')`](#fn-transformationsfilterwithid)
     * [`fn withOptions(value)`](#fn-transformationsfilterwithoptions)
 
 ## Fields
@@ -391,7 +379,7 @@ Name of template variable to repeat for.
 ### fn withRepeatDirection
 
 ```ts
-withRepeatDirection(value)
+withRepeatDirection(value='h')
 ```
 
 Direction to repeat in if 'repeat' is set.
@@ -515,7 +503,7 @@ withTransformationsMixin(value)
 ### fn withTransparent
 
 ```ts
-withTransparent(value)
+withTransparent(value=false)
 ```
 
 Whether to display the panel without a background.
@@ -523,10 +511,10 @@ Whether to display the panel without a background.
 ### fn withType
 
 ```ts
-withType(value)
+withType(value='status-history')
 ```
 
-The panel plugin type id. May not be empty.
+
 
 ### obj datasource
 
@@ -782,7 +770,7 @@ The main color scheme mode
 ###### fn fieldConfig.defaults.color.withSeriesBy
 
 ```ts
-withSeriesBy(value)
+withSeriesBy(value='enum[min,max,last]')
 ```
 
 TODO docs
@@ -793,39 +781,12 @@ TODO docs
 ###### fn fieldConfig.defaults.custom.withFillOpacity
 
 ```ts
-withFillOpacity(value)
+withFillOpacity(value=70)
 ```
 
 
 
-###### fn fieldConfig.defaults.custom.withHideableFieldConfig
-
-```ts
-withHideableFieldConfig(value)
-```
-
-TODO docs
-
-###### fn fieldConfig.defaults.custom.withHideableFieldConfigMixin
-
-```ts
-withHideableFieldConfigMixin(value)
-```
-
-TODO docs
-
-###### fn fieldConfig.defaults.custom.withLineWidth
-
-```ts
-withLineWidth(value)
-```
-
-
-
-###### obj fieldConfig.defaults.custom.HideableFieldConfig
-
-
-####### fn fieldConfig.defaults.custom.HideableFieldConfig.withHideFrom
+###### fn fieldConfig.defaults.custom.withHideFrom
 
 ```ts
 withHideFrom(value)
@@ -833,7 +794,7 @@ withHideFrom(value)
 
 TODO docs
 
-####### fn fieldConfig.defaults.custom.HideableFieldConfig.withHideFromMixin
+###### fn fieldConfig.defaults.custom.withHideFromMixin
 
 ```ts
 withHideFromMixin(value)
@@ -841,10 +802,18 @@ withHideFromMixin(value)
 
 TODO docs
 
-####### obj fieldConfig.defaults.custom.HideableFieldConfig.hideFrom
+###### fn fieldConfig.defaults.custom.withLineWidth
+
+```ts
+withLineWidth(value=1)
+```
 
 
-######## fn fieldConfig.defaults.custom.HideableFieldConfig.hideFrom.withLegend
+
+###### obj fieldConfig.defaults.custom.hideFrom
+
+
+####### fn fieldConfig.defaults.custom.hideFrom.withLegend
 
 ```ts
 withLegend(value)
@@ -852,7 +821,7 @@ withLegend(value)
 
 
 
-######## fn fieldConfig.defaults.custom.HideableFieldConfig.hideFrom.withTooltip
+####### fn fieldConfig.defaults.custom.hideFrom.withTooltip
 
 ```ts
 withTooltip(value)
@@ -860,7 +829,7 @@ withTooltip(value)
 
 
 
-######## fn fieldConfig.defaults.custom.HideableFieldConfig.hideFrom.withViz
+####### fn fieldConfig.defaults.custom.hideFrom.withViz
 
 ```ts
 withViz(value)
@@ -1090,7 +1059,7 @@ withType(value)
 ######## fn fieldConfig.defaults.mappings.SpecialValueMap.options.withMatch
 
 ```ts
-withMatch(value)
+withMatch(value='enum[true,false]')
 ```
 
 
@@ -1187,7 +1156,7 @@ withType(value)
 ###### fn fieldConfig.defaults.thresholds.withMode
 
 ```ts
-withMode(value)
+withMode(value='enum[absolute,percentage]')
 ```
 
 
@@ -1279,7 +1248,7 @@ withPropertiesMixin(value)
 ###### fn fieldConfig.overrides.matcher.withId
 
 ```ts
-withId(value)
+withId(value='')
 ```
 
 
@@ -1298,7 +1267,7 @@ withOptions(value)
 ###### fn fieldConfig.overrides.properties.withId
 
 ```ts
-withId(value)
+withId(value='')
 ```
 
 
@@ -1317,7 +1286,7 @@ withValue(value)
 #### fn gridPos.withH
 
 ```ts
-withH(value)
+withH(value=9)
 ```
 
 Panel
@@ -1333,7 +1302,7 @@ true if fixed
 #### fn gridPos.withW
 
 ```ts
-withW(value)
+withW(value=12)
 ```
 
 Panel
@@ -1341,7 +1310,7 @@ Panel
 #### fn gridPos.withX
 
 ```ts
-withX(value)
+withX(value=0)
 ```
 
 Panel x
@@ -1349,7 +1318,7 @@ Panel x
 #### fn gridPos.withY
 
 ```ts
-withY(value)
+withY(value=0)
 ```
 
 Panel y
@@ -1379,7 +1348,7 @@ withUid(value)
 #### fn links.withAsDropdown
 
 ```ts
-withAsDropdown(value)
+withAsDropdown(value=false)
 ```
 
 
@@ -1395,7 +1364,7 @@ withIcon(value)
 #### fn links.withIncludeVars
 
 ```ts
-withIncludeVars(value)
+withIncludeVars(value=false)
 ```
 
 
@@ -1403,7 +1372,7 @@ withIncludeVars(value)
 #### fn links.withKeepTime
 
 ```ts
-withKeepTime(value)
+withKeepTime(value=false)
 ```
 
 
@@ -1427,7 +1396,7 @@ withTagsMixin(value)
 #### fn links.withTargetBlank
 
 ```ts
-withTargetBlank(value)
+withTargetBlank(value=false)
 ```
 
 
@@ -1451,7 +1420,7 @@ withTooltip(value)
 #### fn links.withType
 
 ```ts
-withType(value)
+withType(value='enum[link,dashboards]')
 ```
 
 TODO docs
@@ -1470,79 +1439,12 @@ withUrl(value)
 #### fn options.withColWidth
 
 ```ts
-withColWidth(value)
+withColWidth(value=0.90000000000000002)
 ```
 
 Controls the column width
 
-#### fn options.withOptionsWithLegend
-
-```ts
-withOptionsWithLegend(value)
-```
-
-TODO docs
-
-#### fn options.withOptionsWithLegendMixin
-
-```ts
-withOptionsWithLegendMixin(value)
-```
-
-TODO docs
-
-#### fn options.withOptionsWithTimezones
-
-```ts
-withOptionsWithTimezones(value)
-```
-
-TODO docs
-
-#### fn options.withOptionsWithTimezonesMixin
-
-```ts
-withOptionsWithTimezonesMixin(value)
-```
-
-TODO docs
-
-#### fn options.withOptionsWithTooltip
-
-```ts
-withOptionsWithTooltip(value)
-```
-
-TODO docs
-
-#### fn options.withOptionsWithTooltipMixin
-
-```ts
-withOptionsWithTooltipMixin(value)
-```
-
-TODO docs
-
-#### fn options.withRowHeight
-
-```ts
-withRowHeight(value)
-```
-
-Set the height of the rows
-
-#### fn options.withShowValue
-
-```ts
-withShowValue(value)
-```
-
-TODO docs
-
-#### obj options.OptionsWithLegend
-
-
-##### fn options.OptionsWithLegend.withLegend
+#### fn options.withLegend
 
 ```ts
 withLegend(value)
@@ -1550,7 +1452,7 @@ withLegend(value)
 
 TODO docs
 
-##### fn options.OptionsWithLegend.withLegendMixin
+#### fn options.withLegendMixin
 
 ```ts
 withLegendMixin(value)
@@ -1558,94 +1460,23 @@ withLegendMixin(value)
 
 TODO docs
 
-##### obj options.OptionsWithLegend.legend
-
-
-###### fn options.OptionsWithLegend.legend.withAsTable
+#### fn options.withRowHeight
 
 ```ts
-withAsTable(value)
+withRowHeight(value=0.90000000000000002)
 ```
 
+Set the height of the rows
 
-
-###### fn options.OptionsWithLegend.legend.withCalcs
-
-```ts
-withCalcs(value)
-```
-
-
-
-###### fn options.OptionsWithLegend.legend.withCalcsMixin
+#### fn options.withShowValue
 
 ```ts
-withCalcsMixin(value)
-```
-
-
-
-###### fn options.OptionsWithLegend.legend.withDisplayMode
-
-```ts
-withDisplayMode(value)
-```
-
-TODO docs
-Note: "hidden" needs to remain as an option for plugins compatibility
-
-###### fn options.OptionsWithLegend.legend.withIsVisible
-
-```ts
-withIsVisible(value)
-```
-
-
-
-###### fn options.OptionsWithLegend.legend.withPlacement
-
-```ts
-withPlacement(value)
+withShowValue(value='enum[auto,never,always]')
 ```
 
 TODO docs
 
-###### fn options.OptionsWithLegend.legend.withShowLegend
-
-```ts
-withShowLegend(value)
-```
-
-
-
-###### fn options.OptionsWithLegend.legend.withSortBy
-
-```ts
-withSortBy(value)
-```
-
-
-
-###### fn options.OptionsWithLegend.legend.withSortDesc
-
-```ts
-withSortDesc(value)
-```
-
-
-
-###### fn options.OptionsWithLegend.legend.withWidth
-
-```ts
-withWidth(value)
-```
-
-
-
-#### obj options.OptionsWithTimezones
-
-
-##### fn options.OptionsWithTimezones.withTimezone
+#### fn options.withTimezone
 
 ```ts
 withTimezone(value)
@@ -1653,7 +1484,7 @@ withTimezone(value)
 
 
 
-##### fn options.OptionsWithTimezones.withTimezoneMixin
+#### fn options.withTimezoneMixin
 
 ```ts
 withTimezoneMixin(value)
@@ -1661,10 +1492,7 @@ withTimezoneMixin(value)
 
 
 
-#### obj options.OptionsWithTooltip
-
-
-##### fn options.OptionsWithTooltip.withTooltip
+#### fn options.withTooltip
 
 ```ts
 withTooltip(value)
@@ -1672,7 +1500,7 @@ withTooltip(value)
 
 TODO docs
 
-##### fn options.OptionsWithTooltip.withTooltipMixin
+#### fn options.withTooltipMixin
 
 ```ts
 withTooltipMixin(value)
@@ -1680,21 +1508,105 @@ withTooltipMixin(value)
 
 TODO docs
 
-##### obj options.OptionsWithTooltip.tooltip
+#### obj options.legend
 
 
-###### fn options.OptionsWithTooltip.tooltip.withMode
+##### fn options.legend.withAsTable
 
 ```ts
-withMode(value)
+withAsTable(value)
+```
+
+
+
+##### fn options.legend.withCalcs
+
+```ts
+withCalcs(value)
+```
+
+
+
+##### fn options.legend.withCalcsMixin
+
+```ts
+withCalcsMixin(value)
+```
+
+
+
+##### fn options.legend.withDisplayMode
+
+```ts
+withDisplayMode(value='enum[list,table,hidden]')
+```
+
+TODO docs
+Note: "hidden" needs to remain as an option for plugins compatibility
+
+##### fn options.legend.withIsVisible
+
+```ts
+withIsVisible(value)
+```
+
+
+
+##### fn options.legend.withPlacement
+
+```ts
+withPlacement(value='enum[bottom,right]')
 ```
 
 TODO docs
 
-###### fn options.OptionsWithTooltip.tooltip.withSort
+##### fn options.legend.withShowLegend
 
 ```ts
-withSort(value)
+withShowLegend(value)
+```
+
+
+
+##### fn options.legend.withSortBy
+
+```ts
+withSortBy(value)
+```
+
+
+
+##### fn options.legend.withSortDesc
+
+```ts
+withSortDesc(value)
+```
+
+
+
+##### fn options.legend.withWidth
+
+```ts
+withWidth(value)
+```
+
+
+
+#### obj options.tooltip
+
+
+##### fn options.tooltip.withMode
+
+```ts
+withMode(value='enum[single,multi,none]')
+```
+
+TODO docs
+
+##### fn options.tooltip.withSort
+
+```ts
+withSort(value='enum[asc,desc,none]')
 ```
 
 TODO docs
@@ -1749,7 +1661,7 @@ Valid options depend on the transformer id
 ##### fn transformations.filter.withId
 
 ```ts
-withId(value)
+withId(value='')
 ```
 
 

@@ -18,18 +18,28 @@ grafonnet.query.phlare
 
 ## Index
 
+* [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withGroupBy(value)`](#fn-withgroupby)
 * [`fn withGroupByMixin(value)`](#fn-withgroupbymixin)
-* [`fn withLabelSelector(value)`](#fn-withlabelselector)
+* [`fn withHide(value)`](#fn-withhide)
+* [`fn withKey(value)`](#fn-withkey)
+* [`fn withLabelSelector(value='{}')`](#fn-withlabelselector)
 * [`fn withProfileTypeId(value)`](#fn-withprofiletypeid)
-* [`obj DataQuery`](#obj-dataquery)
-  * [`fn withDatasource(value)`](#fn-dataquerywithdatasource)
-  * [`fn withHide(value)`](#fn-dataquerywithhide)
-  * [`fn withKey(value)`](#fn-dataquerywithkey)
-  * [`fn withQueryType(value)`](#fn-dataquerywithquerytype)
-  * [`fn withRefId(value)`](#fn-dataquerywithrefid)
+* [`fn withQueryType(value)`](#fn-withquerytype)
+* [`fn withRefId(value)`](#fn-withrefid)
 
 ## Fields
+
+### fn withDatasource
+
+```ts
+withDatasource(value)
+```
+
+For mixed data sources the selected datasource is on the query level.
+For non mixed scenarios this is undefined.
+TODO find a better way to do this ^ that's friendly to schema
+TODO this shouldn't be unknown but DataSourceRef | null
 
 ### fn withGroupBy
 
@@ -47,10 +57,26 @@ withGroupByMixin(value)
 
 Allows to group the results.
 
+### fn withHide
+
+```ts
+withHide(value)
+```
+
+true if query is disabled (ie should not be returned to the dashboard)
+
+### fn withKey
+
+```ts
+withKey(value)
+```
+
+Unique, guid like, string used in explore mode
+
 ### fn withLabelSelector
 
 ```ts
-withLabelSelector(value)
+withLabelSelector(value='{}')
 ```
 
 Specifies the query label selectors.
@@ -63,37 +89,7 @@ withProfileTypeId(value)
 
 Specifies the type of profile to query.
 
-### obj DataQuery
-
-
-#### fn DataQuery.withDatasource
-
-```ts
-withDatasource(value)
-```
-
-For mixed data sources the selected datasource is on the query level.
-For non mixed scenarios this is undefined.
-TODO find a better way to do this ^ that's friendly to schema
-TODO this shouldn't be unknown but DataSourceRef | null
-
-#### fn DataQuery.withHide
-
-```ts
-withHide(value)
-```
-
-true if query is disabled (ie should not be returned to the dashboard)
-
-#### fn DataQuery.withKey
-
-```ts
-withKey(value)
-```
-
-Unique, guid like, string used in explore mode
-
-#### fn DataQuery.withQueryType
+### fn withQueryType
 
 ```ts
 withQueryType(value)
@@ -102,7 +98,7 @@ withQueryType(value)
 Specify the query flavor
 TODO make this required and give it a default
 
-#### fn DataQuery.withRefId
+### fn withRefId
 
 ```ts
 withRefId(value)

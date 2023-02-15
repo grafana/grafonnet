@@ -24,7 +24,10 @@ grafonnet.query.testData
 * [`fn withCsvFileName(value)`](#fn-withcsvfilename)
 * [`fn withCsvWave(value)`](#fn-withcsvwave)
 * [`fn withCsvWaveMixin(value)`](#fn-withcsvwavemixin)
-* [`fn withErrorType(value)`](#fn-witherrortype)
+* [`fn withDatasource(value)`](#fn-withdatasource)
+* [`fn withErrorType(value='enum[server_panic,frontend_exception,frontend_observable]')`](#fn-witherrortype)
+* [`fn withHide(value)`](#fn-withhide)
+* [`fn withKey(value)`](#fn-withkey)
 * [`fn withLabels(value)`](#fn-withlabels)
 * [`fn withLevelColumn(value)`](#fn-withlevelcolumn)
 * [`fn withLines(value)`](#fn-withlines)
@@ -34,8 +37,10 @@ grafonnet.query.testData
 * [`fn withPointsMixin(value)`](#fn-withpointsmixin)
 * [`fn withPulseWave(value)`](#fn-withpulsewave)
 * [`fn withPulseWaveMixin(value)`](#fn-withpulsewavemixin)
+* [`fn withQueryType(value)`](#fn-withquerytype)
 * [`fn withRawFrameContent(value)`](#fn-withrawframecontent)
-* [`fn withScenarioId(value)`](#fn-withscenarioid)
+* [`fn withRefId(value)`](#fn-withrefid)
+* [`fn withScenarioId(value='enum[random_walk,slow_query,random_walk_with_error,random_walk_table,exponential_heatmap_bucket_data,linear_heatmap_bucket_data,no_data_points,datapoints_outside_range,csv_metric_values,predictable_pulse,predictable_csv_wave,streaming_client,simulation,usa,live,grafana_api,arrow,annotations,table_static,server_error_500,logs,node_graph,flame_graph,raw_frame,csv_file,csv_content,trace,manual_entry,variables-query]')`](#fn-withscenarioid)
 * [`fn withSeriesCount(value)`](#fn-withseriescount)
 * [`fn withSim(value)`](#fn-withsim)
 * [`fn withSimMixin(value)`](#fn-withsimmixin)
@@ -45,12 +50,6 @@ grafonnet.query.testData
 * [`fn withStringInput(value)`](#fn-withstringinput)
 * [`fn withUsa(value)`](#fn-withusa)
 * [`fn withUsaMixin(value)`](#fn-withusamixin)
-* [`obj DataQuery`](#obj-dataquery)
-  * [`fn withDatasource(value)`](#fn-dataquerywithdatasource)
-  * [`fn withHide(value)`](#fn-dataquerywithhide)
-  * [`fn withKey(value)`](#fn-dataquerywithkey)
-  * [`fn withQueryType(value)`](#fn-dataquerywithquerytype)
-  * [`fn withRefId(value)`](#fn-dataquerywithrefid)
 * [`obj csvWave`](#obj-csvwave)
   * [`fn withLabels(value)`](#fn-csvwavewithlabels)
   * [`fn withName(value)`](#fn-csvwavewithname)
@@ -58,7 +57,7 @@ grafonnet.query.testData
   * [`fn withValuesCSV(value)`](#fn-csvwavewithvaluescsv)
 * [`obj nodes`](#obj-nodes)
   * [`fn withCount(value)`](#fn-nodeswithcount)
-  * [`fn withType(value)`](#fn-nodeswithtype)
+  * [`fn withType(value='enum[random,response,random edges]')`](#fn-nodeswithtype)
 * [`obj pulseWave`](#obj-pulsewave)
   * [`fn withOffCount(value)`](#fn-pulsewavewithoffcount)
   * [`fn withOffValue(value)`](#fn-pulsewavewithoffvalue)
@@ -81,7 +80,7 @@ grafonnet.query.testData
   * [`fn withNoise(value)`](#fn-streamwithnoise)
   * [`fn withSpeed(value)`](#fn-streamwithspeed)
   * [`fn withSpread(value)`](#fn-streamwithspread)
-  * [`fn withType(value)`](#fn-streamwithtype)
+  * [`fn withType(value='enum[signal,logs,fetch]')`](#fn-streamwithtype)
   * [`fn withUrl(value)`](#fn-streamwithurl)
 * [`obj usa`](#obj-usa)
   * [`fn withFields(value)`](#fn-usawithfields)
@@ -141,13 +140,40 @@ withCsvWaveMixin(value)
 
 
 
+### fn withDatasource
+
+```ts
+withDatasource(value)
+```
+
+For mixed data sources the selected datasource is on the query level.
+For non mixed scenarios this is undefined.
+TODO find a better way to do this ^ that's friendly to schema
+TODO this shouldn't be unknown but DataSourceRef | null
+
 ### fn withErrorType
 
 ```ts
-withErrorType(value)
+withErrorType(value='enum[server_panic,frontend_exception,frontend_observable]')
 ```
 
 
+
+### fn withHide
+
+```ts
+withHide(value)
+```
+
+true if query is disabled (ie should not be returned to the dashboard)
+
+### fn withKey
+
+```ts
+withKey(value)
+```
+
+Unique, guid like, string used in explore mode
 
 ### fn withLabels
 
@@ -221,6 +247,15 @@ withPulseWaveMixin(value)
 
 
 
+### fn withQueryType
+
+```ts
+withQueryType(value)
+```
+
+Specify the query flavor
+TODO make this required and give it a default
+
 ### fn withRawFrameContent
 
 ```ts
@@ -229,10 +264,18 @@ withRawFrameContent(value)
 
 
 
+### fn withRefId
+
+```ts
+withRefId(value)
+```
+
+A - Z
+
 ### fn withScenarioId
 
 ```ts
-withScenarioId(value)
+withScenarioId(value='enum[random_walk,slow_query,random_walk_with_error,random_walk_table,exponential_heatmap_bucket_data,linear_heatmap_bucket_data,no_data_points,datapoints_outside_range,csv_metric_values,predictable_pulse,predictable_csv_wave,streaming_client,simulation,usa,live,grafana_api,arrow,annotations,table_static,server_error_500,logs,node_graph,flame_graph,raw_frame,csv_file,csv_content,trace,manual_entry,variables-query]')
 ```
 
 
@@ -309,53 +352,6 @@ withUsaMixin(value)
 
 
 
-### obj DataQuery
-
-
-#### fn DataQuery.withDatasource
-
-```ts
-withDatasource(value)
-```
-
-For mixed data sources the selected datasource is on the query level.
-For non mixed scenarios this is undefined.
-TODO find a better way to do this ^ that's friendly to schema
-TODO this shouldn't be unknown but DataSourceRef | null
-
-#### fn DataQuery.withHide
-
-```ts
-withHide(value)
-```
-
-true if query is disabled (ie should not be returned to the dashboard)
-
-#### fn DataQuery.withKey
-
-```ts
-withKey(value)
-```
-
-Unique, guid like, string used in explore mode
-
-#### fn DataQuery.withQueryType
-
-```ts
-withQueryType(value)
-```
-
-Specify the query flavor
-TODO make this required and give it a default
-
-#### fn DataQuery.withRefId
-
-```ts
-withRefId(value)
-```
-
-A - Z
-
 ### obj csvWave
 
 
@@ -405,7 +401,7 @@ withCount(value)
 #### fn nodes.withType
 
 ```ts
-withType(value)
+withType(value='enum[random,response,random edges]')
 ```
 
 
@@ -569,7 +565,7 @@ withSpread(value)
 #### fn stream.withType
 
 ```ts
-withType(value)
+withType(value='enum[signal,logs,fetch]')
 ```
 
 

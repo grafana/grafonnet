@@ -37,7 +37,7 @@ grafonnet.panel.gauge
 * [`fn withOptionsMixin(value)`](#fn-withoptionsmixin)
 * [`fn withPluginVersion(value)`](#fn-withpluginversion)
 * [`fn withRepeat(value)`](#fn-withrepeat)
-* [`fn withRepeatDirection(value)`](#fn-withrepeatdirection)
+* [`fn withRepeatDirection(value='h')`](#fn-withrepeatdirection)
 * [`fn withRepeatPanelId(value)`](#fn-withrepeatpanelid)
 * [`fn withTags(value)`](#fn-withtags)
 * [`fn withTagsMixin(value)`](#fn-withtagsmixin)
@@ -52,8 +52,8 @@ grafonnet.panel.gauge
 * [`fn withTitle(value)`](#fn-withtitle)
 * [`fn withTransformations(value)`](#fn-withtransformations)
 * [`fn withTransformationsMixin(value)`](#fn-withtransformationsmixin)
-* [`fn withTransparent(value)`](#fn-withtransparent)
-* [`fn withType(value)`](#fn-withtype)
+* [`fn withTransparent(value=false)`](#fn-withtransparent)
+* [`fn withType(value='gauge')`](#fn-withtype)
 * [`obj datasource`](#obj-datasource)
   * [`fn withType(value)`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
@@ -87,7 +87,7 @@ grafonnet.panel.gauge
     * [`obj color`](#obj-fieldconfigdefaultscolor)
       * [`fn withFixedColor(value)`](#fn-fieldconfigdefaultscolorwithfixedcolor)
       * [`fn withMode(value)`](#fn-fieldconfigdefaultscolorwithmode)
-      * [`fn withSeriesBy(value)`](#fn-fieldconfigdefaultscolorwithseriesby)
+      * [`fn withSeriesBy(value='enum[min,max,last]')`](#fn-fieldconfigdefaultscolorwithseriesby)
     * [`obj mappings`](#obj-fieldconfigdefaultsmappings)
       * [`obj RangeMap`](#obj-fieldconfigdefaultsmappingsrangemap)
         * [`fn withOptions(value)`](#fn-fieldconfigdefaultsmappingsrangemapwithoptions)
@@ -121,7 +121,7 @@ grafonnet.panel.gauge
         * [`fn withOptionsMixin(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapwithoptionsmixin)
         * [`fn withType(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapwithtype)
         * [`obj options`](#obj-fieldconfigdefaultsmappingsspecialvaluemapoptions)
-          * [`fn withMatch(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithmatch)
+          * [`fn withMatch(value='enum[true,false]')`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithmatch)
           * [`fn withPattern(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithpattern)
           * [`fn withResult(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithresult)
           * [`fn withResultMixin(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithresultmixin)
@@ -135,7 +135,7 @@ grafonnet.panel.gauge
         * [`fn withOptionsMixin(value)`](#fn-fieldconfigdefaultsmappingsvaluemapwithoptionsmixin)
         * [`fn withType(value)`](#fn-fieldconfigdefaultsmappingsvaluemapwithtype)
     * [`obj thresholds`](#obj-fieldconfigdefaultsthresholds)
-      * [`fn withMode(value)`](#fn-fieldconfigdefaultsthresholdswithmode)
+      * [`fn withMode(value='enum[absolute,percentage]')`](#fn-fieldconfigdefaultsthresholdswithmode)
       * [`fn withSteps(value)`](#fn-fieldconfigdefaultsthresholdswithsteps)
       * [`fn withStepsMixin(value)`](#fn-fieldconfigdefaultsthresholdswithstepsmixin)
       * [`obj steps`](#obj-fieldconfigdefaultsthresholdssteps)
@@ -148,55 +148,49 @@ grafonnet.panel.gauge
     * [`fn withProperties(value)`](#fn-fieldconfigoverrideswithproperties)
     * [`fn withPropertiesMixin(value)`](#fn-fieldconfigoverrideswithpropertiesmixin)
     * [`obj matcher`](#obj-fieldconfigoverridesmatcher)
-      * [`fn withId(value)`](#fn-fieldconfigoverridesmatcherwithid)
+      * [`fn withId(value='')`](#fn-fieldconfigoverridesmatcherwithid)
       * [`fn withOptions(value)`](#fn-fieldconfigoverridesmatcherwithoptions)
     * [`obj properties`](#obj-fieldconfigoverridesproperties)
-      * [`fn withId(value)`](#fn-fieldconfigoverridespropertieswithid)
+      * [`fn withId(value='')`](#fn-fieldconfigoverridespropertieswithid)
       * [`fn withValue(value)`](#fn-fieldconfigoverridespropertieswithvalue)
 * [`obj gridPos`](#obj-gridpos)
-  * [`fn withH(value)`](#fn-gridposwithh)
+  * [`fn withH(value=9)`](#fn-gridposwithh)
   * [`fn withStatic(value)`](#fn-gridposwithstatic)
-  * [`fn withW(value)`](#fn-gridposwithw)
-  * [`fn withX(value)`](#fn-gridposwithx)
-  * [`fn withY(value)`](#fn-gridposwithy)
+  * [`fn withW(value=12)`](#fn-gridposwithw)
+  * [`fn withX(value=0)`](#fn-gridposwithx)
+  * [`fn withY(value=0)`](#fn-gridposwithy)
 * [`obj libraryPanel`](#obj-librarypanel)
   * [`fn withName(value)`](#fn-librarypanelwithname)
   * [`fn withUid(value)`](#fn-librarypanelwithuid)
 * [`obj links`](#obj-links)
-  * [`fn withAsDropdown(value)`](#fn-linkswithasdropdown)
+  * [`fn withAsDropdown(value=false)`](#fn-linkswithasdropdown)
   * [`fn withIcon(value)`](#fn-linkswithicon)
-  * [`fn withIncludeVars(value)`](#fn-linkswithincludevars)
-  * [`fn withKeepTime(value)`](#fn-linkswithkeeptime)
+  * [`fn withIncludeVars(value=false)`](#fn-linkswithincludevars)
+  * [`fn withKeepTime(value=false)`](#fn-linkswithkeeptime)
   * [`fn withTags(value)`](#fn-linkswithtags)
   * [`fn withTagsMixin(value)`](#fn-linkswithtagsmixin)
-  * [`fn withTargetBlank(value)`](#fn-linkswithtargetblank)
+  * [`fn withTargetBlank(value=false)`](#fn-linkswithtargetblank)
   * [`fn withTitle(value)`](#fn-linkswithtitle)
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
-  * [`fn withType(value)`](#fn-linkswithtype)
+  * [`fn withType(value='enum[link,dashboards]')`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
 * [`obj options`](#obj-options)
-  * [`fn withShowThresholdLabels(value)`](#fn-optionswithshowthresholdlabels)
-  * [`fn withShowThresholdMarkers(value)`](#fn-optionswithshowthresholdmarkers)
-  * [`fn withSingleStatBaseOptions(value)`](#fn-optionswithsinglestatbaseoptions)
-  * [`fn withSingleStatBaseOptionsMixin(value)`](#fn-optionswithsinglestatbaseoptionsmixin)
-  * [`obj SingleStatBaseOptions`](#obj-optionssinglestatbaseoptions)
-    * [`fn withOptionsWithTextFormatting(value)`](#fn-optionssinglestatbaseoptionswithoptionswithtextformatting)
-    * [`fn withOptionsWithTextFormattingMixin(value)`](#fn-optionssinglestatbaseoptionswithoptionswithtextformattingmixin)
-    * [`fn withOrientation(value)`](#fn-optionssinglestatbaseoptionswithorientation)
-    * [`fn withReduceOptions(value)`](#fn-optionssinglestatbaseoptionswithreduceoptions)
-    * [`fn withReduceOptionsMixin(value)`](#fn-optionssinglestatbaseoptionswithreduceoptionsmixin)
-    * [`obj OptionsWithTextFormatting`](#obj-optionssinglestatbaseoptionsoptionswithtextformatting)
-      * [`fn withText(value)`](#fn-optionssinglestatbaseoptionsoptionswithtextformattingwithtext)
-      * [`fn withTextMixin(value)`](#fn-optionssinglestatbaseoptionsoptionswithtextformattingwithtextmixin)
-      * [`obj text`](#obj-optionssinglestatbaseoptionsoptionswithtextformattingtext)
-        * [`fn withTitleSize(value)`](#fn-optionssinglestatbaseoptionsoptionswithtextformattingtextwithtitlesize)
-        * [`fn withValueSize(value)`](#fn-optionssinglestatbaseoptionsoptionswithtextformattingtextwithvaluesize)
-    * [`obj reduceOptions`](#obj-optionssinglestatbaseoptionsreduceoptions)
-      * [`fn withCalcs(value)`](#fn-optionssinglestatbaseoptionsreduceoptionswithcalcs)
-      * [`fn withCalcsMixin(value)`](#fn-optionssinglestatbaseoptionsreduceoptionswithcalcsmixin)
-      * [`fn withFields(value)`](#fn-optionssinglestatbaseoptionsreduceoptionswithfields)
-      * [`fn withLimit(value)`](#fn-optionssinglestatbaseoptionsreduceoptionswithlimit)
-      * [`fn withValues(value)`](#fn-optionssinglestatbaseoptionsreduceoptionswithvalues)
+  * [`fn withOrientation(value='enum[auto,vertical,horizontal]')`](#fn-optionswithorientation)
+  * [`fn withReduceOptions(value)`](#fn-optionswithreduceoptions)
+  * [`fn withReduceOptionsMixin(value)`](#fn-optionswithreduceoptionsmixin)
+  * [`fn withShowThresholdLabels(value=false)`](#fn-optionswithshowthresholdlabels)
+  * [`fn withShowThresholdMarkers(value=true)`](#fn-optionswithshowthresholdmarkers)
+  * [`fn withText(value)`](#fn-optionswithtext)
+  * [`fn withTextMixin(value)`](#fn-optionswithtextmixin)
+  * [`obj reduceOptions`](#obj-optionsreduceoptions)
+    * [`fn withCalcs(value)`](#fn-optionsreduceoptionswithcalcs)
+    * [`fn withCalcsMixin(value)`](#fn-optionsreduceoptionswithcalcsmixin)
+    * [`fn withFields(value)`](#fn-optionsreduceoptionswithfields)
+    * [`fn withLimit(value)`](#fn-optionsreduceoptionswithlimit)
+    * [`fn withValues(value)`](#fn-optionsreduceoptionswithvalues)
+  * [`obj text`](#obj-optionstext)
+    * [`fn withTitleSize(value)`](#fn-optionstextwithtitlesize)
+    * [`fn withValueSize(value)`](#fn-optionstextwithvaluesize)
 * [`obj transformations`](#obj-transformations)
   * [`fn withDisabled(value)`](#fn-transformationswithdisabled)
   * [`fn withFilter(value)`](#fn-transformationswithfilter)
@@ -204,7 +198,7 @@ grafonnet.panel.gauge
   * [`fn withId(value)`](#fn-transformationswithid)
   * [`fn withOptions(value)`](#fn-transformationswithoptions)
   * [`obj filter`](#obj-transformationsfilter)
-    * [`fn withId(value)`](#fn-transformationsfilterwithid)
+    * [`fn withId(value='')`](#fn-transformationsfilterwithid)
     * [`fn withOptions(value)`](#fn-transformationsfilterwithoptions)
 
 ## Fields
@@ -369,7 +363,7 @@ Name of template variable to repeat for.
 ### fn withRepeatDirection
 
 ```ts
-withRepeatDirection(value)
+withRepeatDirection(value='h')
 ```
 
 Direction to repeat in if 'repeat' is set.
@@ -493,7 +487,7 @@ withTransformationsMixin(value)
 ### fn withTransparent
 
 ```ts
-withTransparent(value)
+withTransparent(value=false)
 ```
 
 Whether to display the panel without a background.
@@ -501,10 +495,10 @@ Whether to display the panel without a background.
 ### fn withType
 
 ```ts
-withType(value)
+withType(value='gauge')
 ```
 
-The panel plugin type id. May not be empty.
+
 
 ### obj datasource
 
@@ -760,7 +754,7 @@ The main color scheme mode
 ###### fn fieldConfig.defaults.color.withSeriesBy
 
 ```ts
-withSeriesBy(value)
+withSeriesBy(value='enum[min,max,last]')
 ```
 
 TODO docs
@@ -987,7 +981,7 @@ withType(value)
 ######## fn fieldConfig.defaults.mappings.SpecialValueMap.options.withMatch
 
 ```ts
-withMatch(value)
+withMatch(value='enum[true,false]')
 ```
 
 
@@ -1084,7 +1078,7 @@ withType(value)
 ###### fn fieldConfig.defaults.thresholds.withMode
 
 ```ts
-withMode(value)
+withMode(value='enum[absolute,percentage]')
 ```
 
 
@@ -1176,7 +1170,7 @@ withPropertiesMixin(value)
 ###### fn fieldConfig.overrides.matcher.withId
 
 ```ts
-withId(value)
+withId(value='')
 ```
 
 
@@ -1195,7 +1189,7 @@ withOptions(value)
 ###### fn fieldConfig.overrides.properties.withId
 
 ```ts
-withId(value)
+withId(value='')
 ```
 
 
@@ -1214,7 +1208,7 @@ withValue(value)
 #### fn gridPos.withH
 
 ```ts
-withH(value)
+withH(value=9)
 ```
 
 Panel
@@ -1230,7 +1224,7 @@ true if fixed
 #### fn gridPos.withW
 
 ```ts
-withW(value)
+withW(value=12)
 ```
 
 Panel
@@ -1238,7 +1232,7 @@ Panel
 #### fn gridPos.withX
 
 ```ts
-withX(value)
+withX(value=0)
 ```
 
 Panel x
@@ -1246,7 +1240,7 @@ Panel x
 #### fn gridPos.withY
 
 ```ts
-withY(value)
+withY(value=0)
 ```
 
 Panel y
@@ -1276,7 +1270,7 @@ withUid(value)
 #### fn links.withAsDropdown
 
 ```ts
-withAsDropdown(value)
+withAsDropdown(value=false)
 ```
 
 
@@ -1292,7 +1286,7 @@ withIcon(value)
 #### fn links.withIncludeVars
 
 ```ts
-withIncludeVars(value)
+withIncludeVars(value=false)
 ```
 
 
@@ -1300,7 +1294,7 @@ withIncludeVars(value)
 #### fn links.withKeepTime
 
 ```ts
-withKeepTime(value)
+withKeepTime(value=false)
 ```
 
 
@@ -1324,7 +1318,7 @@ withTagsMixin(value)
 #### fn links.withTargetBlank
 
 ```ts
-withTargetBlank(value)
+withTargetBlank(value=false)
 ```
 
 
@@ -1348,7 +1342,7 @@ withTooltip(value)
 #### fn links.withType
 
 ```ts
-withType(value)
+withType(value='enum[link,dashboards]')
 ```
 
 TODO docs
@@ -1364,66 +1358,15 @@ withUrl(value)
 ### obj options
 
 
-#### fn options.withShowThresholdLabels
+#### fn options.withOrientation
 
 ```ts
-withShowThresholdLabels(value)
-```
-
-
-
-#### fn options.withShowThresholdMarkers
-
-```ts
-withShowThresholdMarkers(value)
-```
-
-
-
-#### fn options.withSingleStatBaseOptions
-
-```ts
-withSingleStatBaseOptions(value)
+withOrientation(value='enum[auto,vertical,horizontal]')
 ```
 
 TODO docs
 
-#### fn options.withSingleStatBaseOptionsMixin
-
-```ts
-withSingleStatBaseOptionsMixin(value)
-```
-
-TODO docs
-
-#### obj options.SingleStatBaseOptions
-
-
-##### fn options.SingleStatBaseOptions.withOptionsWithTextFormatting
-
-```ts
-withOptionsWithTextFormatting(value)
-```
-
-TODO docs
-
-##### fn options.SingleStatBaseOptions.withOptionsWithTextFormattingMixin
-
-```ts
-withOptionsWithTextFormattingMixin(value)
-```
-
-TODO docs
-
-##### fn options.SingleStatBaseOptions.withOrientation
-
-```ts
-withOrientation(value)
-```
-
-TODO docs
-
-##### fn options.SingleStatBaseOptions.withReduceOptions
+#### fn options.withReduceOptions
 
 ```ts
 withReduceOptions(value)
@@ -1431,7 +1374,7 @@ withReduceOptions(value)
 
 TODO docs
 
-##### fn options.SingleStatBaseOptions.withReduceOptionsMixin
+#### fn options.withReduceOptionsMixin
 
 ```ts
 withReduceOptionsMixin(value)
@@ -1439,10 +1382,23 @@ withReduceOptionsMixin(value)
 
 TODO docs
 
-##### obj options.SingleStatBaseOptions.OptionsWithTextFormatting
+#### fn options.withShowThresholdLabels
+
+```ts
+withShowThresholdLabels(value=false)
+```
 
 
-###### fn options.SingleStatBaseOptions.OptionsWithTextFormatting.withText
+
+#### fn options.withShowThresholdMarkers
+
+```ts
+withShowThresholdMarkers(value=true)
+```
+
+
+
+#### fn options.withText
 
 ```ts
 withText(value)
@@ -1450,7 +1406,7 @@ withText(value)
 
 TODO docs
 
-###### fn options.SingleStatBaseOptions.OptionsWithTextFormatting.withTextMixin
+#### fn options.withTextMixin
 
 ```ts
 withTextMixin(value)
@@ -1458,29 +1414,10 @@ withTextMixin(value)
 
 TODO docs
 
-###### obj options.SingleStatBaseOptions.OptionsWithTextFormatting.text
+#### obj options.reduceOptions
 
 
-####### fn options.SingleStatBaseOptions.OptionsWithTextFormatting.text.withTitleSize
-
-```ts
-withTitleSize(value)
-```
-
-Explicit title text size
-
-####### fn options.SingleStatBaseOptions.OptionsWithTextFormatting.text.withValueSize
-
-```ts
-withValueSize(value)
-```
-
-Explicit value text size
-
-##### obj options.SingleStatBaseOptions.reduceOptions
-
-
-###### fn options.SingleStatBaseOptions.reduceOptions.withCalcs
+##### fn options.reduceOptions.withCalcs
 
 ```ts
 withCalcs(value)
@@ -1488,7 +1425,7 @@ withCalcs(value)
 
 When !values, pick one value for the whole field
 
-###### fn options.SingleStatBaseOptions.reduceOptions.withCalcsMixin
+##### fn options.reduceOptions.withCalcsMixin
 
 ```ts
 withCalcsMixin(value)
@@ -1496,7 +1433,7 @@ withCalcsMixin(value)
 
 When !values, pick one value for the whole field
 
-###### fn options.SingleStatBaseOptions.reduceOptions.withFields
+##### fn options.reduceOptions.withFields
 
 ```ts
 withFields(value)
@@ -1504,7 +1441,7 @@ withFields(value)
 
 Which fields to show.  By default this is only numeric fields
 
-###### fn options.SingleStatBaseOptions.reduceOptions.withLimit
+##### fn options.reduceOptions.withLimit
 
 ```ts
 withLimit(value)
@@ -1512,13 +1449,32 @@ withLimit(value)
 
 if showing all values limit
 
-###### fn options.SingleStatBaseOptions.reduceOptions.withValues
+##### fn options.reduceOptions.withValues
 
 ```ts
 withValues(value)
 ```
 
 If true show each row value
+
+#### obj options.text
+
+
+##### fn options.text.withTitleSize
+
+```ts
+withTitleSize(value)
+```
+
+Explicit title text size
+
+##### fn options.text.withValueSize
+
+```ts
+withValueSize(value)
+```
+
+Explicit value text size
 
 ### obj transformations
 
@@ -1570,7 +1526,7 @@ Valid options depend on the transformer id
 ##### fn transformations.filter.withId
 
 ```ts
-withId(value)
+withId(value='')
 ```
 
 

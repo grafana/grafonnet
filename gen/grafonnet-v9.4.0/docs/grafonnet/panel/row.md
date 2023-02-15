@@ -19,7 +19,7 @@ grafonnet.panel.row
 ## Index
 
 * [`fn new(title)`](#fn-new)
-* [`fn withCollapsed(value)`](#fn-withcollapsed)
+* [`fn withCollapsed(value=false)`](#fn-withcollapsed)
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withDatasourceMixin(value)`](#fn-withdatasourcemixin)
 * [`fn withGridPos(value)`](#fn-withgridpos)
@@ -29,16 +29,16 @@ grafonnet.panel.row
 * [`fn withPanelsMixin(value)`](#fn-withpanelsmixin)
 * [`fn withRepeat(value)`](#fn-withrepeat)
 * [`fn withTitle(value)`](#fn-withtitle)
-* [`fn withType(value)`](#fn-withtype)
+* [`fn withType(value='enum[row]')`](#fn-withtype)
 * [`obj datasource`](#obj-datasource)
   * [`fn withType(value)`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj gridPos`](#obj-gridpos)
-  * [`fn withH(value)`](#fn-gridposwithh)
+  * [`fn withH(value=9)`](#fn-gridposwithh)
   * [`fn withStatic(value)`](#fn-gridposwithstatic)
-  * [`fn withW(value)`](#fn-gridposwithw)
-  * [`fn withX(value)`](#fn-gridposwithx)
-  * [`fn withY(value)`](#fn-gridposwithy)
+  * [`fn withW(value=12)`](#fn-gridposwithw)
+  * [`fn withX(value=0)`](#fn-gridposwithx)
+  * [`fn withY(value=0)`](#fn-gridposwithy)
 
 ## Fields
 
@@ -53,7 +53,7 @@ Creates a new row panel with a title.
 ### fn withCollapsed
 
 ```ts
-withCollapsed(value)
+withCollapsed(value=false)
 ```
 
 
@@ -133,7 +133,7 @@ withTitle(value)
 ### fn withType
 
 ```ts
-withType(value)
+withType(value='enum[row]')
 ```
 
 
@@ -163,7 +163,7 @@ withUid(value)
 #### fn gridPos.withH
 
 ```ts
-withH(value)
+withH(value=9)
 ```
 
 Panel
@@ -179,7 +179,7 @@ true if fixed
 #### fn gridPos.withW
 
 ```ts
-withW(value)
+withW(value=12)
 ```
 
 Panel
@@ -187,7 +187,7 @@ Panel
 #### fn gridPos.withX
 
 ```ts
-withX(value)
+withX(value=0)
 ```
 
 Panel x
@@ -195,7 +195,7 @@ Panel x
 #### fn gridPos.withY
 
 ```ts
-withY(value)
+withY(value=0)
 ```
 
 Panel y
