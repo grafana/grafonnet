@@ -174,6 +174,116 @@ grafonnet.panel.xyChart
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
   * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
+* [`obj options`](#obj-options)
+  * [`fn withDims(value)`](#fn-optionswithdims)
+  * [`fn withDimsMixin(value)`](#fn-optionswithdimsmixin)
+  * [`fn withOptionsWithLegend(value)`](#fn-optionswithoptionswithlegend)
+  * [`fn withOptionsWithLegendMixin(value)`](#fn-optionswithoptionswithlegendmixin)
+  * [`fn withOptionsWithTooltip(value)`](#fn-optionswithoptionswithtooltip)
+  * [`fn withOptionsWithTooltipMixin(value)`](#fn-optionswithoptionswithtooltipmixin)
+  * [`fn withSeries(value)`](#fn-optionswithseries)
+  * [`fn withSeriesMapping(value)`](#fn-optionswithseriesmapping)
+  * [`fn withSeriesMixin(value)`](#fn-optionswithseriesmixin)
+  * [`obj OptionsWithLegend`](#obj-optionsoptionswithlegend)
+    * [`fn withLegend(value)`](#fn-optionsoptionswithlegendwithlegend)
+    * [`fn withLegendMixin(value)`](#fn-optionsoptionswithlegendwithlegendmixin)
+    * [`obj legend`](#obj-optionsoptionswithlegendlegend)
+      * [`fn withAsTable(value)`](#fn-optionsoptionswithlegendlegendwithastable)
+      * [`fn withCalcs(value)`](#fn-optionsoptionswithlegendlegendwithcalcs)
+      * [`fn withCalcsMixin(value)`](#fn-optionsoptionswithlegendlegendwithcalcsmixin)
+      * [`fn withDisplayMode(value)`](#fn-optionsoptionswithlegendlegendwithdisplaymode)
+      * [`fn withIsVisible(value)`](#fn-optionsoptionswithlegendlegendwithisvisible)
+      * [`fn withPlacement(value)`](#fn-optionsoptionswithlegendlegendwithplacement)
+      * [`fn withShowLegend(value)`](#fn-optionsoptionswithlegendlegendwithshowlegend)
+      * [`fn withSortBy(value)`](#fn-optionsoptionswithlegendlegendwithsortby)
+      * [`fn withSortDesc(value)`](#fn-optionsoptionswithlegendlegendwithsortdesc)
+      * [`fn withWidth(value)`](#fn-optionsoptionswithlegendlegendwithwidth)
+  * [`obj OptionsWithTooltip`](#obj-optionsoptionswithtooltip)
+    * [`fn withTooltip(value)`](#fn-optionsoptionswithtooltipwithtooltip)
+    * [`fn withTooltipMixin(value)`](#fn-optionsoptionswithtooltipwithtooltipmixin)
+    * [`obj tooltip`](#obj-optionsoptionswithtooltiptooltip)
+      * [`fn withMode(value)`](#fn-optionsoptionswithtooltiptooltipwithmode)
+      * [`fn withSort(value)`](#fn-optionsoptionswithtooltiptooltipwithsort)
+  * [`obj dims`](#obj-optionsdims)
+    * [`fn withExclude(value)`](#fn-optionsdimswithexclude)
+    * [`fn withExcludeMixin(value)`](#fn-optionsdimswithexcludemixin)
+    * [`fn withFrame(value)`](#fn-optionsdimswithframe)
+    * [`fn withX(value)`](#fn-optionsdimswithx)
+  * [`obj series`](#obj-optionsseries)
+    * [`fn withName(value)`](#fn-optionsserieswithname)
+    * [`fn withX(value)`](#fn-optionsserieswithx)
+    * [`fn withY(value)`](#fn-optionsserieswithy)
+    * [`obj ScatterFieldConfig`](#obj-optionsseriesscatterfieldconfig)
+      * [`fn withLabel(value)`](#fn-optionsseriesscatterfieldconfigwithlabel)
+      * [`fn withLabelValue(value)`](#fn-optionsseriesscatterfieldconfigwithlabelvalue)
+      * [`fn withLabelValueMixin(value)`](#fn-optionsseriesscatterfieldconfigwithlabelvaluemixin)
+      * [`fn withLineColor(value)`](#fn-optionsseriesscatterfieldconfigwithlinecolor)
+      * [`fn withLineColorMixin(value)`](#fn-optionsseriesscatterfieldconfigwithlinecolormixin)
+      * [`fn withLineStyle(value)`](#fn-optionsseriesscatterfieldconfigwithlinestyle)
+      * [`fn withLineStyleMixin(value)`](#fn-optionsseriesscatterfieldconfigwithlinestylemixin)
+      * [`fn withLineWidth(value)`](#fn-optionsseriesscatterfieldconfigwithlinewidth)
+      * [`fn withPointColor(value)`](#fn-optionsseriesscatterfieldconfigwithpointcolor)
+      * [`fn withPointColorMixin(value)`](#fn-optionsseriesscatterfieldconfigwithpointcolormixin)
+      * [`fn withPointSize(value)`](#fn-optionsseriesscatterfieldconfigwithpointsize)
+      * [`fn withPointSizeMixin(value)`](#fn-optionsseriesscatterfieldconfigwithpointsizemixin)
+      * [`fn withShow(value)`](#fn-optionsseriesscatterfieldconfigwithshow)
+      * [`obj AxisConfig`](#obj-optionsseriesscatterfieldconfigaxisconfig)
+        * [`fn withAxisCenteredZero(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithaxiscenteredzero)
+        * [`fn withAxisColorMode(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithaxiscolormode)
+        * [`fn withAxisGridShow(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithaxisgridshow)
+        * [`fn withAxisLabel(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithaxislabel)
+        * [`fn withAxisPlacement(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithaxisplacement)
+        * [`fn withAxisSoftMax(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithaxissoftmax)
+        * [`fn withAxisSoftMin(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithaxissoftmin)
+        * [`fn withAxisWidth(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithaxiswidth)
+        * [`fn withScaleDistribution(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithscaledistribution)
+        * [`fn withScaleDistributionMixin(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigwithscaledistributionmixin)
+        * [`obj scaleDistribution`](#obj-optionsseriesscatterfieldconfigaxisconfigscaledistribution)
+          * [`fn withLinearThreshold(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigscaledistributionwithlinearthreshold)
+          * [`fn withLog(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigscaledistributionwithlog)
+          * [`fn withType(value)`](#fn-optionsseriesscatterfieldconfigaxisconfigscaledistributionwithtype)
+      * [`obj HideableFieldConfig`](#obj-optionsseriesscatterfieldconfighideablefieldconfig)
+        * [`fn withHideFrom(value)`](#fn-optionsseriesscatterfieldconfighideablefieldconfigwithhidefrom)
+        * [`fn withHideFromMixin(value)`](#fn-optionsseriesscatterfieldconfighideablefieldconfigwithhidefrommixin)
+        * [`obj hideFrom`](#obj-optionsseriesscatterfieldconfighideablefieldconfighidefrom)
+          * [`fn withLegend(value)`](#fn-optionsseriesscatterfieldconfighideablefieldconfighidefromwithlegend)
+          * [`fn withTooltip(value)`](#fn-optionsseriesscatterfieldconfighideablefieldconfighidefromwithtooltip)
+          * [`fn withViz(value)`](#fn-optionsseriesscatterfieldconfighideablefieldconfighidefromwithviz)
+      * [`obj labelValue`](#obj-optionsseriesscatterfieldconfiglabelvalue)
+        * [`fn withBaseDimensionConfig(value)`](#fn-optionsseriesscatterfieldconfiglabelvaluewithbasedimensionconfig)
+        * [`fn withBaseDimensionConfigMixin(value)`](#fn-optionsseriesscatterfieldconfiglabelvaluewithbasedimensionconfigmixin)
+        * [`fn withMode(value)`](#fn-optionsseriesscatterfieldconfiglabelvaluewithmode)
+        * [`obj BaseDimensionConfig`](#obj-optionsseriesscatterfieldconfiglabelvaluebasedimensionconfig)
+          * [`fn withField(value)`](#fn-optionsseriesscatterfieldconfiglabelvaluebasedimensionconfigwithfield)
+          * [`fn withFixed(value)`](#fn-optionsseriesscatterfieldconfiglabelvaluebasedimensionconfigwithfixed)
+          * [`fn withFixedMixin(value)`](#fn-optionsseriesscatterfieldconfiglabelvaluebasedimensionconfigwithfixedmixin)
+      * [`obj lineColor`](#obj-optionsseriesscatterfieldconfiglinecolor)
+        * [`fn withBaseDimensionConfig(value)`](#fn-optionsseriesscatterfieldconfiglinecolorwithbasedimensionconfig)
+        * [`fn withBaseDimensionConfigMixin(value)`](#fn-optionsseriesscatterfieldconfiglinecolorwithbasedimensionconfigmixin)
+        * [`obj BaseDimensionConfig`](#obj-optionsseriesscatterfieldconfiglinecolorbasedimensionconfig)
+          * [`fn withField(value)`](#fn-optionsseriesscatterfieldconfiglinecolorbasedimensionconfigwithfield)
+          * [`fn withFixed(value)`](#fn-optionsseriesscatterfieldconfiglinecolorbasedimensionconfigwithfixed)
+          * [`fn withFixedMixin(value)`](#fn-optionsseriesscatterfieldconfiglinecolorbasedimensionconfigwithfixedmixin)
+      * [`obj lineStyle`](#obj-optionsseriesscatterfieldconfiglinestyle)
+        * [`fn withDash(value)`](#fn-optionsseriesscatterfieldconfiglinestylewithdash)
+        * [`fn withDashMixin(value)`](#fn-optionsseriesscatterfieldconfiglinestylewithdashmixin)
+        * [`fn withFill(value)`](#fn-optionsseriesscatterfieldconfiglinestylewithfill)
+      * [`obj pointColor`](#obj-optionsseriesscatterfieldconfigpointcolor)
+        * [`fn withBaseDimensionConfig(value)`](#fn-optionsseriesscatterfieldconfigpointcolorwithbasedimensionconfig)
+        * [`fn withBaseDimensionConfigMixin(value)`](#fn-optionsseriesscatterfieldconfigpointcolorwithbasedimensionconfigmixin)
+        * [`obj BaseDimensionConfig`](#obj-optionsseriesscatterfieldconfigpointcolorbasedimensionconfig)
+          * [`fn withField(value)`](#fn-optionsseriesscatterfieldconfigpointcolorbasedimensionconfigwithfield)
+          * [`fn withFixed(value)`](#fn-optionsseriesscatterfieldconfigpointcolorbasedimensionconfigwithfixed)
+          * [`fn withFixedMixin(value)`](#fn-optionsseriesscatterfieldconfigpointcolorbasedimensionconfigwithfixedmixin)
+      * [`obj pointSize`](#obj-optionsseriesscatterfieldconfigpointsize)
+        * [`fn withBaseDimensionConfig(value)`](#fn-optionsseriesscatterfieldconfigpointsizewithbasedimensionconfig)
+        * [`fn withBaseDimensionConfigMixin(value)`](#fn-optionsseriesscatterfieldconfigpointsizewithbasedimensionconfigmixin)
+        * [`fn withMax(value)`](#fn-optionsseriesscatterfieldconfigpointsizewithmax)
+        * [`fn withMin(value)`](#fn-optionsseriesscatterfieldconfigpointsizewithmin)
+        * [`obj BaseDimensionConfig`](#obj-optionsseriesscatterfieldconfigpointsizebasedimensionconfig)
+          * [`fn withField(value)`](#fn-optionsseriesscatterfieldconfigpointsizebasedimensionconfigwithfield)
+          * [`fn withFixed(value)`](#fn-optionsseriesscatterfieldconfigpointsizebasedimensionconfigwithfixed)
+          * [`fn withFixedMixin(value)`](#fn-optionsseriesscatterfieldconfigpointsizebasedimensionconfigwithfixedmixin)
 * [`obj transformations`](#obj-transformations)
   * [`fn withDisabled(value)`](#fn-transformationswithdisabled)
   * [`fn withFilter(value)`](#fn-transformationswithfilter)
@@ -1334,6 +1444,782 @@ TODO docs
 
 ```ts
 withUrl(value)
+```
+
+
+
+### obj options
+
+
+#### fn options.withDims
+
+```ts
+withDims(value)
+```
+
+
+
+#### fn options.withDimsMixin
+
+```ts
+withDimsMixin(value)
+```
+
+
+
+#### fn options.withOptionsWithLegend
+
+```ts
+withOptionsWithLegend(value)
+```
+
+TODO docs
+
+#### fn options.withOptionsWithLegendMixin
+
+```ts
+withOptionsWithLegendMixin(value)
+```
+
+TODO docs
+
+#### fn options.withOptionsWithTooltip
+
+```ts
+withOptionsWithTooltip(value)
+```
+
+TODO docs
+
+#### fn options.withOptionsWithTooltipMixin
+
+```ts
+withOptionsWithTooltipMixin(value)
+```
+
+TODO docs
+
+#### fn options.withSeries
+
+```ts
+withSeries(value)
+```
+
+
+
+#### fn options.withSeriesMapping
+
+```ts
+withSeriesMapping(value)
+```
+
+
+
+#### fn options.withSeriesMixin
+
+```ts
+withSeriesMixin(value)
+```
+
+
+
+#### obj options.OptionsWithLegend
+
+
+##### fn options.OptionsWithLegend.withLegend
+
+```ts
+withLegend(value)
+```
+
+TODO docs
+
+##### fn options.OptionsWithLegend.withLegendMixin
+
+```ts
+withLegendMixin(value)
+```
+
+TODO docs
+
+##### obj options.OptionsWithLegend.legend
+
+
+###### fn options.OptionsWithLegend.legend.withAsTable
+
+```ts
+withAsTable(value)
+```
+
+
+
+###### fn options.OptionsWithLegend.legend.withCalcs
+
+```ts
+withCalcs(value)
+```
+
+
+
+###### fn options.OptionsWithLegend.legend.withCalcsMixin
+
+```ts
+withCalcsMixin(value)
+```
+
+
+
+###### fn options.OptionsWithLegend.legend.withDisplayMode
+
+```ts
+withDisplayMode(value)
+```
+
+TODO docs
+Note: "hidden" needs to remain as an option for plugins compatibility
+
+###### fn options.OptionsWithLegend.legend.withIsVisible
+
+```ts
+withIsVisible(value)
+```
+
+
+
+###### fn options.OptionsWithLegend.legend.withPlacement
+
+```ts
+withPlacement(value)
+```
+
+TODO docs
+
+###### fn options.OptionsWithLegend.legend.withShowLegend
+
+```ts
+withShowLegend(value)
+```
+
+
+
+###### fn options.OptionsWithLegend.legend.withSortBy
+
+```ts
+withSortBy(value)
+```
+
+
+
+###### fn options.OptionsWithLegend.legend.withSortDesc
+
+```ts
+withSortDesc(value)
+```
+
+
+
+###### fn options.OptionsWithLegend.legend.withWidth
+
+```ts
+withWidth(value)
+```
+
+
+
+#### obj options.OptionsWithTooltip
+
+
+##### fn options.OptionsWithTooltip.withTooltip
+
+```ts
+withTooltip(value)
+```
+
+TODO docs
+
+##### fn options.OptionsWithTooltip.withTooltipMixin
+
+```ts
+withTooltipMixin(value)
+```
+
+TODO docs
+
+##### obj options.OptionsWithTooltip.tooltip
+
+
+###### fn options.OptionsWithTooltip.tooltip.withMode
+
+```ts
+withMode(value)
+```
+
+TODO docs
+
+###### fn options.OptionsWithTooltip.tooltip.withSort
+
+```ts
+withSort(value)
+```
+
+TODO docs
+
+#### obj options.dims
+
+
+##### fn options.dims.withExclude
+
+```ts
+withExclude(value)
+```
+
+
+
+##### fn options.dims.withExcludeMixin
+
+```ts
+withExcludeMixin(value)
+```
+
+
+
+##### fn options.dims.withFrame
+
+```ts
+withFrame(value)
+```
+
+
+
+##### fn options.dims.withX
+
+```ts
+withX(value)
+```
+
+
+
+#### obj options.series
+
+
+##### fn options.series.withName
+
+```ts
+withName(value)
+```
+
+
+
+##### fn options.series.withX
+
+```ts
+withX(value)
+```
+
+
+
+##### fn options.series.withY
+
+```ts
+withY(value)
+```
+
+
+
+##### obj options.series.ScatterFieldConfig
+
+
+###### fn options.series.ScatterFieldConfig.withLabel
+
+```ts
+withLabel(value)
+```
+
+TODO docs
+
+###### fn options.series.ScatterFieldConfig.withLabelValue
+
+```ts
+withLabelValue(value)
+```
+
+
+
+###### fn options.series.ScatterFieldConfig.withLabelValueMixin
+
+```ts
+withLabelValueMixin(value)
+```
+
+
+
+###### fn options.series.ScatterFieldConfig.withLineColor
+
+```ts
+withLineColor(value)
+```
+
+This is actually an empty interface used mainly for naming?
+
+###### fn options.series.ScatterFieldConfig.withLineColorMixin
+
+```ts
+withLineColorMixin(value)
+```
+
+This is actually an empty interface used mainly for naming?
+
+###### fn options.series.ScatterFieldConfig.withLineStyle
+
+```ts
+withLineStyle(value)
+```
+
+TODO docs
+
+###### fn options.series.ScatterFieldConfig.withLineStyleMixin
+
+```ts
+withLineStyleMixin(value)
+```
+
+TODO docs
+
+###### fn options.series.ScatterFieldConfig.withLineWidth
+
+```ts
+withLineWidth(value)
+```
+
+
+
+###### fn options.series.ScatterFieldConfig.withPointColor
+
+```ts
+withPointColor(value)
+```
+
+This is actually an empty interface used mainly for naming?
+
+###### fn options.series.ScatterFieldConfig.withPointColorMixin
+
+```ts
+withPointColorMixin(value)
+```
+
+This is actually an empty interface used mainly for naming?
+
+###### fn options.series.ScatterFieldConfig.withPointSize
+
+```ts
+withPointSize(value)
+```
+
+
+
+###### fn options.series.ScatterFieldConfig.withPointSizeMixin
+
+```ts
+withPointSizeMixin(value)
+```
+
+
+
+###### fn options.series.ScatterFieldConfig.withShow
+
+```ts
+withShow(value)
+```
+
+
+
+###### obj options.series.ScatterFieldConfig.AxisConfig
+
+
+####### fn options.series.ScatterFieldConfig.AxisConfig.withAxisCenteredZero
+
+```ts
+withAxisCenteredZero(value)
+```
+
+
+
+####### fn options.series.ScatterFieldConfig.AxisConfig.withAxisColorMode
+
+```ts
+withAxisColorMode(value)
+```
+
+TODO docs
+
+####### fn options.series.ScatterFieldConfig.AxisConfig.withAxisGridShow
+
+```ts
+withAxisGridShow(value)
+```
+
+
+
+####### fn options.series.ScatterFieldConfig.AxisConfig.withAxisLabel
+
+```ts
+withAxisLabel(value)
+```
+
+
+
+####### fn options.series.ScatterFieldConfig.AxisConfig.withAxisPlacement
+
+```ts
+withAxisPlacement(value)
+```
+
+TODO docs
+
+####### fn options.series.ScatterFieldConfig.AxisConfig.withAxisSoftMax
+
+```ts
+withAxisSoftMax(value)
+```
+
+
+
+####### fn options.series.ScatterFieldConfig.AxisConfig.withAxisSoftMin
+
+```ts
+withAxisSoftMin(value)
+```
+
+
+
+####### fn options.series.ScatterFieldConfig.AxisConfig.withAxisWidth
+
+```ts
+withAxisWidth(value)
+```
+
+
+
+####### fn options.series.ScatterFieldConfig.AxisConfig.withScaleDistribution
+
+```ts
+withScaleDistribution(value)
+```
+
+TODO docs
+
+####### fn options.series.ScatterFieldConfig.AxisConfig.withScaleDistributionMixin
+
+```ts
+withScaleDistributionMixin(value)
+```
+
+TODO docs
+
+####### obj options.series.ScatterFieldConfig.AxisConfig.scaleDistribution
+
+
+######## fn options.series.ScatterFieldConfig.AxisConfig.scaleDistribution.withLinearThreshold
+
+```ts
+withLinearThreshold(value)
+```
+
+
+
+######## fn options.series.ScatterFieldConfig.AxisConfig.scaleDistribution.withLog
+
+```ts
+withLog(value)
+```
+
+
+
+######## fn options.series.ScatterFieldConfig.AxisConfig.scaleDistribution.withType
+
+```ts
+withType(value)
+```
+
+TODO docs
+
+###### obj options.series.ScatterFieldConfig.HideableFieldConfig
+
+
+####### fn options.series.ScatterFieldConfig.HideableFieldConfig.withHideFrom
+
+```ts
+withHideFrom(value)
+```
+
+TODO docs
+
+####### fn options.series.ScatterFieldConfig.HideableFieldConfig.withHideFromMixin
+
+```ts
+withHideFromMixin(value)
+```
+
+TODO docs
+
+####### obj options.series.ScatterFieldConfig.HideableFieldConfig.hideFrom
+
+
+######## fn options.series.ScatterFieldConfig.HideableFieldConfig.hideFrom.withLegend
+
+```ts
+withLegend(value)
+```
+
+
+
+######## fn options.series.ScatterFieldConfig.HideableFieldConfig.hideFrom.withTooltip
+
+```ts
+withTooltip(value)
+```
+
+
+
+######## fn options.series.ScatterFieldConfig.HideableFieldConfig.hideFrom.withViz
+
+```ts
+withViz(value)
+```
+
+
+
+###### obj options.series.ScatterFieldConfig.labelValue
+
+
+####### fn options.series.ScatterFieldConfig.labelValue.withBaseDimensionConfig
+
+```ts
+withBaseDimensionConfig(value)
+```
+
+
+
+####### fn options.series.ScatterFieldConfig.labelValue.withBaseDimensionConfigMixin
+
+```ts
+withBaseDimensionConfigMixin(value)
+```
+
+
+
+####### fn options.series.ScatterFieldConfig.labelValue.withMode
+
+```ts
+withMode(value)
+```
+
+
+
+####### obj options.series.ScatterFieldConfig.labelValue.BaseDimensionConfig
+
+
+######## fn options.series.ScatterFieldConfig.labelValue.BaseDimensionConfig.withField
+
+```ts
+withField(value)
+```
+
+
+
+######## fn options.series.ScatterFieldConfig.labelValue.BaseDimensionConfig.withFixed
+
+```ts
+withFixed(value)
+```
+
+
+
+######## fn options.series.ScatterFieldConfig.labelValue.BaseDimensionConfig.withFixedMixin
+
+```ts
+withFixedMixin(value)
+```
+
+
+
+###### obj options.series.ScatterFieldConfig.lineColor
+
+
+####### fn options.series.ScatterFieldConfig.lineColor.withBaseDimensionConfig
+
+```ts
+withBaseDimensionConfig(value)
+```
+
+
+
+####### fn options.series.ScatterFieldConfig.lineColor.withBaseDimensionConfigMixin
+
+```ts
+withBaseDimensionConfigMixin(value)
+```
+
+
+
+####### obj options.series.ScatterFieldConfig.lineColor.BaseDimensionConfig
+
+
+######## fn options.series.ScatterFieldConfig.lineColor.BaseDimensionConfig.withField
+
+```ts
+withField(value)
+```
+
+
+
+######## fn options.series.ScatterFieldConfig.lineColor.BaseDimensionConfig.withFixed
+
+```ts
+withFixed(value)
+```
+
+
+
+######## fn options.series.ScatterFieldConfig.lineColor.BaseDimensionConfig.withFixedMixin
+
+```ts
+withFixedMixin(value)
+```
+
+
+
+###### obj options.series.ScatterFieldConfig.lineStyle
+
+
+####### fn options.series.ScatterFieldConfig.lineStyle.withDash
+
+```ts
+withDash(value)
+```
+
+
+
+####### fn options.series.ScatterFieldConfig.lineStyle.withDashMixin
+
+```ts
+withDashMixin(value)
+```
+
+
+
+####### fn options.series.ScatterFieldConfig.lineStyle.withFill
+
+```ts
+withFill(value)
+```
+
+
+
+###### obj options.series.ScatterFieldConfig.pointColor
+
+
+####### fn options.series.ScatterFieldConfig.pointColor.withBaseDimensionConfig
+
+```ts
+withBaseDimensionConfig(value)
+```
+
+
+
+####### fn options.series.ScatterFieldConfig.pointColor.withBaseDimensionConfigMixin
+
+```ts
+withBaseDimensionConfigMixin(value)
+```
+
+
+
+####### obj options.series.ScatterFieldConfig.pointColor.BaseDimensionConfig
+
+
+######## fn options.series.ScatterFieldConfig.pointColor.BaseDimensionConfig.withField
+
+```ts
+withField(value)
+```
+
+
+
+######## fn options.series.ScatterFieldConfig.pointColor.BaseDimensionConfig.withFixed
+
+```ts
+withFixed(value)
+```
+
+
+
+######## fn options.series.ScatterFieldConfig.pointColor.BaseDimensionConfig.withFixedMixin
+
+```ts
+withFixedMixin(value)
+```
+
+
+
+###### obj options.series.ScatterFieldConfig.pointSize
+
+
+####### fn options.series.ScatterFieldConfig.pointSize.withBaseDimensionConfig
+
+```ts
+withBaseDimensionConfig(value)
+```
+
+
+
+####### fn options.series.ScatterFieldConfig.pointSize.withBaseDimensionConfigMixin
+
+```ts
+withBaseDimensionConfigMixin(value)
+```
+
+
+
+####### fn options.series.ScatterFieldConfig.pointSize.withMax
+
+```ts
+withMax(value)
+```
+
+
+
+####### fn options.series.ScatterFieldConfig.pointSize.withMin
+
+```ts
+withMin(value)
+```
+
+
+
+####### obj options.series.ScatterFieldConfig.pointSize.BaseDimensionConfig
+
+
+######## fn options.series.ScatterFieldConfig.pointSize.BaseDimensionConfig.withField
+
+```ts
+withField(value)
+```
+
+
+
+######## fn options.series.ScatterFieldConfig.pointSize.BaseDimensionConfig.withFixed
+
+```ts
+withFixed(value)
+```
+
+
+
+######## fn options.series.ScatterFieldConfig.pointSize.BaseDimensionConfig.withFixedMixin
+
+```ts
+withFixedMixin(value)
 ```
 
 

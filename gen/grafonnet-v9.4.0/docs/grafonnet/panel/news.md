@@ -174,6 +174,9 @@ grafonnet.panel.news
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
   * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
+* [`obj options`](#obj-options)
+  * [`fn withFeedUrl(value)`](#fn-optionswithfeedurl)
+  * [`fn withShowImage(value)`](#fn-optionswithshowimage)
 * [`obj transformations`](#obj-transformations)
   * [`fn withDisabled(value)`](#fn-transformationswithdisabled)
   * [`fn withFilter(value)`](#fn-transformationswithfilter)
@@ -1334,6 +1337,25 @@ TODO docs
 
 ```ts
 withUrl(value)
+```
+
+
+
+### obj options
+
+
+#### fn options.withFeedUrl
+
+```ts
+withFeedUrl(value)
+```
+
+empty/missing will default to grafana blog
+
+#### fn options.withShowImage
+
+```ts
+withShowImage(value)
 ```
 
 

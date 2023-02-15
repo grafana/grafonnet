@@ -174,6 +174,17 @@ grafonnet.panel.dashboardList
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
   * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
+* [`obj options`](#obj-options)
+  * [`fn withFolderId(value)`](#fn-optionswithfolderid)
+  * [`fn withLayout(value)`](#fn-optionswithlayout)
+  * [`fn withMaxItems(value)`](#fn-optionswithmaxitems)
+  * [`fn withQuery(value)`](#fn-optionswithquery)
+  * [`fn withShowHeadings(value)`](#fn-optionswithshowheadings)
+  * [`fn withShowRecentlyViewed(value)`](#fn-optionswithshowrecentlyviewed)
+  * [`fn withShowSearch(value)`](#fn-optionswithshowsearch)
+  * [`fn withShowStarred(value)`](#fn-optionswithshowstarred)
+  * [`fn withTags(value)`](#fn-optionswithtags)
+  * [`fn withTagsMixin(value)`](#fn-optionswithtagsmixin)
 * [`obj transformations`](#obj-transformations)
   * [`fn withDisabled(value)`](#fn-transformationswithdisabled)
   * [`fn withFilter(value)`](#fn-transformationswithfilter)
@@ -1334,6 +1345,89 @@ TODO docs
 
 ```ts
 withUrl(value)
+```
+
+
+
+### obj options
+
+
+#### fn options.withFolderId
+
+```ts
+withFolderId(value)
+```
+
+
+
+#### fn options.withLayout
+
+```ts
+withLayout(value)
+```
+
+
+
+#### fn options.withMaxItems
+
+```ts
+withMaxItems(value)
+```
+
+
+
+#### fn options.withQuery
+
+```ts
+withQuery(value)
+```
+
+
+
+#### fn options.withShowHeadings
+
+```ts
+withShowHeadings(value)
+```
+
+
+
+#### fn options.withShowRecentlyViewed
+
+```ts
+withShowRecentlyViewed(value)
+```
+
+
+
+#### fn options.withShowSearch
+
+```ts
+withShowSearch(value)
+```
+
+
+
+#### fn options.withShowStarred
+
+```ts
+withShowStarred(value)
+```
+
+
+
+#### fn options.withTags
+
+```ts
+withTags(value)
+```
+
+
+
+#### fn options.withTagsMixin
+
+```ts
+withTagsMixin(value)
 ```
 
 

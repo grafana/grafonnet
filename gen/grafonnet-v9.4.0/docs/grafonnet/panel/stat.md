@@ -174,6 +174,31 @@ grafonnet.panel.stat
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
   * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
+* [`obj options`](#obj-options)
+  * [`fn withColorMode(value)`](#fn-optionswithcolormode)
+  * [`fn withGraphMode(value)`](#fn-optionswithgraphmode)
+  * [`fn withJustifyMode(value)`](#fn-optionswithjustifymode)
+  * [`fn withSingleStatBaseOptions(value)`](#fn-optionswithsinglestatbaseoptions)
+  * [`fn withSingleStatBaseOptionsMixin(value)`](#fn-optionswithsinglestatbaseoptionsmixin)
+  * [`fn withTextMode(value)`](#fn-optionswithtextmode)
+  * [`obj SingleStatBaseOptions`](#obj-optionssinglestatbaseoptions)
+    * [`fn withOptionsWithTextFormatting(value)`](#fn-optionssinglestatbaseoptionswithoptionswithtextformatting)
+    * [`fn withOptionsWithTextFormattingMixin(value)`](#fn-optionssinglestatbaseoptionswithoptionswithtextformattingmixin)
+    * [`fn withOrientation(value)`](#fn-optionssinglestatbaseoptionswithorientation)
+    * [`fn withReduceOptions(value)`](#fn-optionssinglestatbaseoptionswithreduceoptions)
+    * [`fn withReduceOptionsMixin(value)`](#fn-optionssinglestatbaseoptionswithreduceoptionsmixin)
+    * [`obj OptionsWithTextFormatting`](#obj-optionssinglestatbaseoptionsoptionswithtextformatting)
+      * [`fn withText(value)`](#fn-optionssinglestatbaseoptionsoptionswithtextformattingwithtext)
+      * [`fn withTextMixin(value)`](#fn-optionssinglestatbaseoptionsoptionswithtextformattingwithtextmixin)
+      * [`obj text`](#obj-optionssinglestatbaseoptionsoptionswithtextformattingtext)
+        * [`fn withTitleSize(value)`](#fn-optionssinglestatbaseoptionsoptionswithtextformattingtextwithtitlesize)
+        * [`fn withValueSize(value)`](#fn-optionssinglestatbaseoptionsoptionswithtextformattingtextwithvaluesize)
+    * [`obj reduceOptions`](#obj-optionssinglestatbaseoptionsreduceoptions)
+      * [`fn withCalcs(value)`](#fn-optionssinglestatbaseoptionsreduceoptionswithcalcs)
+      * [`fn withCalcsMixin(value)`](#fn-optionssinglestatbaseoptionsreduceoptionswithcalcsmixin)
+      * [`fn withFields(value)`](#fn-optionssinglestatbaseoptionsreduceoptionswithfields)
+      * [`fn withLimit(value)`](#fn-optionssinglestatbaseoptionsreduceoptionswithlimit)
+      * [`fn withValues(value)`](#fn-optionssinglestatbaseoptionsreduceoptionswithvalues)
 * [`obj transformations`](#obj-transformations)
   * [`fn withDisabled(value)`](#fn-transformationswithdisabled)
   * [`fn withFilter(value)`](#fn-transformationswithfilter)
@@ -1337,6 +1362,181 @@ withUrl(value)
 ```
 
 
+
+### obj options
+
+
+#### fn options.withColorMode
+
+```ts
+withColorMode(value)
+```
+
+TODO docs
+
+#### fn options.withGraphMode
+
+```ts
+withGraphMode(value)
+```
+
+TODO docs
+
+#### fn options.withJustifyMode
+
+```ts
+withJustifyMode(value)
+```
+
+TODO docs
+
+#### fn options.withSingleStatBaseOptions
+
+```ts
+withSingleStatBaseOptions(value)
+```
+
+TODO docs
+
+#### fn options.withSingleStatBaseOptionsMixin
+
+```ts
+withSingleStatBaseOptionsMixin(value)
+```
+
+TODO docs
+
+#### fn options.withTextMode
+
+```ts
+withTextMode(value)
+```
+
+TODO docs
+
+#### obj options.SingleStatBaseOptions
+
+
+##### fn options.SingleStatBaseOptions.withOptionsWithTextFormatting
+
+```ts
+withOptionsWithTextFormatting(value)
+```
+
+TODO docs
+
+##### fn options.SingleStatBaseOptions.withOptionsWithTextFormattingMixin
+
+```ts
+withOptionsWithTextFormattingMixin(value)
+```
+
+TODO docs
+
+##### fn options.SingleStatBaseOptions.withOrientation
+
+```ts
+withOrientation(value)
+```
+
+TODO docs
+
+##### fn options.SingleStatBaseOptions.withReduceOptions
+
+```ts
+withReduceOptions(value)
+```
+
+TODO docs
+
+##### fn options.SingleStatBaseOptions.withReduceOptionsMixin
+
+```ts
+withReduceOptionsMixin(value)
+```
+
+TODO docs
+
+##### obj options.SingleStatBaseOptions.OptionsWithTextFormatting
+
+
+###### fn options.SingleStatBaseOptions.OptionsWithTextFormatting.withText
+
+```ts
+withText(value)
+```
+
+TODO docs
+
+###### fn options.SingleStatBaseOptions.OptionsWithTextFormatting.withTextMixin
+
+```ts
+withTextMixin(value)
+```
+
+TODO docs
+
+###### obj options.SingleStatBaseOptions.OptionsWithTextFormatting.text
+
+
+####### fn options.SingleStatBaseOptions.OptionsWithTextFormatting.text.withTitleSize
+
+```ts
+withTitleSize(value)
+```
+
+Explicit title text size
+
+####### fn options.SingleStatBaseOptions.OptionsWithTextFormatting.text.withValueSize
+
+```ts
+withValueSize(value)
+```
+
+Explicit value text size
+
+##### obj options.SingleStatBaseOptions.reduceOptions
+
+
+###### fn options.SingleStatBaseOptions.reduceOptions.withCalcs
+
+```ts
+withCalcs(value)
+```
+
+When !values, pick one value for the whole field
+
+###### fn options.SingleStatBaseOptions.reduceOptions.withCalcsMixin
+
+```ts
+withCalcsMixin(value)
+```
+
+When !values, pick one value for the whole field
+
+###### fn options.SingleStatBaseOptions.reduceOptions.withFields
+
+```ts
+withFields(value)
+```
+
+Which fields to show.  By default this is only numeric fields
+
+###### fn options.SingleStatBaseOptions.reduceOptions.withLimit
+
+```ts
+withLimit(value)
+```
+
+if showing all values limit
+
+###### fn options.SingleStatBaseOptions.reduceOptions.withValues
+
+```ts
+withValues(value)
+```
+
+If true show each row value
 
 ### obj transformations
 

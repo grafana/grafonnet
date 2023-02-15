@@ -174,6 +174,18 @@ grafonnet.panel.annotationsList
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
   * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
+* [`obj options`](#obj-options)
+  * [`fn withLimit(value)`](#fn-optionswithlimit)
+  * [`fn withNavigateAfter(value)`](#fn-optionswithnavigateafter)
+  * [`fn withNavigateBefore(value)`](#fn-optionswithnavigatebefore)
+  * [`fn withNavigateToPanel(value)`](#fn-optionswithnavigatetopanel)
+  * [`fn withOnlyFromThisDashboard(value)`](#fn-optionswithonlyfromthisdashboard)
+  * [`fn withOnlyInTimeRange(value)`](#fn-optionswithonlyintimerange)
+  * [`fn withShowTags(value)`](#fn-optionswithshowtags)
+  * [`fn withShowTime(value)`](#fn-optionswithshowtime)
+  * [`fn withShowUser(value)`](#fn-optionswithshowuser)
+  * [`fn withTags(value)`](#fn-optionswithtags)
+  * [`fn withTagsMixin(value)`](#fn-optionswithtagsmixin)
 * [`obj transformations`](#obj-transformations)
   * [`fn withDisabled(value)`](#fn-transformationswithdisabled)
   * [`fn withFilter(value)`](#fn-transformationswithfilter)
@@ -1334,6 +1346,97 @@ TODO docs
 
 ```ts
 withUrl(value)
+```
+
+
+
+### obj options
+
+
+#### fn options.withLimit
+
+```ts
+withLimit(value)
+```
+
+
+
+#### fn options.withNavigateAfter
+
+```ts
+withNavigateAfter(value)
+```
+
+
+
+#### fn options.withNavigateBefore
+
+```ts
+withNavigateBefore(value)
+```
+
+
+
+#### fn options.withNavigateToPanel
+
+```ts
+withNavigateToPanel(value)
+```
+
+
+
+#### fn options.withOnlyFromThisDashboard
+
+```ts
+withOnlyFromThisDashboard(value)
+```
+
+
+
+#### fn options.withOnlyInTimeRange
+
+```ts
+withOnlyInTimeRange(value)
+```
+
+
+
+#### fn options.withShowTags
+
+```ts
+withShowTags(value)
+```
+
+
+
+#### fn options.withShowTime
+
+```ts
+withShowTime(value)
+```
+
+
+
+#### fn options.withShowUser
+
+```ts
+withShowUser(value)
+```
+
+
+
+#### fn options.withTags
+
+```ts
+withTags(value)
+```
+
+
+
+#### fn options.withTagsMixin
+
+```ts
+withTagsMixin(value)
 ```
 
 

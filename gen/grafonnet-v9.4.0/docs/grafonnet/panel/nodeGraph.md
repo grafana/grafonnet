@@ -174,6 +174,22 @@ grafonnet.panel.nodeGraph
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
   * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
+* [`obj options`](#obj-options)
+  * [`fn withEdges(value)`](#fn-optionswithedges)
+  * [`fn withEdgesMixin(value)`](#fn-optionswithedgesmixin)
+  * [`fn withNodes(value)`](#fn-optionswithnodes)
+  * [`fn withNodesMixin(value)`](#fn-optionswithnodesmixin)
+  * [`obj edges`](#obj-optionsedges)
+    * [`fn withMainStatUnit(value)`](#fn-optionsedgeswithmainstatunit)
+    * [`fn withSecondaryStatUnit(value)`](#fn-optionsedgeswithsecondarystatunit)
+  * [`obj nodes`](#obj-optionsnodes)
+    * [`fn withArcs(value)`](#fn-optionsnodeswitharcs)
+    * [`fn withArcsMixin(value)`](#fn-optionsnodeswitharcsmixin)
+    * [`fn withMainStatUnit(value)`](#fn-optionsnodeswithmainstatunit)
+    * [`fn withSecondaryStatUnit(value)`](#fn-optionsnodeswithsecondarystatunit)
+    * [`obj arcs`](#obj-optionsnodesarcs)
+      * [`fn withColor(value)`](#fn-optionsnodesarcswithcolor)
+      * [`fn withField(value)`](#fn-optionsnodesarcswithfield)
 * [`obj transformations`](#obj-transformations)
   * [`fn withDisabled(value)`](#fn-transformationswithdisabled)
   * [`fn withFilter(value)`](#fn-transformationswithfilter)
@@ -1337,6 +1353,114 @@ withUrl(value)
 ```
 
 
+
+### obj options
+
+
+#### fn options.withEdges
+
+```ts
+withEdges(value)
+```
+
+
+
+#### fn options.withEdgesMixin
+
+```ts
+withEdgesMixin(value)
+```
+
+
+
+#### fn options.withNodes
+
+```ts
+withNodes(value)
+```
+
+
+
+#### fn options.withNodesMixin
+
+```ts
+withNodesMixin(value)
+```
+
+
+
+#### obj options.edges
+
+
+##### fn options.edges.withMainStatUnit
+
+```ts
+withMainStatUnit(value)
+```
+
+Unit for the main stat to override what ever is set in the data frame.
+
+##### fn options.edges.withSecondaryStatUnit
+
+```ts
+withSecondaryStatUnit(value)
+```
+
+Unit for the secondary stat to override what ever is set in the data frame.
+
+#### obj options.nodes
+
+
+##### fn options.nodes.withArcs
+
+```ts
+withArcs(value)
+```
+
+Define which fields are shown as part of the node arc (colored circle around the node).
+
+##### fn options.nodes.withArcsMixin
+
+```ts
+withArcsMixin(value)
+```
+
+Define which fields are shown as part of the node arc (colored circle around the node).
+
+##### fn options.nodes.withMainStatUnit
+
+```ts
+withMainStatUnit(value)
+```
+
+Unit for the main stat to override what ever is set in the data frame.
+
+##### fn options.nodes.withSecondaryStatUnit
+
+```ts
+withSecondaryStatUnit(value)
+```
+
+Unit for the secondary stat to override what ever is set in the data frame.
+
+##### obj options.nodes.arcs
+
+
+###### fn options.nodes.arcs.withColor
+
+```ts
+withColor(value)
+```
+
+The color of the arc.
+
+###### fn options.nodes.arcs.withField
+
+```ts
+withField(value)
+```
+
+Field from which to get the value. Values should be less than 1, representing fraction of a circle.
 
 ### obj transformations
 

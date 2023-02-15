@@ -15,8 +15,13 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
     local filteredSchemas = {
       general: std.filterMap(
         function(schema)
-          !('PanelOptions' in schema.components.schemas[schema.info.title].properties)
-          && !('PanelFieldConfig' in schema.components.schemas[schema.info.title].properties)
+          !(
+            ('properties' in schema.components.schemas[schema.info.title])
+            && (
+              ('PanelOptions' in schema.components.schemas[schema.info.title].properties)
+              || ('PanelFieldConfig' in schema.components.schemas[schema.info.title].properties)
+            )
+          )
           && !('DataQuery' in schema.components.schemas),
         function(schema) root.restructure(schema),
         schemas
@@ -24,8 +29,11 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 
       panel: std.filterMap(
         function(schema)
-          'PanelOptions' in schema.components.schemas[schema.info.title].properties
-          || 'PanelFieldConfig' in schema.components.schemas[schema.info.title].properties,
+          ('properties' in schema.components.schemas[schema.info.title])
+          && (
+            ('PanelOptions' in schema.components.schemas[schema.info.title].properties)
+            || ('PanelFieldConfig' in schema.components.schemas[schema.info.title].properties)
+          ),
         function(schema) root.restructure(schema),
         schemas
       ),
@@ -115,22 +123,30 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 
   coreLib: {
     new(schema):
-      crdsonnet.fromOpenAPI(
+      local title = std.trace(schema.info.title, schema.info.title);
+      local render = crdsonnet.fromOpenAPI(
         'lib',
-        schema.components.schemas[schema.info.title],
+        schema.components.schemas[title],
         schema,
         render='dynamic',
-      ).lib,
+      );
+      if 'lib' in render
+      then render.lib
+      else {},
   },
 
   queryLib: {
     new(dashboardSchema, schema):
-      crdsonnet.fromOpenAPI(
+      local title = std.trace(schema.info.title, schema.info.title);
+      local render = crdsonnet.fromOpenAPI(
         'lib',
-        schema.components.schemas[schema.info.title],
+        schema.components.schemas[title],
         schema,
         render='dynamic',
-      ).lib,
+      );
+      if 'lib' in render
+      then render.lib
+      else {},
   },
 
   panelLib: {
@@ -138,19 +154,20 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
     // fiels in the upstream Panel schema This function fits these schemas in the right
     // place for CRDsonnet.
     new(dashboardSchema, panelSchema):
+      local subSchema = panelSchema.components.schemas[panelSchema.info.title];
       local customSchema =
         panelSchema.components.schemas[panelSchema.info.title] {
           type: 'object',
-          [if 'properties' in panelSchema then 'properties']+: {
-            [if 'PanelOptions' in panelSchema.properties then 'options']:
-              panelSchema.properties.PanelOptions,
-            [if 'PanelFieldConfig' in panelSchema.properties then 'fieldConfig']: {
+          [if 'properties' in subSchema then 'properties']+: {
+            [if 'PanelOptions' in subSchema.properties then 'options']:
+              subSchema.properties.PanelOptions,
+            [if 'PanelFieldConfig' in subSchema.properties then 'fieldConfig']: {
               type: 'object',
               properties+: {
                 defaults+: {
                   type: 'object',
                   properties+: {
-                    custom: panelSchema.properties.PanelFieldConfig,
+                    custom: subSchema.properties.PanelFieldConfig,
                   },
                 },
               },

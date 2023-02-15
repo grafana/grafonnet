@@ -174,6 +174,15 @@ grafonnet.panel.text
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
   * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
+* [`obj options`](#obj-options)
+  * [`fn withCode(value)`](#fn-optionswithcode)
+  * [`fn withCodeMixin(value)`](#fn-optionswithcodemixin)
+  * [`fn withContent(value)`](#fn-optionswithcontent)
+  * [`fn withMode(value)`](#fn-optionswithmode)
+  * [`obj code`](#obj-optionscode)
+    * [`fn withLanguage(value)`](#fn-optionscodewithlanguage)
+    * [`fn withShowLineNumbers(value)`](#fn-optionscodewithshowlinenumbers)
+    * [`fn withShowMiniMap(value)`](#fn-optionscodewithshowminimap)
 * [`obj transformations`](#obj-transformations)
   * [`fn withDisabled(value)`](#fn-transformationswithdisabled)
   * [`fn withFilter(value)`](#fn-transformationswithfilter)
@@ -1334,6 +1343,68 @@ TODO docs
 
 ```ts
 withUrl(value)
+```
+
+
+
+### obj options
+
+
+#### fn options.withCode
+
+```ts
+withCode(value)
+```
+
+
+
+#### fn options.withCodeMixin
+
+```ts
+withCodeMixin(value)
+```
+
+
+
+#### fn options.withContent
+
+```ts
+withContent(value)
+```
+
+
+
+#### fn options.withMode
+
+```ts
+withMode(value)
+```
+
+
+
+#### obj options.code
+
+
+##### fn options.code.withLanguage
+
+```ts
+withLanguage(value)
+```
+
+
+
+##### fn options.code.withShowLineNumbers
+
+```ts
+withShowLineNumbers(value)
+```
+
+
+
+##### fn options.code.withShowMiniMap
+
+```ts
+withShowMiniMap(value)
 ```
 
 

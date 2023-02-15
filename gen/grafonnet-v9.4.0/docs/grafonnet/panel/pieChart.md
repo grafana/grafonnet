@@ -88,6 +88,13 @@ grafonnet.panel.pieChart
       * [`fn withFixedColor(value)`](#fn-fieldconfigdefaultscolorwithfixedcolor)
       * [`fn withMode(value)`](#fn-fieldconfigdefaultscolorwithmode)
       * [`fn withSeriesBy(value)`](#fn-fieldconfigdefaultscolorwithseriesby)
+    * [`obj custom`](#obj-fieldconfigdefaultscustom)
+      * [`fn withHideFrom(value)`](#fn-fieldconfigdefaultscustomwithhidefrom)
+      * [`fn withHideFromMixin(value)`](#fn-fieldconfigdefaultscustomwithhidefrommixin)
+      * [`obj hideFrom`](#obj-fieldconfigdefaultscustomhidefrom)
+        * [`fn withLegend(value)`](#fn-fieldconfigdefaultscustomhidefromwithlegend)
+        * [`fn withTooltip(value)`](#fn-fieldconfigdefaultscustomhidefromwithtooltip)
+        * [`fn withViz(value)`](#fn-fieldconfigdefaultscustomhidefromwithviz)
     * [`obj mappings`](#obj-fieldconfigdefaultsmappings)
       * [`obj RangeMap`](#obj-fieldconfigdefaultsmappingsrangemap)
         * [`fn withOptions(value)`](#fn-fieldconfigdefaultsmappingsrangemapwithoptions)
@@ -174,6 +181,56 @@ grafonnet.panel.pieChart
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
   * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
+* [`obj options`](#obj-options)
+  * [`fn withDisplayLabels(value)`](#fn-optionswithdisplaylabels)
+  * [`fn withDisplayLabelsMixin(value)`](#fn-optionswithdisplaylabelsmixin)
+  * [`fn withLegend(value)`](#fn-optionswithlegend)
+  * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
+  * [`fn withOptionsWithTooltip(value)`](#fn-optionswithoptionswithtooltip)
+  * [`fn withOptionsWithTooltipMixin(value)`](#fn-optionswithoptionswithtooltipmixin)
+  * [`fn withPieType(value)`](#fn-optionswithpietype)
+  * [`fn withSingleStatBaseOptions(value)`](#fn-optionswithsinglestatbaseoptions)
+  * [`fn withSingleStatBaseOptionsMixin(value)`](#fn-optionswithsinglestatbaseoptionsmixin)
+  * [`obj OptionsWithTooltip`](#obj-optionsoptionswithtooltip)
+    * [`fn withTooltip(value)`](#fn-optionsoptionswithtooltipwithtooltip)
+    * [`fn withTooltipMixin(value)`](#fn-optionsoptionswithtooltipwithtooltipmixin)
+    * [`obj tooltip`](#obj-optionsoptionswithtooltiptooltip)
+      * [`fn withMode(value)`](#fn-optionsoptionswithtooltiptooltipwithmode)
+      * [`fn withSort(value)`](#fn-optionsoptionswithtooltiptooltipwithsort)
+  * [`obj SingleStatBaseOptions`](#obj-optionssinglestatbaseoptions)
+    * [`fn withOptionsWithTextFormatting(value)`](#fn-optionssinglestatbaseoptionswithoptionswithtextformatting)
+    * [`fn withOptionsWithTextFormattingMixin(value)`](#fn-optionssinglestatbaseoptionswithoptionswithtextformattingmixin)
+    * [`fn withOrientation(value)`](#fn-optionssinglestatbaseoptionswithorientation)
+    * [`fn withReduceOptions(value)`](#fn-optionssinglestatbaseoptionswithreduceoptions)
+    * [`fn withReduceOptionsMixin(value)`](#fn-optionssinglestatbaseoptionswithreduceoptionsmixin)
+    * [`obj OptionsWithTextFormatting`](#obj-optionssinglestatbaseoptionsoptionswithtextformatting)
+      * [`fn withText(value)`](#fn-optionssinglestatbaseoptionsoptionswithtextformattingwithtext)
+      * [`fn withTextMixin(value)`](#fn-optionssinglestatbaseoptionsoptionswithtextformattingwithtextmixin)
+      * [`obj text`](#obj-optionssinglestatbaseoptionsoptionswithtextformattingtext)
+        * [`fn withTitleSize(value)`](#fn-optionssinglestatbaseoptionsoptionswithtextformattingtextwithtitlesize)
+        * [`fn withValueSize(value)`](#fn-optionssinglestatbaseoptionsoptionswithtextformattingtextwithvaluesize)
+    * [`obj reduceOptions`](#obj-optionssinglestatbaseoptionsreduceoptions)
+      * [`fn withCalcs(value)`](#fn-optionssinglestatbaseoptionsreduceoptionswithcalcs)
+      * [`fn withCalcsMixin(value)`](#fn-optionssinglestatbaseoptionsreduceoptionswithcalcsmixin)
+      * [`fn withFields(value)`](#fn-optionssinglestatbaseoptionsreduceoptionswithfields)
+      * [`fn withLimit(value)`](#fn-optionssinglestatbaseoptionsreduceoptionswithlimit)
+      * [`fn withValues(value)`](#fn-optionssinglestatbaseoptionsreduceoptionswithvalues)
+  * [`obj legend`](#obj-optionslegend)
+    * [`fn withValues(value)`](#fn-optionslegendwithvalues)
+    * [`fn withValuesMixin(value)`](#fn-optionslegendwithvaluesmixin)
+    * [`fn withVizLegendOptions(value)`](#fn-optionslegendwithvizlegendoptions)
+    * [`fn withVizLegendOptionsMixin(value)`](#fn-optionslegendwithvizlegendoptionsmixin)
+    * [`obj VizLegendOptions`](#obj-optionslegendvizlegendoptions)
+      * [`fn withAsTable(value)`](#fn-optionslegendvizlegendoptionswithastable)
+      * [`fn withCalcs(value)`](#fn-optionslegendvizlegendoptionswithcalcs)
+      * [`fn withCalcsMixin(value)`](#fn-optionslegendvizlegendoptionswithcalcsmixin)
+      * [`fn withDisplayMode(value)`](#fn-optionslegendvizlegendoptionswithdisplaymode)
+      * [`fn withIsVisible(value)`](#fn-optionslegendvizlegendoptionswithisvisible)
+      * [`fn withPlacement(value)`](#fn-optionslegendvizlegendoptionswithplacement)
+      * [`fn withShowLegend(value)`](#fn-optionslegendvizlegendoptionswithshowlegend)
+      * [`fn withSortBy(value)`](#fn-optionslegendvizlegendoptionswithsortby)
+      * [`fn withSortDesc(value)`](#fn-optionslegendvizlegendoptionswithsortdesc)
+      * [`fn withWidth(value)`](#fn-optionslegendvizlegendoptionswithwidth)
 * [`obj transformations`](#obj-transformations)
   * [`fn withDisabled(value)`](#fn-transformationswithdisabled)
   * [`fn withFilter(value)`](#fn-transformationswithfilter)
@@ -741,6 +798,52 @@ withSeriesBy(value)
 ```
 
 TODO docs
+
+##### obj fieldConfig.defaults.custom
+
+
+###### fn fieldConfig.defaults.custom.withHideFrom
+
+```ts
+withHideFrom(value)
+```
+
+TODO docs
+
+###### fn fieldConfig.defaults.custom.withHideFromMixin
+
+```ts
+withHideFromMixin(value)
+```
+
+TODO docs
+
+###### obj fieldConfig.defaults.custom.hideFrom
+
+
+####### fn fieldConfig.defaults.custom.hideFrom.withLegend
+
+```ts
+withLegend(value)
+```
+
+
+
+####### fn fieldConfig.defaults.custom.hideFrom.withTooltip
+
+```ts
+withTooltip(value)
+```
+
+
+
+####### fn fieldConfig.defaults.custom.hideFrom.withViz
+
+```ts
+withViz(value)
+```
+
+
 
 ##### obj fieldConfig.defaults.mappings
 
@@ -1334,6 +1437,362 @@ TODO docs
 
 ```ts
 withUrl(value)
+```
+
+
+
+### obj options
+
+
+#### fn options.withDisplayLabels
+
+```ts
+withDisplayLabels(value)
+```
+
+
+
+#### fn options.withDisplayLabelsMixin
+
+```ts
+withDisplayLabelsMixin(value)
+```
+
+
+
+#### fn options.withLegend
+
+```ts
+withLegend(value)
+```
+
+
+
+#### fn options.withLegendMixin
+
+```ts
+withLegendMixin(value)
+```
+
+
+
+#### fn options.withOptionsWithTooltip
+
+```ts
+withOptionsWithTooltip(value)
+```
+
+TODO docs
+
+#### fn options.withOptionsWithTooltipMixin
+
+```ts
+withOptionsWithTooltipMixin(value)
+```
+
+TODO docs
+
+#### fn options.withPieType
+
+```ts
+withPieType(value)
+```
+
+Select the pie chart display style.
+
+#### fn options.withSingleStatBaseOptions
+
+```ts
+withSingleStatBaseOptions(value)
+```
+
+TODO docs
+
+#### fn options.withSingleStatBaseOptionsMixin
+
+```ts
+withSingleStatBaseOptionsMixin(value)
+```
+
+TODO docs
+
+#### obj options.OptionsWithTooltip
+
+
+##### fn options.OptionsWithTooltip.withTooltip
+
+```ts
+withTooltip(value)
+```
+
+TODO docs
+
+##### fn options.OptionsWithTooltip.withTooltipMixin
+
+```ts
+withTooltipMixin(value)
+```
+
+TODO docs
+
+##### obj options.OptionsWithTooltip.tooltip
+
+
+###### fn options.OptionsWithTooltip.tooltip.withMode
+
+```ts
+withMode(value)
+```
+
+TODO docs
+
+###### fn options.OptionsWithTooltip.tooltip.withSort
+
+```ts
+withSort(value)
+```
+
+TODO docs
+
+#### obj options.SingleStatBaseOptions
+
+
+##### fn options.SingleStatBaseOptions.withOptionsWithTextFormatting
+
+```ts
+withOptionsWithTextFormatting(value)
+```
+
+TODO docs
+
+##### fn options.SingleStatBaseOptions.withOptionsWithTextFormattingMixin
+
+```ts
+withOptionsWithTextFormattingMixin(value)
+```
+
+TODO docs
+
+##### fn options.SingleStatBaseOptions.withOrientation
+
+```ts
+withOrientation(value)
+```
+
+TODO docs
+
+##### fn options.SingleStatBaseOptions.withReduceOptions
+
+```ts
+withReduceOptions(value)
+```
+
+TODO docs
+
+##### fn options.SingleStatBaseOptions.withReduceOptionsMixin
+
+```ts
+withReduceOptionsMixin(value)
+```
+
+TODO docs
+
+##### obj options.SingleStatBaseOptions.OptionsWithTextFormatting
+
+
+###### fn options.SingleStatBaseOptions.OptionsWithTextFormatting.withText
+
+```ts
+withText(value)
+```
+
+TODO docs
+
+###### fn options.SingleStatBaseOptions.OptionsWithTextFormatting.withTextMixin
+
+```ts
+withTextMixin(value)
+```
+
+TODO docs
+
+###### obj options.SingleStatBaseOptions.OptionsWithTextFormatting.text
+
+
+####### fn options.SingleStatBaseOptions.OptionsWithTextFormatting.text.withTitleSize
+
+```ts
+withTitleSize(value)
+```
+
+Explicit title text size
+
+####### fn options.SingleStatBaseOptions.OptionsWithTextFormatting.text.withValueSize
+
+```ts
+withValueSize(value)
+```
+
+Explicit value text size
+
+##### obj options.SingleStatBaseOptions.reduceOptions
+
+
+###### fn options.SingleStatBaseOptions.reduceOptions.withCalcs
+
+```ts
+withCalcs(value)
+```
+
+When !values, pick one value for the whole field
+
+###### fn options.SingleStatBaseOptions.reduceOptions.withCalcsMixin
+
+```ts
+withCalcsMixin(value)
+```
+
+When !values, pick one value for the whole field
+
+###### fn options.SingleStatBaseOptions.reduceOptions.withFields
+
+```ts
+withFields(value)
+```
+
+Which fields to show.  By default this is only numeric fields
+
+###### fn options.SingleStatBaseOptions.reduceOptions.withLimit
+
+```ts
+withLimit(value)
+```
+
+if showing all values limit
+
+###### fn options.SingleStatBaseOptions.reduceOptions.withValues
+
+```ts
+withValues(value)
+```
+
+If true show each row value
+
+#### obj options.legend
+
+
+##### fn options.legend.withValues
+
+```ts
+withValues(value)
+```
+
+
+
+##### fn options.legend.withValuesMixin
+
+```ts
+withValuesMixin(value)
+```
+
+
+
+##### fn options.legend.withVizLegendOptions
+
+```ts
+withVizLegendOptions(value)
+```
+
+TODO docs
+
+##### fn options.legend.withVizLegendOptionsMixin
+
+```ts
+withVizLegendOptionsMixin(value)
+```
+
+TODO docs
+
+##### obj options.legend.VizLegendOptions
+
+
+###### fn options.legend.VizLegendOptions.withAsTable
+
+```ts
+withAsTable(value)
+```
+
+
+
+###### fn options.legend.VizLegendOptions.withCalcs
+
+```ts
+withCalcs(value)
+```
+
+
+
+###### fn options.legend.VizLegendOptions.withCalcsMixin
+
+```ts
+withCalcsMixin(value)
+```
+
+
+
+###### fn options.legend.VizLegendOptions.withDisplayMode
+
+```ts
+withDisplayMode(value)
+```
+
+TODO docs
+Note: "hidden" needs to remain as an option for plugins compatibility
+
+###### fn options.legend.VizLegendOptions.withIsVisible
+
+```ts
+withIsVisible(value)
+```
+
+
+
+###### fn options.legend.VizLegendOptions.withPlacement
+
+```ts
+withPlacement(value)
+```
+
+TODO docs
+
+###### fn options.legend.VizLegendOptions.withShowLegend
+
+```ts
+withShowLegend(value)
+```
+
+
+
+###### fn options.legend.VizLegendOptions.withSortBy
+
+```ts
+withSortBy(value)
+```
+
+
+
+###### fn options.legend.VizLegendOptions.withSortDesc
+
+```ts
+withSortDesc(value)
+```
+
+
+
+###### fn options.legend.VizLegendOptions.withWidth
+
+```ts
+withWidth(value)
 ```
 
 

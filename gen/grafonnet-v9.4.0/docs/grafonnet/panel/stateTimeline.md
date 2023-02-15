@@ -88,6 +88,18 @@ grafonnet.panel.stateTimeline
       * [`fn withFixedColor(value)`](#fn-fieldconfigdefaultscolorwithfixedcolor)
       * [`fn withMode(value)`](#fn-fieldconfigdefaultscolorwithmode)
       * [`fn withSeriesBy(value)`](#fn-fieldconfigdefaultscolorwithseriesby)
+    * [`obj custom`](#obj-fieldconfigdefaultscustom)
+      * [`fn withFillOpacity(value)`](#fn-fieldconfigdefaultscustomwithfillopacity)
+      * [`fn withHideableFieldConfig(value)`](#fn-fieldconfigdefaultscustomwithhideablefieldconfig)
+      * [`fn withHideableFieldConfigMixin(value)`](#fn-fieldconfigdefaultscustomwithhideablefieldconfigmixin)
+      * [`fn withLineWidth(value)`](#fn-fieldconfigdefaultscustomwithlinewidth)
+      * [`obj HideableFieldConfig`](#obj-fieldconfigdefaultscustomhideablefieldconfig)
+        * [`fn withHideFrom(value)`](#fn-fieldconfigdefaultscustomhideablefieldconfigwithhidefrom)
+        * [`fn withHideFromMixin(value)`](#fn-fieldconfigdefaultscustomhideablefieldconfigwithhidefrommixin)
+        * [`obj hideFrom`](#obj-fieldconfigdefaultscustomhideablefieldconfighidefrom)
+          * [`fn withLegend(value)`](#fn-fieldconfigdefaultscustomhideablefieldconfighidefromwithlegend)
+          * [`fn withTooltip(value)`](#fn-fieldconfigdefaultscustomhideablefieldconfighidefromwithtooltip)
+          * [`fn withViz(value)`](#fn-fieldconfigdefaultscustomhideablefieldconfighidefromwithviz)
     * [`obj mappings`](#obj-fieldconfigdefaultsmappings)
       * [`obj RangeMap`](#obj-fieldconfigdefaultsmappingsrangemap)
         * [`fn withOptions(value)`](#fn-fieldconfigdefaultsmappingsrangemapwithoptions)
@@ -174,6 +186,40 @@ grafonnet.panel.stateTimeline
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
   * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
+* [`obj options`](#obj-options)
+  * [`fn withAlignValue(value)`](#fn-optionswithalignvalue)
+  * [`fn withMergeValues(value)`](#fn-optionswithmergevalues)
+  * [`fn withOptionsWithLegend(value)`](#fn-optionswithoptionswithlegend)
+  * [`fn withOptionsWithLegendMixin(value)`](#fn-optionswithoptionswithlegendmixin)
+  * [`fn withOptionsWithTimezones(value)`](#fn-optionswithoptionswithtimezones)
+  * [`fn withOptionsWithTimezonesMixin(value)`](#fn-optionswithoptionswithtimezonesmixin)
+  * [`fn withOptionsWithTooltip(value)`](#fn-optionswithoptionswithtooltip)
+  * [`fn withOptionsWithTooltipMixin(value)`](#fn-optionswithoptionswithtooltipmixin)
+  * [`fn withRowHeight(value)`](#fn-optionswithrowheight)
+  * [`fn withShowValue(value)`](#fn-optionswithshowvalue)
+  * [`obj OptionsWithLegend`](#obj-optionsoptionswithlegend)
+    * [`fn withLegend(value)`](#fn-optionsoptionswithlegendwithlegend)
+    * [`fn withLegendMixin(value)`](#fn-optionsoptionswithlegendwithlegendmixin)
+    * [`obj legend`](#obj-optionsoptionswithlegendlegend)
+      * [`fn withAsTable(value)`](#fn-optionsoptionswithlegendlegendwithastable)
+      * [`fn withCalcs(value)`](#fn-optionsoptionswithlegendlegendwithcalcs)
+      * [`fn withCalcsMixin(value)`](#fn-optionsoptionswithlegendlegendwithcalcsmixin)
+      * [`fn withDisplayMode(value)`](#fn-optionsoptionswithlegendlegendwithdisplaymode)
+      * [`fn withIsVisible(value)`](#fn-optionsoptionswithlegendlegendwithisvisible)
+      * [`fn withPlacement(value)`](#fn-optionsoptionswithlegendlegendwithplacement)
+      * [`fn withShowLegend(value)`](#fn-optionsoptionswithlegendlegendwithshowlegend)
+      * [`fn withSortBy(value)`](#fn-optionsoptionswithlegendlegendwithsortby)
+      * [`fn withSortDesc(value)`](#fn-optionsoptionswithlegendlegendwithsortdesc)
+      * [`fn withWidth(value)`](#fn-optionsoptionswithlegendlegendwithwidth)
+  * [`obj OptionsWithTimezones`](#obj-optionsoptionswithtimezones)
+    * [`fn withTimezone(value)`](#fn-optionsoptionswithtimezoneswithtimezone)
+    * [`fn withTimezoneMixin(value)`](#fn-optionsoptionswithtimezoneswithtimezonemixin)
+  * [`obj OptionsWithTooltip`](#obj-optionsoptionswithtooltip)
+    * [`fn withTooltip(value)`](#fn-optionsoptionswithtooltipwithtooltip)
+    * [`fn withTooltipMixin(value)`](#fn-optionsoptionswithtooltipwithtooltipmixin)
+    * [`obj tooltip`](#obj-optionsoptionswithtooltiptooltip)
+      * [`fn withMode(value)`](#fn-optionsoptionswithtooltiptooltipwithmode)
+      * [`fn withSort(value)`](#fn-optionsoptionswithtooltiptooltipwithsort)
 * [`obj transformations`](#obj-transformations)
   * [`fn withDisabled(value)`](#fn-transformationswithdisabled)
   * [`fn withFilter(value)`](#fn-transformationswithfilter)
@@ -741,6 +787,87 @@ withSeriesBy(value)
 ```
 
 TODO docs
+
+##### obj fieldConfig.defaults.custom
+
+
+###### fn fieldConfig.defaults.custom.withFillOpacity
+
+```ts
+withFillOpacity(value)
+```
+
+
+
+###### fn fieldConfig.defaults.custom.withHideableFieldConfig
+
+```ts
+withHideableFieldConfig(value)
+```
+
+TODO docs
+
+###### fn fieldConfig.defaults.custom.withHideableFieldConfigMixin
+
+```ts
+withHideableFieldConfigMixin(value)
+```
+
+TODO docs
+
+###### fn fieldConfig.defaults.custom.withLineWidth
+
+```ts
+withLineWidth(value)
+```
+
+
+
+###### obj fieldConfig.defaults.custom.HideableFieldConfig
+
+
+####### fn fieldConfig.defaults.custom.HideableFieldConfig.withHideFrom
+
+```ts
+withHideFrom(value)
+```
+
+TODO docs
+
+####### fn fieldConfig.defaults.custom.HideableFieldConfig.withHideFromMixin
+
+```ts
+withHideFromMixin(value)
+```
+
+TODO docs
+
+####### obj fieldConfig.defaults.custom.HideableFieldConfig.hideFrom
+
+
+######## fn fieldConfig.defaults.custom.HideableFieldConfig.hideFrom.withLegend
+
+```ts
+withLegend(value)
+```
+
+
+
+######## fn fieldConfig.defaults.custom.HideableFieldConfig.hideFrom.withTooltip
+
+```ts
+withTooltip(value)
+```
+
+
+
+######## fn fieldConfig.defaults.custom.HideableFieldConfig.hideFrom.withViz
+
+```ts
+withViz(value)
+```
+
+
 
 ##### obj fieldConfig.defaults.mappings
 
@@ -1337,6 +1464,249 @@ withUrl(value)
 ```
 
 
+
+### obj options
+
+
+#### fn options.withAlignValue
+
+```ts
+withAlignValue(value)
+```
+
+Controls the value alignment in the TimelineChart component
+
+#### fn options.withMergeValues
+
+```ts
+withMergeValues(value)
+```
+
+Merge equal consecutive values
+
+#### fn options.withOptionsWithLegend
+
+```ts
+withOptionsWithLegend(value)
+```
+
+TODO docs
+
+#### fn options.withOptionsWithLegendMixin
+
+```ts
+withOptionsWithLegendMixin(value)
+```
+
+TODO docs
+
+#### fn options.withOptionsWithTimezones
+
+```ts
+withOptionsWithTimezones(value)
+```
+
+TODO docs
+
+#### fn options.withOptionsWithTimezonesMixin
+
+```ts
+withOptionsWithTimezonesMixin(value)
+```
+
+TODO docs
+
+#### fn options.withOptionsWithTooltip
+
+```ts
+withOptionsWithTooltip(value)
+```
+
+TODO docs
+
+#### fn options.withOptionsWithTooltipMixin
+
+```ts
+withOptionsWithTooltipMixin(value)
+```
+
+TODO docs
+
+#### fn options.withRowHeight
+
+```ts
+withRowHeight(value)
+```
+
+Controls the row height
+
+#### fn options.withShowValue
+
+```ts
+withShowValue(value)
+```
+
+TODO docs
+
+#### obj options.OptionsWithLegend
+
+
+##### fn options.OptionsWithLegend.withLegend
+
+```ts
+withLegend(value)
+```
+
+TODO docs
+
+##### fn options.OptionsWithLegend.withLegendMixin
+
+```ts
+withLegendMixin(value)
+```
+
+TODO docs
+
+##### obj options.OptionsWithLegend.legend
+
+
+###### fn options.OptionsWithLegend.legend.withAsTable
+
+```ts
+withAsTable(value)
+```
+
+
+
+###### fn options.OptionsWithLegend.legend.withCalcs
+
+```ts
+withCalcs(value)
+```
+
+
+
+###### fn options.OptionsWithLegend.legend.withCalcsMixin
+
+```ts
+withCalcsMixin(value)
+```
+
+
+
+###### fn options.OptionsWithLegend.legend.withDisplayMode
+
+```ts
+withDisplayMode(value)
+```
+
+TODO docs
+Note: "hidden" needs to remain as an option for plugins compatibility
+
+###### fn options.OptionsWithLegend.legend.withIsVisible
+
+```ts
+withIsVisible(value)
+```
+
+
+
+###### fn options.OptionsWithLegend.legend.withPlacement
+
+```ts
+withPlacement(value)
+```
+
+TODO docs
+
+###### fn options.OptionsWithLegend.legend.withShowLegend
+
+```ts
+withShowLegend(value)
+```
+
+
+
+###### fn options.OptionsWithLegend.legend.withSortBy
+
+```ts
+withSortBy(value)
+```
+
+
+
+###### fn options.OptionsWithLegend.legend.withSortDesc
+
+```ts
+withSortDesc(value)
+```
+
+
+
+###### fn options.OptionsWithLegend.legend.withWidth
+
+```ts
+withWidth(value)
+```
+
+
+
+#### obj options.OptionsWithTimezones
+
+
+##### fn options.OptionsWithTimezones.withTimezone
+
+```ts
+withTimezone(value)
+```
+
+
+
+##### fn options.OptionsWithTimezones.withTimezoneMixin
+
+```ts
+withTimezoneMixin(value)
+```
+
+
+
+#### obj options.OptionsWithTooltip
+
+
+##### fn options.OptionsWithTooltip.withTooltip
+
+```ts
+withTooltip(value)
+```
+
+TODO docs
+
+##### fn options.OptionsWithTooltip.withTooltipMixin
+
+```ts
+withTooltipMixin(value)
+```
+
+TODO docs
+
+##### obj options.OptionsWithTooltip.tooltip
+
+
+###### fn options.OptionsWithTooltip.tooltip.withMode
+
+```ts
+withMode(value)
+```
+
+TODO docs
+
+###### fn options.OptionsWithTooltip.tooltip.withSort
+
+```ts
+withSort(value)
+```
+
+TODO docs
 
 ### obj transformations
 
