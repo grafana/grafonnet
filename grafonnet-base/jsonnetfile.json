@@ -8,7 +8,7 @@
           "subdir": "crdsonnet"
         }
       },
-      "version": "master"
+      "version": "duologic/merge_xofParts_in_object"
     }
   ],
   "legacyImports": true

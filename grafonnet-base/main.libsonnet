@@ -150,12 +150,31 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
   },
 
   panelLib: {
+    // Some plugins are named differently, this has been resolved in the Grafana code base
+    // but no reflected in the JSON schema.
+    // source: https://github.com/grafana/grafana/blob/0ee9d11a9148f517fed57bd4c9b840480993cf42/pkg/kindsys/report.go#L285
+    local irregularPluginNames = {
+      // Panel
+      alertgroups: 'alertGroups',
+      annotationslist: 'annolist',
+      dashboardlist: 'dashlist',
+      nodegraph: 'nodeGraph',
+      statetimeline: 'state-timeline',
+      statushistory: 'status-history',
+      tableold: 'table-old',
+      // Datasource
+      googlecloudmonitoring: 'cloud-monitoring',
+      azuremonitor: 'grafana-azure-monitor-datasource',
+      microsoftsqlserver: 'mssql',
+      postgresql: 'postgres',
+    },
+
     // The panelSchema has PanelOptions and PanelFieldConfig that need to replace certain
     // fiels in the upstream Panel schema This function fits these schemas in the right
     // place for CRDsonnet.
     new(dashboardSchema, panelSchema):
       local subSchema = panelSchema.components.schemas[panelSchema.info.title];
-      local customSchema =
+      local customSubSchema =
         panelSchema.components.schemas[panelSchema.info.title] {
           type: 'object',
           [if 'properties' in subSchema then 'properties']+: {
@@ -175,16 +194,30 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
           },
         };
 
+      local customPanelSchema =
+        dashboardSchema.components.schemas.Panel {
+          properties+: {
+            type: {
+              const:
+                std.get(
+                  irregularPluginNames,
+                  std.asciiLower(panelSchema.info.title),
+                  std.asciiLower(panelSchema.info.title)
+                ),
+            },
+          },
+        };
+
       local parsed =
         crdsonnet.fromOpenAPI(
           'customLib',
-          customSchema,
+          customSubSchema,
           panelSchema,
           render='dynamic',
         )
         + crdsonnet.fromOpenAPI(
           'panelLib',
-          dashboardSchema.components.schemas.Panel,
+          customPanelSchema,
           dashboardSchema,
           render='dynamic',
         );
