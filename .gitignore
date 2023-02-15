@@ -1,2 +1,6 @@
 jsonnetfile.lock.json
 vendor
+
+# Used during development
+gen/*/Makefile
+gen/*/example.jsonnet

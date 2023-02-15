@@ -9,6 +9,7 @@
 * [news](news.md)
 * [nodeGraph](nodeGraph.md)
 * [pieChart](pieChart.md)
+* [row](row.md)
 * [stat](stat.md)
 * [stateTimeline](stateTimeline.md)
 * [statusHistory](statusHistory.md)

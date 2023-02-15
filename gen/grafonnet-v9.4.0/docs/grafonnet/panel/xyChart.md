@@ -18,6 +18,7 @@ grafonnet.panel.xyChart
 
 ## Index
 
+* [`fn new(title)`](#fn-new)
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withDatasourceMixin(value)`](#fn-withdatasourcemixin)
 * [`fn withDescription(value)`](#fn-withdescription)
@@ -184,6 +185,14 @@ grafonnet.panel.xyChart
     * [`fn withOptions(value)`](#fn-transformationsfilterwithoptions)
 
 ## Fields
+
+### fn new
+
+```ts
+new(title)
+```
+
+Creates a new xyChart panel with a title.
 
 ### fn withDatasource
 
