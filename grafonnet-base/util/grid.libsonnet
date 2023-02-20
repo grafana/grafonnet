@@ -43,11 +43,19 @@
     local rowGroups =
       std.mapWithIndex(
         function(i, r) {
-          header: panels[r],
+          header:
+            {
+              // Set initial values to ensure a value is set
+              // may be overridden at per Row panel
+              collapsed: false,
+              panels: [],
+            }
+            + panels[r],
           panels:
-            (if i == std.length(rowIndexes) - 1  // last rowIndex
-             then panels[r + 1:]
-             else panels[r + 1:rowIndexes[i + 1]]),
+            self.header.panels  // prepend panels that are part of the Row panel
+            + (if i == std.length(rowIndexes) - 1  // last rowIndex
+               then panels[r + 1:]
+               else panels[r + 1:rowIndexes[i + 1]]),
           rows: root.countRows(self.panels, panelWidth),
         },
         rowIndexes
@@ -64,6 +72,9 @@
 
         lastRowPanelHeight: rowPanelHeight,  // set height for next round
 
+        // Create a grid per group
+        local panels = root.makePanelGrid(rowGroup.panels, panelWidth, panelHeight, y + 1),
+
         panels+:
           [
             // Add row header aka the Row panel
@@ -74,10 +85,19 @@
                 x: 0,  // always at beginning
                 y: y,
               },
+              panels:
+                // If row is collapsed, then store panels inside Row panel
+                if rowGroup.header.collapsed
+                then panels
+                else [],
             },
           ]
-          // Create a grid per group
-          + root.makePanelGrid(rowGroup.panels, panelWidth, panelHeight, y + 1),
+          + (
+            // If row is not collapsed, then expose panels directly
+            if !rowGroup.header.collapsed
+            then panels
+            else []
+          ),
       },
       rowGroups,
       {
