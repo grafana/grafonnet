@@ -2,20 +2,10 @@ local main = import './main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
 {
-  dashboard+: {
-    '#new':: d.func.new(
-      'Creates a new dashboard with a title.',
-      args=[d.arg('title', d.T.string)]
-    ),
-    new(title):
-      self.withTitle(title)
-      + self.withTimezone('utc')
-      + self.time.withFrom('now-6h')
-      + self.time.withTo('now'),
+  dashboard+: (import 'veneer/dashboard.libsonnet').dashboard,
 
-    // Remove legacy panels (heatmap, graph), new users should not create those.
-    // Schemas are also underdeveloped.
-    panels:: {},
+  util: {
+    grid: (import 'util/grid.libsonnet'),
   },
 
   // Move Row panel into panel subpackage
@@ -25,6 +15,10 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       panels.RowPanel {
         // Remove nested legacy panels as created by schema references.
         panels:: {},
+
+        withType(): {
+          type: 'row',
+        },
       }
       + main.packageDocMixin('', 'row', 'panel.'),
   },
