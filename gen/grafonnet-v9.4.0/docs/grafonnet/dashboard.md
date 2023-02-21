@@ -1,20 +1,6 @@
 # package dashboard
 
-
-
-## Install
-
-```
-jb install github.com/grafana/grafonnet/gen/grafonnet-v9.4.0@main
-```
-
-## Usage
-
-```jsonnet
-local grafonnet = import 'github.com/grafana/grafonnet/gen/grafonnet-v9.4.0/main.libsonnet';
 grafonnet.dashboard
-
-```
 
 ## Index
 
@@ -101,6 +87,27 @@ grafonnet.dashboard
   * [`fn withUpdated(value)`](#fn-snapshotwithupdated)
   * [`fn withUrl(value)`](#fn-snapshotwithurl)
   * [`fn withUserId(value)`](#fn-snapshotwithuserid)
+* [`obj templateVariable`](#obj-templatevariable)
+  * [`fn withDatasource(value)`](#fn-templatevariablewithdatasource)
+  * [`fn withDatasourceMixin(value)`](#fn-templatevariablewithdatasourcemixin)
+  * [`fn withDescription(value)`](#fn-templatevariablewithdescription)
+  * [`fn withError(value)`](#fn-templatevariablewitherror)
+  * [`fn withErrorMixin(value)`](#fn-templatevariablewitherrormixin)
+  * [`fn withGlobal(value=false)`](#fn-templatevariablewithglobal)
+  * [`fn withHide(value=enum[0,1,2])`](#fn-templatevariablewithhide)
+  * [`fn withId(value='00000000-0000-0000-0000-000000000000')`](#fn-templatevariablewithid)
+  * [`fn withIndex(value=-1)`](#fn-templatevariablewithindex)
+  * [`fn withLabel(value)`](#fn-templatevariablewithlabel)
+  * [`fn withName(value)`](#fn-templatevariablewithname)
+  * [`fn withQuery(value)`](#fn-templatevariablewithquery)
+  * [`fn withQueryMixin(value)`](#fn-templatevariablewithquerymixin)
+  * [`fn withRootStateKey(value)`](#fn-templatevariablewithrootstatekey)
+  * [`fn withSkipUrlSync(value=false)`](#fn-templatevariablewithskipurlsync)
+  * [`fn withState(value='enum[NotStarted,Loading,Streaming,Done,Error]')`](#fn-templatevariablewithstate)
+  * [`fn withType(value='enum[query,adhoc,constant,datasource,interval,textbox,custom,system]')`](#fn-templatevariablewithtype)
+  * [`obj datasource`](#obj-templatevariabledatasource)
+    * [`fn withType(value)`](#fn-templatevariabledatasourcewithtype)
+    * [`fn withUid(value)`](#fn-templatevariabledatasourcewithuid)
 * [`obj templating`](#obj-templating)
   * [`fn withList(value)`](#fn-templatingwithlist)
   * [`fn withListMixin(value)`](#fn-templatingwithlistmixin)
@@ -779,6 +786,166 @@ withUserId(value)
 ```
 
 TODO docs
+
+### obj templateVariable
+
+
+#### fn templateVariable.withDatasource
+
+```ts
+withDatasource(value)
+```
+
+Ref to a DataSource instance
+
+#### fn templateVariable.withDatasourceMixin
+
+```ts
+withDatasourceMixin(value)
+```
+
+Ref to a DataSource instance
+
+#### fn templateVariable.withDescription
+
+```ts
+withDescription(value)
+```
+
+
+
+#### fn templateVariable.withError
+
+```ts
+withError(value)
+```
+
+
+
+#### fn templateVariable.withErrorMixin
+
+```ts
+withErrorMixin(value)
+```
+
+
+
+#### fn templateVariable.withGlobal
+
+```ts
+withGlobal(value=false)
+```
+
+
+
+#### fn templateVariable.withHide
+
+```ts
+withHide(value=enum[0,1,2])
+```
+
+
+
+#### fn templateVariable.withId
+
+```ts
+withId(value='00000000-0000-0000-0000-000000000000')
+```
+
+
+
+#### fn templateVariable.withIndex
+
+```ts
+withIndex(value=-1)
+```
+
+
+
+#### fn templateVariable.withLabel
+
+```ts
+withLabel(value)
+```
+
+
+
+#### fn templateVariable.withName
+
+```ts
+withName(value)
+```
+
+
+
+#### fn templateVariable.withQuery
+
+```ts
+withQuery(value)
+```
+
+TODO: Move this into a separated QueryVariableModel type
+
+#### fn templateVariable.withQueryMixin
+
+```ts
+withQueryMixin(value)
+```
+
+TODO: Move this into a separated QueryVariableModel type
+
+#### fn templateVariable.withRootStateKey
+
+```ts
+withRootStateKey(value)
+```
+
+
+
+#### fn templateVariable.withSkipUrlSync
+
+```ts
+withSkipUrlSync(value=false)
+```
+
+
+
+#### fn templateVariable.withState
+
+```ts
+withState(value='enum[NotStarted,Loading,Streaming,Done,Error]')
+```
+
+
+
+#### fn templateVariable.withType
+
+```ts
+withType(value='enum[query,adhoc,constant,datasource,interval,textbox,custom,system]')
+```
+
+FROM: packages/grafana-data/src/types/templateVars.ts
+TODO docs
+TODO this implies some wider pattern/discriminated union, probably?
+
+#### obj templateVariable.datasource
+
+
+##### fn templateVariable.datasource.withType
+
+```ts
+withType(value)
+```
+
+The plugin type-id
+
+##### fn templateVariable.datasource.withUid
+
+```ts
+withUid(value)
+```
+
+Specific datasource instance
 
 ### obj templating
 

@@ -1,20 +1,6 @@
 # package text
 
-
-
-## Install
-
-```
-jb install github.com/grafana/grafonnet/gen/grafonnet-v9.4.0@main
-```
-
-## Usage
-
-```jsonnet
-local grafonnet = import 'github.com/grafana/grafonnet/gen/grafonnet-v9.4.0/main.libsonnet';
 grafonnet.panel.text
-
-```
 
 ## Index
 

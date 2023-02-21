@@ -41,7 +41,8 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       query: std.filterMap(
         function(schema) 'DataQuery' in schema.components.schemas,
         function(schema) root.restructure(schema),
-        schemas
+        // hack in the Prometheus schema awaiting upstream
+        schemas + [import './schemas/prometheus.json']
       ),
     };
 
@@ -79,18 +80,9 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
   packageDocMixin(version, name, path):
     {
       '#':
-        d.package.new(
+        d.package.newSub(
           name,
-          'github.com/grafana/grafonnet/gen/grafonnet-%s' % version,
-          '',
-          'main.libsonnet',
-          'main',
-        )
-        + d.package.withUsageTemplate(
-          |||
-            local grafonnet = import 'github.com/grafana/grafonnet/gen/grafonnet-%(version)s/main.libsonnet';
-            grafonnet.%(path)s%(name)s
-          ||| % { version: version, name: name, path: path }
+          'grafonnet.%(path)s%(name)s' % { version: version, name: name, path: path }
         ),
     },
 
@@ -123,7 +115,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 
   coreLib: {
     new(schema):
-      local title = std.trace(schema.info.title, schema.info.title);
+      local title = schema.info.title;  //std.trace(schema.info.title, schema.info.title);
       local render = crdsonnet.fromOpenAPI(
         'lib',
         schema.components.schemas[title],
@@ -137,7 +129,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 
   queryLib: {
     new(dashboardSchema, schema):
-      local title = std.trace(schema.info.title, schema.info.title);
+      local title = schema.info.title;  //std.trace(schema.info.title, schema.info.title);
       local render = crdsonnet.fromOpenAPI(
         'lib',
         schema.components.schemas[title],

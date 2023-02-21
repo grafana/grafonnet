@@ -1,20 +1,6 @@
 # package row
 
-
-
-## Install
-
-```
-jb install github.com/grafana/grafonnet/gen/grafonnet-@main
-```
-
-## Usage
-
-```jsonnet
-local grafonnet = import 'github.com/grafana/grafonnet/gen/grafonnet-/main.libsonnet';
 grafonnet.panel.row
-
-```
 
 ## Index
 
