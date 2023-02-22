@@ -26,6 +26,23 @@ local timeSeriesBase =
   + tsFCCustom.withShowPoints('never')
 ;
 
+local hmOptions = heatmap.options;
+
+local heatmapBase =
+  heatmap.withInterval('1m')
+  + heatmap.datasource.fromVariable(variables.datasource)
+  // heatmap.options not schematized yet
+  // + hmOptions.withCalculate()
+  // + hmOptions.calculation.xBuckets.withMode('size')
+  // + hmOptions.calculation.xBuckets.withValue('1min')
+  // + hmOptions.withCellGep(2)
+  // + hmOptions.color.withMode('scheme')
+  // + hmOptions.color.withScheme('Spectral')
+  // + hmOptions.color.withSteps(128)
+  // + hmOptions.yAxis.withDecimals(0)
+  // + hmOptions.yAxis.withUnit('s')
+;
+
 local cpuUsagePanel =
   timeSeries.new('CPU Usage')
   + timeSeriesBase
@@ -169,22 +186,9 @@ local gcDurationPanel =
   ])
 ;
 
-local hmOptions = heatmap.options;
-
 local wqDurationOverTimePanel =
   heatmap.new('Workqueue Waiting Duration Over Time')
-  + heatmap.withInterval('1m')
-  + heatmap.datasource.fromVariable(variables.datasource)
-  // heatmap.options not schematized yet
-  // + hmOptions.withCalculate()
-  // + hmOptions.calculation.xBuckets.withMode('size')
-  // + hmOptions.calculation.xBuckets.withValue('1min')
-  // + hmOptions.withCellGep(2)
-  // + hmOptions.color.withScheme('Spectral')
-  // + hmOptions.color.withSteps(128)
-  // + hmOptions.yAxis.withDecimals(0)
-  // + hmOptions.yAxis.withReverse(false)
-  // + hmOptions.yAxis.withUnit('s')
+  + heatmapBase
   + heatmap.withTargets([
     prometheusQuery.withExpr(|||
       sum by(cluster, namespace, job, le, name) (
@@ -262,6 +266,131 @@ local wqDurationQuantilePanel =
   )
 ;
 
+local wqDepthPanel =
+  timeSeries.new('Workqueue Depth')
+  + timeSeriesBase
+  + tsFCDefaults.withDecimals(0)
+  + tsFCDefaults.withUnit('short')
+  + timeSeries.withTargets([
+    prometheusQuery.withExpr(|||
+      sum by(cluster, namespace, job, name) (
+        workqueue_depth{cluster=~"$cluster", namespace=~"$namespace", job=~"$job"}
+      )
+    |||)
+    + prometheusQuery.withIntervalFactor(2)
+    + prometheusQuery.withLegendFormat(|||
+      {{cluster}} - {{namespace}} - {{name}}
+    |||),
+  ])
+;
+
+local failedRequestsPanel =
+  timeSeries.new('Failed Requests')
+  + timeSeriesBase
+  + tsFCDefaults.withDecimals(0)
+  + tsFCDefaults.withUnit('short')
+  + timeSeries.withTargets([
+    prometheusQuery.withExpr(|||
+      ceil by (cluster, namespace, job, host, method) (
+        sum(
+          increase(
+            rest_client_requests_total{
+                cluster=~"$cluster",
+                namespace=~"$namespace",
+                job=~"$job",
+                code=~"^(4|5).*"
+            }
+          [$__rate_interval])
+        )
+      )
+    |||)
+    + prometheusQuery.withIntervalFactor(2)
+    + prometheusQuery.withLegendFormat(|||
+      {{cluster}} - {{namespace}} - {{host}} - {{method}}
+    |||),
+  ])
+;
+
+local reconcilingLatencyOverTimePanel =
+  heatmap.new('Reconciling Latency Over Time')
+  + heatmapBase
+  + heatmap.withTargets([
+    prometheusQuery.withExpr(|||
+      sum by (cluster, namesapce, job,le,controller) (
+        rate(
+          controller_runtime_reconcile_time_seconds_bucket{
+              cluster=~"$cluster",
+              namespace=~"$namespace",
+              job=~"$job"
+          }
+        [$__rate_interval])
+      )
+    |||)
+    + prometheusQuery.withLegendFormat(|||
+      {{cluster}} - {{namespace}}
+    |||),
+  ])
+;
+
+local reconcilingDurationQuantilePanel =
+  timeSeries.new('Reconciling Latency Quantile')
+  + timeSeriesBase
+  + tsFCDefaults.withUnit('s')
+  + tsFCCustom.withDrawStyle('bars')
+  + tsFieldConfig.withOverrides([
+    tsOverride.matcher.withId('byRegexp')
+    + tsOverride.matcher.withOptions('/mean/i')
+    + tsOverride.withProperties([
+      tsOverride.properties.withId('custom.fillOpacity')
+      + tsOverride.properties.withValue(0),
+      tsOverride.properties.withId('custom.lineStyle')
+      + tsOverride.properties.withValue({
+        dash: [8, 10],
+        fill: 'dash',
+      }),
+    ]),
+  ])
+  + timeSeries.withTargets(
+    [
+      prometheusQuery.withExpr(|||
+        histogram_quantile(
+          0.%s,
+          sum by (cluster, namespace, job, le, controller) (
+            rate(
+              controller_runtime_reconcile_time_seconds_bucket{
+                  cluster=~"$cluster",
+                  namespace=~"$namespace",
+                  job=~"$job"
+              }
+            [$__rate_interval])
+          )
+        )
+      ||| % quantile)
+      + prometheusQuery.withIntervalFactor(2)
+      + prometheusQuery.withLegendFormat(|||
+        {{cluster}} - {{namespace}} - {{name}} - %s%%
+      ||| % quantile)
+      for quantile in ['50', '95']
+    ] + [
+      prometheusQuery.withExpr(|||
+        sum by (cluster, namespace, job, controller) (
+          rate(
+            controller_runtime_reconcile_time_seconds_sum{
+                cluster=~"$cluster",
+                namespace=~"$namespace",
+                job=~"$job"
+            }
+          [$__rate_interval])
+        )
+      |||)
+      + prometheusQuery.withIntervalFactor(2)
+      + prometheusQuery.withLegendFormat(|||
+        {{cluster}} - {{namespace}} - {{name}} - mean
+      |||),
+    ]
+  )
+;
+
 g.dashboard.new('Controller Runtime')
 + g.dashboard.withDescription(|||
   Generic dashboard for controller-runtime based processes
@@ -285,6 +414,11 @@ g.dashboard.new('Controller Runtime')
     row.new('Kubernetes Client'),
     wqDurationOverTimePanel,
     wqDurationQuantilePanel,
+    wqDepthPanel,
+    failedRequestsPanel,
+    row.new('Controller Runtime'),
+    reconcilingLatencyOverTimePanel,
+    reconcilingDurationQuantilePanel,
   ], panelWidth=8)
 )
 
