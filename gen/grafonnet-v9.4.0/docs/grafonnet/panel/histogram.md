@@ -1,20 +1,6 @@
 # package histogram
 
-
-
-## Install
-
-```
-jb install github.com/grafana/grafonnet/gen/grafonnet-v9.4.0@main
-```
-
-## Usage
-
-```jsonnet
-local grafonnet = import 'github.com/grafana/grafonnet/gen/grafonnet-v9.4.0/main.libsonnet';
 grafonnet.panel.histogram
-
-```
 
 ## Index
 
