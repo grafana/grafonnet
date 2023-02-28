@@ -6,7 +6,7 @@ local variables = import './variables.libsonnet';
 {
   cpuUsage:
     prometheusQuery.new(
-      variables.datasource.name,
+      '$' + variables.datasource.name,
       |||
         sum by (cluster, namespace, job) (
             rate(
@@ -27,7 +27,7 @@ local variables = import './variables.libsonnet';
   memUsage:
     [
       prometheusQuery.new(
-        variables.datasource.name,
+        '$' + variables.datasource.name,
         |||
           sum by (cluster, namespace, job) (
             process_virtual_memory_bytes{cluster=~"$cluster", namespace=~"$namespace", job=~"$job"}
@@ -39,7 +39,7 @@ local variables = import './variables.libsonnet';
         virtual - {{cluster}} - {{namespace}}
       |||),
       prometheusQuery.new(
-        variables.datasource.name,
+        '$' + variables.datasource.name,
         |||
           sum by (cluster, namespace, job) (
             process_resident_memory_bytes{cluster=~"$cluster", namespace=~"$namespace", job=~"$job"}
@@ -51,7 +51,7 @@ local variables = import './variables.libsonnet';
         resident - {{cluster}} - {{namespace}}
       |||),
       prometheusQuery.new(
-        variables.datasource.name,
+        '$' + variables.datasource.name,
         |||
           sum by (cluster, namespace, job) (
             go_memstats_heap_inuse_bytes{cluster=~"$cluster", namespace=~"$namespace", job=~"$job"}
@@ -63,7 +63,7 @@ local variables = import './variables.libsonnet';
         go heap - {{cluster}} - {{namespace}}
       |||),
       prometheusQuery.new(
-        variables.datasource.name,
+        '$' + variables.datasource.name,
         |||
           sum by (cluster, namespace, job) (
             go_memstats_stack_inuse_bytes{cluster=~"$cluster", namespace=~"$namespace", job=~"$job"}
@@ -78,7 +78,7 @@ local variables = import './variables.libsonnet';
 
   goroutines:
     prometheusQuery.new(
-      variables.datasource.name,
+      '$' + variables.datasource.name,
       |||
         sum by (cluster, namespace, job) (
           go_goroutines{cluster=~"$cluster", namespace=~"$namespace", job=~"$job"}
@@ -92,7 +92,7 @@ local variables = import './variables.libsonnet';
 
   threads:
     prometheusQuery.new(
-      variables.datasource.name,
+      '$' + variables.datasource.name,
       |||
         sum by (cluster, namespace, job) (
           go_threads{cluster=~"$cluster", namespace=~"$namespace", job=~"$job"}
@@ -106,7 +106,7 @@ local variables = import './variables.libsonnet';
 
   gcDuration:
     prometheusQuery.new(
-      variables.datasource.name,
+      '$' + variables.datasource.name,
       |||
         sum by (cluster, namespace, job) (
           rate(
@@ -126,7 +126,7 @@ local variables = import './variables.libsonnet';
 
   wqDurationOverTime:
     prometheusQuery.new(
-      variables.datasource.name,
+      '$' + variables.datasource.name,
       |||
         sum by(cluster, namespace, job, le, name) (
           rate(
@@ -146,7 +146,7 @@ local variables = import './variables.libsonnet';
   wqDurationQuantile:
     [
       prometheusQuery.new(
-        variables.datasource.name,
+        '$' + variables.datasource.name,
         |||
           histogram_quantile(
             0.%s,
@@ -169,7 +169,7 @@ local variables = import './variables.libsonnet';
       for quantile in ['50', '95']
     ] + [
       prometheusQuery.new(
-        variables.datasource.name,
+        '$' + variables.datasource.name,
         |||
           sum by (cluster, namespace, job, name) (
             rate(
@@ -190,7 +190,7 @@ local variables = import './variables.libsonnet';
 
   wqDepth:
     prometheusQuery.new(
-      variables.datasource.name,
+      '$' + variables.datasource.name,
       |||
         sum by(cluster, namespace, job, name) (
           workqueue_depth{cluster=~"$cluster", namespace=~"$namespace", job=~"$job"}
@@ -204,7 +204,7 @@ local variables = import './variables.libsonnet';
 
   failedRequests:
     prometheusQuery.new(
-      variables.datasource.name,
+      '$' + variables.datasource.name,
       |||
         ceil by (cluster, namespace, job, host, method) (
           sum(
@@ -227,7 +227,7 @@ local variables = import './variables.libsonnet';
 
   reconcilingLatencyOverTime:
     prometheusQuery.new(
-      variables.datasource.name,
+      '$' + variables.datasource.name,
       |||
         sum by (cluster, namesapce, job,le,controller) (
           rate(
@@ -247,7 +247,7 @@ local variables = import './variables.libsonnet';
   reconcilingDurationQuantile:
     [
       prometheusQuery.new(
-        variables.datasource.name,
+        '$' + variables.datasource.name,
         |||
           histogram_quantile(
             0.%s,
@@ -270,7 +270,7 @@ local variables = import './variables.libsonnet';
       for quantile in ['50', '95']
     ] + [
       prometheusQuery.new(
-        variables.datasource.name,
+        '$' + variables.datasource.name,
         |||
           sum by (cluster, namespace, job, controller) (
             rate(
