@@ -8,7 +8,7 @@
           "subdir": "gen/grafonnet-v9.4.0"
         }
       },
-      "version": "duologic/experimental_schemas"
+      "version": "main"
     }
   ],
   "legacyImports": true

@@ -8,6 +8,8 @@ grafonnet.panel
 * [annotationsList](panel/annotationsList.md)
 * [barChart](panel/barChart.md)
 * [barGauge](panel/barGauge.md)
+* [candlestick](panel/candlestick.md)
+* [canvas](panel/canvas.md)
 * [dashboardList](panel/dashboardList.md)
 * [debug](panel/debug.md)
 * [gauge](panel/gauge.md)
@@ -24,5 +26,6 @@ grafonnet.panel
 * [statusHistory](panel/statusHistory.md)
 * [table](panel/table.md)
 * [text](panel/text.md)
+* [timeSeries](panel/timeSeries.md)
 * [xyChart](panel/xyChart.md)
 
