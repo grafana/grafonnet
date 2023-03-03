@@ -50,6 +50,12 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
           type: type,
         },
 
+        query+: {
+          withLabelValues(label, metric): {
+            query: 'label_values(%s, %s)' % [metric, label],
+          },
+        },
+
         withRegex(value): {
           regex: value,
         },
@@ -71,6 +77,13 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         withIncludeAll(value=true): {
           includeAll: value,
         },
+
+        withAllValue(value):
+          self.withIncludeAll(true)
+          + {
+            allValue: value,
+          },
+
 
         withSort(type='alphabetical', asc=true, caseInsensitive=false): {
           // 1 - Alphabetical (asc)

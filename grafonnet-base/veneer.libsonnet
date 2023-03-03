@@ -32,8 +32,36 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       ),
       new(title):
         self.withTitle(title)
-        + self.withType(),
+        + self.withType()
+        // Default to Mixed datasource so panels can be datasource agnostic, this
+        // requires query targets to explicitly set datasource, which is a lot more
+        // interesting from a reusability standpoint.
+        + self.datasource.withType('datasource')
+        + self.datasource.withUid('-- Mixed --'),
     }
     for k in std.objectFields(super.panel)
+  },
+}
++ {
+  query+: {
+    prometheus+: {
+      '#new':: d.func.new(
+        'Creates a new prometheus query target for panels.',
+        args=[
+          d.arg('datasource', d.T.string),
+          d.arg('expr', d.T.string),
+        ]
+      ),
+      new(datasource, expr):
+        self.withDatasource(datasource)
+        + self.withExpr(expr),
+
+      withDatasource(value): {
+        datasource+: {
+          type: 'prometheus',
+          uid: value,
+        },
+      },
+    },
   },
 }
