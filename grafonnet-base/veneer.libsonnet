@@ -42,3 +42,26 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
     for k in std.objectFields(super.panel)
   },
 }
++ {
+  query+: {
+    prometheus+: {
+      '#new':: d.func.new(
+        'Creates a new prometheus query target for panels.',
+        args=[
+          d.arg('datasource', d.T.string),
+          d.arg('expr', d.T.string),
+        ]
+      ),
+      new(datasource, expr):
+        self.withDatasource(datasource)
+        + self.withExpr(expr),
+
+      withDatasource(value): {
+        datasource+: {
+          type: 'prometheus',
+          uid: value,
+        },
+      },
+    },
+  },
+}
