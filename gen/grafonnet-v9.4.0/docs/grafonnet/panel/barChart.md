@@ -39,7 +39,7 @@ grafonnet.panel.barChart
 * [`fn withTransformations(value)`](#fn-withtransformations)
 * [`fn withTransformationsMixin(value)`](#fn-withtransformationsmixin)
 * [`fn withTransparent(value=false)`](#fn-withtransparent)
-* [`fn withType(value='barchart')`](#fn-withtype)
+* [`fn withType()`](#fn-withtype)
 * [`obj datasource`](#obj-datasource)
   * [`fn withType(value)`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
@@ -73,18 +73,18 @@ grafonnet.panel.barChart
     * [`obj color`](#obj-fieldconfigdefaultscolor)
       * [`fn withFixedColor(value)`](#fn-fieldconfigdefaultscolorwithfixedcolor)
       * [`fn withMode(value)`](#fn-fieldconfigdefaultscolorwithmode)
-      * [`fn withSeriesBy(value='enum[min,max,last]')`](#fn-fieldconfigdefaultscolorwithseriesby)
+      * [`fn withSeriesBy(value)`](#fn-fieldconfigdefaultscolorwithseriesby)
     * [`obj custom`](#obj-fieldconfigdefaultscustom)
       * [`fn withAxisCenteredZero(value)`](#fn-fieldconfigdefaultscustomwithaxiscenteredzero)
-      * [`fn withAxisColorMode(value='enum[text,series]')`](#fn-fieldconfigdefaultscustomwithaxiscolormode)
+      * [`fn withAxisColorMode(value)`](#fn-fieldconfigdefaultscustomwithaxiscolormode)
       * [`fn withAxisGridShow(value)`](#fn-fieldconfigdefaultscustomwithaxisgridshow)
       * [`fn withAxisLabel(value)`](#fn-fieldconfigdefaultscustomwithaxislabel)
-      * [`fn withAxisPlacement(value='enum[auto,top,right,bottom,left,hidden]')`](#fn-fieldconfigdefaultscustomwithaxisplacement)
+      * [`fn withAxisPlacement(value)`](#fn-fieldconfigdefaultscustomwithaxisplacement)
       * [`fn withAxisSoftMax(value)`](#fn-fieldconfigdefaultscustomwithaxissoftmax)
       * [`fn withAxisSoftMin(value)`](#fn-fieldconfigdefaultscustomwithaxissoftmin)
       * [`fn withAxisWidth(value)`](#fn-fieldconfigdefaultscustomwithaxiswidth)
       * [`fn withFillOpacity(value=80)`](#fn-fieldconfigdefaultscustomwithfillopacity)
-      * [`fn withGradientMode(value='enum[none,opacity,hue,scheme]')`](#fn-fieldconfigdefaultscustomwithgradientmode)
+      * [`fn withGradientMode(value)`](#fn-fieldconfigdefaultscustomwithgradientmode)
       * [`fn withHideFrom(value)`](#fn-fieldconfigdefaultscustomwithhidefrom)
       * [`fn withHideFromMixin(value)`](#fn-fieldconfigdefaultscustomwithhidefrommixin)
       * [`fn withLineWidth(value=1)`](#fn-fieldconfigdefaultscustomwithlinewidth)
@@ -99,9 +99,9 @@ grafonnet.panel.barChart
       * [`obj scaleDistribution`](#obj-fieldconfigdefaultscustomscaledistribution)
         * [`fn withLinearThreshold(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithlinearthreshold)
         * [`fn withLog(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithlog)
-        * [`fn withType(value='enum[linear,log,ordinal,symlog]')`](#fn-fieldconfigdefaultscustomscaledistributionwithtype)
+        * [`fn withType(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithtype)
       * [`obj thresholdsStyle`](#obj-fieldconfigdefaultscustomthresholdsstyle)
-        * [`fn withMode(value='enum[off,line,dashed,area,line+area,dashed+area,series]')`](#fn-fieldconfigdefaultscustomthresholdsstylewithmode)
+        * [`fn withMode(value)`](#fn-fieldconfigdefaultscustomthresholdsstylewithmode)
     * [`obj mappings`](#obj-fieldconfigdefaultsmappings)
       * [`obj RangeMap`](#obj-fieldconfigdefaultsmappingsrangemap)
         * [`fn withOptions(value)`](#fn-fieldconfigdefaultsmappingsrangemapwithoptions)
@@ -135,7 +135,7 @@ grafonnet.panel.barChart
         * [`fn withOptionsMixin(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapwithoptionsmixin)
         * [`fn withType(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapwithtype)
         * [`obj options`](#obj-fieldconfigdefaultsmappingsspecialvaluemapoptions)
-          * [`fn withMatch(value='enum[true,false]')`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithmatch)
+          * [`fn withMatch(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithmatch)
           * [`fn withPattern(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithpattern)
           * [`fn withResult(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithresult)
           * [`fn withResultMixin(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithresultmixin)
@@ -149,7 +149,7 @@ grafonnet.panel.barChart
         * [`fn withOptionsMixin(value)`](#fn-fieldconfigdefaultsmappingsvaluemapwithoptionsmixin)
         * [`fn withType(value)`](#fn-fieldconfigdefaultsmappingsvaluemapwithtype)
     * [`obj thresholds`](#obj-fieldconfigdefaultsthresholds)
-      * [`fn withMode(value='enum[absolute,percentage]')`](#fn-fieldconfigdefaultsthresholdswithmode)
+      * [`fn withMode(value)`](#fn-fieldconfigdefaultsthresholdswithmode)
       * [`fn withSteps(value)`](#fn-fieldconfigdefaultsthresholdswithsteps)
       * [`fn withStepsMixin(value)`](#fn-fieldconfigdefaultsthresholdswithstepsmixin)
       * [`obj steps`](#obj-fieldconfigdefaultsthresholdssteps)
@@ -186,7 +186,7 @@ grafonnet.panel.barChart
   * [`fn withTargetBlank(value=false)`](#fn-linkswithtargetblank)
   * [`fn withTitle(value)`](#fn-linkswithtitle)
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
-  * [`fn withType(value='enum[link,dashboards]')`](#fn-linkswithtype)
+  * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
 * [`obj options`](#obj-options)
   * [`fn withBarRadius(value=0)`](#fn-optionswithbarradius)
@@ -196,9 +196,9 @@ grafonnet.panel.barChart
   * [`fn withGroupWidth(value=0.69999999999999996)`](#fn-optionswithgroupwidth)
   * [`fn withLegend(value)`](#fn-optionswithlegend)
   * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
-  * [`fn withOrientation(value='enum[auto,vertical,horizontal]')`](#fn-optionswithorientation)
-  * [`fn withShowValue(value='enum[auto,never,always]')`](#fn-optionswithshowvalue)
-  * [`fn withStacking(value='enum[none,normal,percent]')`](#fn-optionswithstacking)
+  * [`fn withOrientation(value)`](#fn-optionswithorientation)
+  * [`fn withShowValue(value)`](#fn-optionswithshowvalue)
+  * [`fn withStacking(value)`](#fn-optionswithstacking)
   * [`fn withText(value)`](#fn-optionswithtext)
   * [`fn withTextMixin(value)`](#fn-optionswithtextmixin)
   * [`fn withTooltip(value)`](#fn-optionswithtooltip)
@@ -211,9 +211,9 @@ grafonnet.panel.barChart
     * [`fn withAsTable(value)`](#fn-optionslegendwithastable)
     * [`fn withCalcs(value)`](#fn-optionslegendwithcalcs)
     * [`fn withCalcsMixin(value)`](#fn-optionslegendwithcalcsmixin)
-    * [`fn withDisplayMode(value='enum[list,table,hidden]')`](#fn-optionslegendwithdisplaymode)
+    * [`fn withDisplayMode(value)`](#fn-optionslegendwithdisplaymode)
     * [`fn withIsVisible(value)`](#fn-optionslegendwithisvisible)
-    * [`fn withPlacement(value='enum[bottom,right]')`](#fn-optionslegendwithplacement)
+    * [`fn withPlacement(value)`](#fn-optionslegendwithplacement)
     * [`fn withShowLegend(value)`](#fn-optionslegendwithshowlegend)
     * [`fn withSortBy(value)`](#fn-optionslegendwithsortby)
     * [`fn withSortDesc(value)`](#fn-optionslegendwithsortdesc)
@@ -222,8 +222,8 @@ grafonnet.panel.barChart
     * [`fn withTitleSize(value)`](#fn-optionstextwithtitlesize)
     * [`fn withValueSize(value)`](#fn-optionstextwithvaluesize)
   * [`obj tooltip`](#obj-optionstooltip)
-    * [`fn withMode(value='enum[single,multi,none]')`](#fn-optionstooltipwithmode)
-    * [`fn withSort(value='enum[asc,desc,none]')`](#fn-optionstooltipwithsort)
+    * [`fn withMode(value)`](#fn-optionstooltipwithmode)
+    * [`fn withSort(value)`](#fn-optionstooltipwithsort)
 * [`obj transformations`](#obj-transformations)
   * [`fn withDisabled(value)`](#fn-transformationswithdisabled)
   * [`fn withFilter(value)`](#fn-transformationswithfilter)
@@ -403,6 +403,8 @@ Direction to repeat in if 'repeat' is set.
 "h" for horizontal, "v" for vertical.
 TODO this is probably optional
 
+Accepted values for `value` are h, v
+
 ### fn withRepeatPanelId
 
 ```ts
@@ -528,7 +530,7 @@ Whether to display the panel without a background.
 ### fn withType
 
 ```ts
-withType(value='barchart')
+withType()
 ```
 
 
@@ -787,10 +789,12 @@ The main color scheme mode
 ###### fn fieldConfig.defaults.color.withSeriesBy
 
 ```ts
-withSeriesBy(value='enum[min,max,last]')
+withSeriesBy(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are min, max, last
 
 ##### obj fieldConfig.defaults.custom
 
@@ -806,10 +810,12 @@ withAxisCenteredZero(value)
 ###### fn fieldConfig.defaults.custom.withAxisColorMode
 
 ```ts
-withAxisColorMode(value='enum[text,series]')
+withAxisColorMode(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are text, series
 
 ###### fn fieldConfig.defaults.custom.withAxisGridShow
 
@@ -830,10 +836,12 @@ withAxisLabel(value)
 ###### fn fieldConfig.defaults.custom.withAxisPlacement
 
 ```ts
-withAxisPlacement(value='enum[auto,top,right,bottom,left,hidden]')
+withAxisPlacement(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are auto, top, right, bottom, left, hidden
 
 ###### fn fieldConfig.defaults.custom.withAxisSoftMax
 
@@ -870,10 +878,12 @@ Controls the fill opacity of the bars.
 ###### fn fieldConfig.defaults.custom.withGradientMode
 
 ```ts
-withGradientMode(value='enum[none,opacity,hue,scheme]')
+withGradientMode(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are none, opacity, hue, scheme
 
 ###### fn fieldConfig.defaults.custom.withHideFrom
 
@@ -980,10 +990,12 @@ withLog(value)
 ####### fn fieldConfig.defaults.custom.scaleDistribution.withType
 
 ```ts
-withType(value='enum[linear,log,ordinal,symlog]')
+withType(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are linear, log, ordinal, symlog
 
 ###### obj fieldConfig.defaults.custom.thresholdsStyle
 
@@ -991,10 +1003,12 @@ TODO docs
 ####### fn fieldConfig.defaults.custom.thresholdsStyle.withMode
 
 ```ts
-withMode(value='enum[off,line,dashed,area,line+area,dashed+area,series]')
+withMode(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are off, line, dashed, area, line+area, dashed+area, series
 
 ##### obj fieldConfig.defaults.mappings
 
@@ -1218,10 +1232,12 @@ withType(value)
 ######## fn fieldConfig.defaults.mappings.SpecialValueMap.options.withMatch
 
 ```ts
-withMatch(value='enum[true,false]')
+withMatch(value)
 ```
 
 
+
+Accepted values for `value` are true, false
 
 ######## fn fieldConfig.defaults.mappings.SpecialValueMap.options.withPattern
 
@@ -1315,10 +1331,12 @@ withType(value)
 ###### fn fieldConfig.defaults.thresholds.withMode
 
 ```ts
-withMode(value='enum[absolute,percentage]')
+withMode(value)
 ```
 
 
+
+Accepted values for `value` are absolute, percentage
 
 ###### fn fieldConfig.defaults.thresholds.withSteps
 
@@ -1579,10 +1597,12 @@ withTooltip(value)
 #### fn links.withType
 
 ```ts
-withType(value='enum[link,dashboards]')
+withType(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are link, dashboards
 
 #### fn links.withUrl
 
@@ -1655,26 +1675,32 @@ TODO docs
 #### fn options.withOrientation
 
 ```ts
-withOrientation(value='enum[auto,vertical,horizontal]')
+withOrientation(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are auto, vertical, horizontal
 
 #### fn options.withShowValue
 
 ```ts
-withShowValue(value='enum[auto,never,always]')
+withShowValue(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are auto, never, always
 
 #### fn options.withStacking
 
 ```ts
-withStacking(value='enum[none,normal,percent]')
+withStacking(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are none, normal, percent
 
 #### fn options.withText
 
@@ -1771,11 +1797,13 @@ withCalcsMixin(value)
 ##### fn options.legend.withDisplayMode
 
 ```ts
-withDisplayMode(value='enum[list,table,hidden]')
+withDisplayMode(value)
 ```
 
 TODO docs
 Note: "hidden" needs to remain as an option for plugins compatibility
+
+Accepted values for `value` are list, table, hidden
 
 ##### fn options.legend.withIsVisible
 
@@ -1788,10 +1816,12 @@ withIsVisible(value)
 ##### fn options.legend.withPlacement
 
 ```ts
-withPlacement(value='enum[bottom,right]')
+withPlacement(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are bottom, right
 
 ##### fn options.legend.withShowLegend
 
@@ -1850,18 +1880,22 @@ Explicit value text size
 ##### fn options.tooltip.withMode
 
 ```ts
-withMode(value='enum[single,multi,none]')
+withMode(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are single, multi, none
 
 ##### fn options.tooltip.withSort
 
 ```ts
-withSort(value='enum[asc,desc,none]')
+withSort(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are asc, desc, none
 
 ### obj transformations
 

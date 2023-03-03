@@ -19,5 +19,10 @@ local grafonnet = import "github.com/grafana/grafonnet/gen/grafonnet-v9.4.0/main
 * [dashboard](grafonnet/dashboard.md)
 * [librarypanel](grafonnet/librarypanel.md)
 * [panel](grafonnet/panel.md)
+* [playlist](grafonnet/playlist.md)
+* [preferences](grafonnet/preferences.md)
+* [publicdashboard](grafonnet/publicdashboard.md)
 * [query](grafonnet/query.md)
+* [serviceaccount](grafonnet/serviceaccount.md)
+* [team](grafonnet/team.md)
 

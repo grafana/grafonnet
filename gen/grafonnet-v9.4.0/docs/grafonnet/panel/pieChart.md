@@ -39,7 +39,7 @@ grafonnet.panel.pieChart
 * [`fn withTransformations(value)`](#fn-withtransformations)
 * [`fn withTransformationsMixin(value)`](#fn-withtransformationsmixin)
 * [`fn withTransparent(value=false)`](#fn-withtransparent)
-* [`fn withType(value='piechart')`](#fn-withtype)
+* [`fn withType()`](#fn-withtype)
 * [`obj datasource`](#obj-datasource)
   * [`fn withType(value)`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
@@ -73,7 +73,7 @@ grafonnet.panel.pieChart
     * [`obj color`](#obj-fieldconfigdefaultscolor)
       * [`fn withFixedColor(value)`](#fn-fieldconfigdefaultscolorwithfixedcolor)
       * [`fn withMode(value)`](#fn-fieldconfigdefaultscolorwithmode)
-      * [`fn withSeriesBy(value='enum[min,max,last]')`](#fn-fieldconfigdefaultscolorwithseriesby)
+      * [`fn withSeriesBy(value)`](#fn-fieldconfigdefaultscolorwithseriesby)
     * [`obj custom`](#obj-fieldconfigdefaultscustom)
       * [`fn withHideFrom(value)`](#fn-fieldconfigdefaultscustomwithhidefrom)
       * [`fn withHideFromMixin(value)`](#fn-fieldconfigdefaultscustomwithhidefrommixin)
@@ -114,7 +114,7 @@ grafonnet.panel.pieChart
         * [`fn withOptionsMixin(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapwithoptionsmixin)
         * [`fn withType(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapwithtype)
         * [`obj options`](#obj-fieldconfigdefaultsmappingsspecialvaluemapoptions)
-          * [`fn withMatch(value='enum[true,false]')`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithmatch)
+          * [`fn withMatch(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithmatch)
           * [`fn withPattern(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithpattern)
           * [`fn withResult(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithresult)
           * [`fn withResultMixin(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithresultmixin)
@@ -128,7 +128,7 @@ grafonnet.panel.pieChart
         * [`fn withOptionsMixin(value)`](#fn-fieldconfigdefaultsmappingsvaluemapwithoptionsmixin)
         * [`fn withType(value)`](#fn-fieldconfigdefaultsmappingsvaluemapwithtype)
     * [`obj thresholds`](#obj-fieldconfigdefaultsthresholds)
-      * [`fn withMode(value='enum[absolute,percentage]')`](#fn-fieldconfigdefaultsthresholdswithmode)
+      * [`fn withMode(value)`](#fn-fieldconfigdefaultsthresholdswithmode)
       * [`fn withSteps(value)`](#fn-fieldconfigdefaultsthresholdswithsteps)
       * [`fn withStepsMixin(value)`](#fn-fieldconfigdefaultsthresholdswithstepsmixin)
       * [`obj steps`](#obj-fieldconfigdefaultsthresholdssteps)
@@ -165,15 +165,15 @@ grafonnet.panel.pieChart
   * [`fn withTargetBlank(value=false)`](#fn-linkswithtargetblank)
   * [`fn withTitle(value)`](#fn-linkswithtitle)
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
-  * [`fn withType(value='enum[link,dashboards]')`](#fn-linkswithtype)
+  * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
 * [`obj options`](#obj-options)
   * [`fn withDisplayLabels(value)`](#fn-optionswithdisplaylabels)
   * [`fn withDisplayLabelsMixin(value)`](#fn-optionswithdisplaylabelsmixin)
   * [`fn withLegend(value)`](#fn-optionswithlegend)
   * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
-  * [`fn withOrientation(value='enum[auto,vertical,horizontal]')`](#fn-optionswithorientation)
-  * [`fn withPieType(value='enum[pie,donut]')`](#fn-optionswithpietype)
+  * [`fn withOrientation(value)`](#fn-optionswithorientation)
+  * [`fn withPieType(value)`](#fn-optionswithpietype)
   * [`fn withReduceOptions(value)`](#fn-optionswithreduceoptions)
   * [`fn withReduceOptionsMixin(value)`](#fn-optionswithreduceoptionsmixin)
   * [`fn withText(value)`](#fn-optionswithtext)
@@ -184,9 +184,9 @@ grafonnet.panel.pieChart
     * [`fn withAsTable(value)`](#fn-optionslegendwithastable)
     * [`fn withCalcs(value)`](#fn-optionslegendwithcalcs)
     * [`fn withCalcsMixin(value)`](#fn-optionslegendwithcalcsmixin)
-    * [`fn withDisplayMode(value='enum[list,table,hidden]')`](#fn-optionslegendwithdisplaymode)
+    * [`fn withDisplayMode(value)`](#fn-optionslegendwithdisplaymode)
     * [`fn withIsVisible(value)`](#fn-optionslegendwithisvisible)
-    * [`fn withPlacement(value='enum[bottom,right]')`](#fn-optionslegendwithplacement)
+    * [`fn withPlacement(value)`](#fn-optionslegendwithplacement)
     * [`fn withShowLegend(value)`](#fn-optionslegendwithshowlegend)
     * [`fn withSortBy(value)`](#fn-optionslegendwithsortby)
     * [`fn withSortDesc(value)`](#fn-optionslegendwithsortdesc)
@@ -203,8 +203,8 @@ grafonnet.panel.pieChart
     * [`fn withTitleSize(value)`](#fn-optionstextwithtitlesize)
     * [`fn withValueSize(value)`](#fn-optionstextwithvaluesize)
   * [`obj tooltip`](#obj-optionstooltip)
-    * [`fn withMode(value='enum[single,multi,none]')`](#fn-optionstooltipwithmode)
-    * [`fn withSort(value='enum[asc,desc,none]')`](#fn-optionstooltipwithsort)
+    * [`fn withMode(value)`](#fn-optionstooltipwithmode)
+    * [`fn withSort(value)`](#fn-optionstooltipwithsort)
 * [`obj transformations`](#obj-transformations)
   * [`fn withDisabled(value)`](#fn-transformationswithdisabled)
   * [`fn withFilter(value)`](#fn-transformationswithfilter)
@@ -384,6 +384,8 @@ Direction to repeat in if 'repeat' is set.
 "h" for horizontal, "v" for vertical.
 TODO this is probably optional
 
+Accepted values for `value` are h, v
+
 ### fn withRepeatPanelId
 
 ```ts
@@ -509,7 +511,7 @@ Whether to display the panel without a background.
 ### fn withType
 
 ```ts
-withType(value='piechart')
+withType()
 ```
 
 
@@ -768,10 +770,12 @@ The main color scheme mode
 ###### fn fieldConfig.defaults.color.withSeriesBy
 
 ```ts
-withSeriesBy(value='enum[min,max,last]')
+withSeriesBy(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are min, max, last
 
 ##### obj fieldConfig.defaults.custom
 
@@ -1041,10 +1045,12 @@ withType(value)
 ######## fn fieldConfig.defaults.mappings.SpecialValueMap.options.withMatch
 
 ```ts
-withMatch(value='enum[true,false]')
+withMatch(value)
 ```
 
 
+
+Accepted values for `value` are true, false
 
 ######## fn fieldConfig.defaults.mappings.SpecialValueMap.options.withPattern
 
@@ -1138,10 +1144,12 @@ withType(value)
 ###### fn fieldConfig.defaults.thresholds.withMode
 
 ```ts
-withMode(value='enum[absolute,percentage]')
+withMode(value)
 ```
 
 
+
+Accepted values for `value` are absolute, percentage
 
 ###### fn fieldConfig.defaults.thresholds.withSteps
 
@@ -1402,10 +1410,12 @@ withTooltip(value)
 #### fn links.withType
 
 ```ts
-withType(value='enum[link,dashboards]')
+withType(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are link, dashboards
 
 #### fn links.withUrl
 
@@ -1453,18 +1463,22 @@ withLegendMixin(value)
 #### fn options.withOrientation
 
 ```ts
-withOrientation(value='enum[auto,vertical,horizontal]')
+withOrientation(value)
 ```
 
 TODO docs
 
+Accepted values for `value` are auto, vertical, horizontal
+
 #### fn options.withPieType
 
 ```ts
-withPieType(value='enum[pie,donut]')
+withPieType(value)
 ```
 
 Select the pie chart display style.
+
+Accepted values for `value` are pie, donut
 
 #### fn options.withReduceOptions
 
@@ -1544,11 +1558,13 @@ withCalcsMixin(value)
 ##### fn options.legend.withDisplayMode
 
 ```ts
-withDisplayMode(value='enum[list,table,hidden]')
+withDisplayMode(value)
 ```
 
 TODO docs
 Note: "hidden" needs to remain as an option for plugins compatibility
+
+Accepted values for `value` are list, table, hidden
 
 ##### fn options.legend.withIsVisible
 
@@ -1561,10 +1577,12 @@ withIsVisible(value)
 ##### fn options.legend.withPlacement
 
 ```ts
-withPlacement(value='enum[bottom,right]')
+withPlacement(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are bottom, right
 
 ##### fn options.legend.withShowLegend
 
@@ -1682,18 +1700,22 @@ Explicit value text size
 ##### fn options.tooltip.withMode
 
 ```ts
-withMode(value='enum[single,multi,none]')
+withMode(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are single, multi, none
 
 ##### fn options.tooltip.withSort
 
 ```ts
-withSort(value='enum[asc,desc,none]')
+withSort(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are asc, desc, none
 
 ### obj transformations
 

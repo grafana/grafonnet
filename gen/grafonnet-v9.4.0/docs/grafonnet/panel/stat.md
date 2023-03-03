@@ -39,7 +39,7 @@ grafonnet.panel.stat
 * [`fn withTransformations(value)`](#fn-withtransformations)
 * [`fn withTransformationsMixin(value)`](#fn-withtransformationsmixin)
 * [`fn withTransparent(value=false)`](#fn-withtransparent)
-* [`fn withType(value='stat')`](#fn-withtype)
+* [`fn withType()`](#fn-withtype)
 * [`obj datasource`](#obj-datasource)
   * [`fn withType(value)`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
@@ -73,7 +73,7 @@ grafonnet.panel.stat
     * [`obj color`](#obj-fieldconfigdefaultscolor)
       * [`fn withFixedColor(value)`](#fn-fieldconfigdefaultscolorwithfixedcolor)
       * [`fn withMode(value)`](#fn-fieldconfigdefaultscolorwithmode)
-      * [`fn withSeriesBy(value='enum[min,max,last]')`](#fn-fieldconfigdefaultscolorwithseriesby)
+      * [`fn withSeriesBy(value)`](#fn-fieldconfigdefaultscolorwithseriesby)
     * [`obj mappings`](#obj-fieldconfigdefaultsmappings)
       * [`obj RangeMap`](#obj-fieldconfigdefaultsmappingsrangemap)
         * [`fn withOptions(value)`](#fn-fieldconfigdefaultsmappingsrangemapwithoptions)
@@ -107,7 +107,7 @@ grafonnet.panel.stat
         * [`fn withOptionsMixin(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapwithoptionsmixin)
         * [`fn withType(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapwithtype)
         * [`obj options`](#obj-fieldconfigdefaultsmappingsspecialvaluemapoptions)
-          * [`fn withMatch(value='enum[true,false]')`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithmatch)
+          * [`fn withMatch(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithmatch)
           * [`fn withPattern(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithpattern)
           * [`fn withResult(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithresult)
           * [`fn withResultMixin(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithresultmixin)
@@ -121,7 +121,7 @@ grafonnet.panel.stat
         * [`fn withOptionsMixin(value)`](#fn-fieldconfigdefaultsmappingsvaluemapwithoptionsmixin)
         * [`fn withType(value)`](#fn-fieldconfigdefaultsmappingsvaluemapwithtype)
     * [`obj thresholds`](#obj-fieldconfigdefaultsthresholds)
-      * [`fn withMode(value='enum[absolute,percentage]')`](#fn-fieldconfigdefaultsthresholdswithmode)
+      * [`fn withMode(value)`](#fn-fieldconfigdefaultsthresholdswithmode)
       * [`fn withSteps(value)`](#fn-fieldconfigdefaultsthresholdswithsteps)
       * [`fn withStepsMixin(value)`](#fn-fieldconfigdefaultsthresholdswithstepsmixin)
       * [`obj steps`](#obj-fieldconfigdefaultsthresholdssteps)
@@ -158,18 +158,18 @@ grafonnet.panel.stat
   * [`fn withTargetBlank(value=false)`](#fn-linkswithtargetblank)
   * [`fn withTitle(value)`](#fn-linkswithtitle)
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
-  * [`fn withType(value='enum[link,dashboards]')`](#fn-linkswithtype)
+  * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
 * [`obj options`](#obj-options)
-  * [`fn withColorMode(value='enum[value,background,none]')`](#fn-optionswithcolormode)
-  * [`fn withGraphMode(value='enum[none,line,area]')`](#fn-optionswithgraphmode)
-  * [`fn withJustifyMode(value='enum[auto,center]')`](#fn-optionswithjustifymode)
-  * [`fn withOrientation(value='enum[auto,vertical,horizontal]')`](#fn-optionswithorientation)
+  * [`fn withColorMode(value)`](#fn-optionswithcolormode)
+  * [`fn withGraphMode(value)`](#fn-optionswithgraphmode)
+  * [`fn withJustifyMode(value)`](#fn-optionswithjustifymode)
+  * [`fn withOrientation(value)`](#fn-optionswithorientation)
   * [`fn withReduceOptions(value)`](#fn-optionswithreduceoptions)
   * [`fn withReduceOptionsMixin(value)`](#fn-optionswithreduceoptionsmixin)
   * [`fn withText(value)`](#fn-optionswithtext)
   * [`fn withTextMixin(value)`](#fn-optionswithtextmixin)
-  * [`fn withTextMode(value='enum[auto,value,value_and_name,name,none]')`](#fn-optionswithtextmode)
+  * [`fn withTextMode(value)`](#fn-optionswithtextmode)
   * [`obj reduceOptions`](#obj-optionsreduceoptions)
     * [`fn withCalcs(value)`](#fn-optionsreduceoptionswithcalcs)
     * [`fn withCalcsMixin(value)`](#fn-optionsreduceoptionswithcalcsmixin)
@@ -358,6 +358,8 @@ Direction to repeat in if 'repeat' is set.
 "h" for horizontal, "v" for vertical.
 TODO this is probably optional
 
+Accepted values for `value` are h, v
+
 ### fn withRepeatPanelId
 
 ```ts
@@ -483,7 +485,7 @@ Whether to display the panel without a background.
 ### fn withType
 
 ```ts
-withType(value='stat')
+withType()
 ```
 
 
@@ -742,10 +744,12 @@ The main color scheme mode
 ###### fn fieldConfig.defaults.color.withSeriesBy
 
 ```ts
-withSeriesBy(value='enum[min,max,last]')
+withSeriesBy(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are min, max, last
 
 ##### obj fieldConfig.defaults.mappings
 
@@ -969,10 +973,12 @@ withType(value)
 ######## fn fieldConfig.defaults.mappings.SpecialValueMap.options.withMatch
 
 ```ts
-withMatch(value='enum[true,false]')
+withMatch(value)
 ```
 
 
+
+Accepted values for `value` are true, false
 
 ######## fn fieldConfig.defaults.mappings.SpecialValueMap.options.withPattern
 
@@ -1066,10 +1072,12 @@ withType(value)
 ###### fn fieldConfig.defaults.thresholds.withMode
 
 ```ts
-withMode(value='enum[absolute,percentage]')
+withMode(value)
 ```
 
 
+
+Accepted values for `value` are absolute, percentage
 
 ###### fn fieldConfig.defaults.thresholds.withSteps
 
@@ -1330,10 +1338,12 @@ withTooltip(value)
 #### fn links.withType
 
 ```ts
-withType(value='enum[link,dashboards]')
+withType(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are link, dashboards
 
 #### fn links.withUrl
 
@@ -1349,34 +1359,42 @@ withUrl(value)
 #### fn options.withColorMode
 
 ```ts
-withColorMode(value='enum[value,background,none]')
+withColorMode(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are value, background, none
 
 #### fn options.withGraphMode
 
 ```ts
-withGraphMode(value='enum[none,line,area]')
+withGraphMode(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are none, line, area
 
 #### fn options.withJustifyMode
 
 ```ts
-withJustifyMode(value='enum[auto,center]')
+withJustifyMode(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are auto, center
 
 #### fn options.withOrientation
 
 ```ts
-withOrientation(value='enum[auto,vertical,horizontal]')
+withOrientation(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are auto, vertical, horizontal
 
 #### fn options.withReduceOptions
 
@@ -1413,10 +1431,12 @@ TODO docs
 #### fn options.withTextMode
 
 ```ts
-withTextMode(value='enum[auto,value,value_and_name,name,none]')
+withTextMode(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are auto, value, value_and_name, name, none
 
 #### obj options.reduceOptions
 

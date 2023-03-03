@@ -1,6 +1,6 @@
-# package xyChart
+# package heatmap
 
-grafonnet.panel.xyChart
+grafonnet.panel.heatmap
 
 ## Index
 
@@ -74,6 +74,19 @@ grafonnet.panel.xyChart
       * [`fn withFixedColor(value)`](#fn-fieldconfigdefaultscolorwithfixedcolor)
       * [`fn withMode(value)`](#fn-fieldconfigdefaultscolorwithmode)
       * [`fn withSeriesBy(value)`](#fn-fieldconfigdefaultscolorwithseriesby)
+    * [`obj custom`](#obj-fieldconfigdefaultscustom)
+      * [`fn withHideFrom(value)`](#fn-fieldconfigdefaultscustomwithhidefrom)
+      * [`fn withHideFromMixin(value)`](#fn-fieldconfigdefaultscustomwithhidefrommixin)
+      * [`fn withScaleDistribution(value)`](#fn-fieldconfigdefaultscustomwithscaledistribution)
+      * [`fn withScaleDistributionMixin(value)`](#fn-fieldconfigdefaultscustomwithscaledistributionmixin)
+      * [`obj hideFrom`](#obj-fieldconfigdefaultscustomhidefrom)
+        * [`fn withLegend(value)`](#fn-fieldconfigdefaultscustomhidefromwithlegend)
+        * [`fn withTooltip(value)`](#fn-fieldconfigdefaultscustomhidefromwithtooltip)
+        * [`fn withViz(value)`](#fn-fieldconfigdefaultscustomhidefromwithviz)
+      * [`obj scaleDistribution`](#obj-fieldconfigdefaultscustomscaledistribution)
+        * [`fn withLinearThreshold(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithlinearthreshold)
+        * [`fn withLog(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithlog)
+        * [`fn withType(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithtype)
     * [`obj mappings`](#obj-fieldconfigdefaultsmappings)
       * [`obj RangeMap`](#obj-fieldconfigdefaultsmappingsrangemap)
         * [`fn withOptions(value)`](#fn-fieldconfigdefaultsmappingsrangemapwithoptions)
@@ -161,94 +174,106 @@ grafonnet.panel.xyChart
   * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
 * [`obj options`](#obj-options)
-  * [`fn withDims(value)`](#fn-optionswithdims)
-  * [`fn withDimsMixin(value)`](#fn-optionswithdimsmixin)
+  * [`fn withCalculate(value=false)`](#fn-optionswithcalculate)
+  * [`fn withCalculation(value)`](#fn-optionswithcalculation)
+  * [`fn withCalculationMixin(value)`](#fn-optionswithcalculationmixin)
+  * [`fn withCellGap(value=1)`](#fn-optionswithcellgap)
+  * [`fn withCellRadius(value)`](#fn-optionswithcellradius)
+  * [`fn withCellValues(value={ })`](#fn-optionswithcellvalues)
+  * [`fn withCellValuesMixin(value={ })`](#fn-optionswithcellvaluesmixin)
+  * [`fn withColor(value={"exponent": 0.5, "fill": "dark-orange", "reverse": false, "scheme": "Oranges", "steps": 64})`](#fn-optionswithcolor)
+  * [`fn withColorMixin(value={"exponent": 0.5, "fill": "dark-orange", "reverse": false, "scheme": "Oranges", "steps": 64})`](#fn-optionswithcolormixin)
+  * [`fn withExemplars(value)`](#fn-optionswithexemplars)
+  * [`fn withExemplarsMixin(value)`](#fn-optionswithexemplarsmixin)
+  * [`fn withFilterValues(value={"le": 1.0000000000000001e-09})`](#fn-optionswithfiltervalues)
+  * [`fn withFilterValuesMixin(value={"le": 1.0000000000000001e-09})`](#fn-optionswithfiltervaluesmixin)
   * [`fn withLegend(value)`](#fn-optionswithlegend)
   * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
-  * [`fn withSeries(value)`](#fn-optionswithseries)
-  * [`fn withSeriesMapping(value)`](#fn-optionswithseriesmapping)
-  * [`fn withSeriesMixin(value)`](#fn-optionswithseriesmixin)
+  * [`fn withRowsFrame(value)`](#fn-optionswithrowsframe)
+  * [`fn withRowsFrameMixin(value)`](#fn-optionswithrowsframemixin)
+  * [`fn withShowValue(value)`](#fn-optionswithshowvalue)
   * [`fn withTooltip(value)`](#fn-optionswithtooltip)
   * [`fn withTooltipMixin(value)`](#fn-optionswithtooltipmixin)
-  * [`obj dims`](#obj-optionsdims)
-    * [`fn withExclude(value)`](#fn-optionsdimswithexclude)
-    * [`fn withExcludeMixin(value)`](#fn-optionsdimswithexcludemixin)
-    * [`fn withFrame(value)`](#fn-optionsdimswithframe)
-    * [`fn withX(value)`](#fn-optionsdimswithx)
+  * [`fn withYAxis(value)`](#fn-optionswithyaxis)
+  * [`fn withYAxisMixin(value)`](#fn-optionswithyaxismixin)
+  * [`obj calculation`](#obj-optionscalculation)
+    * [`fn withXBuckets(value)`](#fn-optionscalculationwithxbuckets)
+    * [`fn withXBucketsMixin(value)`](#fn-optionscalculationwithxbucketsmixin)
+    * [`fn withYBuckets(value)`](#fn-optionscalculationwithybuckets)
+    * [`fn withYBucketsMixin(value)`](#fn-optionscalculationwithybucketsmixin)
+    * [`obj xBuckets`](#obj-optionscalculationxbuckets)
+      * [`fn withMode(value)`](#fn-optionscalculationxbucketswithmode)
+      * [`fn withScale(value)`](#fn-optionscalculationxbucketswithscale)
+      * [`fn withScaleMixin(value)`](#fn-optionscalculationxbucketswithscalemixin)
+      * [`fn withValue(value)`](#fn-optionscalculationxbucketswithvalue)
+      * [`obj scale`](#obj-optionscalculationxbucketsscale)
+        * [`fn withLinearThreshold(value)`](#fn-optionscalculationxbucketsscalewithlinearthreshold)
+        * [`fn withLog(value)`](#fn-optionscalculationxbucketsscalewithlog)
+        * [`fn withType(value)`](#fn-optionscalculationxbucketsscalewithtype)
+    * [`obj yBuckets`](#obj-optionscalculationybuckets)
+      * [`fn withMode(value)`](#fn-optionscalculationybucketswithmode)
+      * [`fn withScale(value)`](#fn-optionscalculationybucketswithscale)
+      * [`fn withScaleMixin(value)`](#fn-optionscalculationybucketswithscalemixin)
+      * [`fn withValue(value)`](#fn-optionscalculationybucketswithvalue)
+      * [`obj scale`](#obj-optionscalculationybucketsscale)
+        * [`fn withLinearThreshold(value)`](#fn-optionscalculationybucketsscalewithlinearthreshold)
+        * [`fn withLog(value)`](#fn-optionscalculationybucketsscalewithlog)
+        * [`fn withType(value)`](#fn-optionscalculationybucketsscalewithtype)
+  * [`obj cellValues`](#obj-optionscellvalues)
+    * [`fn withCellValues(value)`](#fn-optionscellvalueswithcellvalues)
+    * [`fn withCellValuesMixin(value)`](#fn-optionscellvalueswithcellvaluesmixin)
+    * [`obj CellValues`](#obj-optionscellvaluescellvalues)
+      * [`fn withDecimals(value)`](#fn-optionscellvaluescellvalueswithdecimals)
+      * [`fn withUnit(value)`](#fn-optionscellvaluescellvalueswithunit)
+  * [`obj color`](#obj-optionscolor)
+    * [`fn withHeatmapColorOptions(value)`](#fn-optionscolorwithheatmapcoloroptions)
+    * [`fn withHeatmapColorOptionsMixin(value)`](#fn-optionscolorwithheatmapcoloroptionsmixin)
+    * [`obj HeatmapColorOptions`](#obj-optionscolorheatmapcoloroptions)
+      * [`fn withExponent(value)`](#fn-optionscolorheatmapcoloroptionswithexponent)
+      * [`fn withFill(value)`](#fn-optionscolorheatmapcoloroptionswithfill)
+      * [`fn withMax(value)`](#fn-optionscolorheatmapcoloroptionswithmax)
+      * [`fn withMin(value)`](#fn-optionscolorheatmapcoloroptionswithmin)
+      * [`fn withMode(value)`](#fn-optionscolorheatmapcoloroptionswithmode)
+      * [`fn withReverse(value)`](#fn-optionscolorheatmapcoloroptionswithreverse)
+      * [`fn withScale(value)`](#fn-optionscolorheatmapcoloroptionswithscale)
+      * [`fn withScheme(value)`](#fn-optionscolorheatmapcoloroptionswithscheme)
+      * [`fn withSteps(value)`](#fn-optionscolorheatmapcoloroptionswithsteps)
+  * [`obj exemplars`](#obj-optionsexemplars)
+    * [`fn withColor(value)`](#fn-optionsexemplarswithcolor)
+  * [`obj filterValues`](#obj-optionsfiltervalues)
+    * [`fn withFilterValueRange(value)`](#fn-optionsfiltervalueswithfiltervaluerange)
+    * [`fn withFilterValueRangeMixin(value)`](#fn-optionsfiltervalueswithfiltervaluerangemixin)
+    * [`obj FilterValueRange`](#obj-optionsfiltervaluesfiltervaluerange)
+      * [`fn withGe(value)`](#fn-optionsfiltervaluesfiltervaluerangewithge)
+      * [`fn withLe(value)`](#fn-optionsfiltervaluesfiltervaluerangewithle)
   * [`obj legend`](#obj-optionslegend)
-    * [`fn withAsTable(value)`](#fn-optionslegendwithastable)
-    * [`fn withCalcs(value)`](#fn-optionslegendwithcalcs)
-    * [`fn withCalcsMixin(value)`](#fn-optionslegendwithcalcsmixin)
-    * [`fn withDisplayMode(value)`](#fn-optionslegendwithdisplaymode)
-    * [`fn withIsVisible(value)`](#fn-optionslegendwithisvisible)
-    * [`fn withPlacement(value)`](#fn-optionslegendwithplacement)
-    * [`fn withShowLegend(value)`](#fn-optionslegendwithshowlegend)
-    * [`fn withSortBy(value)`](#fn-optionslegendwithsortby)
-    * [`fn withSortDesc(value)`](#fn-optionslegendwithsortdesc)
-    * [`fn withWidth(value)`](#fn-optionslegendwithwidth)
-  * [`obj series`](#obj-optionsseries)
-    * [`fn withAxisCenteredZero(value)`](#fn-optionsserieswithaxiscenteredzero)
-    * [`fn withAxisColorMode(value)`](#fn-optionsserieswithaxiscolormode)
-    * [`fn withAxisGridShow(value)`](#fn-optionsserieswithaxisgridshow)
-    * [`fn withAxisLabel(value)`](#fn-optionsserieswithaxislabel)
-    * [`fn withAxisPlacement(value)`](#fn-optionsserieswithaxisplacement)
-    * [`fn withAxisSoftMax(value)`](#fn-optionsserieswithaxissoftmax)
-    * [`fn withAxisSoftMin(value)`](#fn-optionsserieswithaxissoftmin)
-    * [`fn withAxisWidth(value)`](#fn-optionsserieswithaxiswidth)
-    * [`fn withHideFrom(value)`](#fn-optionsserieswithhidefrom)
-    * [`fn withHideFromMixin(value)`](#fn-optionsserieswithhidefrommixin)
-    * [`fn withLabel(value)`](#fn-optionsserieswithlabel)
-    * [`fn withLabelValue(value)`](#fn-optionsserieswithlabelvalue)
-    * [`fn withLabelValueMixin(value)`](#fn-optionsserieswithlabelvaluemixin)
-    * [`fn withLineColor(value)`](#fn-optionsserieswithlinecolor)
-    * [`fn withLineColorMixin(value)`](#fn-optionsserieswithlinecolormixin)
-    * [`fn withLineStyle(value)`](#fn-optionsserieswithlinestyle)
-    * [`fn withLineStyleMixin(value)`](#fn-optionsserieswithlinestylemixin)
-    * [`fn withLineWidth(value)`](#fn-optionsserieswithlinewidth)
-    * [`fn withName(value)`](#fn-optionsserieswithname)
-    * [`fn withPointColor(value)`](#fn-optionsserieswithpointcolor)
-    * [`fn withPointColorMixin(value)`](#fn-optionsserieswithpointcolormixin)
-    * [`fn withPointSize(value)`](#fn-optionsserieswithpointsize)
-    * [`fn withPointSizeMixin(value)`](#fn-optionsserieswithpointsizemixin)
-    * [`fn withScaleDistribution(value)`](#fn-optionsserieswithscaledistribution)
-    * [`fn withScaleDistributionMixin(value)`](#fn-optionsserieswithscaledistributionmixin)
-    * [`fn withShow(value)`](#fn-optionsserieswithshow)
-    * [`fn withX(value)`](#fn-optionsserieswithx)
-    * [`fn withY(value)`](#fn-optionsserieswithy)
-    * [`obj hideFrom`](#obj-optionsserieshidefrom)
-      * [`fn withLegend(value)`](#fn-optionsserieshidefromwithlegend)
-      * [`fn withTooltip(value)`](#fn-optionsserieshidefromwithtooltip)
-      * [`fn withViz(value)`](#fn-optionsserieshidefromwithviz)
-    * [`obj labelValue`](#obj-optionsserieslabelvalue)
-      * [`fn withField(value)`](#fn-optionsserieslabelvaluewithfield)
-      * [`fn withFixed(value)`](#fn-optionsserieslabelvaluewithfixed)
-      * [`fn withFixedMixin(value)`](#fn-optionsserieslabelvaluewithfixedmixin)
-      * [`fn withMode(value)`](#fn-optionsserieslabelvaluewithmode)
-    * [`obj lineColor`](#obj-optionsserieslinecolor)
-      * [`fn withField(value)`](#fn-optionsserieslinecolorwithfield)
-      * [`fn withFixed(value)`](#fn-optionsserieslinecolorwithfixed)
-      * [`fn withFixedMixin(value)`](#fn-optionsserieslinecolorwithfixedmixin)
-    * [`obj lineStyle`](#obj-optionsserieslinestyle)
-      * [`fn withDash(value)`](#fn-optionsserieslinestylewithdash)
-      * [`fn withDashMixin(value)`](#fn-optionsserieslinestylewithdashmixin)
-      * [`fn withFill(value)`](#fn-optionsserieslinestylewithfill)
-    * [`obj pointColor`](#obj-optionsseriespointcolor)
-      * [`fn withField(value)`](#fn-optionsseriespointcolorwithfield)
-      * [`fn withFixed(value)`](#fn-optionsseriespointcolorwithfixed)
-      * [`fn withFixedMixin(value)`](#fn-optionsseriespointcolorwithfixedmixin)
-    * [`obj pointSize`](#obj-optionsseriespointsize)
-      * [`fn withField(value)`](#fn-optionsseriespointsizewithfield)
-      * [`fn withFixed(value)`](#fn-optionsseriespointsizewithfixed)
-      * [`fn withFixedMixin(value)`](#fn-optionsseriespointsizewithfixedmixin)
-      * [`fn withMax(value)`](#fn-optionsseriespointsizewithmax)
-      * [`fn withMin(value)`](#fn-optionsseriespointsizewithmin)
-    * [`obj scaleDistribution`](#obj-optionsseriesscaledistribution)
-      * [`fn withLinearThreshold(value)`](#fn-optionsseriesscaledistributionwithlinearthreshold)
-      * [`fn withLog(value)`](#fn-optionsseriesscaledistributionwithlog)
-      * [`fn withType(value)`](#fn-optionsseriesscaledistributionwithtype)
+    * [`fn withShow(value)`](#fn-optionslegendwithshow)
+  * [`obj rowsFrame`](#obj-optionsrowsframe)
+    * [`fn withLayout(value)`](#fn-optionsrowsframewithlayout)
+    * [`fn withValue(value)`](#fn-optionsrowsframewithvalue)
   * [`obj tooltip`](#obj-optionstooltip)
-    * [`fn withMode(value)`](#fn-optionstooltipwithmode)
-    * [`fn withSort(value)`](#fn-optionstooltipwithsort)
+    * [`fn withShow(value)`](#fn-optionstooltipwithshow)
+    * [`fn withYHistogram(value)`](#fn-optionstooltipwithyhistogram)
+  * [`obj yAxis`](#obj-optionsyaxis)
+    * [`fn withAxisCenteredZero(value)`](#fn-optionsyaxiswithaxiscenteredzero)
+    * [`fn withAxisColorMode(value)`](#fn-optionsyaxiswithaxiscolormode)
+    * [`fn withAxisGridShow(value)`](#fn-optionsyaxiswithaxisgridshow)
+    * [`fn withAxisLabel(value)`](#fn-optionsyaxiswithaxislabel)
+    * [`fn withAxisPlacement(value)`](#fn-optionsyaxiswithaxisplacement)
+    * [`fn withAxisSoftMax(value)`](#fn-optionsyaxiswithaxissoftmax)
+    * [`fn withAxisSoftMin(value)`](#fn-optionsyaxiswithaxissoftmin)
+    * [`fn withAxisWidth(value)`](#fn-optionsyaxiswithaxiswidth)
+    * [`fn withDecimals(value)`](#fn-optionsyaxiswithdecimals)
+    * [`fn withMax(value)`](#fn-optionsyaxiswithmax)
+    * [`fn withMin(value)`](#fn-optionsyaxiswithmin)
+    * [`fn withReverse(value)`](#fn-optionsyaxiswithreverse)
+    * [`fn withScaleDistribution(value)`](#fn-optionsyaxiswithscaledistribution)
+    * [`fn withScaleDistributionMixin(value)`](#fn-optionsyaxiswithscaledistributionmixin)
+    * [`fn withUnit(value)`](#fn-optionsyaxiswithunit)
+    * [`obj scaleDistribution`](#obj-optionsyaxisscaledistribution)
+      * [`fn withLinearThreshold(value)`](#fn-optionsyaxisscaledistributionwithlinearthreshold)
+      * [`fn withLog(value)`](#fn-optionsyaxisscaledistributionwithlog)
+      * [`fn withType(value)`](#fn-optionsyaxisscaledistributionwithtype)
 * [`obj transformations`](#obj-transformations)
   * [`fn withDisabled(value)`](#fn-transformationswithdisabled)
   * [`fn withFilter(value)`](#fn-transformationswithfilter)
@@ -267,7 +292,7 @@ grafonnet.panel.xyChart
 new(title)
 ```
 
-Creates a new xyChart panel with a title.
+Creates a new heatmap panel with a title.
 
 ### fn withDatasource
 
@@ -820,6 +845,97 @@ withSeriesBy(value)
 TODO docs
 
 Accepted values for `value` are min, max, last
+
+##### obj fieldConfig.defaults.custom
+
+
+###### fn fieldConfig.defaults.custom.withHideFrom
+
+```ts
+withHideFrom(value)
+```
+
+TODO docs
+
+###### fn fieldConfig.defaults.custom.withHideFromMixin
+
+```ts
+withHideFromMixin(value)
+```
+
+TODO docs
+
+###### fn fieldConfig.defaults.custom.withScaleDistribution
+
+```ts
+withScaleDistribution(value)
+```
+
+TODO docs
+
+###### fn fieldConfig.defaults.custom.withScaleDistributionMixin
+
+```ts
+withScaleDistributionMixin(value)
+```
+
+TODO docs
+
+###### obj fieldConfig.defaults.custom.hideFrom
+
+
+####### fn fieldConfig.defaults.custom.hideFrom.withLegend
+
+```ts
+withLegend(value)
+```
+
+
+
+####### fn fieldConfig.defaults.custom.hideFrom.withTooltip
+
+```ts
+withTooltip(value)
+```
+
+
+
+####### fn fieldConfig.defaults.custom.hideFrom.withViz
+
+```ts
+withViz(value)
+```
+
+
+
+###### obj fieldConfig.defaults.custom.scaleDistribution
+
+
+####### fn fieldConfig.defaults.custom.scaleDistribution.withLinearThreshold
+
+```ts
+withLinearThreshold(value)
+```
+
+
+
+####### fn fieldConfig.defaults.custom.scaleDistribution.withLog
+
+```ts
+withLog(value)
+```
+
+
+
+####### fn fieldConfig.defaults.custom.scaleDistribution.withType
+
+```ts
+withType(value)
+```
+
+TODO docs
+
+Accepted values for `value` are linear, log, ordinal, symlog
 
 ##### obj fieldConfig.defaults.mappings
 
@@ -1426,21 +1542,109 @@ withUrl(value)
 ### obj options
 
 
-#### fn options.withDims
+#### fn options.withCalculate
 
 ```ts
-withDims(value)
+withCalculate(value=false)
+```
+
+Controls if the heatmap should be calculated from data
+
+#### fn options.withCalculation
+
+```ts
+withCalculation(value)
 ```
 
 
 
-#### fn options.withDimsMixin
+#### fn options.withCalculationMixin
 
 ```ts
-withDimsMixin(value)
+withCalculationMixin(value)
 ```
 
 
+
+#### fn options.withCellGap
+
+```ts
+withCellGap(value=1)
+```
+
+Controls gap between cells
+
+#### fn options.withCellRadius
+
+```ts
+withCellRadius(value)
+```
+
+Controls cell radius
+
+#### fn options.withCellValues
+
+```ts
+withCellValues(value={ })
+```
+
+Controls cell value unit
+
+#### fn options.withCellValuesMixin
+
+```ts
+withCellValuesMixin(value={ })
+```
+
+Controls cell value unit
+
+#### fn options.withColor
+
+```ts
+withColor(value={"exponent": 0.5, "fill": "dark-orange", "reverse": false, "scheme": "Oranges", "steps": 64})
+```
+
+Controls the color options
+
+#### fn options.withColorMixin
+
+```ts
+withColorMixin(value={"exponent": 0.5, "fill": "dark-orange", "reverse": false, "scheme": "Oranges", "steps": 64})
+```
+
+Controls the color options
+
+#### fn options.withExemplars
+
+```ts
+withExemplars(value)
+```
+
+Controls exemplar options
+
+#### fn options.withExemplarsMixin
+
+```ts
+withExemplarsMixin(value)
+```
+
+Controls exemplar options
+
+#### fn options.withFilterValues
+
+```ts
+withFilterValues(value={"le": 1.0000000000000001e-09})
+```
+
+Filters values between a given range
+
+#### fn options.withFilterValuesMixin
+
+```ts
+withFilterValuesMixin(value={"le": 1.0000000000000001e-09})
+```
+
+Filters values between a given range
 
 #### fn options.withLegend
 
@@ -1448,7 +1652,7 @@ withDimsMixin(value)
 withLegend(value)
 ```
 
-TODO docs
+Controls legend options
 
 #### fn options.withLegendMixin
 
@@ -1456,33 +1660,33 @@ TODO docs
 withLegendMixin(value)
 ```
 
+Controls legend options
+
+#### fn options.withRowsFrame
+
+```ts
+withRowsFrame(value)
+```
+
+Controls frame rows options
+
+#### fn options.withRowsFrameMixin
+
+```ts
+withRowsFrameMixin(value)
+```
+
+Controls frame rows options
+
+#### fn options.withShowValue
+
+```ts
+withShowValue(value)
+```
+
 TODO docs
 
-#### fn options.withSeries
-
-```ts
-withSeries(value)
-```
-
-
-
-#### fn options.withSeriesMapping
-
-```ts
-withSeriesMapping(value)
-```
-
-
-
-Accepted values for `value` are auto, manual
-
-#### fn options.withSeriesMixin
-
-```ts
-withSeriesMixin(value)
-```
-
-
+Accepted values for `value` are auto, never, always
 
 #### fn options.withTooltip
 
@@ -1490,7 +1694,7 @@ withSeriesMixin(value)
 withTooltip(value)
 ```
 
-TODO docs
+Controls tooltip options
 
 #### fn options.withTooltipMixin
 
@@ -1498,421 +1702,63 @@ TODO docs
 withTooltipMixin(value)
 ```
 
-TODO docs
+Controls tooltip options
 
-#### obj options.dims
-
-
-##### fn options.dims.withExclude
+#### fn options.withYAxis
 
 ```ts
-withExclude(value)
+withYAxis(value)
+```
+
+Configuration options for the yAxis
+
+#### fn options.withYAxisMixin
+
+```ts
+withYAxisMixin(value)
+```
+
+Configuration options for the yAxis
+
+#### obj options.calculation
+
+
+##### fn options.calculation.withXBuckets
+
+```ts
+withXBuckets(value)
 ```
 
 
 
-##### fn options.dims.withExcludeMixin
+##### fn options.calculation.withXBucketsMixin
 
 ```ts
-withExcludeMixin(value)
+withXBucketsMixin(value)
 ```
 
 
 
-##### fn options.dims.withFrame
+##### fn options.calculation.withYBuckets
 
 ```ts
-withFrame(value)
+withYBuckets(value)
 ```
 
 
 
-##### fn options.dims.withX
+##### fn options.calculation.withYBucketsMixin
 
 ```ts
-withX(value)
+withYBucketsMixin(value)
 ```
 
 
 
-#### obj options.legend
+##### obj options.calculation.xBuckets
 
 
-##### fn options.legend.withAsTable
-
-```ts
-withAsTable(value)
-```
-
-
-
-##### fn options.legend.withCalcs
-
-```ts
-withCalcs(value)
-```
-
-
-
-##### fn options.legend.withCalcsMixin
-
-```ts
-withCalcsMixin(value)
-```
-
-
-
-##### fn options.legend.withDisplayMode
-
-```ts
-withDisplayMode(value)
-```
-
-TODO docs
-Note: "hidden" needs to remain as an option for plugins compatibility
-
-Accepted values for `value` are list, table, hidden
-
-##### fn options.legend.withIsVisible
-
-```ts
-withIsVisible(value)
-```
-
-
-
-##### fn options.legend.withPlacement
-
-```ts
-withPlacement(value)
-```
-
-TODO docs
-
-Accepted values for `value` are bottom, right
-
-##### fn options.legend.withShowLegend
-
-```ts
-withShowLegend(value)
-```
-
-
-
-##### fn options.legend.withSortBy
-
-```ts
-withSortBy(value)
-```
-
-
-
-##### fn options.legend.withSortDesc
-
-```ts
-withSortDesc(value)
-```
-
-
-
-##### fn options.legend.withWidth
-
-```ts
-withWidth(value)
-```
-
-
-
-#### obj options.series
-
-
-##### fn options.series.withAxisCenteredZero
-
-```ts
-withAxisCenteredZero(value)
-```
-
-
-
-##### fn options.series.withAxisColorMode
-
-```ts
-withAxisColorMode(value)
-```
-
-TODO docs
-
-Accepted values for `value` are text, series
-
-##### fn options.series.withAxisGridShow
-
-```ts
-withAxisGridShow(value)
-```
-
-
-
-##### fn options.series.withAxisLabel
-
-```ts
-withAxisLabel(value)
-```
-
-
-
-##### fn options.series.withAxisPlacement
-
-```ts
-withAxisPlacement(value)
-```
-
-TODO docs
-
-Accepted values for `value` are auto, top, right, bottom, left, hidden
-
-##### fn options.series.withAxisSoftMax
-
-```ts
-withAxisSoftMax(value)
-```
-
-
-
-##### fn options.series.withAxisSoftMin
-
-```ts
-withAxisSoftMin(value)
-```
-
-
-
-##### fn options.series.withAxisWidth
-
-```ts
-withAxisWidth(value)
-```
-
-
-
-##### fn options.series.withHideFrom
-
-```ts
-withHideFrom(value)
-```
-
-TODO docs
-
-##### fn options.series.withHideFromMixin
-
-```ts
-withHideFromMixin(value)
-```
-
-TODO docs
-
-##### fn options.series.withLabel
-
-```ts
-withLabel(value)
-```
-
-TODO docs
-
-Accepted values for `value` are auto, never, always
-
-##### fn options.series.withLabelValue
-
-```ts
-withLabelValue(value)
-```
-
-
-
-##### fn options.series.withLabelValueMixin
-
-```ts
-withLabelValueMixin(value)
-```
-
-
-
-##### fn options.series.withLineColor
-
-```ts
-withLineColor(value)
-```
-
-This is actually an empty interface used mainly for naming?
-
-##### fn options.series.withLineColorMixin
-
-```ts
-withLineColorMixin(value)
-```
-
-This is actually an empty interface used mainly for naming?
-
-##### fn options.series.withLineStyle
-
-```ts
-withLineStyle(value)
-```
-
-TODO docs
-
-##### fn options.series.withLineStyleMixin
-
-```ts
-withLineStyleMixin(value)
-```
-
-TODO docs
-
-##### fn options.series.withLineWidth
-
-```ts
-withLineWidth(value)
-```
-
-
-
-##### fn options.series.withName
-
-```ts
-withName(value)
-```
-
-
-
-##### fn options.series.withPointColor
-
-```ts
-withPointColor(value)
-```
-
-This is actually an empty interface used mainly for naming?
-
-##### fn options.series.withPointColorMixin
-
-```ts
-withPointColorMixin(value)
-```
-
-This is actually an empty interface used mainly for naming?
-
-##### fn options.series.withPointSize
-
-```ts
-withPointSize(value)
-```
-
-
-
-##### fn options.series.withPointSizeMixin
-
-```ts
-withPointSizeMixin(value)
-```
-
-
-
-##### fn options.series.withScaleDistribution
-
-```ts
-withScaleDistribution(value)
-```
-
-TODO docs
-
-##### fn options.series.withScaleDistributionMixin
-
-```ts
-withScaleDistributionMixin(value)
-```
-
-TODO docs
-
-##### fn options.series.withShow
-
-```ts
-withShow(value)
-```
-
-
-
-Accepted values for `value` are points, lines, points+lines
-
-##### fn options.series.withX
-
-```ts
-withX(value)
-```
-
-
-
-##### fn options.series.withY
-
-```ts
-withY(value)
-```
-
-
-
-##### obj options.series.hideFrom
-
-
-###### fn options.series.hideFrom.withLegend
-
-```ts
-withLegend(value)
-```
-
-
-
-###### fn options.series.hideFrom.withTooltip
-
-```ts
-withTooltip(value)
-```
-
-
-
-###### fn options.series.hideFrom.withViz
-
-```ts
-withViz(value)
-```
-
-
-
-##### obj options.series.labelValue
-
-
-###### fn options.series.labelValue.withField
-
-```ts
-withField(value)
-```
-
-
-
-###### fn options.series.labelValue.withFixed
-
-```ts
-withFixed(value)
-```
-
-
-
-###### fn options.series.labelValue.withFixedMixin
-
-```ts
-withFixedMixin(value)
-```
-
-
-
-###### fn options.series.labelValue.withMode
+###### fn options.calculation.xBuckets.withMode
 
 ```ts
 withMode(value)
@@ -1920,138 +1766,36 @@ withMode(value)
 
 
 
-Accepted values for `value` are fixed, field, template
+Accepted values for `value` are size, count
 
-##### obj options.series.lineColor
-
-
-###### fn options.series.lineColor.withField
+###### fn options.calculation.xBuckets.withScale
 
 ```ts
-withField(value)
+withScale(value)
 ```
 
+TODO docs
 
-
-###### fn options.series.lineColor.withFixed
+###### fn options.calculation.xBuckets.withScaleMixin
 
 ```ts
-withFixed(value)
+withScaleMixin(value)
 ```
 
+TODO docs
 
-
-###### fn options.series.lineColor.withFixedMixin
+###### fn options.calculation.xBuckets.withValue
 
 ```ts
-withFixedMixin(value)
+withValue(value)
 ```
 
+The number of buckets to use for the axis in the heatmap
+
+###### obj options.calculation.xBuckets.scale
 
 
-##### obj options.series.lineStyle
-
-
-###### fn options.series.lineStyle.withDash
-
-```ts
-withDash(value)
-```
-
-
-
-###### fn options.series.lineStyle.withDashMixin
-
-```ts
-withDashMixin(value)
-```
-
-
-
-###### fn options.series.lineStyle.withFill
-
-```ts
-withFill(value)
-```
-
-
-
-Accepted values for `value` are solid, dash, dot, square
-
-##### obj options.series.pointColor
-
-
-###### fn options.series.pointColor.withField
-
-```ts
-withField(value)
-```
-
-
-
-###### fn options.series.pointColor.withFixed
-
-```ts
-withFixed(value)
-```
-
-
-
-###### fn options.series.pointColor.withFixedMixin
-
-```ts
-withFixedMixin(value)
-```
-
-
-
-##### obj options.series.pointSize
-
-
-###### fn options.series.pointSize.withField
-
-```ts
-withField(value)
-```
-
-
-
-###### fn options.series.pointSize.withFixed
-
-```ts
-withFixed(value)
-```
-
-
-
-###### fn options.series.pointSize.withFixedMixin
-
-```ts
-withFixedMixin(value)
-```
-
-
-
-###### fn options.series.pointSize.withMax
-
-```ts
-withMax(value)
-```
-
-
-
-###### fn options.series.pointSize.withMin
-
-```ts
-withMin(value)
-```
-
-
-
-##### obj options.series.scaleDistribution
-
-
-###### fn options.series.scaleDistribution.withLinearThreshold
+####### fn options.calculation.xBuckets.scale.withLinearThreshold
 
 ```ts
 withLinearThreshold(value)
@@ -2059,7 +1803,7 @@ withLinearThreshold(value)
 
 
 
-###### fn options.series.scaleDistribution.withLog
+####### fn options.calculation.xBuckets.scale.withLog
 
 ```ts
 withLog(value)
@@ -2067,7 +1811,7 @@ withLog(value)
 
 
 
-###### fn options.series.scaleDistribution.withType
+####### fn options.calculation.xBuckets.scale.withType
 
 ```ts
 withType(value)
@@ -2077,28 +1821,463 @@ TODO docs
 
 Accepted values for `value` are linear, log, ordinal, symlog
 
-#### obj options.tooltip
+##### obj options.calculation.yBuckets
 
 
-##### fn options.tooltip.withMode
+###### fn options.calculation.yBuckets.withMode
 
 ```ts
 withMode(value)
 ```
 
-TODO docs
 
-Accepted values for `value` are single, multi, none
 
-##### fn options.tooltip.withSort
+Accepted values for `value` are size, count
+
+###### fn options.calculation.yBuckets.withScale
 
 ```ts
-withSort(value)
+withScale(value)
 ```
 
 TODO docs
 
-Accepted values for `value` are asc, desc, none
+###### fn options.calculation.yBuckets.withScaleMixin
+
+```ts
+withScaleMixin(value)
+```
+
+TODO docs
+
+###### fn options.calculation.yBuckets.withValue
+
+```ts
+withValue(value)
+```
+
+The number of buckets to use for the axis in the heatmap
+
+###### obj options.calculation.yBuckets.scale
+
+
+####### fn options.calculation.yBuckets.scale.withLinearThreshold
+
+```ts
+withLinearThreshold(value)
+```
+
+
+
+####### fn options.calculation.yBuckets.scale.withLog
+
+```ts
+withLog(value)
+```
+
+
+
+####### fn options.calculation.yBuckets.scale.withType
+
+```ts
+withType(value)
+```
+
+TODO docs
+
+Accepted values for `value` are linear, log, ordinal, symlog
+
+#### obj options.cellValues
+
+
+##### fn options.cellValues.withCellValues
+
+```ts
+withCellValues(value)
+```
+
+Controls cell value options
+
+##### fn options.cellValues.withCellValuesMixin
+
+```ts
+withCellValuesMixin(value)
+```
+
+Controls cell value options
+
+##### obj options.cellValues.CellValues
+
+
+###### fn options.cellValues.CellValues.withDecimals
+
+```ts
+withDecimals(value)
+```
+
+Controls the number of decimals for cell values
+
+###### fn options.cellValues.CellValues.withUnit
+
+```ts
+withUnit(value)
+```
+
+Controls the cell value unit
+
+#### obj options.color
+
+
+##### fn options.color.withHeatmapColorOptions
+
+```ts
+withHeatmapColorOptions(value)
+```
+
+Controls various color options
+
+##### fn options.color.withHeatmapColorOptionsMixin
+
+```ts
+withHeatmapColorOptionsMixin(value)
+```
+
+Controls various color options
+
+##### obj options.color.HeatmapColorOptions
+
+
+###### fn options.color.HeatmapColorOptions.withExponent
+
+```ts
+withExponent(value)
+```
+
+Controls the exponent when scale is set to exponential
+
+###### fn options.color.HeatmapColorOptions.withFill
+
+```ts
+withFill(value)
+```
+
+Controls the color fill when in opacity mode
+
+###### fn options.color.HeatmapColorOptions.withMax
+
+```ts
+withMax(value)
+```
+
+Sets the maximum value for the color scale
+
+###### fn options.color.HeatmapColorOptions.withMin
+
+```ts
+withMin(value)
+```
+
+Sets the minimum value for the color scale
+
+###### fn options.color.HeatmapColorOptions.withMode
+
+```ts
+withMode(value)
+```
+
+Controls the color mode of the heatmap
+
+Accepted values for `value` are opacity, scheme
+
+###### fn options.color.HeatmapColorOptions.withReverse
+
+```ts
+withReverse(value)
+```
+
+Reverses the color scheme
+
+###### fn options.color.HeatmapColorOptions.withScale
+
+```ts
+withScale(value)
+```
+
+Controls the color scale of the heatmap
+
+Accepted values for `value` are linear, exponential
+
+###### fn options.color.HeatmapColorOptions.withScheme
+
+```ts
+withScheme(value)
+```
+
+Controls the color scheme used
+
+###### fn options.color.HeatmapColorOptions.withSteps
+
+```ts
+withSteps(value)
+```
+
+Controls the number of color steps
+
+#### obj options.exemplars
+
+
+##### fn options.exemplars.withColor
+
+```ts
+withColor(value)
+```
+
+Sets the color of the exemplar markers
+
+#### obj options.filterValues
+
+
+##### fn options.filterValues.withFilterValueRange
+
+```ts
+withFilterValueRange(value)
+```
+
+Controls the value filter range
+
+##### fn options.filterValues.withFilterValueRangeMixin
+
+```ts
+withFilterValueRangeMixin(value)
+```
+
+Controls the value filter range
+
+##### obj options.filterValues.FilterValueRange
+
+
+###### fn options.filterValues.FilterValueRange.withGe
+
+```ts
+withGe(value)
+```
+
+Sets the filter range to values greater than or equal to the given value
+
+###### fn options.filterValues.FilterValueRange.withLe
+
+```ts
+withLe(value)
+```
+
+Sets the filter range to values less than or equal to the given value
+
+#### obj options.legend
+
+
+##### fn options.legend.withShow
+
+```ts
+withShow(value)
+```
+
+Controls if the legend is shown
+
+#### obj options.rowsFrame
+
+
+##### fn options.rowsFrame.withLayout
+
+```ts
+withLayout(value)
+```
+
+
+
+Accepted values for `value` are le, ge, unknown, auto
+
+##### fn options.rowsFrame.withValue
+
+```ts
+withValue(value)
+```
+
+Sets the name of the cell when not calculating from data
+
+#### obj options.tooltip
+
+
+##### fn options.tooltip.withShow
+
+```ts
+withShow(value)
+```
+
+Controls if the tooltip is shown
+
+##### fn options.tooltip.withYHistogram
+
+```ts
+withYHistogram(value)
+```
+
+Controls if the tooltip shows a histogram of the y-axis values
+
+#### obj options.yAxis
+
+
+##### fn options.yAxis.withAxisCenteredZero
+
+```ts
+withAxisCenteredZero(value)
+```
+
+
+
+##### fn options.yAxis.withAxisColorMode
+
+```ts
+withAxisColorMode(value)
+```
+
+TODO docs
+
+Accepted values for `value` are text, series
+
+##### fn options.yAxis.withAxisGridShow
+
+```ts
+withAxisGridShow(value)
+```
+
+
+
+##### fn options.yAxis.withAxisLabel
+
+```ts
+withAxisLabel(value)
+```
+
+
+
+##### fn options.yAxis.withAxisPlacement
+
+```ts
+withAxisPlacement(value)
+```
+
+TODO docs
+
+Accepted values for `value` are auto, top, right, bottom, left, hidden
+
+##### fn options.yAxis.withAxisSoftMax
+
+```ts
+withAxisSoftMax(value)
+```
+
+
+
+##### fn options.yAxis.withAxisSoftMin
+
+```ts
+withAxisSoftMin(value)
+```
+
+
+
+##### fn options.yAxis.withAxisWidth
+
+```ts
+withAxisWidth(value)
+```
+
+
+
+##### fn options.yAxis.withDecimals
+
+```ts
+withDecimals(value)
+```
+
+Controls the number of decimals for yAxis values
+
+##### fn options.yAxis.withMax
+
+```ts
+withMax(value)
+```
+
+Sets the maximum value for the yAxis
+
+##### fn options.yAxis.withMin
+
+```ts
+withMin(value)
+```
+
+Sets the minimum value for the yAxis
+
+##### fn options.yAxis.withReverse
+
+```ts
+withReverse(value)
+```
+
+Reverses the yAxis
+
+##### fn options.yAxis.withScaleDistribution
+
+```ts
+withScaleDistribution(value)
+```
+
+TODO docs
+
+##### fn options.yAxis.withScaleDistributionMixin
+
+```ts
+withScaleDistributionMixin(value)
+```
+
+TODO docs
+
+##### fn options.yAxis.withUnit
+
+```ts
+withUnit(value)
+```
+
+Sets the yAxis unit
+
+##### obj options.yAxis.scaleDistribution
+
+
+###### fn options.yAxis.scaleDistribution.withLinearThreshold
+
+```ts
+withLinearThreshold(value)
+```
+
+
+
+###### fn options.yAxis.scaleDistribution.withLog
+
+```ts
+withLog(value)
+```
+
+
+
+###### fn options.yAxis.scaleDistribution.withType
+
+```ts
+withType(value)
+```
+
+TODO docs
+
+Accepted values for `value` are linear, log, ordinal, symlog
 
 ### obj transformations
 

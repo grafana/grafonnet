@@ -49,7 +49,7 @@ local filesFor(version) =
                 subdir: 'jsonnet/%s' % version,
               },
             },
-            version: 'malcolmholmes/add-jsonnet-support',
+            version: 'main',
           },
         ],
         legacyImports: false,

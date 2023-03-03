@@ -1,35 +1,23 @@
-# package prometheus
+# package loki
 
-grafonnet.query.prometheus
+grafonnet.query.loki
 
 ## Index
 
-* [`fn new(datasource, expr)`](#fn-new)
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withEditorMode(value)`](#fn-witheditormode)
-* [`fn withExemplar(value)`](#fn-withexemplar)
 * [`fn withExpr(value)`](#fn-withexpr)
-* [`fn withFormat(value)`](#fn-withformat)
 * [`fn withHide(value)`](#fn-withhide)
-* [`fn withHinting(value)`](#fn-withhinting)
 * [`fn withInstant(value)`](#fn-withinstant)
-* [`fn withInterval(value)`](#fn-withinterval)
-* [`fn withIntervalFactor(value)`](#fn-withintervalfactor)
 * [`fn withKey(value)`](#fn-withkey)
 * [`fn withLegendFormat(value)`](#fn-withlegendformat)
+* [`fn withMaxLines(value)`](#fn-withmaxlines)
 * [`fn withQueryType(value)`](#fn-withquerytype)
 * [`fn withRange(value)`](#fn-withrange)
 * [`fn withRefId(value)`](#fn-withrefid)
+* [`fn withResolution(value)`](#fn-withresolution)
 
 ## Fields
-
-### fn new
-
-```ts
-new(datasource, expr)
-```
-
-Creates a new prometheus query target for panels.
 
 ### fn withDatasource
 
@@ -52,31 +40,13 @@ withEditorMode(value)
 
 Accepted values for `value` are code, builder
 
-### fn withExemplar
-
-```ts
-withExemplar(value)
-```
-
-
-
 ### fn withExpr
 
 ```ts
 withExpr(value)
 ```
 
-The PromQL query.
-
-### fn withFormat
-
-```ts
-withFormat(value)
-```
-
-
-
-Accepted values for `value` are time_series, table, heatmap
+The LogQL query.
 
 ### fn withHide
 
@@ -86,37 +56,13 @@ withHide(value)
 
 true if query is disabled (ie should not be returned to the dashboard)
 
-### fn withHinting
-
-```ts
-withHinting(value)
-```
-
-
-
 ### fn withInstant
 
 ```ts
 withInstant(value)
 ```
 
-
-
-### fn withInterval
-
-```ts
-withInterval(value)
-```
-
-
-
-### fn withIntervalFactor
-
-```ts
-withIntervalFactor(value)
-```
-
-
+@deprecated, now use queryType.
 
 ### fn withKey
 
@@ -134,6 +80,14 @@ withLegendFormat(value)
 
 Used to override the name of the series.
 
+### fn withMaxLines
+
+```ts
+withMaxLines(value)
+```
+
+Used to limit the number of log rows returned.
+
 ### fn withQueryType
 
 ```ts
@@ -149,7 +103,7 @@ TODO make this required and give it a default
 withRange(value)
 ```
 
-
+@deprecated, now use queryType.
 
 ### fn withRefId
 
@@ -158,3 +112,11 @@ withRefId(value)
 ```
 
 A - Z
+
+### fn withResolution
+
+```ts
+withResolution(value)
+```
+
+Used to scale the interval value.

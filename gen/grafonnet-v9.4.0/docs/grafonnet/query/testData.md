@@ -11,7 +11,7 @@ grafonnet.query.testData
 * [`fn withCsvWave(value)`](#fn-withcsvwave)
 * [`fn withCsvWaveMixin(value)`](#fn-withcsvwavemixin)
 * [`fn withDatasource(value)`](#fn-withdatasource)
-* [`fn withErrorType(value='enum[server_panic,frontend_exception,frontend_observable]')`](#fn-witherrortype)
+* [`fn withErrorType(value)`](#fn-witherrortype)
 * [`fn withHide(value)`](#fn-withhide)
 * [`fn withKey(value)`](#fn-withkey)
 * [`fn withLabels(value)`](#fn-withlabels)
@@ -26,7 +26,7 @@ grafonnet.query.testData
 * [`fn withQueryType(value)`](#fn-withquerytype)
 * [`fn withRawFrameContent(value)`](#fn-withrawframecontent)
 * [`fn withRefId(value)`](#fn-withrefid)
-* [`fn withScenarioId(value='enum[random_walk,slow_query,random_walk_with_error,random_walk_table,exponential_heatmap_bucket_data,linear_heatmap_bucket_data,no_data_points,datapoints_outside_range,csv_metric_values,predictable_pulse,predictable_csv_wave,streaming_client,simulation,usa,live,grafana_api,arrow,annotations,table_static,server_error_500,logs,node_graph,flame_graph,raw_frame,csv_file,csv_content,trace,manual_entry,variables-query]')`](#fn-withscenarioid)
+* [`fn withScenarioId(value)`](#fn-withscenarioid)
 * [`fn withSeriesCount(value)`](#fn-withseriescount)
 * [`fn withSim(value)`](#fn-withsim)
 * [`fn withSimMixin(value)`](#fn-withsimmixin)
@@ -43,7 +43,7 @@ grafonnet.query.testData
   * [`fn withValuesCSV(value)`](#fn-csvwavewithvaluescsv)
 * [`obj nodes`](#obj-nodes)
   * [`fn withCount(value)`](#fn-nodeswithcount)
-  * [`fn withType(value='enum[random,response,random edges]')`](#fn-nodeswithtype)
+  * [`fn withType(value)`](#fn-nodeswithtype)
 * [`obj pulseWave`](#obj-pulsewave)
   * [`fn withOffCount(value)`](#fn-pulsewavewithoffcount)
   * [`fn withOffValue(value)`](#fn-pulsewavewithoffvalue)
@@ -66,7 +66,7 @@ grafonnet.query.testData
   * [`fn withNoise(value)`](#fn-streamwithnoise)
   * [`fn withSpeed(value)`](#fn-streamwithspeed)
   * [`fn withSpread(value)`](#fn-streamwithspread)
-  * [`fn withType(value='enum[signal,logs,fetch]')`](#fn-streamwithtype)
+  * [`fn withType(value)`](#fn-streamwithtype)
   * [`fn withUrl(value)`](#fn-streamwithurl)
 * [`obj usa`](#obj-usa)
   * [`fn withFields(value)`](#fn-usawithfields)
@@ -140,10 +140,12 @@ TODO this shouldn't be unknown but DataSourceRef | null
 ### fn withErrorType
 
 ```ts
-withErrorType(value='enum[server_panic,frontend_exception,frontend_observable]')
+withErrorType(value)
 ```
 
 
+
+Accepted values for `value` are server_panic, frontend_exception, frontend_observable
 
 ### fn withHide
 
@@ -261,10 +263,12 @@ A - Z
 ### fn withScenarioId
 
 ```ts
-withScenarioId(value='enum[random_walk,slow_query,random_walk_with_error,random_walk_table,exponential_heatmap_bucket_data,linear_heatmap_bucket_data,no_data_points,datapoints_outside_range,csv_metric_values,predictable_pulse,predictable_csv_wave,streaming_client,simulation,usa,live,grafana_api,arrow,annotations,table_static,server_error_500,logs,node_graph,flame_graph,raw_frame,csv_file,csv_content,trace,manual_entry,variables-query]')
+withScenarioId(value)
 ```
 
 
+
+Accepted values for `value` are random_walk, slow_query, random_walk_with_error, random_walk_table, exponential_heatmap_bucket_data, linear_heatmap_bucket_data, no_data_points, datapoints_outside_range, csv_metric_values, predictable_pulse, predictable_csv_wave, streaming_client, simulation, usa, live, grafana_api, arrow, annotations, table_static, server_error_500, logs, node_graph, flame_graph, raw_frame, csv_file, csv_content, trace, manual_entry, variables-query
 
 ### fn withSeriesCount
 
@@ -387,10 +391,12 @@ withCount(value)
 #### fn nodes.withType
 
 ```ts
-withType(value='enum[random,response,random edges]')
+withType(value)
 ```
 
 
+
+Accepted values for `value` are random, response, random edges
 
 ### obj pulseWave
 
@@ -551,10 +557,12 @@ withSpread(value)
 #### fn stream.withType
 
 ```ts
-withType(value='enum[signal,logs,fetch]')
+withType(value)
 ```
 
 
+
+Accepted values for `value` are signal, logs, fetch
 
 #### fn stream.withUrl
 

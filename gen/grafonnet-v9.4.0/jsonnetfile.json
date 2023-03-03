@@ -16,7 +16,7 @@
           "subdir": "jsonnet/v9.4.0"
         }
       },
-      "version": "malcolmholmes/add-jsonnet-support"
+      "version": "main"
     }
   ],
   "legacyImports": false,

@@ -39,7 +39,7 @@ grafonnet.panel.dashboardList
 * [`fn withTransformations(value)`](#fn-withtransformations)
 * [`fn withTransformationsMixin(value)`](#fn-withtransformationsmixin)
 * [`fn withTransparent(value=false)`](#fn-withtransparent)
-* [`fn withType(value='dashlist')`](#fn-withtype)
+* [`fn withType()`](#fn-withtype)
 * [`obj datasource`](#obj-datasource)
   * [`fn withType(value)`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
@@ -73,7 +73,7 @@ grafonnet.panel.dashboardList
     * [`obj color`](#obj-fieldconfigdefaultscolor)
       * [`fn withFixedColor(value)`](#fn-fieldconfigdefaultscolorwithfixedcolor)
       * [`fn withMode(value)`](#fn-fieldconfigdefaultscolorwithmode)
-      * [`fn withSeriesBy(value='enum[min,max,last]')`](#fn-fieldconfigdefaultscolorwithseriesby)
+      * [`fn withSeriesBy(value)`](#fn-fieldconfigdefaultscolorwithseriesby)
     * [`obj mappings`](#obj-fieldconfigdefaultsmappings)
       * [`obj RangeMap`](#obj-fieldconfigdefaultsmappingsrangemap)
         * [`fn withOptions(value)`](#fn-fieldconfigdefaultsmappingsrangemapwithoptions)
@@ -107,7 +107,7 @@ grafonnet.panel.dashboardList
         * [`fn withOptionsMixin(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapwithoptionsmixin)
         * [`fn withType(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapwithtype)
         * [`obj options`](#obj-fieldconfigdefaultsmappingsspecialvaluemapoptions)
-          * [`fn withMatch(value='enum[true,false]')`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithmatch)
+          * [`fn withMatch(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithmatch)
           * [`fn withPattern(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithpattern)
           * [`fn withResult(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithresult)
           * [`fn withResultMixin(value)`](#fn-fieldconfigdefaultsmappingsspecialvaluemapoptionswithresultmixin)
@@ -121,7 +121,7 @@ grafonnet.panel.dashboardList
         * [`fn withOptionsMixin(value)`](#fn-fieldconfigdefaultsmappingsvaluemapwithoptionsmixin)
         * [`fn withType(value)`](#fn-fieldconfigdefaultsmappingsvaluemapwithtype)
     * [`obj thresholds`](#obj-fieldconfigdefaultsthresholds)
-      * [`fn withMode(value='enum[absolute,percentage]')`](#fn-fieldconfigdefaultsthresholdswithmode)
+      * [`fn withMode(value)`](#fn-fieldconfigdefaultsthresholdswithmode)
       * [`fn withSteps(value)`](#fn-fieldconfigdefaultsthresholdswithsteps)
       * [`fn withStepsMixin(value)`](#fn-fieldconfigdefaultsthresholdswithstepsmixin)
       * [`obj steps`](#obj-fieldconfigdefaultsthresholdssteps)
@@ -158,11 +158,11 @@ grafonnet.panel.dashboardList
   * [`fn withTargetBlank(value=false)`](#fn-linkswithtargetblank)
   * [`fn withTitle(value)`](#fn-linkswithtitle)
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
-  * [`fn withType(value='enum[link,dashboards]')`](#fn-linkswithtype)
+  * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
 * [`obj options`](#obj-options)
   * [`fn withFolderId(value)`](#fn-optionswithfolderid)
-  * [`fn withLayout(value='enum[list,previews]')`](#fn-optionswithlayout)
+  * [`fn withLayout(value)`](#fn-optionswithlayout)
   * [`fn withMaxItems(value=10)`](#fn-optionswithmaxitems)
   * [`fn withQuery(value='')`](#fn-optionswithquery)
   * [`fn withShowHeadings(value=true)`](#fn-optionswithshowheadings)
@@ -350,6 +350,8 @@ Direction to repeat in if 'repeat' is set.
 "h" for horizontal, "v" for vertical.
 TODO this is probably optional
 
+Accepted values for `value` are h, v
+
 ### fn withRepeatPanelId
 
 ```ts
@@ -475,7 +477,7 @@ Whether to display the panel without a background.
 ### fn withType
 
 ```ts
-withType(value='dashlist')
+withType()
 ```
 
 
@@ -734,10 +736,12 @@ The main color scheme mode
 ###### fn fieldConfig.defaults.color.withSeriesBy
 
 ```ts
-withSeriesBy(value='enum[min,max,last]')
+withSeriesBy(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are min, max, last
 
 ##### obj fieldConfig.defaults.mappings
 
@@ -961,10 +965,12 @@ withType(value)
 ######## fn fieldConfig.defaults.mappings.SpecialValueMap.options.withMatch
 
 ```ts
-withMatch(value='enum[true,false]')
+withMatch(value)
 ```
 
 
+
+Accepted values for `value` are true, false
 
 ######## fn fieldConfig.defaults.mappings.SpecialValueMap.options.withPattern
 
@@ -1058,10 +1064,12 @@ withType(value)
 ###### fn fieldConfig.defaults.thresholds.withMode
 
 ```ts
-withMode(value='enum[absolute,percentage]')
+withMode(value)
 ```
 
 
+
+Accepted values for `value` are absolute, percentage
 
 ###### fn fieldConfig.defaults.thresholds.withSteps
 
@@ -1322,10 +1330,12 @@ withTooltip(value)
 #### fn links.withType
 
 ```ts
-withType(value='enum[link,dashboards]')
+withType(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are link, dashboards
 
 #### fn links.withUrl
 
@@ -1349,10 +1359,12 @@ withFolderId(value)
 #### fn options.withLayout
 
 ```ts
-withLayout(value='enum[list,previews]')
+withLayout(value)
 ```
 
 
+
+Accepted values for `value` are list, previews
 
 #### fn options.withMaxItems
 

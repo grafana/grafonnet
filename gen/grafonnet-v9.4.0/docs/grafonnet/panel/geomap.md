@@ -1,6 +1,6 @@
-# package xyChart
+# package geomap
 
-grafonnet.panel.xyChart
+grafonnet.panel.geomap
 
 ## Index
 
@@ -161,94 +161,71 @@ grafonnet.panel.xyChart
   * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
 * [`obj options`](#obj-options)
-  * [`fn withDims(value)`](#fn-optionswithdims)
-  * [`fn withDimsMixin(value)`](#fn-optionswithdimsmixin)
-  * [`fn withLegend(value)`](#fn-optionswithlegend)
-  * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
-  * [`fn withSeries(value)`](#fn-optionswithseries)
-  * [`fn withSeriesMapping(value)`](#fn-optionswithseriesmapping)
-  * [`fn withSeriesMixin(value)`](#fn-optionswithseriesmixin)
+  * [`fn withBasemap(value)`](#fn-optionswithbasemap)
+  * [`fn withBasemapMixin(value)`](#fn-optionswithbasemapmixin)
+  * [`fn withControls(value)`](#fn-optionswithcontrols)
+  * [`fn withControlsMixin(value)`](#fn-optionswithcontrolsmixin)
+  * [`fn withLayers(value)`](#fn-optionswithlayers)
+  * [`fn withLayersMixin(value)`](#fn-optionswithlayersmixin)
   * [`fn withTooltip(value)`](#fn-optionswithtooltip)
   * [`fn withTooltipMixin(value)`](#fn-optionswithtooltipmixin)
-  * [`obj dims`](#obj-optionsdims)
-    * [`fn withExclude(value)`](#fn-optionsdimswithexclude)
-    * [`fn withExcludeMixin(value)`](#fn-optionsdimswithexcludemixin)
-    * [`fn withFrame(value)`](#fn-optionsdimswithframe)
-    * [`fn withX(value)`](#fn-optionsdimswithx)
-  * [`obj legend`](#obj-optionslegend)
-    * [`fn withAsTable(value)`](#fn-optionslegendwithastable)
-    * [`fn withCalcs(value)`](#fn-optionslegendwithcalcs)
-    * [`fn withCalcsMixin(value)`](#fn-optionslegendwithcalcsmixin)
-    * [`fn withDisplayMode(value)`](#fn-optionslegendwithdisplaymode)
-    * [`fn withIsVisible(value)`](#fn-optionslegendwithisvisible)
-    * [`fn withPlacement(value)`](#fn-optionslegendwithplacement)
-    * [`fn withShowLegend(value)`](#fn-optionslegendwithshowlegend)
-    * [`fn withSortBy(value)`](#fn-optionslegendwithsortby)
-    * [`fn withSortDesc(value)`](#fn-optionslegendwithsortdesc)
-    * [`fn withWidth(value)`](#fn-optionslegendwithwidth)
-  * [`obj series`](#obj-optionsseries)
-    * [`fn withAxisCenteredZero(value)`](#fn-optionsserieswithaxiscenteredzero)
-    * [`fn withAxisColorMode(value)`](#fn-optionsserieswithaxiscolormode)
-    * [`fn withAxisGridShow(value)`](#fn-optionsserieswithaxisgridshow)
-    * [`fn withAxisLabel(value)`](#fn-optionsserieswithaxislabel)
-    * [`fn withAxisPlacement(value)`](#fn-optionsserieswithaxisplacement)
-    * [`fn withAxisSoftMax(value)`](#fn-optionsserieswithaxissoftmax)
-    * [`fn withAxisSoftMin(value)`](#fn-optionsserieswithaxissoftmin)
-    * [`fn withAxisWidth(value)`](#fn-optionsserieswithaxiswidth)
-    * [`fn withHideFrom(value)`](#fn-optionsserieswithhidefrom)
-    * [`fn withHideFromMixin(value)`](#fn-optionsserieswithhidefrommixin)
-    * [`fn withLabel(value)`](#fn-optionsserieswithlabel)
-    * [`fn withLabelValue(value)`](#fn-optionsserieswithlabelvalue)
-    * [`fn withLabelValueMixin(value)`](#fn-optionsserieswithlabelvaluemixin)
-    * [`fn withLineColor(value)`](#fn-optionsserieswithlinecolor)
-    * [`fn withLineColorMixin(value)`](#fn-optionsserieswithlinecolormixin)
-    * [`fn withLineStyle(value)`](#fn-optionsserieswithlinestyle)
-    * [`fn withLineStyleMixin(value)`](#fn-optionsserieswithlinestylemixin)
-    * [`fn withLineWidth(value)`](#fn-optionsserieswithlinewidth)
-    * [`fn withName(value)`](#fn-optionsserieswithname)
-    * [`fn withPointColor(value)`](#fn-optionsserieswithpointcolor)
-    * [`fn withPointColorMixin(value)`](#fn-optionsserieswithpointcolormixin)
-    * [`fn withPointSize(value)`](#fn-optionsserieswithpointsize)
-    * [`fn withPointSizeMixin(value)`](#fn-optionsserieswithpointsizemixin)
-    * [`fn withScaleDistribution(value)`](#fn-optionsserieswithscaledistribution)
-    * [`fn withScaleDistributionMixin(value)`](#fn-optionsserieswithscaledistributionmixin)
-    * [`fn withShow(value)`](#fn-optionsserieswithshow)
-    * [`fn withX(value)`](#fn-optionsserieswithx)
-    * [`fn withY(value)`](#fn-optionsserieswithy)
-    * [`obj hideFrom`](#obj-optionsserieshidefrom)
-      * [`fn withLegend(value)`](#fn-optionsserieshidefromwithlegend)
-      * [`fn withTooltip(value)`](#fn-optionsserieshidefromwithtooltip)
-      * [`fn withViz(value)`](#fn-optionsserieshidefromwithviz)
-    * [`obj labelValue`](#obj-optionsserieslabelvalue)
-      * [`fn withField(value)`](#fn-optionsserieslabelvaluewithfield)
-      * [`fn withFixed(value)`](#fn-optionsserieslabelvaluewithfixed)
-      * [`fn withFixedMixin(value)`](#fn-optionsserieslabelvaluewithfixedmixin)
-      * [`fn withMode(value)`](#fn-optionsserieslabelvaluewithmode)
-    * [`obj lineColor`](#obj-optionsserieslinecolor)
-      * [`fn withField(value)`](#fn-optionsserieslinecolorwithfield)
-      * [`fn withFixed(value)`](#fn-optionsserieslinecolorwithfixed)
-      * [`fn withFixedMixin(value)`](#fn-optionsserieslinecolorwithfixedmixin)
-    * [`obj lineStyle`](#obj-optionsserieslinestyle)
-      * [`fn withDash(value)`](#fn-optionsserieslinestylewithdash)
-      * [`fn withDashMixin(value)`](#fn-optionsserieslinestylewithdashmixin)
-      * [`fn withFill(value)`](#fn-optionsserieslinestylewithfill)
-    * [`obj pointColor`](#obj-optionsseriespointcolor)
-      * [`fn withField(value)`](#fn-optionsseriespointcolorwithfield)
-      * [`fn withFixed(value)`](#fn-optionsseriespointcolorwithfixed)
-      * [`fn withFixedMixin(value)`](#fn-optionsseriespointcolorwithfixedmixin)
-    * [`obj pointSize`](#obj-optionsseriespointsize)
-      * [`fn withField(value)`](#fn-optionsseriespointsizewithfield)
-      * [`fn withFixed(value)`](#fn-optionsseriespointsizewithfixed)
-      * [`fn withFixedMixin(value)`](#fn-optionsseriespointsizewithfixedmixin)
-      * [`fn withMax(value)`](#fn-optionsseriespointsizewithmax)
-      * [`fn withMin(value)`](#fn-optionsseriespointsizewithmin)
-    * [`obj scaleDistribution`](#obj-optionsseriesscaledistribution)
-      * [`fn withLinearThreshold(value)`](#fn-optionsseriesscaledistributionwithlinearthreshold)
-      * [`fn withLog(value)`](#fn-optionsseriesscaledistributionwithlog)
-      * [`fn withType(value)`](#fn-optionsseriesscaledistributionwithtype)
+  * [`fn withView(value)`](#fn-optionswithview)
+  * [`fn withViewMixin(value)`](#fn-optionswithviewmixin)
+  * [`obj basemap`](#obj-optionsbasemap)
+    * [`fn withConfig(value)`](#fn-optionsbasemapwithconfig)
+    * [`fn withFilterData(value)`](#fn-optionsbasemapwithfilterdata)
+    * [`fn withLocation(value)`](#fn-optionsbasemapwithlocation)
+    * [`fn withLocationMixin(value)`](#fn-optionsbasemapwithlocationmixin)
+    * [`fn withName(value)`](#fn-optionsbasemapwithname)
+    * [`fn withOpacity(value)`](#fn-optionsbasemapwithopacity)
+    * [`fn withTooltip(value)`](#fn-optionsbasemapwithtooltip)
+    * [`fn withType(value)`](#fn-optionsbasemapwithtype)
+    * [`obj location`](#obj-optionsbasemaplocation)
+      * [`fn withGazetteer(value)`](#fn-optionsbasemaplocationwithgazetteer)
+      * [`fn withGeohash(value)`](#fn-optionsbasemaplocationwithgeohash)
+      * [`fn withLatitude(value)`](#fn-optionsbasemaplocationwithlatitude)
+      * [`fn withLongitude(value)`](#fn-optionsbasemaplocationwithlongitude)
+      * [`fn withLookup(value)`](#fn-optionsbasemaplocationwithlookup)
+      * [`fn withMode(value)`](#fn-optionsbasemaplocationwithmode)
+      * [`fn withWkt(value)`](#fn-optionsbasemaplocationwithwkt)
+  * [`obj controls`](#obj-optionscontrols)
+    * [`fn withMouseWheelZoom(value)`](#fn-optionscontrolswithmousewheelzoom)
+    * [`fn withShowAttribution(value)`](#fn-optionscontrolswithshowattribution)
+    * [`fn withShowDebug(value)`](#fn-optionscontrolswithshowdebug)
+    * [`fn withShowMeasure(value)`](#fn-optionscontrolswithshowmeasure)
+    * [`fn withShowScale(value)`](#fn-optionscontrolswithshowscale)
+    * [`fn withShowZoom(value)`](#fn-optionscontrolswithshowzoom)
+  * [`obj layers`](#obj-optionslayers)
+    * [`fn withConfig(value)`](#fn-optionslayerswithconfig)
+    * [`fn withFilterData(value)`](#fn-optionslayerswithfilterdata)
+    * [`fn withLocation(value)`](#fn-optionslayerswithlocation)
+    * [`fn withLocationMixin(value)`](#fn-optionslayerswithlocationmixin)
+    * [`fn withName(value)`](#fn-optionslayerswithname)
+    * [`fn withOpacity(value)`](#fn-optionslayerswithopacity)
+    * [`fn withTooltip(value)`](#fn-optionslayerswithtooltip)
+    * [`fn withType(value)`](#fn-optionslayerswithtype)
+    * [`obj location`](#obj-optionslayerslocation)
+      * [`fn withGazetteer(value)`](#fn-optionslayerslocationwithgazetteer)
+      * [`fn withGeohash(value)`](#fn-optionslayerslocationwithgeohash)
+      * [`fn withLatitude(value)`](#fn-optionslayerslocationwithlatitude)
+      * [`fn withLongitude(value)`](#fn-optionslayerslocationwithlongitude)
+      * [`fn withLookup(value)`](#fn-optionslayerslocationwithlookup)
+      * [`fn withMode(value)`](#fn-optionslayerslocationwithmode)
+      * [`fn withWkt(value)`](#fn-optionslayerslocationwithwkt)
   * [`obj tooltip`](#obj-optionstooltip)
     * [`fn withMode(value)`](#fn-optionstooltipwithmode)
-    * [`fn withSort(value)`](#fn-optionstooltipwithsort)
+  * [`obj view`](#obj-optionsview)
+    * [`fn withAllLayers(value=true)`](#fn-optionsviewwithalllayers)
+    * [`fn withId(value='zero')`](#fn-optionsviewwithid)
+    * [`fn withLastOnly(value)`](#fn-optionsviewwithlastonly)
+    * [`fn withLat(value=0)`](#fn-optionsviewwithlat)
+    * [`fn withLayer(value)`](#fn-optionsviewwithlayer)
+    * [`fn withLon(value=0)`](#fn-optionsviewwithlon)
+    * [`fn withMaxZoom(value)`](#fn-optionsviewwithmaxzoom)
+    * [`fn withMinZoom(value)`](#fn-optionsviewwithminzoom)
+    * [`fn withPadding(value)`](#fn-optionsviewwithpadding)
+    * [`fn withShared(value)`](#fn-optionsviewwithshared)
+    * [`fn withZoom(value=1)`](#fn-optionsviewwithzoom)
 * [`obj transformations`](#obj-transformations)
   * [`fn withDisabled(value)`](#fn-transformationswithdisabled)
   * [`fn withFilter(value)`](#fn-transformationswithfilter)
@@ -267,7 +244,7 @@ grafonnet.panel.xyChart
 new(title)
 ```
 
-Creates a new xyChart panel with a title.
+Creates a new geomap panel with a title.
 
 ### fn withDatasource
 
@@ -1426,60 +1403,50 @@ withUrl(value)
 ### obj options
 
 
-#### fn options.withDims
+#### fn options.withBasemap
 
 ```ts
-withDims(value)
+withBasemap(value)
 ```
 
 
 
-#### fn options.withDimsMixin
+#### fn options.withBasemapMixin
 
 ```ts
-withDimsMixin(value)
+withBasemapMixin(value)
 ```
 
 
 
-#### fn options.withLegend
+#### fn options.withControls
 
 ```ts
-withLegend(value)
-```
-
-TODO docs
-
-#### fn options.withLegendMixin
-
-```ts
-withLegendMixin(value)
-```
-
-TODO docs
-
-#### fn options.withSeries
-
-```ts
-withSeries(value)
+withControls(value)
 ```
 
 
 
-#### fn options.withSeriesMapping
+#### fn options.withControlsMixin
 
 ```ts
-withSeriesMapping(value)
+withControlsMixin(value)
 ```
 
 
 
-Accepted values for `value` are auto, manual
-
-#### fn options.withSeriesMixin
+#### fn options.withLayers
 
 ```ts
-withSeriesMixin(value)
+withLayers(value)
+```
+
+
+
+#### fn options.withLayersMixin
+
+```ts
+withLayersMixin(value)
 ```
 
 
@@ -1490,7 +1457,7 @@ withSeriesMixin(value)
 withTooltip(value)
 ```
 
-TODO docs
+
 
 #### fn options.withTooltipMixin
 
@@ -1498,421 +1465,137 @@ TODO docs
 withTooltipMixin(value)
 ```
 
-TODO docs
-
-#### obj options.dims
 
 
-##### fn options.dims.withExclude
+#### fn options.withView
 
 ```ts
-withExclude(value)
+withView(value)
 ```
 
 
 
-##### fn options.dims.withExcludeMixin
+#### fn options.withViewMixin
 
 ```ts
-withExcludeMixin(value)
+withViewMixin(value)
 ```
 
 
 
-##### fn options.dims.withFrame
+#### obj options.basemap
+
+
+##### fn options.basemap.withConfig
 
 ```ts
-withFrame(value)
+withConfig(value)
+```
+
+Custom options depending on the type
+
+##### fn options.basemap.withFilterData
+
+```ts
+withFilterData(value)
+```
+
+Defines a frame MatcherConfig that may filter data for the given layer
+
+##### fn options.basemap.withLocation
+
+```ts
+withLocation(value)
 ```
 
 
 
-##### fn options.dims.withX
+##### fn options.basemap.withLocationMixin
 
 ```ts
-withX(value)
+withLocationMixin(value)
 ```
 
 
 
-#### obj options.legend
-
-
-##### fn options.legend.withAsTable
-
-```ts
-withAsTable(value)
-```
-
-
-
-##### fn options.legend.withCalcs
-
-```ts
-withCalcs(value)
-```
-
-
-
-##### fn options.legend.withCalcsMixin
-
-```ts
-withCalcsMixin(value)
-```
-
-
-
-##### fn options.legend.withDisplayMode
-
-```ts
-withDisplayMode(value)
-```
-
-TODO docs
-Note: "hidden" needs to remain as an option for plugins compatibility
-
-Accepted values for `value` are list, table, hidden
-
-##### fn options.legend.withIsVisible
-
-```ts
-withIsVisible(value)
-```
-
-
-
-##### fn options.legend.withPlacement
-
-```ts
-withPlacement(value)
-```
-
-TODO docs
-
-Accepted values for `value` are bottom, right
-
-##### fn options.legend.withShowLegend
-
-```ts
-withShowLegend(value)
-```
-
-
-
-##### fn options.legend.withSortBy
-
-```ts
-withSortBy(value)
-```
-
-
-
-##### fn options.legend.withSortDesc
-
-```ts
-withSortDesc(value)
-```
-
-
-
-##### fn options.legend.withWidth
-
-```ts
-withWidth(value)
-```
-
-
-
-#### obj options.series
-
-
-##### fn options.series.withAxisCenteredZero
-
-```ts
-withAxisCenteredZero(value)
-```
-
-
-
-##### fn options.series.withAxisColorMode
-
-```ts
-withAxisColorMode(value)
-```
-
-TODO docs
-
-Accepted values for `value` are text, series
-
-##### fn options.series.withAxisGridShow
-
-```ts
-withAxisGridShow(value)
-```
-
-
-
-##### fn options.series.withAxisLabel
-
-```ts
-withAxisLabel(value)
-```
-
-
-
-##### fn options.series.withAxisPlacement
-
-```ts
-withAxisPlacement(value)
-```
-
-TODO docs
-
-Accepted values for `value` are auto, top, right, bottom, left, hidden
-
-##### fn options.series.withAxisSoftMax
-
-```ts
-withAxisSoftMax(value)
-```
-
-
-
-##### fn options.series.withAxisSoftMin
-
-```ts
-withAxisSoftMin(value)
-```
-
-
-
-##### fn options.series.withAxisWidth
-
-```ts
-withAxisWidth(value)
-```
-
-
-
-##### fn options.series.withHideFrom
-
-```ts
-withHideFrom(value)
-```
-
-TODO docs
-
-##### fn options.series.withHideFromMixin
-
-```ts
-withHideFromMixin(value)
-```
-
-TODO docs
-
-##### fn options.series.withLabel
-
-```ts
-withLabel(value)
-```
-
-TODO docs
-
-Accepted values for `value` are auto, never, always
-
-##### fn options.series.withLabelValue
-
-```ts
-withLabelValue(value)
-```
-
-
-
-##### fn options.series.withLabelValueMixin
-
-```ts
-withLabelValueMixin(value)
-```
-
-
-
-##### fn options.series.withLineColor
-
-```ts
-withLineColor(value)
-```
-
-This is actually an empty interface used mainly for naming?
-
-##### fn options.series.withLineColorMixin
-
-```ts
-withLineColorMixin(value)
-```
-
-This is actually an empty interface used mainly for naming?
-
-##### fn options.series.withLineStyle
-
-```ts
-withLineStyle(value)
-```
-
-TODO docs
-
-##### fn options.series.withLineStyleMixin
-
-```ts
-withLineStyleMixin(value)
-```
-
-TODO docs
-
-##### fn options.series.withLineWidth
-
-```ts
-withLineWidth(value)
-```
-
-
-
-##### fn options.series.withName
+##### fn options.basemap.withName
 
 ```ts
 withName(value)
 ```
 
+configured unique display name
 
-
-##### fn options.series.withPointColor
-
-```ts
-withPointColor(value)
-```
-
-This is actually an empty interface used mainly for naming?
-
-##### fn options.series.withPointColorMixin
+##### fn options.basemap.withOpacity
 
 ```ts
-withPointColorMixin(value)
+withOpacity(value)
 ```
 
-This is actually an empty interface used mainly for naming?
+Common properties:
+https://openlayers.org/en/latest/apidoc/module-ol_layer_Base-BaseLayer.html
+Layer opacity (0-1)
 
-##### fn options.series.withPointSize
-
-```ts
-withPointSize(value)
-```
-
-
-
-##### fn options.series.withPointSizeMixin
-
-```ts
-withPointSizeMixin(value)
-```
-
-
-
-##### fn options.series.withScaleDistribution
-
-```ts
-withScaleDistribution(value)
-```
-
-TODO docs
-
-##### fn options.series.withScaleDistributionMixin
-
-```ts
-withScaleDistributionMixin(value)
-```
-
-TODO docs
-
-##### fn options.series.withShow
-
-```ts
-withShow(value)
-```
-
-
-
-Accepted values for `value` are points, lines, points+lines
-
-##### fn options.series.withX
-
-```ts
-withX(value)
-```
-
-
-
-##### fn options.series.withY
-
-```ts
-withY(value)
-```
-
-
-
-##### obj options.series.hideFrom
-
-
-###### fn options.series.hideFrom.withLegend
-
-```ts
-withLegend(value)
-```
-
-
-
-###### fn options.series.hideFrom.withTooltip
+##### fn options.basemap.withTooltip
 
 ```ts
 withTooltip(value)
 ```
 
+Check tooltip (defaults to true)
 
-
-###### fn options.series.hideFrom.withViz
+##### fn options.basemap.withType
 
 ```ts
-withViz(value)
+withType(value)
 ```
 
 
 
-##### obj options.series.labelValue
+##### obj options.basemap.location
 
 
-###### fn options.series.labelValue.withField
+###### fn options.basemap.location.withGazetteer
 
 ```ts
-withField(value)
+withGazetteer(value)
+```
+
+Path to Gazetteer
+
+###### fn options.basemap.location.withGeohash
+
+```ts
+withGeohash(value)
+```
+
+Field mappings
+
+###### fn options.basemap.location.withLatitude
+
+```ts
+withLatitude(value)
 ```
 
 
 
-###### fn options.series.labelValue.withFixed
+###### fn options.basemap.location.withLongitude
 
 ```ts
-withFixed(value)
+withLongitude(value)
 ```
 
 
 
-###### fn options.series.labelValue.withFixedMixin
+###### fn options.basemap.location.withLookup
 
 ```ts
-withFixedMixin(value)
+withLookup(value)
 ```
 
 
 
-###### fn options.series.labelValue.withMode
+###### fn options.basemap.location.withMode
 
 ```ts
 withMode(value)
@@ -1920,162 +1603,196 @@ withMode(value)
 
 
 
-Accepted values for `value` are fixed, field, template
+Accepted values for `value` are auto, geohash, coords, lookup
 
-##### obj options.series.lineColor
-
-
-###### fn options.series.lineColor.withField
+###### fn options.basemap.location.withWkt
 
 ```ts
-withField(value)
+withWkt(value)
 ```
 
 
 
-###### fn options.series.lineColor.withFixed
+#### obj options.controls
+
+
+##### fn options.controls.withMouseWheelZoom
 
 ```ts
-withFixed(value)
+withMouseWheelZoom(value)
+```
+
+let the mouse wheel zoom
+
+##### fn options.controls.withShowAttribution
+
+```ts
+withShowAttribution(value)
+```
+
+Lower right
+
+##### fn options.controls.withShowDebug
+
+```ts
+withShowDebug(value)
+```
+
+Show debug
+
+##### fn options.controls.withShowMeasure
+
+```ts
+withShowMeasure(value)
+```
+
+Show measure
+
+##### fn options.controls.withShowScale
+
+```ts
+withShowScale(value)
+```
+
+Scale options
+
+##### fn options.controls.withShowZoom
+
+```ts
+withShowZoom(value)
+```
+
+Zoom (upper left)
+
+#### obj options.layers
+
+
+##### fn options.layers.withConfig
+
+```ts
+withConfig(value)
+```
+
+Custom options depending on the type
+
+##### fn options.layers.withFilterData
+
+```ts
+withFilterData(value)
+```
+
+Defines a frame MatcherConfig that may filter data for the given layer
+
+##### fn options.layers.withLocation
+
+```ts
+withLocation(value)
 ```
 
 
 
-###### fn options.series.lineColor.withFixedMixin
+##### fn options.layers.withLocationMixin
 
 ```ts
-withFixedMixin(value)
+withLocationMixin(value)
 ```
 
 
 
-##### obj options.series.lineStyle
-
-
-###### fn options.series.lineStyle.withDash
+##### fn options.layers.withName
 
 ```ts
-withDash(value)
+withName(value)
 ```
 
+configured unique display name
 
-
-###### fn options.series.lineStyle.withDashMixin
+##### fn options.layers.withOpacity
 
 ```ts
-withDashMixin(value)
+withOpacity(value)
 ```
 
+Common properties:
+https://openlayers.org/en/latest/apidoc/module-ol_layer_Base-BaseLayer.html
+Layer opacity (0-1)
 
-
-###### fn options.series.lineStyle.withFill
+##### fn options.layers.withTooltip
 
 ```ts
-withFill(value)
+withTooltip(value)
 ```
 
+Check tooltip (defaults to true)
 
-
-Accepted values for `value` are solid, dash, dot, square
-
-##### obj options.series.pointColor
-
-
-###### fn options.series.pointColor.withField
-
-```ts
-withField(value)
-```
-
-
-
-###### fn options.series.pointColor.withFixed
-
-```ts
-withFixed(value)
-```
-
-
-
-###### fn options.series.pointColor.withFixedMixin
-
-```ts
-withFixedMixin(value)
-```
-
-
-
-##### obj options.series.pointSize
-
-
-###### fn options.series.pointSize.withField
-
-```ts
-withField(value)
-```
-
-
-
-###### fn options.series.pointSize.withFixed
-
-```ts
-withFixed(value)
-```
-
-
-
-###### fn options.series.pointSize.withFixedMixin
-
-```ts
-withFixedMixin(value)
-```
-
-
-
-###### fn options.series.pointSize.withMax
-
-```ts
-withMax(value)
-```
-
-
-
-###### fn options.series.pointSize.withMin
-
-```ts
-withMin(value)
-```
-
-
-
-##### obj options.series.scaleDistribution
-
-
-###### fn options.series.scaleDistribution.withLinearThreshold
-
-```ts
-withLinearThreshold(value)
-```
-
-
-
-###### fn options.series.scaleDistribution.withLog
-
-```ts
-withLog(value)
-```
-
-
-
-###### fn options.series.scaleDistribution.withType
+##### fn options.layers.withType
 
 ```ts
 withType(value)
 ```
 
-TODO docs
 
-Accepted values for `value` are linear, log, ordinal, symlog
+
+##### obj options.layers.location
+
+
+###### fn options.layers.location.withGazetteer
+
+```ts
+withGazetteer(value)
+```
+
+Path to Gazetteer
+
+###### fn options.layers.location.withGeohash
+
+```ts
+withGeohash(value)
+```
+
+Field mappings
+
+###### fn options.layers.location.withLatitude
+
+```ts
+withLatitude(value)
+```
+
+
+
+###### fn options.layers.location.withLongitude
+
+```ts
+withLongitude(value)
+```
+
+
+
+###### fn options.layers.location.withLookup
+
+```ts
+withLookup(value)
+```
+
+
+
+###### fn options.layers.location.withMode
+
+```ts
+withMode(value)
+```
+
+
+
+Accepted values for `value` are auto, geohash, coords, lookup
+
+###### fn options.layers.location.withWkt
+
+```ts
+withWkt(value)
+```
+
+
 
 #### obj options.tooltip
 
@@ -2086,19 +1803,100 @@ Accepted values for `value` are linear, log, ordinal, symlog
 withMode(value)
 ```
 
-TODO docs
 
-Accepted values for `value` are single, multi, none
 
-##### fn options.tooltip.withSort
+Accepted values for `value` are none, details
+
+#### obj options.view
+
+
+##### fn options.view.withAllLayers
 
 ```ts
-withSort(value)
+withAllLayers(value=true)
 ```
 
-TODO docs
 
-Accepted values for `value` are asc, desc, none
+
+##### fn options.view.withId
+
+```ts
+withId(value='zero')
+```
+
+
+
+##### fn options.view.withLastOnly
+
+```ts
+withLastOnly(value)
+```
+
+
+
+##### fn options.view.withLat
+
+```ts
+withLat(value=0)
+```
+
+
+
+##### fn options.view.withLayer
+
+```ts
+withLayer(value)
+```
+
+
+
+##### fn options.view.withLon
+
+```ts
+withLon(value=0)
+```
+
+
+
+##### fn options.view.withMaxZoom
+
+```ts
+withMaxZoom(value)
+```
+
+
+
+##### fn options.view.withMinZoom
+
+```ts
+withMinZoom(value)
+```
+
+
+
+##### fn options.view.withPadding
+
+```ts
+withPadding(value)
+```
+
+
+
+##### fn options.view.withShared
+
+```ts
+withShared(value)
+```
+
+
+
+##### fn options.view.withZoom
+
+```ts
+withZoom(value=1)
+```
+
+
 
 ### obj transformations
 

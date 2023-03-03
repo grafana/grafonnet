@@ -20,7 +20,7 @@ grafonnet.dashboard
 * [`fn withPanelsMixin(value)`](#fn-withpanelsmixin)
 * [`fn withRefresh(value)`](#fn-withrefresh)
 * [`fn withRefreshMixin(value)`](#fn-withrefreshmixin)
-* [`fn withRevision(value=-1)`](#fn-withrevision)
+* [`fn withRevision(value)`](#fn-withrevision)
 * [`fn withSchemaVersion(value=36)`](#fn-withschemaversion)
 * [`fn withSnapshot(value)`](#fn-withsnapshot)
 * [`fn withSnapshotMixin(value)`](#fn-withsnapshotmixin)
@@ -73,7 +73,7 @@ grafonnet.dashboard
   * [`fn withTargetBlank(value=false)`](#fn-linkswithtargetblank)
   * [`fn withTitle(value)`](#fn-linkswithtitle)
   * [`fn withTooltip(value)`](#fn-linkswithtooltip)
-  * [`fn withType(value='enum[link,dashboards]')`](#fn-linkswithtype)
+  * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
 * [`obj snapshot`](#obj-snapshot)
   * [`fn withCreated(value)`](#fn-snapshotwithcreated)
@@ -94,7 +94,7 @@ grafonnet.dashboard
   * [`fn withError(value)`](#fn-templatevariablewitherror)
   * [`fn withErrorMixin(value)`](#fn-templatevariablewitherrormixin)
   * [`fn withGlobal(value=false)`](#fn-templatevariablewithglobal)
-  * [`fn withHide(value=enum[0,1,2])`](#fn-templatevariablewithhide)
+  * [`fn withHide(value)`](#fn-templatevariablewithhide)
   * [`fn withId(value='00000000-0000-0000-0000-000000000000')`](#fn-templatevariablewithid)
   * [`fn withIndex(value=-1)`](#fn-templatevariablewithindex)
   * [`fn withLabel(value)`](#fn-templatevariablewithlabel)
@@ -103,8 +103,8 @@ grafonnet.dashboard
   * [`fn withQueryMixin(value)`](#fn-templatevariablewithquerymixin)
   * [`fn withRootStateKey(value)`](#fn-templatevariablewithrootstatekey)
   * [`fn withSkipUrlSync(value=false)`](#fn-templatevariablewithskipurlsync)
-  * [`fn withState(value='enum[NotStarted,Loading,Streaming,Done,Error]')`](#fn-templatevariablewithstate)
-  * [`fn withType(value='enum[query,adhoc,constant,datasource,interval,textbox,custom,system]')`](#fn-templatevariablewithtype)
+  * [`fn withState(value)`](#fn-templatevariablewithstate)
+  * [`fn withType(value)`](#fn-templatevariablewithtype)
   * [`obj datasource`](#obj-templatevariabledatasource)
     * [`fn withType(value)`](#fn-templatevariabledatasourcewithtype)
     * [`fn withUid(value)`](#fn-templatevariabledatasourcewithuid)
@@ -118,7 +118,7 @@ grafonnet.dashboard
     * [`fn withError(value)`](#fn-templatinglistwitherror)
     * [`fn withErrorMixin(value)`](#fn-templatinglistwitherrormixin)
     * [`fn withGlobal(value=false)`](#fn-templatinglistwithglobal)
-    * [`fn withHide(value=enum[0,1,2])`](#fn-templatinglistwithhide)
+    * [`fn withHide(value)`](#fn-templatinglistwithhide)
     * [`fn withId(value='00000000-0000-0000-0000-000000000000')`](#fn-templatinglistwithid)
     * [`fn withIndex(value=-1)`](#fn-templatinglistwithindex)
     * [`fn withLabel(value)`](#fn-templatinglistwithlabel)
@@ -127,8 +127,8 @@ grafonnet.dashboard
     * [`fn withQueryMixin(value)`](#fn-templatinglistwithquerymixin)
     * [`fn withRootStateKey(value)`](#fn-templatinglistwithrootstatekey)
     * [`fn withSkipUrlSync(value=false)`](#fn-templatinglistwithskipurlsync)
-    * [`fn withState(value='enum[NotStarted,Loading,Streaming,Done,Error]')`](#fn-templatinglistwithstate)
-    * [`fn withType(value='enum[query,adhoc,constant,datasource,interval,textbox,custom,system]')`](#fn-templatinglistwithtype)
+    * [`fn withState(value)`](#fn-templatinglistwithstate)
+    * [`fn withType(value)`](#fn-templatinglistwithtype)
     * [`obj datasource`](#obj-templatinglistdatasource)
       * [`fn withType(value)`](#fn-templatinglistdatasourcewithtype)
       * [`fn withUid(value)`](#fn-templatinglistdatasourcewithuid)
@@ -200,7 +200,7 @@ The month that the fiscal year starts on.  0 = January, 11 = December
 withGnetId(value)
 ```
 
-
+For dashboards imported from the https://grafana.com/grafana/dashboards/ portal
 
 ### fn withGraphTooltip
 
@@ -211,6 +211,8 @@ withGraphTooltip(value=0)
 0 for no shared crosshair or tooltip (default).
 1 for shared crosshair.
 2 for shared crosshair AND shared tooltip.
+
+Accepted values for `value` are 0, 1, 2
 
 ### fn withId
 
@@ -243,7 +245,9 @@ TODO docs
 withLiveNow(value)
 ```
 
-TODO docs
+When set to true, the dashboard will redraw panels at an interval matching the pixel width.
+This will keep data "moving left" regardless of the query refresh rate.  This setting helps
+avoid dashboards presenting stale live data
 
 ### fn withPanels
 
@@ -280,10 +284,12 @@ Refresh rate of dashboard. Represented via interval string, e.g. "5s", "1m", "1h
 ### fn withRevision
 
 ```ts
-withRevision(value=-1)
+withRevision(value)
 ```
 
-Version of the current dashboard data
+This property should only be used in dashboards defined by plugins.  It is a quick check
+to see if the version has changed since the last time.  Unclear why using the version property
+is insufficient.
 
 ### fn withSchemaVersion
 
@@ -318,6 +324,8 @@ withStyle(value='dark')
 ```
 
 Theme of dashboard.
+
+Accepted values for `value` are dark, light
 
 ### fn withTags
 
@@ -683,10 +691,12 @@ withTooltip(value)
 #### fn links.withType
 
 ```ts
-withType(value='enum[link,dashboards]')
+withType(value)
 ```
 
 TODO docs
+
+Accepted values for `value` are link, dashboards
 
 #### fn links.withUrl
 
@@ -841,10 +851,12 @@ withGlobal(value=false)
 #### fn templateVariable.withHide
 
 ```ts
-withHide(value=enum[0,1,2])
+withHide(value)
 ```
 
 
+
+Accepted values for `value` are 0, 1, 2
 
 #### fn templateVariable.withId
 
@@ -913,20 +925,24 @@ withSkipUrlSync(value=false)
 #### fn templateVariable.withState
 
 ```ts
-withState(value='enum[NotStarted,Loading,Streaming,Done,Error]')
+withState(value)
 ```
 
 
 
+Accepted values for `value` are NotStarted, Loading, Streaming, Done, Error
+
 #### fn templateVariable.withType
 
 ```ts
-withType(value='enum[query,adhoc,constant,datasource,interval,textbox,custom,system]')
+withType(value)
 ```
 
 FROM: packages/grafana-data/src/types/templateVars.ts
 TODO docs
 TODO this implies some wider pattern/discriminated union, probably?
+
+Accepted values for `value` are query, adhoc, constant, datasource, interval, textbox, custom, system
 
 #### obj templateVariable.datasource
 
@@ -1020,10 +1036,12 @@ withGlobal(value=false)
 ##### fn templating.list.withHide
 
 ```ts
-withHide(value=enum[0,1,2])
+withHide(value)
 ```
 
 
+
+Accepted values for `value` are 0, 1, 2
 
 ##### fn templating.list.withId
 
@@ -1092,20 +1110,24 @@ withSkipUrlSync(value=false)
 ##### fn templating.list.withState
 
 ```ts
-withState(value='enum[NotStarted,Loading,Streaming,Done,Error]')
+withState(value)
 ```
 
 
 
+Accepted values for `value` are NotStarted, Loading, Streaming, Done, Error
+
 ##### fn templating.list.withType
 
 ```ts
-withType(value='enum[query,adhoc,constant,datasource,interval,textbox,custom,system]')
+withType(value)
 ```
 
 FROM: packages/grafana-data/src/types/templateVars.ts
 TODO docs
 TODO this implies some wider pattern/discriminated union, probably?
+
+Accepted values for `value` are query, adhoc, constant, datasource, interval, textbox, custom, system
 
 ##### obj templating.list.datasource
 
