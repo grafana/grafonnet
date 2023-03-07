@@ -1,19 +1,22 @@
 local g = import 'g.libsonnet';
 
 local panels = import './panels.libsonnet';
-local queries = import './queries.libsonnet';
-local variables = import './variables.libsonnet';
+
+local prometheusQueries = import './queries/prometheus.libsonnet';
+local testDataQueries = import './queries/testdata.libsonnet';
 
 {
-  new(title, datasourceRegex): {
+  new(title): {
     local this = self,
-    vars:: variables.new(datasourceRegex),
     apps:: {},
+
     dashboard:
-      g.dashboard.new(title + ' RED dashboard')
+      local titleString = title + ' RED dashboard';
+      g.dashboard.new(titleString)
+      + g.dashboard.withUid(g.util.string.slugify(titleString) + '-demo')
       + g.dashboard.withDescription('RED dashboard for ' + title)
       + g.dashboard.graphTooltip.withSharedCrosshair()
-      + g.dashboard.withTemplateVariables(this.vars.asArray)
+      + g.dashboard.withTemplateVariables(this.queries.variables.toArray)
       + g.dashboard.withPanels(
         g.util.grid.makeGrid([
           panels.new(
@@ -26,17 +29,28 @@ local variables = import './variables.libsonnet';
       ),
   },
 
-  addApplication(name, job): {
+  withPrometheusQueries(datasourceRegex, variablesSelector): {
+    queries::
+      prometheusQueries.new(
+        datasourceRegex,
+        variablesSelector,
+      ),
+  },
+
+  withTestData(): {
+    queries::
+      testDataQueries.new(),
+  },
+
+  addApplication(name, selector): {
     local this = self,
     apps+:: {
       [name]: {
-        requestTargets: [
-          queries.requestTarget(this.vars, job),
-        ],
+        requestTargets:
+          this.queries.requestTarget(selector),
         latencyTargets: [
-          queries.latencyPercentileTarget(
-            this.vars,
-            job,
+          this.queries.latencyPercentileTarget(
+            selector,
             percentile,
           )
           for percentile in [99, 50]

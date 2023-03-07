@@ -6,6 +6,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
   util: {
     grid: (import 'util/grid.libsonnet'),
+    string: (import 'util/string.libsonnet'),
   },
 
   // Move Row panel into panel subpackage
