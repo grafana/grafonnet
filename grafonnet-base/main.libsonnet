@@ -41,8 +41,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       query: std.filterMap(
         function(schema) 'DataQuery' in schema.components.schemas,
         function(schema) root.restructure(schema),
-        // hack in the Prometheus schema awaiting upstream
-        schemas + [import './schemas/prometheus.json']
+        schemas,
       ),
     };
 
@@ -97,14 +96,25 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
     ),
 
   restructure(schema):
-    local title = schema.info.title;
+    local _title = schema.info.title;
+
+    // TempoDataQuery schema is a bit different, temporarily covering for this case.
+    local title =
+      if _title == 'TempoDataQuery'
+      then 'TempoQuery'
+      else _title;
+    local formatted =
+      if _title == 'TempoDataQuery'
+      then root.formatPanelName(_title)
+      else root.formatPanelName(title);
+
     schema {
       info+: {
-        title: root.formatPanelName(title),
+        title: formatted,
       },
       components+: {
         schemas+: {
-          [root.formatPanelName(title)]: super[title],
+          [formatted]: super[title],
         },
       },
     }

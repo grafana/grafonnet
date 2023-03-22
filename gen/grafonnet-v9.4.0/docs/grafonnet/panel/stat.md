@@ -126,6 +126,7 @@ grafonnet.panel.stat
       * [`fn withStepsMixin(value)`](#fn-fieldconfigdefaultsthresholdswithstepsmixin)
       * [`obj steps`](#obj-fieldconfigdefaultsthresholdssteps)
         * [`fn withColor(value)`](#fn-fieldconfigdefaultsthresholdsstepswithcolor)
+        * [`fn withIndex(value)`](#fn-fieldconfigdefaultsthresholdsstepswithindex)
         * [`fn withState(value)`](#fn-fieldconfigdefaultsthresholdsstepswithstate)
         * [`fn withValue(value)`](#fn-fieldconfigdefaultsthresholdsstepswithvalue)
   * [`obj overrides`](#obj-fieldconfigoverrides)
@@ -1106,6 +1107,14 @@ withColor(value)
 
 TODO docs
 
+####### fn fieldConfig.defaults.thresholds.steps.withIndex
+
+```ts
+withIndex(value)
+```
+
+Threshold index, an old property that is not needed an should only appear in older dashboards
+
 ####### fn fieldConfig.defaults.thresholds.steps.withState
 
 ```ts
@@ -1364,7 +1373,7 @@ withColorMode(value)
 
 TODO docs
 
-Accepted values for `value` are value, background, none
+Accepted values for `value` are value, background, background_solid, none
 
 #### fn options.withGraphMode
 

@@ -5,8 +5,9 @@ grafonnet.query.tempo
 ## Index
 
 * [`fn withDatasource(value)`](#fn-withdatasource)
+* [`fn withFilters(value)`](#fn-withfilters)
+* [`fn withFiltersMixin(value)`](#fn-withfiltersmixin)
 * [`fn withHide(value)`](#fn-withhide)
-* [`fn withKey(value)`](#fn-withkey)
 * [`fn withLimit(value)`](#fn-withlimit)
 * [`fn withMaxDuration(value)`](#fn-withmaxduration)
 * [`fn withMinDuration(value)`](#fn-withminduration)
@@ -17,6 +18,15 @@ grafonnet.query.tempo
 * [`fn withServiceMapQuery(value)`](#fn-withservicemapquery)
 * [`fn withServiceName(value)`](#fn-withservicename)
 * [`fn withSpanName(value)`](#fn-withspanname)
+* [`obj filters`](#obj-filters)
+  * [`fn withId(value)`](#fn-filterswithid)
+  * [`fn withOperator(value)`](#fn-filterswithoperator)
+  * [`fn withScope(value)`](#fn-filterswithscope)
+  * [`fn withTag(value)`](#fn-filterswithtag)
+  * [`fn withType(value)`](#fn-filterswithtype)
+  * [`fn withValue(value)`](#fn-filterswithvalue)
+  * [`fn withValueMixin(value)`](#fn-filterswithvaluemixin)
+  * [`fn withValueType(value)`](#fn-filterswithvaluetype)
 
 ## Fields
 
@@ -31,6 +41,22 @@ For non mixed scenarios this is undefined.
 TODO find a better way to do this ^ that's friendly to schema
 TODO this shouldn't be unknown but DataSourceRef | null
 
+### fn withFilters
+
+```ts
+withFilters(value)
+```
+
+
+
+### fn withFiltersMixin
+
+```ts
+withFiltersMixin(value)
+```
+
+
+
 ### fn withHide
 
 ```ts
@@ -38,14 +64,8 @@ withHide(value)
 ```
 
 true if query is disabled (ie should not be returned to the dashboard)
-
-### fn withKey
-
-```ts
-withKey(value)
-```
-
-Unique, guid like, string used in explore mode
+Note this does not always imply that the query should not be executed since
+the results from a hidden query may be used as the input to other queries (SSE etc)
 
 ### fn withLimit
 
@@ -94,7 +114,9 @@ TODO make this required and give it a default
 withRefId(value)
 ```
 
-A - Z
+A unique identifier for the query within the list of targets.
+In server side expressions, the refId is used as a variable name to identify results.
+By default, the UI will assign A->Z; however setting meaningful names may be useful.
 
 ### fn withSearch
 
@@ -127,3 +149,74 @@ withSpanName(value)
 ```
 
 Query traces by span name
+
+### obj filters
+
+
+#### fn filters.withId
+
+```ts
+withId(value)
+```
+
+Uniquely identify the filter, will not be used in the query generation
+
+#### fn filters.withOperator
+
+```ts
+withOperator(value)
+```
+
+The operator that connects the tag to the value, for example: =, >, !=, =~
+
+#### fn filters.withScope
+
+```ts
+withScope(value)
+```
+
+
+
+Accepted values for `value` are unscoped, resource, span
+
+#### fn filters.withTag
+
+```ts
+withTag(value)
+```
+
+The tag for the search filter, for example: .http.status_code, .service.name, status
+
+#### fn filters.withType
+
+```ts
+withType(value)
+```
+
+static fields are pre-set in the UI, dynamic fields are added by the user
+
+Accepted values for `value` are static, dynamic
+
+#### fn filters.withValue
+
+```ts
+withValue(value)
+```
+
+The value for the search filter
+
+#### fn filters.withValueMixin
+
+```ts
+withValueMixin(value)
+```
+
+The value for the search filter
+
+#### fn filters.withValueType
+
+```ts
+withValueType(value)
+```
+
+The type of the value, used for example to check whether we need to wrap the value in quotes when generating the query

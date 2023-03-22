@@ -9,7 +9,6 @@ grafonnet.query.loki
 * [`fn withExpr(value)`](#fn-withexpr)
 * [`fn withHide(value)`](#fn-withhide)
 * [`fn withInstant(value)`](#fn-withinstant)
-* [`fn withKey(value)`](#fn-withkey)
 * [`fn withLegendFormat(value)`](#fn-withlegendformat)
 * [`fn withMaxLines(value)`](#fn-withmaxlines)
 * [`fn withQueryType(value)`](#fn-withquerytype)
@@ -55,6 +54,8 @@ withHide(value)
 ```
 
 true if query is disabled (ie should not be returned to the dashboard)
+Note this does not always imply that the query should not be executed since
+the results from a hidden query may be used as the input to other queries (SSE etc)
 
 ### fn withInstant
 
@@ -63,14 +64,6 @@ withInstant(value)
 ```
 
 @deprecated, now use queryType.
-
-### fn withKey
-
-```ts
-withKey(value)
-```
-
-Unique, guid like, string used in explore mode
 
 ### fn withLegendFormat
 
@@ -111,7 +104,9 @@ withRange(value)
 withRefId(value)
 ```
 
-A - Z
+A unique identifier for the query within the list of targets.
+In server side expressions, the refId is used as a variable name to identify results.
+By default, the UI will assign A->Z; however setting meaningful names may be useful.
 
 ### fn withResolution
 
