@@ -63,6 +63,14 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
           uid: value,
         },
       },
+
+      withIntervalFactor(value): {
+        intervalFactor: value,
+      },
+
+      withLegendFormat(value): {
+        legendFormat: value,
+      },
     },
   },
 }
