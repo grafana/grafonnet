@@ -8,7 +8,6 @@ grafonnet.query.phlare
 * [`fn withGroupBy(value)`](#fn-withgroupby)
 * [`fn withGroupByMixin(value)`](#fn-withgroupbymixin)
 * [`fn withHide(value)`](#fn-withhide)
-* [`fn withKey(value)`](#fn-withkey)
 * [`fn withLabelSelector(value='{}')`](#fn-withlabelselector)
 * [`fn withProfileTypeId(value)`](#fn-withprofiletypeid)
 * [`fn withQueryType(value)`](#fn-withquerytype)
@@ -50,14 +49,8 @@ withHide(value)
 ```
 
 true if query is disabled (ie should not be returned to the dashboard)
-
-### fn withKey
-
-```ts
-withKey(value)
-```
-
-Unique, guid like, string used in explore mode
+Note this does not always imply that the query should not be executed since
+the results from a hidden query may be used as the input to other queries (SSE etc)
 
 ### fn withLabelSelector
 
@@ -90,4 +83,6 @@ TODO make this required and give it a default
 withRefId(value)
 ```
 
-A - Z
+A unique identifier for the query within the list of targets.
+In server side expressions, the refId is used as a variable name to identify results.
+By default, the UI will assign A->Z; however setting meaningful names may be useful.

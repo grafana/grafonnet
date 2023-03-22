@@ -126,6 +126,7 @@ grafonnet.panel.barGauge
       * [`fn withStepsMixin(value)`](#fn-fieldconfigdefaultsthresholdswithstepsmixin)
       * [`obj steps`](#obj-fieldconfigdefaultsthresholdssteps)
         * [`fn withColor(value)`](#fn-fieldconfigdefaultsthresholdsstepswithcolor)
+        * [`fn withIndex(value)`](#fn-fieldconfigdefaultsthresholdsstepswithindex)
         * [`fn withState(value)`](#fn-fieldconfigdefaultsthresholdsstepswithstate)
         * [`fn withValue(value)`](#fn-fieldconfigdefaultsthresholdsstepswithvalue)
   * [`obj overrides`](#obj-fieldconfigoverrides)
@@ -170,6 +171,7 @@ grafonnet.panel.barGauge
   * [`fn withShowUnfilled(value=true)`](#fn-optionswithshowunfilled)
   * [`fn withText(value)`](#fn-optionswithtext)
   * [`fn withTextMixin(value)`](#fn-optionswithtextmixin)
+  * [`fn withValueMode(value)`](#fn-optionswithvaluemode)
   * [`obj reduceOptions`](#obj-optionsreduceoptions)
     * [`fn withCalcs(value)`](#fn-optionsreduceoptionswithcalcs)
     * [`fn withCalcsMixin(value)`](#fn-optionsreduceoptionswithcalcsmixin)
@@ -1106,6 +1108,14 @@ withColor(value)
 
 TODO docs
 
+####### fn fieldConfig.defaults.thresholds.steps.withIndex
+
+```ts
+withIndex(value)
+```
+
+Threshold index, an old property that is not needed an should only appear in older dashboards
+
 ####### fn fieldConfig.defaults.thresholds.steps.withState
 
 ```ts
@@ -1432,6 +1442,16 @@ withTextMixin(value)
 ```
 
 TODO docs
+
+#### fn options.withValueMode
+
+```ts
+withValueMode(value)
+```
+
+Allows for the table cell gauge display type to set the gauge mode.
+
+Accepted values for `value` are color, text, hidden
 
 #### obj options.reduceOptions
 

@@ -41,8 +41,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       query: std.filterMap(
         function(schema) 'DataQuery' in schema.components.schemas,
         function(schema) root.restructure(schema),
-        // hack in the Prometheus schema awaiting upstream
-        schemas + [import './schemas/prometheus.json']
+        schemas,
       ),
     };
 

@@ -11,12 +11,7 @@ grafonnet.query.prometheus
 * [`fn withExpr(value)`](#fn-withexpr)
 * [`fn withFormat(value)`](#fn-withformat)
 * [`fn withHide(value)`](#fn-withhide)
-* [`fn withHinting(value)`](#fn-withhinting)
 * [`fn withInstant(value)`](#fn-withinstant)
-* [`fn withInterval(value)`](#fn-withinterval)
-* [`fn withIntervalFactor(value)`](#fn-withintervalfactor)
-* [`fn withKey(value)`](#fn-withkey)
-* [`fn withLegendFormat(value)`](#fn-withlegendformat)
 * [`fn withQueryType(value)`](#fn-withquerytype)
 * [`fn withRange(value)`](#fn-withrange)
 * [`fn withRefId(value)`](#fn-withrefid)
@@ -58,7 +53,7 @@ Accepted values for `value` are code, builder
 withExemplar(value)
 ```
 
-
+Execute an additional query to identify interesting raw samples relevant for the given expr
 
 ### fn withExpr
 
@@ -66,7 +61,7 @@ withExemplar(value)
 withExpr(value)
 ```
 
-The PromQL query.
+The actual expression/query that will be evaluated by Prometheus
 
 ### fn withFormat
 
@@ -85,14 +80,8 @@ withHide(value)
 ```
 
 true if query is disabled (ie should not be returned to the dashboard)
-
-### fn withHinting
-
-```ts
-withHinting(value)
-```
-
-
+Note this does not always imply that the query should not be executed since
+the results from a hidden query may be used as the input to other queries (SSE etc)
 
 ### fn withInstant
 
@@ -100,39 +89,7 @@ withHinting(value)
 withInstant(value)
 ```
 
-
-
-### fn withInterval
-
-```ts
-withInterval(value)
-```
-
-
-
-### fn withIntervalFactor
-
-```ts
-withIntervalFactor(value)
-```
-
-
-
-### fn withKey
-
-```ts
-withKey(value)
-```
-
-Unique, guid like, string used in explore mode
-
-### fn withLegendFormat
-
-```ts
-withLegendFormat(value)
-```
-
-Used to override the name of the series.
+Returns only the latest value that Prometheus has scraped for the requested time series
 
 ### fn withQueryType
 
@@ -149,7 +106,7 @@ TODO make this required and give it a default
 withRange(value)
 ```
 
-
+Returns a Range vector, comprised of a set of time series containing a range of data points over time for each time series
 
 ### fn withRefId
 
@@ -157,4 +114,6 @@ withRange(value)
 withRefId(value)
 ```
 
-A - Z
+A unique identifier for the query within the list of targets.
+In server side expressions, the refId is used as a variable name to identify results.
+By default, the UI will assign A->Z; however setting meaningful names may be useful.

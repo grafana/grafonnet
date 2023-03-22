@@ -126,6 +126,7 @@ grafonnet.panel.table
       * [`fn withStepsMixin(value)`](#fn-fieldconfigdefaultsthresholdswithstepsmixin)
       * [`obj steps`](#obj-fieldconfigdefaultsthresholdssteps)
         * [`fn withColor(value)`](#fn-fieldconfigdefaultsthresholdsstepswithcolor)
+        * [`fn withIndex(value)`](#fn-fieldconfigdefaultsthresholdsstepswithindex)
         * [`fn withState(value)`](#fn-fieldconfigdefaultsthresholdsstepswithstate)
         * [`fn withValue(value)`](#fn-fieldconfigdefaultsthresholdsstepswithvalue)
   * [`obj overrides`](#obj-fieldconfigoverrides)
@@ -161,6 +162,7 @@ grafonnet.panel.table
   * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
 * [`obj options`](#obj-options)
+  * [`fn withCellHeight(value)`](#fn-optionswithcellheight)
   * [`fn withFooter(value={"countRows": false, "reducer": [ ], "show": false})`](#fn-optionswithfooter)
   * [`fn withFooterMixin(value={"countRows": false, "reducer": [ ], "show": false})`](#fn-optionswithfootermixin)
   * [`fn withFrameIndex(value=0)`](#fn-optionswithframeindex)
@@ -1110,6 +1112,14 @@ withColor(value)
 
 TODO docs
 
+####### fn fieldConfig.defaults.thresholds.steps.withIndex
+
+```ts
+withIndex(value)
+```
+
+Threshold index, an old property that is not needed an should only appear in older dashboards
+
 ####### fn fieldConfig.defaults.thresholds.steps.withState
 
 ```ts
@@ -1359,6 +1369,16 @@ withUrl(value)
 
 ### obj options
 
+
+#### fn options.withCellHeight
+
+```ts
+withCellHeight(value)
+```
+
+Height of a table cell
+
+Accepted values for `value` are sm, md, lg
 
 #### fn options.withFooter
 

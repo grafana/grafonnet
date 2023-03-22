@@ -13,7 +13,6 @@ grafonnet.query.testData
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withErrorType(value)`](#fn-witherrortype)
 * [`fn withHide(value)`](#fn-withhide)
-* [`fn withKey(value)`](#fn-withkey)
 * [`fn withLabels(value)`](#fn-withlabels)
 * [`fn withLevelColumn(value)`](#fn-withlevelcolumn)
 * [`fn withLines(value)`](#fn-withlines)
@@ -154,14 +153,8 @@ withHide(value)
 ```
 
 true if query is disabled (ie should not be returned to the dashboard)
-
-### fn withKey
-
-```ts
-withKey(value)
-```
-
-Unique, guid like, string used in explore mode
+Note this does not always imply that the query should not be executed since
+the results from a hidden query may be used as the input to other queries (SSE etc)
 
 ### fn withLabels
 
@@ -258,7 +251,9 @@ withRawFrameContent(value)
 withRefId(value)
 ```
 
-A - Z
+A unique identifier for the query within the list of targets.
+In server side expressions, the refId is used as a variable name to identify results.
+By default, the UI will assign A->Z; however setting meaningful names may be useful.
 
 ### fn withScenarioId
 
