@@ -10,7 +10,7 @@ feedback on the product and suggestions on how to improve it, though we cannot c
 to resolution of any particular issue. No SLAs are available. It is not meant to be used
 in production environments, and the risks are unknown/high._
 
-Below you can find the full definition of Experimental feature in Grafana Labs:
+Grafana Labs defines experimental features as follows:
 
 > Projects and features in the Experimental stage are supported only by the Engineering
 teams; on-call support is not available. Documentation is either limited or not provided
