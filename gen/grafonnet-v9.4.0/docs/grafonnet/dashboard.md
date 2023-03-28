@@ -63,6 +63,9 @@ grafonnet.dashboard
       * [`fn withTags(value)`](#fn-annotationslisttargetwithtags)
       * [`fn withTagsMixin(value)`](#fn-annotationslisttargetwithtagsmixin)
       * [`fn withType(value)`](#fn-annotationslisttargetwithtype)
+* [`obj graphTooltip`](#obj-graphtooltip)
+  * [`fn withSharedCrosshair()`](#fn-graphtooltipwithsharedcrosshair)
+  * [`fn withSharedTooltip()`](#fn-graphtooltipwithsharedtooltip)
 * [`obj links`](#obj-links)
   * [`fn withAsDropdown(value=false)`](#fn-linkswithasdropdown)
   * [`fn withIcon(value)`](#fn-linkswithicon)
@@ -88,6 +91,8 @@ grafonnet.dashboard
   * [`fn withUrl(value)`](#fn-snapshotwithurl)
   * [`fn withUserId(value)`](#fn-snapshotwithuserid)
 * [`obj templateVariable`](#obj-templatevariable)
+  * [`fn new(name, type='query')`](#fn-templatevariablenew)
+  * [`fn withAllValue(value)`](#fn-templatevariablewithallvalue)
   * [`fn withDatasource(value)`](#fn-templatevariablewithdatasource)
   * [`fn withDatasourceMixin(value)`](#fn-templatevariablewithdatasourcemixin)
   * [`fn withDescription(value)`](#fn-templatevariablewithdescription)
@@ -96,22 +101,35 @@ grafonnet.dashboard
   * [`fn withGlobal(value=false)`](#fn-templatevariablewithglobal)
   * [`fn withHide(value)`](#fn-templatevariablewithhide)
   * [`fn withId(value='00000000-0000-0000-0000-000000000000')`](#fn-templatevariablewithid)
+  * [`fn withIncludeAll(value=true)`](#fn-templatevariablewithincludeall)
   * [`fn withIndex(value=-1)`](#fn-templatevariablewithindex)
   * [`fn withLabel(value)`](#fn-templatevariablewithlabel)
+  * [`fn withMulti(value=true)`](#fn-templatevariablewithmulti)
   * [`fn withName(value)`](#fn-templatevariablewithname)
   * [`fn withQuery(value)`](#fn-templatevariablewithquery)
   * [`fn withQueryMixin(value)`](#fn-templatevariablewithquerymixin)
+  * [`fn withRegex(value)`](#fn-templatevariablewithregex)
   * [`fn withRootStateKey(value)`](#fn-templatevariablewithrootstatekey)
   * [`fn withSkipUrlSync(value=false)`](#fn-templatevariablewithskipurlsync)
+  * [`fn withSort(i=0, type='alphabetical', asc=true, caseInsensitive=false)`](#fn-templatevariablewithsort)
   * [`fn withState(value)`](#fn-templatevariablewithstate)
   * [`fn withType(value)`](#fn-templatevariablewithtype)
   * [`obj datasource`](#obj-templatevariabledatasource)
+    * [`fn fromVariable(variable)`](#fn-templatevariabledatasourcefromvariable)
+    * [`fn new(type, uid)`](#fn-templatevariabledatasourcenew)
     * [`fn withType(value)`](#fn-templatevariabledatasourcewithtype)
     * [`fn withUid(value)`](#fn-templatevariabledatasourcewithuid)
+  * [`obj query`](#obj-templatevariablequery)
+    * [`fn withLabelValues(label, metric)`](#fn-templatevariablequerywithlabelvalues)
+  * [`obj refresh`](#obj-templatevariablerefresh)
+    * [`fn onLoad()`](#fn-templatevariablerefreshonload)
+    * [`fn onTime()`](#fn-templatevariablerefreshontime)
 * [`obj templating`](#obj-templating)
   * [`fn withList(value)`](#fn-templatingwithlist)
   * [`fn withListMixin(value)`](#fn-templatingwithlistmixin)
   * [`obj list`](#obj-templatinglist)
+    * [`fn new(name, type='query')`](#fn-templatinglistnew)
+    * [`fn withAllValue(value)`](#fn-templatinglistwithallvalue)
     * [`fn withDatasource(value)`](#fn-templatinglistwithdatasource)
     * [`fn withDatasourceMixin(value)`](#fn-templatinglistwithdatasourcemixin)
     * [`fn withDescription(value)`](#fn-templatinglistwithdescription)
@@ -120,18 +138,29 @@ grafonnet.dashboard
     * [`fn withGlobal(value=false)`](#fn-templatinglistwithglobal)
     * [`fn withHide(value)`](#fn-templatinglistwithhide)
     * [`fn withId(value='00000000-0000-0000-0000-000000000000')`](#fn-templatinglistwithid)
+    * [`fn withIncludeAll(value=true)`](#fn-templatinglistwithincludeall)
     * [`fn withIndex(value=-1)`](#fn-templatinglistwithindex)
     * [`fn withLabel(value)`](#fn-templatinglistwithlabel)
+    * [`fn withMulti(value=true)`](#fn-templatinglistwithmulti)
     * [`fn withName(value)`](#fn-templatinglistwithname)
     * [`fn withQuery(value)`](#fn-templatinglistwithquery)
     * [`fn withQueryMixin(value)`](#fn-templatinglistwithquerymixin)
+    * [`fn withRegex(value)`](#fn-templatinglistwithregex)
     * [`fn withRootStateKey(value)`](#fn-templatinglistwithrootstatekey)
     * [`fn withSkipUrlSync(value=false)`](#fn-templatinglistwithskipurlsync)
+    * [`fn withSort(i=0, type='alphabetical', asc=true, caseInsensitive=false)`](#fn-templatinglistwithsort)
     * [`fn withState(value)`](#fn-templatinglistwithstate)
     * [`fn withType(value)`](#fn-templatinglistwithtype)
     * [`obj datasource`](#obj-templatinglistdatasource)
+      * [`fn fromVariable(variable)`](#fn-templatinglistdatasourcefromvariable)
+      * [`fn new(type, uid)`](#fn-templatinglistdatasourcenew)
       * [`fn withType(value)`](#fn-templatinglistdatasourcewithtype)
       * [`fn withUid(value)`](#fn-templatinglistdatasourcewithuid)
+    * [`obj query`](#obj-templatinglistquery)
+      * [`fn withLabelValues(label, metric)`](#fn-templatinglistquerywithlabelvalues)
+    * [`obj refresh`](#obj-templatinglistrefresh)
+      * [`fn onLoad()`](#fn-templatinglistrefreshonload)
+      * [`fn onTime()`](#fn-templatinglistrefreshontime)
 * [`obj time`](#obj-time)
   * [`fn withFrom(value='now-6h')`](#fn-timewithfrom)
   * [`fn withTo(value='now')`](#fn-timewithto)
@@ -613,6 +642,25 @@ withType(value)
 
 
 
+### obj graphTooltip
+
+
+#### fn graphTooltip.withSharedCrosshair
+
+```ts
+withSharedCrosshair()
+```
+
+Share crosshair on all panels.
+
+#### fn graphTooltip.withSharedTooltip
+
+```ts
+withSharedTooltip()
+```
+
+Share crosshair and tooltip on all panels.
+
 ### obj links
 
 
@@ -800,6 +848,24 @@ TODO docs
 ### obj templateVariable
 
 
+#### fn templateVariable.new
+
+```ts
+new(name, type='query')
+```
+
+Create a template variable
+
+#### fn templateVariable.withAllValue
+
+```ts
+withAllValue(value)
+```
+
+Provide value to use with the `withIncludeAll`, this will also enable
+includeAll by default.
+
+
 #### fn templateVariable.withDatasource
 
 ```ts
@@ -866,6 +932,14 @@ withId(value='00000000-0000-0000-0000-000000000000')
 
 
 
+#### fn templateVariable.withIncludeAll
+
+```ts
+withIncludeAll(value=true)
+```
+
+Provide option to select "All" values
+
 #### fn templateVariable.withIndex
 
 ```ts
@@ -881,6 +955,14 @@ withLabel(value)
 ```
 
 
+
+#### fn templateVariable.withMulti
+
+```ts
+withMulti(value=true)
+```
+
+Enable selecting multiple values
 
 #### fn templateVariable.withName
 
@@ -906,6 +988,14 @@ withQueryMixin(value)
 
 TODO: Move this into a separated QueryVariableModel type
 
+#### fn templateVariable.withRegex
+
+```ts
+withRegex(value)
+```
+
+Filter the values with a regex
+
 #### fn templateVariable.withRootStateKey
 
 ```ts
@@ -920,6 +1010,28 @@ withRootStateKey(value)
 withSkipUrlSync(value=false)
 ```
 
+
+
+#### fn templateVariable.withSort
+
+```ts
+withSort(i=0, type='alphabetical', asc=true, caseInsensitive=false)
+```
+
+Choose how to sort the values in the dropdown.
+
+This can be called as `withSort(<number>) to use the integer values for each
+option. If `i==0` then it will be ignored and the other arguments will take
+precedence.
+
+The numerical values are:
+
+- 1 - Alphabetical (asc)
+- 2 - Alphabetical (desc)
+- 3 - Numerical (asc)
+- 4 - Numerical (desc)
+- 5 - Alphabetical (case-insensitive, asc)
+- 6 - Alphabetical (case-insensitive, desc)
 
 
 #### fn templateVariable.withState
@@ -947,6 +1059,22 @@ Accepted values for `value` are query, adhoc, constant, datasource, interval, te
 #### obj templateVariable.datasource
 
 
+##### fn templateVariable.datasource.fromVariable
+
+```ts
+fromVariable(variable)
+```
+
+Select the datasource from another template variable
+
+##### fn templateVariable.datasource.new
+
+```ts
+new(type, uid)
+```
+
+Select a datasource for the variable template query
+
 ##### fn templateVariable.datasource.withType
 
 ```ts
@@ -962,6 +1090,36 @@ withUid(value)
 ```
 
 Specific datasource instance
+
+#### obj templateVariable.query
+
+
+##### fn templateVariable.query.withLabelValues
+
+```ts
+withLabelValues(label, metric)
+```
+
+Construct a Prometheus template variable using `label_values()`
+
+#### obj templateVariable.refresh
+
+
+##### fn templateVariable.refresh.onLoad
+
+```ts
+onLoad()
+```
+
+Refresh label values on dashboard load.
+
+##### fn templateVariable.refresh.onTime
+
+```ts
+onTime()
+```
+
+Refresh label values on time range change.
 
 ### obj templating
 
@@ -983,6 +1141,24 @@ withListMixin(value)
 
 
 #### obj templating.list
+
+
+##### fn templating.list.new
+
+```ts
+new(name, type='query')
+```
+
+Create a template variable
+
+##### fn templating.list.withAllValue
+
+```ts
+withAllValue(value)
+```
+
+Provide value to use with the `withIncludeAll`, this will also enable
+includeAll by default.
 
 
 ##### fn templating.list.withDatasource
@@ -1051,6 +1227,14 @@ withId(value='00000000-0000-0000-0000-000000000000')
 
 
 
+##### fn templating.list.withIncludeAll
+
+```ts
+withIncludeAll(value=true)
+```
+
+Provide option to select "All" values
+
 ##### fn templating.list.withIndex
 
 ```ts
@@ -1066,6 +1250,14 @@ withLabel(value)
 ```
 
 
+
+##### fn templating.list.withMulti
+
+```ts
+withMulti(value=true)
+```
+
+Enable selecting multiple values
 
 ##### fn templating.list.withName
 
@@ -1091,6 +1283,14 @@ withQueryMixin(value)
 
 TODO: Move this into a separated QueryVariableModel type
 
+##### fn templating.list.withRegex
+
+```ts
+withRegex(value)
+```
+
+Filter the values with a regex
+
 ##### fn templating.list.withRootStateKey
 
 ```ts
@@ -1105,6 +1305,28 @@ withRootStateKey(value)
 withSkipUrlSync(value=false)
 ```
 
+
+
+##### fn templating.list.withSort
+
+```ts
+withSort(i=0, type='alphabetical', asc=true, caseInsensitive=false)
+```
+
+Choose how to sort the values in the dropdown.
+
+This can be called as `withSort(<number>) to use the integer values for each
+option. If `i==0` then it will be ignored and the other arguments will take
+precedence.
+
+The numerical values are:
+
+- 1 - Alphabetical (asc)
+- 2 - Alphabetical (desc)
+- 3 - Numerical (asc)
+- 4 - Numerical (desc)
+- 5 - Alphabetical (case-insensitive, asc)
+- 6 - Alphabetical (case-insensitive, desc)
 
 
 ##### fn templating.list.withState
@@ -1132,6 +1354,22 @@ Accepted values for `value` are query, adhoc, constant, datasource, interval, te
 ##### obj templating.list.datasource
 
 
+###### fn templating.list.datasource.fromVariable
+
+```ts
+fromVariable(variable)
+```
+
+Select the datasource from another template variable
+
+###### fn templating.list.datasource.new
+
+```ts
+new(type, uid)
+```
+
+Select a datasource for the variable template query
+
 ###### fn templating.list.datasource.withType
 
 ```ts
@@ -1147,6 +1385,36 @@ withUid(value)
 ```
 
 Specific datasource instance
+
+##### obj templating.list.query
+
+
+###### fn templating.list.query.withLabelValues
+
+```ts
+withLabelValues(label, metric)
+```
+
+Construct a Prometheus template variable using `label_values()`
+
+##### obj templating.list.refresh
+
+
+###### fn templating.list.refresh.onLoad
+
+```ts
+onLoad()
+```
+
+Refresh label values on dashboard load.
+
+###### fn templating.list.refresh.onTime
+
+```ts
+onTime()
+```
+
+Refresh label values on time range change.
 
 ### obj time
 
