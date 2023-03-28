@@ -44,7 +44,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         local this = self,
 
         '#new':: d.func.new(
-          'Create a template variable',
+          'Create a template variable.',
           args=[
             d.arg('name', d.T.string),
             d.arg('type', d.T.string, default='query'),
@@ -57,7 +57,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
         query+: {
           '#withLabelValues':: d.func.new(
-            'Construct a Prometheus template variable using `label_values()`',
+            'Construct a Prometheus template variable using `label_values()`.',
             args=[
               d.arg('label', d.T.string),
               d.arg('metric', d.T.string),
@@ -69,7 +69,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         },
 
         '#withRegex':: d.func.new(
-          'Filter the values with a regex',
+          'Filter the values with a regex.',
           args=[
             d.arg('value', d.T.string),
           ]
@@ -101,7 +101,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         },
 
         '#withMulti':: d.func.new(
-          'Enable selecting multiple values',
+          'Enable selecting multiple values.',
           args=[
             d.arg('value', d.T.boolean, default=true),
           ]
@@ -111,7 +111,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         },
 
         '#withIncludeAll':: d.func.new(
-          'Provide option to select "All" values',
+          'Provide option to select "All" values.',
           args=[
             d.arg('value', d.T.boolean, default=true),
           ]
@@ -186,7 +186,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
         datasource+: {
           '#new':: d.func.new(
-            'Select a datasource for the variable template query',
+            'Select a datasource for the variable template query.',
             args=[
               d.arg('type', d.T.string),
               d.arg('uid', d.T.string),
@@ -197,7 +197,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
             + self.withUid(uid),
 
           '#fromVariable':: d.func.new(
-            'Select the datasource from another template variable',
+            'Select the datasource from another template variable.',
             args=[
               d.arg('variable', d.T.object),
             ]
