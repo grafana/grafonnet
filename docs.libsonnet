@@ -6,12 +6,9 @@ grafonnet.docs(
   main
   {
     '#':
-      d.package.new(
+      d.package.newSub(
         'grafonnet',
-        'github.com/grafana/grafonnet/gen/grafonnet-latest',
-        'Jsonnet library for rendering Grafana resources',
-        'main.libsonnet',
-        'main',
+        std.strReplace(importstr './README.md', '# Grafonnet', ''),
       ),
   }
 )
