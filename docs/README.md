@@ -64,16 +64,6 @@ grafonnet.dashboard.new('My Dashboard')
 jsonnet -J vendor dashboard.jsonnet
 ```
 
-## Development
-
-`make generate` uses `generate.jsonnet` to create Jsonnet libraries for each version in
-`gen/<version>/`, it also creates `gen/grafonnet-latest/` which refers to the newest
-version. These Jsonnet libraries depend on the JSON Schemas from Grok and `grafonnet-base/`.
-
-The `grafonnet-base` library provides the logic to convert JSON Schemas to a runtime
-library and adds veneer on top. The veneer is a thin layer on top of the raw library to
-improve the user experience.
-
 
 ## Subpackages
 
