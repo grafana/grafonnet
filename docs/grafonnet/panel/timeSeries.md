@@ -1,4 +1,4 @@
-# package timeSeries
+# timeSeries
 
 grafonnet.panel.timeSeries
 

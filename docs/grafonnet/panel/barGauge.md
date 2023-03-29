@@ -1,4 +1,4 @@
-# package barGauge
+# barGauge
 
 grafonnet.panel.barGauge
 

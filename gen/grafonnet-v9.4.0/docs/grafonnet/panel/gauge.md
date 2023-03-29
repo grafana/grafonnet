@@ -1,4 +1,4 @@
-# package gauge
+# gauge
 
 grafonnet.panel.gauge
 

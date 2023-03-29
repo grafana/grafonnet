@@ -1,4 +1,4 @@
-# package loki
+# loki
 
 grafonnet.query.loki
 

@@ -1,4 +1,4 @@
-# package panel
+# panel
 
 grafonnet.panel
 

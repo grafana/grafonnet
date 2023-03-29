@@ -1,4 +1,4 @@
-# package canvas
+# canvas
 
 grafonnet.panel.canvas
 

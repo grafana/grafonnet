@@ -1,4 +1,4 @@
-# package stateTimeline
+# stateTimeline
 
 grafonnet.panel.stateTimeline
 

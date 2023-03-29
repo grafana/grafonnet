@@ -1,4 +1,4 @@
-# package playlist
+# playlist
 
 grafonnet.playlist
 

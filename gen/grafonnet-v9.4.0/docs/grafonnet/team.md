@@ -1,4 +1,4 @@
-# package team
+# team
 
 grafonnet.team
 

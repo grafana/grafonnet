@@ -1,4 +1,4 @@
-# package geomap
+# geomap
 
 grafonnet.panel.geomap
 

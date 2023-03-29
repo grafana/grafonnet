@@ -1,4 +1,4 @@
-# package table
+# table
 
 grafonnet.panel.table
 

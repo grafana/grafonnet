@@ -1,4 +1,4 @@
-# package statusHistory
+# statusHistory
 
 grafonnet.panel.statusHistory
 

@@ -1,4 +1,4 @@
-# package heatmap
+# heatmap
 
 grafonnet.panel.heatmap
 

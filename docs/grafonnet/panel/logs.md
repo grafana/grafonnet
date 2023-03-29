@@ -1,4 +1,4 @@
-# package logs
+# logs
 
 grafonnet.panel.logs
 

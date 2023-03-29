@@ -1,4 +1,4 @@
-# package alertGroups
+# alertGroups
 
 grafonnet.panel.alertGroups
 

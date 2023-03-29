@@ -1,4 +1,4 @@
-# package xyChart
+# xyChart
 
 grafonnet.panel.xyChart
 

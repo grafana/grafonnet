@@ -1,4 +1,4 @@
-# package preferences
+# preferences
 
 grafonnet.preferences
 

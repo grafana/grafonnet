@@ -1,4 +1,4 @@
-# package elasticsearch
+# elasticsearch
 
 grafonnet.query.elasticsearch
 

@@ -1,4 +1,4 @@
-# package annotationsList
+# annotationsList
 
 grafonnet.panel.annotationsList
 

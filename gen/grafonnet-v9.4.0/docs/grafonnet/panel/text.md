@@ -1,4 +1,4 @@
-# package text
+# text
 
 grafonnet.panel.text
 

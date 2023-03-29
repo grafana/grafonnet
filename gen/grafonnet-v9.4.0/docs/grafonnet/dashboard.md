@@ -1,4 +1,4 @@
-# package dashboard
+# dashboard
 
 grafonnet.dashboard
 
@@ -854,7 +854,7 @@ TODO docs
 new(name, type='query')
 ```
 
-Create a template variable
+Create a template variable.
 
 #### fn templateVariable.withAllValue
 
@@ -938,7 +938,7 @@ withId(value='00000000-0000-0000-0000-000000000000')
 withIncludeAll(value=true)
 ```
 
-Provide option to select "All" values
+Provide option to select "All" values.
 
 #### fn templateVariable.withIndex
 
@@ -962,7 +962,7 @@ withLabel(value)
 withMulti(value=true)
 ```
 
-Enable selecting multiple values
+Enable selecting multiple values.
 
 #### fn templateVariable.withName
 
@@ -994,7 +994,7 @@ TODO: Move this into a separated QueryVariableModel type
 withRegex(value)
 ```
 
-Filter the values with a regex
+Filter the values with a regex.
 
 #### fn templateVariable.withRootStateKey
 
@@ -1065,7 +1065,7 @@ Accepted values for `value` are query, adhoc, constant, datasource, interval, te
 fromVariable(variable)
 ```
 
-Select the datasource from another template variable
+Select the datasource from another template variable.
 
 ##### fn templateVariable.datasource.new
 
@@ -1073,7 +1073,7 @@ Select the datasource from another template variable
 new(type, uid)
 ```
 
-Select a datasource for the variable template query
+Select a datasource for the variable template query.
 
 ##### fn templateVariable.datasource.withType
 
@@ -1100,7 +1100,7 @@ Specific datasource instance
 withLabelValues(label, metric)
 ```
 
-Construct a Prometheus template variable using `label_values()`
+Construct a Prometheus template variable using `label_values()`.
 
 #### obj templateVariable.refresh
 
@@ -1149,7 +1149,7 @@ withListMixin(value)
 new(name, type='query')
 ```
 
-Create a template variable
+Create a template variable.
 
 ##### fn templating.list.withAllValue
 
@@ -1233,7 +1233,7 @@ withId(value='00000000-0000-0000-0000-000000000000')
 withIncludeAll(value=true)
 ```
 
-Provide option to select "All" values
+Provide option to select "All" values.
 
 ##### fn templating.list.withIndex
 
@@ -1257,7 +1257,7 @@ withLabel(value)
 withMulti(value=true)
 ```
 
-Enable selecting multiple values
+Enable selecting multiple values.
 
 ##### fn templating.list.withName
 
@@ -1289,7 +1289,7 @@ TODO: Move this into a separated QueryVariableModel type
 withRegex(value)
 ```
 
-Filter the values with a regex
+Filter the values with a regex.
 
 ##### fn templating.list.withRootStateKey
 
@@ -1360,7 +1360,7 @@ Accepted values for `value` are query, adhoc, constant, datasource, interval, te
 fromVariable(variable)
 ```
 
-Select the datasource from another template variable
+Select the datasource from another template variable.
 
 ###### fn templating.list.datasource.new
 
@@ -1368,7 +1368,7 @@ Select the datasource from another template variable
 new(type, uid)
 ```
 
-Select a datasource for the variable template query
+Select a datasource for the variable template query.
 
 ###### fn templating.list.datasource.withType
 
@@ -1395,7 +1395,7 @@ Specific datasource instance
 withLabelValues(label, metric)
 ```
 
-Construct a Prometheus template variable using `label_values()`
+Construct a Prometheus template variable using `label_values()`.
 
 ##### obj templating.list.refresh
 

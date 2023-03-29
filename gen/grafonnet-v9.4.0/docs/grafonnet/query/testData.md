@@ -1,4 +1,4 @@
-# package testData
+# testData
 
 grafonnet.query.testData
 

@@ -1,4 +1,4 @@
-# package dashboardList
+# dashboardList
 
 grafonnet.panel.dashboardList
 

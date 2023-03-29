@@ -1,4 +1,4 @@
-# package serviceaccount
+# serviceaccount
 
 grafonnet.serviceaccount
 

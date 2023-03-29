@@ -1,4 +1,4 @@
-# package util
+# util
 
 Helper functions that work well with Grafonnet.
 

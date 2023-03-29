@@ -1,4 +1,4 @@
-# package debug
+# debug
 
 grafonnet.panel.debug
 

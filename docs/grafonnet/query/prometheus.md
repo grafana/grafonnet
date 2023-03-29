@@ -1,4 +1,4 @@
-# package prometheus
+# prometheus
 
 grafonnet.query.prometheus
 
