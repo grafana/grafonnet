@@ -25,4 +25,5 @@ local grafonnet = import "github.com/grafana/grafonnet/gen/grafonnet-v9.4.0/main
 * [query](grafonnet/query.md)
 * [serviceaccount](grafonnet/serviceaccount.md)
 * [team](grafonnet/team.md)
+* [util](grafonnet/util.md)
 

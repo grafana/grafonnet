@@ -5,6 +5,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
   dashboard+: (import 'veneer/dashboard.libsonnet').dashboard,
 
   util: {
+    '#': d.package.newSub('util', 'Helper functions that work well with Grafonnet.'),
     grid: (import 'util/grid.libsonnet'),
     string: (import 'util/string.libsonnet'),
   },
@@ -57,6 +58,12 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         self.withDatasource(datasource)
         + self.withExpr(expr),
 
+      '#withDatasource':: d.func.new(
+        'Set the datasource for this query.',
+        args=[
+          d.arg('value', d.T.string),
+        ]
+      ),
       withDatasource(value): {
         datasource+: {
           type: 'prometheus',
@@ -64,10 +71,22 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         },
       },
 
+      '#withIntervalFactor':: d.func.new(
+        'Set the interval factor for this query.',
+        args=[
+          d.arg('value', d.T.string),
+        ]
+      ),
       withIntervalFactor(value): {
         intervalFactor: value,
       },
 
+      '#withLegendFormat':: d.func.new(
+        'Set the legend format for this query.',
+        args=[
+          d.arg('value', d.T.string),
+        ]
+      ),
       withLegendFormat(value): {
         legendFormat: value,
       },

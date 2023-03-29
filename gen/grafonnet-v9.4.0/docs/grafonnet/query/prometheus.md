@@ -12,6 +12,8 @@ grafonnet.query.prometheus
 * [`fn withFormat(value)`](#fn-withformat)
 * [`fn withHide(value)`](#fn-withhide)
 * [`fn withInstant(value)`](#fn-withinstant)
+* [`fn withIntervalFactor(value)`](#fn-withintervalfactor)
+* [`fn withLegendFormat(value)`](#fn-withlegendformat)
 * [`fn withQueryType(value)`](#fn-withquerytype)
 * [`fn withRange(value)`](#fn-withrange)
 * [`fn withRefId(value)`](#fn-withrefid)
@@ -32,10 +34,7 @@ Creates a new prometheus query target for panels.
 withDatasource(value)
 ```
 
-For mixed data sources the selected datasource is on the query level.
-For non mixed scenarios this is undefined.
-TODO find a better way to do this ^ that's friendly to schema
-TODO this shouldn't be unknown but DataSourceRef | null
+Set the datasource for this query.
 
 ### fn withEditorMode
 
@@ -90,6 +89,22 @@ withInstant(value)
 ```
 
 Returns only the latest value that Prometheus has scraped for the requested time series
+
+### fn withIntervalFactor
+
+```ts
+withIntervalFactor(value)
+```
+
+Set the interval factor for this query.
+
+### fn withLegendFormat
+
+```ts
+withLegendFormat(value)
+```
+
+Set the legend format for this query.
 
 ### fn withQueryType
 

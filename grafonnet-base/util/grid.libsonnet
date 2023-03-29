@@ -1,3 +1,5 @@
+local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
+
 {
   local root = self,
 
@@ -29,8 +31,22 @@
       panels
     ),
 
-  // Main function
-  // Configures gridPos for each panel, with Row panels as 'linebreaks' in between.
+  '#makeGrid':: d.func.new(
+    |||
+      `makeGrid` returns an array of `panels` organized in a grid with equal `panelWidth`
+      and `panelHeight`. Row panels are used as "linebreaks", if a Row panel is collapsed,
+      then all panels below it will be folded into the row.
+
+      This function will use the full grid of 24 columns, setting `panelWidth` to a value
+      that can divide 24 into equal parts will fill up the page nicely. (1, 2, 3, 4, 6, 8, 12)
+      Other value for `panelWidth` will leave a gap on the far right.
+    |||,
+    args=[
+      d.arg('panels', d.T.array),
+      d.arg('panelWidth', d.T.number),
+      d.arg('panelHeight', d.T.number),
+    ],
+  ),
   makeGrid(panels, panelWidth=8, panelHeight=8):
     // Get indexes for all Row panels
     local rowIndexes = [
