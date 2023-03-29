@@ -1,4 +1,4 @@
-# package stat
+# stat
 
 grafonnet.panel.stat
 

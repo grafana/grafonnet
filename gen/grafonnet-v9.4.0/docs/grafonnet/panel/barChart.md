@@ -1,4 +1,4 @@
-# package barChart
+# barChart
 
 grafonnet.panel.barChart
 

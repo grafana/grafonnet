@@ -1,4 +1,4 @@
-# package azureMonitor
+# azureMonitor
 
 grafonnet.query.azureMonitor
 

@@ -1,4 +1,4 @@
-# package librarypanel
+# librarypanel
 
 grafonnet.librarypanel
 

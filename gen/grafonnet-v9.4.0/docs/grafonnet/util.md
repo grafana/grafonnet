@@ -1,4 +1,4 @@
-# package util
+# util
 
 Helper functions that work well with Grafonnet.
 
@@ -22,7 +22,7 @@ makeGrid(panels, panelWidth, panelHeight)
 
 `makeGrid` returns an array of `panels` organized in a grid with equal `panelWidth`
 and `panelHeight`. Row panels are used as "linebreaks", if a Row panel is collapsed,
-then all panels below it will be folded into the row..
+then all panels below it will be folded into the row.
 
 This function will use the full grid of 24 columns, setting `panelWidth` to a value
 that can divide 24 into equal parts will fill up the page nicely. (1, 2, 3, 4, 6, 8, 12)

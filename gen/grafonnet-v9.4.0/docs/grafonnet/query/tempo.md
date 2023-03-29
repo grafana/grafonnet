@@ -1,4 +1,4 @@
-# package tempo
+# tempo
 
 grafonnet.query.tempo
 

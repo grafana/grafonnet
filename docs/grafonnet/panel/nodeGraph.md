@@ -1,4 +1,4 @@
-# package nodeGraph
+# nodeGraph
 
 grafonnet.panel.nodeGraph
 

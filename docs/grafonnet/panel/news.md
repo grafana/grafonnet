@@ -1,4 +1,4 @@
-# package news
+# news
 
 grafonnet.panel.news
 

@@ -1,4 +1,4 @@
-# package row
+# row
 
 grafonnet.panel.row
 

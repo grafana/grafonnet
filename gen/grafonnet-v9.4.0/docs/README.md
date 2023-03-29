@@ -1,4 +1,4 @@
-# package grafonnet
+# grafonnet
 
 Jsonnet library for rendering Grafana resources
 

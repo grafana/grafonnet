@@ -1,4 +1,4 @@
-# package candlestick
+# candlestick
 
 grafonnet.panel.candlestick
 

@@ -1,4 +1,4 @@
-# package parca
+# parca
 
 grafonnet.query.parca
 

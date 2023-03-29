@@ -1,4 +1,4 @@
-# package pieChart
+# pieChart
 
 grafonnet.panel.pieChart
 

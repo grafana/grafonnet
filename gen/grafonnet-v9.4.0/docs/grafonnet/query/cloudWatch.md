@@ -1,4 +1,4 @@
-# package cloudWatch
+# cloudWatch
 
 grafonnet.query.cloudWatch
 

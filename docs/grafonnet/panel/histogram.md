@@ -1,4 +1,4 @@
-# package histogram
+# histogram
 
 grafonnet.panel.histogram
 

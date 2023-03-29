@@ -1,4 +1,4 @@
-# package phlare
+# phlare
 
 grafonnet.query.phlare
 
