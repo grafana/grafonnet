@@ -1,4 +1,4 @@
-.PHONY: generate docs
+.PHONY: clean generate docs libdocs latestdocs localmkdocs
 
 clean:
 	rm -rf gen
@@ -30,3 +30,9 @@ latestdocs:
 	ln -sf $${PWD}/../grafonnet-base vendor/github.com/grafana/grafonnet/grafonnet-base; \
 	jsonnet -J vendor -S -m . -c ../docs.libsonnet; \
 	rm -rf jsonnetfile.json jsonnetfile.lock.json vendor
+
+localmkdocs:
+	python -m venv .mkdocs/.venv; \
+	source .mkdocs/.venv/bin/activate; \
+	pip install -r .mkdocs/requirements.txt; \
+	mkdocs build -f .mkdocs/mkdocs.yml
