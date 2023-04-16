@@ -1,3 +1,4 @@
+local util = import '../util.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
 {

@@ -1,14 +1,8 @@
-local main = import './main.libsonnet';
+local main = import '../main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
 {
-  dashboard+: (import 'veneer/dashboard.libsonnet').dashboard,
-
-  util: {
-    '#': d.package.newSub('util', 'Helper functions that work well with Grafonnet.'),
-    grid: (import 'util/grid.libsonnet'),
-    string: (import 'util/string.libsonnet'),
-  },
+  dashboard+: (import './dashboard.libsonnet').dashboard,
 
   // Move Row panel into panel subpackage
   local panels = super.dashboard.panels,

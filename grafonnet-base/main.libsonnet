@@ -1,7 +1,9 @@
-local veneer = import './veneer.libsonnet';
 local crdsonnet = import 'github.com/Duologic/crdsonnet/crdsonnet/main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
+
+local util = import './util/main.libsonnet';
+local veneer = import './veneer/main.libsonnet';
 
 {
   local root = self,
@@ -73,7 +75,8 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
           'main',
         ),
     }
-    + veneer,
+    + veneer
+    + { util: util },
 
 
   packageDocMixin(version, name, path):
