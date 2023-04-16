@@ -1,3 +1,4 @@
+local util = import '../util/main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
 {
@@ -212,29 +213,13 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       },
     },
 
-    local setPanelIDs(panels, init=0) =
-      [
-        panels[i - 1] { id: i + init }
-        + (if panels[i - 1].type == 'row'
-              && 'panels' in panels[i - 1]
-           then {
-             panels:
-               setPanelIDs(
-                 panels[i - 1].panels,
-                 init=(std.length(panels) * i)
-               ),
-           }
-           else {})
-        for i in std.range(1, std.length(panels))
-      ],
-
     withPanels(value): {
       _panels:: if std.isArray(value) then value else [value],
-      panels: setPanelIDs(self._panels),
+      panels: util.panel.setPanelIDs(self._panels),
     },
     withPanelsMixin(value): {
       _panels+:: if std.isArray(value) then value else [value],
-      panels: setPanelIDs(self._panels),
+      panels: util.panel.setPanelIDs(self._panels),
     },
   },
 }
