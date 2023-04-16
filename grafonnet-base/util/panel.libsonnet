@@ -1,6 +1,8 @@
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
 {
+  local this = self,
+
   '#setPanelIDs':: d.func.new(
     |||
       `setPanelIDs` ensures that all `panels` have a unique ID, this functions is used in
@@ -20,7 +22,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
           && 'panels' in panels[i - 1]
        then {
          panels:
-           self.setPanelIDs(
+           this.setPanelIDs(
              panels[i - 1].panels,
              init=(std.length(panels) * i)
            ),
