@@ -1,4 +1,4 @@
-.PHONY: clean generate docs libdocs latestdocs localmkdocs
+.PHONY: clean generate docs libdocs latestdocs localmkdocs test
 
 clean:
 	rm -rf gen
@@ -36,3 +36,15 @@ localmkdocs:
 	source .mkdocs/.venv/bin/activate; \
 	pip install -r .mkdocs/requirements.txt; \
 	mkdocs build -f .mkdocs/mkdocs.yml
+
+test:
+	@cd test/; \
+	jb install; \
+	RESULT=0; \
+	for f in $$(find . -path './.git' -prune -o -name 'vendor' -prune -o -name '*_test.jsonnet' -print); do \
+		echo "$$f"; \
+		jsonnet -J vendor -J lib "$$f"; \
+		RESULT=$$(($$RESULT + $$?)); \
+	done; \
+	exit $$RESULT
+
