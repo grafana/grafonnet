@@ -51,10 +51,26 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
             d.arg('type', d.T.string, default='query'),
           ]
         ),
-        new(name, type='query'): {
-          name: name,
-          type: type,
-        },
+        new(name, type='query'):
+          {
+            name: name,
+            type: type,
+            [if type == 'custom' then 'query']: '',
+            [if type == 'custom' then 'current']:
+              util.dashboard.getOptionsForCustomQuery(self.query).current,
+            [if type == 'custom' then 'options']:
+              util.dashboard.getOptionsForCustomQuery(self.query).options,
+          },
+
+        withType(value):
+          super.withType(value)
+          + {
+            [if value == 'custom' then 'query']: '',
+            [if value == 'custom' then 'current']:
+              util.dashboard.getOptionsForCustomQuery(self.query).current,
+            [if value == 'custom' then 'options']:
+              util.dashboard.getOptionsForCustomQuery(self.query).options,
+          },
 
         query+: {
           '#withLabelValues':: d.func.new(

@@ -50,3 +50,51 @@ test.new(std.thisFile)
     )
   )
 )
+
++ (
+  local query = '1, a : b, ab :  , aa: bb, a     :b';
+
+  local expected = {
+    current: {
+      selected: false,
+      text: '1',
+      value: '1',
+    },
+    options: [
+      {
+        selected: true,
+        text: '1',
+        value: '1',
+      },
+      {
+        selected: false,
+        text: 'a',
+        value: 'b',
+      },
+      {
+        selected: false,
+        text: 'ab',
+        value: '',
+      },
+      {
+        selected: false,
+        text: 'aa: bb',
+        value: 'aa: bb',
+      },
+      {
+        selected: false,
+        text: 'a     :b',
+        value: 'a     :b',
+      },
+    ],
+  };
+
+  test.case.new(
+    name='util.dashboard.getOptionsForCustomQuery',
+    test=test.expect.eq(
+      actual=util.dashboard.getOptionsForCustomQuery(query),
+      expected=expected,
+    )
+  )
+
+)
