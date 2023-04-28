@@ -41,6 +41,10 @@ appealing it becomes very slow for environments that need to manage many dashboa
 
 Grafonnet uses the [Jsonnet](https://jsonnet.org/) programming language.
 
+> **NOTE**: There is a significant performance issue with the C implementation of Jsonnet. You are strongly
+recommended to use the newer [go-jsonnet](https://github.com/google/go-jsonnet) Jsonnet implementation.
+This is also the implementation recommended by the Jsonnet developers themselves.
+
 The library can be installed with [jsonnet-bundler](https://github.com/jsonnet-bundler/jsonnet-bundler/).
 
 ## Install
