@@ -1,6 +1,8 @@
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
 {
+  local root = self,
+
   '#getOptionsForCustomQuery':: d.func.new(
     |||
       `getOptionsForCustomQuery` provides values for the `options` and `current` fields.
@@ -15,19 +17,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
     args=[d.arg('query', d.T.string)],
   ),
   getOptionsForCustomQuery(query): {
-    local values =
-      std.map(
-        function(v)
-          local split = std.splitLimit(v, ' : ', 1);
-          {
-            key: std.stripChars(split[0], ' '),
-            value:
-              if std.length(split) == 2
-              then std.stripChars(split[1], ' ')
-              else std.stripChars(split[0], ' '),
-          },
-        std.split(query, ','),
-      ),
+    local values = root.parseCustomQuery(query),
 
     current: {
       selected: false,
@@ -45,4 +35,54 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         values
       ),
   },
+
+  parseCustomQuery(query):
+    // Break query down to character level
+    local split = std.mapWithIndex(
+      function(i, c) { index: i, char: c },
+      query
+    );
+
+    // Split query by comma, unless the comma is escaped
+    local items = std.foldl(
+      function(acc, item)
+        acc
+        + (
+          // Look for a comma that isn't escaped with '\\'
+          if item.char == ','
+             && split[item.index - 1].char != '\\'
+          then {
+            items+: [acc.current_item],
+            current_item: '',
+          }
+          // If this is the last array item, then append the last character
+          else if item.index == (std.length(split) - 1)
+          then {
+            items+: [acc.current_item + item.char],
+          }
+          // Append characters to current tracking key/value
+          else {
+            current_item+: item.char,
+          }
+        ),
+      split,
+      {
+        items: [],
+        current_item: '',
+      }
+    ).items;
+
+    // Split items into key:value pairs
+    std.map(
+      function(v)
+        local split = std.splitLimit(v, ' : ', 1);
+        {
+          key: std.stripChars(split[0], ' '),
+          value:
+            if std.length(split) == 2
+            then std.stripChars(split[1], ' ')
+            else self.key,
+        },
+      items
+    ),
 }
