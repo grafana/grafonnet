@@ -4,6 +4,7 @@ grafonnet.query.tempo
 
 ## Index
 
+* [`fn new(datasource, query, filters)`](#fn-new)
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withFilters(value)`](#fn-withfilters)
 * [`fn withFiltersMixin(value)`](#fn-withfiltersmixin)
@@ -30,16 +31,21 @@ grafonnet.query.tempo
 
 ## Fields
 
+### fn new
+
+```ts
+new(datasource, query, filters)
+```
+
+Creates a new tempo query target for panels.
+
 ### fn withDatasource
 
 ```ts
 withDatasource(value)
 ```
 
-For mixed data sources the selected datasource is on the query level.
-For non mixed scenarios this is undefined.
-TODO find a better way to do this ^ that's friendly to schema
-TODO this shouldn't be unknown but DataSourceRef | null
+Set the datasource for this query.
 
 ### fn withFilters
 

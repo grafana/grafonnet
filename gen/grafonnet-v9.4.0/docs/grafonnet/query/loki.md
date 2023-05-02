@@ -4,6 +4,7 @@ grafonnet.query.loki
 
 ## Index
 
+* [`fn new(datasource, expr)`](#fn-new)
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withEditorMode(value)`](#fn-witheditormode)
 * [`fn withExpr(value)`](#fn-withexpr)
@@ -18,16 +19,21 @@ grafonnet.query.loki
 
 ## Fields
 
+### fn new
+
+```ts
+new(datasource, expr)
+```
+
+Creates a new loki query target for panels.
+
 ### fn withDatasource
 
 ```ts
 withDatasource(value)
 ```
 
-For mixed data sources the selected datasource is on the query level.
-For non mixed scenarios this is undefined.
-TODO find a better way to do this ^ that's friendly to schema
-TODO this shouldn't be unknown but DataSourceRef | null
+Set the datasource for this query.
 
 ### fn withEditorMode
 
