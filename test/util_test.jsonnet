@@ -96,5 +96,64 @@ test.new(std.thisFile)
       expected=expected,
     )
   )
+)
 
++ (
+  local query = '1, a : b, ab :  , aa: bb, a     :b';
+  local expected = [
+    { key: '1', value: '1' },
+    { key: 'a', value: 'b' },
+    { key: 'ab', value: '' },
+    { key: 'aa: bb', value: 'aa: bb' },
+    { key: 'a     :b', value: 'a     :b' },
+  ];
+  test.case.new(
+    name='util.dashboard.parseCustomQuery - Comprehensive query with spaces',
+    test=test.expect.eq(
+      actual=util.dashboard.parseCustomQuery(query),
+      expected=expected,
+    )
+  )
+)
++ (
+  local query = 'foo,bar';
+  local expected = [
+    { key: 'foo', value: 'foo' },
+    { key: 'bar', value: 'bar' },
+  ];
+  test.case.new(
+    name='util.dashboard.parseCustomQuery - Simple',
+    test=test.expect.eq(
+      actual=util.dashboard.parseCustomQuery(query),
+      expected=expected,
+    )
+  )
+)
++ (
+  local query = 'foo : value1,bar';
+  local expected = [
+    { key: 'foo', value: 'value1' },
+    { key: 'bar', value: 'bar' },
+  ];
+  test.case.new(
+    name='util.dashboard.parseCustomQuery - Mixed key-only and key:value pair',
+    test=test.expect.eq(
+      actual=util.dashboard.parseCustomQuery(query),
+      expected=expected,
+    )
+  )
+)
++ (
+  local query = 'foo : value1,bar : value2\\,value3';
+  local expected = [
+    { key: 'foo', value: 'value1' },
+    { key: 'bar', value: 'value2\\,value3' },
+  ];
+  test.case.new(
+    name='util.dashboard.parseCustomQuery - Value with escaped comma',
+    test=test.expect.eq(
+      actual=util.dashboard.parseCustomQuery(query),
+      expected=expected,
+    )
+  )
 )
