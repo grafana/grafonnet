@@ -1,4 +1,4 @@
-local crdsonnet = import 'github.com/Duologic/crdsonnet/crdsonnet/main.libsonnet';
+local crdsonnet = import 'github.com/crdsonnet/crdsonnet/crdsonnet/main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 
