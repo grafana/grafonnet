@@ -4,7 +4,46 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 // The `var` argument should match `dashboard.templating.list`
 function(var) {
 
-  '#':: d.package.newSub('variable', ''),
+  '#':: d.package.newSub(
+    'variable',
+    |||
+      Example usage:
+
+      ```jsonnet
+      local g = import 'g.libsonnet';
+      local var = g.dashboard.variable;
+
+      local customVar =
+        var.custom.new(
+          'myOptions',
+          values=['a', 'b', 'c', 'd'],
+        )
+        + var.custom.generalOptions.withDescription(
+          'This is a variable for my custom options.'
+        )
+        + var.custom.selectionOptions.withMulti();
+
+      local queryVar =
+        var.query.new('queryOptions')
+        + var.query.queryTypes.withLabelValues(
+          'up',
+          'instance',
+        )
+        + var.query.withDatasource(
+          type='prometheus',
+          uid='mimir-prod',
+        )
+        + var.query.selectionOptions.withIncludeAll();
+
+
+      g.dashboard.new('my dashboard')
+      + g.dashboard.withVariables([
+        customVar,
+        queryVar,
+      ])
+      ```
+    |||,
+  ),
 
   local generalAttributes = [
     'withName',
@@ -72,13 +111,17 @@ function(var) {
     + selectionOptions
     + {
       '#new':: d.func.new(
-        'Create a template variable.',
+        |||
+          Create a query template variable.
+
+          `query` argument is optional, this can also be set with `query.queryTypes`.
+        |||,
         args=[
           d.arg('name', d.T.string),
-          d.arg('query', d.T.string),
+          d.arg('query', d.T.string, default=''),
         ]
       ),
-      new(name, query):
+      new(name, query=''):
         var.withName(name)
         + var.withType('query')
         + var.withQuery(query),

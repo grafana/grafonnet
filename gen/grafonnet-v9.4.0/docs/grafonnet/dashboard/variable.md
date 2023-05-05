@@ -1,5 +1,40 @@
 # variable
 
+Example usage:
+
+```jsonnet
+local g = import 'g.libsonnet';
+local var = g.dashboard.variable;
+
+local customVar =
+  var.custom.new(
+    'myOptions',
+    values=['a', 'b', 'c', 'd'],
+  )
+  + var.custom.generalOptions.withDescription(
+    'This is a variable for my custom options.'
+  )
+  + var.custom.selectionOptions.withMulti();
+
+local queryVar =
+  var.query.new('queryOptions')
+  + var.query.queryTypes.withLabelValues(
+    'up',
+    'instance',
+  )
+  + var.query.withDatasource(
+    type='prometheus',
+    uid='mimir-prod',
+  )
+  + var.query.selectionOptions.withIncludeAll();
+
+
+g.dashboard.new('my dashboard')
++ g.dashboard.withVariables([
+  customVar,
+  queryVar,
+])
+```
 
 
 ## Index
@@ -64,7 +99,7 @@
       * [`fn withNothing()`](#fn-intervalgeneraloptionsshowondashboardwithnothing)
       * [`fn withValueOnly()`](#fn-intervalgeneraloptionsshowondashboardwithvalueonly)
 * [`obj query`](#obj-query)
-  * [`fn new(name, query)`](#fn-querynew)
+  * [`fn new(name, query='')`](#fn-querynew)
   * [`fn withDatasource(type, uid)`](#fn-querywithdatasource)
   * [`fn withDatasourceFromVariable(variable)`](#fn-querywithdatasourcefromvariable)
   * [`fn withRegex(value)`](#fn-querywithregex)
@@ -516,10 +551,13 @@ withValueOnly()
 #### fn query.new
 
 ```ts
-new(name, query)
+new(name, query='')
 ```
 
-Create a template variable.
+Create a query template variable.
+
+`query` argument is optional, this can also be set with `query.queryTypes`.
+
 
 #### fn query.withDatasource
 
