@@ -35,11 +35,34 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         withGraphTooltip(2),
     },
 
-    // Renaming to align with frontend naming
-    templateVariable: self.templating.list,
-    withTemplateVariables(value): self.templating.withList(value),
-    withTemplateVariablesMixin(value): self.templating.withListMixin(value),
+    // Use manually written veneer to align with GUI
+    variable: (import './variable.libsonnet')(self.templating.list),
 
+    '#withVariables':
+      d.func.new(
+        |||
+          `withVariables` adds an array of variables to a dashboard
+        |||,
+        args=[d.arg('value', d.T.array)]
+      ),
+    withVariables(value): self.templating.withList(value),
+
+    '#withVariablesMixin':
+      d.func.new(
+        |||
+          `withVariablesMixin` adds an array of variables to a dashboard.
+
+          This function appends passed data to existing values
+        |||,
+        args=[d.arg('value', d.T.array)]
+      ),
+    withVariablesMixin(value): self.templating.withListMixin(value),
+
+
+    // Hide from docs but keep available for backwards compatibility, use `variable` subpackage instead.
+    '#templateVariable':: {},
+    templateVariable:: self.templating.list,
+    '#templating':: {},
     templating+: {
       list+: {
         local this = self,
