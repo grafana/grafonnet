@@ -171,10 +171,10 @@ grafonnet.panel.statusHistory
   * [`fn withType(value)`](#fn-linkswithtype)
   * [`fn withUrl(value)`](#fn-linkswithurl)
 * [`obj options`](#obj-options)
-  * [`fn withColWidth(value=0.90000000000000002)`](#fn-optionswithcolwidth)
+  * [`fn withColWidth(value=0.9)`](#fn-optionswithcolwidth)
   * [`fn withLegend(value)`](#fn-optionswithlegend)
   * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
-  * [`fn withRowHeight(value=0.90000000000000002)`](#fn-optionswithrowheight)
+  * [`fn withRowHeight(value=0.9)`](#fn-optionswithrowheight)
   * [`fn withShowValue(value)`](#fn-optionswithshowvalue)
   * [`fn withTimezone(value)`](#fn-optionswithtimezone)
   * [`fn withTimezoneMixin(value)`](#fn-optionswithtimezonemixin)
@@ -1444,7 +1444,7 @@ withUrl(value)
 #### fn options.withColWidth
 
 ```ts
-withColWidth(value=0.90000000000000002)
+withColWidth(value=0.9)
 ```
 
 Controls the column width
@@ -1468,7 +1468,7 @@ TODO docs
 #### fn options.withRowHeight
 
 ```ts
-withRowHeight(value=0.90000000000000002)
+withRowHeight(value=0.9)
 ```
 
 Set the height of the rows

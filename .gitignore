@@ -4,3 +4,4 @@ vendor
 # Used during development
 gen/*/Makefile
 gen/*/example.jsonnet
+docs/jsonnetfile.json

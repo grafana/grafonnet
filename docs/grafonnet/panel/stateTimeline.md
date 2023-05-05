@@ -175,7 +175,7 @@ grafonnet.panel.stateTimeline
   * [`fn withLegend(value)`](#fn-optionswithlegend)
   * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
   * [`fn withMergeValues(value=true)`](#fn-optionswithmergevalues)
-  * [`fn withRowHeight(value=0.90000000000000002)`](#fn-optionswithrowheight)
+  * [`fn withRowHeight(value=0.9)`](#fn-optionswithrowheight)
   * [`fn withShowValue(value)`](#fn-optionswithshowvalue)
   * [`fn withTimezone(value)`](#fn-optionswithtimezone)
   * [`fn withTimezoneMixin(value)`](#fn-optionswithtimezonemixin)
@@ -1479,7 +1479,7 @@ Merge equal consecutive values
 #### fn options.withRowHeight
 
 ```ts
-withRowHeight(value=0.90000000000000002)
+withRowHeight(value=0.9)
 ```
 
 Controls the row height
