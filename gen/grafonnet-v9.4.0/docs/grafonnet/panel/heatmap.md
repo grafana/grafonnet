@@ -186,8 +186,8 @@ grafonnet.panel.heatmap
   * [`fn withColorMixin(value={"exponent": 0.5, "fill": "dark-orange", "reverse": false, "scheme": "Oranges", "steps": 64})`](#fn-optionswithcolormixin)
   * [`fn withExemplars(value)`](#fn-optionswithexemplars)
   * [`fn withExemplarsMixin(value)`](#fn-optionswithexemplarsmixin)
-  * [`fn withFilterValues(value={"le": 0.000000001})`](#fn-optionswithfiltervalues)
-  * [`fn withFilterValuesMixin(value={"le": 0.000000001})`](#fn-optionswithfiltervaluesmixin)
+  * [`fn withFilterValues(value={"le": 1.0000000000000001e-09})`](#fn-optionswithfiltervalues)
+  * [`fn withFilterValuesMixin(value={"le": 1.0000000000000001e-09})`](#fn-optionswithfiltervaluesmixin)
   * [`fn withLegend(value)`](#fn-optionswithlegend)
   * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
   * [`fn withRowsFrame(value)`](#fn-optionswithrowsframe)
@@ -1642,7 +1642,7 @@ Controls exemplar options
 #### fn options.withFilterValues
 
 ```ts
-withFilterValues(value={"le": 0.000000001})
+withFilterValues(value={"le": 1.0000000000000001e-09})
 ```
 
 Filters values between a given range
@@ -1650,7 +1650,7 @@ Filters values between a given range
 #### fn options.withFilterValuesMixin
 
 ```ts
-withFilterValuesMixin(value={"le": 0.000000001})
+withFilterValuesMixin(value={"le": 1.0000000000000001e-09})
 ```
 
 Filters values between a given range

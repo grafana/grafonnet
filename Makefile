@@ -1,9 +1,11 @@
 .PHONY: clean generate docs libdocs latestdocs localmkdocs test
 
+# JSONNET_BIN allows to set an alternative jsonnet binary
+#
 # jrsonnet is orders of magnitude faster
 # ... but changes how numbers are displayed:
 # https://github.com/CertainLach/jrsonnet/issues/108
-JSONNET_BIN := jrsonnet
+JSONNET_BIN ?= jsonnet
 
 clean:
 	rm -rf gen

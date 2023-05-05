@@ -191,10 +191,10 @@ grafonnet.panel.barChart
   * [`fn withUrl(value)`](#fn-linkswithurl)
 * [`obj options`](#obj-options)
   * [`fn withBarRadius(value=0)`](#fn-optionswithbarradius)
-  * [`fn withBarWidth(value=0.97)`](#fn-optionswithbarwidth)
+  * [`fn withBarWidth(value=0.96999999999999997)`](#fn-optionswithbarwidth)
   * [`fn withColorByField(value)`](#fn-optionswithcolorbyfield)
   * [`fn withFullHighlight(value=false)`](#fn-optionswithfullhighlight)
-  * [`fn withGroupWidth(value=0.7)`](#fn-optionswithgroupwidth)
+  * [`fn withGroupWidth(value=0.69999999999999996)`](#fn-optionswithgroupwidth)
   * [`fn withLegend(value)`](#fn-optionswithlegend)
   * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
   * [`fn withOrientation(value)`](#fn-optionswithorientation)
@@ -1635,7 +1635,7 @@ Controls the radius of each bar.
 #### fn options.withBarWidth
 
 ```ts
-withBarWidth(value=0.97)
+withBarWidth(value=0.96999999999999997)
 ```
 
 Controls the width of bars. 1 = Max width, 0 = Min width.
@@ -1660,7 +1660,7 @@ hovers over highlighted area
 #### fn options.withGroupWidth
 
 ```ts
-withGroupWidth(value=0.7)
+withGroupWidth(value=0.69999999999999996)
 ```
 
 Controls the width of groups. 1 = max with, 0 = min width.
