@@ -17,31 +17,20 @@ local veneer = import './veneer/main.libsonnet';
     local filteredSchemas = {
       core: std.filterMap(
         function(schema)
-          !(
-            ('properties' in schema.components.schemas[schema.info.title])
-            && (
-              ('PanelOptions' in schema.components.schemas[schema.info.title].properties)
-              || ('PanelFieldConfig' in schema.components.schemas[schema.info.title].properties)
-            )
-          )
-          && !('DataQuery' in schema.components.schemas),
+          !std.endsWith(schema.info.title, 'PanelCfg')
+          && !std.endsWith(schema.info.title, 'DataQuery'),
         function(schema) root.restructure(schema),
         schemas
       ),
 
       panel: std.filterMap(
-        function(schema)
-          ('properties' in schema.components.schemas[schema.info.title])
-          && (
-            ('PanelOptions' in schema.components.schemas[schema.info.title].properties)
-            || ('PanelFieldConfig' in schema.components.schemas[schema.info.title].properties)
-          ),
+        function(schema) std.endsWith(schema.info.title, 'PanelCfg'),
         function(schema) root.restructure(schema),
         schemas
       ),
 
       query: std.filterMap(
-        function(schema) 'DataQuery' in schema.components.schemas,
+        function(schema) std.endsWith(schema.info.title, 'DataQuery'),
         function(schema) root.restructure(schema),
         schemas,
       ),
