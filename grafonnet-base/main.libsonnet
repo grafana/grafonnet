@@ -8,11 +8,28 @@ local veneer = import './veneer/main.libsonnet';
 {
   local root = self,
 
+  // Used to fake render missing schemas
+  local genericSchema(title) =
+    root.restructure({
+      info: {
+        title: title,
+      },
+      components: {
+        schemas: {
+          [title]: {
+            type: 'object',
+          },
+        },
+      },
+    }),
+
   new(schemas, version):
     local dashboardSchema = std.filter(
       function(schema) schema.info.title == 'dashboard',
       schemas
     )[0];
+
+    local allSchemaTitles = std.map(function(x) x.info.title, schemas);
 
     local filteredSchemas = {
       core: std.filterMap(
@@ -23,11 +40,21 @@ local veneer = import './veneer/main.libsonnet';
         schemas
       ),
 
-      panel: std.filterMap(
-        function(schema) std.endsWith(schema.info.title, 'PanelCfg'),
-        function(schema) root.restructure(schema),
-        schemas
-      ),
+      local missingPanelSchemas = [
+        'CandlestickPanelCfg',
+        'CanvasPanelCfg',
+      ],
+      panel:
+        [
+          genericSchema(title)
+          for title in missingPanelSchemas
+          if !std.member(allSchemaTitles, title)
+        ]
+        + std.filterMap(
+          function(schema) std.endsWith(schema.info.title, 'PanelCfg'),
+          function(schema) root.restructure(schema),
+          schemas
+        ),
 
       query: std.filterMap(
         function(schema) std.endsWith(schema.info.title, 'DataQuery'),
