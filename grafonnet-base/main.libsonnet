@@ -15,7 +15,7 @@ local veneer = import './veneer/main.libsonnet';
     )[0];
 
     local filteredSchemas = {
-      general: std.filterMap(
+      core: std.filterMap(
         function(schema)
           !(
             ('properties' in schema.components.schemas[schema.info.title])
@@ -51,7 +51,8 @@ local veneer = import './veneer/main.libsonnet';
       [schema.info.title]:
         root.coreLib.new(schema)
         + root.packageDocMixin(version, schema.info.title, '')
-      for schema in filteredSchemas.general
+        + veneer.core(schema.info.title)
+      for schema in filteredSchemas.core
     }
     + {
       [k]:
@@ -59,13 +60,39 @@ local veneer = import './veneer/main.libsonnet';
           [schema.info.title]:
             root[k + 'Lib'].new(dashboardSchema, schema)
             + root.packageDocMixin(version, schema.info.title, k + '.')
+            + veneer[k](schema.info.title)
           for schema in filteredSchemas[k]
         }
         + root.packageDocMixin(version, k, '')
       for k in std.objectFields(filteredSchemas)
-      if k != 'general'
+      if k != 'core'
     }
     + {
+      // Move rowPanel schema to panels
+      local rowPanel =
+        root.restructure({
+          info: {
+            title: 'RowPanelCfg',
+          },
+          components: {
+            schemas:
+              dashboardSchema.components.schemas
+              {
+                RowPanelCfg:
+                  dashboardSchema.components.schemas.RowPanel
+                  { properties+: { panels+: { items: {} } } },
+              },
+          },
+        }),
+
+      panel+: {
+        row:
+          root.coreLib.new(rowPanel)
+          + root.packageDocMixin(version, 'row', 'panel.')
+          + veneer.panel('row'),
+      },
+
+      // Add docs
       '#':
         d.package.new(
           'grafonnet',
@@ -74,9 +101,10 @@ local veneer = import './veneer/main.libsonnet';
           'main.libsonnet',
           'main',
         ),
-    }
-    + veneer
-    + { util: util },
+
+      // Add util functions
+      util: util,
+    },
 
 
   packageDocMixin(version, name, path):
