@@ -18,24 +18,25 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
   ),
   getOptionsForCustomQuery(query): {
     local values = root.parseCustomQuery(query),
-
-    current: {
-      selected: false,
-      text: values[0].key,
-      value: values[0].value,
-    },
-
-    options:
-      std.mapWithIndex(
-        function(i, item) {
-          selected: i == 0,
-          text: item.key,
-          value: item.value,
-        },
-        values
-      ),
+    current: root.getCurrentFromValues(values),
+    options: root.getOptionsFromValues(values),
   },
 
+  getCurrentFromValues(values): {
+    selected: false,
+    text: values[0].key,
+    value: values[0].value,
+  },
+
+  getOptionsFromValues(values):
+    std.mapWithIndex(
+      function(i, item) {
+        selected: i == 0,
+        text: item.key,
+        value: item.value,
+      },
+      values
+    ),
   parseCustomQuery(query):
     // Break query down to character level
     local split = std.mapWithIndex(
