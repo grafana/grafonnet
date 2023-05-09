@@ -5,26 +5,25 @@ local g = import 'g.libsonnet';
     datasourceRegex,
     variablesSelector,
   ): {
-    local var = g.dashboard.templateVariable,
+    local var = g.dashboard.variable,
 
     variables: {
       datasource:
-        var.new('datasource', 'datasource')
-        + var.withQuery('prometheus')
-        + var.withRegex(datasourceRegex),
+        var.datasource.new('datasource', 'prometheus')
+        + var.datasource.withRegex(datasourceRegex),
 
       cluster:
-        var.new('cluster')
-        + var.datasource.fromVariable(self.datasource)
-        + var.query.withLabelValues(
+        var.query.new('cluster')
+        + var.query.withDatasourceFromVariable(self.datasource)
+        + var.query.queryTypes.withLabelValues(
           'cluster',
           'request_duration_seconds_count{%s}' % variablesSelector,
         ),
 
       namespace:
-        var.new('namespace')
-        + var.datasource.fromVariable(self.datasource)
-        + var.query.withLabelValues(
+        var.query.new('namespace')
+        + var.query.withDatasourceFromVariable(self.datasource)
+        + var.query.queryTypes.withLabelValues(
           'namespace',
           'request_duration_seconds_count{cluster="$%s", %s}' % [
             self.cluster.name,

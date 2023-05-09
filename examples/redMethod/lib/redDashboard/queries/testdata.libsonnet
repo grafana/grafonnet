@@ -2,8 +2,6 @@ local g = import 'g.libsonnet';
 
 {
   new(): {
-    local var = g.dashboard.templateVariable,
-
     variables: {
       toArray: [],
     },
