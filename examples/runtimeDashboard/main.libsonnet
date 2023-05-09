@@ -12,7 +12,7 @@ g.dashboard.new('Controller Runtime')
   (https://github.com/kubernetes-sigs/controller-runtime)
 |||)
 + g.dashboard.graphTooltip.withSharedCrosshair()
-+ g.dashboard.withTemplateVariables([
++ g.dashboard.withVariables([
   variables.datasource,
   variables.cluster,
   variables.namespace,
