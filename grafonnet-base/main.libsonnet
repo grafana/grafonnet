@@ -99,26 +99,44 @@ local veneer = import './veneer/main.libsonnet';
     ),
 
   restructure(schema):
-    local _title = schema.info.title;
+    local title = schema.info.title;
+    local formatted = root.formatPanelName(title);
 
-    // TempoDataQuery schema is a bit different, temporarily covering for this case.
-    local title =
-      if _title == 'TempoDataQuery'
-      then 'TempoQuery'
-      else _title;
-    local formatted =
-      if _title == 'TempoDataQuery'
-      then root.formatPanelName(_title)
-      else root.formatPanelName(title);
+    local schemaFixes = {
+      CloudWatchDataQuery: {
+        [formatted]: {
+          type: 'object',
+          oneOf: [
+            { '$ref': '#/components/schemas/CloudWatchAnnotationQuery' },
+            { '$ref': '#/components/schemas/CloudWatchLogsQuery' },
+            { '$ref': '#/components/schemas/CloudWatchMetricsQuery' },
+          ],
+        },
+      },
+      AzureMonitorDataQuery: {
+        [formatted]: {
+          '$ref': '#/components/schemas/AzureMonitorQuery',
+        },
+      },
+      TempoDataQuery: {
+        [formatted]: {
+          '$ref': '#/components/schemas/TempoQuery',
+        },
+      },
+    };
 
     schema {
       info+: {
         title: formatted,
       },
       components+: {
-        schemas+: {
-          [formatted]: super[title],
-        },
+        schemas+:
+          // FIXME: Some schemas follow a different structure,  temporarily covering for this.
+          std.get(
+            schemaFixes,
+            title,
+            { [formatted]: super[title] }
+          ),
       },
     }
   ,
