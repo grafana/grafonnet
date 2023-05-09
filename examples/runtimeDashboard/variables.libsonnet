@@ -1,41 +1,41 @@
 local g = import './g.libsonnet';
-local var = g.dashboard.templating.list;
+local var = g.dashboard.variable;
 
 {
   datasource:
-    var.new('datasource', 'datasource')
-    + var.withQuery('prometheus')
-    + var.withRegex('(ops|dev)-cortex'),
+    var.datasource.new('datasource', 'prometheus')
+    + var.datasource.withRegex('(ops|dev)-cortex'),
 
   cluster:
-    var.withName('cluster')
-    + var.withType('query')
-    + var.datasource.fromVariable(self.datasource)
-    + var.withQuery('label_values(process_cpu_seconds_total, cluster)')
-    + var.withRefresh('time')
-    + var.withMulti()
-    + var.withIncludeAll(),
+    var.query.new('cluster')
+    + var.query.withDatasourceFromVariable(self.datasource)
+    + var.query.queryTypes.withLabelValues(
+      'cluster',
+      'process_cpu_seconds_total',
+    )
+    + var.query.withRefresh('time')
+    + var.query.selectionOptions.withMulti()
+    + var.query.selectionOptions.withIncludeAll(),
 
   namespace:
-    var.withName('namespace')
-    + var.withType('query')
-    + var.datasource.fromVariable(self.datasource)
-    + var.withQuery(
-      'label_values(process_cpu_seconds_total{cluster=~"$%s"}, namespace)'
-      % self.cluster.name
+    var.query.new('namespace')
+    + var.query.withDatasourceFromVariable(self.datasource)
+    + var.query.queryTypes.withLabelValues(
+      'namespace',
+      'process_cpu_seconds_total{cluster=~"$%s"}' % self.cluster.name,
     )
-    + var.withRefresh('time'),
+    + var.query.withRefresh('time'),
 
   job:
-    var.withName('job')
-    + var.withType('query')
-    + var.datasource.fromVariable(self.datasource)
-    + var.withQuery(
-      'label_values(process_cpu_seconds_total{cluster=~"$%s", namespace=~"$%s"}, job)'
+    var.query.new('job')
+    + var.query.withDatasourceFromVariable(self.datasource)
+    + var.query.queryTypes.withLabelValues(
+      'job',
+      'process_cpu_seconds_total{cluster=~"$%s", namespace=~"$%s"}'
       % [
         self.cluster.name,
         self.namespace.name,
-      ]
+      ],
     )
-    + var.withRefresh('time'),
+    + var.query.withRefresh('time'),
 }

@@ -16,7 +16,7 @@ local testDataQueries = import './queries/testdata.libsonnet';
       + g.dashboard.withUid(g.util.string.slugify(titleString) + '-demo')
       + g.dashboard.withDescription('RED dashboard for ' + title)
       + g.dashboard.graphTooltip.withSharedCrosshair()
-      + g.dashboard.withTemplateVariables(this.queries.variables.toArray)
+      + g.dashboard.withVariables(this.queries.variables.toArray)
       + g.dashboard.withPanels(
         g.util.grid.makeGrid([
           panels.new(
