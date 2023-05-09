@@ -102,6 +102,29 @@ local veneer = import './veneer/main.libsonnet';
     local title = schema.info.title;
     local formatted = root.formatPanelName(title);
 
+    local schemaFixes = {
+      CloudWatchDataQuery: {
+        [formatted]: {
+          type: 'object',
+          oneOf: [
+            { '$ref': '#/components/schemas/CloudWatchAnnotationQuery' },
+            { '$ref': '#/components/schemas/CloudWatchLogsQuery' },
+            { '$ref': '#/components/schemas/CloudWatchMetricsQuery' },
+          ],
+        },
+      },
+      AzureMonitorDataQuery: {
+        [formatted]: {
+          '$ref': '#/components/schemas/AzureMonitorQuery',
+        },
+      },
+      TempoDataQuery: {
+        [formatted]: {
+          '$ref': '#/components/schemas/TempoQuery',
+        },
+      },
+    };
+
     schema {
       info+: {
         title: formatted,
@@ -109,33 +132,11 @@ local veneer = import './veneer/main.libsonnet';
       components+: {
         schemas+:
           // FIXME: Some schemas follow a different structure,  temporarily covering for this.
-
-          if title == 'CloudWatchDataQuery'
-          then {
-            [formatted]: {
-              type: 'object',
-              oneOf: [
-                { '$ref': '#/components/schemas/CloudWatchAnnotationQuery' },
-                { '$ref': '#/components/schemas/CloudWatchLogsQuery' },
-                { '$ref': '#/components/schemas/CloudWatchMetricsQuery' },
-              ],
-            },
-          }
-          else if title == 'AzureMonitorDataQuery'
-          then {
-            [formatted]: {
-              '$ref': '#/components/schemas/AzureMonitorQuery',
-            },
-          }
-          else if title == 'TempoDataQuery'
-          then {
-            [formatted]: {
-              '$ref': '#/components/schemas/TempoQuery',
-            },
-          }
-          else {
-            [formatted]: super[title],
-          },
+          std.get(
+            schemaFixes,
+            title,
+            { [formatted]: super[title] }
+          ),
       },
     }
   ,
