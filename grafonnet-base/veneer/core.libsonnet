@@ -35,6 +35,30 @@ local veneer = {
         withGraphTooltip(2),
     },
 
+    // Manual veneer for annotations
+    '#annotations':: {},
+    annotation: (import './annotation.libsonnet')(self.annotations.list),
+    '#withAnnotations':
+      d.func.new(
+        |||
+          `withAnnotations` adds an array of annotations to a dashboard.
+
+          This function appends passed data to existing values
+        |||,
+        args=[d.arg('value', d.T.array)]
+      ),
+    withAnnotations(value): self.annotations.withList(value),
+    '#withAnnotationsMixin':
+      d.func.new(
+        |||
+          `withAnnotationsMixin` adds an array of annotations to a dashboard.
+
+          This function appends passed data to existing values
+        |||,
+        args=[d.arg('value', d.T.array)]
+      ),
+    withAnnotationsMixin(value): self.annotations.withListMixin(value),
+
     // Manual veneer for links (matches UI)
     '#links':: {},
     link: (import './link.libsonnet')(self.links),
