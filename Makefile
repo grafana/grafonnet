@@ -40,7 +40,7 @@ localmkdocs:
 	python -m venv .mkdocs/.venv; \
 	source .mkdocs/.venv/bin/activate; \
 	pip install -r .mkdocs/requirements.txt; \
-	mkdocs build -f .mkdocs/mkdocs.yml
+	mkdocs serve -f .mkdocs/mkdocs.yml
 
 test:
 	@cd test/; \

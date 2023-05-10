@@ -6,3 +6,6 @@ mkdocs-minify-plugin>=0.3
 
 # Include the theme
 mkdocs-material>=7.1.6
+
+# Deal with list indent of 2 spaces
+mdx-truly-sane-lists>=1.3

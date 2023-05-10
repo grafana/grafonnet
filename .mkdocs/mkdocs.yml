@@ -1,8 +1,15 @@
 "docs_dir": "../docs/"
+"watch": 
+  - "../docs/grafonnet/"
+  - "../docs/README.md"
 "edit_uri": ""
+"use_directory_urls": false
 "markdown_extensions":
   - "pymdownx.highlight"
   - "pymdownx.superfences"
+  - "mdx_truly_sane_lists":
+      "nested_indent": 2
+      "truly_sane": True
 "plugins":
   - "search":
       "separator": "[\\s\\-\\.]+"
