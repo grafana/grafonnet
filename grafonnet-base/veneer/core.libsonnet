@@ -35,7 +35,11 @@ local veneer = {
         withGraphTooltip(2),
     },
 
-    // Use manually written veneer to align with GUI
+    // Manual veneer for links (matches UI)
+    '#links':: {},
+    link: (import './link.libsonnet')(self.links),
+
+    // Manual veneer for variables (matches UI)
     variable: (import './variable.libsonnet')(self.templating.list),
 
     '#withVariables':
