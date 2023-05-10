@@ -17,7 +17,25 @@ local veneer = {
       + self.time.withFrom('now-6h')
       + self.time.withTo('now'),
 
-    local withGraphTooltip = self.withGraphTooltip,
+    // Hide functions covered by objects
+    '#withTime':: {},
+    '#withTimeMixin':: {},
+    '#withTimePicker':: {},
+    '#withTimePickerMixin':: {},
+    '#withGraphTooltip':: {},
+    '#withGraphTooltipMixin':: {},
+
+    // Hide internal values
+    '#withGnetId':: {},
+    '#withId':: {},
+    '#withRevision':: {},
+    '#withVersion':: {},
+    '#snapshot':: {},  // Snapshots can't be created through code afaik
+    '#withSnapshot':: {},
+    '#withSnapshotMixin':: {},
+
+
+    local withGraphTooltip = super.withGraphTooltip,
     graphTooltip+: {
       // 0 - Default
       // 1 - Shared crosshair
