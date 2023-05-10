@@ -23,7 +23,7 @@ grafonnet.panel.heatmap
 * [`fn withOptionsMixin(value)`](#fn-withoptionsmixin)
 * [`fn withPluginVersion(value)`](#fn-withpluginversion)
 * [`fn withRepeat(value)`](#fn-withrepeat)
-* [`fn withRepeatDirection(value='h')`](#fn-withrepeatdirection)
+* [`fn withRepeatDirection(value="h")`](#fn-withrepeatdirection)
 * [`fn withRepeatPanelId(value)`](#fn-withrepeatpanelid)
 * [`fn withTags(value)`](#fn-withtags)
 * [`fn withTagsMixin(value)`](#fn-withtagsmixin)
@@ -148,10 +148,10 @@ grafonnet.panel.heatmap
     * [`fn withProperties(value)`](#fn-fieldconfigoverrideswithproperties)
     * [`fn withPropertiesMixin(value)`](#fn-fieldconfigoverrideswithpropertiesmixin)
     * [`obj matcher`](#obj-fieldconfigoverridesmatcher)
-      * [`fn withId(value='')`](#fn-fieldconfigoverridesmatcherwithid)
+      * [`fn withId(value="")`](#fn-fieldconfigoverridesmatcherwithid)
       * [`fn withOptions(value)`](#fn-fieldconfigoverridesmatcherwithoptions)
     * [`obj properties`](#obj-fieldconfigoverridesproperties)
-      * [`fn withId(value='')`](#fn-fieldconfigoverridespropertieswithid)
+      * [`fn withId(value="")`](#fn-fieldconfigoverridespropertieswithid)
       * [`fn withValue(value)`](#fn-fieldconfigoverridespropertieswithvalue)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
@@ -180,14 +180,14 @@ grafonnet.panel.heatmap
   * [`fn withCalculationMixin(value)`](#fn-optionswithcalculationmixin)
   * [`fn withCellGap(value=1)`](#fn-optionswithcellgap)
   * [`fn withCellRadius(value)`](#fn-optionswithcellradius)
-  * [`fn withCellValues(value={ })`](#fn-optionswithcellvalues)
-  * [`fn withCellValuesMixin(value={ })`](#fn-optionswithcellvaluesmixin)
-  * [`fn withColor(value={"exponent": 0.5, "fill": "dark-orange", "reverse": false, "scheme": "Oranges", "steps": 64})`](#fn-optionswithcolor)
-  * [`fn withColorMixin(value={"exponent": 0.5, "fill": "dark-orange", "reverse": false, "scheme": "Oranges", "steps": 64})`](#fn-optionswithcolormixin)
+  * [`fn withCellValues(value={})`](#fn-optionswithcellvalues)
+  * [`fn withCellValuesMixin(value={})`](#fn-optionswithcellvaluesmixin)
+  * [`fn withColor(value={"exponent": 0.5,"fill": "dark-orange","reverse": false,"scheme": "Oranges","steps": 64})`](#fn-optionswithcolor)
+  * [`fn withColorMixin(value={"exponent": 0.5,"fill": "dark-orange","reverse": false,"scheme": "Oranges","steps": 64})`](#fn-optionswithcolormixin)
   * [`fn withExemplars(value)`](#fn-optionswithexemplars)
   * [`fn withExemplarsMixin(value)`](#fn-optionswithexemplarsmixin)
-  * [`fn withFilterValues(value={"le": 1.0000000000000001e-09})`](#fn-optionswithfiltervalues)
-  * [`fn withFilterValuesMixin(value={"le": 1.0000000000000001e-09})`](#fn-optionswithfiltervaluesmixin)
+  * [`fn withFilterValues(value={"le": 0.000000001})`](#fn-optionswithfiltervalues)
+  * [`fn withFilterValuesMixin(value={"le": 0.000000001})`](#fn-optionswithfiltervaluesmixin)
   * [`fn withLegend(value)`](#fn-optionswithlegend)
   * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
   * [`fn withRowsFrame(value)`](#fn-optionswithrowsframe)
@@ -282,7 +282,7 @@ grafonnet.panel.heatmap
   * [`fn withId(value)`](#fn-transformationswithid)
   * [`fn withOptions(value)`](#fn-transformationswithoptions)
   * [`obj filter`](#obj-transformationsfilter)
-    * [`fn withId(value='')`](#fn-transformationsfilterwithid)
+    * [`fn withId(value="")`](#fn-transformationsfilterwithid)
     * [`fn withOptions(value)`](#fn-transformationsfilterwithoptions)
 
 ## Fields
@@ -447,14 +447,14 @@ Name of template variable to repeat for.
 ### fn withRepeatDirection
 
 ```ts
-withRepeatDirection(value='h')
+withRepeatDirection(value="h")
 ```
 
 Direction to repeat in if 'repeat' is set.
 "h" for horizontal, "v" for vertical.
 TODO this is probably optional
 
-Accepted values for `value` are h, v
+Accepted values for `value` are "h", "v"
 
 ### fn withRepeatPanelId
 
@@ -845,7 +845,7 @@ withSeriesBy(value)
 
 TODO docs
 
-Accepted values for `value` are min, max, last
+Accepted values for `value` are "min", "max", "last"
 
 ##### obj fieldConfig.defaults.custom
 
@@ -936,7 +936,7 @@ withType(value)
 
 TODO docs
 
-Accepted values for `value` are linear, log, ordinal, symlog
+Accepted values for `value` are "linear", "log", "ordinal", "symlog"
 
 ##### obj fieldConfig.defaults.mappings
 
@@ -1165,7 +1165,7 @@ withMatch(value)
 
 
 
-Accepted values for `value` are true, false
+Accepted values for `value` are "true", "false"
 
 ######## fn fieldConfig.defaults.mappings.SpecialValueMap.options.withPattern
 
@@ -1264,7 +1264,7 @@ withMode(value)
 
 
 
-Accepted values for `value` are absolute, percentage
+Accepted values for `value` are "absolute", "percentage"
 
 ###### fn fieldConfig.defaults.thresholds.withSteps
 
@@ -1361,7 +1361,7 @@ withPropertiesMixin(value)
 ###### fn fieldConfig.overrides.matcher.withId
 
 ```ts
-withId(value='')
+withId(value="")
 ```
 
 
@@ -1380,7 +1380,7 @@ withOptions(value)
 ###### fn fieldConfig.overrides.properties.withId
 
 ```ts
-withId(value='')
+withId(value="")
 ```
 
 
@@ -1538,7 +1538,7 @@ withType(value)
 
 TODO docs
 
-Accepted values for `value` are link, dashboards
+Accepted values for `value` are "link", "dashboards"
 
 #### fn links.withUrl
 
@@ -1594,7 +1594,7 @@ Controls cell radius
 #### fn options.withCellValues
 
 ```ts
-withCellValues(value={ })
+withCellValues(value={})
 ```
 
 Controls cell value unit
@@ -1602,7 +1602,7 @@ Controls cell value unit
 #### fn options.withCellValuesMixin
 
 ```ts
-withCellValuesMixin(value={ })
+withCellValuesMixin(value={})
 ```
 
 Controls cell value unit
@@ -1610,7 +1610,7 @@ Controls cell value unit
 #### fn options.withColor
 
 ```ts
-withColor(value={"exponent": 0.5, "fill": "dark-orange", "reverse": false, "scheme": "Oranges", "steps": 64})
+withColor(value={"exponent": 0.5,"fill": "dark-orange","reverse": false,"scheme": "Oranges","steps": 64})
 ```
 
 Controls the color options
@@ -1618,7 +1618,7 @@ Controls the color options
 #### fn options.withColorMixin
 
 ```ts
-withColorMixin(value={"exponent": 0.5, "fill": "dark-orange", "reverse": false, "scheme": "Oranges", "steps": 64})
+withColorMixin(value={"exponent": 0.5,"fill": "dark-orange","reverse": false,"scheme": "Oranges","steps": 64})
 ```
 
 Controls the color options
@@ -1642,7 +1642,7 @@ Controls exemplar options
 #### fn options.withFilterValues
 
 ```ts
-withFilterValues(value={"le": 1.0000000000000001e-09})
+withFilterValues(value={"le": 0.000000001})
 ```
 
 Filters values between a given range
@@ -1650,7 +1650,7 @@ Filters values between a given range
 #### fn options.withFilterValuesMixin
 
 ```ts
-withFilterValuesMixin(value={"le": 1.0000000000000001e-09})
+withFilterValuesMixin(value={"le": 0.000000001})
 ```
 
 Filters values between a given range
@@ -1695,7 +1695,7 @@ withShowValue(value)
 
 TODO docs
 
-Accepted values for `value` are auto, never, always
+Accepted values for `value` are "auto", "never", "always"
 
 #### fn options.withTooltip
 
@@ -1775,7 +1775,7 @@ withMode(value)
 
 
 
-Accepted values for `value` are size, count
+Accepted values for `value` are "size", "count"
 
 ###### fn options.calculation.xBuckets.withScale
 
@@ -1828,7 +1828,7 @@ withType(value)
 
 TODO docs
 
-Accepted values for `value` are linear, log, ordinal, symlog
+Accepted values for `value` are "linear", "log", "ordinal", "symlog"
 
 ##### obj options.calculation.yBuckets
 
@@ -1841,7 +1841,7 @@ withMode(value)
 
 
 
-Accepted values for `value` are size, count
+Accepted values for `value` are "size", "count"
 
 ###### fn options.calculation.yBuckets.withScale
 
@@ -1894,7 +1894,7 @@ withType(value)
 
 TODO docs
 
-Accepted values for `value` are linear, log, ordinal, symlog
+Accepted values for `value` are "linear", "log", "ordinal", "symlog"
 
 #### obj options.cellValues
 
@@ -1996,7 +1996,7 @@ withMode(value)
 
 Controls the color mode of the heatmap
 
-Accepted values for `value` are opacity, scheme
+Accepted values for `value` are "opacity", "scheme"
 
 ###### fn options.color.HeatmapColorOptions.withReverse
 
@@ -2014,7 +2014,7 @@ withScale(value)
 
 Controls the color scale of the heatmap
 
-Accepted values for `value` are linear, exponential
+Accepted values for `value` are "linear", "exponential"
 
 ###### fn options.color.HeatmapColorOptions.withScheme
 
@@ -2103,7 +2103,7 @@ withLayout(value)
 
 
 
-Accepted values for `value` are le, ge, unknown, auto
+Accepted values for `value` are "le", "ge", "unknown", "auto"
 
 ##### fn options.rowsFrame.withValue
 
@@ -2151,7 +2151,7 @@ withAxisColorMode(value)
 
 TODO docs
 
-Accepted values for `value` are text, series
+Accepted values for `value` are "text", "series"
 
 ##### fn options.yAxis.withAxisGridShow
 
@@ -2177,7 +2177,7 @@ withAxisPlacement(value)
 
 TODO docs
 
-Accepted values for `value` are auto, top, right, bottom, left, hidden
+Accepted values for `value` are "auto", "top", "right", "bottom", "left", "hidden"
 
 ##### fn options.yAxis.withAxisSoftMax
 
@@ -2286,7 +2286,7 @@ withType(value)
 
 TODO docs
 
-Accepted values for `value` are linear, log, ordinal, symlog
+Accepted values for `value` are "linear", "log", "ordinal", "symlog"
 
 ### obj transformations
 
@@ -2338,7 +2338,7 @@ Valid options depend on the transformer id
 ##### fn transformations.filter.withId
 
 ```ts
-withId(value='')
+withId(value="")
 ```
 
 

@@ -4,7 +4,7 @@ grafonnet.playlist
 
 ## Index
 
-* [`fn withInterval(value='5m')`](#fn-withinterval)
+* [`fn withInterval(value="5m")`](#fn-withinterval)
 * [`fn withItems(value)`](#fn-withitems)
 * [`fn withItemsMixin(value)`](#fn-withitemsmixin)
 * [`fn withName(value)`](#fn-withname)
@@ -19,7 +19,7 @@ grafonnet.playlist
 ### fn withInterval
 
 ```ts
-withInterval(value='5m')
+withInterval(value="5m")
 ```
 
 Interval sets the time between switching views in a playlist.
@@ -79,7 +79,7 @@ withType(value)
 
 Type of the item.
 
-Accepted values for `value` are dashboard_by_uid, dashboard_by_id, dashboard_by_tag
+Accepted values for `value` are "dashboard_by_uid", "dashboard_by_id", "dashboard_by_tag"
 
 #### fn items.withValue
 

@@ -124,7 +124,7 @@ withType(value)
 
 
 
-Accepted values for `value` are row
+Accepted values for `value` are "row"
 
 ### obj datasource
 

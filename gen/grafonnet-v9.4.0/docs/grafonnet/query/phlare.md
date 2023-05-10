@@ -8,7 +8,7 @@ grafonnet.query.phlare
 * [`fn withGroupBy(value)`](#fn-withgroupby)
 * [`fn withGroupByMixin(value)`](#fn-withgroupbymixin)
 * [`fn withHide(value)`](#fn-withhide)
-* [`fn withLabelSelector(value='{}')`](#fn-withlabelselector)
+* [`fn withLabelSelector(value="{}")`](#fn-withlabelselector)
 * [`fn withProfileTypeId(value)`](#fn-withprofiletypeid)
 * [`fn withQueryType(value)`](#fn-withquerytype)
 * [`fn withRefId(value)`](#fn-withrefid)
@@ -55,7 +55,7 @@ the results from a hidden query may be used as the input to other queries (SSE e
 ### fn withLabelSelector
 
 ```ts
-withLabelSelector(value='{}')
+withLabelSelector(value="{}")
 ```
 
 Specifies the query label selectors.

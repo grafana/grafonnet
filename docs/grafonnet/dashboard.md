@@ -28,7 +28,7 @@ grafonnet.dashboard
 * [`fn withSchemaVersion(value=36)`](#fn-withschemaversion)
 * [`fn withSnapshot(value)`](#fn-withsnapshot)
 * [`fn withSnapshotMixin(value)`](#fn-withsnapshotmixin)
-* [`fn withStyle(value='dark')`](#fn-withstyle)
+* [`fn withStyle(value="dark")`](#fn-withstyle)
 * [`fn withTags(value)`](#fn-withtags)
 * [`fn withTagsMixin(value)`](#fn-withtagsmixin)
 * [`fn withTemplating(value)`](#fn-withtemplating)
@@ -37,7 +37,7 @@ grafonnet.dashboard
 * [`fn withTimeMixin(value)`](#fn-withtimemixin)
 * [`fn withTimepicker(value)`](#fn-withtimepicker)
 * [`fn withTimepickerMixin(value)`](#fn-withtimepickermixin)
-* [`fn withTimezone(value='browser')`](#fn-withtimezone)
+* [`fn withTimezone(value="browser")`](#fn-withtimezone)
 * [`fn withTitle(value)`](#fn-withtitle)
 * [`fn withUid(value)`](#fn-withuid)
 * [`fn withVariables(value)`](#fn-withvariables)
@@ -59,7 +59,7 @@ grafonnet.dashboard
     * [`fn withShowIn(value=0)`](#fn-annotationslistwithshowin)
     * [`fn withTarget(value)`](#fn-annotationslistwithtarget)
     * [`fn withTargetMixin(value)`](#fn-annotationslistwithtargetmixin)
-    * [`fn withType(value='dashboard')`](#fn-annotationslistwithtype)
+    * [`fn withType(value="dashboard")`](#fn-annotationslistwithtype)
     * [`obj datasource`](#obj-annotationslistdatasource)
       * [`fn withType(value)`](#fn-annotationslistdatasourcewithtype)
       * [`fn withUid(value)`](#fn-annotationslistdatasourcewithuid)
@@ -97,16 +97,16 @@ grafonnet.dashboard
   * [`fn withUrl(value)`](#fn-snapshotwithurl)
   * [`fn withUserId(value)`](#fn-snapshotwithuserid)
 * [`obj time`](#obj-time)
-  * [`fn withFrom(value='now-6h')`](#fn-timewithfrom)
-  * [`fn withTo(value='now')`](#fn-timewithto)
+  * [`fn withFrom(value="now-6h")`](#fn-timewithfrom)
+  * [`fn withTo(value="now")`](#fn-timewithto)
 * [`obj timepicker`](#obj-timepicker)
   * [`fn withCollapse(value=false)`](#fn-timepickerwithcollapse)
   * [`fn withEnable(value=true)`](#fn-timepickerwithenable)
   * [`fn withHidden(value=false)`](#fn-timepickerwithhidden)
-  * [`fn withRefreshIntervals(value=["5s", "10s", "30s", "1m", "5m", "15m", "30m", "1h", "2h", "1d"])`](#fn-timepickerwithrefreshintervals)
-  * [`fn withRefreshIntervalsMixin(value=["5s", "10s", "30s", "1m", "5m", "15m", "30m", "1h", "2h", "1d"])`](#fn-timepickerwithrefreshintervalsmixin)
-  * [`fn withTimeOptions(value=["5m", "15m", "1h", "6h", "12h", "24h", "2d", "7d", "30d"])`](#fn-timepickerwithtimeoptions)
-  * [`fn withTimeOptionsMixin(value=["5m", "15m", "1h", "6h", "12h", "24h", "2d", "7d", "30d"])`](#fn-timepickerwithtimeoptionsmixin)
+  * [`fn withRefreshIntervals(value=["5s","10s","30s","1m","5m","15m","30m","1h","2h","1d"])`](#fn-timepickerwithrefreshintervals)
+  * [`fn withRefreshIntervalsMixin(value=["5s","10s","30s","1m","5m","15m","30m","1h","2h","1d"])`](#fn-timepickerwithrefreshintervalsmixin)
+  * [`fn withTimeOptions(value=["5m","15m","1h","6h","12h","24h","2d","7d","30d"])`](#fn-timepickerwithtimeoptions)
+  * [`fn withTimeOptionsMixin(value=["5m","15m","1h","6h","12h","24h","2d","7d","30d"])`](#fn-timepickerwithtimeoptionsmixin)
 
 ## Fields
 
@@ -284,12 +284,12 @@ TODO docs
 ### fn withStyle
 
 ```ts
-withStyle(value='dark')
+withStyle(value="dark")
 ```
 
 Theme of dashboard.
 
-Accepted values for `value` are dark, light
+Accepted values for `value` are "dark", "light"
 
 ### fn withTags
 
@@ -360,7 +360,7 @@ TODO this appears to be spread all over in the frontend. Concepts will likely ne
 ### fn withTimezone
 
 ```ts
-withTimezone(value='browser')
+withTimezone(value="browser")
 ```
 
 Timezone of dashboard. Accepts IANA TZDB zone ID or "browser" or "utc".
@@ -530,7 +530,7 @@ TODO docs
 ##### fn annotations.list.withType
 
 ```ts
-withType(value='dashboard')
+withType(value="dashboard")
 ```
 
 
@@ -699,7 +699,7 @@ withType(value)
 
 TODO docs
 
-Accepted values for `value` are link, dashboards
+Accepted values for `value` are "link", "dashboards"
 
 #### fn links.withUrl
 
@@ -806,7 +806,7 @@ TODO docs
 #### fn time.withFrom
 
 ```ts
-withFrom(value='now-6h')
+withFrom(value="now-6h")
 ```
 
 
@@ -814,7 +814,7 @@ withFrom(value='now-6h')
 #### fn time.withTo
 
 ```ts
-withTo(value='now')
+withTo(value="now")
 ```
 
 
@@ -849,7 +849,7 @@ Whether timepicker is visible or not.
 #### fn timepicker.withRefreshIntervals
 
 ```ts
-withRefreshIntervals(value=["5s", "10s", "30s", "1m", "5m", "15m", "30m", "1h", "2h", "1d"])
+withRefreshIntervals(value=["5s","10s","30s","1m","5m","15m","30m","1h","2h","1d"])
 ```
 
 Selectable intervals for auto-refresh.
@@ -857,7 +857,7 @@ Selectable intervals for auto-refresh.
 #### fn timepicker.withRefreshIntervalsMixin
 
 ```ts
-withRefreshIntervalsMixin(value=["5s", "10s", "30s", "1m", "5m", "15m", "30m", "1h", "2h", "1d"])
+withRefreshIntervalsMixin(value=["5s","10s","30s","1m","5m","15m","30m","1h","2h","1d"])
 ```
 
 Selectable intervals for auto-refresh.
@@ -865,7 +865,7 @@ Selectable intervals for auto-refresh.
 #### fn timepicker.withTimeOptions
 
 ```ts
-withTimeOptions(value=["5m", "15m", "1h", "6h", "12h", "24h", "2d", "7d", "30d"])
+withTimeOptions(value=["5m","15m","1h","6h","12h","24h","2d","7d","30d"])
 ```
 
 TODO docs
@@ -873,7 +873,7 @@ TODO docs
 #### fn timepicker.withTimeOptionsMixin
 
 ```ts
-withTimeOptionsMixin(value=["5m", "15m", "1h", "6h", "12h", "24h", "2d", "7d", "30d"])
+withTimeOptionsMixin(value=["5m","15m","1h","6h","12h","24h","2d","7d","30d"])
 ```
 
 TODO docs

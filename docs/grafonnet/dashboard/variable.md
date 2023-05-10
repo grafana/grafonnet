@@ -99,11 +99,11 @@ g.dashboard.new('my dashboard')
       * [`fn withNothing()`](#fn-intervalgeneraloptionsshowondashboardwithnothing)
       * [`fn withValueOnly()`](#fn-intervalgeneraloptionsshowondashboardwithvalueonly)
 * [`obj query`](#obj-query)
-  * [`fn new(name, query='')`](#fn-querynew)
+  * [`fn new(name, query="")`](#fn-querynew)
   * [`fn withDatasource(type, uid)`](#fn-querywithdatasource)
   * [`fn withDatasourceFromVariable(variable)`](#fn-querywithdatasourcefromvariable)
   * [`fn withRegex(value)`](#fn-querywithregex)
-  * [`fn withSort(i=0, type='alphabetical', asc=true, caseInsensitive=false)`](#fn-querywithsort)
+  * [`fn withSort(i=0, type="alphabetical", asc=true, caseInsensitive=false)`](#fn-querywithsort)
   * [`obj generalOptions`](#obj-querygeneraloptions)
     * [`fn withDescription(value)`](#fn-querygeneraloptionswithdescription)
     * [`fn withLabel(value)`](#fn-querygeneraloptionswithlabel)
@@ -121,7 +121,7 @@ g.dashboard.new('my dashboard')
     * [`fn withIncludeAll(value=true, customAllValue)`](#fn-queryselectionoptionswithincludeall)
     * [`fn withMulti(value=true)`](#fn-queryselectionoptionswithmulti)
 * [`obj textbox`](#obj-textbox)
-  * [`fn new(name, default='')`](#fn-textboxnew)
+  * [`fn new(name, default="")`](#fn-textboxnew)
   * [`obj generalOptions`](#obj-textboxgeneraloptions)
     * [`fn withDescription(value)`](#fn-textboxgeneraloptionswithdescription)
     * [`fn withLabel(value)`](#fn-textboxgeneraloptionswithlabel)
@@ -551,7 +551,7 @@ withValueOnly()
 #### fn query.new
 
 ```ts
-new(name, query='')
+new(name, query="")
 ```
 
 Create a query template variable.
@@ -589,7 +589,7 @@ capture groups can be used to separate the display text and value
 #### fn query.withSort
 
 ```ts
-withSort(i=0, type='alphabetical', asc=true, caseInsensitive=false)
+withSort(i=0, type="alphabetical", asc=true, caseInsensitive=false)
 ```
 
 Choose how to sort the values in the dropdown.
@@ -720,7 +720,7 @@ Enable selecting multiple values.
 #### fn textbox.new
 
 ```ts
-new(name, default='')
+new(name, default="")
 ```
 
 `new` creates a textbox template variable.

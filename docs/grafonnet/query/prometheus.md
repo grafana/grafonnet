@@ -44,7 +44,7 @@ withEditorMode(value)
 
 
 
-Accepted values for `value` are code, builder
+Accepted values for `value` are "code", "builder"
 
 ### fn withExemplar
 
@@ -70,7 +70,7 @@ withFormat(value)
 
 
 
-Accepted values for `value` are time_series, table, heatmap
+Accepted values for `value` are "time_series", "table", "heatmap"
 
 ### fn withHide
 

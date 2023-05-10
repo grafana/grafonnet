@@ -102,7 +102,7 @@ withRole(value)
 
 OrgRole is a Grafana Organization Role which can be 'Viewer', 'Editor', 'Admin'.
 
-Accepted values for `value` are Admin, Editor, Viewer
+Accepted values for `value` are "Admin", "Editor", "Viewer"
 
 ### fn withTeams
 

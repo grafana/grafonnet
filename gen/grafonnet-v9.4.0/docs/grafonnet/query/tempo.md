@@ -183,7 +183,7 @@ withScope(value)
 
 
 
-Accepted values for `value` are unscoped, resource, span
+Accepted values for `value` are "unscoped", "resource", "span"
 
 #### fn filters.withTag
 
@@ -201,7 +201,7 @@ withType(value)
 
 static fields are pre-set in the UI, dynamic fields are added by the user
 
-Accepted values for `value` are static, dynamic
+Accepted values for `value` are "static", "dynamic"
 
 #### fn filters.withValue
 
