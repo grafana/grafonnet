@@ -23,7 +23,7 @@ grafonnet.panel.annotationsList
 * [`fn withOptionsMixin(value)`](#fn-withoptionsmixin)
 * [`fn withPluginVersion(value)`](#fn-withpluginversion)
 * [`fn withRepeat(value)`](#fn-withrepeat)
-* [`fn withRepeatDirection(value='h')`](#fn-withrepeatdirection)
+* [`fn withRepeatDirection(value="h")`](#fn-withrepeatdirection)
 * [`fn withRepeatPanelId(value)`](#fn-withrepeatpanelid)
 * [`fn withTags(value)`](#fn-withtags)
 * [`fn withTagsMixin(value)`](#fn-withtagsmixin)
@@ -135,10 +135,10 @@ grafonnet.panel.annotationsList
     * [`fn withProperties(value)`](#fn-fieldconfigoverrideswithproperties)
     * [`fn withPropertiesMixin(value)`](#fn-fieldconfigoverrideswithpropertiesmixin)
     * [`obj matcher`](#obj-fieldconfigoverridesmatcher)
-      * [`fn withId(value='')`](#fn-fieldconfigoverridesmatcherwithid)
+      * [`fn withId(value="")`](#fn-fieldconfigoverridesmatcherwithid)
       * [`fn withOptions(value)`](#fn-fieldconfigoverridesmatcherwithoptions)
     * [`obj properties`](#obj-fieldconfigoverridesproperties)
-      * [`fn withId(value='')`](#fn-fieldconfigoverridespropertieswithid)
+      * [`fn withId(value="")`](#fn-fieldconfigoverridespropertieswithid)
       * [`fn withValue(value)`](#fn-fieldconfigoverridespropertieswithvalue)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
@@ -163,8 +163,8 @@ grafonnet.panel.annotationsList
   * [`fn withUrl(value)`](#fn-linkswithurl)
 * [`obj options`](#obj-options)
   * [`fn withLimit(value=10)`](#fn-optionswithlimit)
-  * [`fn withNavigateAfter(value='10m')`](#fn-optionswithnavigateafter)
-  * [`fn withNavigateBefore(value='10m')`](#fn-optionswithnavigatebefore)
+  * [`fn withNavigateAfter(value="10m")`](#fn-optionswithnavigateafter)
+  * [`fn withNavigateBefore(value="10m")`](#fn-optionswithnavigatebefore)
   * [`fn withNavigateToPanel(value=true)`](#fn-optionswithnavigatetopanel)
   * [`fn withOnlyFromThisDashboard(value=false)`](#fn-optionswithonlyfromthisdashboard)
   * [`fn withOnlyInTimeRange(value=false)`](#fn-optionswithonlyintimerange)
@@ -180,7 +180,7 @@ grafonnet.panel.annotationsList
   * [`fn withId(value)`](#fn-transformationswithid)
   * [`fn withOptions(value)`](#fn-transformationswithoptions)
   * [`obj filter`](#obj-transformationsfilter)
-    * [`fn withId(value='')`](#fn-transformationsfilterwithid)
+    * [`fn withId(value="")`](#fn-transformationsfilterwithid)
     * [`fn withOptions(value)`](#fn-transformationsfilterwithoptions)
 
 ## Fields
@@ -345,14 +345,14 @@ Name of template variable to repeat for.
 ### fn withRepeatDirection
 
 ```ts
-withRepeatDirection(value='h')
+withRepeatDirection(value="h")
 ```
 
 Direction to repeat in if 'repeat' is set.
 "h" for horizontal, "v" for vertical.
 TODO this is probably optional
 
-Accepted values for `value` are h, v
+Accepted values for `value` are "h", "v"
 
 ### fn withRepeatPanelId
 
@@ -743,7 +743,7 @@ withSeriesBy(value)
 
 TODO docs
 
-Accepted values for `value` are min, max, last
+Accepted values for `value` are "min", "max", "last"
 
 ##### obj fieldConfig.defaults.mappings
 
@@ -972,7 +972,7 @@ withMatch(value)
 
 
 
-Accepted values for `value` are true, false
+Accepted values for `value` are "true", "false"
 
 ######## fn fieldConfig.defaults.mappings.SpecialValueMap.options.withPattern
 
@@ -1071,7 +1071,7 @@ withMode(value)
 
 
 
-Accepted values for `value` are absolute, percentage
+Accepted values for `value` are "absolute", "percentage"
 
 ###### fn fieldConfig.defaults.thresholds.withSteps
 
@@ -1168,7 +1168,7 @@ withPropertiesMixin(value)
 ###### fn fieldConfig.overrides.matcher.withId
 
 ```ts
-withId(value='')
+withId(value="")
 ```
 
 
@@ -1187,7 +1187,7 @@ withOptions(value)
 ###### fn fieldConfig.overrides.properties.withId
 
 ```ts
-withId(value='')
+withId(value="")
 ```
 
 
@@ -1345,7 +1345,7 @@ withType(value)
 
 TODO docs
 
-Accepted values for `value` are link, dashboards
+Accepted values for `value` are "link", "dashboards"
 
 #### fn links.withUrl
 
@@ -1369,7 +1369,7 @@ withLimit(value=10)
 #### fn options.withNavigateAfter
 
 ```ts
-withNavigateAfter(value='10m')
+withNavigateAfter(value="10m")
 ```
 
 
@@ -1377,7 +1377,7 @@ withNavigateAfter(value='10m')
 #### fn options.withNavigateBefore
 
 ```ts
-withNavigateBefore(value='10m')
+withNavigateBefore(value="10m")
 ```
 
 
@@ -1496,7 +1496,7 @@ Valid options depend on the transformer id
 ##### fn transformations.filter.withId
 
 ```ts
-withId(value='')
+withId(value="")
 ```
 
 

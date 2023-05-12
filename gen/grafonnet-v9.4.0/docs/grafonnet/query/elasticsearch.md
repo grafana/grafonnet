@@ -822,7 +822,7 @@ withOrder(value)
 
 
 
-Accepted values for `value` are desc, asc
+Accepted values for `value` are "desc", "asc"
 
 ###### fn bucketAggs.Terms.settings.withOrderBy
 

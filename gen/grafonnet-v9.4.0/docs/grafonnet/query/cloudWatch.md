@@ -240,7 +240,7 @@ withQueryMode(value)
 
 
 
-Accepted values for `value` are Metrics, Logs, Annotations
+Accepted values for `value` are "Metrics", "Logs", "Annotations"
 
 #### fn CloudWatchAnnotationQuery.withQueryType
 
@@ -373,7 +373,7 @@ withQueryMode(value)
 
 
 
-Accepted values for `value` are Metrics, Logs, Annotations
+Accepted values for `value` are "Metrics", "Logs", "Annotations"
 
 #### fn CloudWatchLogsQuery.withQueryType
 
@@ -593,7 +593,7 @@ withQueryMode(value)
 
 
 
-Accepted values for `value` are Metrics, Logs, Annotations
+Accepted values for `value` are "Metrics", "Logs", "Annotations"
 
 #### fn CloudWatchMetricsQuery.withQueryType
 
@@ -904,7 +904,7 @@ withType(value)
 
 
 
-Accepted values for `value` are string
+Accepted values for `value` are "string"
 
 ##### obj CloudWatchMetricsQuery.sql.groupBy
 
@@ -925,7 +925,7 @@ withType(value)
 
 TODO this doesn't work; temporarily extended in veneer
 
-Accepted values for `value` are and, or
+Accepted values for `value` are "and", "or"
 
 ##### obj CloudWatchMetricsQuery.sql.orderBy
 
@@ -1054,4 +1054,4 @@ withType(value)
 
 TODO this doesn't work; temporarily extended in veneer
 
-Accepted values for `value` are and, or
+Accepted values for `value` are "and", "or"

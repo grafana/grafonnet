@@ -23,7 +23,7 @@ grafonnet.panel.barChart
 * [`fn withOptionsMixin(value)`](#fn-withoptionsmixin)
 * [`fn withPluginVersion(value)`](#fn-withpluginversion)
 * [`fn withRepeat(value)`](#fn-withrepeat)
-* [`fn withRepeatDirection(value='h')`](#fn-withrepeatdirection)
+* [`fn withRepeatDirection(value="h")`](#fn-withrepeatdirection)
 * [`fn withRepeatPanelId(value)`](#fn-withrepeatpanelid)
 * [`fn withTags(value)`](#fn-withtags)
 * [`fn withTagsMixin(value)`](#fn-withtagsmixin)
@@ -163,10 +163,10 @@ grafonnet.panel.barChart
     * [`fn withProperties(value)`](#fn-fieldconfigoverrideswithproperties)
     * [`fn withPropertiesMixin(value)`](#fn-fieldconfigoverrideswithpropertiesmixin)
     * [`obj matcher`](#obj-fieldconfigoverridesmatcher)
-      * [`fn withId(value='')`](#fn-fieldconfigoverridesmatcherwithid)
+      * [`fn withId(value="")`](#fn-fieldconfigoverridesmatcherwithid)
       * [`fn withOptions(value)`](#fn-fieldconfigoverridesmatcherwithoptions)
     * [`obj properties`](#obj-fieldconfigoverridesproperties)
-      * [`fn withId(value='')`](#fn-fieldconfigoverridespropertieswithid)
+      * [`fn withId(value="")`](#fn-fieldconfigoverridespropertieswithid)
       * [`fn withValue(value)`](#fn-fieldconfigoverridespropertieswithvalue)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
@@ -191,10 +191,10 @@ grafonnet.panel.barChart
   * [`fn withUrl(value)`](#fn-linkswithurl)
 * [`obj options`](#obj-options)
   * [`fn withBarRadius(value=0)`](#fn-optionswithbarradius)
-  * [`fn withBarWidth(value=0.96999999999999997)`](#fn-optionswithbarwidth)
+  * [`fn withBarWidth(value=0.97)`](#fn-optionswithbarwidth)
   * [`fn withColorByField(value)`](#fn-optionswithcolorbyfield)
   * [`fn withFullHighlight(value=false)`](#fn-optionswithfullhighlight)
-  * [`fn withGroupWidth(value=0.69999999999999996)`](#fn-optionswithgroupwidth)
+  * [`fn withGroupWidth(value=0.7)`](#fn-optionswithgroupwidth)
   * [`fn withLegend(value)`](#fn-optionswithlegend)
   * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
   * [`fn withOrientation(value)`](#fn-optionswithorientation)
@@ -232,7 +232,7 @@ grafonnet.panel.barChart
   * [`fn withId(value)`](#fn-transformationswithid)
   * [`fn withOptions(value)`](#fn-transformationswithoptions)
   * [`obj filter`](#obj-transformationsfilter)
-    * [`fn withId(value='')`](#fn-transformationsfilterwithid)
+    * [`fn withId(value="")`](#fn-transformationsfilterwithid)
     * [`fn withOptions(value)`](#fn-transformationsfilterwithoptions)
 
 ## Fields
@@ -397,14 +397,14 @@ Name of template variable to repeat for.
 ### fn withRepeatDirection
 
 ```ts
-withRepeatDirection(value='h')
+withRepeatDirection(value="h")
 ```
 
 Direction to repeat in if 'repeat' is set.
 "h" for horizontal, "v" for vertical.
 TODO this is probably optional
 
-Accepted values for `value` are h, v
+Accepted values for `value` are "h", "v"
 
 ### fn withRepeatPanelId
 
@@ -795,7 +795,7 @@ withSeriesBy(value)
 
 TODO docs
 
-Accepted values for `value` are min, max, last
+Accepted values for `value` are "min", "max", "last"
 
 ##### obj fieldConfig.defaults.custom
 
@@ -816,7 +816,7 @@ withAxisColorMode(value)
 
 TODO docs
 
-Accepted values for `value` are text, series
+Accepted values for `value` are "text", "series"
 
 ###### fn fieldConfig.defaults.custom.withAxisGridShow
 
@@ -842,7 +842,7 @@ withAxisPlacement(value)
 
 TODO docs
 
-Accepted values for `value` are auto, top, right, bottom, left, hidden
+Accepted values for `value` are "auto", "top", "right", "bottom", "left", "hidden"
 
 ###### fn fieldConfig.defaults.custom.withAxisSoftMax
 
@@ -884,7 +884,7 @@ withGradientMode(value)
 
 TODO docs
 
-Accepted values for `value` are none, opacity, hue, scheme
+Accepted values for `value` are "none", "opacity", "hue", "scheme"
 
 ###### fn fieldConfig.defaults.custom.withHideFrom
 
@@ -996,7 +996,7 @@ withType(value)
 
 TODO docs
 
-Accepted values for `value` are linear, log, ordinal, symlog
+Accepted values for `value` are "linear", "log", "ordinal", "symlog"
 
 ###### obj fieldConfig.defaults.custom.thresholdsStyle
 
@@ -1009,7 +1009,7 @@ withMode(value)
 
 TODO docs
 
-Accepted values for `value` are off, line, dashed, area, line+area, dashed+area, series
+Accepted values for `value` are "off", "line", "dashed", "area", "line+area", "dashed+area", "series"
 
 ##### obj fieldConfig.defaults.mappings
 
@@ -1238,7 +1238,7 @@ withMatch(value)
 
 
 
-Accepted values for `value` are true, false
+Accepted values for `value` are "true", "false"
 
 ######## fn fieldConfig.defaults.mappings.SpecialValueMap.options.withPattern
 
@@ -1337,7 +1337,7 @@ withMode(value)
 
 
 
-Accepted values for `value` are absolute, percentage
+Accepted values for `value` are "absolute", "percentage"
 
 ###### fn fieldConfig.defaults.thresholds.withSteps
 
@@ -1434,7 +1434,7 @@ withPropertiesMixin(value)
 ###### fn fieldConfig.overrides.matcher.withId
 
 ```ts
-withId(value='')
+withId(value="")
 ```
 
 
@@ -1453,7 +1453,7 @@ withOptions(value)
 ###### fn fieldConfig.overrides.properties.withId
 
 ```ts
-withId(value='')
+withId(value="")
 ```
 
 
@@ -1611,7 +1611,7 @@ withType(value)
 
 TODO docs
 
-Accepted values for `value` are link, dashboards
+Accepted values for `value` are "link", "dashboards"
 
 #### fn links.withUrl
 
@@ -1635,7 +1635,7 @@ Controls the radius of each bar.
 #### fn options.withBarWidth
 
 ```ts
-withBarWidth(value=0.96999999999999997)
+withBarWidth(value=0.97)
 ```
 
 Controls the width of bars. 1 = Max width, 0 = Min width.
@@ -1660,7 +1660,7 @@ hovers over highlighted area
 #### fn options.withGroupWidth
 
 ```ts
-withGroupWidth(value=0.69999999999999996)
+withGroupWidth(value=0.7)
 ```
 
 Controls the width of groups. 1 = max with, 0 = min width.
@@ -1689,7 +1689,7 @@ withOrientation(value)
 
 TODO docs
 
-Accepted values for `value` are auto, vertical, horizontal
+Accepted values for `value` are "auto", "vertical", "horizontal"
 
 #### fn options.withShowValue
 
@@ -1699,7 +1699,7 @@ withShowValue(value)
 
 TODO docs
 
-Accepted values for `value` are auto, never, always
+Accepted values for `value` are "auto", "never", "always"
 
 #### fn options.withStacking
 
@@ -1709,7 +1709,7 @@ withStacking(value)
 
 TODO docs
 
-Accepted values for `value` are none, normal, percent
+Accepted values for `value` are "none", "normal", "percent"
 
 #### fn options.withText
 
@@ -1812,7 +1812,7 @@ withDisplayMode(value)
 TODO docs
 Note: "hidden" needs to remain as an option for plugins compatibility
 
-Accepted values for `value` are list, table, hidden
+Accepted values for `value` are "list", "table", "hidden"
 
 ##### fn options.legend.withIsVisible
 
@@ -1830,7 +1830,7 @@ withPlacement(value)
 
 TODO docs
 
-Accepted values for `value` are bottom, right
+Accepted values for `value` are "bottom", "right"
 
 ##### fn options.legend.withShowLegend
 
@@ -1894,7 +1894,7 @@ withMode(value)
 
 TODO docs
 
-Accepted values for `value` are single, multi, none
+Accepted values for `value` are "single", "multi", "none"
 
 ##### fn options.tooltip.withSort
 
@@ -1904,7 +1904,7 @@ withSort(value)
 
 TODO docs
 
-Accepted values for `value` are asc, desc, none
+Accepted values for `value` are "asc", "desc", "none"
 
 ### obj transformations
 
@@ -1956,7 +1956,7 @@ Valid options depend on the transformer id
 ##### fn transformations.filter.withId
 
 ```ts
-withId(value='')
+withId(value="")
 ```
 
 

@@ -144,7 +144,7 @@ withErrorType(value)
 
 
 
-Accepted values for `value` are server_panic, frontend_exception, frontend_observable
+Accepted values for `value` are "server_panic", "frontend_exception", "frontend_observable"
 
 ### fn withHide
 
@@ -263,7 +263,7 @@ withScenarioId(value)
 
 
 
-Accepted values for `value` are random_walk, slow_query, random_walk_with_error, random_walk_table, exponential_heatmap_bucket_data, linear_heatmap_bucket_data, no_data_points, datapoints_outside_range, csv_metric_values, predictable_pulse, predictable_csv_wave, streaming_client, simulation, usa, live, grafana_api, arrow, annotations, table_static, server_error_500, logs, node_graph, flame_graph, raw_frame, csv_file, csv_content, trace, manual_entry, variables-query
+Accepted values for `value` are "random_walk", "slow_query", "random_walk_with_error", "random_walk_table", "exponential_heatmap_bucket_data", "linear_heatmap_bucket_data", "no_data_points", "datapoints_outside_range", "csv_metric_values", "predictable_pulse", "predictable_csv_wave", "streaming_client", "simulation", "usa", "live", "grafana_api", "arrow", "annotations", "table_static", "server_error_500", "logs", "node_graph", "flame_graph", "raw_frame", "csv_file", "csv_content", "trace", "manual_entry", "variables-query"
 
 ### fn withSeriesCount
 
@@ -391,7 +391,7 @@ withType(value)
 
 
 
-Accepted values for `value` are random, response, random edges
+Accepted values for `value` are "random", "response", "random edges"
 
 ### obj pulseWave
 
@@ -557,7 +557,7 @@ withType(value)
 
 
 
-Accepted values for `value` are signal, logs, fetch
+Accepted values for `value` are "signal", "logs", "fetch"
 
 #### fn stream.withUrl
 

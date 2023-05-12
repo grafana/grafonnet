@@ -343,7 +343,7 @@ withResultFormat(value)
 
 
 
-Accepted values for `value` are table, time_series
+Accepted values for `value` are "table", "time_series"
 
 #### fn azureLogAnalytics.withWorkspace
 
@@ -805,7 +805,7 @@ withKind(value)
 
 
 
-Accepted values for `value` are AppInsightsGroupByQuery
+Accepted values for `value` are "AppInsightsGroupByQuery"
 
 ##### fn grafanaTemplateVariableFn.AppInsightsGroupByQuery.withMetricName
 
@@ -834,7 +834,7 @@ withKind(value)
 
 
 
-Accepted values for `value` are AppInsightsMetricNameQuery
+Accepted values for `value` are "AppInsightsMetricNameQuery"
 
 ##### fn grafanaTemplateVariableFn.AppInsightsMetricNameQuery.withRawQuery
 
@@ -855,7 +855,7 @@ withKind(value)
 
 
 
-Accepted values for `value` are MetricDefinitionsQuery
+Accepted values for `value` are "MetricDefinitionsQuery"
 
 ##### fn grafanaTemplateVariableFn.MetricDefinitionsQuery.withMetricNamespace
 
@@ -908,7 +908,7 @@ withKind(value)
 
 
 
-Accepted values for `value` are MetricNamesQuery
+Accepted values for `value` are "MetricNamesQuery"
 
 ##### fn grafanaTemplateVariableFn.MetricNamesQuery.withMetricNamespace
 
@@ -961,7 +961,7 @@ withKind(value)
 
 
 
-Accepted values for `value` are MetricNamespaceQuery
+Accepted values for `value` are "MetricNamespaceQuery"
 
 ##### fn grafanaTemplateVariableFn.MetricNamespaceQuery.withMetricNamespace
 
@@ -1014,7 +1014,7 @@ withKind(value)
 
 
 
-Accepted values for `value` are ResourceGroupsQuery
+Accepted values for `value` are "ResourceGroupsQuery"
 
 ##### fn grafanaTemplateVariableFn.ResourceGroupsQuery.withRawQuery
 
@@ -1043,7 +1043,7 @@ withKind(value)
 
 
 
-Accepted values for `value` are ResourceNamesQuery
+Accepted values for `value` are "ResourceNamesQuery"
 
 ##### fn grafanaTemplateVariableFn.ResourceNamesQuery.withMetricNamespace
 
@@ -1088,7 +1088,7 @@ withKind(value)
 
 
 
-Accepted values for `value` are SubscriptionsQuery
+Accepted values for `value` are "SubscriptionsQuery"
 
 ##### fn grafanaTemplateVariableFn.SubscriptionsQuery.withRawQuery
 
@@ -1109,7 +1109,7 @@ withKind(value)
 
 
 
-Accepted values for `value` are UnknownQuery
+Accepted values for `value` are "UnknownQuery"
 
 ##### fn grafanaTemplateVariableFn.UnknownQuery.withRawQuery
 
@@ -1130,7 +1130,7 @@ withKind(value)
 
 
 
-Accepted values for `value` are WorkspacesQuery
+Accepted values for `value` are "WorkspacesQuery"
 
 ##### fn grafanaTemplateVariableFn.WorkspacesQuery.withRawQuery
 

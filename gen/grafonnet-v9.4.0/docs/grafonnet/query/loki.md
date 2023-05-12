@@ -43,7 +43,7 @@ withEditorMode(value)
 
 
 
-Accepted values for `value` are code, builder
+Accepted values for `value` are "code", "builder"
 
 ### fn withExpr
 
