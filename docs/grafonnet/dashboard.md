@@ -29,8 +29,6 @@ grafonnet.dashboard
 * [`fn withTagsMixin(value)`](#fn-withtagsmixin)
 * [`fn withTemplating(value)`](#fn-withtemplating)
 * [`fn withTemplatingMixin(value)`](#fn-withtemplatingmixin)
-* [`fn withTimepicker(value)`](#fn-withtimepicker)
-* [`fn withTimepickerMixin(value)`](#fn-withtimepickermixin)
 * [`fn withTimezone(value="browser")`](#fn-withtimezone)
 * [`fn withTitle(value)`](#fn-withtitle)
 * [`fn withUid(value)`](#fn-withuid)
@@ -217,24 +215,6 @@ withTemplatingMixin(value)
 ```
 
 TODO docs
-
-### fn withTimepicker
-
-```ts
-withTimepicker(value)
-```
-
-TODO docs
-TODO this appears to be spread all over in the frontend. Concepts will likely need tidying in tandem with schema changes
-
-### fn withTimepickerMixin
-
-```ts
-withTimepickerMixin(value)
-```
-
-TODO docs
-TODO this appears to be spread all over in the frontend. Concepts will likely need tidying in tandem with schema changes
 
 ### fn withTimezone
 

@@ -20,8 +20,8 @@ local veneer = {
     // Hide functions covered by objects
     '#withTime':: {},
     '#withTimeMixin':: {},
-    '#withTimePicker':: {},
-    '#withTimePickerMixin':: {},
+    '#withTimepicker':: {},
+    '#withTimepickerMixin':: {},
     '#withGraphTooltip':: {},
     '#withGraphTooltipMixin':: {},
 
