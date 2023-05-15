@@ -51,6 +51,8 @@ The library can be installed with [jsonnet-bundler](https://github.com/jsonnet-b
 
 ## Install
 
+To add grafonnet to a jsonnet project:
+
 ```console
 jb install github.com/grafana/grafonnet/gen/grafonnet-latest@main
 ```
