@@ -66,6 +66,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://grafana.github.io/grafonnet/grafonnet/dashboard/annotation.html</loc>
+         <lastmod>2023-05-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/grafonnet/dashboard/link.html</loc>
+         <lastmod>2023-05-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://grafana.github.io/grafonnet/grafonnet/dashboard/variable.html</loc>
          <lastmod>2023-05-16</lastmod>
          <changefreq>daily</changefreq>
