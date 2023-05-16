@@ -8,40 +8,56 @@ local veneer = import './veneer/main.libsonnet';
 {
   local root = self,
 
+  // Used to fake render missing schemas
+  local genericSchema(title) =
+    root.restructure({
+      info: {
+        title: title,
+      },
+      components: {
+        schemas: {
+          [title]: {
+            type: 'object',
+          },
+        },
+      },
+    }),
+
   new(schemas, version):
     local dashboardSchema = std.filter(
       function(schema) schema.info.title == 'dashboard',
       schemas
     )[0];
 
+    local allSchemaTitles = std.map(function(x) x.info.title, schemas);
+
     local filteredSchemas = {
-      general: std.filterMap(
+      core: std.filterMap(
         function(schema)
-          !(
-            ('properties' in schema.components.schemas[schema.info.title])
-            && (
-              ('PanelOptions' in schema.components.schemas[schema.info.title].properties)
-              || ('PanelFieldConfig' in schema.components.schemas[schema.info.title].properties)
-            )
-          )
-          && !('DataQuery' in schema.components.schemas),
+          !std.endsWith(schema.info.title, 'PanelCfg')
+          && !std.endsWith(schema.info.title, 'DataQuery'),
         function(schema) root.restructure(schema),
         schemas
       ),
 
-      panel: std.filterMap(
-        function(schema)
-          ('properties' in schema.components.schemas[schema.info.title])
-          && (
-            ('PanelOptions' in schema.components.schemas[schema.info.title].properties)
-            || ('PanelFieldConfig' in schema.components.schemas[schema.info.title].properties)
-          ),
-        function(schema) root.restructure(schema),
-        schemas
-      ),
+      local missingPanelSchemas = [
+        'CandlestickPanelCfg',
+        'CanvasPanelCfg',
+      ],
+      panel:
+        [
+          genericSchema(title)
+          for title in missingPanelSchemas
+          if !std.member(allSchemaTitles, title)
+        ]
+        + std.filterMap(
+          function(schema) std.endsWith(schema.info.title, 'PanelCfg'),
+          function(schema) root.restructure(schema),
+          schemas
+        ),
 
       query: std.filterMap(
-        function(schema) 'DataQuery' in schema.components.schemas,
+        function(schema) std.endsWith(schema.info.title, 'DataQuery'),
         function(schema) root.restructure(schema),
         schemas,
       ),
@@ -51,7 +67,8 @@ local veneer = import './veneer/main.libsonnet';
       [schema.info.title]:
         root.coreLib.new(schema)
         + root.packageDocMixin(version, schema.info.title, '')
-      for schema in filteredSchemas.general
+        + veneer.core(schema.info.title)
+      for schema in filteredSchemas.core
     }
     + {
       [k]:
@@ -59,13 +76,39 @@ local veneer = import './veneer/main.libsonnet';
           [schema.info.title]:
             root[k + 'Lib'].new(dashboardSchema, schema)
             + root.packageDocMixin(version, schema.info.title, k + '.')
+            + veneer[k](schema.info.title)
           for schema in filteredSchemas[k]
         }
         + root.packageDocMixin(version, k, '')
       for k in std.objectFields(filteredSchemas)
-      if k != 'general'
+      if k != 'core'
     }
     + {
+      // Move rowPanel schema to panels
+      local rowPanel =
+        root.restructure({
+          info: {
+            title: 'RowPanelCfg',
+          },
+          components: {
+            schemas:
+              dashboardSchema.components.schemas
+              {
+                RowPanelCfg:
+                  dashboardSchema.components.schemas.RowPanel
+                  { properties+: { panels+: { items: {} } } },
+              },
+          },
+        }),
+
+      panel+: {
+        row:
+          root.coreLib.new(rowPanel)
+          + root.packageDocMixin(version, 'row', 'panel.')
+          + veneer.panel('row'),
+      },
+
+      // Add docs
       '#':
         d.package.new(
           'grafonnet',
@@ -74,9 +117,10 @@ local veneer = import './veneer/main.libsonnet';
           'main.libsonnet',
           'main',
         ),
-    }
-    + veneer
-    + { util: util },
+
+      // Add util functions
+      util: util,
+    },
 
 
   packageDocMixin(version, name, path):

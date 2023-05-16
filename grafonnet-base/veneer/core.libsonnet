@@ -1,7 +1,7 @@
 local util = import '../util/main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
-{
+local veneer = {
   dashboard+: {
     // Remove legacy panels (heatmap, graph), new users should not create those.
     // Schemas are also underdeveloped.
@@ -17,7 +17,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       + self.time.withFrom('now-6h')
       + self.time.withTo('now'),
 
-    local withGraphTooltip = super.withGraphTooltip,
+    local withGraphTooltip = self.withGraphTooltip,
     graphTooltip+: {
       // 0 - Default
       // 1 - Shared crosshair
@@ -261,4 +261,6 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       panels: util.panel.setPanelIDs(self._panels),
     },
   },
-}
+};
+
+function(name) std.get(veneer, name, default={})
