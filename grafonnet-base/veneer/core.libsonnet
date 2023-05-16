@@ -17,7 +17,25 @@ local veneer = {
       + self.time.withFrom('now-6h')
       + self.time.withTo('now'),
 
-    local withGraphTooltip = self.withGraphTooltip,
+    // Hide functions covered by objects
+    '#withTime':: {},
+    '#withTimeMixin':: {},
+    '#withTimepicker':: {},
+    '#withTimepickerMixin':: {},
+    '#withGraphTooltip':: {},
+    '#withGraphTooltipMixin':: {},
+
+    // Hide internal values
+    '#withGnetId':: {},
+    '#withId':: {},
+    '#withRevision':: {},
+    '#withVersion':: {},
+    '#snapshot':: {},  // Snapshots can't be created through code afaik
+    '#withSnapshot':: {},
+    '#withSnapshotMixin':: {},
+
+
+    local withGraphTooltip = super.withGraphTooltip,
     graphTooltip+: {
       // 0 - Default
       // 1 - Shared crosshair
@@ -35,7 +53,35 @@ local veneer = {
         withGraphTooltip(2),
     },
 
-    // Use manually written veneer to align with GUI
+    // Manual veneer for annotations
+    '#annotations':: {},
+    annotation: (import './annotation.libsonnet')(self.annotations.list),
+    '#withAnnotations':
+      d.func.new(
+        |||
+          `withAnnotations` adds an array of annotations to a dashboard.
+
+          This function appends passed data to existing values
+        |||,
+        args=[d.arg('value', d.T.array)]
+      ),
+    withAnnotations(value): self.annotations.withList(value),
+    '#withAnnotationsMixin':
+      d.func.new(
+        |||
+          `withAnnotationsMixin` adds an array of annotations to a dashboard.
+
+          This function appends passed data to existing values
+        |||,
+        args=[d.arg('value', d.T.array)]
+      ),
+    withAnnotationsMixin(value): self.annotations.withListMixin(value),
+
+    // Manual veneer for links (matches UI)
+    '#links':: {},
+    link: (import './link.libsonnet')(self.links),
+
+    // Manual veneer for variables (matches UI)
     variable: (import './variable.libsonnet')(self.templating.list),
 
     '#withVariables':
