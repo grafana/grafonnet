@@ -7,7 +7,7 @@ function(name) {
   ),
   new(title):
     self.withTitle(title)
-    + self.withType()
+    + self.withType('row')
     // Default to Mixed datasource so panels can be datasource agnostic, this
     // requires query targets to explicitly set datasource, which is a lot more
     // interesting from a reusability standpoint.
