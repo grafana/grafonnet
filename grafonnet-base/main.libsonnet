@@ -103,7 +103,16 @@ local veneer = import './veneer/main.libsonnet';
 
       panel+: {
         row:
-          root.coreLib.new(rowPanel)
+          root.coreLib.new(
+            rowPanel
+            + {
+              properties+: {
+                type: {
+                  const: 'row',
+                },
+              },
+            },
+          )
           + root.packageDocMixin(version, 'row', 'panel.')
           + veneer.panel('row'),
       },
