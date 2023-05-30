@@ -96,23 +96,17 @@ local veneer = import './veneer/main.libsonnet';
               {
                 RowPanelCfg:
                   dashboardSchema.components.schemas.RowPanel
-                  { properties+: { panels+: { items: {} } } },
+                  { properties+: {
+                    type: { const: 'row' },
+                    panels+: { items: {} },
+                  } },
               },
           },
         }),
 
       panel+: {
         row:
-          root.coreLib.new(
-            rowPanel
-            + {
-              properties+: {
-                type: {
-                  const: 'row',
-                },
-              },
-            },
-          )
+          root.coreLib.new(rowPanel)
           + root.packageDocMixin(version, 'row', 'panel.')
           + veneer.panel('row'),
       },

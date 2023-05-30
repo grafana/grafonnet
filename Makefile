@@ -45,6 +45,8 @@ localmkdocs:
 test:
 	@cd test/; \
 	jb install; \
+	rm -rf vendor/github.com/grafana/grafonnet/grafonnet-base; \
+	ln -sf $${PWD}/../grafonnet-base vendor/github.com/grafana/grafonnet/grafonnet-base; \
 	RESULT=0; \
 	for f in $$(find . -path './.git' -prune -o -name 'vendor' -prune -o -name '*_test.jsonnet' -print); do \
 		echo "$$f"; \
