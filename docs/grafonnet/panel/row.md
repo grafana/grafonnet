@@ -15,7 +15,7 @@ grafonnet.panel.row
 * [`fn withPanelsMixin(value)`](#fn-withpanelsmixin)
 * [`fn withRepeat(value)`](#fn-withrepeat)
 * [`fn withTitle(value)`](#fn-withtitle)
-* [`fn withType(value)`](#fn-withtype)
+* [`fn withType()`](#fn-withtype)
 * [`obj datasource`](#obj-datasource)
   * [`fn withType(value)`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
@@ -119,12 +119,10 @@ withTitle(value)
 ### fn withType
 
 ```ts
-withType(value)
+withType()
 ```
 
 
-
-Accepted values for `value` are "row"
 
 ### obj datasource
 

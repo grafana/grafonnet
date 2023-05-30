@@ -9,6 +9,14 @@
         }
       },
       "version": "master"
+    },
+    {
+      "source": {
+        "local": {
+          "directory": "../gen/grafonnet-latest"
+        }
+      },
+      "version": ""
     }
   ],
   "legacyImports": true
