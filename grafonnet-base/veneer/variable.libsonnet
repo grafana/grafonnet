@@ -1,3 +1,4 @@
+local helpers = import '../helpers.libsonnet';
 local util = import '../util/main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
@@ -45,24 +46,19 @@ function(var) {
     |||,
   ),
 
-  local generalAttributes = [
-    'withName',
-    'withLabel',
-    'withDescription',
-  ],
+  local groupings = {
+    generalOptions: [
+      'withName',
+      'withLabel',
+      'withDescription',
+    ],
+  },
 
   local general =
-    {
-      generalOptions:
+    helpers.group(var, groupings)
+    + {
+      generalOptions+:
         {
-          [n]: var[n]
-          for n in generalAttributes
-        }
-        + {
-          ['#' + n]: var['#' + n]
-          for n in generalAttributes
-        }
-        + {
           showOnDashboard: {
             '#withLabelAndValue':: d.func.new(''),
             withLabelAndValue(): var.withHide(0),

@@ -9,31 +9,23 @@ function(link) {
     '',
   ),
 
-  local options =
-    {
-      options:
-        helpers.getAttributes(
-          [
-            'withAsDropdown',
-            'withKeepTime',
-            'withIncludeVars',
-            'withTargetBlank',
-          ],
-          link,
-        ),
-    },
+  local groupings = {
+    options: [
+      'withAsDropdown',
+      'withKeepTime',
+      'withIncludeVars',
+      'withTargetBlank',
+    ],
+    linkOptions: [
+      'withTooltip',
+      'withIcon',
+    ],
+  },
 
-  local linkOptions =
-    helpers.getAttributes(
-      [
-        'withTooltip',
-        'withIcon',
-      ],
-      link,
-    ),
+  local grouped = helpers.group(link, groupings),
 
   dashboards:
-    options {
+    {
       '#new':: d.func.new(
         |||
           Create links to dashboards based on `tags`.
@@ -47,25 +39,27 @@ function(link) {
         link.withTitle(title)
         + link.withType('dashboards')
         + link.withTags(tags),
+
+      options: grouped.options,
     },
 
   link:
-    options
-    + linkOptions
-    + {
+    grouped.linkOptions {
       '#new':: d.func.new(
         |||
           Create link to an arbitrary URL.
         |||,
         args=[
           d.arg('title', d.T.string),
-          d.arg('utl', d.T.string),
+          d.arg('url', d.T.string),
         ]
       ),
       new(title, url):
         link.withTitle(title)
         + link.withType('link')
         + link.withUrl(url),
+
+      options: grouped.options,
     },
 
 }
