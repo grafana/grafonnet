@@ -111,6 +111,10 @@ grafonnet.panel.gauge
   * [`fn withMin(value)`](#fn-standardoptionswithmin)
   * [`fn withNoValue(value)`](#fn-standardoptionswithnovalue)
   * [`fn withUnit(value)`](#fn-standardoptionswithunit)
+  * [`obj color`](#obj-standardoptionscolor)
+    * [`fn withFixedColor(value)`](#fn-standardoptionscolorwithfixedcolor)
+    * [`fn withMode(value)`](#fn-standardoptionscolorwithmode)
+    * [`fn withSeriesBy(value)`](#fn-standardoptionscolorwithseriesby)
 
 ## Fields
 
@@ -867,3 +871,32 @@ withUnit(value)
 ```
 
 Numeric Options
+
+#### obj standardOptions.color
+
+
+##### fn standardOptions.color.withFixedColor
+
+```ts
+withFixedColor(value)
+```
+
+Stores the fixed color value if mode is fixed
+
+##### fn standardOptions.color.withMode
+
+```ts
+withMode(value)
+```
+
+The main color scheme mode
+
+##### fn standardOptions.color.withSeriesBy
+
+```ts
+withSeriesBy(value)
+```
+
+TODO docs
+
+Accepted values for `value` are "min", "max", "last"
