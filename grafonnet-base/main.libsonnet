@@ -8,6 +8,25 @@ local veneer = import './veneer/main.libsonnet';
 {
   local root = self,
 
+  // Some plugins are named differently, this has been resolved in the Grafana code base
+  // but no reflected in the JSON schema.
+  // source: https://github.com/grafana/grafana/blob/0ee9d11a9148f517fed57bd4c9b840480993cf42/pkg/kindsys/report.go#L285
+  local irregularPluginNames = {
+    // Panel
+    alertgroups: 'alertGroups',
+    annotationslist: 'annolist',
+    dashboardlist: 'dashlist',
+    nodegraph: 'nodeGraph',
+    statetimeline: 'state-timeline',
+    statushistory: 'status-history',
+    tableold: 'table-old',
+    // Datasource
+    googlecloudmonitoring: 'cloud-monitoring',
+    azuremonitor: 'grafana-azure-monitor-datasource',
+    microsoftsqlserver: 'mssql',
+    postgresql: 'postgres',
+  },
+
   // Used to fake render missing schemas
   local genericSchema(title) =
     root.restructure({
@@ -66,8 +85,6 @@ local veneer = import './veneer/main.libsonnet';
     {
       [schema.info.title]:
         root.coreLib.new(schema)
-        + root.packageDocMixin(version, schema.info.title, '')
-        + veneer.core(schema.info.title)
       for schema in filteredSchemas.core
     }
     + {
@@ -75,40 +92,16 @@ local veneer = import './veneer/main.libsonnet';
         {
           [schema.info.title]:
             root[k + 'Lib'].new(dashboardSchema, schema)
-            + root.packageDocMixin(version, schema.info.title, k + '.')
-            + veneer[k](schema.info.title)
           for schema in filteredSchemas[k]
         }
-        + root.packageDocMixin(version, k, '')
+        + root.packageDocMixin(k, '')
       for k in std.objectFields(filteredSchemas)
       if k != 'core'
     }
     + {
-      // Move rowPanel schema to panels
-      local rowPanel =
-        root.restructure({
-          info: {
-            title: 'RowPanelCfg',
-          },
-          components: {
-            schemas:
-              dashboardSchema.components.schemas
-              {
-                RowPanelCfg:
-                  dashboardSchema.components.schemas.RowPanel
-                  { properties+: {
-                    type: { const: 'row' },
-                    panels+: { items: {} },
-                  } },
-              },
-          },
-        }),
-
       panel+: {
         row:
-          root.coreLib.new(rowPanel)
-          + root.packageDocMixin(version, 'row', 'panel.')
-          + veneer.panel('row'),
+          root.rowPanelLib.new(dashboardSchema),
       },
 
       // Add docs
@@ -126,12 +119,12 @@ local veneer = import './veneer/main.libsonnet';
     },
 
 
-  packageDocMixin(version, name, path):
+  packageDocMixin(name, path):
     {
       '#':
         d.package.newSub(
           name,
-          'grafonnet.%(path)s%(name)s' % { version: version, name: name, path: path }
+          'grafonnet.%(path)s%(name)s' % { name: name, path: path }
         ),
     },
 
@@ -193,7 +186,7 @@ local veneer = import './veneer/main.libsonnet';
 
   coreLib: {
     new(schema):
-      local title = schema.info.title;  //std.trace(schema.info.title, schema.info.title);
+      local title = schema.info.title;
       local render = crdsonnet.fromOpenAPI(
         'lib',
         schema.components.schemas[title],
@@ -201,13 +194,16 @@ local veneer = import './veneer/main.libsonnet';
         render='dynamic',
       );
       if 'lib' in render
-      then render.lib
+      then
+        render.lib
+        + root.packageDocMixin(title, '')
+        + veneer.core(title)
       else {},
   },
 
   queryLib: {
     new(dashboardSchema, schema):
-      local title = schema.info.title;  //std.trace(schema.info.title, schema.info.title);
+      local title = schema.info.title;
       local render = crdsonnet.fromOpenAPI(
         'lib',
         schema.components.schemas[title],
@@ -215,34 +211,19 @@ local veneer = import './veneer/main.libsonnet';
         render='dynamic',
       );
       if 'lib' in render
-      then render.lib
+      then
+        render.lib
+        + root.packageDocMixin(title, 'query.')
+        + veneer.query(title)
       else {},
   },
 
   panelLib: {
-    // Some plugins are named differently, this has been resolved in the Grafana code base
-    // but no reflected in the JSON schema.
-    // source: https://github.com/grafana/grafana/blob/0ee9d11a9148f517fed57bd4c9b840480993cf42/pkg/kindsys/report.go#L285
-    local irregularPluginNames = {
-      // Panel
-      alertgroups: 'alertGroups',
-      annotationslist: 'annolist',
-      dashboardlist: 'dashlist',
-      nodegraph: 'nodeGraph',
-      statetimeline: 'state-timeline',
-      statushistory: 'status-history',
-      tableold: 'table-old',
-      // Datasource
-      googlecloudmonitoring: 'cloud-monitoring',
-      azuremonitor: 'grafana-azure-monitor-datasource',
-      microsoftsqlserver: 'mssql',
-      postgresql: 'postgres',
-    },
-
     // The panelSchema has PanelOptions and PanelFieldConfig that need to replace certain
     // fiels in the upstream Panel schema This function fits these schemas in the right
     // place for CRDsonnet.
     new(dashboardSchema, panelSchema):
+      local title = panelSchema.info.title;
       local subSchema = panelSchema.components.schemas[panelSchema.info.title];
       local customSubSchema =
         panelSchema.components.schemas[panelSchema.info.title] {
@@ -271,8 +252,8 @@ local veneer = import './veneer/main.libsonnet';
               const:
                 std.get(
                   irregularPluginNames,
-                  std.asciiLower(panelSchema.info.title),
-                  std.asciiLower(panelSchema.info.title)
+                  std.asciiLower(title),
+                  std.asciiLower(title),
                 ),
             },
           },
@@ -292,15 +273,59 @@ local veneer = import './veneer/main.libsonnet';
           render='dynamic',
         );
 
-      parsed.panelLib {
-        [if 'options' in parsed.customLib then 'options']:
-          parsed.customLib.options,
-        [if 'fieldConfig' in parsed.customLib then 'fieldConfig']+: {
-          defaults+: {
-            [if 'custom' in parsed.customLib.fieldConfig.defaults then 'custom']:
-              parsed.customLib.fieldConfig.defaults.custom,
+      local panel =
+        parsed.panelLib {
+          [if 'options' in parsed.customLib then 'options']:
+            parsed.customLib.options,
+          [if 'fieldConfig' in parsed.customLib then 'fieldConfig']+: {
+            defaults+: {
+              [if 'custom' in parsed.customLib.fieldConfig.defaults then 'custom']:
+                parsed.customLib.fieldConfig.defaults.custom,
+            },
           },
-        },
-      },
+        };
+
+      panel
+      + root.packageDocMixin(title, 'panel.')
+      + veneer.panel(title, panel),
+  },
+
+  rowPanelLib: {
+    new(dashboardSchema):
+      // Move rowPanel schema to panels
+      local schema =
+        root.restructure({
+          info: {
+            title: 'RowPanelCfg',
+          },
+          components: {
+            schemas:
+              dashboardSchema.components.schemas
+              {
+                RowPanelCfg:
+                  dashboardSchema.components.schemas.RowPanel
+                  { properties+: {
+                    type: { const: 'row' },
+                    panels+: { items: {} },
+                  } },
+              },
+          },
+        });
+
+
+      local title = schema.info.title;
+      local render = crdsonnet.fromOpenAPI(
+        'lib',
+        schema.components.schemas[title],
+        schema,
+        render='dynamic',
+      );
+      if 'lib' in render
+      then
+        local panel = render.lib;
+        panel
+        + root.packageDocMixin(title, 'panel.')
+        + veneer.row('row', panel)
+      else {},
   },
 }
