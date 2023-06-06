@@ -10,8 +10,6 @@ local groupings = {
     'withLinksMixin',
     'withRepeat',  // to veneer // missing maxPerRow
     'withRepeatDirection',
-    //'withRepeatPanelId', // not in UI
-    //'gridPos',  // user gridPos section // not an actual field in UI
   ],
 
   queryOptions: [
@@ -37,12 +35,21 @@ local groupings = {
     'fieldConfig.defaults.withDisplayName',
     'fieldConfig.defaults.color',
     'fieldConfig.defaults.withNoValue',
+    'fieldConfig.defaults.withLinks',  // known as 'Data links' in UI, uses links subpackage
+    'fieldConfig.defaults.withLinksMixin',
+    'fieldConfig.defaults.withMappings',  // known as 'Value mappings' in UI, uses valueMapping subpackage
+    'fieldConfig.defaults.withMappingsMixin',
 
-    // separate UI sections, to veneer
-    //'dataLinks',  // seems to depend on root based sub package
-    //'valueMappings',  // mappings sub package looks complex but consistent
-    //'thresholds',  // I've always found the threshold UI unintuitive // both found in root and fieldConfig.defaults ???
-    //'fieldOverrides',  // matcher = obj, properties = array, unclear in current grafonnet
+    // fieldOverrides needs to recieve more attention in Grafonnet, the JSON is unintuitive
+    // matcher = obj, properties = array, unclear in current grafonnet
+    'fieldConfig.withOverrides',  // known as 'Overrides' in UI, uses fieldOverrides subpackage
+    'fieldConfig.withOverridesMixin',
+  ],
+
+  'standardOptions.tresholds': [
+    'fieldConfig.defaults.thresholds.withMode',
+    'fieldConfig.defaults.thresholds.withSteps',
+    'fieldConfig.defaults.thresholds.withStepsMixin',
   ],
 };
 
@@ -74,10 +81,57 @@ local subPackages = [
   },
 ];
 
+local toRemove = [
+  // Access through more specific attributes
+  '#withFieldConfig',
+  '#withFieldConfigMixin',
+  '#withGridPos',
+  '#withGridPosMixin',
+  '#withOptions',
+  '#withOptionsMixin',
+  'fieldConfig.#withDefaults',
+  'fieldConfig.#withDefaultsMixin',
+  'fieldConfig.defaults.#withColor',
+  'fieldConfig.defaults.#withColorMixin',
+  'fieldConfig.defaults.#withCustom',
+  'fieldConfig.defaults.#withCustomMixin',
+  'fieldConfig.defaults.#withThresholds',
+  'fieldConfig.defaults.#withThresholdsMixin',
+
+  // Internal
+  '#withId',
+  '#withPluginVersion',
+  '#withRepeatPanelId',
+  '#withType',
+
+  // Not in UI
+  '#withLibraryPanel',
+  '#withLibraryPanelMixin',
+  '#withTags',  // seems to be related to search
+  '#withTagsMixin',
+  'fieldConfig.defaults.#withDescription',
+  'fieldConfig.defaults.#withDisplayNameFromDS',
+  'fieldConfig.defaults.#withFilterable',  // only found in overrides
+  'fieldConfig.defaults.#withPath',  // also related to overrides
+  'fieldConfig.defaults.#withWriteable',
+
+  // Old fields, not used anymore
+  '#withThresholds',
+  '#withThresholdsMixin',
+  '#withTimeRegions',
+  '#withTimeRegionsMixin',
+];
+
 
 function(name, panel)
   helpers.regroup(panel, groupings)
   + helpers.repackage(panel, subPackages)
+  + std.foldl(
+    function(acc, path)
+      acc + helpers.removeContent(panel, path),
+    toRemove,
+    {}
+  )
   + {
     '#new':: d.func.new(
       'Creates a new %s panel with a title.' % name,
@@ -91,7 +145,4 @@ function(name, panel)
       // interesting from a reusability standpoint.
       + self.datasource.withType('datasource')
       + self.datasource.withUid('-- Mixed --'),
-
-    //standardOptions+: { '#color': d.obj('color') },
-
   }
