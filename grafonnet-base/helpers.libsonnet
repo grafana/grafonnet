@@ -4,15 +4,20 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 {
   local root = self,
 
+  // Grabs last item in an array
   last(arr): std.reverse(arr)[0],
+
+  // Returns the whole array except the last item
   allButLast(arr): arr[0:std.length(arr) - 1],
 
+  // Gets the content from source on a specified JSONPath
   getContent(source, path):
     local content = xtd.jsonpath.getJSONPath(source, path);
     if content == null
     then self.last(xtd.string.splitEscape(path, '.'))
     else content,
 
+  // Sets the content on a specified ~JSONPath
   setContent(content, path):
     std.foldr(
       function(k, acc)
@@ -21,6 +26,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       content
     ),
 
+  // Hides the content in source on a specified ~JSONPath
   hideContent(source, path):
     local splitPath = xtd.string.splitEscape(path, '.');
     local content = root.getContent(source, path);
@@ -31,6 +37,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       { [root.last(splitPath)]:: content }
     ),
 
+  // Removes the content in source on a specified ~JSONPath
   removeContent(source, path):
     local splitPath = xtd.string.splitEscape(path, '.');
     std.foldr(
@@ -40,11 +47,20 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       { [root.last(splitPath)]:: {} }
     ),
 
+  // Transform moves the content from JSONPath `from` to JSONPath `to` in `source`
   transform(source, from, to):
     local content = root.getContent(source, from);
     root.setContent(content, to)
   ,
 
+  // This functions transforms the canonical groupings representation to an array that can
+  // be processed by `transform()`. Example groupings object:
+  //   local groupings = {
+  //     toPath: [
+  //       'from.path.one',
+  //       'from.path.two',
+  //     ],
+  //   },
   groupingsToTransformArray(groupings, keyPrefix='', keySuffix='', separator='.'):
     [
       {
@@ -69,6 +85,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       for fromPath in groupings[toPath]
     ],
 
+  // Transforms a groupings object from source, including their docstring counterparts
   group(source, groupings):
     std.foldl(
       function(acc, mapping)
@@ -79,6 +96,8 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       {}
     ),
 
+  // Transforms a groupings object from source, including their docstring counterparts
+  // Regroup means it gets merged with the `source`.
   regroup(source, groupings, base=source):
     std.foldl(
       function(acc, mapping)
@@ -103,6 +122,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       base
     ),
 
+  // Creates a (docs) subpackage from `source` and places it at `to`.
   makeSubpackage(source, from, to, docstring=''):
     local splitFrom = xtd.string.splitEscape(from, '.');
     local splitTo = xtd.string.splitEscape(to, '.');
@@ -121,6 +141,14 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
     + root.transform(source, from, to)
     + root.setContent(content, to),
 
+  // Repackages a field from `source` according to the mapping data.
+  //   local data = [
+  //     {
+  //       from: 'fromPath',
+  //       to: 'toPath',
+  //       docstring: '',
+  //     },
+  //   ],
   repackage(source, data):
     std.foldl(
       function(acc, mapping)
