@@ -13,52 +13,9 @@ grafonnet.panel.logs
 ## Index
 
 * [`fn new(title)`](#fn-new)
-* [`fn withFieldConfig(value)`](#fn-withfieldconfig)
-* [`fn withFieldConfigMixin(value)`](#fn-withfieldconfigmixin)
-* [`fn withGridPos(value)`](#fn-withgridpos)
-* [`fn withGridPosMixin(value)`](#fn-withgridposmixin)
-* [`fn withId(value)`](#fn-withid)
-* [`fn withLibraryPanel(value)`](#fn-withlibrarypanel)
-* [`fn withLibraryPanelMixin(value)`](#fn-withlibrarypanelmixin)
-* [`fn withOptions(value)`](#fn-withoptions)
-* [`fn withOptionsMixin(value)`](#fn-withoptionsmixin)
-* [`fn withPluginVersion(value)`](#fn-withpluginversion)
-* [`fn withRepeatPanelId(value)`](#fn-withrepeatpanelid)
-* [`fn withTags(value)`](#fn-withtags)
-* [`fn withTagsMixin(value)`](#fn-withtagsmixin)
-* [`fn withThresholds(value)`](#fn-withthresholds)
-* [`fn withThresholdsMixin(value)`](#fn-withthresholdsmixin)
-* [`fn withTimeRegions(value)`](#fn-withtimeregions)
-* [`fn withTimeRegionsMixin(value)`](#fn-withtimeregionsmixin)
-* [`fn withType()`](#fn-withtype)
 * [`obj datasource`](#obj-datasource)
   * [`fn withType(value)`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
-* [`obj fieldConfig`](#obj-fieldconfig)
-  * [`fn withDefaults(value)`](#fn-fieldconfigwithdefaults)
-  * [`fn withDefaultsMixin(value)`](#fn-fieldconfigwithdefaultsmixin)
-  * [`fn withOverrides(value)`](#fn-fieldconfigwithoverrides)
-  * [`fn withOverridesMixin(value)`](#fn-fieldconfigwithoverridesmixin)
-  * [`obj defaults`](#obj-fieldconfigdefaults)
-    * [`fn withColor(value)`](#fn-fieldconfigdefaultswithcolor)
-    * [`fn withColorMixin(value)`](#fn-fieldconfigdefaultswithcolormixin)
-    * [`fn withCustom(value)`](#fn-fieldconfigdefaultswithcustom)
-    * [`fn withCustomMixin(value)`](#fn-fieldconfigdefaultswithcustommixin)
-    * [`fn withDescription(value)`](#fn-fieldconfigdefaultswithdescription)
-    * [`fn withDisplayNameFromDS(value)`](#fn-fieldconfigdefaultswithdisplaynamefromds)
-    * [`fn withFilterable(value)`](#fn-fieldconfigdefaultswithfilterable)
-    * [`fn withLinks(value)`](#fn-fieldconfigdefaultswithlinks)
-    * [`fn withLinksMixin(value)`](#fn-fieldconfigdefaultswithlinksmixin)
-    * [`fn withMappings(value)`](#fn-fieldconfigdefaultswithmappings)
-    * [`fn withMappingsMixin(value)`](#fn-fieldconfigdefaultswithmappingsmixin)
-    * [`fn withPath(value)`](#fn-fieldconfigdefaultswithpath)
-    * [`fn withThresholds(value)`](#fn-fieldconfigdefaultswiththresholds)
-    * [`fn withThresholdsMixin(value)`](#fn-fieldconfigdefaultswiththresholdsmixin)
-    * [`fn withWriteable(value)`](#fn-fieldconfigdefaultswithwriteable)
-    * [`obj thresholds`](#obj-fieldconfigdefaultsthresholds)
-      * [`fn withMode(value)`](#fn-fieldconfigdefaultsthresholdswithmode)
-      * [`fn withSteps(value)`](#fn-fieldconfigdefaultsthresholdswithsteps)
-      * [`fn withStepsMixin(value)`](#fn-fieldconfigdefaultsthresholdswithstepsmixin)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
   * [`fn withStatic(value)`](#fn-gridposwithstatic)
@@ -99,14 +56,24 @@ grafonnet.panel.logs
 * [`obj standardOptions`](#obj-standardoptions)
   * [`fn withDecimals(value)`](#fn-standardoptionswithdecimals)
   * [`fn withDisplayName(value)`](#fn-standardoptionswithdisplayname)
+  * [`fn withLinks(value)`](#fn-standardoptionswithlinks)
+  * [`fn withLinksMixin(value)`](#fn-standardoptionswithlinksmixin)
+  * [`fn withMappings(value)`](#fn-standardoptionswithmappings)
+  * [`fn withMappingsMixin(value)`](#fn-standardoptionswithmappingsmixin)
   * [`fn withMax(value)`](#fn-standardoptionswithmax)
   * [`fn withMin(value)`](#fn-standardoptionswithmin)
   * [`fn withNoValue(value)`](#fn-standardoptionswithnovalue)
+  * [`fn withOverrides(value)`](#fn-standardoptionswithoverrides)
+  * [`fn withOverridesMixin(value)`](#fn-standardoptionswithoverridesmixin)
   * [`fn withUnit(value)`](#fn-standardoptionswithunit)
   * [`obj color`](#obj-standardoptionscolor)
     * [`fn withFixedColor(value)`](#fn-standardoptionscolorwithfixedcolor)
     * [`fn withMode(value)`](#fn-standardoptionscolorwithmode)
     * [`fn withSeriesBy(value)`](#fn-standardoptionscolorwithseriesby)
+  * [`obj tresholds`](#obj-standardoptionstresholds)
+    * [`fn withMode(value)`](#fn-standardoptionstresholdswithmode)
+    * [`fn withSteps(value)`](#fn-standardoptionstresholdswithsteps)
+    * [`fn withStepsMixin(value)`](#fn-standardoptionstresholdswithstepsmixin)
 
 ## Fields
 
@@ -117,152 +84,6 @@ new(title)
 ```
 
 Creates a new logs panel with a title.
-
-### fn withFieldConfig
-
-```ts
-withFieldConfig(value)
-```
-
-
-
-### fn withFieldConfigMixin
-
-```ts
-withFieldConfigMixin(value)
-```
-
-
-
-### fn withGridPos
-
-```ts
-withGridPos(value)
-```
-
-
-
-### fn withGridPosMixin
-
-```ts
-withGridPosMixin(value)
-```
-
-
-
-### fn withId
-
-```ts
-withId(value)
-```
-
-TODO docs
-
-### fn withLibraryPanel
-
-```ts
-withLibraryPanel(value)
-```
-
-
-
-### fn withLibraryPanelMixin
-
-```ts
-withLibraryPanelMixin(value)
-```
-
-
-
-### fn withOptions
-
-```ts
-withOptions(value)
-```
-
-options is specified by the PanelOptions field in panel
-plugin schemas.
-
-### fn withOptionsMixin
-
-```ts
-withOptionsMixin(value)
-```
-
-options is specified by the PanelOptions field in panel
-plugin schemas.
-
-### fn withPluginVersion
-
-```ts
-withPluginVersion(value)
-```
-
-FIXME this almost certainly has to be changed in favor of scuemata versions
-
-### fn withRepeatPanelId
-
-```ts
-withRepeatPanelId(value)
-```
-
-Id of the repeating panel.
-
-### fn withTags
-
-```ts
-withTags(value)
-```
-
-TODO docs
-
-### fn withTagsMixin
-
-```ts
-withTagsMixin(value)
-```
-
-TODO docs
-
-### fn withThresholds
-
-```ts
-withThresholds(value)
-```
-
-TODO docs - seems to be an old field from old dashboard alerts?
-
-### fn withThresholdsMixin
-
-```ts
-withThresholdsMixin(value)
-```
-
-TODO docs - seems to be an old field from old dashboard alerts?
-
-### fn withTimeRegions
-
-```ts
-withTimeRegions(value)
-```
-
-TODO docs
-
-### fn withTimeRegionsMixin
-
-```ts
-withTimeRegionsMixin(value)
-```
-
-TODO docs
-
-### fn withType
-
-```ts
-withType()
-```
-
-
 
 ### obj datasource
 
@@ -282,200 +103,6 @@ withUid(value)
 ```
 
 
-
-### obj fieldConfig
-
-
-#### fn fieldConfig.withDefaults
-
-```ts
-withDefaults(value)
-```
-
-
-
-#### fn fieldConfig.withDefaultsMixin
-
-```ts
-withDefaultsMixin(value)
-```
-
-
-
-#### fn fieldConfig.withOverrides
-
-```ts
-withOverrides(value)
-```
-
-
-
-#### fn fieldConfig.withOverridesMixin
-
-```ts
-withOverridesMixin(value)
-```
-
-
-
-#### obj fieldConfig.defaults
-
-
-##### fn fieldConfig.defaults.withColor
-
-```ts
-withColor(value)
-```
-
-TODO docs
-
-##### fn fieldConfig.defaults.withColorMixin
-
-```ts
-withColorMixin(value)
-```
-
-TODO docs
-
-##### fn fieldConfig.defaults.withCustom
-
-```ts
-withCustom(value)
-```
-
-custom is specified by the PanelFieldConfig field
-in panel plugin schemas.
-
-##### fn fieldConfig.defaults.withCustomMixin
-
-```ts
-withCustomMixin(value)
-```
-
-custom is specified by the PanelFieldConfig field
-in panel plugin schemas.
-
-##### fn fieldConfig.defaults.withDescription
-
-```ts
-withDescription(value)
-```
-
-Human readable field metadata
-
-##### fn fieldConfig.defaults.withDisplayNameFromDS
-
-```ts
-withDisplayNameFromDS(value)
-```
-
-This can be used by data sources that return and explicit naming structure for values and labels
-When this property is configured, this value is used rather than the default naming strategy.
-
-##### fn fieldConfig.defaults.withFilterable
-
-```ts
-withFilterable(value)
-```
-
-True if data source field supports ad-hoc filters
-
-##### fn fieldConfig.defaults.withLinks
-
-```ts
-withLinks(value)
-```
-
-The behavior when clicking on a result
-
-##### fn fieldConfig.defaults.withLinksMixin
-
-```ts
-withLinksMixin(value)
-```
-
-The behavior when clicking on a result
-
-##### fn fieldConfig.defaults.withMappings
-
-```ts
-withMappings(value)
-```
-
-Convert input values into a display string
-
-##### fn fieldConfig.defaults.withMappingsMixin
-
-```ts
-withMappingsMixin(value)
-```
-
-Convert input values into a display string
-
-##### fn fieldConfig.defaults.withPath
-
-```ts
-withPath(value)
-```
-
-An explicit path to the field in the datasource.  When the frame meta includes a path,
-This will default to `${frame.meta.path}/${field.name}
-
-When defined, this value can be used as an identifier within the datasource scope, and
-may be used to update the results
-
-##### fn fieldConfig.defaults.withThresholds
-
-```ts
-withThresholds(value)
-```
-
-
-
-##### fn fieldConfig.defaults.withThresholdsMixin
-
-```ts
-withThresholdsMixin(value)
-```
-
-
-
-##### fn fieldConfig.defaults.withWriteable
-
-```ts
-withWriteable(value)
-```
-
-True if data source can write a value to the path.  Auth/authz are supported separately
-
-##### obj fieldConfig.defaults.thresholds
-
-
-###### fn fieldConfig.defaults.thresholds.withMode
-
-```ts
-withMode(value)
-```
-
-
-
-Accepted values for `value` are "absolute", "percentage"
-
-###### fn fieldConfig.defaults.thresholds.withSteps
-
-```ts
-withSteps(value)
-```
-
-Must be sorted by 'value', first value is always -Infinity
-
-###### fn fieldConfig.defaults.thresholds.withStepsMixin
-
-```ts
-withStepsMixin(value)
-```
-
-Must be sorted by 'value', first value is always -Infinity
 
 ### obj gridPos
 
@@ -780,6 +407,38 @@ withDisplayName(value)
 
 The display value for this field.  This supports template variables blank is auto
 
+#### fn standardOptions.withLinks
+
+```ts
+withLinks(value)
+```
+
+The behavior when clicking on a result
+
+#### fn standardOptions.withLinksMixin
+
+```ts
+withLinksMixin(value)
+```
+
+The behavior when clicking on a result
+
+#### fn standardOptions.withMappings
+
+```ts
+withMappings(value)
+```
+
+Convert input values into a display string
+
+#### fn standardOptions.withMappingsMixin
+
+```ts
+withMappingsMixin(value)
+```
+
+Convert input values into a display string
+
 #### fn standardOptions.withMax
 
 ```ts
@@ -803,6 +462,22 @@ withNoValue(value)
 ```
 
 Alternative to empty string
+
+#### fn standardOptions.withOverrides
+
+```ts
+withOverrides(value)
+```
+
+
+
+#### fn standardOptions.withOverridesMixin
+
+```ts
+withOverridesMixin(value)
+```
+
+
 
 #### fn standardOptions.withUnit
 
@@ -840,3 +515,32 @@ withSeriesBy(value)
 TODO docs
 
 Accepted values for `value` are "min", "max", "last"
+
+#### obj standardOptions.tresholds
+
+
+##### fn standardOptions.tresholds.withMode
+
+```ts
+withMode(value)
+```
+
+
+
+Accepted values for `value` are "absolute", "percentage"
+
+##### fn standardOptions.tresholds.withSteps
+
+```ts
+withSteps(value)
+```
+
+Must be sorted by 'value', first value is always -Infinity
+
+##### fn standardOptions.tresholds.withStepsMixin
+
+```ts
+withStepsMixin(value)
+```
+
+Must be sorted by 'value', first value is always -Infinity
