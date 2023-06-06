@@ -12,7 +12,7 @@
     * [`fn withKeepTime(value=false)`](#fn-dashboardsoptionswithkeeptime)
     * [`fn withTargetBlank(value=false)`](#fn-dashboardsoptionswithtargetblank)
 * [`obj link`](#obj-link)
-  * [`fn new(title, utl)`](#fn-linknew)
+  * [`fn new(title, url)`](#fn-linknew)
   * [`fn withIcon(value)`](#fn-linkwithicon)
   * [`fn withTooltip(value)`](#fn-linkwithtooltip)
   * [`obj options`](#obj-linkoptions)
@@ -76,7 +76,7 @@ withTargetBlank(value=false)
 #### fn link.new
 
 ```ts
-new(title, utl)
+new(title, url)
 ```
 
 Create link to an arbitrary URL.
