@@ -35,9 +35,7 @@ local groupings = {
     'fieldConfig.defaults.withMax',
     'fieldConfig.defaults.withDecimals',
     'fieldConfig.defaults.withDisplayName',
-    'fieldConfig.defaults.color',  // to veneer // many options in UI dropdown
-    //'fieldConfig.defaults.withColor',  // to veneer // many options in UI dropdown
-    //'fieldConfig.defaults.withColorMixin',  // to veneer // many options in UI dropdown
+    'fieldConfig.defaults.color',
     'fieldConfig.defaults.withNoValue',
 
     // separate UI sections, to veneer
