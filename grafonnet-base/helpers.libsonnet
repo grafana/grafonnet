@@ -12,10 +12,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 
   // Gets the content from source on a specified JSONPath
   getContent(source, path):
-    local content = xtd.jsonpath.getJSONPath(source, path);
-    if content == null
-    then self.last(xtd.string.splitEscape(path, '.'))
-    else content,
+    xtd.jsonpath.getJSONPath(source, path),
 
   // Sets the content on a specified ~JSONPath
   setContent(content, path):
@@ -50,7 +47,9 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
   // Transform moves the content from JSONPath `from` to JSONPath `to` in `source`
   transform(source, from, to):
     local content = root.getContent(source, from);
-    root.setContent(content, to)
+    if content == null
+    then {}
+    else root.setContent(content, to)
   ,
 
   // This functions transforms the canonical groupings representation to an array that can
