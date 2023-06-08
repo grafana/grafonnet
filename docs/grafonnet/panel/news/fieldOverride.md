@@ -47,7 +47,7 @@ fieldOverride.byType.new('number')
 new(value)
 ```
 
-`new` creates a new override of type `%s`.
+`new` creates a new override of type `byName`.
 
 #### fn byName.withPropertiesFromOptions
 
@@ -78,7 +78,7 @@ be called multiple time, adding more properties.
 new(value)
 ```
 
-`new` creates a new override of type `%s`.
+`new` creates a new override of type `byQuery`.
 
 #### fn byQuery.withPropertiesFromOptions
 
@@ -109,7 +109,7 @@ be called multiple time, adding more properties.
 new(value)
 ```
 
-`new` creates a new override of type `%s`.
+`new` creates a new override of type `byRegex`.
 
 #### fn byRegex.withPropertiesFromOptions
 
@@ -140,7 +140,7 @@ be called multiple time, adding more properties.
 new(value)
 ```
 
-`new` creates a new override of type `%s`.
+`new` creates a new override of type `byType`.
 
 #### fn byType.withPropertiesFromOptions
 
@@ -171,7 +171,7 @@ be called multiple time, adding more properties.
 new(value)
 ```
 
-`new` creates a new override of type `%s`.
+`new` creates a new override of type `byValue`.
 
 #### fn byValue.withPropertiesFromOptions
 
