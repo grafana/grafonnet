@@ -74,11 +74,6 @@ local subPackages = [
     to: 'thresholdStep',
     docstring: '',
   },
-  {
-    from: 'fieldConfig.overrides',
-    to: 'fieldOverride',
-    docstring: '',
-  },
 ];
 
 local toRemove = [
@@ -145,4 +140,92 @@ function(name, panel)
       // interesting from a reusability standpoint.
       + self.datasource.withType('datasource')
       + self.datasource.withUid('-- Mixed --'),
+
+    fieldConfig+: {
+      '#overrides':: {},
+      overrides+:: {},
+    },
+    local overrides = super.fieldConfig.overrides,
+    fieldOverride:
+      local matchers = [
+        'byName',
+        'byRegex',
+        'byType',
+        'byQuery',
+        'byValue',  // TODO: byValue takes more complex `options` than string
+      ];
+      {
+        '#':: d.package.newSub(
+          'fieldOverride',
+          |||
+            Overrides allow you to customize visualization settings for specific fields or
+            series. This is accomplished by adding an override rule that targets
+            a particular set of fields and that can each define multiple options.
+
+            ```jsonnet
+            fieldOverride.byType.new('number')
+            + fieldOverride.byType.withPropertiesFromOptions(
+              panel.standardOptions.withDecimals(2)
+              + panel.standardOptions.withUnit('s')
+            )
+            ```
+          |||
+        ),
+      } + {
+        [matcher]: {
+          '#new':: d.fn(
+            '`new` creates a new override of type `%s`.',
+            args=[
+              d.arg('value', d.T.string),
+            ]
+          ),
+          new(value):
+            overrides.matcher.withId(matcher)
+            + overrides.matcher.withOptions(value),
+
+          '#withProperty':: d.fn(
+            |||
+              `withProperty` adds a property that needs to be overridden. This function can
+              be called multiple time, adding more properties.
+            |||,
+            args=[
+              d.arg('id', d.T.string),
+              d.arg('value', d.T.any),
+            ]
+          ),
+          withProperty(id, value):
+            overrides.withPropertiesMixin([
+              overrides.property.withId(id)
+              + overrides.property.withValue(value),
+            ]),
+
+          '#withPropertiesFromOptions':: d.fn(
+            |||
+              `withPropertiesFromOptions` takes an object with properties that need to be
+              overridden. See example code above.
+            |||,
+            args=[
+              d.arg('options', d.T.object),
+            ]
+          ),
+          withPropertiesFromOptions(options):
+            local infunc(input, path=[]) =
+              std.foldl(
+                function(acc, p)
+                  acc + (
+                    if std.isObject(input[p])
+                    then infunc(input[p], path=path + [p])
+                    else
+                      overrides.withPropertiesMixin([
+                        overrides.property.withId(std.join('.', path + [p]))
+                        + overrides.property.withValue(input[p]),
+                      ])
+                  ),
+                std.objectFields(input),
+                {}
+              );
+            infunc(options.fieldConfig.defaults),
+        }
+        for matcher in matchers
+      },
   }
