@@ -217,8 +217,8 @@ function(name, panel)
                     then infunc(input[p], path=path + [p])
                     else
                       overrides.withPropertiesMixin([
-                        overrides.property.withId(std.join('.', path + [p]))
-                        + overrides.property.withValue(input[p]),
+                        overrides.properties.withId(std.join('.', path + [p]))
+                        + overrides.properties.withValue(input[p]),
                       ])
                   ),
                 std.objectFields(input),
