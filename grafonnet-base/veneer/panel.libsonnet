@@ -174,7 +174,7 @@ function(name, panel)
       } + {
         [matcher]: {
           '#new':: d.fn(
-            '`new` creates a new override of type `%s`.',
+            '`new` creates a new override of type `%s`.' % matcher,
             args=[
               d.arg('value', d.T.string),
             ]
