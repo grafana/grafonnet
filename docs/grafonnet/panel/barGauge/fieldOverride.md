@@ -1,88 +1,194 @@
 # fieldOverride
 
+Overrides allow you to customize visualization settings for specific fields or
+series. This is accomplished by adding an override rule that targets
+a particular set of fields and that can each define multiple options.
+
+```jsonnet
+fieldOverride.byType.new('number')
++ fieldOverride.byType.withPropertiesFromOptions(
+  panel.standardOptions.withDecimals(2)
+  + panel.standardOptions.withUnit('s')
+)
+```
 
 
 ## Index
 
-* [`fn withMatcher(value)`](#fn-withmatcher)
-* [`fn withMatcherMixin(value)`](#fn-withmatchermixin)
-* [`fn withProperties(value)`](#fn-withproperties)
-* [`fn withPropertiesMixin(value)`](#fn-withpropertiesmixin)
-* [`obj matcher`](#obj-matcher)
-  * [`fn withId(value="")`](#fn-matcherwithid)
-  * [`fn withOptions(value)`](#fn-matcherwithoptions)
-* [`obj properties`](#obj-properties)
-  * [`fn withId(value="")`](#fn-propertieswithid)
-  * [`fn withValue(value)`](#fn-propertieswithvalue)
+* [`obj byName`](#obj-byname)
+  * [`fn new(value)`](#fn-bynamenew)
+  * [`fn withPropertiesFromOptions(options)`](#fn-bynamewithpropertiesfromoptions)
+  * [`fn withProperty(id, value)`](#fn-bynamewithproperty)
+* [`obj byQuery`](#obj-byquery)
+  * [`fn new(value)`](#fn-byquerynew)
+  * [`fn withPropertiesFromOptions(options)`](#fn-byquerywithpropertiesfromoptions)
+  * [`fn withProperty(id, value)`](#fn-byquerywithproperty)
+* [`obj byRegex`](#obj-byregex)
+  * [`fn new(value)`](#fn-byregexnew)
+  * [`fn withPropertiesFromOptions(options)`](#fn-byregexwithpropertiesfromoptions)
+  * [`fn withProperty(id, value)`](#fn-byregexwithproperty)
+* [`obj byType`](#obj-bytype)
+  * [`fn new(value)`](#fn-bytypenew)
+  * [`fn withPropertiesFromOptions(options)`](#fn-bytypewithpropertiesfromoptions)
+  * [`fn withProperty(id, value)`](#fn-bytypewithproperty)
+* [`obj byValue`](#obj-byvalue)
+  * [`fn new(value)`](#fn-byvaluenew)
+  * [`fn withPropertiesFromOptions(options)`](#fn-byvaluewithpropertiesfromoptions)
+  * [`fn withProperty(id, value)`](#fn-byvaluewithproperty)
 
 ## Fields
 
-### fn withMatcher
+### obj byName
+
+
+#### fn byName.new
 
 ```ts
-withMatcher(value)
+new(value)
 ```
 
+`new` creates a new override of type `%s`.
 
-
-### fn withMatcherMixin
+#### fn byName.withPropertiesFromOptions
 
 ```ts
-withMatcherMixin(value)
+withPropertiesFromOptions(options)
 ```
 
+`withPropertiesFromOptions` takes an object with properties that need to be
+overridden. See example code above.
 
 
-### fn withProperties
+#### fn byName.withProperty
 
 ```ts
-withProperties(value)
+withProperty(id, value)
 ```
 
+`withProperty` adds a property that needs to be overridden. This function can
+be called multiple time, adding more properties.
 
 
-### fn withPropertiesMixin
+### obj byQuery
+
+
+#### fn byQuery.new
 
 ```ts
-withPropertiesMixin(value)
+new(value)
 ```
 
+`new` creates a new override of type `%s`.
 
-
-### obj matcher
-
-
-#### fn matcher.withId
+#### fn byQuery.withPropertiesFromOptions
 
 ```ts
-withId(value="")
+withPropertiesFromOptions(options)
 ```
 
+`withPropertiesFromOptions` takes an object with properties that need to be
+overridden. See example code above.
 
 
-#### fn matcher.withOptions
+#### fn byQuery.withProperty
 
 ```ts
-withOptions(value)
+withProperty(id, value)
 ```
 
+`withProperty` adds a property that needs to be overridden. This function can
+be called multiple time, adding more properties.
 
 
-### obj properties
+### obj byRegex
 
 
-#### fn properties.withId
+#### fn byRegex.new
 
 ```ts
-withId(value="")
+new(value)
 ```
 
+`new` creates a new override of type `%s`.
 
-
-#### fn properties.withValue
+#### fn byRegex.withPropertiesFromOptions
 
 ```ts
-withValue(value)
+withPropertiesFromOptions(options)
 ```
 
+`withPropertiesFromOptions` takes an object with properties that need to be
+overridden. See example code above.
+
+
+#### fn byRegex.withProperty
+
+```ts
+withProperty(id, value)
+```
+
+`withProperty` adds a property that needs to be overridden. This function can
+be called multiple time, adding more properties.
+
+
+### obj byType
+
+
+#### fn byType.new
+
+```ts
+new(value)
+```
+
+`new` creates a new override of type `%s`.
+
+#### fn byType.withPropertiesFromOptions
+
+```ts
+withPropertiesFromOptions(options)
+```
+
+`withPropertiesFromOptions` takes an object with properties that need to be
+overridden. See example code above.
+
+
+#### fn byType.withProperty
+
+```ts
+withProperty(id, value)
+```
+
+`withProperty` adds a property that needs to be overridden. This function can
+be called multiple time, adding more properties.
+
+
+### obj byValue
+
+
+#### fn byValue.new
+
+```ts
+new(value)
+```
+
+`new` creates a new override of type `%s`.
+
+#### fn byValue.withPropertiesFromOptions
+
+```ts
+withPropertiesFromOptions(options)
+```
+
+`withPropertiesFromOptions` takes an object with properties that need to be
+overridden. See example code above.
+
+
+#### fn byValue.withProperty
+
+```ts
+withProperty(id, value)
+```
+
+`withProperty` adds a property that needs to be overridden. This function can
+be called multiple time, adding more properties.
 
