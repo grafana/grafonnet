@@ -195,8 +195,8 @@ function(name, panel)
           ),
           withProperty(id, value):
             overrides.withPropertiesMixin([
-              overrides.property.withId(id)
-              + overrides.property.withValue(value),
+              overrides.properties.withId(id)
+              + overrides.properties.withValue(value),
             ]),
 
           '#withPropertiesFromOptions':: d.fn(
