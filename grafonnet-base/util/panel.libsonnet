@@ -13,10 +13,9 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
     |||,
     args=[
       d.arg('panels', d.T.array),
-      // d.arg('init', d.T.number) // intentionally undocumented, for internal use
     ]
   ),
-  setPanelIDs(panels, init=0):
+  setPanelIDs(panels):
     local indexStart = 1;
     local infunc(panels, init) =
       std.mapWithIndex(
