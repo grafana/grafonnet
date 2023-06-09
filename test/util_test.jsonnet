@@ -50,6 +50,55 @@ test.new(std.thisFile)
     )
   )
 )
++ (
+  local initialPanels = [
+    { type: 'timeseries' },
+    { type: 'row' },
+    { type: 'timeseries' },
+    { type: 'stat' },
+    {
+      type: 'row',
+      panels: [
+        { type: 'timeseries' },
+        { type: 'stat' },
+        { type: 'table', id: 5 },
+        { type: 'timeseries' },
+      ],
+    },
+    { type: 'table', id: 5 },
+    { type: 'timeseries' },
+  ];
+
+  local sanitizedPanels = [
+    { id: 1, type: 'timeseries' },
+    { id: 2, type: 'row' },
+    { id: 3, type: 'timeseries' },
+    { id: 4, type: 'stat' },
+    {
+      id: 5,
+      type: 'row',
+      panels: [
+        { id: 36, type: 'timeseries' },
+        { id: 37, type: 'stat' },
+        { id: 38, type: 'table' },
+        { id: 39, type: 'timeseries' },
+      ],
+    },
+    { id: 6, type: 'table' },
+    { id: 7, type: 'timeseries' },
+  ];
+
+  // `util.panel.setPanelIDs` calculates an ID for each panel, overwriting any
+  // pre-existing IDs. To ensure that Grafonnet provides consistent experience,
+  // the panel ID order should not change.
+  test.case.new(
+    name='Panel ID calculation order is stable',
+    test=test.expect.eq(
+      actual=util.panel.setPanelIDs(initialPanels),
+      expected=sanitizedPanels,
+    )
+  )
+)
 
 + (
   local query = '1, a : b, ab :  , aa: bb, a     :b';
