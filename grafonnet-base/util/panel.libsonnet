@@ -16,25 +16,36 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
     ]
   ),
   setPanelIDs(panels):
-    local indexStart = 1;
-    local infunc(panels, init) =
-      std.mapWithIndex(
-        function(index, panel)
-          panel { id: indexStart + index + init }
-          + (
-            if panel.type == 'row'
-               && 'panels' in panel
-            then {
-              panels:
-                infunc(
-                  panel.panels,
-                  std.length(panels) * (indexStart + index)
-                ),
-            }
-            else {}
-          ),
-        panels
-      );
-    infunc(panels, 0),
+    local infunc(panels, start=1) =
+      std.foldl(
+        function(acc, panel)
+          acc {
+            index:  // Track the index to ensure no duplicates exist.
+              acc.index
+              + 1
+              + (if panel.type == 'row'
+                    && 'panels' in panel
+                 then std.length(panel.panels)
+                 else 0),
 
+            panels+: [
+              panel { id: acc.index }
+              + (
+                if panel.type == 'row'
+                   && 'panels' in panel
+                then {
+                  panels:
+                    infunc(
+                      panel.panels,
+                      acc.index + 1
+                    ),
+                }
+                else {}
+              ),
+            ],
+          },
+        panels,
+        { index: start, panels: [] }
+      ).panels;
+    infunc(panels),
 }
