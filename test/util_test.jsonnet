@@ -2,9 +2,65 @@ local test = import 'github.com/jsonnet-libs/testonnet/main.libsonnet';
 
 local util = import '../grafonnet-base/util/main.libsonnet';
 
+local getPanelIDs(panels) =
+  std.flattenArrays(
+    std.map(
+      function(p)
+        [p.id]
+        + (
+          if p.type == 'row'
+             && 'panels' in p
+          then getPanelIDs(p.panels)
+          else []
+        ),
+      panels
+    )
+  );
+
 test.new(std.thisFile)
 + (
   local initialPanels = [
+    {
+      type: 'row',
+      panels: [
+        { type: 'timeseries', title: 'title' + i }
+        for i in std.range(0, 10)
+      ],
+    },
+    {
+      type: 'row',
+      panels: [
+        { type: 'timeseries', title: 'title' + i }
+        for i in std.range(0, 5)
+      ],
+    },
+  ];
+
+  local panelIDs = getPanelIDs(util.panel.setPanelIDs(initialPanels));
+
+  // `util.panel.setPanelIDs` calculates an ID for each panel, overwriting any
+  // pre-existing IDs.
+
+  // The panel IDs need to be unique for Grafana, gaps and order do not matter.
+  // For a consistent experience with Grafonnet, we also ensure the IDs are ordered.
+
+  test.case.new(
+    name='Panel ID is a set (unique and ordered)',
+    test=test.expect.eqJson(
+      actual=panelIDs,
+      expected=std.set(panelIDs),
+    )
+  )
+  + test.case.new(
+    name='First panel ID is 1',
+    test=test.expect.eqJson(
+      actual=panelIDs[0],
+      expected=1,
+    )
+  )
+)
++ (
+  local panelsWithManualIDs = [
     { type: 'timeseries' },
     { type: 'row' },
     { type: 'timeseries' },
@@ -22,30 +78,12 @@ test.new(std.thisFile)
     { type: 'timeseries' },
   ];
 
-  local getPanelIDs(panels) =
-    std.flattenArrays(
-      std.map(
-        function(p)
-          [p.id]
-          + (
-            if p.type == 'row'
-               && 'panels' in p
-            then getPanelIDs(p.panels)
-            else []
-          ),
-        panels
-      )
-    );
+  local panelIDs = getPanelIDs(util.panel.setPanelIDs(panelsWithManualIDs));
 
-  local panelIDs = getPanelIDs(util.panel.setPanelIDs(initialPanels));
-
-  // `util.panel.setPanelIDs` calculates an ID for each panel, overwriting any
-  // pre-existing IDs. The only requirement is that panel IDs are unique,
-  // the order doesn't matter and gaps may exist.
   test.case.new(
-    name='Panel IDs are not unique',
+    name='Panel IDs are sanitized',
     test=test.expect.eq(
-      actual=std.sort(panelIDs),
+      actual=panelIDs,
       expected=std.set(panelIDs),
     )
   )

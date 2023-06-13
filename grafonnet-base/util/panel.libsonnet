@@ -13,22 +13,39 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
     |||,
     args=[
       d.arg('panels', d.T.array),
-      // d.arg('init', d.T.number) // intentionally undocumented, for internal use
     ]
   ),
-  setPanelIDs(panels, init=0): [
-    panels[i - 1] { id: i + init }
-    + (if panels[i - 1].type == 'row'
-          && 'panels' in panels[i - 1]
-       then {
-         panels:
-           this.setPanelIDs(
-             panels[i - 1].panels,
-             init=(std.length(panels) * i)
-           ),
-       }
-       else {})
-    for i in std.range(1, std.length(panels))
-  ],
+  setPanelIDs(panels):
+    local infunc(panels, start=1) =
+      std.foldl(
+        function(acc, panel)
+          acc {
+            index:  // Track the index to ensure no duplicates exist.
+              acc.index
+              + 1
+              + (if panel.type == 'row'
+                    && 'panels' in panel
+                 then std.length(panel.panels)
+                 else 0),
 
+            panels+: [
+              panel { id: acc.index }
+              + (
+                if panel.type == 'row'
+                   && 'panels' in panel
+                then {
+                  panels:
+                    infunc(
+                      panel.panels,
+                      acc.index + 1
+                    ),
+                }
+                else {}
+              ),
+            ],
+          },
+        panels,
+        { index: start, panels: [] }
+      ).panels;
+    infunc(panels),
 }
