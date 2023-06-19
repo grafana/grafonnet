@@ -24,7 +24,6 @@ grafonnet.query.tempo
   * [`fn withOperator(value)`](#fn-filterswithoperator)
   * [`fn withScope(value)`](#fn-filterswithscope)
   * [`fn withTag(value)`](#fn-filterswithtag)
-  * [`fn withType(value)`](#fn-filterswithtype)
   * [`fn withValue(value)`](#fn-filterswithvalue)
   * [`fn withValueMixin(value)`](#fn-filterswithvaluemixin)
   * [`fn withValueType(value)`](#fn-filterswithvaluetype)
@@ -181,7 +180,7 @@ The operator that connects the tag to the value, for example: =, >, !=, =~
 withScope(value)
 ```
 
-
+static fields are pre-set in the UI, dynamic fields are added by the user
 
 Accepted values for `value` are "unscoped", "resource", "span"
 
@@ -192,16 +191,6 @@ withTag(value)
 ```
 
 The tag for the search filter, for example: .http.status_code, .service.name, status
-
-#### fn filters.withType
-
-```ts
-withType(value)
-```
-
-static fields are pre-set in the UI, dynamic fields are added by the user
-
-Accepted values for `value` are "static", "dynamic"
 
 #### fn filters.withValue
 
