@@ -188,7 +188,7 @@ function(var) {
         else
           {
             local mapping = {
-              alphabethical:
+              alphabetical:
                 if !caseInsensitive
                 then
                   if asc
