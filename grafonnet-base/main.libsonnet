@@ -273,8 +273,9 @@ local veneer = import './veneer/main.libsonnet';
           render='dynamic',
         );
 
-      local panel =
-        parsed.panelLib {
+      local panel = parsed.panelLib + (
+        if 'customLib' in parsed
+        then {
           [if 'options' in parsed.customLib then 'options']:
             parsed.customLib.options,
           [if 'fieldConfig' in parsed.customLib then 'fieldConfig']+: {
@@ -283,7 +284,9 @@ local veneer = import './veneer/main.libsonnet';
                 parsed.customLib.fieldConfig.defaults.custom,
             },
           },
-        };
+        }
+        else {}
+      );
 
       panel
       + root.packageDocMixin(title, 'panel.')

@@ -80,8 +80,10 @@ local filesForLatest(version) =
     }, '  '),
   };
 
+# The "latest" version is assumed to be the first of this list.
 local versions = [
   'v9.4.0',
+  'v9.5.0',
 ];
 
 std.foldl(
