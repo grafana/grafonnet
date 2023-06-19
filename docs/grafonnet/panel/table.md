@@ -31,7 +31,6 @@ grafonnet.panel.table
   * [`fn withFooterMixin(value={"countRows": false,"reducer": [],"show": false})`](#fn-optionswithfootermixin)
   * [`fn withFrameIndex(value=0)`](#fn-optionswithframeindex)
   * [`fn withShowHeader(value=true)`](#fn-optionswithshowheader)
-  * [`fn withShowRowNums(value=false)`](#fn-optionswithshowrownums)
   * [`fn withShowTypeIcons(value=false)`](#fn-optionswithshowtypeicons)
   * [`fn withSortBy(value)`](#fn-optionswithsortby)
   * [`fn withSortByMixin(value)`](#fn-optionswithsortbymixin)
@@ -225,14 +224,6 @@ withShowHeader(value=true)
 ```
 
 Controls whether the panel should show the header
-
-#### fn options.withShowRowNums
-
-```ts
-withShowRowNums(value=false)
-```
-
-Controls whether the columns should be numbered
 
 #### fn options.withShowTypeIcons
 

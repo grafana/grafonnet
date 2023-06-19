@@ -84,6 +84,8 @@ grafonnet.panel.timeSeries
 * [`obj options`](#obj-options)
   * [`fn withLegend(value)`](#fn-optionswithlegend)
   * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
+  * [`fn withTimezone(value)`](#fn-optionswithtimezone)
+  * [`fn withTimezoneMixin(value)`](#fn-optionswithtimezonemixin)
   * [`fn withTooltip(value)`](#fn-optionswithtooltip)
   * [`fn withTooltipMixin(value)`](#fn-optionswithtooltipmixin)
   * [`obj legend`](#obj-optionslegend)
@@ -686,6 +688,22 @@ withLegendMixin(value)
 ```
 
 TODO docs
+
+#### fn options.withTimezone
+
+```ts
+withTimezone(value)
+```
+
+
+
+#### fn options.withTimezoneMixin
+
+```ts
+withTimezoneMixin(value)
+```
+
+
 
 #### fn options.withTooltip
 
