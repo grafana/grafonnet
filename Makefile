@@ -31,6 +31,7 @@ libdocs:
 
 latestdocs:
 	@rm -rf docs/; mkdir docs; cd docs/; \
+	mkdir -p assets; cp ../.mkdocs/assets/logo.svg assets/logo.svg; \
 	jb init && jb install ../gen/grafonnet-latest/; \
 	rm -rf vendor/github.com/grafana/grafonnet/grafonnet-base; \
 	ln -sf $${PWD}/../grafonnet-base vendor/github.com/grafana/grafonnet/grafonnet-base; \

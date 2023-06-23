@@ -21,17 +21,18 @@
 "site_url": "https://grafana.github.io/grafonnet"
 "theme":
   "name": "material"
+  "logo": "assets/logo.svg"
   "palette":
-    - "accent": "indigo"
+    - "accent": "deep orange"
       "media": "(prefers-color-scheme: light)"
-      "primary": "indigo"
+      "primary": "black"
       "scheme": "default"
       "toggle":
         "icon": "material/toggle-switch-off-outline"
         "name": "Switch to dark mode"
-    - "accent": "red"
+    - "accent": "deep-orange"
       "media": "(prefers-color-scheme: dark)"
-      "primary": "red"
+      "primary": "black"
       "scheme": "slate"
       "toggle":
         "icon": "material/toggle-switch"
