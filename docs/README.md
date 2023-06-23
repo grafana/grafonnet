@@ -74,6 +74,7 @@ jsonnet -J vendor dashboard.jsonnet
 ## Subpackages
 
 * [dashboard](grafonnet/dashboard.md)
+* [examples](grafonnet/examples.md)
 * [librarypanel](grafonnet/librarypanel.md)
 * [panel](grafonnet/panel.md)
 * [playlist](grafonnet/playlist.md)

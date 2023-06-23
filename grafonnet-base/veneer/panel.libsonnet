@@ -149,7 +149,7 @@ function(name, panel)
     fieldOverride:
       local matchers = [
         'byName',
-        'byRegex',
+        'byRegexp',
         'byType',
         'byQuery',
         'byValue',  // TODO: byValue takes more complex `options` than string
