@@ -1,4 +1,5 @@
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
+local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 
 {
   local root = self,
@@ -37,45 +38,11 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       },
       values
     ),
+
   parseCustomQuery(query):
-    // Break query down to character level
-    local split = std.mapWithIndex(
-      function(i, c) { index: i, char: c },
-      query
-    );
-
-    // Split query by comma, unless the comma is escaped
-    local items = std.foldl(
-      function(acc, item)
-        acc
-        + (
-          // Look for a comma that isn't escaped with '\\'
-          if item.char == ','
-             && split[item.index - 1].char != '\\'
-          then {
-            items+: [acc.current_item],
-            current_item: '',
-          }
-          // If this is the last array item, then append the last character
-          else if item.index == (std.length(split) - 1)
-          then {
-            items+: [acc.current_item + item.char],
-          }
-          // Append characters to current tracking key/value
-          else {
-            current_item+: item.char,
-          }
-        ),
-      split,
-      {
-        items: [],
-        current_item: '',
-      }
-    ).items;
-
-    // Split items into key:value pairs
     std.map(
       function(v)
+        // Split items into key:value pairs
         local split = std.splitLimit(v, ' : ', 1);
         {
           key: std.stripChars(split[0], ' '),
@@ -84,6 +51,6 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
             then std.stripChars(split[1], ' ')
             else self.key,
         },
-      items
+      xtd.string.splitEscape(query, ',')  // Split query by comma, unless the comma is escaped
     ),
 }
