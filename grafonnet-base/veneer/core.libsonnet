@@ -13,6 +13,7 @@ local veneer = {
     ),
     new(title):
       self.withTitle(title)
+      + self.withSchemaVersion()
       + self.withTimezone('utc')
       + self.time.withFrom('now-6h')
       + self.time.withTo('now'),
