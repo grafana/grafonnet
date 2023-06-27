@@ -1,4 +1,4 @@
-local g = import './g.libsonnet';
+local g = import 'g.libsonnet';
 
 local row = g.panel.row;
 
@@ -42,5 +42,3 @@ g.dashboard.new('Controller Runtime')
     ]),
   ], panelWidth=8)
 )
-
-// vim: foldmethod=marker foldmarker=local,;

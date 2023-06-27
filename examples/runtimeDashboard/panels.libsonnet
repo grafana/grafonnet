@@ -1,18 +1,16 @@
-local g = import './g.libsonnet';
+local g = import 'g.libsonnet';
 
 {
   timeSeries: {
     local timeSeries = g.panel.timeSeries,
-    local fieldConfig = timeSeries.fieldConfig,
-    local defaults = timeSeries.fieldConfig.defaults,
+    local fieldOverride = g.panel.timeSeries.fieldOverride,
     local custom = timeSeries.fieldConfig.defaults.custom,
-    local override = timeSeries.fieldConfig.overrides,
     local options = timeSeries.options,
 
     base(title, targets):
       timeSeries.new(title)
-      + timeSeries.withTargets(targets)
-      + timeSeries.withInterval('1m')
+      + timeSeries.queryOptions.withTargets(targets)
+      + timeSeries.queryOptions.withInterval('1m')
       + options.legend.withDisplayMode('table')
       + options.legend.withCalcs([
         'lastNotNull',
@@ -23,57 +21,61 @@ local g = import './g.libsonnet';
 
     short(title, targets):
       self.base(title, targets)
-      + defaults.withUnit('short')
-      + defaults.withDecimals(0),
+      + timeSeries.standardOptions.withUnit('short')
+      + timeSeries.standardOptions.withDecimals(0),
 
     seconds(title, targets):
       self.base(title, targets)
-      + defaults.withUnit('s')
+      + timeSeries.standardOptions.withUnit('s')
       + custom.scaleDistribution.withType('log')
       + custom.scaleDistribution.withLog(10),
 
+    cpuUsage: self.seconds,
+
     bytes(title, targets):
       self.base(title, targets,)
-      + defaults.withUnit('bytes')
+      + timeSeries.standardOptions.withUnit('bytes')
       + custom.scaleDistribution.withType('log')
       + custom.scaleDistribution.withLog(2),
 
-    cpuUsage: self.seconds,
-
     memoryUsage(title, targets):
       self.bytes(title, targets)
-      + fieldConfig.withOverrides([
-        override.matcher.withId('byRegexp')
-        + override.matcher.withOptions('/(virtual|resident)/i')
-        + override.withProperties([
-          override.properties.withId('custom.fillOpacity')
-          + override.properties.withValue(0),
-          override.properties.withId('custom.lineWidth')
-          + override.properties.withValue(2),
-          override.properties.withId('custom.lineStyle')
-          + override.properties.withValue({
+      + timeSeries.standardOptions.withOverrides([
+        fieldOverride.byRegex.new('/(virtual|resident)/i')
+        + fieldOverride.byRegex.withProperty(
+          'custom.fillOpacity',
+          0
+        )
+        + fieldOverride.byRegex.withProperty(
+          'custom.lineWidth',
+          2
+        )
+        + fieldOverride.byRegex.withProperty(
+          'custom.lineStyle',
+          {
             dash: [10, 10],
             fill: 'dash',
-          }),
-        ]),
+          }
+        ),
       ]),
 
     durationQuantile(title, targets):
       self.base(title, targets)
-      + defaults.withUnit('s')
+      + timeSeries.standardOptions.withUnit('s')
       + custom.withDrawStyle('bars')
-      + fieldConfig.withOverrides([
-        override.matcher.withId('byRegexp')
-        + override.matcher.withOptions('/mean/i')
-        + override.withProperties([
-          override.properties.withId('custom.fillOpacity')
-          + override.properties.withValue(0),
-          override.properties.withId('custom.lineStyle')
-          + override.properties.withValue({
+      + timeSeries.standardOptions.withOverrides([
+        fieldOverride.byRegex.new('/mean/i')
+        + fieldOverride.byRegex.withProperty(
+          'custom.fillOpacity',
+          0
+        )
+        + fieldOverride.byRegex.withProperty(
+          'custom.lineStyle',
+          {
             dash: [8, 10],
             fill: 'dash',
-          }),
-        ]),
+          }
+        ),
       ]),
   },
 
@@ -83,19 +85,18 @@ local g = import './g.libsonnet';
 
     base(title, targets):
       heatmap.new(title)
-      + heatmap.withTargets(targets)
-      + heatmap.withInterval('1m'),
-    // heatmap.options not schematized yet
-    // + options.withCalculate()
-    // + options.calculation.xBuckets.withMode('size')
-    // + options.calculation.xBuckets.withValue('1min')
-    // + options.withCellGep(2)
-    // + options.color.withMode('scheme')
-    // + options.color.withScheme('Spectral')
-    // + options.color.withSteps(128)
-    // + options.yAxis.withDecimals(0)
-    // + options.yAxis.withUnit('s')
+      + heatmap.queryOptions.withTargets(targets)
+      + heatmap.queryOptions.withInterval('1m')
+      + options.withCalculate()
+      + options.calculation.xBuckets.withMode('size')
+      + options.calculation.xBuckets.withValue('1min')
+      + options.withCellGap(2)
+      + options.color.HeatmapColorOptions.withMode('scheme')
+      + options.color.HeatmapColorOptions.withScheme('Spectral')
+      + options.color.HeatmapColorOptions.withSteps(128)
+      + options.yAxis.withDecimals(0)
+      + options.yAxis.withUnit('s'),
   },
 }
 
-// vim: foldmethod=indent shiftwidth=2 foldlevel=2
+// vim: foldmethod=marker foldmarker=local,;
