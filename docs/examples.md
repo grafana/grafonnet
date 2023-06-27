@@ -1,4 +1,4 @@
-# examples
+# Examples
 
 The repository holds several [examples](https://github.com/grafana/grafonnet/tree/main/examples), let's have a look at some of them.
 
@@ -241,5 +241,3 @@ local var = g.dashboard.variable;
 ```
 
 The full controller runtime dashboard example can be [found in the repo](https://github.com/grafana/grafonnet/blob/master/examples/runtimeDashboard).
-
-

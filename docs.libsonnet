@@ -10,18 +10,18 @@ grafonnet.docs(
         'grafonnet',
         std.strReplace(importstr './README.md', '# Grafonnet', ''),
       ),
-    examples:: {
-      '#': d.package.newSub(
-        'examples',
-        |||
-          The repository holds several [examples](https://github.com/grafana/grafonnet/tree/main/examples), let's have a look at some of them.
-        |||
-        + '\n'
-        + std.join('\n', [
-          (import './examples/docs/simple.libsonnet'),
-          (import './examples/docs/composable.libsonnet'),
-        ])
-      ),
-    },
   }
 )
++ {
+  'examples.md':
+    |||
+      # Examples
+
+      The repository holds several [examples](https://github.com/grafana/grafonnet/tree/main/examples), let's have a look at some of them.
+    |||
+    + '\n'
+    + std.join('\n', [
+      (import './examples/docs/simple.libsonnet'),
+      (import './examples/docs/composable.libsonnet'),
+    ]),
+}
