@@ -1,9 +1,9 @@
 local fileSnippet = (import './helpers.libsonnet').fileSnippet;
 
 |||
-  ## Composable dashboard
+  # Controller Runtime dashboard
 
-  The [controller runtime dashboard](https://github.com/grafana/grafonnet/tree/duologic/docs_examples/examples/runtimeDashboard) example shows how we can compose a dashboard from reusable components. There are separate definitions of panels, variables and queries. The queries are combined with the panels and then the panels are grouped into rows. Eventually the panels and rows are rendered into a grid. Let's break it down.
+  The [controller runtime dashboard](https://github.com/grafana/grafonnet/tree/duologic/docs_examples/examples/runtimeDashboard) example shows how to compose a dashboard from reusable components. There are separate definitions of panels, variables and queries. The queries are combined with the panels and then the panels are grouped into rows. Eventually the panels and rows are rendered into a grid. Let's break it down.
 
   Similarly to the simple dashboard, Grafonnet is imported through `g.libsonnet` and `row` becomes a shortcut for the row panel. Additionally the panels, variables and queries get imported.
 
@@ -23,13 +23,13 @@ local fileSnippet = (import './helpers.libsonnet').fileSnippet;
   %(main_variables)s
   ```
 
-  And eventually we'll add the panels. This examples makes use of the `makeGrid` util, this function will organize the panels on a grid with equal with panels. The grid is applied to each row.
+  And eventually add the panels.
 
   ```jsonnet
-  %(main_panels)s
+  %(main_panels_line)s /* ... */ )
   ```
 
-  ### Panels
+  ## Panels
 
   The panels are defined separately from the queries, this turns them into reusable components. A panels can be called with a title and query. Let's take the 'Threads' panel as an example.
 
@@ -62,11 +62,27 @@ local fileSnippet = (import './helpers.libsonnet').fileSnippet;
   }
   ```
 
-  ### Queries
+  ### Rows and Grid
+
+  Rows can be used to group panels and optionally collapse them, however using them within Jsonnet can be quite cumbersome. For example: all panels added after a row in the panel array will inevitably become part of the row, also the order in the array doesn't necessarily apply with how Grafana displays them. The `makeGrid` util function attempts to aid with this.
+
+  First the panels are consistently added to the rows so that the intention is clear from a Jsonnet perspective.
+
+  ```jsonnet
+  %(main_row)s
+  ```
+
+  Second the panel array gets processed by `makeGrid` before added it to the dashboard.
+
+  ```jsonnet
+  %(main_panels)s
+  ```
+
+  ## Queries
 
   The queries are defined as separate objects. This allows us to swap out the Prometheus queries for Graphite queries while not having to change the dashboard. Additionally this makes it possible to reuse the queries on different panels or even in different dashboards.
 
-  Letˋs take a look at a query definition. The `cpuUsage` is an instance of a `prometheusQuery`. Note that the query definition leans heavily on the variables, making the datasource configurable and using variables in the query expression, setting values for the cluster, namespace and job labels. Finally this configures a `legendFormat`, telling Grafana which values to show in the legend.
+  Let's take a look at a query definition. The `cpuUsage` is an instance of a `prometheusQuery`. Note that the query definition leans heavily on the variables, making the datasource configurable and using variables in the query expression, setting values for the cluster, namespace and job labels. Finally this configures a `legendFormat`, telling Grafana which values to show in the legend.
 
   ```jsonnet
   // from queries.libsonnet
@@ -75,8 +91,9 @@ local fileSnippet = (import './helpers.libsonnet').fileSnippet;
   {
   %(queries_query)s
   }
+  ```
 
-  ### Variables
+  ## Variables
 
   To make this dashboard dynamic, it uses variables. This allows the user to select and manipulate the data being displayed.
 
@@ -94,7 +111,13 @@ local fileSnippet = (import './helpers.libsonnet').fileSnippet;
   main_init: fileSnippet.lines(main, 7, 14),
   main_variables: fileSnippet.lines(main, 14, 20),
   main_panels: fileSnippet.lines(main, 20, 44),
+  main_panels_line: fileSnippet.lines(main, 20, 21),
   main_panelcall: fileSnippet.lines(main, 28, 29, 6),
+  main_row: fileSnippet.find(
+    main,
+    "row.new('Process')",
+    ']),',
+  ),
 
   local panels = importstr './../runtimeDashboard/panels.libsonnet',
   timeseries_imports:

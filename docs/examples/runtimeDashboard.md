@@ -1,41 +1,6 @@
-# Examples
+# Controller Runtime dashboard
 
-The repository holds several [examples](https://github.com/grafana/grafonnet/tree/main/examples), let's have a look at some of them.
-
-## Simple dashboard
-
-This example shows a simple dashboard with a single panel displaying one query:
-
-```jsonnet
-local g = import 'g.libsonnet';
-
-g.dashboard.new('Faro dashboard')
-+ g.dashboard.withUid('faro-grafonnet-demo')
-+ g.dashboard.withDescription('Dashboard for Faro')
-+ g.dashboard.graphTooltip.withSharedCrosshair()
-+ g.dashboard.withPanels([
-  g.panel.timeSeries.new('Requests / sec')
-  + g.panel.timeSeries.queryOptions.withTargets([
-    g.query.prometheus.new(
-      'mimir',
-      'sum by (status_code) (rate(request_duration_seconds_count{job=~".*/faro-api"}[$__rate_interval]))',
-    ),
-  ])
-  + g.panel.timeSeries.standardOptions.withUnit('reqps')
-  + g.panel.timeSeries.gridPos.withW(24)
-  + g.panel.timeSeries.gridPos.withH(8),
-])
-```
-
-Note the `g.libsonnet` import at the top. The file contains the import reference to the actual version of Grafonnet being used, either latest or a more specific version. We do this to make the dashboard more portable. In this case we reference `grafonnet-latest`:
-
-```jsonnet
-import 'github.com/grafana/grafonnet/gen/grafonnet-latest/main.libsonnet'
-```
-
-## Composable dashboard
-
-The [controller runtime dashboard](https://github.com/grafana/grafonnet/tree/duologic/docs_examples/examples/runtimeDashboard) example shows how we can compose a dashboard from reusable components. There are separate definitions of panels, variables and queries. The queries are combined with the panels and then the panels are grouped into rows. Eventually the panels and rows are rendered into a grid. Let's break it down.
+The [controller runtime dashboard](https://github.com/grafana/grafonnet/tree/duologic/docs_examples/examples/runtimeDashboard) example shows how to compose a dashboard from reusable components. There are separate definitions of panels, variables and queries. The queries are combined with the panels and then the panels are grouped into rows. Eventually the panels and rows are rendered into a grid. Let's break it down.
 
 Similarly to the simple dashboard, Grafonnet is imported through `g.libsonnet` and `row` becomes a shortcut for the row panel. Additionally the panels, variables and queries get imported.
 
@@ -72,36 +37,13 @@ The variables get added to provide dropdowns for selecting the datasource, clust
 ])
 ```
 
-And eventually we'll add the panels. This examples makes use of the `makeGrid` util, this function will organize the panels on a grid with equal with panels. The grid is applied to each row.
+And eventually add the panels.
 
 ```jsonnet
-+ g.dashboard.withPanels(
-  g.util.grid.makeGrid([
-    row.new('Process')
-    + row.withPanels([
-      panels.timeSeries.cpuUsage('CPU Usage', queries.cpuUsage),
-      panels.timeSeries.memoryUsage('Memory Usage', queries.memUsage),
-      panels.timeSeries.base('Goroutines', queries.goroutines),
-      panels.timeSeries.base('Threads', queries.threads),
-      panels.timeSeries.seconds('GC Duration Mean', queries.gcDuration),
-    ]),
-    row.new('Kubernetes Client')
-    + row.withPanels([
-      panels.heatmap.base('Workqueue Waiting Duration Over Time', queries.wqDurationOverTime),
-      panels.timeSeries.durationQuantile('Workqueue Waiting Duration Quantile', queries.wqDurationQuantile),
-      panels.timeSeries.short('Workqueue Depth', queries.wqDepth),
-      panels.timeSeries.short('Failed Requests', queries.failedRequests),
-    ]),
-    row.new('Controller Runtime')
-    + row.withPanels([
-      panels.heatmap.base('Reconciling Latency Over Time', queries.reconcilingLatencyOverTime),
-      panels.timeSeries.durationQuantile('Reconciling Latency Quantile', queries.reconcilingDurationQuantile),
-    ]),
-  ], panelWidth=8)
-)
++ g.dashboard.withPanels( /* ... */ )
 ```
 
-### Panels
+## Panels
 
 The panels are defined separately from the queries, this turns them into reusable components. A panels can be called with a title and query. Let's take the 'Threads' panel as an example.
 
@@ -153,11 +95,57 @@ The 'GC Duration Mean' panel extends the `base` panel to display the duration in
 }
 ```
 
-### Queries
+### Rows and Grid
+
+Rows can be used to group panels and optionally collapse them, however using them within Jsonnet can be quite cumbersome. For example: all panels added after a row in the panel array will inevitably become part of the row, also the order in the array doesn't necessarily apply with how Grafana displays them. The `makeGrid` util function attempts to aid with this.
+
+First the panels are consistently added to the rows so that the intention is clear from a Jsonnet perspective.
+
+```jsonnet
+    row.new('Process')
+    + row.withPanels([
+      panels.timeSeries.cpuUsage('CPU Usage', queries.cpuUsage),
+      panels.timeSeries.memoryUsage('Memory Usage', queries.memUsage),
+      panels.timeSeries.base('Goroutines', queries.goroutines),
+      panels.timeSeries.base('Threads', queries.threads),
+      panels.timeSeries.seconds('GC Duration Mean', queries.gcDuration),
+    ]),
+```
+
+Second the panel array gets processed by `makeGrid` before added it to the dashboard.
+
+```jsonnet
++ g.dashboard.withPanels(
+  g.util.grid.makeGrid([
+    row.new('Process')
+    + row.withPanels([
+      panels.timeSeries.cpuUsage('CPU Usage', queries.cpuUsage),
+      panels.timeSeries.memoryUsage('Memory Usage', queries.memUsage),
+      panels.timeSeries.base('Goroutines', queries.goroutines),
+      panels.timeSeries.base('Threads', queries.threads),
+      panels.timeSeries.seconds('GC Duration Mean', queries.gcDuration),
+    ]),
+    row.new('Kubernetes Client')
+    + row.withCollapsed(true)
+    + row.withPanels([
+      panels.heatmap.base('Workqueue Waiting Duration Over Time', queries.wqDurationOverTime),
+      panels.timeSeries.durationQuantile('Workqueue Waiting Duration Quantile', queries.wqDurationQuantile),
+      panels.timeSeries.short('Workqueue Depth', queries.wqDepth),
+      panels.timeSeries.short('Failed Requests', queries.failedRequests),
+    ]),
+    row.new('Controller Runtime')
+    + row.withCollapsed(true)
+    + row.withPanels([
+      panels.heatmap.base('Reconciling Latency Over Time', queries.reconcilingLatencyOverTime),
+      panels.timeSeries.durationQuantile('Reconciling Latency Quantile', queries.reconcilingDurationQuantile),
+    ]),
+```
+
+## Queries
 
 The queries are defined as separate objects. This allows us to swap out the Prometheus queries for Graphite queries while not having to change the dashboard. Additionally this makes it possible to reuse the queries on different panels or even in different dashboards.
 
-Letˋs take a look at a query definition. The `cpuUsage` is an instance of a `prometheusQuery`. Note that the query definition leans heavily on the variables, making the datasource configurable and using variables in the query expression, setting values for the cluster, namespace and job labels. Finally this configures a `legendFormat`, telling Grafana which values to show in the legend.
+Let's take a look at a query definition. The `cpuUsage` is an instance of a `prometheusQuery`. Note that the query definition leans heavily on the variables, making the datasource configurable and using variables in the query expression, setting values for the cluster, namespace and job labels. Finally this configures a `legendFormat`, telling Grafana which values to show in the legend.
 
 ```jsonnet
 // from queries.libsonnet
@@ -187,8 +175,9 @@ local variables = import './variables.libsonnet';
       {{cluster}} - {{namespace}}
     |||),
 }
+```
 
-### Variables
+## Variables
 
 To make this dashboard dynamic, it uses variables. This allows the user to select and manipulate the data being displayed.
 
