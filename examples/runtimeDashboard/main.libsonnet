@@ -29,6 +29,7 @@ g.dashboard.new('Controller Runtime')
       panels.timeSeries.seconds('GC Duration Mean', queries.gcDuration),
     ]),
     row.new('Kubernetes Client')
+    + row.withCollapsed(true)
     + row.withPanels([
       panels.heatmap.base('Workqueue Waiting Duration Over Time', queries.wqDurationOverTime),
       panels.timeSeries.durationQuantile('Workqueue Waiting Duration Quantile', queries.wqDurationQuantile),
@@ -36,6 +37,7 @@ g.dashboard.new('Controller Runtime')
       panels.timeSeries.short('Failed Requests', queries.failedRequests),
     ]),
     row.new('Controller Runtime')
+    + row.withCollapsed(true)
     + row.withPanels([
       panels.heatmap.base('Reconciling Latency Over Time', queries.reconcilingLatencyOverTime),
       panels.timeSeries.durationQuantile('Reconciling Latency Quantile', queries.reconcilingDurationQuantile),
