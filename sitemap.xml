@@ -16,22 +16,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/index.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/dashboard.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://grafana.github.io/grafonnet/grafonnet/librarypanel.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel.html</loc>
          <lastmod>2023-06-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -47,11 +32,6 @@
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/grafonnet/publicdashboard.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/query.html</loc>
          <lastmod>2023-06-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -96,122 +76,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/alertGroups.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/annotationsList.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/barChart.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/barGauge.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/candlestick.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/canvas.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/dashboardList.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/debug.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/gauge.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/geomap.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/heatmap.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/histogram.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/logs.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/news.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/nodeGraph.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/pieChart.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://grafana.github.io/grafonnet/grafonnet/panel/row.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/stat.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/stateTimeline.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/statusHistory.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/table.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/text.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/timeSeries.html</loc>
-         <lastmod>2023-06-28</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/grafonnet/panel/xyChart.html</loc>
          <lastmod>2023-06-28</lastmod>
          <changefreq>daily</changefreq>
     </url>
