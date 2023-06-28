@@ -6,12 +6,27 @@ grafonnet.docs(
   main
   {
     '#':
-      d.package.newSub(
-        'grafonnet',
-        std.strReplace(importstr './README.md', '# Grafonnet', ''),
-      ),
+      d.package.newSub('API', ''),
   }
 )
++ {
+  'API/index.md':
+    std.strReplace(
+      super['README.md'],
+      '(API/',
+      '('
+    ),
+  'README.md':
+    |||
+      ---
+      title: Home
+      hide:
+        - navigation
+      ---
+
+    |||
+    + (importstr './README.md'),
+}
 + {
   'examples/simple.md': (import './examples/docs/simple.libsonnet'),
   'examples/runtimeDashboard.md': (import './examples/docs/runtimeDashboard.libsonnet'),
