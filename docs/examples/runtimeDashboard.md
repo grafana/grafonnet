@@ -1,6 +1,6 @@
 # Controller Runtime dashboard
 
-The [controller runtime dashboard](https://github.com/grafana/grafonnet/tree/duologic/docs_examples/examples/runtimeDashboard) example shows how to compose a dashboard from reusable components. There are separate definitions of panels, variables and queries. The queries are combined with the panels and then the panels are grouped into rows. Eventually the panels and rows are rendered into a grid. Let's break it down.
+The [controller runtime dashboard](https://github.com/grafana/grafonnet/blob/master/examples/runtimeDashboard) example shows how to compose a dashboard from reusable components. There are separate definitions of panels, variables and queries. The queries are combined with the panels and then the panels are grouped into rows. Eventually the panels and rows are rendered into a grid. Let's break it down.
 
 Similarly to the simple dashboard, Grafonnet is imported through `g.libsonnet` and `row` becomes a shortcut for the row panel. Additionally the panels, variables and queries get imported.
 
