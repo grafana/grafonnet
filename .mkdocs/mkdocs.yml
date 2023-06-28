@@ -1,7 +1,4 @@
 "docs_dir": "../docs/"
-"watch": 
-  - "../docs/grafonnet/"
-  - "../docs/README.md"
 "edit_uri": ""
 "use_directory_urls": false
 "markdown_extensions":
@@ -20,6 +17,9 @@
 "site_name": "Grafonnet"
 "site_url": "https://grafana.github.io/grafonnet"
 "theme":
+  "features":
+    - "navigation.tabs"
+    - "navigation.indexes"
   "name": "material"
   "logo": "assets/logo.svg"
   "palette":
