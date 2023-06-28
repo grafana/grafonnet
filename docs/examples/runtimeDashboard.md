@@ -139,6 +139,8 @@ Second the panel array gets processed by `makeGrid` before added it to the dashb
       panels.heatmap.base('Reconciling Latency Over Time', queries.reconcilingLatencyOverTime),
       panels.timeSeries.durationQuantile('Reconciling Latency Quantile', queries.reconcilingDurationQuantile),
     ]),
+  ], panelWidth=8)
+)
 ```
 
 ## Queries

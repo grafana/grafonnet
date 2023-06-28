@@ -10,9 +10,9 @@
 
       local endIndices = std.find(endLine, searchlines[startIndex:]);
       assert std.length(endIndices) > 0 : '`endLine` not found';
-      local endIndex = endIndices[0] + startIndex;
+      local endIndex = endIndices[0] + startIndex + 1;
 
-      local output = std.trace(std.manifestJson([startIndex, endIndex + 1]), lines[startIndex:(endIndex + 1)]);
+      local output = lines[startIndex:endIndex];
       std.join('\n', [
         l[reduceIndentSpaces:]
         for l in output

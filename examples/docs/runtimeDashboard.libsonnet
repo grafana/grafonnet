@@ -110,7 +110,7 @@ local fileSnippet = (import './helpers.libsonnet').fileSnippet;
   main_imports: fileSnippet.lines(main, 0, 7),
   main_init: fileSnippet.lines(main, 7, 14),
   main_variables: fileSnippet.lines(main, 14, 20),
-  main_panels: fileSnippet.lines(main, 20, 44),
+  main_panels: fileSnippet.lines(main, 20, 46),
   main_panels_line: fileSnippet.lines(main, 20, 21),
   main_panelcall: fileSnippet.lines(main, 28, 29, 6),
   main_row: fileSnippet.find(
