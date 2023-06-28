@@ -1,4 +1,8 @@
-# grafonnet.query
+# query
+
+grafonnet.query
+
+## Subpackages
 
 * [azureMonitor](azureMonitor.md)
 * [cloudWatch](cloudWatch.md)
@@ -9,3 +13,4 @@
 * [prometheus](prometheus.md)
 * [tempo](tempo.md)
 * [testData](testData.md)
+

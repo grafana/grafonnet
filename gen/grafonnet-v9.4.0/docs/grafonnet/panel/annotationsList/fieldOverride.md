@@ -23,10 +23,10 @@ fieldOverride.byType.new('number')
   * [`fn new(value)`](#fn-byquerynew)
   * [`fn withPropertiesFromOptions(options)`](#fn-byquerywithpropertiesfromoptions)
   * [`fn withProperty(id, value)`](#fn-byquerywithproperty)
-* [`obj byRegex`](#obj-byregex)
-  * [`fn new(value)`](#fn-byregexnew)
-  * [`fn withPropertiesFromOptions(options)`](#fn-byregexwithpropertiesfromoptions)
-  * [`fn withProperty(id, value)`](#fn-byregexwithproperty)
+* [`obj byRegexp`](#obj-byregexp)
+  * [`fn new(value)`](#fn-byregexpnew)
+  * [`fn withPropertiesFromOptions(options)`](#fn-byregexpwithpropertiesfromoptions)
+  * [`fn withProperty(id, value)`](#fn-byregexpwithproperty)
 * [`obj byType`](#obj-bytype)
   * [`fn new(value)`](#fn-bytypenew)
   * [`fn withPropertiesFromOptions(options)`](#fn-bytypewithpropertiesfromoptions)
@@ -100,18 +100,18 @@ withProperty(id, value)
 be called multiple time, adding more properties.
 
 
-### obj byRegex
+### obj byRegexp
 
 
-#### fn byRegex.new
+#### fn byRegexp.new
 
 ```ts
 new(value)
 ```
 
-`new` creates a new override of type `byRegex`.
+`new` creates a new override of type `byRegexp`.
 
-#### fn byRegex.withPropertiesFromOptions
+#### fn byRegexp.withPropertiesFromOptions
 
 ```ts
 withPropertiesFromOptions(options)
@@ -121,7 +121,7 @@ withPropertiesFromOptions(options)
 overridden. See example code above.
 
 
-#### fn byRegex.withProperty
+#### fn byRegexp.withProperty
 
 ```ts
 withProperty(id, value)
