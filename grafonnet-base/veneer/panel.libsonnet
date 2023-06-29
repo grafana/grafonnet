@@ -95,7 +95,7 @@ local toRemove = [
 
   // Internal
   '#withId',
-  '#withPluginVersion',
+  '#withPluginVersion',  // The current PluginVersion value should come from the schema, this should be set on `new()`, 9.4/9.5 schema's don't have a value.
   '#withRepeatPanelId',
   '#withType',
 
@@ -121,12 +121,7 @@ local toRemove = [
 function(name, panel)
   helpers.regroup(panel, groupings)
   + helpers.repackage(panel, subPackages)
-  + std.foldl(
-    function(acc, path)
-      acc + helpers.removeContent(panel, path),
-    toRemove,
-    {}
-  )
+  + helpers.removePaths(panel, toRemove)
   + {
     '#new':: d.func.new(
       'Creates a new %s panel with a title.' % name,
