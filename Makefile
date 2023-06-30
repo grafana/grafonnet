@@ -6,6 +6,7 @@
 # ... but changes how numbers are displayed:
 # https://github.com/CertainLach/jrsonnet/issues/108
 JSONNET_BIN ?= jsonnet
+LATEST ?= $(shell ${JSONNET_BIN} -S -e "(import 'versions.jsonnet')[0]")
 
 clean:
 	rm -rf gen
@@ -32,7 +33,8 @@ libdocs:
 latestdocs:
 	@rm -rf docs/; mkdir docs; cd docs/; \
 	mkdir -p assets; cp ../.mkdocs/assets/logo.svg assets/logo.svg; \
-	jb init && jb install ../gen/grafonnet-latest/; \
+	jb init && jb install ../gen/grafonnet-${LATEST}/; \
+	ln -sf $${PWD}/vendor/grafonnet-${LATEST} $${PWD}/vendor/grafonnet-latest; \
 	rm -rf vendor/github.com/grafana/grafonnet/grafonnet-base; \
 	ln -sf $${PWD}/../grafonnet-base vendor/github.com/grafana/grafonnet/grafonnet-base; \
 	${JSONNET_BIN} -J vendor -S -m . -c ../docs.libsonnet
@@ -45,7 +47,10 @@ localmkdocs:
 
 test:
 	@cd test/; \
-	jb install; \
+	rm -rf jsonnetfile.json vendor/; jb init; \
+	jb install github.com/jsonnet-libs/testonnet; \
+	jb install ../gen/grafonnet-${LATEST}/; \
+	ln -sfn $${PWD}/vendor/grafonnet-${LATEST} $${PWD}/vendor/grafonnet-latest; \
 	rm -rf vendor/github.com/grafana/grafonnet/grafonnet-base; \
 	ln -sf $${PWD}/../grafonnet-base vendor/github.com/grafana/grafonnet/grafonnet-base; \
 	RESULT=0; \
