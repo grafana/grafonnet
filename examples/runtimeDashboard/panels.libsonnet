@@ -41,16 +41,16 @@ local g = import 'g.libsonnet';
     memoryUsage(title, targets):
       self.bytes(title, targets)
       + timeSeries.standardOptions.withOverrides([
-        fieldOverride.byRegex.new('/(virtual|resident)/i')
-        + fieldOverride.byRegex.withProperty(
+        fieldOverride.byRegexp.new('/(virtual|resident)/i')
+        + fieldOverride.byRegexp.withProperty(
           'custom.fillOpacity',
           0
         )
-        + fieldOverride.byRegex.withProperty(
+        + fieldOverride.byRegexp.withProperty(
           'custom.lineWidth',
           2
         )
-        + fieldOverride.byRegex.withProperty(
+        + fieldOverride.byRegexp.withProperty(
           'custom.lineStyle',
           {
             dash: [10, 10],
@@ -64,12 +64,12 @@ local g = import 'g.libsonnet';
       + timeSeries.standardOptions.withUnit('s')
       + custom.withDrawStyle('bars')
       + timeSeries.standardOptions.withOverrides([
-        fieldOverride.byRegex.new('/mean/i')
-        + fieldOverride.byRegex.withProperty(
+        fieldOverride.byRegexp.new('/mean/i')
+        + fieldOverride.byRegexp.withProperty(
           'custom.fillOpacity',
           0
         )
-        + fieldOverride.byRegex.withProperty(
+        + fieldOverride.byRegexp.withProperty(
           'custom.lineStyle',
           {
             dash: [8, 10],
