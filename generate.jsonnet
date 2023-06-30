@@ -80,12 +80,7 @@ local filesForLatest(version) =
     }, '  '),
   };
 
-// The "latest" version is assumed to be the first of this list.
-local versions = [
-  'v10.0.0',
-  'v9.5.0',
-  'v9.4.0',
-];
+local versions = import './versions.jsonnet';
 
 std.foldl(
   function(acc, version)
