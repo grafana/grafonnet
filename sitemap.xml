@@ -286,6 +286,36 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://grafana.github.io/grafonnet/API/panel/datagrid/index.html</loc>
+         <lastmod>2023-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/API/panel/datagrid/fieldOverride.html</loc>
+         <lastmod>2023-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/API/panel/datagrid/link.html</loc>
+         <lastmod>2023-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/API/panel/datagrid/thresholdStep.html</loc>
+         <lastmod>2023-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/API/panel/datagrid/transformation.html</loc>
+         <lastmod>2023-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/API/panel/datagrid/valueMapping.html</loc>
+         <lastmod>2023-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/debug/index.html</loc>
          <lastmod>2023-06-30</lastmod>
          <changefreq>daily</changefreq>
@@ -736,6 +766,36 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://grafana.github.io/grafonnet/API/panel/trend/index.html</loc>
+         <lastmod>2023-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/API/panel/trend/fieldOverride.html</loc>
+         <lastmod>2023-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/API/panel/trend/link.html</loc>
+         <lastmod>2023-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/API/panel/trend/thresholdStep.html</loc>
+         <lastmod>2023-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/API/panel/trend/transformation.html</loc>
+         <lastmod>2023-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/API/panel/trend/valueMapping.html</loc>
+         <lastmod>2023-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/xyChart/index.html</loc>
          <lastmod>2023-06-30</lastmod>
          <changefreq>daily</changefreq>
@@ -786,17 +846,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://grafana.github.io/grafonnet/API/query/grafanaPyroscope.html</loc>
+         <lastmod>2023-06-30</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://grafana.github.io/grafonnet/API/query/loki.html</loc>
          <lastmod>2023-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/parca.html</loc>
-         <lastmod>2023-06-30</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://grafana.github.io/grafonnet/API/query/phlare.html</loc>
          <lastmod>2023-06-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
