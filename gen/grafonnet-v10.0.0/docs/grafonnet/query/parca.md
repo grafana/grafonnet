@@ -1,12 +1,10 @@
-# phlare
+# parca
 
-grafonnet.query.phlare
+grafonnet.query.parca
 
 ## Index
 
 * [`fn withDatasource(value)`](#fn-withdatasource)
-* [`fn withGroupBy(value)`](#fn-withgroupby)
-* [`fn withGroupByMixin(value)`](#fn-withgroupbymixin)
 * [`fn withHide(value)`](#fn-withhide)
 * [`fn withLabelSelector(value="{}")`](#fn-withlabelselector)
 * [`fn withProfileTypeId(value)`](#fn-withprofiletypeid)
@@ -25,22 +23,6 @@ For mixed data sources the selected datasource is on the query level.
 For non mixed scenarios this is undefined.
 TODO find a better way to do this ^ that's friendly to schema
 TODO this shouldn't be unknown but DataSourceRef | null
-
-### fn withGroupBy
-
-```ts
-withGroupBy(value)
-```
-
-Allows to group the results.
-
-### fn withGroupByMixin
-
-```ts
-withGroupByMixin(value)
-```
-
-Allows to group the results.
 
 ### fn withHide
 

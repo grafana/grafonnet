@@ -152,6 +152,13 @@ local veneer = import './veneer/main.libsonnet';
             { '$ref': '#/components/schemas/CloudWatchMetricsQuery' },
           ],
         },
+
+        QueryEditorArrayExpression+: {
+          properties+: {
+            // Prevent infinite recursion
+            expressions+: { items: {} },
+          },
+        },
       },
       AzureMonitorDataQuery: {
         [formatted]: {
@@ -187,9 +194,14 @@ local veneer = import './veneer/main.libsonnet';
   coreLib: {
     new(schema):
       local title = schema.info.title;
+      local spec =
+        if 'spec' in schema.components.schemas[title].properties
+        then schema.components.schemas[title].properties.spec
+        else schema.components.schemas[title];
+
       local render = crdsonnet.fromOpenAPI(
         'lib',
-        schema.components.schemas[title],
+        spec,
         schema,
         render='dynamic',
       );
