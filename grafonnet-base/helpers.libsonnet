@@ -5,10 +5,10 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
   local root = self,
 
   // Grabs last item in an array
-  last(arr): std.reverse(arr)[0],
+  last(arr): xtd.array.slice(arr, -1)[0],
 
   // Returns the whole array except the last item
-  allButLast(arr): arr[0:std.length(arr) - 1],
+  allButLast(arr): xtd.array.slice(arr, 0, -1),
 
   // Gets the content from source on a specified JSONPath
   getContent(source, path):
@@ -159,6 +159,15 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
           mapping.docstring
         ),
       data,
+      {}
+    ),
+
+  // Remove fields from `source`, `paths` is an array of path strings
+  removePaths(source, paths):
+    std.foldl(
+      function(acc, path)
+        acc + root.removeContent(source, path),
+      paths,
       {}
     ),
 }
