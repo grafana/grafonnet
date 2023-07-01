@@ -81,10 +81,10 @@ grafonnet.panel.barGauge
     * [`fn withFixedColor(value)`](#fn-standardoptionscolorwithfixedcolor)
     * [`fn withMode(value)`](#fn-standardoptionscolorwithmode)
     * [`fn withSeriesBy(value)`](#fn-standardoptionscolorwithseriesby)
-  * [`obj tresholds`](#obj-standardoptionstresholds)
-    * [`fn withMode(value)`](#fn-standardoptionstresholdswithmode)
-    * [`fn withSteps(value)`](#fn-standardoptionstresholdswithsteps)
-    * [`fn withStepsMixin(value)`](#fn-standardoptionstresholdswithstepsmixin)
+  * [`obj thresholds`](#obj-standardoptionsthresholds)
+    * [`fn withMode(value)`](#fn-standardoptionsthresholdswithmode)
+    * [`fn withSteps(value)`](#fn-standardoptionsthresholdswithsteps)
+    * [`fn withStepsMixin(value)`](#fn-standardoptionsthresholdswithstepsmixin)
 
 ## Fields
 
@@ -608,10 +608,10 @@ TODO docs
 
 Accepted values for `value` are "min", "max", "last"
 
-#### obj standardOptions.tresholds
+#### obj standardOptions.thresholds
 
 
-##### fn standardOptions.tresholds.withMode
+##### fn standardOptions.thresholds.withMode
 
 ```ts
 withMode(value)
@@ -621,7 +621,7 @@ withMode(value)
 
 Accepted values for `value` are "absolute", "percentage"
 
-##### fn standardOptions.tresholds.withSteps
+##### fn standardOptions.thresholds.withSteps
 
 ```ts
 withSteps(value)
@@ -629,7 +629,7 @@ withSteps(value)
 
 Must be sorted by 'value', first value is always -Infinity
 
-##### fn standardOptions.tresholds.withStepsMixin
+##### fn standardOptions.thresholds.withStepsMixin
 
 ```ts
 withStepsMixin(value)

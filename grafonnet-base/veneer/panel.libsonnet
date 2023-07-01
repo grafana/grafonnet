@@ -46,7 +46,7 @@ local groupings = {
     'fieldConfig.withOverridesMixin',
   ],
 
-  'standardOptions.tresholds': [
+  'standardOptions.thresholds': [
     'fieldConfig.defaults.thresholds.withMode',
     'fieldConfig.defaults.thresholds.withSteps',
     'fieldConfig.defaults.thresholds.withStepsMixin',
