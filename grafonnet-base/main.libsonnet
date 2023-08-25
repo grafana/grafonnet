@@ -43,10 +43,21 @@ local veneer = import './veneer/main.libsonnet';
     }),
 
   new(schemas, version):
-    local dashboardSchema = std.filter(
-      function(schema) schema.info.title == 'dashboard',
-      schemas
-    )[0];
+    local dashboardSchema =
+      std.filter(
+        function(schema) schema.info.title == 'dashboard',
+        schemas
+      )[0]
+      + {
+        components+: { schemas+: { Panel+: { properties+: {
+          pluginVersion: {
+            // HACK: Grafana uses the pluginVersion to decide which migrations to execute
+            // however the pluginVersion is currently not part of the plugin schema's.
+            // This hack ensures that the pluginVersion matches the Grafana version.
+            const: version,
+          },
+        } } } },
+      };
 
     local allSchemaTitles = std.map(function(x) x.info.title, schemas);
 
