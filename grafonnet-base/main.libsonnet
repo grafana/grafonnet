@@ -51,7 +51,7 @@ local veneer = import './veneer/main.libsonnet';
       + {
         components+: { schemas+: { Panel+: { properties+: {
           pluginVersion: {
-            // HACK: Grafana users the pluginVersion to decide which migrations to execute
+            // HACK: Grafana uses the pluginVersion to decide which migrations to execute
             // however the pluginVersion is currently not part of the plugin schema's.
             // This hack ensures that the pluginVersion matches the Grafana version.
             const: version,
