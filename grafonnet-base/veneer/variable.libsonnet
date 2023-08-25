@@ -415,13 +415,15 @@ function(var) {
         ]
       ),
       withAutoOption(count=30, minInterval='10s'): {
+        local this = self,
+
         auto: true,
         auto_count: count,
         auto_min: minInterval,
 
         // Add auto item to current/options
         keyvaluedict::
-          [{ key: 'auto', value: '$__auto_interval_' + self.name }]
+          [{ key: 'auto', value: '$__auto_interval_' + this.name }]
           + super.keyvaluedict,
       },
     },
