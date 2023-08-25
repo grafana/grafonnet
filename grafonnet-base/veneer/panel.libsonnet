@@ -204,22 +204,16 @@ function(name, panel)
             ]
           ),
           withPropertiesFromOptions(options):
-            local infunc(input, path=[]) =
-              std.foldl(
-                function(acc, p)
-                  acc + (
-                    if std.isObject(input[p])
-                    then infunc(input[p], path=path + [p])
-                    else
-                      overrides.withPropertiesMixin([
-                        overrides.properties.withId(std.join('.', path + [p]))
-                        + overrides.properties.withValue(input[p]),
-                      ])
-                  ),
-                std.objectFields(input),
-                {}
-              );
-            infunc(options.fieldConfig.defaults),
+            std.foldl(
+              function(acc, p)
+                acc
+                + overrides.withPropertiesMixin([
+                  overrides.properties.withId(p)
+                  + overrides.properties.withValue(options[p]),
+                ]),
+              std.objectFields(options),
+              {}
+            ),
         }
         for matcher in matchers
       },
