@@ -112,7 +112,24 @@ The month that the fiscal year starts on.  0 = January, 11 = December
 withLinks(value)
 ```
 
-TODO docs
+Dashboard links are displayed at the top of the dashboard, these can either link to other dashboards or to external URLs.
+
+`withLinks` takes an array of [link objects](./link.md).
+
+The [docs](https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/manage-dashboard-links/#dashboard-links) give a more comprehensive description.
+
+Example:
+
+```jsonnet
+local g = import 'g.libsonnet';
+local link = g.dashboard.link;
+
+g.dashboard.new('Title dashboard')
++ g.dashboard.withLinks([
+  link.link.new('My title', 'https://wikipedia.org/'),
+])
+```
+
 
 ### fn withLinksMixin
 
@@ -120,7 +137,24 @@ TODO docs
 withLinksMixin(value)
 ```
 
-TODO docs
+Dashboard links are displayed at the top of the dashboard, these can either link to other dashboards or to external URLs.
+
+`withLinks` takes an array of [link objects](./link.md).
+
+The [docs](https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/manage-dashboard-links/#dashboard-links) give a more comprehensive description.
+
+Example:
+
+```jsonnet
+local g = import 'g.libsonnet';
+local link = g.dashboard.link;
+
+g.dashboard.new('Title dashboard')
++ g.dashboard.withLinks([
+  link.link.new('My title', 'https://wikipedia.org/'),
+])
+```
+
 
 ### fn withLiveNow
 

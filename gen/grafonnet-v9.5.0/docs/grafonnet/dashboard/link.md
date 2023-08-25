@@ -1,5 +1,20 @@
 # link
 
+Dashboard links are displayed at the top of the dashboard, these can either link to other dashboards or to external URLs.
+
+The [docs](https://grafana.com/docs/grafana/latest/dashboards/build-dashboards/manage-dashboard-links/#dashboard-links) give a more comprehensive description.
+
+Example:
+
+```jsonnet
+local g = import 'g.libsonnet';
+local link = g.dashboard.link;
+
+g.dashboard.new('Title dashboard')
++ g.dashboard.withLinks([
+  link.link.new('My title', 'https://wikipedia.org/'),
+])
+```
 
 
 ## Index
