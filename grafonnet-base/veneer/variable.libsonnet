@@ -212,11 +212,13 @@ function(var) {
           'Construct a Prometheus template variable using `label_values()`.',
           args=[
             d.arg('label', d.T.string),
-            d.arg('metric', d.T.string),
+            d.arg('metric', d.T.string, default=''),
           ]
         ),
-        withLabelValues(label, metric):
-          var.withQuery('label_values(%s, %s)' % [metric, label]),
+        withLabelValues(label, metric=''):
+          if metric == ''
+          then var.withQuery('label_values(%s)' % label)
+          else var.withQuery('label_values(%s, %s)' % [metric, label]),
       },
 
       // Deliberately undocumented, use `refresh` below
