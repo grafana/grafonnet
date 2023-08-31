@@ -131,4 +131,69 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         panels: root.makePanelGrid(panelsBeforeRowGroups, panelWidth, panelHeight, 0),
       }
     ).panels,
+
+  '#wrapPanels':: d.func.new(
+    |||
+      `wrapPanels` returns an array of `panels` organized in a grid, wrapping up to next 'row' if total width exceeds full grid of 24 columns.
+      'panelHeight' and 'panelWidth' are used unless panels already have height and width defined.
+    |||,
+    args=[
+      d.arg('panels', d.T.array),
+      d.arg('panelWidth', d.T.number),
+      d.arg('panelHeight', d.T.number),
+      d.arg('startY', d.T.number),
+    ],
+  ),
+  wrapPanels(panels, panelWidth=8, panelHeight=8, startY=0):
+    std.foldl(
+      function(acc, panel)
+        local width = if std.objectHas(panel,'gridPos') && std.objectHas(panel.gridPos, 'w') then panel.gridPos.w else panelWidth;
+        local height = if std.objectHas(panel,'gridPos') && std.objectHas(panel.gridPos, 'h') then panel.gridPos.h else panelHeight;
+        if acc.cursor.x + width > gridWidth
+        then
+          acc {
+            panels+: [
+              panel {
+                gridPos+:
+                  {
+                    x: 0,
+                    y: acc.cursor.y + height,
+                    w: width,
+                    h: height,
+                  },
+              },
+            ],
+            cursor+: {
+              x: 0,
+              y: acc.cursor.y + height,
+            },
+          }
+        else
+          acc {
+            panels+: [
+              panel {
+                gridPos+:
+                  {
+                    x: acc.cursor.x,
+                    y: acc.cursor.y,
+                    w: width,
+                    h: height,
+                  },
+              },
+            ],
+            cursor+: {
+              x: acc.cursor.x + width,
+              y: acc.cursor.y,
+            },
+          },
+      panels,
+      // Initial value for acc
+      {
+        panels: [],
+        cursor: {
+          x: 0,
+          y: startY,
+        },
+      }
+    ).panels,
 }
