@@ -40,14 +40,17 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       This function will use the full grid of 24 columns, setting `panelWidth` to a value
       that can divide 24 into equal parts will fill up the page nicely. (1, 2, 3, 4, 6, 8, 12)
       Other value for `panelWidth` will leave a gap on the far right.
+
+      Optional `startY` can be provided to place generated grid above or below existing panels.
     |||,
     args=[
       d.arg('panels', d.T.array),
       d.arg('panelWidth', d.T.number),
       d.arg('panelHeight', d.T.number),
+      d.arg('startY', d.T.number),
     ],
   ),
-  makeGrid(panels, panelWidth=8, panelHeight=8):
+  makeGrid(panels, panelWidth=8, panelHeight=8, startY=0):
     // Get indexes for all Row panels
     local rowIndexes = [
       i
@@ -80,7 +83,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
     // Loop over rowGroups
     std.foldl(
       function(acc, rowGroup) acc {
-        local y = acc.nexty,
+        local y = acc.nexty + startY,
         nexty: y  // previous y
                + (rowGroup.rows * panelHeight)  // height of all rows
                + rowGroup.rows  // plus 1 for each row
