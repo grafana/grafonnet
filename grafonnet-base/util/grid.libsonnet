@@ -147,8 +147,8 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
   wrapPanels(panels, panelWidth=8, panelHeight=8, startY=0):
     std.foldl(
       function(acc, panel)
-        local width = std.get(panel.gridPos, 'w', default=panelWidth);
-        local height = std.get(panel.gridPos, 'h', default=panelHeight);
+        local width = if std.objectHas(panel,'gridPos') && std.objectHas(panel.gridPos, 'w') then panel.gridPos.w else panelWidth;
+        local height = if std.objectHas(panel,'gridPos') && std.objectHas(panel.gridPos, 'h') then panel.gridPos.h else panelHeight;
         if acc.cursor.x + width > gridWidth
         then
           acc {
