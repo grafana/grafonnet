@@ -147,45 +147,71 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
   wrapPanels(panels, panelWidth=8, panelHeight=8, startY=0):
     std.foldl(
       function(acc, panel)
-        local width = if std.objectHas(panel,'gridPos') && std.objectHas(panel.gridPos, 'w') then panel.gridPos.w else panelWidth;
-        local height = if std.objectHas(panel,'gridPos') && std.objectHas(panel.gridPos, 'h') then panel.gridPos.h else panelHeight;
-        if acc.cursor.x + width > gridWidth
+        // handle row
+        if panel.type == 'row'
         then
-          acc {
-            panels+: [
-              panel {
-                gridPos+:
-                  {
-                    x: 0,
-                    y: acc.cursor.y + height,
-                    w: width,
-                    h: height,
-                  },
-              },
-            ],
-            cursor+: {
-              x: 0,
-              y: acc.cursor.y + height,
-            },
-          }
-        else
+          local shiftY = acc.cursor.maxH;
           acc {
             panels+: [
               panel {
                 gridPos+:
                   {
                     x: acc.cursor.x,
-                    y: acc.cursor.y,
-                    w: width,
-                    h: height,
+                    y: acc.cursor.y + shiftY,
+                    w: 0,
+                    h: 1,
                   },
               },
             ],
-            cursor+:: {
-              x: acc.cursor.x + width,
-              y: acc.cursor.y,
+            cursor:: {
+              x: 0,
+              y: acc.cursor.y + shiftY + 1,
+              maxH: 0,
             },
-          },
+          }
+        else
+          // handle regular panel
+          local width = if std.objectHas(panel, 'gridPos') && std.objectHas(panel.gridPos, 'w') then panel.gridPos.w else panelWidth;
+          local height = if std.objectHas(panel, 'gridPos') && std.objectHas(panel.gridPos, 'h') then panel.gridPos.h else panelHeight;
+          if acc.cursor.x + width > gridWidth
+          then
+            acc {
+              panels+: [
+                panel {
+                  gridPos+:
+                    {
+                      x: 0,
+                      y: acc.cursor.y + height,
+                      w: width,
+                      h: height,
+                    },
+                },
+              ],
+              cursor+:: {
+                x: 0 + width,
+                y: acc.cursor.y + height,
+                maxH: if height > super.maxH then height else super.maxH,
+              },
+            }
+          else
+            acc {
+              panels+: [
+                panel {
+                  gridPos+:
+                    {
+                      x: acc.cursor.x,
+                      y: acc.cursor.y,
+                      w: width,
+                      h: height,
+                    },
+                },
+              ],
+              cursor+:: {
+                x: acc.cursor.x + width,
+                y: acc.cursor.y,
+                maxH: if height > super.maxH then height else super.maxH,
+              },
+            },
       panels,
       // Initial value for acc
       {
@@ -193,6 +219,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         cursor:: {
           x: 0,
           y: startY,
+          maxH: 0, //max height of current 'row'
         },
       }
     ).panels,
