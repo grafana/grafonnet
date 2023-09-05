@@ -30,9 +30,8 @@ These are required for template variables of type 'custom'but do not automatical
 get populated by Grafana when importing a dashboard from JSON.
 
 This is a bit of a hack and should always be called on functions that set `type` on
-a template variable (see the dashboard.templating.list veneer). Ideally Grafana
-populates these fields from the `query` value but this provides a backwards
-compatible solution.
+a template variable. Ideally Grafana populates these fields from the `query` value
+but this provides a backwards compatible solution.
 
 
 ### obj grid
@@ -78,7 +77,7 @@ setPanelIDs(panels)
 `dashboard.withPanels` and `dashboard.withPanelsMixin` to provide a consistent
 experience.
 
-used in ../veneer/dashboard.libsonnet
+used in ../dashboard.libsonnet
 
 
 ### obj string
