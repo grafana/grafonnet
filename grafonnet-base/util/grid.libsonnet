@@ -131,4 +131,98 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         panels: root.makePanelGrid(panelsBeforeRowGroups, panelWidth, panelHeight, 0),
       }
     ).panels,
+
+  '#wrapPanels':: d.func.new(
+    |||
+      `wrapPanels` returns an array of `panels` organized in a grid, wrapping up to next 'row' if total width exceeds full grid of 24 columns.
+      'panelHeight' and 'panelWidth' are used unless panels already have height and width defined.
+    |||,
+    args=[
+      d.arg('panels', d.T.array),
+      d.arg('panelWidth', d.T.number),
+      d.arg('panelHeight', d.T.number),
+      d.arg('startY', d.T.number),
+    ],
+  ),
+  wrapPanels(panels, panelWidth=8, panelHeight=8, startY=0):
+    std.foldl(
+      function(acc, panel)
+        if panel.type == 'row'
+        then
+          // when type=row, start new row immediatly and shift Y of new row by max height recorded
+          acc {
+            panels+: [
+              panel {
+                gridPos+:
+                  {
+                    x: acc.cursor.x,
+                    y: acc.cursor.y + acc.cursor.maxH,
+                    w: 0,
+                    h: 1,
+                  },
+              },
+            ],
+            cursor:: {
+              x: 0,
+              y: acc.cursor.y + acc.cursor.maxH + 1,
+              maxH: 0,
+            },
+          }
+        else
+          // handle regular panel
+          local gridPos = std.get(panel, 'gridPos', {});
+          local width = std.get(gridPos, 'w', panelWidth);
+          local height = std.get(gridPos, 'h', panelHeight);
+          if acc.cursor.x + width > gridWidth
+          then
+            // start new row as width exceeds gridWidth
+            acc {
+              panels+: [
+                panel {
+                  gridPos+:
+                    {
+                      x: 0,
+                      y: acc.cursor.y + height,
+                      w: width,
+                      h: height,
+                    },
+                },
+              ],
+              cursor+:: {
+                x: 0 + width,
+                y: acc.cursor.y + height,
+                maxH: if height > super.maxH then height else super.maxH,
+              },
+            }
+          else
+            // enough width, place panel on current row
+            acc {
+              panels+: [
+                panel {
+                  gridPos+:
+                    {
+                      x: acc.cursor.x,
+                      y: acc.cursor.y,
+                      w: width,
+                      h: height,
+                    },
+                },
+              ],
+              cursor+:: {
+                x: acc.cursor.x + width,
+                y: acc.cursor.y,
+                maxH: if height > super.maxH then height else super.maxH,
+              },
+            },
+      panels,
+      // Initial value for acc
+      {
+        panels: [],
+        cursor:: {
+          x: 0,
+          y: startY,
+          maxH: 0,  // max height of current 'row'
+        },
+      }
+    ).panels,
 }
