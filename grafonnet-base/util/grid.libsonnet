@@ -40,14 +40,17 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       This function will use the full grid of 24 columns, setting `panelWidth` to a value
       that can divide 24 into equal parts will fill up the page nicely. (1, 2, 3, 4, 6, 8, 12)
       Other value for `panelWidth` will leave a gap on the far right.
+
+      Optional `startY` can be provided to place generated grid above or below existing panels.
     |||,
     args=[
       d.arg('panels', d.T.array),
       d.arg('panelWidth', d.T.number),
       d.arg('panelHeight', d.T.number),
+      d.arg('startY', d.T.number),
     ],
   ),
-  makeGrid(panels, panelWidth=8, panelHeight=8):
+  makeGrid(panels, panelWidth=8, panelHeight=8, startY=0):
     // Get indexes for all Row panels
     local rowIndexes = [
       i
@@ -123,12 +126,12 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
           then panels[0:rowIndexes[0]]
           else panels,  // matches all panels if no Row panels found
         local rows = root.countRows(panelsBeforeRowGroups, panelWidth),
-        nexty: (rows * panelHeight) + rows,
+        nexty: startY + (rows * panelHeight) + rows,
 
         lastRowPanelHeight: 0,  // starts without a row panel
 
         // Create a grid for the panels that come before the rowGroups
-        panels: root.makePanelGrid(panelsBeforeRowGroups, panelWidth, panelHeight, 0),
+        panels: root.makePanelGrid(panelsBeforeRowGroups, panelWidth, panelHeight, startY),
       }
     ).panels,
 
