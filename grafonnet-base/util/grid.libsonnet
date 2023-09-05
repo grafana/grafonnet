@@ -147,17 +147,16 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
   wrapPanels(panels, panelWidth=8, panelHeight=8, startY=0):
     std.foldl(
       function(acc, panel)
-        // handle row
         if panel.type == 'row'
         then
-          local shiftY = acc.cursor.maxH;
+          // when type=row, start new row immediatly and shift Y of new row by by max height recorded
           acc {
             panels+: [
               panel {
                 gridPos+:
                   {
                     x: acc.cursor.x,
-                    y: acc.cursor.y + shiftY,
+                    y: acc.cursor.y + acc.cursor.maxH,
                     w: 0,
                     h: 1,
                   },
@@ -165,16 +164,18 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
             ],
             cursor:: {
               x: 0,
-              y: acc.cursor.y + shiftY + 1,
+              y: acc.cursor.y + acc.cursor.maxH + 1,
               maxH: 0,
             },
           }
         else
           // handle regular panel
-          local width = if std.objectHas(panel, 'gridPos') && std.objectHas(panel.gridPos, 'w') then panel.gridPos.w else panelWidth;
-          local height = if std.objectHas(panel, 'gridPos') && std.objectHas(panel.gridPos, 'h') then panel.gridPos.h else panelHeight;
+          local gridPos = std.get(panel, 'gridPos', {});
+          local width = std.get(gridPos, 'w', panelWidth);
+          local height = std.get(gridPos, 'h', panelHeight);
           if acc.cursor.x + width > gridWidth
           then
+            // start new row as width exceeds gridWidth
             acc {
               panels+: [
                 panel {
@@ -194,6 +195,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
               },
             }
           else
+            // enough width, place panel on current row
             acc {
               panels+: [
                 panel {
@@ -219,7 +221,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         cursor:: {
           x: 0,
           y: startY,
-          maxH: 0, //max height of current 'row'
+          maxH: 0,  // max height of current 'row'
         },
       }
     ).panels,
