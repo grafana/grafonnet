@@ -83,7 +83,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
     // Loop over rowGroups
     std.foldl(
       function(acc, rowGroup) acc {
-        local y = acc.nexty + startY,
+        local y = acc.nexty,
         nexty: y  // previous y
                + (rowGroup.rows * panelHeight)  // height of all rows
                + rowGroup.rows  // plus 1 for each row
@@ -126,12 +126,12 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
           then panels[0:rowIndexes[0]]
           else panels,  // matches all panels if no Row panels found
         local rows = root.countRows(panelsBeforeRowGroups, panelWidth),
-        nexty: (rows * panelHeight) + rows,
+        nexty: startY + (rows * panelHeight) + rows,
 
         lastRowPanelHeight: 0,  // starts without a row panel
 
         // Create a grid for the panels that come before the rowGroups
-        panels: root.makePanelGrid(panelsBeforeRowGroups, panelWidth, panelHeight, 0),
+        panels: root.makePanelGrid(panelsBeforeRowGroups, panelWidth, panelHeight, startY),
       }
     ).panels,
 }
