@@ -11,9 +11,8 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       get populated by Grafana when importing a dashboard from JSON.
 
       This is a bit of a hack and should always be called on functions that set `type` on
-      a template variable (see the dashboard.templating.list veneer). Ideally Grafana
-      populates these fields from the `query` value but this provides a backwards
-      compatible solution.
+      a template variable. Ideally Grafana populates these fields from the `query` value
+      but this provides a backwards compatible solution.
     |||,
     args=[d.arg('query', d.T.string)],
   ),

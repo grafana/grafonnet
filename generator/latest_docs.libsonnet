@@ -1,10 +1,9 @@
-local grafonnet = import 'github.com/grafana/grafonnet/grafonnet-base/main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 local main = import 'grafonnet-latest/main.libsonnet';
 
-grafonnet.docs(
+d.render(
   main
-  {
+  + {
     '#':
       d.package.newSub('API', ''),
   }
@@ -25,9 +24,9 @@ grafonnet.docs(
       ---
 
     |||
-    + (importstr './README.md'),
+    + (importstr '../README.md'),
 }
 + {
-  'examples/simple.md': (import './examples/docs/simple.libsonnet'),
-  'examples/runtimeDashboard.md': (import './examples/docs/runtimeDashboard.libsonnet'),
+  'examples/simple.md': (import '../examples/docs/simple.libsonnet'),
+  'examples/runtimeDashboard.md': (import '../examples/docs/runtimeDashboard.libsonnet'),
 }

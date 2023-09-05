@@ -9,7 +9,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       `dashboard.withPanels` and `dashboard.withPanelsMixin` to provide a consistent
       experience.
 
-      used in ../veneer/dashboard.libsonnet
+      used in ../dashboard.libsonnet
     |||,
     args=[
       d.arg('panels', d.T.array),
@@ -19,7 +19,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
     local infunc(panels, start=1) =
       std.foldl(
         function(acc, panel)
-          acc {
+          acc + {
             index:  // Track the index to ensure no duplicates exist.
               acc.index
               + 1
@@ -29,7 +29,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
                  else 0),
 
             panels+: [
-              panel { id: acc.index }
+              panel + { id: acc.index }
               + (
                 if panel.type == 'row'
                    && 'panels' in panel
