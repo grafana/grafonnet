@@ -149,7 +149,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       function(acc, panel)
         if panel.type == 'row'
         then
-          // when type=row, start new row immediatly and shift Y of new row by by max height recorded
+          // when type=row, start new row immediatly and shift Y of new row by max height recorded
           acc {
             panels+: [
               panel {
