@@ -1,8 +1,8 @@
 // This file is generated, do not manually edit.
 {
   '#': { help: 'grafonnet.panel.row', name: 'row' },
-  '#withCollapsed': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-  withCollapsed(value=false): { collapsed: value },
+  '#withCollapsed': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+  withCollapsed(value=true): { collapsed: value },
   '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'Name of default datasource.' } },
   withDatasource(value): { datasource: value },
   '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'Name of default datasource.' } },
@@ -22,7 +22,7 @@
     {
       '#withH': { 'function': { args: [{ default: 9, enums: null, name: 'value', type: 'integer' }], help: 'Panel' } },
       withH(value=9): { gridPos+: { h: value } },
-      '#withStatic': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'true if fixed' } },
+      '#withStatic': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'true if fixed' } },
       withStatic(value=true): { gridPos+: { static: value } },
       '#withW': { 'function': { args: [{ default: 12, enums: null, name: 'value', type: 'integer' }], help: 'Panel' } },
       withW(value=12): { gridPos+: { w: value } },

@@ -23,9 +23,9 @@
           withTableFooterOptionsMixin(value): { options+: { footer+: { TableFooterOptions+: value } } },
           TableFooterOptions+:
             {
-              '#withCountRows': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withCountRows': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withCountRows(value=true): { options+: { footer+: { countRows: value } } },
-              '#withEnablePagination': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withEnablePagination': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withEnablePagination(value=true): { options+: { footer+: { enablePagination: value } } },
               '#withFields': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
               withFields(value): { options+: { footer+: { fields: (if std.isArray(value)
@@ -43,7 +43,7 @@
               withReducerMixin(value): { options+: { footer+: { reducer+: (if std.isArray(value)
                                                                            then value
                                                                            else [value]) } } },
-              '#withShow': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withShow': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withShow(value=true): { options+: { footer+: { show: value } } },
             },
         },
@@ -51,10 +51,10 @@
       withFrameIndex(value=0): { options+: { frameIndex: value } },
       '#withShowHeader': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Controls whether the panel should show the header' } },
       withShowHeader(value=true): { options+: { showHeader: value } },
-      '#withShowRowNums': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: 'Controls whether the columns should be numbered' } },
-      withShowRowNums(value=false): { options+: { showRowNums: value } },
-      '#withShowTypeIcons': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: 'Controls whether the header should show icons for the column types' } },
-      withShowTypeIcons(value=false): { options+: { showTypeIcons: value } },
+      '#withShowRowNums': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Controls whether the columns should be numbered' } },
+      withShowRowNums(value=true): { options+: { showRowNums: value } },
+      '#withShowTypeIcons': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Controls whether the header should show icons for the column types' } },
+      withShowTypeIcons(value=true): { options+: { showTypeIcons: value } },
       '#withSortBy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: 'Used to control row sorting' } },
       withSortBy(value): { options+: { sortBy: (if std.isArray(value)
                                                 then value
@@ -65,7 +65,7 @@
                                                       else [value]) } },
       sortBy+:
         {
-          '#withDesc': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'Flag used to indicate descending sort order' } },
+          '#withDesc': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Flag used to indicate descending sort order' } },
           withDesc(value=true): { desc: value },
           '#withDisplayName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Sets the display name of the field to sort by' } },
           withDisplayName(value): { displayName: value },

@@ -50,7 +50,7 @@
       withMin(value): { HeatmapColorOptions+: { min: value } },
       '#withMode': { 'function': { args: [{ default: null, enums: ['opacity', 'scheme'], name: 'value', type: 'string' }], help: 'Controls the color mode of the heatmap' } },
       withMode(value): { HeatmapColorOptions+: { mode: value } },
-      '#withReverse': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'Reverses the color scheme' } },
+      '#withReverse': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Reverses the color scheme' } },
       withReverse(value=true): { HeatmapColorOptions+: { reverse: value } },
       '#withScale': { 'function': { args: [{ default: null, enums: ['linear', 'exponential'], name: 'value', type: 'string' }], help: 'Controls the color scale of the heatmap' } },
       withScale(value): { HeatmapColorOptions+: { scale: value } },
@@ -67,7 +67,7 @@
   withHeatmapLegendMixin(value): { HeatmapLegend+: value },
   HeatmapLegend+:
     {
-      '#withShow': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'Controls if the legend is shown' } },
+      '#withShow': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Controls if the legend is shown' } },
       withShow(value=true): { HeatmapLegend+: { show: value } },
     },
   '#withHeatmapTooltip': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'Controls tooltip options' } },
@@ -76,9 +76,9 @@
   withHeatmapTooltipMixin(value): { HeatmapTooltip+: value },
   HeatmapTooltip+:
     {
-      '#withShow': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'Controls if the tooltip is shown' } },
+      '#withShow': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Controls if the tooltip is shown' } },
       withShow(value=true): { HeatmapTooltip+: { show: value } },
-      '#withYHistogram': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'Controls if the tooltip shows a histogram of the y-axis values' } },
+      '#withYHistogram': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Controls if the tooltip shows a histogram of the y-axis values' } },
       withYHistogram(value=true): { HeatmapTooltip+: { yHistogram: value } },
     },
   '#withRowsHeatmapOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'Controls frame rows options' } },
@@ -98,11 +98,11 @@
   withYAxisConfigMixin(value): { YAxisConfig+: value },
   YAxisConfig+:
     {
-      '#withAxisCenteredZero': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+      '#withAxisCenteredZero': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
       withAxisCenteredZero(value=true): { YAxisConfig+: { axisCenteredZero: value } },
       '#withAxisColorMode': { 'function': { args: [{ default: null, enums: ['text', 'series'], name: 'value', type: 'string' }], help: 'TODO docs' } },
       withAxisColorMode(value): { YAxisConfig+: { axisColorMode: value } },
-      '#withAxisGridShow': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+      '#withAxisGridShow': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
       withAxisGridShow(value=true): { YAxisConfig+: { axisGridShow: value } },
       '#withAxisLabel': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
       withAxisLabel(value): { YAxisConfig+: { axisLabel: value } },
@@ -133,7 +133,7 @@
       withMax(value): { YAxisConfig+: { max: value } },
       '#withMin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'number' }], help: 'Sets the minimum value for the yAxis' } },
       withMin(value): { YAxisConfig+: { min: value } },
-      '#withReverse': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'Reverses the yAxis' } },
+      '#withReverse': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Reverses the yAxis' } },
       withReverse(value=true): { YAxisConfig+: { reverse: value } },
       '#withUnit': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Sets the yAxis unit' } },
       withUnit(value): { YAxisConfig+: { unit: value } },
@@ -162,11 +162,11 @@
               withHideFromMixin(value): { fieldConfig+: { defaults+: { custom+: { hideFrom+: value } } } },
               hideFrom+:
                 {
-                  '#withLegend': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+                  '#withLegend': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
                   withLegend(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { legend: value } } } } },
-                  '#withTooltip': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+                  '#withTooltip': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
                   withTooltip(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { tooltip: value } } } } },
-                  '#withViz': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+                  '#withViz': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
                   withViz(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { viz: value } } } } },
                 },
               '#withScaleDistribution': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'TODO docs' } },
@@ -191,8 +191,8 @@
   withOptionsMixin(value): { options+: value },
   options+:
     {
-      '#withCalculate': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: 'Controls if the heatmap should be calculated from data' } },
-      withCalculate(value=false): { options+: { calculate: value } },
+      '#withCalculate': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Controls if the heatmap should be calculated from data' } },
+      withCalculate(value=true): { options+: { calculate: value } },
       '#withCalculation': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
       withCalculation(value): { options+: { calculation: value } },
       '#withCalculationMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
@@ -292,7 +292,7 @@
               withMin(value): { options+: { color+: { min: value } } },
               '#withMode': { 'function': { args: [{ default: null, enums: ['opacity', 'scheme'], name: 'value', type: 'string' }], help: 'Controls the color mode of the heatmap' } },
               withMode(value): { options+: { color+: { mode: value } } },
-              '#withReverse': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'Reverses the color scheme' } },
+              '#withReverse': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Reverses the color scheme' } },
               withReverse(value=true): { options+: { color+: { reverse: value } } },
               '#withScale': { 'function': { args: [{ default: null, enums: ['linear', 'exponential'], name: 'value', type: 'string' }], help: 'Controls the color scale of the heatmap' } },
               withScale(value): { options+: { color+: { scale: value } } },
@@ -335,7 +335,7 @@
       withLegendMixin(value): { options+: { legend+: value } },
       legend+:
         {
-          '#withShow': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'Controls if the legend is shown' } },
+          '#withShow': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Controls if the legend is shown' } },
           withShow(value=true): { options+: { legend+: { show: value } } },
         },
       '#withRowsFrame': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'Controls frame rows options' } },
@@ -357,9 +357,9 @@
       withTooltipMixin(value): { options+: { tooltip+: value } },
       tooltip+:
         {
-          '#withShow': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'Controls if the tooltip is shown' } },
+          '#withShow': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Controls if the tooltip is shown' } },
           withShow(value=true): { options+: { tooltip+: { show: value } } },
-          '#withYHistogram': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'Controls if the tooltip shows a histogram of the y-axis values' } },
+          '#withYHistogram': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Controls if the tooltip shows a histogram of the y-axis values' } },
           withYHistogram(value=true): { options+: { tooltip+: { yHistogram: value } } },
         },
       '#withYAxis': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'Configuration options for the yAxis' } },
@@ -368,11 +368,11 @@
       withYAxisMixin(value): { options+: { yAxis+: value } },
       yAxis+:
         {
-          '#withAxisCenteredZero': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+          '#withAxisCenteredZero': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
           withAxisCenteredZero(value=true): { options+: { yAxis+: { axisCenteredZero: value } } },
           '#withAxisColorMode': { 'function': { args: [{ default: null, enums: ['text', 'series'], name: 'value', type: 'string' }], help: 'TODO docs' } },
           withAxisColorMode(value): { options+: { yAxis+: { axisColorMode: value } } },
-          '#withAxisGridShow': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+          '#withAxisGridShow': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
           withAxisGridShow(value=true): { options+: { yAxis+: { axisGridShow: value } } },
           '#withAxisLabel': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
           withAxisLabel(value): { options+: { yAxis+: { axisLabel: value } } },
@@ -403,7 +403,7 @@
           withMax(value): { options+: { yAxis+: { max: value } } },
           '#withMin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'number' }], help: 'Sets the minimum value for the yAxis' } },
           withMin(value): { options+: { yAxis+: { min: value } } },
-          '#withReverse': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'Reverses the yAxis' } },
+          '#withReverse': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Reverses the yAxis' } },
           withReverse(value=true): { options+: { yAxis+: { reverse: value } } },
           '#withUnit': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Sets the yAxis unit' } },
           withUnit(value): { options+: { yAxis+: { unit: value } } },

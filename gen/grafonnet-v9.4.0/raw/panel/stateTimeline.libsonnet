@@ -25,11 +25,11 @@
               withHideFromMixin(value): { fieldConfig+: { defaults+: { custom+: { hideFrom+: value } } } },
               hideFrom+:
                 {
-                  '#withLegend': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+                  '#withLegend': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
                   withLegend(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { legend: value } } } } },
-                  '#withTooltip': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+                  '#withTooltip': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
                   withTooltip(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { tooltip: value } } } } },
-                  '#withViz': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+                  '#withViz': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
                   withViz(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { viz: value } } } } },
                 },
               '#withFillOpacity': { 'function': { args: [{ default: 70, enums: null, name: 'value', type: 'integer' }], help: '' } },
@@ -51,7 +51,7 @@
       withLegendMixin(value): { options+: { legend+: value } },
       legend+:
         {
-          '#withAsTable': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+          '#withAsTable': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
           withAsTable(value=true): { options+: { legend+: { asTable: value } } },
           '#withCalcs': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
           withCalcs(value): { options+: { legend+: { calcs: (if std.isArray(value)
@@ -63,15 +63,15 @@
                                                                    else [value]) } } },
           '#withDisplayMode': { 'function': { args: [{ default: null, enums: ['list', 'table', 'hidden'], name: 'value', type: 'string' }], help: 'TODO docs\nNote: "hidden" needs to remain as an option for plugins compatibility' } },
           withDisplayMode(value): { options+: { legend+: { displayMode: value } } },
-          '#withIsVisible': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+          '#withIsVisible': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
           withIsVisible(value=true): { options+: { legend+: { isVisible: value } } },
           '#withPlacement': { 'function': { args: [{ default: null, enums: ['bottom', 'right'], name: 'value', type: 'string' }], help: 'TODO docs' } },
           withPlacement(value): { options+: { legend+: { placement: value } } },
-          '#withShowLegend': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+          '#withShowLegend': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
           withShowLegend(value=true): { options+: { legend+: { showLegend: value } } },
           '#withSortBy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
           withSortBy(value): { options+: { legend+: { sortBy: value } } },
-          '#withSortDesc': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+          '#withSortDesc': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
           withSortDesc(value=true): { options+: { legend+: { sortDesc: value } } },
           '#withWidth': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'number' }], help: '' } },
           withWidth(value): { options+: { legend+: { width: value } } },

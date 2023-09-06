@@ -51,7 +51,7 @@
           withDisplayName(value): { fieldConfig+: { defaults+: { displayName: value } } },
           '#withDisplayNameFromDS': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'This can be used by data sources that return and explicit naming structure for values and labels\nWhen this property is configured, this value is used rather than the default naming strategy.' } },
           withDisplayNameFromDS(value): { fieldConfig+: { defaults+: { displayNameFromDS: value } } },
-          '#withFilterable': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'True if data source field supports ad-hoc filters' } },
+          '#withFilterable': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'True if data source field supports ad-hoc filters' } },
           withFilterable(value=true): { fieldConfig+: { defaults+: { filterable: value } } },
           '#withLinks': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: 'The behavior when clicking on a result' } },
           withLinks(value): { fieldConfig+: { defaults+: { links: (if std.isArray(value)
@@ -210,7 +210,7 @@
             },
           '#withUnit': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Numeric Options' } },
           withUnit(value): { fieldConfig+: { defaults+: { unit: value } } },
-          '#withWriteable': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'True if data source can write a value to the path.  Auth/authz are supported separately' } },
+          '#withWriteable': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'True if data source can write a value to the path.  Auth/authz are supported separately' } },
           withWriteable(value=true): { fieldConfig+: { defaults+: { writeable: value } } },
         },
       '#withOverrides': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
@@ -259,7 +259,7 @@
     {
       '#withH': { 'function': { args: [{ default: 9, enums: null, name: 'value', type: 'integer' }], help: 'Panel' } },
       withH(value=9): { gridPos+: { h: value } },
-      '#withStatic': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'true if fixed' } },
+      '#withStatic': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'true if fixed' } },
       withStatic(value=true): { gridPos+: { static: value } },
       '#withW': { 'function': { args: [{ default: 12, enums: null, name: 'value', type: 'integer' }], help: 'Panel' } },
       withW(value=12): { gridPos+: { w: value } },
@@ -293,14 +293,14 @@
                                     else [value]) },
   links+:
     {
-      '#withAsDropdown': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-      withAsDropdown(value=false): { asDropdown: value },
+      '#withAsDropdown': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+      withAsDropdown(value=true): { asDropdown: value },
       '#withIcon': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
       withIcon(value): { icon: value },
-      '#withIncludeVars': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-      withIncludeVars(value=false): { includeVars: value },
-      '#withKeepTime': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-      withKeepTime(value=false): { keepTime: value },
+      '#withIncludeVars': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+      withIncludeVars(value=true): { includeVars: value },
+      '#withKeepTime': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+      withKeepTime(value=true): { keepTime: value },
       '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
       withTags(value): { tags: (if std.isArray(value)
                                 then value
@@ -309,8 +309,8 @@
       withTagsMixin(value): { tags+: (if std.isArray(value)
                                       then value
                                       else [value]) },
-      '#withTargetBlank': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-      withTargetBlank(value=false): { targetBlank: value },
+      '#withTargetBlank': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+      withTargetBlank(value=true): { targetBlank: value },
       '#withTitle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
       withTitle(value): { title: value },
       '#withTooltip': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
@@ -382,7 +382,7 @@
                                                         else [value]) },
   transformations+:
     {
-      '#withDisabled': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'Disabled transformations are skipped' } },
+      '#withDisabled': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Disabled transformations are skipped' } },
       withDisabled(value=true): { disabled: value },
       '#withFilter': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
       withFilter(value): { filter: value },
@@ -400,8 +400,8 @@
       '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Options to be passed to the transformer\nValid options depend on the transformer id' } },
       withOptions(value): { options: value },
     },
-  '#withTransparent': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: 'Whether to display the panel without a background.' } },
-  withTransparent(value=false): { transparent: value },
+  '#withTransparent': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Whether to display the panel without a background.' } },
+  withTransparent(value=true): { transparent: value },
   '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'The panel plugin type id. May not be empty.' } },
   withType(value): { type: value },
 }

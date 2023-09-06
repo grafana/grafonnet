@@ -40,7 +40,7 @@
           withFields(value): { options+: { reduceOptions+: { fields: value } } },
           '#withLimit': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'number' }], help: 'if showing all values limit' } },
           withLimit(value): { options+: { reduceOptions+: { limit: value } } },
-          '#withValues': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'If true show each row value' } },
+          '#withValues': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'If true show each row value' } },
           withValues(value=true): { options+: { reduceOptions+: { values: value } } },
         },
       '#withColorMode': { 'function': { args: [{ default: null, enums: ['value', 'background', 'background_solid', 'none'], name: 'value', type: 'string' }], help: 'TODO docs' } },

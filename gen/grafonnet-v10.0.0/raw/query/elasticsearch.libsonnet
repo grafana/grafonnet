@@ -3,7 +3,7 @@
   '#': { help: 'grafonnet.query.elasticsearch', name: 'elasticsearch' },
   '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: "For mixed data sources the selected datasource is on the query level.\nFor non mixed scenarios this is undefined.\nTODO find a better way to do this ^ that's friendly to schema\nTODO this shouldn't be unknown but DataSourceRef | null" } },
   withDatasource(value): { datasource: value },
-  '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'true if query is disabled (ie should not be returned to the dashboard)\nNote this does not always imply that the query should not be executed since\nthe results from a hidden query may be used as the input to other queries (SSE etc)' } },
+  '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'true if query is disabled (ie should not be returned to the dashboard)\nNote this does not always imply that the query should not be executed since\nthe results from a hidden query may be used as the input to other queries (SSE etc)' } },
   withHide(value=true): { hide: value },
   '#withQueryType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Specify the query flavor\nTODO make this required and give it a default' } },
   withQueryType(value): { queryType: value },
@@ -166,7 +166,7 @@
     {
       Count+:
         {
-          '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+          '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
           withHide(value=true): { hide: value },
           '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
           withId(value): { id: value },
@@ -177,7 +177,7 @@
         {
           MovingAverage+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -194,7 +194,7 @@
             },
           Derivative+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -216,7 +216,7 @@
             },
           CumulativeSum+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -238,7 +238,7 @@
             },
           BucketScript+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -281,7 +281,7 @@
         {
           BucketScript+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -321,7 +321,7 @@
             },
           CumulativeSum+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -343,7 +343,7 @@
             },
           Derivative+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -365,7 +365,7 @@
             },
           SerialDiff+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -387,7 +387,7 @@
             },
           RawData+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -405,7 +405,7 @@
             },
           RawDocument+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -423,7 +423,7 @@
             },
           UniqueCount+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -445,7 +445,7 @@
             },
           Percentiles+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -482,7 +482,7 @@
             },
           ExtendedStats+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -517,7 +517,7 @@
             },
           Min+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -546,7 +546,7 @@
             },
           Max+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -575,7 +575,7 @@
             },
           Sum+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -604,7 +604,7 @@
             },
           Average+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -633,7 +633,7 @@
             },
           MovingAverage+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -650,7 +650,7 @@
             },
           MovingFunction+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -683,7 +683,7 @@
             },
           Logs+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -701,7 +701,7 @@
             },
           Rate+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },
@@ -723,7 +723,7 @@
             },
           TopMetrics+:
             {
-              '#withHide': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withHide(value=true): { hide: value },
               '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value): { id: value },

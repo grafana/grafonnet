@@ -38,7 +38,7 @@
           withFields(value): { options+: { reduceOptions+: { fields: value } } },
           '#withLimit': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'number' }], help: 'if showing all values limit' } },
           withLimit(value): { options+: { reduceOptions+: { limit: value } } },
-          '#withValues': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'If true show each row value' } },
+          '#withValues': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'If true show each row value' } },
           withValues(value=true): { options+: { reduceOptions+: { values: value } } },
         },
       '#withDisplayMode': { 'function': { args: [{ default: null, enums: ['basic', 'lcd', 'gradient'], name: 'value', type: 'string' }], help: 'Enum expressing the possible display modes\nfor the bar gauge component of Grafana UI' } },

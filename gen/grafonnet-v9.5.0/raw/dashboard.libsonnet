@@ -32,8 +32,8 @@
             },
           '#withEnable': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Whether annotation is enabled.' } },
           withEnable(value=true): { enable: value },
-          '#withHide': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: 'Whether to hide annotation.' } },
-          withHide(value=false): { hide: value },
+          '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Whether to hide annotation.' } },
+          withHide(value=true): { hide: value },
           '#withIconColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Annotation icon color.' } },
           withIconColor(value): { iconColor: value },
           '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Name of annotation.' } },
@@ -50,7 +50,7 @@
             {
               '#withLimit': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'integer' }], help: '' } },
               withLimit(value): { target+: { limit: value } },
-              '#withMatchAny': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+              '#withMatchAny': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
               withMatchAny(value=true): { target+: { matchAny: value } },
               '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
               withTags(value): { target+: { tags: (if std.isArray(value)
@@ -89,14 +89,14 @@
                                     else [value]) },
   links+:
     {
-      '#withAsDropdown': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-      withAsDropdown(value=false): { asDropdown: value },
+      '#withAsDropdown': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+      withAsDropdown(value=true): { asDropdown: value },
       '#withIcon': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
       withIcon(value): { icon: value },
-      '#withIncludeVars': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-      withIncludeVars(value=false): { includeVars: value },
-      '#withKeepTime': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-      withKeepTime(value=false): { keepTime: value },
+      '#withIncludeVars': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+      withIncludeVars(value=true): { includeVars: value },
+      '#withKeepTime': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+      withKeepTime(value=true): { keepTime: value },
       '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
       withTags(value): { tags: (if std.isArray(value)
                                 then value
@@ -105,8 +105,8 @@
       withTagsMixin(value): { tags+: (if std.isArray(value)
                                       then value
                                       else [value]) },
-      '#withTargetBlank': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-      withTargetBlank(value=false): { targetBlank: value },
+      '#withTargetBlank': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+      withTargetBlank(value=true): { targetBlank: value },
       '#withTitle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
       withTitle(value): { title: value },
       '#withTooltip': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
@@ -116,7 +116,7 @@
       '#withUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
       withUrl(value): { url: value },
     },
-  '#withLiveNow': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'When set to true, the dashboard will redraw panels at an interval matching the pixel width.\nThis will keep data "moving left" regardless of the query refresh rate.  This setting helps\navoid dashboards presenting stale live data' } },
+  '#withLiveNow': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'When set to true, the dashboard will redraw panels at an interval matching the pixel width.\nThis will keep data "moving left" regardless of the query refresh rate.  This setting helps\navoid dashboards presenting stale live data' } },
   withLiveNow(value=true): { liveNow: value },
   '#withPanels': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
   withPanels(value): { panels: (if std.isArray(value)
@@ -144,7 +144,7 @@
       withCreated(value): { snapshot+: { created: value } },
       '#withExpires': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'TODO docs' } },
       withExpires(value): { snapshot+: { expires: value } },
-      '#withExternal': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'TODO docs' } },
+      '#withExternal': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'TODO docs' } },
       withExternal(value=true): { snapshot+: { external: value } },
       '#withExternalUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'TODO docs' } },
       withExternalUrl(value): { snapshot+: { externalUrl: value } },
@@ -206,8 +206,8 @@
           withError(value): { 'error': value },
           '#withErrorMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
           withErrorMixin(value): { 'error'+: value },
-          '#withGlobal': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-          withGlobal(value=false): { global: value },
+          '#withGlobal': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+          withGlobal(value=true): { global: value },
           '#withHide': { 'function': { args: [{ default: null, enums: [0, 1, 2], name: 'value', type: 'integer' }], help: '' } },
           withHide(value): { hide: value },
           '#withId': { 'function': { args: [{ default: '00000000-0000-0000-0000-000000000000', enums: null, name: 'value', type: 'string' }], help: '' } },
@@ -224,8 +224,8 @@
           withQueryMixin(value): { query+: value },
           '#withRootStateKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
           withRootStateKey(value): { rootStateKey: value },
-          '#withSkipUrlSync': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-          withSkipUrlSync(value=false): { skipUrlSync: value },
+          '#withSkipUrlSync': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+          withSkipUrlSync(value=true): { skipUrlSync: value },
           '#withState': { 'function': { args: [{ default: null, enums: ['NotStarted', 'Loading', 'Streaming', 'Done', 'Error'], name: 'value', type: 'string' }], help: '' } },
           withState(value): { state: value },
           '#withType': { 'function': { args: [{ default: null, enums: ['query', 'adhoc', 'constant', 'datasource', 'interval', 'textbox', 'custom', 'system'], name: 'value', type: 'string' }], help: 'FROM: packages/grafana-data/src/types/templateVars.ts\nTODO docs\nTODO this implies some wider pattern/discriminated union, probably?' } },
@@ -249,12 +249,12 @@
   withTimepickerMixin(value): { timepicker+: value },
   timepicker+:
     {
-      '#withCollapse': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: 'Whether timepicker is collapsed or not.' } },
-      withCollapse(value=false): { timepicker+: { collapse: value } },
+      '#withCollapse': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Whether timepicker is collapsed or not.' } },
+      withCollapse(value=true): { timepicker+: { collapse: value } },
       '#withEnable': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Whether timepicker is enabled or not.' } },
       withEnable(value=true): { timepicker+: { enable: value } },
-      '#withHidden': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: 'Whether timepicker is visible or not.' } },
-      withHidden(value=false): { timepicker+: { hidden: value } },
+      '#withHidden': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Whether timepicker is visible or not.' } },
+      withHidden(value=true): { timepicker+: { hidden: value } },
       '#withRefreshIntervals': { 'function': { args: [{ default: ['5s', '10s', '30s', '1m', '5m', '15m', '30m', '1h', '2h', '1d'], enums: null, name: 'value', type: 'array' }], help: 'Selectable intervals for auto-refresh.' } },
       withRefreshIntervals(value): { timepicker+: { refresh_intervals: (if std.isArray(value)
                                                                         then value

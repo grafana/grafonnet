@@ -11,7 +11,7 @@
   withCreated(value): { created: value },
   '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'integer' }], help: 'ID is the unique identifier of the service account in the database.' } },
   withId(value): { id: value },
-  '#withIsDisabled': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'IsDisabled indicates if the service account is disabled.' } },
+  '#withIsDisabled': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'IsDisabled indicates if the service account is disabled.' } },
   withIsDisabled(value=true): { isDisabled: value },
   '#withLogin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Login of the service account.' } },
   withLogin(value): { login: value },

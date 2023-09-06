@@ -36,8 +36,8 @@
           withFilterMixin(value): { filter+: value },
           filter+:
             {
-              '#withExclude': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: 'Should the specified panels be included or excluded' } },
-              withExclude(value=false): { filter+: { exclude: value } },
+              '#withExclude': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Should the specified panels be included or excluded' } },
+              withExclude(value=true): { filter+: { exclude: value } },
               '#withIds': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: 'Panel IDs that should be included or excluded' } },
               withIds(value): { filter+: { ids: (if std.isArray(value)
                                                  then value
@@ -47,8 +47,8 @@
                                                        then value
                                                        else [value]) } },
             },
-          '#withHide': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: 'Annotation queries can be toggled on or off at the top of the dashboard.\nWhen hide is true, the toggle is not shown in the dashboard.' } },
-          withHide(value=false): { hide: value },
+          '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Annotation queries can be toggled on or off at the top of the dashboard.\nWhen hide is true, the toggle is not shown in the dashboard.' } },
+          withHide(value=true): { hide: value },
           '#withIconColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Color to use for the annotation event markers' } },
           withIconColor(value): { iconColor: value },
           '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Name of annotation.' } },
@@ -61,7 +61,7 @@
             {
               '#withLimit': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'integer' }], help: 'Only required/valid for the grafana datasource...\nbut code+tests is already depending on it so hard to change' } },
               withLimit(value): { target+: { limit: value } },
-              '#withMatchAny': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'Only required/valid for the grafana datasource...\nbut code+tests is already depending on it so hard to change' } },
+              '#withMatchAny': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Only required/valid for the grafana datasource...\nbut code+tests is already depending on it so hard to change' } },
               withMatchAny(value=true): { target+: { matchAny: value } },
               '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: 'Only required/valid for the grafana datasource...\nbut code+tests is already depending on it so hard to change' } },
               withTags(value): { target+: { tags: (if std.isArray(value)
@@ -100,14 +100,14 @@
                                     else [value]) },
   links+:
     {
-      '#withAsDropdown': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-      withAsDropdown(value=false): { asDropdown: value },
+      '#withAsDropdown': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+      withAsDropdown(value=true): { asDropdown: value },
       '#withIcon': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
       withIcon(value): { icon: value },
-      '#withIncludeVars': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-      withIncludeVars(value=false): { includeVars: value },
-      '#withKeepTime': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-      withKeepTime(value=false): { keepTime: value },
+      '#withIncludeVars': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+      withIncludeVars(value=true): { includeVars: value },
+      '#withKeepTime': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+      withKeepTime(value=true): { keepTime: value },
       '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
       withTags(value): { tags: (if std.isArray(value)
                                 then value
@@ -116,8 +116,8 @@
       withTagsMixin(value): { tags+: (if std.isArray(value)
                                       then value
                                       else [value]) },
-      '#withTargetBlank': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-      withTargetBlank(value=false): { targetBlank: value },
+      '#withTargetBlank': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+      withTargetBlank(value=true): { targetBlank: value },
       '#withTitle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
       withTitle(value): { title: value },
       '#withTooltip': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
@@ -127,7 +127,7 @@
       '#withUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
       withUrl(value): { url: value },
     },
-  '#withLiveNow': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'When set to true, the dashboard will redraw panels at an interval matching the pixel width.\nThis will keep data "moving left" regardless of the query refresh rate.  This setting helps\navoid dashboards presenting stale live data' } },
+  '#withLiveNow': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'When set to true, the dashboard will redraw panels at an interval matching the pixel width.\nThis will keep data "moving left" regardless of the query refresh rate.  This setting helps\navoid dashboards presenting stale live data' } },
   withLiveNow(value=true): { liveNow: value },
   '#withPanels': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
   withPanels(value): { panels: (if std.isArray(value)
@@ -155,7 +155,7 @@
       withCreated(value): { snapshot+: { created: value } },
       '#withExpires': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'TODO docs' } },
       withExpires(value): { snapshot+: { expires: value } },
-      '#withExternal': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'boolean' }], help: 'TODO docs' } },
+      '#withExternal': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'TODO docs' } },
       withExternal(value=true): { snapshot+: { external: value } },
       '#withExternalUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'TODO docs' } },
       withExternalUrl(value): { snapshot+: { externalUrl: value } },
@@ -217,8 +217,8 @@
           withError(value): { 'error': value },
           '#withErrorMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
           withErrorMixin(value): { 'error'+: value },
-          '#withGlobal': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-          withGlobal(value=false): { global: value },
+          '#withGlobal': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+          withGlobal(value=true): { global: value },
           '#withHide': { 'function': { args: [{ default: null, enums: [0, 1, 2], name: 'value', type: 'integer' }], help: '' } },
           withHide(value): { hide: value },
           '#withId': { 'function': { args: [{ default: '00000000-0000-0000-0000-000000000000', enums: null, name: 'value', type: 'string' }], help: '' } },
@@ -235,8 +235,8 @@
           withQueryMixin(value): { query+: value },
           '#withRootStateKey': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
           withRootStateKey(value): { rootStateKey: value },
-          '#withSkipUrlSync': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-          withSkipUrlSync(value=false): { skipUrlSync: value },
+          '#withSkipUrlSync': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+          withSkipUrlSync(value=true): { skipUrlSync: value },
           '#withState': { 'function': { args: [{ default: null, enums: ['NotStarted', 'Loading', 'Streaming', 'Done', 'Error'], name: 'value', type: 'string' }], help: '' } },
           withState(value): { state: value },
           '#withType': { 'function': { args: [{ default: null, enums: ['query', 'adhoc', 'constant', 'datasource', 'interval', 'textbox', 'custom', 'system'], name: 'value', type: 'string' }], help: 'FROM: packages/grafana-data/src/types/templateVars.ts\nTODO docs\nTODO this implies some wider pattern/discriminated union, probably?' } },
@@ -260,12 +260,12 @@
   withTimepickerMixin(value): { timepicker+: value },
   timepicker+:
     {
-      '#withCollapse': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: 'Whether timepicker is collapsed or not.' } },
-      withCollapse(value=false): { timepicker+: { collapse: value } },
+      '#withCollapse': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Whether timepicker is collapsed or not.' } },
+      withCollapse(value=true): { timepicker+: { collapse: value } },
       '#withEnable': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Whether timepicker is enabled or not.' } },
       withEnable(value=true): { timepicker+: { enable: value } },
-      '#withHidden': { 'function': { args: [{ default: false, enums: null, name: 'value', type: 'boolean' }], help: 'Whether timepicker is visible or not.' } },
-      withHidden(value=false): { timepicker+: { hidden: value } },
+      '#withHidden': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Whether timepicker is visible or not.' } },
+      withHidden(value=true): { timepicker+: { hidden: value } },
       '#withRefreshIntervals': { 'function': { args: [{ default: ['5s', '10s', '30s', '1m', '5m', '15m', '30m', '1h', '2h', '1d'], enums: null, name: 'value', type: 'array' }], help: 'Selectable intervals for auto-refresh.' } },
       withRefreshIntervals(value): { timepicker+: { refresh_intervals: (if std.isArray(value)
                                                                         then value
