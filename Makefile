@@ -51,6 +51,9 @@ test:
 	jb install github.com/jsonnet-libs/testonnet; \
 	jb install ../gen/grafonnet-${LATEST}/; \
 	ln -sfn $${PWD}/vendor/grafonnet-${LATEST} $${PWD}/vendor/grafonnet-latest; \
+	mkdir -p $${PWD}/vendor/github.com/grafana/grafonnet/gen; \
+	ln -sfn $${PWD}/vendor/grafonnet-latest $${PWD}/vendor/github.com/grafana/grafonnet/gen/grafonnet-latest; \
+	ln -sfn $${PWD}/vendor/grafonnet-${LATEST} $${PWD}/vendor/grafonnet-latest; \
 	rm -rf vendor/github.com/grafana/grafonnet/grafonnet-base; \
 	ln -sf $${PWD}/../grafonnet-base vendor/github.com/grafana/grafonnet/grafonnet-base; \
 	RESULT=0; \

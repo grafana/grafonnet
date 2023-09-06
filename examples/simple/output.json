@@ -1,0 +1,42 @@
+    {
+      description: 'Dashboard for Faro',
+      graphTooltip: 1,
+      panels: [
+        {
+          datasource: {
+            type: 'datasource',
+            uid: '-- Mixed --',
+          },
+          fieldConfig: {
+            defaults: {
+              unit: 'reqps',
+            },
+          },
+          gridPos: {
+            h: 8,
+            w: 24,
+          },
+          id: 1,
+          pluginVersion: 'v10.0.0',
+          targets: [
+            {
+              datasource: {
+                type: 'prometheus',
+                uid: 'mimir',
+              },
+              expr: 'sum by (status_code) (rate(request_duration_seconds_count{job=~".*/faro-api"}[$__rate_interval]))',
+            },
+          ],
+          title: 'Requests / sec',
+          type: 'timeseries',
+        },
+      ],
+      schemaVersion: 36,
+      time: {
+        from: 'now-6h',
+        to: 'now',
+      },
+      timezone: 'utc',
+      title: 'Faro dashboard',
+      uid: 'faro-grafonnet-demo',
+    }

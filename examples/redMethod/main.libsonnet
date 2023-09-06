@@ -1,4 +1,4 @@
-local red = import 'redDashboard/main.libsonnet';
+local red = import './lib/redDashboard/main.libsonnet';
 
 (
   red.new('Faro')
