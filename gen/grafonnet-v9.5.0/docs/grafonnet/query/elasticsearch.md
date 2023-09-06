@@ -8,7 +8,7 @@ grafonnet.query.elasticsearch
 * [`fn withBucketAggs(value)`](#fn-withbucketaggs)
 * [`fn withBucketAggsMixin(value)`](#fn-withbucketaggsmixin)
 * [`fn withDatasource(value)`](#fn-withdatasource)
-* [`fn withHide(value)`](#fn-withhide)
+* [`fn withHide(value=true)`](#fn-withhide)
 * [`fn withMetrics(value)`](#fn-withmetrics)
 * [`fn withMetricsMixin(value)`](#fn-withmetricsmixin)
 * [`fn withQuery(value)`](#fn-withquery)
@@ -76,13 +76,13 @@ grafonnet.query.elasticsearch
       * [`fn withSize(value)`](#fn-bucketaggstermssettingswithsize)
 * [`obj metrics`](#obj-metrics)
   * [`obj Count`](#obj-metricscount)
-    * [`fn withHide(value)`](#fn-metricscountwithhide)
+    * [`fn withHide(value=true)`](#fn-metricscountwithhide)
     * [`fn withId(value)`](#fn-metricscountwithid)
     * [`fn withType(value)`](#fn-metricscountwithtype)
   * [`obj MetricAggregationWithSettings`](#obj-metricsmetricaggregationwithsettings)
     * [`obj Average`](#obj-metricsmetricaggregationwithsettingsaverage)
       * [`fn withField(value)`](#fn-metricsmetricaggregationwithsettingsaveragewithfield)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingsaveragewithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingsaveragewithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingsaveragewithid)
       * [`fn withSettings(value)`](#fn-metricsmetricaggregationwithsettingsaveragewithsettings)
       * [`fn withSettingsMixin(value)`](#fn-metricsmetricaggregationwithsettingsaveragewithsettingsmixin)
@@ -94,7 +94,7 @@ grafonnet.query.elasticsearch
         * [`obj script`](#obj-metricsmetricaggregationwithsettingsaveragesettingsscript)
           * [`fn withInline(value)`](#fn-metricsmetricaggregationwithsettingsaveragesettingsscriptwithinline)
     * [`obj BucketScript`](#obj-metricsmetricaggregationwithsettingsbucketscript)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingsbucketscriptwithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingsbucketscriptwithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingsbucketscriptwithid)
       * [`fn withPipelineVariables(value)`](#fn-metricsmetricaggregationwithsettingsbucketscriptwithpipelinevariables)
       * [`fn withPipelineVariablesMixin(value)`](#fn-metricsmetricaggregationwithsettingsbucketscriptwithpipelinevariablesmixin)
@@ -111,7 +111,7 @@ grafonnet.query.elasticsearch
           * [`fn withInline(value)`](#fn-metricsmetricaggregationwithsettingsbucketscriptsettingsscriptwithinline)
     * [`obj CumulativeSum`](#obj-metricsmetricaggregationwithsettingscumulativesum)
       * [`fn withField(value)`](#fn-metricsmetricaggregationwithsettingscumulativesumwithfield)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingscumulativesumwithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingscumulativesumwithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingscumulativesumwithid)
       * [`fn withPipelineAgg(value)`](#fn-metricsmetricaggregationwithsettingscumulativesumwithpipelineagg)
       * [`fn withSettings(value)`](#fn-metricsmetricaggregationwithsettingscumulativesumwithsettings)
@@ -121,7 +121,7 @@ grafonnet.query.elasticsearch
         * [`fn withFormat(value)`](#fn-metricsmetricaggregationwithsettingscumulativesumsettingswithformat)
     * [`obj Derivative`](#obj-metricsmetricaggregationwithsettingsderivative)
       * [`fn withField(value)`](#fn-metricsmetricaggregationwithsettingsderivativewithfield)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingsderivativewithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingsderivativewithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingsderivativewithid)
       * [`fn withPipelineAgg(value)`](#fn-metricsmetricaggregationwithsettingsderivativewithpipelineagg)
       * [`fn withSettings(value)`](#fn-metricsmetricaggregationwithsettingsderivativewithsettings)
@@ -131,7 +131,7 @@ grafonnet.query.elasticsearch
         * [`fn withUnit(value)`](#fn-metricsmetricaggregationwithsettingsderivativesettingswithunit)
     * [`obj ExtendedStats`](#obj-metricsmetricaggregationwithsettingsextendedstats)
       * [`fn withField(value)`](#fn-metricsmetricaggregationwithsettingsextendedstatswithfield)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingsextendedstatswithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingsextendedstatswithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingsextendedstatswithid)
       * [`fn withMeta(value)`](#fn-metricsmetricaggregationwithsettingsextendedstatswithmeta)
       * [`fn withMetaMixin(value)`](#fn-metricsmetricaggregationwithsettingsextendedstatswithmetamixin)
@@ -146,7 +146,7 @@ grafonnet.query.elasticsearch
         * [`obj script`](#obj-metricsmetricaggregationwithsettingsextendedstatssettingsscript)
           * [`fn withInline(value)`](#fn-metricsmetricaggregationwithsettingsextendedstatssettingsscriptwithinline)
     * [`obj Logs`](#obj-metricsmetricaggregationwithsettingslogs)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingslogswithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingslogswithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingslogswithid)
       * [`fn withSettings(value)`](#fn-metricsmetricaggregationwithsettingslogswithsettings)
       * [`fn withSettingsMixin(value)`](#fn-metricsmetricaggregationwithsettingslogswithsettingsmixin)
@@ -155,7 +155,7 @@ grafonnet.query.elasticsearch
         * [`fn withLimit(value)`](#fn-metricsmetricaggregationwithsettingslogssettingswithlimit)
     * [`obj Max`](#obj-metricsmetricaggregationwithsettingsmax)
       * [`fn withField(value)`](#fn-metricsmetricaggregationwithsettingsmaxwithfield)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingsmaxwithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingsmaxwithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingsmaxwithid)
       * [`fn withSettings(value)`](#fn-metricsmetricaggregationwithsettingsmaxwithsettings)
       * [`fn withSettingsMixin(value)`](#fn-metricsmetricaggregationwithsettingsmaxwithsettingsmixin)
@@ -168,7 +168,7 @@ grafonnet.query.elasticsearch
           * [`fn withInline(value)`](#fn-metricsmetricaggregationwithsettingsmaxsettingsscriptwithinline)
     * [`obj Min`](#obj-metricsmetricaggregationwithsettingsmin)
       * [`fn withField(value)`](#fn-metricsmetricaggregationwithsettingsminwithfield)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingsminwithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingsminwithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingsminwithid)
       * [`fn withSettings(value)`](#fn-metricsmetricaggregationwithsettingsminwithsettings)
       * [`fn withSettingsMixin(value)`](#fn-metricsmetricaggregationwithsettingsminwithsettingsmixin)
@@ -181,7 +181,7 @@ grafonnet.query.elasticsearch
           * [`fn withInline(value)`](#fn-metricsmetricaggregationwithsettingsminsettingsscriptwithinline)
     * [`obj MovingAverage`](#obj-metricsmetricaggregationwithsettingsmovingaverage)
       * [`fn withField(value)`](#fn-metricsmetricaggregationwithsettingsmovingaveragewithfield)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingsmovingaveragewithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingsmovingaveragewithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingsmovingaveragewithid)
       * [`fn withPipelineAgg(value)`](#fn-metricsmetricaggregationwithsettingsmovingaveragewithpipelineagg)
       * [`fn withSettings(value)`](#fn-metricsmetricaggregationwithsettingsmovingaveragewithsettings)
@@ -189,7 +189,7 @@ grafonnet.query.elasticsearch
       * [`fn withType(value)`](#fn-metricsmetricaggregationwithsettingsmovingaveragewithtype)
     * [`obj MovingFunction`](#obj-metricsmetricaggregationwithsettingsmovingfunction)
       * [`fn withField(value)`](#fn-metricsmetricaggregationwithsettingsmovingfunctionwithfield)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingsmovingfunctionwithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingsmovingfunctionwithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingsmovingfunctionwithid)
       * [`fn withPipelineAgg(value)`](#fn-metricsmetricaggregationwithsettingsmovingfunctionwithpipelineagg)
       * [`fn withSettings(value)`](#fn-metricsmetricaggregationwithsettingsmovingfunctionwithsettings)
@@ -204,7 +204,7 @@ grafonnet.query.elasticsearch
           * [`fn withInline(value)`](#fn-metricsmetricaggregationwithsettingsmovingfunctionsettingsscriptwithinline)
     * [`obj Percentiles`](#obj-metricsmetricaggregationwithsettingspercentiles)
       * [`fn withField(value)`](#fn-metricsmetricaggregationwithsettingspercentileswithfield)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingspercentileswithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingspercentileswithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingspercentileswithid)
       * [`fn withSettings(value)`](#fn-metricsmetricaggregationwithsettingspercentileswithsettings)
       * [`fn withSettingsMixin(value)`](#fn-metricsmetricaggregationwithsettingspercentileswithsettingsmixin)
@@ -219,7 +219,7 @@ grafonnet.query.elasticsearch
           * [`fn withInline(value)`](#fn-metricsmetricaggregationwithsettingspercentilessettingsscriptwithinline)
     * [`obj Rate`](#obj-metricsmetricaggregationwithsettingsrate)
       * [`fn withField(value)`](#fn-metricsmetricaggregationwithsettingsratewithfield)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingsratewithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingsratewithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingsratewithid)
       * [`fn withSettings(value)`](#fn-metricsmetricaggregationwithsettingsratewithsettings)
       * [`fn withSettingsMixin(value)`](#fn-metricsmetricaggregationwithsettingsratewithsettingsmixin)
@@ -228,7 +228,7 @@ grafonnet.query.elasticsearch
         * [`fn withMode(value)`](#fn-metricsmetricaggregationwithsettingsratesettingswithmode)
         * [`fn withUnit(value)`](#fn-metricsmetricaggregationwithsettingsratesettingswithunit)
     * [`obj RawData`](#obj-metricsmetricaggregationwithsettingsrawdata)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingsrawdatawithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingsrawdatawithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingsrawdatawithid)
       * [`fn withSettings(value)`](#fn-metricsmetricaggregationwithsettingsrawdatawithsettings)
       * [`fn withSettingsMixin(value)`](#fn-metricsmetricaggregationwithsettingsrawdatawithsettingsmixin)
@@ -236,7 +236,7 @@ grafonnet.query.elasticsearch
       * [`obj settings`](#obj-metricsmetricaggregationwithsettingsrawdatasettings)
         * [`fn withSize(value)`](#fn-metricsmetricaggregationwithsettingsrawdatasettingswithsize)
     * [`obj RawDocument`](#obj-metricsmetricaggregationwithsettingsrawdocument)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingsrawdocumentwithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingsrawdocumentwithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingsrawdocumentwithid)
       * [`fn withSettings(value)`](#fn-metricsmetricaggregationwithsettingsrawdocumentwithsettings)
       * [`fn withSettingsMixin(value)`](#fn-metricsmetricaggregationwithsettingsrawdocumentwithsettingsmixin)
@@ -245,7 +245,7 @@ grafonnet.query.elasticsearch
         * [`fn withSize(value)`](#fn-metricsmetricaggregationwithsettingsrawdocumentsettingswithsize)
     * [`obj SerialDiff`](#obj-metricsmetricaggregationwithsettingsserialdiff)
       * [`fn withField(value)`](#fn-metricsmetricaggregationwithsettingsserialdiffwithfield)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingsserialdiffwithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingsserialdiffwithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingsserialdiffwithid)
       * [`fn withPipelineAgg(value)`](#fn-metricsmetricaggregationwithsettingsserialdiffwithpipelineagg)
       * [`fn withSettings(value)`](#fn-metricsmetricaggregationwithsettingsserialdiffwithsettings)
@@ -255,7 +255,7 @@ grafonnet.query.elasticsearch
         * [`fn withLag(value)`](#fn-metricsmetricaggregationwithsettingsserialdiffsettingswithlag)
     * [`obj Sum`](#obj-metricsmetricaggregationwithsettingssum)
       * [`fn withField(value)`](#fn-metricsmetricaggregationwithsettingssumwithfield)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingssumwithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingssumwithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingssumwithid)
       * [`fn withSettings(value)`](#fn-metricsmetricaggregationwithsettingssumwithsettings)
       * [`fn withSettingsMixin(value)`](#fn-metricsmetricaggregationwithsettingssumwithsettingsmixin)
@@ -267,7 +267,7 @@ grafonnet.query.elasticsearch
         * [`obj script`](#obj-metricsmetricaggregationwithsettingssumsettingsscript)
           * [`fn withInline(value)`](#fn-metricsmetricaggregationwithsettingssumsettingsscriptwithinline)
     * [`obj TopMetrics`](#obj-metricsmetricaggregationwithsettingstopmetrics)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingstopmetricswithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingstopmetricswithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingstopmetricswithid)
       * [`fn withSettings(value)`](#fn-metricsmetricaggregationwithsettingstopmetricswithsettings)
       * [`fn withSettingsMixin(value)`](#fn-metricsmetricaggregationwithsettingstopmetricswithsettingsmixin)
@@ -279,7 +279,7 @@ grafonnet.query.elasticsearch
         * [`fn withOrderBy(value)`](#fn-metricsmetricaggregationwithsettingstopmetricssettingswithorderby)
     * [`obj UniqueCount`](#obj-metricsmetricaggregationwithsettingsuniquecount)
       * [`fn withField(value)`](#fn-metricsmetricaggregationwithsettingsuniquecountwithfield)
-      * [`fn withHide(value)`](#fn-metricsmetricaggregationwithsettingsuniquecountwithhide)
+      * [`fn withHide(value=true)`](#fn-metricsmetricaggregationwithsettingsuniquecountwithhide)
       * [`fn withId(value)`](#fn-metricsmetricaggregationwithsettingsuniquecountwithid)
       * [`fn withSettings(value)`](#fn-metricsmetricaggregationwithsettingsuniquecountwithsettings)
       * [`fn withSettingsMixin(value)`](#fn-metricsmetricaggregationwithsettingsuniquecountwithsettingsmixin)
@@ -289,7 +289,7 @@ grafonnet.query.elasticsearch
         * [`fn withPrecisionThreshold(value)`](#fn-metricsmetricaggregationwithsettingsuniquecountsettingswithprecisionthreshold)
   * [`obj PipelineMetricAggregation`](#obj-metricspipelinemetricaggregation)
     * [`obj BucketScript`](#obj-metricspipelinemetricaggregationbucketscript)
-      * [`fn withHide(value)`](#fn-metricspipelinemetricaggregationbucketscriptwithhide)
+      * [`fn withHide(value=true)`](#fn-metricspipelinemetricaggregationbucketscriptwithhide)
       * [`fn withId(value)`](#fn-metricspipelinemetricaggregationbucketscriptwithid)
       * [`fn withPipelineVariables(value)`](#fn-metricspipelinemetricaggregationbucketscriptwithpipelinevariables)
       * [`fn withPipelineVariablesMixin(value)`](#fn-metricspipelinemetricaggregationbucketscriptwithpipelinevariablesmixin)
@@ -306,7 +306,7 @@ grafonnet.query.elasticsearch
           * [`fn withInline(value)`](#fn-metricspipelinemetricaggregationbucketscriptsettingsscriptwithinline)
     * [`obj CumulativeSum`](#obj-metricspipelinemetricaggregationcumulativesum)
       * [`fn withField(value)`](#fn-metricspipelinemetricaggregationcumulativesumwithfield)
-      * [`fn withHide(value)`](#fn-metricspipelinemetricaggregationcumulativesumwithhide)
+      * [`fn withHide(value=true)`](#fn-metricspipelinemetricaggregationcumulativesumwithhide)
       * [`fn withId(value)`](#fn-metricspipelinemetricaggregationcumulativesumwithid)
       * [`fn withPipelineAgg(value)`](#fn-metricspipelinemetricaggregationcumulativesumwithpipelineagg)
       * [`fn withSettings(value)`](#fn-metricspipelinemetricaggregationcumulativesumwithsettings)
@@ -316,7 +316,7 @@ grafonnet.query.elasticsearch
         * [`fn withFormat(value)`](#fn-metricspipelinemetricaggregationcumulativesumsettingswithformat)
     * [`obj Derivative`](#obj-metricspipelinemetricaggregationderivative)
       * [`fn withField(value)`](#fn-metricspipelinemetricaggregationderivativewithfield)
-      * [`fn withHide(value)`](#fn-metricspipelinemetricaggregationderivativewithhide)
+      * [`fn withHide(value=true)`](#fn-metricspipelinemetricaggregationderivativewithhide)
       * [`fn withId(value)`](#fn-metricspipelinemetricaggregationderivativewithid)
       * [`fn withPipelineAgg(value)`](#fn-metricspipelinemetricaggregationderivativewithpipelineagg)
       * [`fn withSettings(value)`](#fn-metricspipelinemetricaggregationderivativewithsettings)
@@ -326,7 +326,7 @@ grafonnet.query.elasticsearch
         * [`fn withUnit(value)`](#fn-metricspipelinemetricaggregationderivativesettingswithunit)
     * [`obj MovingAverage`](#obj-metricspipelinemetricaggregationmovingaverage)
       * [`fn withField(value)`](#fn-metricspipelinemetricaggregationmovingaveragewithfield)
-      * [`fn withHide(value)`](#fn-metricspipelinemetricaggregationmovingaveragewithhide)
+      * [`fn withHide(value=true)`](#fn-metricspipelinemetricaggregationmovingaveragewithhide)
       * [`fn withId(value)`](#fn-metricspipelinemetricaggregationmovingaveragewithid)
       * [`fn withPipelineAgg(value)`](#fn-metricspipelinemetricaggregationmovingaveragewithpipelineagg)
       * [`fn withSettings(value)`](#fn-metricspipelinemetricaggregationmovingaveragewithsettings)
@@ -373,7 +373,7 @@ TODO this shouldn't be unknown but DataSourceRef | null
 ### fn withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 true if query is disabled (ie should not be returned to the dashboard)
@@ -849,7 +849,7 @@ withSize(value)
 ##### fn metrics.Count.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -887,7 +887,7 @@ withField(value)
 ###### fn metrics.MetricAggregationWithSettings.Average.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -968,7 +968,7 @@ withInline(value)
 ###### fn metrics.MetricAggregationWithSettings.BucketScript.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -1084,7 +1084,7 @@ withField(value)
 ###### fn metrics.MetricAggregationWithSettings.CumulativeSum.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -1154,7 +1154,7 @@ withField(value)
 ###### fn metrics.MetricAggregationWithSettings.Derivative.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -1224,7 +1224,7 @@ withField(value)
 ###### fn metrics.MetricAggregationWithSettings.ExtendedStats.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -1329,7 +1329,7 @@ withInline(value)
 ###### fn metrics.MetricAggregationWithSettings.Logs.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -1391,7 +1391,7 @@ withField(value)
 ###### fn metrics.MetricAggregationWithSettings.Max.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -1480,7 +1480,7 @@ withField(value)
 ###### fn metrics.MetricAggregationWithSettings.Min.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -1569,7 +1569,7 @@ withField(value)
 ###### fn metrics.MetricAggregationWithSettings.MovingAverage.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -1628,7 +1628,7 @@ withField(value)
 ###### fn metrics.MetricAggregationWithSettings.MovingFunction.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -1733,7 +1733,7 @@ withField(value)
 ###### fn metrics.MetricAggregationWithSettings.Percentiles.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -1838,7 +1838,7 @@ withField(value)
 ###### fn metrics.MetricAggregationWithSettings.Rate.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -1900,7 +1900,7 @@ withUnit(value)
 ###### fn metrics.MetricAggregationWithSettings.RawData.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -1954,7 +1954,7 @@ withSize(value)
 ###### fn metrics.MetricAggregationWithSettings.RawDocument.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -2016,7 +2016,7 @@ withField(value)
 ###### fn metrics.MetricAggregationWithSettings.SerialDiff.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -2086,7 +2086,7 @@ withField(value)
 ###### fn metrics.MetricAggregationWithSettings.Sum.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -2167,7 +2167,7 @@ withInline(value)
 ###### fn metrics.MetricAggregationWithSettings.TopMetrics.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -2253,7 +2253,7 @@ withField(value)
 ###### fn metrics.MetricAggregationWithSettings.UniqueCount.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -2318,7 +2318,7 @@ withPrecisionThreshold(value)
 ###### fn metrics.PipelineMetricAggregation.BucketScript.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -2434,7 +2434,7 @@ withField(value)
 ###### fn metrics.PipelineMetricAggregation.CumulativeSum.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -2504,7 +2504,7 @@ withField(value)
 ###### fn metrics.PipelineMetricAggregation.Derivative.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 
@@ -2574,7 +2574,7 @@ withField(value)
 ###### fn metrics.PipelineMetricAggregation.MovingAverage.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 

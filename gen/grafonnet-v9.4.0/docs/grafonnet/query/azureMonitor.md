@@ -13,7 +13,7 @@ grafonnet.query.azureMonitor
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withGrafanaTemplateVariableFn(value)`](#fn-withgrafanatemplatevariablefn)
 * [`fn withGrafanaTemplateVariableFnMixin(value)`](#fn-withgrafanatemplatevariablefnmixin)
-* [`fn withHide(value)`](#fn-withhide)
+* [`fn withHide(value=true)`](#fn-withhide)
 * [`fn withNamespace(value)`](#fn-withnamespace)
 * [`fn withQueryType(value)`](#fn-withquerytype)
 * [`fn withRefId(value)`](#fn-withrefid)
@@ -217,7 +217,7 @@ withGrafanaTemplateVariableFnMixin(value)
 ### fn withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 true if query is disabled (ie should not be returned to the dashboard)

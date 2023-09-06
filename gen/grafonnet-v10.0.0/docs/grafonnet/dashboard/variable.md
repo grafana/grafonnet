@@ -113,7 +113,7 @@ g.dashboard.new('my dashboard')
       * [`fn withNothing()`](#fn-querygeneraloptionsshowondashboardwithnothing)
       * [`fn withValueOnly()`](#fn-querygeneraloptionsshowondashboardwithvalueonly)
   * [`obj queryTypes`](#obj-queryquerytypes)
-    * [`fn withLabelValues(label, metric)`](#fn-queryquerytypeswithlabelvalues)
+    * [`fn withLabelValues(label, metric="")`](#fn-queryquerytypeswithlabelvalues)
   * [`obj refresh`](#obj-queryrefresh)
     * [`fn onLoad()`](#fn-queryrefreshonload)
     * [`fn onTime()`](#fn-queryrefreshontime)
@@ -668,7 +668,7 @@ withValueOnly()
 ##### fn query.queryTypes.withLabelValues
 
 ```ts
-withLabelValues(label, metric)
+withLabelValues(label, metric="")
 ```
 
 Construct a Prometheus template variable using `label_values()`.

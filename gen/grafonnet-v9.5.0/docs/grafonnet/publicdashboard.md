@@ -5,10 +5,10 @@ grafonnet.publicdashboard
 ## Index
 
 * [`fn withAccessToken(value)`](#fn-withaccesstoken)
-* [`fn withAnnotationsEnabled(value)`](#fn-withannotationsenabled)
+* [`fn withAnnotationsEnabled(value=true)`](#fn-withannotationsenabled)
 * [`fn withDashboardUid(value)`](#fn-withdashboarduid)
-* [`fn withIsEnabled(value)`](#fn-withisenabled)
-* [`fn withTimeSelectionEnabled(value)`](#fn-withtimeselectionenabled)
+* [`fn withIsEnabled(value=true)`](#fn-withisenabled)
+* [`fn withTimeSelectionEnabled(value=true)`](#fn-withtimeselectionenabled)
 * [`fn withUid(value)`](#fn-withuid)
 
 ## Fields
@@ -24,7 +24,7 @@ Unique public access token
 ### fn withAnnotationsEnabled
 
 ```ts
-withAnnotationsEnabled(value)
+withAnnotationsEnabled(value=true)
 ```
 
 Flag that indicates if annotations are enabled
@@ -40,7 +40,7 @@ Dashboard unique identifier referenced by this public dashboard
 ### fn withIsEnabled
 
 ```ts
-withIsEnabled(value)
+withIsEnabled(value=true)
 ```
 
 Flag that indicates if the public dashboard is enabled
@@ -48,7 +48,7 @@ Flag that indicates if the public dashboard is enabled
 ### fn withTimeSelectionEnabled
 
 ```ts
-withTimeSelectionEnabled(value)
+withTimeSelectionEnabled(value=true)
 ```
 
 Flag that indicates if the time range picker is enabled

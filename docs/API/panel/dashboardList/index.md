@@ -18,7 +18,7 @@ grafonnet.panel.dashboardList
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
-  * [`fn withStatic(value)`](#fn-gridposwithstatic)
+  * [`fn withStatic(value=true)`](#fn-gridposwithstatic)
   * [`fn withW(value=12)`](#fn-gridposwithw)
   * [`fn withX(value=0)`](#fn-gridposwithx)
   * [`fn withY(value=0)`](#fn-gridposwithy)
@@ -27,13 +27,13 @@ grafonnet.panel.dashboardList
   * [`fn withUid(value)`](#fn-librarypanelwithuid)
 * [`obj options`](#obj-options)
   * [`fn withFolderId(value)`](#fn-optionswithfolderid)
-  * [`fn withIncludeVars(value=false)`](#fn-optionswithincludevars)
-  * [`fn withKeepTime(value=false)`](#fn-optionswithkeeptime)
+  * [`fn withIncludeVars(value=true)`](#fn-optionswithincludevars)
+  * [`fn withKeepTime(value=true)`](#fn-optionswithkeeptime)
   * [`fn withMaxItems(value=10)`](#fn-optionswithmaxitems)
   * [`fn withQuery(value="")`](#fn-optionswithquery)
   * [`fn withShowHeadings(value=true)`](#fn-optionswithshowheadings)
-  * [`fn withShowRecentlyViewed(value=false)`](#fn-optionswithshowrecentlyviewed)
-  * [`fn withShowSearch(value=false)`](#fn-optionswithshowsearch)
+  * [`fn withShowRecentlyViewed(value=true)`](#fn-optionswithshowrecentlyviewed)
+  * [`fn withShowSearch(value=true)`](#fn-optionswithshowsearch)
   * [`fn withShowStarred(value=true)`](#fn-optionswithshowstarred)
   * [`fn withTags(value)`](#fn-optionswithtags)
   * [`fn withTagsMixin(value)`](#fn-optionswithtagsmixin)
@@ -44,7 +44,7 @@ grafonnet.panel.dashboardList
   * [`fn withRepeat(value)`](#fn-paneloptionswithrepeat)
   * [`fn withRepeatDirection(value="h")`](#fn-paneloptionswithrepeatdirection)
   * [`fn withTitle(value)`](#fn-paneloptionswithtitle)
-  * [`fn withTransparent(value=false)`](#fn-paneloptionswithtransparent)
+  * [`fn withTransparent(value=true)`](#fn-paneloptionswithtransparent)
 * [`obj queryOptions`](#obj-queryoptions)
   * [`fn withDatasource(value)`](#fn-queryoptionswithdatasource)
   * [`fn withDatasourceMixin(value)`](#fn-queryoptionswithdatasourcemixin)
@@ -121,7 +121,7 @@ Panel
 #### fn gridPos.withStatic
 
 ```ts
-withStatic(value)
+withStatic(value=true)
 ```
 
 true if fixed
@@ -183,7 +183,7 @@ withFolderId(value)
 #### fn options.withIncludeVars
 
 ```ts
-withIncludeVars(value=false)
+withIncludeVars(value=true)
 ```
 
 
@@ -191,7 +191,7 @@ withIncludeVars(value=false)
 #### fn options.withKeepTime
 
 ```ts
-withKeepTime(value=false)
+withKeepTime(value=true)
 ```
 
 
@@ -223,7 +223,7 @@ withShowHeadings(value=true)
 #### fn options.withShowRecentlyViewed
 
 ```ts
-withShowRecentlyViewed(value=false)
+withShowRecentlyViewed(value=true)
 ```
 
 
@@ -231,7 +231,7 @@ withShowRecentlyViewed(value=false)
 #### fn options.withShowSearch
 
 ```ts
-withShowSearch(value=false)
+withShowSearch(value=true)
 ```
 
 
@@ -320,7 +320,7 @@ Panel title.
 #### fn panelOptions.withTransparent
 
 ```ts
-withTransparent(value=false)
+withTransparent(value=true)
 ```
 
 Whether to display the panel without a background.

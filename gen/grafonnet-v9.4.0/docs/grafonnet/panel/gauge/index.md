@@ -18,7 +18,7 @@ grafonnet.panel.gauge
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
-  * [`fn withStatic(value)`](#fn-gridposwithstatic)
+  * [`fn withStatic(value=true)`](#fn-gridposwithstatic)
   * [`fn withW(value=12)`](#fn-gridposwithw)
   * [`fn withX(value=0)`](#fn-gridposwithx)
   * [`fn withY(value=0)`](#fn-gridposwithy)
@@ -29,7 +29,7 @@ grafonnet.panel.gauge
   * [`fn withOrientation(value)`](#fn-optionswithorientation)
   * [`fn withReduceOptions(value)`](#fn-optionswithreduceoptions)
   * [`fn withReduceOptionsMixin(value)`](#fn-optionswithreduceoptionsmixin)
-  * [`fn withShowThresholdLabels(value=false)`](#fn-optionswithshowthresholdlabels)
+  * [`fn withShowThresholdLabels(value=true)`](#fn-optionswithshowthresholdlabels)
   * [`fn withShowThresholdMarkers(value=true)`](#fn-optionswithshowthresholdmarkers)
   * [`fn withText(value)`](#fn-optionswithtext)
   * [`fn withTextMixin(value)`](#fn-optionswithtextmixin)
@@ -38,7 +38,7 @@ grafonnet.panel.gauge
     * [`fn withCalcsMixin(value)`](#fn-optionsreduceoptionswithcalcsmixin)
     * [`fn withFields(value)`](#fn-optionsreduceoptionswithfields)
     * [`fn withLimit(value)`](#fn-optionsreduceoptionswithlimit)
-    * [`fn withValues(value)`](#fn-optionsreduceoptionswithvalues)
+    * [`fn withValues(value=true)`](#fn-optionsreduceoptionswithvalues)
   * [`obj text`](#obj-optionstext)
     * [`fn withTitleSize(value)`](#fn-optionstextwithtitlesize)
     * [`fn withValueSize(value)`](#fn-optionstextwithvaluesize)
@@ -49,7 +49,7 @@ grafonnet.panel.gauge
   * [`fn withRepeat(value)`](#fn-paneloptionswithrepeat)
   * [`fn withRepeatDirection(value="h")`](#fn-paneloptionswithrepeatdirection)
   * [`fn withTitle(value)`](#fn-paneloptionswithtitle)
-  * [`fn withTransparent(value=false)`](#fn-paneloptionswithtransparent)
+  * [`fn withTransparent(value=true)`](#fn-paneloptionswithtransparent)
 * [`obj queryOptions`](#obj-queryoptions)
   * [`fn withDatasource(value)`](#fn-queryoptionswithdatasource)
   * [`fn withDatasourceMixin(value)`](#fn-queryoptionswithdatasourcemixin)
@@ -126,7 +126,7 @@ Panel
 #### fn gridPos.withStatic
 
 ```ts
-withStatic(value)
+withStatic(value=true)
 ```
 
 true if fixed
@@ -206,7 +206,7 @@ TODO docs
 #### fn options.withShowThresholdLabels
 
 ```ts
-withShowThresholdLabels(value=false)
+withShowThresholdLabels(value=true)
 ```
 
 
@@ -273,7 +273,7 @@ if showing all values limit
 ##### fn options.reduceOptions.withValues
 
 ```ts
-withValues(value)
+withValues(value=true)
 ```
 
 If true show each row value
@@ -357,7 +357,7 @@ Panel title.
 #### fn panelOptions.withTransparent
 
 ```ts
-withTransparent(value=false)
+withTransparent(value=true)
 ```
 
 Whether to display the panel without a background.

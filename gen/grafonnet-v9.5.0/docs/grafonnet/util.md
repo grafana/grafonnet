@@ -7,7 +7,8 @@ Helper functions that work well with Grafonnet.
 * [`obj dashboard`](#obj-dashboard)
   * [`fn getOptionsForCustomQuery(query)`](#fn-dashboardgetoptionsforcustomquery)
 * [`obj grid`](#obj-grid)
-  * [`fn makeGrid(panels, panelWidth, panelHeight)`](#fn-gridmakegrid)
+  * [`fn makeGrid(panels, panelWidth, panelHeight, startY)`](#fn-gridmakegrid)
+  * [`fn wrapPanels(panels, panelWidth, panelHeight, startY)`](#fn-gridwrappanels)
 * [`obj panel`](#obj-panel)
   * [`fn setPanelIDs(panels)`](#fn-panelsetpanelids)
 * [`obj string`](#obj-string)
@@ -40,7 +41,7 @@ compatible solution.
 #### fn grid.makeGrid
 
 ```ts
-makeGrid(panels, panelWidth, panelHeight)
+makeGrid(panels, panelWidth, panelHeight, startY)
 ```
 
 `makeGrid` returns an array of `panels` organized in a grid with equal `panelWidth`
@@ -50,6 +51,18 @@ then all panels below it will be folded into the row.
 This function will use the full grid of 24 columns, setting `panelWidth` to a value
 that can divide 24 into equal parts will fill up the page nicely. (1, 2, 3, 4, 6, 8, 12)
 Other value for `panelWidth` will leave a gap on the far right.
+
+Optional `startY` can be provided to place generated grid above or below existing panels.
+
+
+#### fn grid.wrapPanels
+
+```ts
+wrapPanels(panels, panelWidth, panelHeight, startY)
+```
+
+`wrapPanels` returns an array of `panels` organized in a grid, wrapping up to next 'row' if total width exceeds full grid of 24 columns.
+'panelHeight' and 'panelWidth' are used unless panels already have height and width defined.
 
 
 ### obj panel

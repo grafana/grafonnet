@@ -18,7 +18,7 @@ grafonnet.dashboard
 * [`fn withFiscalYearStartMonth(value=0)`](#fn-withfiscalyearstartmonth)
 * [`fn withLinks(value)`](#fn-withlinks)
 * [`fn withLinksMixin(value)`](#fn-withlinksmixin)
-* [`fn withLiveNow(value)`](#fn-withlivenow)
+* [`fn withLiveNow(value=true)`](#fn-withlivenow)
 * [`fn withPanels(value)`](#fn-withpanels)
 * [`fn withPanelsMixin(value)`](#fn-withpanelsmixin)
 * [`fn withRefresh(value)`](#fn-withrefresh)
@@ -42,9 +42,9 @@ grafonnet.dashboard
   * [`fn withFrom(value="now-6h")`](#fn-timewithfrom)
   * [`fn withTo(value="now")`](#fn-timewithto)
 * [`obj timepicker`](#obj-timepicker)
-  * [`fn withCollapse(value=false)`](#fn-timepickerwithcollapse)
+  * [`fn withCollapse(value=true)`](#fn-timepickerwithcollapse)
   * [`fn withEnable(value=true)`](#fn-timepickerwithenable)
-  * [`fn withHidden(value=false)`](#fn-timepickerwithhidden)
+  * [`fn withHidden(value=true)`](#fn-timepickerwithhidden)
   * [`fn withRefreshIntervals(value=["5s","10s","30s","1m","5m","15m","30m","1h","2h","1d"])`](#fn-timepickerwithrefreshintervals)
   * [`fn withRefreshIntervalsMixin(value=["5s","10s","30s","1m","5m","15m","30m","1h","2h","1d"])`](#fn-timepickerwithrefreshintervalsmixin)
   * [`fn withTimeOptions(value=["5m","15m","1h","6h","12h","24h","2d","7d","30d"])`](#fn-timepickerwithtimeoptions)
@@ -159,7 +159,7 @@ g.dashboard.new('Title dashboard')
 ### fn withLiveNow
 
 ```ts
-withLiveNow(value)
+withLiveNow(value=true)
 ```
 
 When set to true, the dashboard will redraw panels at an interval matching the pixel width.
@@ -346,7 +346,7 @@ withTo(value="now")
 #### fn timepicker.withCollapse
 
 ```ts
-withCollapse(value=false)
+withCollapse(value=true)
 ```
 
 Whether timepicker is collapsed or not.
@@ -362,7 +362,7 @@ Whether timepicker is enabled or not.
 #### fn timepicker.withHidden
 
 ```ts
-withHidden(value=false)
+withHidden(value=true)
 ```
 
 Whether timepicker is visible or not.

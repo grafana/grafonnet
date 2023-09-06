@@ -7,7 +7,7 @@ grafonnet.query.grafanaPyroscope
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withGroupBy(value)`](#fn-withgroupby)
 * [`fn withGroupByMixin(value)`](#fn-withgroupbymixin)
-* [`fn withHide(value)`](#fn-withhide)
+* [`fn withHide(value=true)`](#fn-withhide)
 * [`fn withLabelSelector(value="{}")`](#fn-withlabelselector)
 * [`fn withMaxNodes(value)`](#fn-withmaxnodes)
 * [`fn withProfileTypeId(value)`](#fn-withprofiletypeid)
@@ -46,7 +46,7 @@ Allows to group the results.
 ### fn withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 true if query is disabled (ie should not be returned to the dashboard)

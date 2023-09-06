@@ -5,7 +5,7 @@ grafonnet.panel.row
 ## Index
 
 * [`fn new(title)`](#fn-new)
-* [`fn withCollapsed(value=false)`](#fn-withcollapsed)
+* [`fn withCollapsed(value=true)`](#fn-withcollapsed)
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withDatasourceMixin(value)`](#fn-withdatasourcemixin)
 * [`fn withGridPos(value)`](#fn-withgridpos)
@@ -21,7 +21,7 @@ grafonnet.panel.row
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
-  * [`fn withStatic(value)`](#fn-gridposwithstatic)
+  * [`fn withStatic(value=true)`](#fn-gridposwithstatic)
   * [`fn withW(value=12)`](#fn-gridposwithw)
   * [`fn withX(value=0)`](#fn-gridposwithx)
   * [`fn withY(value=0)`](#fn-gridposwithy)
@@ -39,7 +39,7 @@ Creates a new row panel with a title.
 ### fn withCollapsed
 
 ```ts
-withCollapsed(value=false)
+withCollapsed(value=true)
 ```
 
 
@@ -157,7 +157,7 @@ Panel
 #### fn gridPos.withStatic
 
 ```ts
-withStatic(value)
+withStatic(value=true)
 ```
 
 true if fixed

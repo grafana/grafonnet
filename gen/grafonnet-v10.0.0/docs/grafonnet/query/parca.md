@@ -5,7 +5,7 @@ grafonnet.query.parca
 ## Index
 
 * [`fn withDatasource(value)`](#fn-withdatasource)
-* [`fn withHide(value)`](#fn-withhide)
+* [`fn withHide(value=true)`](#fn-withhide)
 * [`fn withLabelSelector(value="{}")`](#fn-withlabelselector)
 * [`fn withProfileTypeId(value)`](#fn-withprofiletypeid)
 * [`fn withQueryType(value)`](#fn-withquerytype)
@@ -27,7 +27,7 @@ TODO this shouldn't be unknown but DataSourceRef | null
 ### fn withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 true if query is disabled (ie should not be returned to the dashboard)

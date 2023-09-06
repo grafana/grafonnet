@@ -7,15 +7,15 @@ grafonnet.query.prometheus
 * [`fn new(datasource, expr)`](#fn-new)
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withEditorMode(value)`](#fn-witheditormode)
-* [`fn withExemplar(value)`](#fn-withexemplar)
+* [`fn withExemplar(value=true)`](#fn-withexemplar)
 * [`fn withExpr(value)`](#fn-withexpr)
 * [`fn withFormat(value)`](#fn-withformat)
-* [`fn withHide(value)`](#fn-withhide)
-* [`fn withInstant(value)`](#fn-withinstant)
+* [`fn withHide(value=true)`](#fn-withhide)
+* [`fn withInstant(value=true)`](#fn-withinstant)
 * [`fn withIntervalFactor(value)`](#fn-withintervalfactor)
 * [`fn withLegendFormat(value)`](#fn-withlegendformat)
 * [`fn withQueryType(value)`](#fn-withquerytype)
-* [`fn withRange(value)`](#fn-withrange)
+* [`fn withRange(value=true)`](#fn-withrange)
 * [`fn withRefId(value)`](#fn-withrefid)
 
 ## Fields
@@ -49,7 +49,7 @@ Accepted values for `value` are "code", "builder"
 ### fn withExemplar
 
 ```ts
-withExemplar(value)
+withExemplar(value=true)
 ```
 
 Execute an additional query to identify interesting raw samples relevant for the given expr
@@ -75,7 +75,7 @@ Accepted values for `value` are "time_series", "table", "heatmap"
 ### fn withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 true if query is disabled (ie should not be returned to the dashboard)
@@ -85,7 +85,7 @@ the results from a hidden query may be used as the input to other queries (SSE e
 ### fn withInstant
 
 ```ts
-withInstant(value)
+withInstant(value=true)
 ```
 
 Returns only the latest value that Prometheus has scraped for the requested time series
@@ -118,7 +118,7 @@ TODO make this required and give it a default
 ### fn withRange
 
 ```ts
-withRange(value)
+withRange(value=true)
 ```
 
 Returns a Range vector, comprised of a set of time series containing a range of data points over time for each time series

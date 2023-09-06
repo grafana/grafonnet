@@ -9,7 +9,7 @@ grafonnet.serviceaccount
 * [`fn withAvatarUrl(value)`](#fn-withavatarurl)
 * [`fn withCreated(value)`](#fn-withcreated)
 * [`fn withId(value)`](#fn-withid)
-* [`fn withIsDisabled(value)`](#fn-withisdisabled)
+* [`fn withIsDisabled(value=true)`](#fn-withisdisabled)
 * [`fn withLogin(value)`](#fn-withlogin)
 * [`fn withName(value)`](#fn-withname)
 * [`fn withOrgId(value)`](#fn-withorgid)
@@ -65,7 +65,7 @@ ID is the unique identifier of the service account in the database.
 ### fn withIsDisabled
 
 ```ts
-withIsDisabled(value)
+withIsDisabled(value=true)
 ```
 
 IsDisabled indicates if the service account is disabled.
