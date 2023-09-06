@@ -1,6 +1,7 @@
 local test = import 'github.com/jsonnet-libs/testonnet/main.libsonnet';
 
-local util = import '../grafonnet-base/util/main.libsonnet';
+local g = import 'grafonnet-latest/main.libsonnet';
+local util = g.util;
 
 local getPanelIDs(panels) =
   std.flattenArrays(

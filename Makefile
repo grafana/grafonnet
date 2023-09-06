@@ -17,12 +17,9 @@ test:
 	rm -rf jsonnetfile.json vendor/; jb init; \
 	jb install github.com/jsonnet-libs/testonnet; \
 	jb install ../gen/grafonnet-${LATEST}/; \
-	ln -sfn $${PWD}/vendor/grafonnet-${LATEST} $${PWD}/vendor/grafonnet-latest; \
 	mkdir -p $${PWD}/vendor/github.com/grafana/grafonnet/gen; \
 	ln -sfn $${PWD}/vendor/grafonnet-latest $${PWD}/vendor/github.com/grafana/grafonnet/gen/grafonnet-latest; \
 	ln -sfn $${PWD}/vendor/grafonnet-${LATEST} $${PWD}/vendor/grafonnet-latest; \
-	rm -rf vendor/github.com/grafana/grafonnet/grafonnet-base; \
-	ln -sf $${PWD}/../grafonnet-base vendor/github.com/grafana/grafonnet/grafonnet-base; \
 	RESULT=0; \
 	for f in $$(find . -path './.git' -prune -o -name 'vendor' -prune -o -name '*_test.jsonnet' -print); do \
 		echo "$$f"; \
