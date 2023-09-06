@@ -24,16 +24,16 @@ grafonnet.panel.heatmap
       * [`fn withScaleDistribution(value)`](#fn-fieldconfigdefaultscustomwithscaledistribution)
       * [`fn withScaleDistributionMixin(value)`](#fn-fieldconfigdefaultscustomwithscaledistributionmixin)
       * [`obj hideFrom`](#obj-fieldconfigdefaultscustomhidefrom)
-        * [`fn withLegend(value)`](#fn-fieldconfigdefaultscustomhidefromwithlegend)
-        * [`fn withTooltip(value)`](#fn-fieldconfigdefaultscustomhidefromwithtooltip)
-        * [`fn withViz(value)`](#fn-fieldconfigdefaultscustomhidefromwithviz)
+        * [`fn withLegend(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithlegend)
+        * [`fn withTooltip(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithtooltip)
+        * [`fn withViz(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithviz)
       * [`obj scaleDistribution`](#obj-fieldconfigdefaultscustomscaledistribution)
         * [`fn withLinearThreshold(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithlinearthreshold)
         * [`fn withLog(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithlog)
         * [`fn withType(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithtype)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
-  * [`fn withStatic(value)`](#fn-gridposwithstatic)
+  * [`fn withStatic(value=true)`](#fn-gridposwithstatic)
   * [`fn withW(value=12)`](#fn-gridposwithw)
   * [`fn withX(value=0)`](#fn-gridposwithx)
   * [`fn withY(value=0)`](#fn-gridposwithy)
@@ -41,7 +41,7 @@ grafonnet.panel.heatmap
   * [`fn withName(value)`](#fn-librarypanelwithname)
   * [`fn withUid(value)`](#fn-librarypanelwithuid)
 * [`obj options`](#obj-options)
-  * [`fn withCalculate(value=false)`](#fn-optionswithcalculate)
+  * [`fn withCalculate(value=true)`](#fn-optionswithcalculate)
   * [`fn withCalculation(value)`](#fn-optionswithcalculation)
   * [`fn withCalculationMixin(value)`](#fn-optionswithcalculationmixin)
   * [`fn withCellGap(value=1)`](#fn-optionswithcellgap)
@@ -101,7 +101,7 @@ grafonnet.panel.heatmap
       * [`fn withMax(value)`](#fn-optionscolorheatmapcoloroptionswithmax)
       * [`fn withMin(value)`](#fn-optionscolorheatmapcoloroptionswithmin)
       * [`fn withMode(value)`](#fn-optionscolorheatmapcoloroptionswithmode)
-      * [`fn withReverse(value)`](#fn-optionscolorheatmapcoloroptionswithreverse)
+      * [`fn withReverse(value=true)`](#fn-optionscolorheatmapcoloroptionswithreverse)
       * [`fn withScale(value)`](#fn-optionscolorheatmapcoloroptionswithscale)
       * [`fn withScheme(value)`](#fn-optionscolorheatmapcoloroptionswithscheme)
       * [`fn withSteps(value)`](#fn-optionscolorheatmapcoloroptionswithsteps)
@@ -114,17 +114,17 @@ grafonnet.panel.heatmap
       * [`fn withGe(value)`](#fn-optionsfiltervaluesfiltervaluerangewithge)
       * [`fn withLe(value)`](#fn-optionsfiltervaluesfiltervaluerangewithle)
   * [`obj legend`](#obj-optionslegend)
-    * [`fn withShow(value)`](#fn-optionslegendwithshow)
+    * [`fn withShow(value=true)`](#fn-optionslegendwithshow)
   * [`obj rowsFrame`](#obj-optionsrowsframe)
     * [`fn withLayout(value)`](#fn-optionsrowsframewithlayout)
     * [`fn withValue(value)`](#fn-optionsrowsframewithvalue)
   * [`obj tooltip`](#obj-optionstooltip)
-    * [`fn withShow(value)`](#fn-optionstooltipwithshow)
-    * [`fn withYHistogram(value)`](#fn-optionstooltipwithyhistogram)
+    * [`fn withShow(value=true)`](#fn-optionstooltipwithshow)
+    * [`fn withYHistogram(value=true)`](#fn-optionstooltipwithyhistogram)
   * [`obj yAxis`](#obj-optionsyaxis)
-    * [`fn withAxisCenteredZero(value)`](#fn-optionsyaxiswithaxiscenteredzero)
+    * [`fn withAxisCenteredZero(value=true)`](#fn-optionsyaxiswithaxiscenteredzero)
     * [`fn withAxisColorMode(value)`](#fn-optionsyaxiswithaxiscolormode)
-    * [`fn withAxisGridShow(value)`](#fn-optionsyaxiswithaxisgridshow)
+    * [`fn withAxisGridShow(value=true)`](#fn-optionsyaxiswithaxisgridshow)
     * [`fn withAxisLabel(value)`](#fn-optionsyaxiswithaxislabel)
     * [`fn withAxisPlacement(value)`](#fn-optionsyaxiswithaxisplacement)
     * [`fn withAxisSoftMax(value)`](#fn-optionsyaxiswithaxissoftmax)
@@ -133,7 +133,7 @@ grafonnet.panel.heatmap
     * [`fn withDecimals(value)`](#fn-optionsyaxiswithdecimals)
     * [`fn withMax(value)`](#fn-optionsyaxiswithmax)
     * [`fn withMin(value)`](#fn-optionsyaxiswithmin)
-    * [`fn withReverse(value)`](#fn-optionsyaxiswithreverse)
+    * [`fn withReverse(value=true)`](#fn-optionsyaxiswithreverse)
     * [`fn withScaleDistribution(value)`](#fn-optionsyaxiswithscaledistribution)
     * [`fn withScaleDistributionMixin(value)`](#fn-optionsyaxiswithscaledistributionmixin)
     * [`fn withUnit(value)`](#fn-optionsyaxiswithunit)
@@ -148,7 +148,7 @@ grafonnet.panel.heatmap
   * [`fn withRepeat(value)`](#fn-paneloptionswithrepeat)
   * [`fn withRepeatDirection(value="h")`](#fn-paneloptionswithrepeatdirection)
   * [`fn withTitle(value)`](#fn-paneloptionswithtitle)
-  * [`fn withTransparent(value=false)`](#fn-paneloptionswithtransparent)
+  * [`fn withTransparent(value=true)`](#fn-paneloptionswithtransparent)
 * [`obj queryOptions`](#obj-queryoptions)
   * [`fn withDatasource(value)`](#fn-queryoptionswithdatasource)
   * [`fn withDatasourceMixin(value)`](#fn-queryoptionswithdatasourcemixin)
@@ -258,7 +258,7 @@ TODO docs
 ####### fn fieldConfig.defaults.custom.hideFrom.withLegend
 
 ```ts
-withLegend(value)
+withLegend(value=true)
 ```
 
 
@@ -266,7 +266,7 @@ withLegend(value)
 ####### fn fieldConfig.defaults.custom.hideFrom.withTooltip
 
 ```ts
-withTooltip(value)
+withTooltip(value=true)
 ```
 
 
@@ -274,7 +274,7 @@ withTooltip(value)
 ####### fn fieldConfig.defaults.custom.hideFrom.withViz
 
 ```ts
-withViz(value)
+withViz(value=true)
 ```
 
 
@@ -322,7 +322,7 @@ Panel
 #### fn gridPos.withStatic
 
 ```ts
-withStatic(value)
+withStatic(value=true)
 ```
 
 true if fixed
@@ -376,7 +376,7 @@ withUid(value)
 #### fn options.withCalculate
 
 ```ts
-withCalculate(value=false)
+withCalculate(value=true)
 ```
 
 Controls if the heatmap should be calculated from data
@@ -823,7 +823,7 @@ Accepted values for `value` are "opacity", "scheme"
 ###### fn options.color.HeatmapColorOptions.withReverse
 
 ```ts
-withReverse(value)
+withReverse(value=true)
 ```
 
 Reverses the color scheme
@@ -909,7 +909,7 @@ Sets the filter range to values less than or equal to the given value
 ##### fn options.legend.withShow
 
 ```ts
-withShow(value)
+withShow(value=true)
 ```
 
 Controls if the legend is shown
@@ -941,7 +941,7 @@ Sets the name of the cell when not calculating from data
 ##### fn options.tooltip.withShow
 
 ```ts
-withShow(value)
+withShow(value=true)
 ```
 
 Controls if the tooltip is shown
@@ -949,7 +949,7 @@ Controls if the tooltip is shown
 ##### fn options.tooltip.withYHistogram
 
 ```ts
-withYHistogram(value)
+withYHistogram(value=true)
 ```
 
 Controls if the tooltip shows a histogram of the y-axis values
@@ -960,7 +960,7 @@ Controls if the tooltip shows a histogram of the y-axis values
 ##### fn options.yAxis.withAxisCenteredZero
 
 ```ts
-withAxisCenteredZero(value)
+withAxisCenteredZero(value=true)
 ```
 
 
@@ -978,7 +978,7 @@ Accepted values for `value` are "text", "series"
 ##### fn options.yAxis.withAxisGridShow
 
 ```ts
-withAxisGridShow(value)
+withAxisGridShow(value=true)
 ```
 
 
@@ -1052,7 +1052,7 @@ Sets the minimum value for the yAxis
 ##### fn options.yAxis.withReverse
 
 ```ts
-withReverse(value)
+withReverse(value=true)
 ```
 
 Reverses the yAxis
@@ -1170,7 +1170,7 @@ Panel title.
 #### fn panelOptions.withTransparent
 
 ```ts
-withTransparent(value=false)
+withTransparent(value=true)
 ```
 
 Whether to display the panel without a background.

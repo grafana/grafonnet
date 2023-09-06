@@ -18,7 +18,7 @@ grafonnet.panel.annotationsList
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
-  * [`fn withStatic(value)`](#fn-gridposwithstatic)
+  * [`fn withStatic(value=true)`](#fn-gridposwithstatic)
   * [`fn withW(value=12)`](#fn-gridposwithw)
   * [`fn withX(value=0)`](#fn-gridposwithx)
   * [`fn withY(value=0)`](#fn-gridposwithy)
@@ -30,8 +30,8 @@ grafonnet.panel.annotationsList
   * [`fn withNavigateAfter(value="10m")`](#fn-optionswithnavigateafter)
   * [`fn withNavigateBefore(value="10m")`](#fn-optionswithnavigatebefore)
   * [`fn withNavigateToPanel(value=true)`](#fn-optionswithnavigatetopanel)
-  * [`fn withOnlyFromThisDashboard(value=false)`](#fn-optionswithonlyfromthisdashboard)
-  * [`fn withOnlyInTimeRange(value=false)`](#fn-optionswithonlyintimerange)
+  * [`fn withOnlyFromThisDashboard(value=true)`](#fn-optionswithonlyfromthisdashboard)
+  * [`fn withOnlyInTimeRange(value=true)`](#fn-optionswithonlyintimerange)
   * [`fn withShowTags(value=true)`](#fn-optionswithshowtags)
   * [`fn withShowTime(value=true)`](#fn-optionswithshowtime)
   * [`fn withShowUser(value=true)`](#fn-optionswithshowuser)
@@ -44,7 +44,7 @@ grafonnet.panel.annotationsList
   * [`fn withRepeat(value)`](#fn-paneloptionswithrepeat)
   * [`fn withRepeatDirection(value="h")`](#fn-paneloptionswithrepeatdirection)
   * [`fn withTitle(value)`](#fn-paneloptionswithtitle)
-  * [`fn withTransparent(value=false)`](#fn-paneloptionswithtransparent)
+  * [`fn withTransparent(value=true)`](#fn-paneloptionswithtransparent)
 * [`obj queryOptions`](#obj-queryoptions)
   * [`fn withDatasource(value)`](#fn-queryoptionswithdatasource)
   * [`fn withDatasourceMixin(value)`](#fn-queryoptionswithdatasourcemixin)
@@ -121,7 +121,7 @@ Panel
 #### fn gridPos.withStatic
 
 ```ts
-withStatic(value)
+withStatic(value=true)
 ```
 
 true if fixed
@@ -207,7 +207,7 @@ withNavigateToPanel(value=true)
 #### fn options.withOnlyFromThisDashboard
 
 ```ts
-withOnlyFromThisDashboard(value=false)
+withOnlyFromThisDashboard(value=true)
 ```
 
 
@@ -215,7 +215,7 @@ withOnlyFromThisDashboard(value=false)
 #### fn options.withOnlyInTimeRange
 
 ```ts
-withOnlyInTimeRange(value=false)
+withOnlyInTimeRange(value=true)
 ```
 
 
@@ -320,7 +320,7 @@ Panel title.
 #### fn panelOptions.withTransparent
 
 ```ts
-withTransparent(value=false)
+withTransparent(value=true)
 ```
 
 Whether to display the panel without a background.

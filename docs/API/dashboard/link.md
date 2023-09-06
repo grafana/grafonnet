@@ -22,19 +22,19 @@ g.dashboard.new('Title dashboard')
 * [`obj dashboards`](#obj-dashboards)
   * [`fn new(title, tags)`](#fn-dashboardsnew)
   * [`obj options`](#obj-dashboardsoptions)
-    * [`fn withAsDropdown(value=false)`](#fn-dashboardsoptionswithasdropdown)
-    * [`fn withIncludeVars(value=false)`](#fn-dashboardsoptionswithincludevars)
-    * [`fn withKeepTime(value=false)`](#fn-dashboardsoptionswithkeeptime)
-    * [`fn withTargetBlank(value=false)`](#fn-dashboardsoptionswithtargetblank)
+    * [`fn withAsDropdown(value=true)`](#fn-dashboardsoptionswithasdropdown)
+    * [`fn withIncludeVars(value=true)`](#fn-dashboardsoptionswithincludevars)
+    * [`fn withKeepTime(value=true)`](#fn-dashboardsoptionswithkeeptime)
+    * [`fn withTargetBlank(value=true)`](#fn-dashboardsoptionswithtargetblank)
 * [`obj link`](#obj-link)
   * [`fn new(title, url)`](#fn-linknew)
   * [`fn withIcon(value)`](#fn-linkwithicon)
   * [`fn withTooltip(value)`](#fn-linkwithtooltip)
   * [`obj options`](#obj-linkoptions)
-    * [`fn withAsDropdown(value=false)`](#fn-linkoptionswithasdropdown)
-    * [`fn withIncludeVars(value=false)`](#fn-linkoptionswithincludevars)
-    * [`fn withKeepTime(value=false)`](#fn-linkoptionswithkeeptime)
-    * [`fn withTargetBlank(value=false)`](#fn-linkoptionswithtargetblank)
+    * [`fn withAsDropdown(value=true)`](#fn-linkoptionswithasdropdown)
+    * [`fn withIncludeVars(value=true)`](#fn-linkoptionswithincludevars)
+    * [`fn withKeepTime(value=true)`](#fn-linkoptionswithkeeptime)
+    * [`fn withTargetBlank(value=true)`](#fn-linkoptionswithtargetblank)
 
 ## Fields
 
@@ -56,7 +56,7 @@ Create links to dashboards based on `tags`.
 ##### fn dashboards.options.withAsDropdown
 
 ```ts
-withAsDropdown(value=false)
+withAsDropdown(value=true)
 ```
 
 
@@ -64,7 +64,7 @@ withAsDropdown(value=false)
 ##### fn dashboards.options.withIncludeVars
 
 ```ts
-withIncludeVars(value=false)
+withIncludeVars(value=true)
 ```
 
 
@@ -72,7 +72,7 @@ withIncludeVars(value=false)
 ##### fn dashboards.options.withKeepTime
 
 ```ts
-withKeepTime(value=false)
+withKeepTime(value=true)
 ```
 
 
@@ -80,7 +80,7 @@ withKeepTime(value=false)
 ##### fn dashboards.options.withTargetBlank
 
 ```ts
-withTargetBlank(value=false)
+withTargetBlank(value=true)
 ```
 
 
@@ -119,7 +119,7 @@ withTooltip(value)
 ##### fn link.options.withAsDropdown
 
 ```ts
-withAsDropdown(value=false)
+withAsDropdown(value=true)
 ```
 
 
@@ -127,7 +127,7 @@ withAsDropdown(value=false)
 ##### fn link.options.withIncludeVars
 
 ```ts
-withIncludeVars(value=false)
+withIncludeVars(value=true)
 ```
 
 
@@ -135,7 +135,7 @@ withIncludeVars(value=false)
 ##### fn link.options.withKeepTime
 
 ```ts
-withKeepTime(value=false)
+withKeepTime(value=true)
 ```
 
 
@@ -143,7 +143,7 @@ withKeepTime(value=false)
 ##### fn link.options.withTargetBlank
 
 ```ts
-withTargetBlank(value=false)
+withTargetBlank(value=true)
 ```
 
 

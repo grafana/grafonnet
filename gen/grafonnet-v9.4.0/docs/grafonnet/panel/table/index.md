@@ -18,7 +18,7 @@ grafonnet.panel.table
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
-  * [`fn withStatic(value)`](#fn-gridposwithstatic)
+  * [`fn withStatic(value=true)`](#fn-gridposwithstatic)
   * [`fn withW(value=12)`](#fn-gridposwithw)
   * [`fn withX(value=0)`](#fn-gridposwithx)
   * [`fn withY(value=0)`](#fn-gridposwithy)
@@ -31,23 +31,23 @@ grafonnet.panel.table
   * [`fn withFooterMixin(value={"countRows": false,"reducer": [],"show": false})`](#fn-optionswithfootermixin)
   * [`fn withFrameIndex(value=0)`](#fn-optionswithframeindex)
   * [`fn withShowHeader(value=true)`](#fn-optionswithshowheader)
-  * [`fn withShowRowNums(value=false)`](#fn-optionswithshowrownums)
-  * [`fn withShowTypeIcons(value=false)`](#fn-optionswithshowtypeicons)
+  * [`fn withShowRowNums(value=true)`](#fn-optionswithshowrownums)
+  * [`fn withShowTypeIcons(value=true)`](#fn-optionswithshowtypeicons)
   * [`fn withSortBy(value)`](#fn-optionswithsortby)
   * [`fn withSortByMixin(value)`](#fn-optionswithsortbymixin)
   * [`obj footer`](#obj-optionsfooter)
     * [`fn withTableFooterOptions(value)`](#fn-optionsfooterwithtablefooteroptions)
     * [`fn withTableFooterOptionsMixin(value)`](#fn-optionsfooterwithtablefooteroptionsmixin)
     * [`obj TableFooterOptions`](#obj-optionsfootertablefooteroptions)
-      * [`fn withCountRows(value)`](#fn-optionsfootertablefooteroptionswithcountrows)
-      * [`fn withEnablePagination(value)`](#fn-optionsfootertablefooteroptionswithenablepagination)
+      * [`fn withCountRows(value=true)`](#fn-optionsfootertablefooteroptionswithcountrows)
+      * [`fn withEnablePagination(value=true)`](#fn-optionsfootertablefooteroptionswithenablepagination)
       * [`fn withFields(value)`](#fn-optionsfootertablefooteroptionswithfields)
       * [`fn withFieldsMixin(value)`](#fn-optionsfootertablefooteroptionswithfieldsmixin)
       * [`fn withReducer(value)`](#fn-optionsfootertablefooteroptionswithreducer)
       * [`fn withReducerMixin(value)`](#fn-optionsfootertablefooteroptionswithreducermixin)
-      * [`fn withShow(value)`](#fn-optionsfootertablefooteroptionswithshow)
+      * [`fn withShow(value=true)`](#fn-optionsfootertablefooteroptionswithshow)
   * [`obj sortBy`](#obj-optionssortby)
-    * [`fn withDesc(value)`](#fn-optionssortbywithdesc)
+    * [`fn withDesc(value=true)`](#fn-optionssortbywithdesc)
     * [`fn withDisplayName(value)`](#fn-optionssortbywithdisplayname)
 * [`obj panelOptions`](#obj-paneloptions)
   * [`fn withDescription(value)`](#fn-paneloptionswithdescription)
@@ -56,7 +56,7 @@ grafonnet.panel.table
   * [`fn withRepeat(value)`](#fn-paneloptionswithrepeat)
   * [`fn withRepeatDirection(value="h")`](#fn-paneloptionswithrepeatdirection)
   * [`fn withTitle(value)`](#fn-paneloptionswithtitle)
-  * [`fn withTransparent(value=false)`](#fn-paneloptionswithtransparent)
+  * [`fn withTransparent(value=true)`](#fn-paneloptionswithtransparent)
 * [`obj queryOptions`](#obj-queryoptions)
   * [`fn withDatasource(value)`](#fn-queryoptionswithdatasource)
   * [`fn withDatasourceMixin(value)`](#fn-queryoptionswithdatasourcemixin)
@@ -133,7 +133,7 @@ Panel
 #### fn gridPos.withStatic
 
 ```ts
-withStatic(value)
+withStatic(value=true)
 ```
 
 true if fixed
@@ -229,7 +229,7 @@ Controls whether the panel should show the header
 #### fn options.withShowRowNums
 
 ```ts
-withShowRowNums(value=false)
+withShowRowNums(value=true)
 ```
 
 Controls whether the columns should be numbered
@@ -237,7 +237,7 @@ Controls whether the columns should be numbered
 #### fn options.withShowTypeIcons
 
 ```ts
-withShowTypeIcons(value=false)
+withShowTypeIcons(value=true)
 ```
 
 Controls whether the header should show icons for the column types
@@ -283,7 +283,7 @@ Footer options
 ###### fn options.footer.TableFooterOptions.withCountRows
 
 ```ts
-withCountRows(value)
+withCountRows(value=true)
 ```
 
 
@@ -291,7 +291,7 @@ withCountRows(value)
 ###### fn options.footer.TableFooterOptions.withEnablePagination
 
 ```ts
-withEnablePagination(value)
+withEnablePagination(value=true)
 ```
 
 
@@ -331,7 +331,7 @@ withReducerMixin(value)
 ###### fn options.footer.TableFooterOptions.withShow
 
 ```ts
-withShow(value)
+withShow(value=true)
 ```
 
 
@@ -342,7 +342,7 @@ withShow(value)
 ##### fn options.sortBy.withDesc
 
 ```ts
-withDesc(value)
+withDesc(value=true)
 ```
 
 Flag used to indicate descending sort order
@@ -415,7 +415,7 @@ Panel title.
 #### fn panelOptions.withTransparent
 
 ```ts
-withTransparent(value=false)
+withTransparent(value=true)
 ```
 
 Whether to display the panel without a background.

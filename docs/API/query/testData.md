@@ -12,9 +12,9 @@ grafonnet.query.testData
 * [`fn withCsvWaveMixin(value)`](#fn-withcsvwavemixin)
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withErrorType(value)`](#fn-witherrortype)
-* [`fn withHide(value)`](#fn-withhide)
+* [`fn withHide(value=true)`](#fn-withhide)
 * [`fn withLabels(value)`](#fn-withlabels)
-* [`fn withLevelColumn(value)`](#fn-withlevelcolumn)
+* [`fn withLevelColumn(value=true)`](#fn-withlevelcolumn)
 * [`fn withLines(value)`](#fn-withlines)
 * [`fn withNodes(value)`](#fn-withnodes)
 * [`fn withNodesMixin(value)`](#fn-withnodesmixin)
@@ -54,8 +54,8 @@ grafonnet.query.testData
   * [`fn withConfigMixin(value)`](#fn-simwithconfigmixin)
   * [`fn withKey(value)`](#fn-simwithkey)
   * [`fn withKeyMixin(value)`](#fn-simwithkeymixin)
-  * [`fn withLast(value)`](#fn-simwithlast)
-  * [`fn withStream(value)`](#fn-simwithstream)
+  * [`fn withLast(value=true)`](#fn-simwithlast)
+  * [`fn withStream(value=true)`](#fn-simwithstream)
   * [`obj key`](#obj-simkey)
     * [`fn withTick(value)`](#fn-simkeywithtick)
     * [`fn withType(value)`](#fn-simkeywithtype)
@@ -149,7 +149,7 @@ Accepted values for `value` are "server_panic", "frontend_exception", "frontend_
 ### fn withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 true if query is disabled (ie should not be returned to the dashboard)
@@ -167,7 +167,7 @@ withLabels(value)
 ### fn withLevelColumn
 
 ```ts
-withLevelColumn(value)
+withLevelColumn(value=true)
 ```
 
 
@@ -474,7 +474,7 @@ withKeyMixin(value)
 #### fn sim.withLast
 
 ```ts
-withLast(value)
+withLast(value=true)
 ```
 
 
@@ -482,7 +482,7 @@ withLast(value)
 #### fn sim.withStream
 
 ```ts
-withStream(value)
+withStream(value=true)
 ```
 
 

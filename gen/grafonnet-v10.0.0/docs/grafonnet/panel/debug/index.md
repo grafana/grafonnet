@@ -18,7 +18,7 @@ grafonnet.panel.debug
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
-  * [`fn withStatic(value)`](#fn-gridposwithstatic)
+  * [`fn withStatic(value=true)`](#fn-gridposwithstatic)
   * [`fn withW(value=12)`](#fn-gridposwithw)
   * [`fn withX(value=0)`](#fn-gridposwithx)
   * [`fn withY(value=0)`](#fn-gridposwithy)
@@ -30,9 +30,9 @@ grafonnet.panel.debug
   * [`fn withCountersMixin(value)`](#fn-optionswithcountersmixin)
   * [`fn withMode(value)`](#fn-optionswithmode)
   * [`obj counters`](#obj-optionscounters)
-    * [`fn withDataChanged(value)`](#fn-optionscounterswithdatachanged)
-    * [`fn withRender(value)`](#fn-optionscounterswithrender)
-    * [`fn withSchemaChanged(value)`](#fn-optionscounterswithschemachanged)
+    * [`fn withDataChanged(value=true)`](#fn-optionscounterswithdatachanged)
+    * [`fn withRender(value=true)`](#fn-optionscounterswithrender)
+    * [`fn withSchemaChanged(value=true)`](#fn-optionscounterswithschemachanged)
 * [`obj panelOptions`](#obj-paneloptions)
   * [`fn withDescription(value)`](#fn-paneloptionswithdescription)
   * [`fn withLinks(value)`](#fn-paneloptionswithlinks)
@@ -40,7 +40,7 @@ grafonnet.panel.debug
   * [`fn withRepeat(value)`](#fn-paneloptionswithrepeat)
   * [`fn withRepeatDirection(value="h")`](#fn-paneloptionswithrepeatdirection)
   * [`fn withTitle(value)`](#fn-paneloptionswithtitle)
-  * [`fn withTransparent(value=false)`](#fn-paneloptionswithtransparent)
+  * [`fn withTransparent(value=true)`](#fn-paneloptionswithtransparent)
 * [`obj queryOptions`](#obj-queryoptions)
   * [`fn withDatasource(value)`](#fn-queryoptionswithdatasource)
   * [`fn withDatasourceMixin(value)`](#fn-queryoptionswithdatasourcemixin)
@@ -117,7 +117,7 @@ Panel
 #### fn gridPos.withStatic
 
 ```ts
-withStatic(value)
+withStatic(value=true)
 ```
 
 true if fixed
@@ -200,7 +200,7 @@ Accepted values for `value` are "render", "events", "cursor", "State", "ThrowErr
 ##### fn options.counters.withDataChanged
 
 ```ts
-withDataChanged(value)
+withDataChanged(value=true)
 ```
 
 
@@ -208,7 +208,7 @@ withDataChanged(value)
 ##### fn options.counters.withRender
 
 ```ts
-withRender(value)
+withRender(value=true)
 ```
 
 
@@ -216,7 +216,7 @@ withRender(value)
 ##### fn options.counters.withSchemaChanged
 
 ```ts
-withSchemaChanged(value)
+withSchemaChanged(value=true)
 ```
 
 
@@ -281,7 +281,7 @@ Panel title.
 #### fn panelOptions.withTransparent
 
 ```ts
-withTransparent(value=false)
+withTransparent(value=true)
 ```
 
 Whether to display the panel without a background.

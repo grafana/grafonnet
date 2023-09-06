@@ -19,9 +19,9 @@ grafonnet.panel.barChart
 * [`obj fieldConfig`](#obj-fieldconfig)
   * [`obj defaults`](#obj-fieldconfigdefaults)
     * [`obj custom`](#obj-fieldconfigdefaultscustom)
-      * [`fn withAxisCenteredZero(value)`](#fn-fieldconfigdefaultscustomwithaxiscenteredzero)
+      * [`fn withAxisCenteredZero(value=true)`](#fn-fieldconfigdefaultscustomwithaxiscenteredzero)
       * [`fn withAxisColorMode(value)`](#fn-fieldconfigdefaultscustomwithaxiscolormode)
-      * [`fn withAxisGridShow(value)`](#fn-fieldconfigdefaultscustomwithaxisgridshow)
+      * [`fn withAxisGridShow(value=true)`](#fn-fieldconfigdefaultscustomwithaxisgridshow)
       * [`fn withAxisLabel(value)`](#fn-fieldconfigdefaultscustomwithaxislabel)
       * [`fn withAxisPlacement(value)`](#fn-fieldconfigdefaultscustomwithaxisplacement)
       * [`fn withAxisSoftMax(value)`](#fn-fieldconfigdefaultscustomwithaxissoftmax)
@@ -37,9 +37,9 @@ grafonnet.panel.barChart
       * [`fn withThresholdsStyle(value)`](#fn-fieldconfigdefaultscustomwiththresholdsstyle)
       * [`fn withThresholdsStyleMixin(value)`](#fn-fieldconfigdefaultscustomwiththresholdsstylemixin)
       * [`obj hideFrom`](#obj-fieldconfigdefaultscustomhidefrom)
-        * [`fn withLegend(value)`](#fn-fieldconfigdefaultscustomhidefromwithlegend)
-        * [`fn withTooltip(value)`](#fn-fieldconfigdefaultscustomhidefromwithtooltip)
-        * [`fn withViz(value)`](#fn-fieldconfigdefaultscustomhidefromwithviz)
+        * [`fn withLegend(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithlegend)
+        * [`fn withTooltip(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithtooltip)
+        * [`fn withViz(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithviz)
       * [`obj scaleDistribution`](#obj-fieldconfigdefaultscustomscaledistribution)
         * [`fn withLinearThreshold(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithlinearthreshold)
         * [`fn withLog(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithlog)
@@ -48,7 +48,7 @@ grafonnet.panel.barChart
         * [`fn withMode(value)`](#fn-fieldconfigdefaultscustomthresholdsstylewithmode)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
-  * [`fn withStatic(value)`](#fn-gridposwithstatic)
+  * [`fn withStatic(value=true)`](#fn-gridposwithstatic)
   * [`fn withW(value=12)`](#fn-gridposwithw)
   * [`fn withX(value=0)`](#fn-gridposwithx)
   * [`fn withY(value=0)`](#fn-gridposwithy)
@@ -59,7 +59,7 @@ grafonnet.panel.barChart
   * [`fn withBarRadius(value=0)`](#fn-optionswithbarradius)
   * [`fn withBarWidth(value=0.97)`](#fn-optionswithbarwidth)
   * [`fn withColorByField(value)`](#fn-optionswithcolorbyfield)
-  * [`fn withFullHighlight(value=false)`](#fn-optionswithfullhighlight)
+  * [`fn withFullHighlight(value=true)`](#fn-optionswithfullhighlight)
   * [`fn withGroupWidth(value=0.7)`](#fn-optionswithgroupwidth)
   * [`fn withLegend(value)`](#fn-optionswithlegend)
   * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
@@ -75,15 +75,15 @@ grafonnet.panel.barChart
   * [`fn withXTickLabelRotation(value=0)`](#fn-optionswithxticklabelrotation)
   * [`fn withXTickLabelSpacing(value=0)`](#fn-optionswithxticklabelspacing)
   * [`obj legend`](#obj-optionslegend)
-    * [`fn withAsTable(value)`](#fn-optionslegendwithastable)
+    * [`fn withAsTable(value=true)`](#fn-optionslegendwithastable)
     * [`fn withCalcs(value)`](#fn-optionslegendwithcalcs)
     * [`fn withCalcsMixin(value)`](#fn-optionslegendwithcalcsmixin)
     * [`fn withDisplayMode(value)`](#fn-optionslegendwithdisplaymode)
-    * [`fn withIsVisible(value)`](#fn-optionslegendwithisvisible)
+    * [`fn withIsVisible(value=true)`](#fn-optionslegendwithisvisible)
     * [`fn withPlacement(value)`](#fn-optionslegendwithplacement)
-    * [`fn withShowLegend(value)`](#fn-optionslegendwithshowlegend)
+    * [`fn withShowLegend(value=true)`](#fn-optionslegendwithshowlegend)
     * [`fn withSortBy(value)`](#fn-optionslegendwithsortby)
-    * [`fn withSortDesc(value)`](#fn-optionslegendwithsortdesc)
+    * [`fn withSortDesc(value=true)`](#fn-optionslegendwithsortdesc)
     * [`fn withWidth(value)`](#fn-optionslegendwithwidth)
   * [`obj text`](#obj-optionstext)
     * [`fn withTitleSize(value)`](#fn-optionstextwithtitlesize)
@@ -98,7 +98,7 @@ grafonnet.panel.barChart
   * [`fn withRepeat(value)`](#fn-paneloptionswithrepeat)
   * [`fn withRepeatDirection(value="h")`](#fn-paneloptionswithrepeatdirection)
   * [`fn withTitle(value)`](#fn-paneloptionswithtitle)
-  * [`fn withTransparent(value=false)`](#fn-paneloptionswithtransparent)
+  * [`fn withTransparent(value=true)`](#fn-paneloptionswithtransparent)
 * [`obj queryOptions`](#obj-queryoptions)
   * [`fn withDatasource(value)`](#fn-queryoptionswithdatasource)
   * [`fn withDatasourceMixin(value)`](#fn-queryoptionswithdatasourcemixin)
@@ -173,7 +173,7 @@ withUid(value)
 ###### fn fieldConfig.defaults.custom.withAxisCenteredZero
 
 ```ts
-withAxisCenteredZero(value)
+withAxisCenteredZero(value=true)
 ```
 
 
@@ -191,7 +191,7 @@ Accepted values for `value` are "text", "series"
 ###### fn fieldConfig.defaults.custom.withAxisGridShow
 
 ```ts
-withAxisGridShow(value)
+withAxisGridShow(value=true)
 ```
 
 
@@ -317,7 +317,7 @@ TODO docs
 ####### fn fieldConfig.defaults.custom.hideFrom.withLegend
 
 ```ts
-withLegend(value)
+withLegend(value=true)
 ```
 
 
@@ -325,7 +325,7 @@ withLegend(value)
 ####### fn fieldConfig.defaults.custom.hideFrom.withTooltip
 
 ```ts
-withTooltip(value)
+withTooltip(value=true)
 ```
 
 
@@ -333,7 +333,7 @@ withTooltip(value)
 ####### fn fieldConfig.defaults.custom.hideFrom.withViz
 
 ```ts
-withViz(value)
+withViz(value=true)
 ```
 
 
@@ -394,7 +394,7 @@ Panel
 #### fn gridPos.withStatic
 
 ```ts
-withStatic(value)
+withStatic(value=true)
 ```
 
 true if fixed
@@ -472,7 +472,7 @@ Use the color value for a sibling field to color each bar value.
 #### fn options.withFullHighlight
 
 ```ts
-withFullHighlight(value=false)
+withFullHighlight(value=true)
 ```
 
 Enables mode which highlights the entire bar area and shows tooltip when cursor
@@ -597,7 +597,7 @@ negative values indicate backwards skipping behavior
 ##### fn options.legend.withAsTable
 
 ```ts
-withAsTable(value)
+withAsTable(value=true)
 ```
 
 
@@ -632,7 +632,7 @@ Accepted values for `value` are "list", "table", "hidden"
 ##### fn options.legend.withIsVisible
 
 ```ts
-withIsVisible(value)
+withIsVisible(value=true)
 ```
 
 
@@ -650,7 +650,7 @@ Accepted values for `value` are "bottom", "right"
 ##### fn options.legend.withShowLegend
 
 ```ts
-withShowLegend(value)
+withShowLegend(value=true)
 ```
 
 
@@ -666,7 +666,7 @@ withSortBy(value)
 ##### fn options.legend.withSortDesc
 
 ```ts
-withSortDesc(value)
+withSortDesc(value=true)
 ```
 
 
@@ -781,7 +781,7 @@ Panel title.
 #### fn panelOptions.withTransparent
 
 ```ts
-withTransparent(value=false)
+withTransparent(value=true)
 ```
 
 Whether to display the panel without a background.

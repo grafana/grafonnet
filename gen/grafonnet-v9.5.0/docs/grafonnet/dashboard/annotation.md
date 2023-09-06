@@ -8,7 +8,7 @@
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withDatasourceMixin(value)`](#fn-withdatasourcemixin)
 * [`fn withEnable(value=true)`](#fn-withenable)
-* [`fn withHide(value=false)`](#fn-withhide)
+* [`fn withHide(value=true)`](#fn-withhide)
 * [`fn withIconColor(value)`](#fn-withiconcolor)
 * [`fn withName(value)`](#fn-withname)
 * [`fn withRawQuery(value)`](#fn-withrawquery)
@@ -21,7 +21,7 @@
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj target`](#obj-target)
   * [`fn withLimit(value)`](#fn-targetwithlimit)
-  * [`fn withMatchAny(value)`](#fn-targetwithmatchany)
+  * [`fn withMatchAny(value=true)`](#fn-targetwithmatchany)
   * [`fn withTags(value)`](#fn-targetwithtags)
   * [`fn withTagsMixin(value)`](#fn-targetwithtagsmixin)
   * [`fn withType(value)`](#fn-targetwithtype)
@@ -63,7 +63,7 @@ Whether annotation is enabled.
 ### fn withHide
 
 ```ts
-withHide(value=false)
+withHide(value=true)
 ```
 
 Whether to hide annotation.
@@ -157,7 +157,7 @@ withLimit(value)
 #### fn target.withMatchAny
 
 ```ts
-withMatchAny(value)
+withMatchAny(value=true)
 ```
 
 

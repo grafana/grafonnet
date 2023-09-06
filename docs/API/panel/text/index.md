@@ -18,7 +18,7 @@ grafonnet.panel.text
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
-  * [`fn withStatic(value)`](#fn-gridposwithstatic)
+  * [`fn withStatic(value=true)`](#fn-gridposwithstatic)
   * [`fn withW(value=12)`](#fn-gridposwithw)
   * [`fn withX(value=0)`](#fn-gridposwithx)
   * [`fn withY(value=0)`](#fn-gridposwithy)
@@ -32,8 +32,8 @@ grafonnet.panel.text
   * [`fn withMode(value)`](#fn-optionswithmode)
   * [`obj code`](#obj-optionscode)
     * [`fn withLanguage(value="plaintext")`](#fn-optionscodewithlanguage)
-    * [`fn withShowLineNumbers(value=false)`](#fn-optionscodewithshowlinenumbers)
-    * [`fn withShowMiniMap(value=false)`](#fn-optionscodewithshowminimap)
+    * [`fn withShowLineNumbers(value=true)`](#fn-optionscodewithshowlinenumbers)
+    * [`fn withShowMiniMap(value=true)`](#fn-optionscodewithshowminimap)
 * [`obj panelOptions`](#obj-paneloptions)
   * [`fn withDescription(value)`](#fn-paneloptionswithdescription)
   * [`fn withLinks(value)`](#fn-paneloptionswithlinks)
@@ -41,7 +41,7 @@ grafonnet.panel.text
   * [`fn withRepeat(value)`](#fn-paneloptionswithrepeat)
   * [`fn withRepeatDirection(value="h")`](#fn-paneloptionswithrepeatdirection)
   * [`fn withTitle(value)`](#fn-paneloptionswithtitle)
-  * [`fn withTransparent(value=false)`](#fn-paneloptionswithtransparent)
+  * [`fn withTransparent(value=true)`](#fn-paneloptionswithtransparent)
 * [`obj queryOptions`](#obj-queryoptions)
   * [`fn withDatasource(value)`](#fn-queryoptionswithdatasource)
   * [`fn withDatasourceMixin(value)`](#fn-queryoptionswithdatasourcemixin)
@@ -118,7 +118,7 @@ Panel
 #### fn gridPos.withStatic
 
 ```ts
-withStatic(value)
+withStatic(value=true)
 ```
 
 true if fixed
@@ -219,7 +219,7 @@ Accepted values for `value` are "plaintext", "yaml", "xml", "typescript", "sql",
 ##### fn options.code.withShowLineNumbers
 
 ```ts
-withShowLineNumbers(value=false)
+withShowLineNumbers(value=true)
 ```
 
 
@@ -227,7 +227,7 @@ withShowLineNumbers(value=false)
 ##### fn options.code.withShowMiniMap
 
 ```ts
-withShowMiniMap(value=false)
+withShowMiniMap(value=true)
 ```
 
 
@@ -292,7 +292,7 @@ Panel title.
 #### fn panelOptions.withTransparent
 
 ```ts
-withTransparent(value=false)
+withTransparent(value=true)
 ```
 
 Whether to display the panel without a background.

@@ -4,13 +4,13 @@
 
 ## Index
 
-* [`fn withAsDropdown(value=false)`](#fn-withasdropdown)
+* [`fn withAsDropdown(value=true)`](#fn-withasdropdown)
 * [`fn withIcon(value)`](#fn-withicon)
-* [`fn withIncludeVars(value=false)`](#fn-withincludevars)
-* [`fn withKeepTime(value=false)`](#fn-withkeeptime)
+* [`fn withIncludeVars(value=true)`](#fn-withincludevars)
+* [`fn withKeepTime(value=true)`](#fn-withkeeptime)
 * [`fn withTags(value)`](#fn-withtags)
 * [`fn withTagsMixin(value)`](#fn-withtagsmixin)
-* [`fn withTargetBlank(value=false)`](#fn-withtargetblank)
+* [`fn withTargetBlank(value=true)`](#fn-withtargetblank)
 * [`fn withTitle(value)`](#fn-withtitle)
 * [`fn withTooltip(value)`](#fn-withtooltip)
 * [`fn withType(value)`](#fn-withtype)
@@ -21,7 +21,7 @@
 ### fn withAsDropdown
 
 ```ts
-withAsDropdown(value=false)
+withAsDropdown(value=true)
 ```
 
 
@@ -37,7 +37,7 @@ withIcon(value)
 ### fn withIncludeVars
 
 ```ts
-withIncludeVars(value=false)
+withIncludeVars(value=true)
 ```
 
 
@@ -45,7 +45,7 @@ withIncludeVars(value=false)
 ### fn withKeepTime
 
 ```ts
-withKeepTime(value=false)
+withKeepTime(value=true)
 ```
 
 
@@ -69,7 +69,7 @@ withTagsMixin(value)
 ### fn withTargetBlank
 
 ```ts
-withTargetBlank(value=false)
+withTargetBlank(value=true)
 ```
 
 

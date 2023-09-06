@@ -11,12 +11,12 @@ grafonnet.query.cloudWatch
   * [`fn withDatasource(value)`](#fn-cloudwatchannotationquerywithdatasource)
   * [`fn withDimensions(value)`](#fn-cloudwatchannotationquerywithdimensions)
   * [`fn withDimensionsMixin(value)`](#fn-cloudwatchannotationquerywithdimensionsmixin)
-  * [`fn withHide(value)`](#fn-cloudwatchannotationquerywithhide)
-  * [`fn withMatchExact(value)`](#fn-cloudwatchannotationquerywithmatchexact)
+  * [`fn withHide(value=true)`](#fn-cloudwatchannotationquerywithhide)
+  * [`fn withMatchExact(value=true)`](#fn-cloudwatchannotationquerywithmatchexact)
   * [`fn withMetricName(value)`](#fn-cloudwatchannotationquerywithmetricname)
   * [`fn withNamespace(value)`](#fn-cloudwatchannotationquerywithnamespace)
   * [`fn withPeriod(value)`](#fn-cloudwatchannotationquerywithperiod)
-  * [`fn withPrefixMatching(value)`](#fn-cloudwatchannotationquerywithprefixmatching)
+  * [`fn withPrefixMatching(value=true)`](#fn-cloudwatchannotationquerywithprefixmatching)
   * [`fn withQueryMode(value)`](#fn-cloudwatchannotationquerywithquerymode)
   * [`fn withQueryType(value)`](#fn-cloudwatchannotationquerywithquerytype)
   * [`fn withRefId(value)`](#fn-cloudwatchannotationquerywithrefid)
@@ -27,7 +27,7 @@ grafonnet.query.cloudWatch
 * [`obj CloudWatchLogsQuery`](#obj-cloudwatchlogsquery)
   * [`fn withDatasource(value)`](#fn-cloudwatchlogsquerywithdatasource)
   * [`fn withExpression(value)`](#fn-cloudwatchlogsquerywithexpression)
-  * [`fn withHide(value)`](#fn-cloudwatchlogsquerywithhide)
+  * [`fn withHide(value=true)`](#fn-cloudwatchlogsquerywithhide)
   * [`fn withId(value)`](#fn-cloudwatchlogsquerywithid)
   * [`fn withLogGroupNames(value)`](#fn-cloudwatchlogsquerywithloggroupnames)
   * [`fn withLogGroupNamesMixin(value)`](#fn-cloudwatchlogsquerywithloggroupnamesmixin)
@@ -51,10 +51,10 @@ grafonnet.query.cloudWatch
   * [`fn withDimensions(value)`](#fn-cloudwatchmetricsquerywithdimensions)
   * [`fn withDimensionsMixin(value)`](#fn-cloudwatchmetricsquerywithdimensionsmixin)
   * [`fn withExpression(value)`](#fn-cloudwatchmetricsquerywithexpression)
-  * [`fn withHide(value)`](#fn-cloudwatchmetricsquerywithhide)
+  * [`fn withHide(value=true)`](#fn-cloudwatchmetricsquerywithhide)
   * [`fn withId(value)`](#fn-cloudwatchmetricsquerywithid)
   * [`fn withLabel(value)`](#fn-cloudwatchmetricsquerywithlabel)
-  * [`fn withMatchExact(value)`](#fn-cloudwatchmetricsquerywithmatchexact)
+  * [`fn withMatchExact(value=true)`](#fn-cloudwatchmetricsquerywithmatchexact)
   * [`fn withMetricEditorMode(value)`](#fn-cloudwatchmetricsquerywithmetriceditormode)
   * [`fn withMetricName(value)`](#fn-cloudwatchmetricsquerywithmetricname)
   * [`fn withMetricQueryType(value)`](#fn-cloudwatchmetricsquerywithmetricquerytype)
@@ -193,7 +193,7 @@ A name/value pair that is part of the identity of a metric. For example, you can
 #### fn CloudWatchAnnotationQuery.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 true if query is disabled (ie should not be returned to the dashboard)
@@ -203,7 +203,7 @@ the results from a hidden query may be used as the input to other queries (SSE e
 #### fn CloudWatchAnnotationQuery.withMatchExact
 
 ```ts
-withMatchExact(value)
+withMatchExact(value=true)
 ```
 
 Only show metrics that exactly match all defined dimension names.
@@ -235,7 +235,7 @@ The length of time associated with a specific Amazon CloudWatch statistic. Can b
 #### fn CloudWatchAnnotationQuery.withPrefixMatching
 
 ```ts
-withPrefixMatching(value)
+withPrefixMatching(value=true)
 ```
 
 Enable matching on the prefix of the action name or alarm name, specify the prefixes with actionPrefix and/or alarmNamePrefix
@@ -326,7 +326,7 @@ The CloudWatch Logs Insights query to execute
 #### fn CloudWatchLogsQuery.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 true if query is disabled (ie should not be returned to the dashboard)
@@ -519,7 +519,7 @@ Math expression query
 #### fn CloudWatchMetricsQuery.withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 true if query is disabled (ie should not be returned to the dashboard)
@@ -545,7 +545,7 @@ Change the time series legend names using dynamic labels. See https://docs.aws.a
 #### fn CloudWatchMetricsQuery.withMatchExact
 
 ```ts
-withMatchExact(value)
+withMatchExact(value=true)
 ```
 
 Only show metrics that exactly match all defined dimension names.

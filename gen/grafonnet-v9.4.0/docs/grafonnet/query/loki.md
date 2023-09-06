@@ -8,12 +8,12 @@ grafonnet.query.loki
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withEditorMode(value)`](#fn-witheditormode)
 * [`fn withExpr(value)`](#fn-withexpr)
-* [`fn withHide(value)`](#fn-withhide)
-* [`fn withInstant(value)`](#fn-withinstant)
+* [`fn withHide(value=true)`](#fn-withhide)
+* [`fn withInstant(value=true)`](#fn-withinstant)
 * [`fn withLegendFormat(value)`](#fn-withlegendformat)
 * [`fn withMaxLines(value)`](#fn-withmaxlines)
 * [`fn withQueryType(value)`](#fn-withquerytype)
-* [`fn withRange(value)`](#fn-withrange)
+* [`fn withRange(value=true)`](#fn-withrange)
 * [`fn withRefId(value)`](#fn-withrefid)
 * [`fn withResolution(value)`](#fn-withresolution)
 
@@ -56,7 +56,7 @@ The LogQL query.
 ### fn withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 true if query is disabled (ie should not be returned to the dashboard)
@@ -66,7 +66,7 @@ the results from a hidden query may be used as the input to other queries (SSE e
 ### fn withInstant
 
 ```ts
-withInstant(value)
+withInstant(value=true)
 ```
 
 @deprecated, now use queryType.
@@ -99,7 +99,7 @@ TODO make this required and give it a default
 ### fn withRange
 
 ```ts
-withRange(value)
+withRange(value=true)
 ```
 
 @deprecated, now use queryType.

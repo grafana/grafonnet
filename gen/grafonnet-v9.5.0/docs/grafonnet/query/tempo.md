@@ -8,7 +8,7 @@ grafonnet.query.tempo
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withFilters(value)`](#fn-withfilters)
 * [`fn withFiltersMixin(value)`](#fn-withfiltersmixin)
-* [`fn withHide(value)`](#fn-withhide)
+* [`fn withHide(value=true)`](#fn-withhide)
 * [`fn withLimit(value)`](#fn-withlimit)
 * [`fn withMaxDuration(value)`](#fn-withmaxduration)
 * [`fn withMinDuration(value)`](#fn-withminduration)
@@ -65,7 +65,7 @@ withFiltersMixin(value)
 ### fn withHide
 
 ```ts
-withHide(value)
+withHide(value=true)
 ```
 
 true if query is disabled (ie should not be returned to the dashboard)

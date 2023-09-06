@@ -18,7 +18,7 @@ grafonnet.panel.geomap
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
-  * [`fn withStatic(value)`](#fn-gridposwithstatic)
+  * [`fn withStatic(value=true)`](#fn-gridposwithstatic)
   * [`fn withW(value=12)`](#fn-gridposwithw)
   * [`fn withX(value=0)`](#fn-gridposwithx)
   * [`fn withY(value=0)`](#fn-gridposwithy)
@@ -43,7 +43,7 @@ grafonnet.panel.geomap
     * [`fn withLocationMixin(value)`](#fn-optionsbasemapwithlocationmixin)
     * [`fn withName(value)`](#fn-optionsbasemapwithname)
     * [`fn withOpacity(value)`](#fn-optionsbasemapwithopacity)
-    * [`fn withTooltip(value)`](#fn-optionsbasemapwithtooltip)
+    * [`fn withTooltip(value=true)`](#fn-optionsbasemapwithtooltip)
     * [`fn withType(value)`](#fn-optionsbasemapwithtype)
     * [`obj location`](#obj-optionsbasemaplocation)
       * [`fn withGazetteer(value)`](#fn-optionsbasemaplocationwithgazetteer)
@@ -54,12 +54,12 @@ grafonnet.panel.geomap
       * [`fn withMode(value)`](#fn-optionsbasemaplocationwithmode)
       * [`fn withWkt(value)`](#fn-optionsbasemaplocationwithwkt)
   * [`obj controls`](#obj-optionscontrols)
-    * [`fn withMouseWheelZoom(value)`](#fn-optionscontrolswithmousewheelzoom)
-    * [`fn withShowAttribution(value)`](#fn-optionscontrolswithshowattribution)
-    * [`fn withShowDebug(value)`](#fn-optionscontrolswithshowdebug)
-    * [`fn withShowMeasure(value)`](#fn-optionscontrolswithshowmeasure)
-    * [`fn withShowScale(value)`](#fn-optionscontrolswithshowscale)
-    * [`fn withShowZoom(value)`](#fn-optionscontrolswithshowzoom)
+    * [`fn withMouseWheelZoom(value=true)`](#fn-optionscontrolswithmousewheelzoom)
+    * [`fn withShowAttribution(value=true)`](#fn-optionscontrolswithshowattribution)
+    * [`fn withShowDebug(value=true)`](#fn-optionscontrolswithshowdebug)
+    * [`fn withShowMeasure(value=true)`](#fn-optionscontrolswithshowmeasure)
+    * [`fn withShowScale(value=true)`](#fn-optionscontrolswithshowscale)
+    * [`fn withShowZoom(value=true)`](#fn-optionscontrolswithshowzoom)
   * [`obj layers`](#obj-optionslayers)
     * [`fn withConfig(value)`](#fn-optionslayerswithconfig)
     * [`fn withFilterData(value)`](#fn-optionslayerswithfilterdata)
@@ -67,7 +67,7 @@ grafonnet.panel.geomap
     * [`fn withLocationMixin(value)`](#fn-optionslayerswithlocationmixin)
     * [`fn withName(value)`](#fn-optionslayerswithname)
     * [`fn withOpacity(value)`](#fn-optionslayerswithopacity)
-    * [`fn withTooltip(value)`](#fn-optionslayerswithtooltip)
+    * [`fn withTooltip(value=true)`](#fn-optionslayerswithtooltip)
     * [`fn withType(value)`](#fn-optionslayerswithtype)
     * [`obj location`](#obj-optionslayerslocation)
       * [`fn withGazetteer(value)`](#fn-optionslayerslocationwithgazetteer)
@@ -82,14 +82,14 @@ grafonnet.panel.geomap
   * [`obj view`](#obj-optionsview)
     * [`fn withAllLayers(value=true)`](#fn-optionsviewwithalllayers)
     * [`fn withId(value="zero")`](#fn-optionsviewwithid)
-    * [`fn withLastOnly(value)`](#fn-optionsviewwithlastonly)
+    * [`fn withLastOnly(value=true)`](#fn-optionsviewwithlastonly)
     * [`fn withLat(value=0)`](#fn-optionsviewwithlat)
     * [`fn withLayer(value)`](#fn-optionsviewwithlayer)
     * [`fn withLon(value=0)`](#fn-optionsviewwithlon)
     * [`fn withMaxZoom(value)`](#fn-optionsviewwithmaxzoom)
     * [`fn withMinZoom(value)`](#fn-optionsviewwithminzoom)
     * [`fn withPadding(value)`](#fn-optionsviewwithpadding)
-    * [`fn withShared(value)`](#fn-optionsviewwithshared)
+    * [`fn withShared(value=true)`](#fn-optionsviewwithshared)
     * [`fn withZoom(value=1)`](#fn-optionsviewwithzoom)
 * [`obj panelOptions`](#obj-paneloptions)
   * [`fn withDescription(value)`](#fn-paneloptionswithdescription)
@@ -98,7 +98,7 @@ grafonnet.panel.geomap
   * [`fn withRepeat(value)`](#fn-paneloptionswithrepeat)
   * [`fn withRepeatDirection(value="h")`](#fn-paneloptionswithrepeatdirection)
   * [`fn withTitle(value)`](#fn-paneloptionswithtitle)
-  * [`fn withTransparent(value=false)`](#fn-paneloptionswithtransparent)
+  * [`fn withTransparent(value=true)`](#fn-paneloptionswithtransparent)
 * [`obj queryOptions`](#obj-queryoptions)
   * [`fn withDatasource(value)`](#fn-queryoptionswithdatasource)
   * [`fn withDatasourceMixin(value)`](#fn-queryoptionswithdatasourcemixin)
@@ -175,7 +175,7 @@ Panel
 #### fn gridPos.withStatic
 
 ```ts
-withStatic(value)
+withStatic(value=true)
 ```
 
 true if fixed
@@ -362,7 +362,7 @@ Layer opacity (0-1)
 ##### fn options.basemap.withTooltip
 
 ```ts
-withTooltip(value)
+withTooltip(value=true)
 ```
 
 Check tooltip (defaults to true)
@@ -442,7 +442,7 @@ withWkt(value)
 ##### fn options.controls.withMouseWheelZoom
 
 ```ts
-withMouseWheelZoom(value)
+withMouseWheelZoom(value=true)
 ```
 
 let the mouse wheel zoom
@@ -450,7 +450,7 @@ let the mouse wheel zoom
 ##### fn options.controls.withShowAttribution
 
 ```ts
-withShowAttribution(value)
+withShowAttribution(value=true)
 ```
 
 Lower right
@@ -458,7 +458,7 @@ Lower right
 ##### fn options.controls.withShowDebug
 
 ```ts
-withShowDebug(value)
+withShowDebug(value=true)
 ```
 
 Show debug
@@ -466,7 +466,7 @@ Show debug
 ##### fn options.controls.withShowMeasure
 
 ```ts
-withShowMeasure(value)
+withShowMeasure(value=true)
 ```
 
 Show measure
@@ -474,7 +474,7 @@ Show measure
 ##### fn options.controls.withShowScale
 
 ```ts
-withShowScale(value)
+withShowScale(value=true)
 ```
 
 Scale options
@@ -482,7 +482,7 @@ Scale options
 ##### fn options.controls.withShowZoom
 
 ```ts
-withShowZoom(value)
+withShowZoom(value=true)
 ```
 
 Zoom (upper left)
@@ -543,7 +543,7 @@ Layer opacity (0-1)
 ##### fn options.layers.withTooltip
 
 ```ts
-withTooltip(value)
+withTooltip(value=true)
 ```
 
 Check tooltip (defaults to true)
@@ -652,7 +652,7 @@ withId(value="zero")
 ##### fn options.view.withLastOnly
 
 ```ts
-withLastOnly(value)
+withLastOnly(value=true)
 ```
 
 
@@ -708,7 +708,7 @@ withPadding(value)
 ##### fn options.view.withShared
 
 ```ts
-withShared(value)
+withShared(value=true)
 ```
 
 
@@ -781,7 +781,7 @@ Panel title.
 #### fn panelOptions.withTransparent
 
 ```ts
-withTransparent(value=false)
+withTransparent(value=true)
 ```
 
 Whether to display the panel without a background.

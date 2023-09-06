@@ -18,7 +18,7 @@ grafonnet.panel.alertGroups
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
-  * [`fn withStatic(value)`](#fn-gridposwithstatic)
+  * [`fn withStatic(value=true)`](#fn-gridposwithstatic)
   * [`fn withW(value=12)`](#fn-gridposwithw)
   * [`fn withX(value=0)`](#fn-gridposwithx)
   * [`fn withY(value=0)`](#fn-gridposwithy)
@@ -27,7 +27,7 @@ grafonnet.panel.alertGroups
   * [`fn withUid(value)`](#fn-librarypanelwithuid)
 * [`obj options`](#obj-options)
   * [`fn withAlertmanager(value)`](#fn-optionswithalertmanager)
-  * [`fn withExpandAll(value)`](#fn-optionswithexpandall)
+  * [`fn withExpandAll(value=true)`](#fn-optionswithexpandall)
   * [`fn withLabels(value)`](#fn-optionswithlabels)
 * [`obj panelOptions`](#obj-paneloptions)
   * [`fn withDescription(value)`](#fn-paneloptionswithdescription)
@@ -36,7 +36,7 @@ grafonnet.panel.alertGroups
   * [`fn withRepeat(value)`](#fn-paneloptionswithrepeat)
   * [`fn withRepeatDirection(value="h")`](#fn-paneloptionswithrepeatdirection)
   * [`fn withTitle(value)`](#fn-paneloptionswithtitle)
-  * [`fn withTransparent(value=false)`](#fn-paneloptionswithtransparent)
+  * [`fn withTransparent(value=true)`](#fn-paneloptionswithtransparent)
 * [`obj queryOptions`](#obj-queryoptions)
   * [`fn withDatasource(value)`](#fn-queryoptionswithdatasource)
   * [`fn withDatasourceMixin(value)`](#fn-queryoptionswithdatasourcemixin)
@@ -113,7 +113,7 @@ Panel
 #### fn gridPos.withStatic
 
 ```ts
-withStatic(value)
+withStatic(value=true)
 ```
 
 true if fixed
@@ -175,7 +175,7 @@ Name of the alertmanager used as a source for alerts
 #### fn options.withExpandAll
 
 ```ts
-withExpandAll(value)
+withExpandAll(value=true)
 ```
 
 Expand all alert groups by default
@@ -248,7 +248,7 @@ Panel title.
 #### fn panelOptions.withTransparent
 
 ```ts
-withTransparent(value=false)
+withTransparent(value=true)
 ```
 
 Whether to display the panel without a background.

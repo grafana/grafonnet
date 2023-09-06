@@ -4,7 +4,7 @@
 
 ## Index
 
-* [`fn withDisabled(value)`](#fn-withdisabled)
+* [`fn withDisabled(value=true)`](#fn-withdisabled)
 * [`fn withFilter(value)`](#fn-withfilter)
 * [`fn withFilterMixin(value)`](#fn-withfiltermixin)
 * [`fn withId(value)`](#fn-withid)
@@ -18,7 +18,7 @@
 ### fn withDisabled
 
 ```ts
-withDisabled(value)
+withDisabled(value=true)
 ```
 
 Disabled transformations are skipped

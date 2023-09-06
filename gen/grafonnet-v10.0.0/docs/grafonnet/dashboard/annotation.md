@@ -9,7 +9,7 @@
 * [`fn withEnable(value=true)`](#fn-withenable)
 * [`fn withFilter(value)`](#fn-withfilter)
 * [`fn withFilterMixin(value)`](#fn-withfiltermixin)
-* [`fn withHide(value=false)`](#fn-withhide)
+* [`fn withHide(value=true)`](#fn-withhide)
 * [`fn withIconColor(value)`](#fn-withiconcolor)
 * [`fn withName(value)`](#fn-withname)
 * [`fn withTarget(value)`](#fn-withtarget)
@@ -19,12 +19,12 @@
   * [`fn withType(value)`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj filter`](#obj-filter)
-  * [`fn withExclude(value=false)`](#fn-filterwithexclude)
+  * [`fn withExclude(value=true)`](#fn-filterwithexclude)
   * [`fn withIds(value)`](#fn-filterwithids)
   * [`fn withIdsMixin(value)`](#fn-filterwithidsmixin)
 * [`obj target`](#obj-target)
   * [`fn withLimit(value)`](#fn-targetwithlimit)
-  * [`fn withMatchAny(value)`](#fn-targetwithmatchany)
+  * [`fn withMatchAny(value=true)`](#fn-targetwithmatchany)
   * [`fn withTags(value)`](#fn-targetwithtags)
   * [`fn withTagsMixin(value)`](#fn-targetwithtagsmixin)
   * [`fn withType(value)`](#fn-targetwithtype)
@@ -74,7 +74,7 @@ withFilterMixin(value)
 ### fn withHide
 
 ```ts
-withHide(value=false)
+withHide(value=true)
 ```
 
 Annotation queries can be toggled on or off at the top of the dashboard.
@@ -147,7 +147,7 @@ withUid(value)
 #### fn filter.withExclude
 
 ```ts
-withExclude(value=false)
+withExclude(value=true)
 ```
 
 Should the specified panels be included or excluded
@@ -183,7 +183,7 @@ but code+tests is already depending on it so hard to change
 #### fn target.withMatchAny
 
 ```ts
-withMatchAny(value)
+withMatchAny(value=true)
 ```
 
 Only required/valid for the grafana datasource...

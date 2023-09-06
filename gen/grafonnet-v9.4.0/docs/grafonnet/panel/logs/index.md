@@ -18,7 +18,7 @@ grafonnet.panel.logs
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
-  * [`fn withStatic(value)`](#fn-gridposwithstatic)
+  * [`fn withStatic(value=true)`](#fn-gridposwithstatic)
   * [`fn withW(value=12)`](#fn-gridposwithw)
   * [`fn withX(value=0)`](#fn-gridposwithx)
   * [`fn withY(value=0)`](#fn-gridposwithy)
@@ -27,13 +27,13 @@ grafonnet.panel.logs
   * [`fn withUid(value)`](#fn-librarypanelwithuid)
 * [`obj options`](#obj-options)
   * [`fn withDedupStrategy(value)`](#fn-optionswithdedupstrategy)
-  * [`fn withEnableLogDetails(value)`](#fn-optionswithenablelogdetails)
-  * [`fn withPrettifyLogMessage(value)`](#fn-optionswithprettifylogmessage)
-  * [`fn withShowCommonLabels(value)`](#fn-optionswithshowcommonlabels)
-  * [`fn withShowLabels(value)`](#fn-optionswithshowlabels)
-  * [`fn withShowTime(value)`](#fn-optionswithshowtime)
+  * [`fn withEnableLogDetails(value=true)`](#fn-optionswithenablelogdetails)
+  * [`fn withPrettifyLogMessage(value=true)`](#fn-optionswithprettifylogmessage)
+  * [`fn withShowCommonLabels(value=true)`](#fn-optionswithshowcommonlabels)
+  * [`fn withShowLabels(value=true)`](#fn-optionswithshowlabels)
+  * [`fn withShowTime(value=true)`](#fn-optionswithshowtime)
   * [`fn withSortOrder(value)`](#fn-optionswithsortorder)
-  * [`fn withWrapLogMessage(value)`](#fn-optionswithwraplogmessage)
+  * [`fn withWrapLogMessage(value=true)`](#fn-optionswithwraplogmessage)
 * [`obj panelOptions`](#obj-paneloptions)
   * [`fn withDescription(value)`](#fn-paneloptionswithdescription)
   * [`fn withLinks(value)`](#fn-paneloptionswithlinks)
@@ -41,7 +41,7 @@ grafonnet.panel.logs
   * [`fn withRepeat(value)`](#fn-paneloptionswithrepeat)
   * [`fn withRepeatDirection(value="h")`](#fn-paneloptionswithrepeatdirection)
   * [`fn withTitle(value)`](#fn-paneloptionswithtitle)
-  * [`fn withTransparent(value=false)`](#fn-paneloptionswithtransparent)
+  * [`fn withTransparent(value=true)`](#fn-paneloptionswithtransparent)
 * [`obj queryOptions`](#obj-queryoptions)
   * [`fn withDatasource(value)`](#fn-queryoptionswithdatasource)
   * [`fn withDatasourceMixin(value)`](#fn-queryoptionswithdatasourcemixin)
@@ -118,7 +118,7 @@ Panel
 #### fn gridPos.withStatic
 
 ```ts
-withStatic(value)
+withStatic(value=true)
 ```
 
 true if fixed
@@ -182,7 +182,7 @@ Accepted values for `value` are "none", "exact", "numbers", "signature"
 #### fn options.withEnableLogDetails
 
 ```ts
-withEnableLogDetails(value)
+withEnableLogDetails(value=true)
 ```
 
 
@@ -190,7 +190,7 @@ withEnableLogDetails(value)
 #### fn options.withPrettifyLogMessage
 
 ```ts
-withPrettifyLogMessage(value)
+withPrettifyLogMessage(value=true)
 ```
 
 
@@ -198,7 +198,7 @@ withPrettifyLogMessage(value)
 #### fn options.withShowCommonLabels
 
 ```ts
-withShowCommonLabels(value)
+withShowCommonLabels(value=true)
 ```
 
 
@@ -206,7 +206,7 @@ withShowCommonLabels(value)
 #### fn options.withShowLabels
 
 ```ts
-withShowLabels(value)
+withShowLabels(value=true)
 ```
 
 
@@ -214,7 +214,7 @@ withShowLabels(value)
 #### fn options.withShowTime
 
 ```ts
-withShowTime(value)
+withShowTime(value=true)
 ```
 
 
@@ -232,7 +232,7 @@ Accepted values for `value` are "Descending", "Ascending"
 #### fn options.withWrapLogMessage
 
 ```ts
-withWrapLogMessage(value)
+withWrapLogMessage(value=true)
 ```
 
 
@@ -297,7 +297,7 @@ Panel title.
 #### fn panelOptions.withTransparent
 
 ```ts
-withTransparent(value=false)
+withTransparent(value=true)
 ```
 
 Whether to display the panel without a background.
