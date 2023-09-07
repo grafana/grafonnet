@@ -84,7 +84,7 @@ local getPanelName(type) =
         std.foldl(
           function(acc, p)
             acc + (
-              if std.isObject(input[p])
+              if p == 'custom'
               then infunc(input[p], path=path + [p])
               else
                 overrides.withPropertiesMixin([
