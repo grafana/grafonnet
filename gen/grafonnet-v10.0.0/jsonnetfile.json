@@ -3,22 +3,22 @@
     {
       "source": {
         "git": {
-          "remote": "https://github.com/grafana/grafonnet.git",
-          "subdir": "grafonnet-base"
+          "remote": "https://github.com/jsonnet-libs/docsonnet.git",
+          "subdir": "doc-util"
         }
       },
-      "version": "main"
+      "version": "master"
     },
     {
       "source": {
         "git": {
-          "remote": "https://github.com/grafana/grok.git",
-          "subdir": "jsonnet/v10.0.0"
+          "remote": "https://github.com/jsonnet-libs/xtd.git",
+          "subdir": ""
         }
       },
-      "version": "main"
+      "version": "master"
     }
   ],
-  "legacyImports": false,
+  "legacyImports": true,
   "version": 1
 }

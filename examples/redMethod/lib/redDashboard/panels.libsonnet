@@ -9,14 +9,13 @@ local g = import 'g.libsonnet';
     ]),
 
   local timeSeries = g.panel.timeSeries,
-  local defaults = timeSeries.fieldConfig.defaults,
   local custom = timeSeries.fieldConfig.defaults.custom,
 
   requestsPerSecond(targets, title='Requests / sec'):
     timeSeries.new(title)
-    + timeSeries.withTargets(targets)
-    + defaults.withMin(0)
-    + defaults.withUnit('reqps')
+    + timeSeries.queryOptions.withTargets(targets)
+    + timeSeries.standardOptions.withMin(0)
+    + timeSeries.standardOptions.withUnit('reqps')
     + custom.withFillOpacity(100)
     + custom.withLineWidth(0)
     + custom.withShowPoints('never')
@@ -24,9 +23,9 @@ local g = import 'g.libsonnet';
 
   latency(targets, title='Latency'):
     timeSeries.new(title)
-    + timeSeries.withTargets(targets)
-    + defaults.withMin(0)
-    + defaults.withUnit('ms')
+    + timeSeries.queryOptions.withTargets(targets)
+    + timeSeries.standardOptions.withMin(0)
+    + timeSeries.standardOptions.withUnit('ms')
     + custom.withFillOpacity(10)
     + custom.withShowPoints('never'),
 }
