@@ -345,8 +345,8 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       },
 
     textbox:
-      generalOptions +
-      {
+      generalOptions
+      + {
         '#new':: d.func.new(
           '`new` creates a textbox template variable.',
           args=[
@@ -374,8 +374,8 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       },
 
     constant:
-      generalOptions +
-      {
+      generalOptions
+      + {
         '#new':: d.func.new(
           '`new` creates a hidden constant template variable.',
           args=[
@@ -421,8 +421,8 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       },
 
     interval:
-      generalOptions +
-      {
+      generalOptions
+      + {
         '#new':: d.func.new(
           '`new` creates an interval template variable.',
           args=[
@@ -484,8 +484,8 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       },
 
     adhoc:
-      generalOptions +
-      {
+      generalOptions
+      + {
         '#new':: d.func.new(
           '`new` creates an adhoc template variable for datasource with `type` and `uid`.',
           args=[
