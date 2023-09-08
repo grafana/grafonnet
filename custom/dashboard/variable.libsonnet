@@ -308,7 +308,11 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
               ]),
 
             // Set current/options
-            current: util.dashboard.getCurrentFromValues(self.values),
+            current:
+              util.dashboard.getCurrentFromValues(
+                self.values,
+                std.get(self, 'multi', false)
+              ),
             options: util.dashboard.getOptionsFromValues(self.values),
           },
 
@@ -338,7 +342,11 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
             // Set current/options
             keyvaluedict:: [{ key: this.query, value: this.query }],
-            current: util.dashboard.getCurrentFromValues(self.keyvaluedict),
+            current:
+              util.dashboard.getCurrentFromValues(
+                self.keyvaluedict,
+                std.get(self, 'multi', false)
+              ),
             options: util.dashboard.getOptionsFromValues(self.keyvaluedict),
           },
       },
@@ -417,7 +425,11 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
               }
               for item in values
             ],
-            current: util.dashboard.getCurrentFromValues(self.keyvaluedict),
+            current:
+              util.dashboard.getCurrentFromValues(
+                self.keyvaluedict,
+                std.get(self, 'multi', false)
+              ),
             options: util.dashboard.getOptionsFromValues(self.keyvaluedict),
           },
 
