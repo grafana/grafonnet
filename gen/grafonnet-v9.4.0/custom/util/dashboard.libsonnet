@@ -16,16 +16,16 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
     |||,
     args=[d.arg('query', d.T.string)],
   ),
-  getOptionsForCustomQuery(query): {
+  getOptionsForCustomQuery(query, multi): {
     local values = root.parseCustomQuery(query),
-    current: root.getCurrentFromValues(values),
+    current: root.getCurrentFromValues(values, multi),
     options: root.getOptionsFromValues(values),
   },
 
-  getCurrentFromValues(values): {
+  getCurrentFromValues(values, multi): {
     selected: false,
-    text: values[0].key,
-    value: values[0].value,
+    text: if multi then [values[0].key] else values[0].key,
+    value: if multi then [values[0].value] else values[0].value,
   },
 
   getOptionsFromValues(values):

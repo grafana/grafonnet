@@ -86,6 +86,28 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
             '#withNothing':: d.func.new(''),
             withNothing(): var.withHide(2),
           },
+
+          '#withCurrent':: d.func.new(
+            |||
+              `withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
+            |||,
+            args=[
+              d.arg('key', d.T.any),
+              d.arg('value', d.T.any, default='<same-as-key>'),
+            ]
+          ),
+          withCurrent(key, value=key): {
+            local multi(v) =
+              if self.multi
+                 && std.isArray(v)
+              then v
+              else [v],
+            current: {
+              selected: false,
+              text: multi(key),
+              value: multi(value),
+            },
+          },
         },
     },
 
@@ -308,7 +330,11 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
               ]),
 
             // Set current/options
-            current: util.dashboard.getCurrentFromValues(self.values),
+            current:
+              util.dashboard.getCurrentFromValues(
+                self.values,
+                std.get(self, 'multi', false)
+              ),
             options: util.dashboard.getOptionsFromValues(self.values),
           },
 
@@ -319,8 +345,8 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       },
 
     textbox:
-      generalOptions +
-      {
+      generalOptions
+      + {
         '#new':: d.func.new(
           '`new` creates a textbox template variable.',
           args=[
@@ -338,14 +364,18 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
             // Set current/options
             keyvaluedict:: [{ key: this.query, value: this.query }],
-            current: util.dashboard.getCurrentFromValues(self.keyvaluedict),
+            current:
+              util.dashboard.getCurrentFromValues(
+                self.keyvaluedict,
+                std.get(self, 'multi', false)
+              ),
             options: util.dashboard.getOptionsFromValues(self.keyvaluedict),
           },
       },
 
     constant:
-      generalOptions +
-      {
+      generalOptions
+      + {
         '#new':: d.func.new(
           '`new` creates a hidden constant template variable.',
           args=[
@@ -391,8 +421,8 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       },
 
     interval:
-      generalOptions +
-      {
+      generalOptions
+      + {
         '#new':: d.func.new(
           '`new` creates an interval template variable.',
           args=[
@@ -417,7 +447,11 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
               }
               for item in values
             ],
-            current: util.dashboard.getCurrentFromValues(self.keyvaluedict),
+            current:
+              util.dashboard.getCurrentFromValues(
+                self.keyvaluedict,
+                std.get(self, 'multi', false)
+              ),
             options: util.dashboard.getOptionsFromValues(self.keyvaluedict),
           },
 
@@ -450,8 +484,8 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       },
 
     adhoc:
-      generalOptions +
-      {
+      generalOptions
+      + {
         '#new':: d.func.new(
           '`new` creates an adhoc template variable for datasource with `type` and `uid`.',
           args=[

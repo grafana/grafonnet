@@ -43,6 +43,7 @@ g.dashboard.new('my dashboard')
   * [`fn new(name, type, uid)`](#fn-adhocnew)
   * [`fn newFromVariable(name, variable)`](#fn-adhocnewfromvariable)
   * [`obj generalOptions`](#obj-adhocgeneraloptions)
+    * [`fn withCurrent(key, value="<same-as-key>")`](#fn-adhocgeneraloptionswithcurrent)
     * [`fn withDescription(value)`](#fn-adhocgeneraloptionswithdescription)
     * [`fn withLabel(value)`](#fn-adhocgeneraloptionswithlabel)
     * [`fn withName(value)`](#fn-adhocgeneraloptionswithname)
@@ -53,6 +54,7 @@ g.dashboard.new('my dashboard')
 * [`obj constant`](#obj-constant)
   * [`fn new(name, value)`](#fn-constantnew)
   * [`obj generalOptions`](#obj-constantgeneraloptions)
+    * [`fn withCurrent(key, value="<same-as-key>")`](#fn-constantgeneraloptionswithcurrent)
     * [`fn withDescription(value)`](#fn-constantgeneraloptionswithdescription)
     * [`fn withLabel(value)`](#fn-constantgeneraloptionswithlabel)
     * [`fn withName(value)`](#fn-constantgeneraloptionswithname)
@@ -63,6 +65,7 @@ g.dashboard.new('my dashboard')
 * [`obj custom`](#obj-custom)
   * [`fn new(name, values)`](#fn-customnew)
   * [`obj generalOptions`](#obj-customgeneraloptions)
+    * [`fn withCurrent(key, value="<same-as-key>")`](#fn-customgeneraloptionswithcurrent)
     * [`fn withDescription(value)`](#fn-customgeneraloptionswithdescription)
     * [`fn withLabel(value)`](#fn-customgeneraloptionswithlabel)
     * [`fn withName(value)`](#fn-customgeneraloptionswithname)
@@ -77,6 +80,7 @@ g.dashboard.new('my dashboard')
   * [`fn new(name, type)`](#fn-datasourcenew)
   * [`fn withRegex(value)`](#fn-datasourcewithregex)
   * [`obj generalOptions`](#obj-datasourcegeneraloptions)
+    * [`fn withCurrent(key, value="<same-as-key>")`](#fn-datasourcegeneraloptionswithcurrent)
     * [`fn withDescription(value)`](#fn-datasourcegeneraloptionswithdescription)
     * [`fn withLabel(value)`](#fn-datasourcegeneraloptionswithlabel)
     * [`fn withName(value)`](#fn-datasourcegeneraloptionswithname)
@@ -91,6 +95,7 @@ g.dashboard.new('my dashboard')
   * [`fn new(name, values)`](#fn-intervalnew)
   * [`fn withAutoOption(count, minInterval)`](#fn-intervalwithautooption)
   * [`obj generalOptions`](#obj-intervalgeneraloptions)
+    * [`fn withCurrent(key, value="<same-as-key>")`](#fn-intervalgeneraloptionswithcurrent)
     * [`fn withDescription(value)`](#fn-intervalgeneraloptionswithdescription)
     * [`fn withLabel(value)`](#fn-intervalgeneraloptionswithlabel)
     * [`fn withName(value)`](#fn-intervalgeneraloptionswithname)
@@ -105,6 +110,7 @@ g.dashboard.new('my dashboard')
   * [`fn withRegex(value)`](#fn-querywithregex)
   * [`fn withSort(i=0, type="alphabetical", asc=true, caseInsensitive=false)`](#fn-querywithsort)
   * [`obj generalOptions`](#obj-querygeneraloptions)
+    * [`fn withCurrent(key, value="<same-as-key>")`](#fn-querygeneraloptionswithcurrent)
     * [`fn withDescription(value)`](#fn-querygeneraloptionswithdescription)
     * [`fn withLabel(value)`](#fn-querygeneraloptionswithlabel)
     * [`fn withName(value)`](#fn-querygeneraloptionswithname)
@@ -123,6 +129,7 @@ g.dashboard.new('my dashboard')
 * [`obj textbox`](#obj-textbox)
   * [`fn new(name, default="")`](#fn-textboxnew)
   * [`obj generalOptions`](#obj-textboxgeneraloptions)
+    * [`fn withCurrent(key, value="<same-as-key>")`](#fn-textboxgeneraloptionswithcurrent)
     * [`fn withDescription(value)`](#fn-textboxgeneraloptionswithdescription)
     * [`fn withLabel(value)`](#fn-textboxgeneraloptionswithlabel)
     * [`fn withName(value)`](#fn-textboxgeneraloptionswithname)
@@ -153,6 +160,15 @@ newFromVariable(name, variable)
 Same as `new` but selecting the datasource from another template variable.
 
 #### obj adhoc.generalOptions
+
+
+##### fn adhoc.generalOptions.withCurrent
+
+```ts
+withCurrent(key, value="<same-as-key>")
+```
+
+`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
 
 
 ##### fn adhoc.generalOptions.withDescription
@@ -218,6 +234,15 @@ new(name, value)
 `new` creates a hidden constant template variable.
 
 #### obj constant.generalOptions
+
+
+##### fn constant.generalOptions.withCurrent
+
+```ts
+withCurrent(key, value="<same-as-key>")
+```
+
+`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
 
 
 ##### fn constant.generalOptions.withDescription
@@ -295,6 +320,15 @@ Example:
 
 
 #### obj custom.generalOptions
+
+
+##### fn custom.generalOptions.withCurrent
+
+```ts
+withCurrent(key, value="<same-as-key>")
+```
+
+`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
 
 
 ##### fn custom.generalOptions.withDescription
@@ -392,6 +426,15 @@ variable value list. Example: `/^prod/`
 
 
 #### obj datasource.generalOptions
+
+
+##### fn datasource.generalOptions.withCurrent
+
+```ts
+withCurrent(key, value="<same-as-key>")
+```
+
+`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
 
 
 ##### fn datasource.generalOptions.withDescription
@@ -492,6 +535,15 @@ time range by the count specified.
 
 
 #### obj interval.generalOptions
+
+
+##### fn interval.generalOptions.withCurrent
+
+```ts
+withCurrent(key, value="<same-as-key>")
+```
+
+`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
 
 
 ##### fn interval.generalOptions.withDescription
@@ -611,6 +663,15 @@ The numerical values are:
 #### obj query.generalOptions
 
 
+##### fn query.generalOptions.withCurrent
+
+```ts
+withCurrent(key, value="<same-as-key>")
+```
+
+`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
+
+
 ##### fn query.generalOptions.withDescription
 
 ```ts
@@ -726,6 +787,15 @@ new(name, default="")
 `new` creates a textbox template variable.
 
 #### obj textbox.generalOptions
+
+
+##### fn textbox.generalOptions.withCurrent
+
+```ts
+withCurrent(key, value="<same-as-key>")
+```
+
+`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
 
 
 ##### fn textbox.generalOptions.withDescription
