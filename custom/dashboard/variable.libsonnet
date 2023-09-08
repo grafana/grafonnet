@@ -86,6 +86,28 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
             '#withNothing':: d.func.new(''),
             withNothing(): var.withHide(2),
           },
+
+          '#withCurrent':: d.func.new(
+            |||
+              `withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
+            |||,
+            args=[
+              d.arg('key', d.T.any),
+              d.arg('value', d.T.any, default='<same-as-key>'),
+            ]
+          ),
+          withCurrent(key, value=key): {
+            local multi(v) =
+              if self.multi
+                 && std.isArray(v)
+              then v
+              else [v],
+            current: {
+              selected: false,
+              text: multi(key),
+              value: multi(value),
+            },
+          },
         },
     },
 
