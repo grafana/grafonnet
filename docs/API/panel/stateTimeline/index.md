@@ -24,12 +24,6 @@ grafonnet.panel.stateTimeline
         * [`fn withLegend(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithlegend)
         * [`fn withTooltip(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithtooltip)
         * [`fn withViz(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithviz)
-* [`obj gridPos`](#obj-gridpos)
-  * [`fn withH(value=9)`](#fn-gridposwithh)
-  * [`fn withStatic(value=true)`](#fn-gridposwithstatic)
-  * [`fn withW(value=12)`](#fn-gridposwithw)
-  * [`fn withX(value=0)`](#fn-gridposwithx)
-  * [`fn withY(value=0)`](#fn-gridposwithy)
 * [`obj libraryPanel`](#obj-librarypanel)
   * [`fn withName(value)`](#fn-librarypanelwithname)
   * [`fn withUid(value)`](#fn-librarypanelwithuid)
@@ -60,6 +54,7 @@ grafonnet.panel.stateTimeline
     * [`fn withSort(value)`](#fn-optionstooltipwithsort)
 * [`obj panelOptions`](#obj-paneloptions)
   * [`fn withDescription(value)`](#fn-paneloptionswithdescription)
+  * [`fn withGridPos(h="null", w="null", x="null", y="null")`](#fn-paneloptionswithgridpos)
   * [`fn withLinks(value)`](#fn-paneloptionswithlinks)
   * [`fn withLinksMixin(value)`](#fn-paneloptionswithlinksmixin)
   * [`fn withRepeat(value)`](#fn-paneloptionswithrepeat)
@@ -176,49 +171,6 @@ withViz(value=true)
 ```
 
 
-
-### obj gridPos
-
-
-#### fn gridPos.withH
-
-```ts
-withH(value=9)
-```
-
-Panel
-
-#### fn gridPos.withStatic
-
-```ts
-withStatic(value=true)
-```
-
-true if fixed
-
-#### fn gridPos.withW
-
-```ts
-withW(value=12)
-```
-
-Panel
-
-#### fn gridPos.withX
-
-```ts
-withX(value=0)
-```
-
-Panel x
-
-#### fn gridPos.withY
-
-```ts
-withY(value=0)
-```
-
-Panel y
 
 ### obj libraryPanel
 
@@ -443,6 +395,17 @@ withDescription(value)
 ```
 
 Description.
+
+#### fn panelOptions.withGridPos
+
+```ts
+withGridPos(h="null", w="null", x="null", y="null")
+```
+
+`withGridPos` configures the height, width and xy coordinates of the panel. Also see `grafonnet.util.grid` for helper functions to calculate these fields.
+
+All arguments default to `null`, which means they will remain unchanged or unset.
+
 
 #### fn panelOptions.withLinks
 
