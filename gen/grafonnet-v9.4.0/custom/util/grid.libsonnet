@@ -82,7 +82,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
     // Loop over rowGroups
     std.foldl(
-      function(acc, rowGroup) acc {
+      function(acc, rowGroup) acc + {
         local y = acc.nexty,
         nexty: y  // previous y
                + (rowGroup.rows * panelHeight)  // height of all rows
@@ -97,7 +97,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         panels+:
           [
             // Add row header aka the Row panel
-            rowGroup.header {
+            rowGroup.header + {
               gridPos: {
                 w: gridWidth,  // always full length
                 h: rowPanelHeight,  // always 1 height

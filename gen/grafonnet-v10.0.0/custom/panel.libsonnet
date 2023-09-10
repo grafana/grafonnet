@@ -30,8 +30,7 @@ local getPanelName(type) =
     // Default to Mixed datasource so panels can be datasource agnostic, this
     // requires query targets to explicitly set datasource, which is a lot more
     // interesting from a reusability standpoint.
-    + self.datasource.withType('datasource')
-    + self.datasource.withUid('-- Mixed --'),
+    + self.queryOptions.withDatasource('datasource', '-- Mixed --'),
 
   link+: { '#':: d.package.newSub('link', '') },
   thresholdStep+: { '#':: d.package.newSub('thresholdStep', '') },
@@ -40,6 +39,25 @@ local getPanelName(type) =
 
   panelOptions+: {
     '#withPluginVersion': {},
+  },
+
+  '#datasource':: {},  // use withDatasource instead, bit more concise
+  local datasource = self.datasource,
+  queryOptions+: {
+    '#withDatasource':: d.func.new(
+      |||
+        `withDatasource` sets the datasource for all queries in a panel.
+
+        The default datasource for a panel is set to 'Mixed datasource' so panels can be datasource agnostic, which is a lot more interesting from a reusability standpoint. Note that this requires query targets to explicitly set datasource for the same reason.
+      |||,
+      args=[
+        d.arg('type', d.T.string),
+        d.arg('uid', d.T.string),
+      ]
+    ),
+    withDatasource(type, uid):
+      datasource.withType(type)
+      + datasource.withUid(uid),
   },
 
   local overrides = super.fieldOverride,
