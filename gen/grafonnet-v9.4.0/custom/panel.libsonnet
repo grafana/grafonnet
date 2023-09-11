@@ -37,8 +37,29 @@ local getPanelName(type) =
   transformation+: { '#':: d.package.newSub('transformation', '') },
   valueMapping+: { '#':: d.package.newSub('valueMapping', '') },
 
+  '#gridPos': {},  // use withGridPos instead, a bit more concise.
+  local gridPos = self.gridPos,
   panelOptions+: {
     '#withPluginVersion': {},
+
+    '#withGridPos': d.func.new(
+      |||
+        `withGridPos` configures the height, width and xy coordinates of the panel. Also see `grafonnet.util.grid` for helper functions to calculate these fields.
+
+        All arguments default to `null`, which means they will remain unchanged or unset.
+      |||,
+      args=[
+        d.arg('h', d.T.number, default='null'),
+        d.arg('w', d.T.number, default='null'),
+        d.arg('x', d.T.number, default='null'),
+        d.arg('y', d.T.number, default='null'),
+      ]
+    ),
+    withGridPos(h=null, w=null, x=null, y=null):
+      (if h != null then gridPos.withH(h) else {})
+      + (if w != null then gridPos.withW(w) else {})
+      + (if x != null then gridPos.withX(x) else {})
+      + (if y != null then gridPos.withY(y) else {}),
   },
 
   '#datasource':: {},  // use withDatasource instead, bit more concise
