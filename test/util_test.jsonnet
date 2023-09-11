@@ -131,7 +131,45 @@ test.new(std.thisFile)
   test.case.new(
     name='util.dashboard.getOptionsForCustomQuery',
     test=test.expect.eq(
-      actual=util.dashboard.getOptionsForCustomQuery(query),
+      actual=util.dashboard.getOptionsForCustomQuery(query, false),
+      expected=expected,
+    )
+  )
+)
++ (
+  local options = [
+    { key: 'a', value: 'b' },
+    { key: '1', value: '1' },
+  ];
+  local expected = {
+    selected: false,
+    text: ['a'],
+    value: ['b'],
+  };
+
+  test.case.new(
+    name='util.dashboard.getCurrentFromValues when multi-value',
+    test=test.expect.eq(
+      actual=util.dashboard.getCurrentFromValues(options, multi=true),
+      expected=expected,
+    )
+  )
+)
++ (
+  local options = [
+    { key: 'a', value: 'b' },
+    { key: '1', value: '1' },
+  ];
+  local expected = {
+    selected: false,
+    text: 'a',
+    value: 'b',
+  };
+
+  test.case.new(
+    name='util.dashboard.getCurrentFromValues without multi-value',
+    test=test.expect.eq(
+      actual=util.dashboard.getCurrentFromValues(options, multi=false),
       expected=expected,
     )
   )

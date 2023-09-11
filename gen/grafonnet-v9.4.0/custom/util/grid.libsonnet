@@ -82,7 +82,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
     // Loop over rowGroups
     std.foldl(
-      function(acc, rowGroup) acc {
+      function(acc, rowGroup) acc + {
         local y = acc.nexty,
         nexty: y  // previous y
                + (rowGroup.rows * panelHeight)  // height of all rows
@@ -97,7 +97,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         panels+:
           [
             // Add row header aka the Row panel
-            rowGroup.header {
+            rowGroup.header + {
               gridPos: {
                 w: gridWidth,  // always full length
                 h: rowPanelHeight,  // always 1 height
@@ -153,9 +153,9 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
         if panel.type == 'row'
         then
           // when type=row, start new row immediatly and shift Y of new row by max height recorded
-          acc {
+          acc + {
             panels+: [
-              panel {
+              panel + {
                 gridPos+:
                   {
                     x: acc.cursor.x,
@@ -179,9 +179,9 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
           if acc.cursor.x + width > gridWidth
           then
             // start new row as width exceeds gridWidth
-            acc {
+            acc + {
               panels+: [
-                panel {
+                panel + {
                   gridPos+:
                     {
                       x: 0,
@@ -199,9 +199,9 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
             }
           else
             // enough width, place panel on current row
-            acc {
+            acc + {
               panels+: [
-                panel {
+                panel + {
                   gridPos+:
                     {
                       x: acc.cursor.x,
