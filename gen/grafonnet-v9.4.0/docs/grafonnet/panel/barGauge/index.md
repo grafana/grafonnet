@@ -13,9 +13,6 @@ grafonnet.panel.barGauge
 ## Index
 
 * [`fn new(title)`](#fn-new)
-* [`obj datasource`](#obj-datasource)
-  * [`fn withType(value)`](#fn-datasourcewithtype)
-  * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj gridPos`](#obj-gridpos)
   * [`fn withH(value=9)`](#fn-gridposwithh)
   * [`fn withStatic(value=true)`](#fn-gridposwithstatic)
@@ -54,7 +51,7 @@ grafonnet.panel.barGauge
   * [`fn withTitle(value)`](#fn-paneloptionswithtitle)
   * [`fn withTransparent(value=true)`](#fn-paneloptionswithtransparent)
 * [`obj queryOptions`](#obj-queryoptions)
-  * [`fn withDatasource(value)`](#fn-queryoptionswithdatasource)
+  * [`fn withDatasource(type, uid)`](#fn-queryoptionswithdatasource)
   * [`fn withDatasourceMixin(value)`](#fn-queryoptionswithdatasourcemixin)
   * [`fn withInterval(value)`](#fn-queryoptionswithinterval)
   * [`fn withMaxDataPoints(value)`](#fn-queryoptionswithmaxdatapoints)
@@ -95,25 +92,6 @@ new(title)
 ```
 
 Creates a new barGauge panel with a title.
-
-### obj datasource
-
-
-#### fn datasource.withType
-
-```ts
-withType(value)
-```
-
-
-
-#### fn datasource.withUid
-
-```ts
-withUid(value)
-```
-
-
 
 ### obj gridPos
 
@@ -400,10 +378,13 @@ Whether to display the panel without a background.
 #### fn queryOptions.withDatasource
 
 ```ts
-withDatasource(value)
+withDatasource(type, uid)
 ```
 
-The datasource used in all targets.
+`withDatasource` sets the datasource for all queries in a panel.
+
+The default datasource for a panel is set to 'Mixed datasource' so panels can be datasource agnostic, which is a lot more interesting from a reusability standpoint. Note that this requires query targets to explicitly set datasource for the same reason.
+
 
 #### fn queryOptions.withDatasourceMixin
 
