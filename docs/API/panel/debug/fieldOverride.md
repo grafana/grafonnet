@@ -43,7 +43,7 @@ fieldOverride.byType.new('number')
 
 #### fn byName.new
 
-```ts
+```jsonnet
 new(value)
 ```
 
@@ -51,7 +51,7 @@ new(value)
 
 #### fn byName.withPropertiesFromOptions
 
-```ts
+```jsonnet
 withPropertiesFromOptions(options)
 ```
 
@@ -61,7 +61,7 @@ overridden. See example code above.
 
 #### fn byName.withProperty
 
-```ts
+```jsonnet
 withProperty(id, value)
 ```
 
@@ -74,7 +74,7 @@ be called multiple time, adding more properties.
 
 #### fn byQuery.new
 
-```ts
+```jsonnet
 new(value)
 ```
 
@@ -82,7 +82,7 @@ new(value)
 
 #### fn byQuery.withPropertiesFromOptions
 
-```ts
+```jsonnet
 withPropertiesFromOptions(options)
 ```
 
@@ -92,7 +92,7 @@ overridden. See example code above.
 
 #### fn byQuery.withProperty
 
-```ts
+```jsonnet
 withProperty(id, value)
 ```
 
@@ -105,7 +105,7 @@ be called multiple time, adding more properties.
 
 #### fn byRegexp.new
 
-```ts
+```jsonnet
 new(value)
 ```
 
@@ -113,7 +113,7 @@ new(value)
 
 #### fn byRegexp.withPropertiesFromOptions
 
-```ts
+```jsonnet
 withPropertiesFromOptions(options)
 ```
 
@@ -123,7 +123,7 @@ overridden. See example code above.
 
 #### fn byRegexp.withProperty
 
-```ts
+```jsonnet
 withProperty(id, value)
 ```
 
@@ -136,7 +136,7 @@ be called multiple time, adding more properties.
 
 #### fn byType.new
 
-```ts
+```jsonnet
 new(value)
 ```
 
@@ -144,7 +144,7 @@ new(value)
 
 #### fn byType.withPropertiesFromOptions
 
-```ts
+```jsonnet
 withPropertiesFromOptions(options)
 ```
 
@@ -154,7 +154,7 @@ overridden. See example code above.
 
 #### fn byType.withProperty
 
-```ts
+```jsonnet
 withProperty(id, value)
 ```
 
@@ -167,7 +167,7 @@ be called multiple time, adding more properties.
 
 #### fn byValue.new
 
-```ts
+```jsonnet
 new(value)
 ```
 
@@ -175,7 +175,7 @@ new(value)
 
 #### fn byValue.withPropertiesFromOptions
 
-```ts
+```jsonnet
 withPropertiesFromOptions(options)
 ```
 
@@ -185,7 +185,7 @@ overridden. See example code above.
 
 #### fn byValue.withProperty
 
-```ts
+```jsonnet
 withProperty(id, value)
 ```
 

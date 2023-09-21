@@ -13,7 +13,7 @@
 
 ### fn withColor
 
-```ts
+```jsonnet
 withColor(value)
 ```
 
@@ -21,7 +21,7 @@ TODO docs
 
 ### fn withIndex
 
-```ts
+```jsonnet
 withIndex(value)
 ```
 
@@ -29,7 +29,7 @@ Threshold index, an old property that is not needed an should only appear in old
 
 ### fn withState
 
-```ts
+```jsonnet
 withState(value)
 ```
 
@@ -39,7 +39,7 @@ Some seem to be listed in typescript comment
 
 ### fn withValue
 
-```ts
+```jsonnet
 withValue(value)
 ```
 

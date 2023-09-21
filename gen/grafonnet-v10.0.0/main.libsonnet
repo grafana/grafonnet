@@ -2,12 +2,12 @@
 {
   '#': {
     filename: 'main.libsonnet',
-    help: 'Jsonnet library for rendering Grafana resources',
+    help: 'Jsonnet library for rendering Grafana resources\n## Install\n\n```\njb install github.com/grafana/grafonnet/gen/grafonnet-v10.0.0@main\n```\n\n## Usage\n\n```jsonnet\nlocal grafonnet = import "github.com/grafana/grafonnet/gen/grafonnet-v10.0.0/main.libsonnet"\n```\n',
     'import': 'github.com/grafana/grafonnet/gen/grafonnet-v10.0.0/main.libsonnet',
-    installTemplate: 'jb install %(url)s@%(version)s',
+    installTemplate: '\n## Install\n\n```\njb install %(url)s@%(version)s\n```\n',
     name: 'grafonnet',
     url: 'github.com/grafana/grafonnet/gen/grafonnet-v10.0.0',
-    usageTemplate: 'local %(name)s = import "%(import)s"',
+    usageTemplate: '\n## Usage\n\n```jsonnet\nlocal %(name)s = import "%(import)s"\n```\n',
     version: 'main',
   },
   dashboard: import 'clean/dashboard.libsonnet',

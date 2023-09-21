@@ -17,7 +17,7 @@
 
 ### fn withDisabled
 
-```ts
+```jsonnet
 withDisabled(value=true)
 ```
 
@@ -25,7 +25,7 @@ Disabled transformations are skipped
 
 ### fn withFilter
 
-```ts
+```jsonnet
 withFilter(value)
 ```
 
@@ -33,7 +33,7 @@ withFilter(value)
 
 ### fn withFilterMixin
 
-```ts
+```jsonnet
 withFilterMixin(value)
 ```
 
@@ -41,7 +41,7 @@ withFilterMixin(value)
 
 ### fn withId
 
-```ts
+```jsonnet
 withId(value)
 ```
 
@@ -49,7 +49,7 @@ Unique identifier of transformer
 
 ### fn withOptions
 
-```ts
+```jsonnet
 withOptions(value)
 ```
 
@@ -61,7 +61,7 @@ Valid options depend on the transformer id
 
 #### fn filter.withId
 
-```ts
+```jsonnet
 withId(value="")
 ```
 
@@ -69,7 +69,7 @@ withId(value="")
 
 #### fn filter.withOptions
 
-```ts
+```jsonnet
 withOptions(value)
 ```
 
