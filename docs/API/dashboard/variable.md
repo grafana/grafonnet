@@ -41,7 +41,7 @@ g.dashboard.new('my dashboard')
 
 * [`obj adhoc`](#obj-adhoc)
   * [`fn new(name, type, uid)`](#fn-adhocnew)
-  * [`fn newFromVariable(name, variable)`](#fn-adhocnewfromvariable)
+  * [`fn newFromDatasourceVariable(name, variable)`](#fn-adhocnewfromdatasourcevariable)
   * [`obj generalOptions`](#obj-adhocgeneraloptions)
     * [`fn withCurrent(key, value="<same-as-key>")`](#fn-adhocgeneraloptionswithcurrent)
     * [`fn withDescription(value)`](#fn-adhocgeneraloptionswithdescription)
@@ -151,10 +151,10 @@ new(name, type, uid)
 
 `new` creates an adhoc template variable for datasource with `type` and `uid`.
 
-#### fn adhoc.newFromVariable
+#### fn adhoc.newFromDatasourceVariable
 
 ```ts
-newFromVariable(name, variable)
+newFromDatasourceVariable(name, variable)
 ```
 
 Same as `new` but selecting the datasource from another template variable.
