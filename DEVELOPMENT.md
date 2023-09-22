@@ -1,16 +1,10 @@
 # Development
+**Check Dependencies**: Use the `make check_dependencies` command to ensure that all necessary commands are available for generation.
 
-`make generate` uses `generate.jsonnet` to create Jsonnet libraries for each version in
-`gen/<version>/`, it also creates `gen/grafonnet-latest/` which refers to the newest
-version. These Jsonnet libraries depend on the JSON Schemas from Grok and `grafonnet-base/`.
+**Generate Jsonnet Libraries**: The `make generate` command uses `generate.jsonnet` to generate Jsonnet libraries for each version found in `gen/<version>/`. It also produces `gen/grafonnet-latest/` referring to the latest version. These libraries are dependent on the JSON schemas from Grok and the `grafonnet-base/`.
 
-`make libdocs` will generate the docs for every version in `gen/<version>/` and `make
-latestdocs` will generate the docs in `docs/` for the `gen/grafonnet-latest/`. `make docs`
-combines them.
+**Generate Library Documentation**: By running `make libdocs`, you can produce documentation for every version in `gen/<version>/`. To create documentation for the `gen/grafonnet-latest/` you can use the `make latestdocs` command, which outputs documentation to `docs/`. Use `make docs` to combine these generated documents.
 
-The `grafonnet-base/` library provides the logic to convert JSON Schemas to a runtime
-library and adds veneer on top. The veneer is a thin layer on top of the raw library to
-improve the user experience.
+**Grafonnet-base Library**: The `grafonnet-base/` library forms the basis for converting JSON schemas into a compiled library, additionally providing an overlay for improved user experience.
 
-In `examples/` there are few example dashboard configurations that serve as inspiration as
-well as an experimentation playground for library features.
+**Examples**: The `examples/` directory contains several example dashboard configurations, which can be used both for inspiration and as a testing ground for library features.
