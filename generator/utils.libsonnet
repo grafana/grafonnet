@@ -20,7 +20,11 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
           nobreak=true,
         ),
       ]
-      + obj.members
+      + std.filter(
+        // '#' docstring replaced by above
+        function(m) jutils.fieldnameValue(m.fieldname) != '#',
+        obj.members
+      )
     ),
 
   // CRDsonnet wraps a library in { [title]: {} }, this unwraps it

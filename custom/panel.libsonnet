@@ -32,14 +32,18 @@ local getPanelName(type) =
     // interesting from a reusability standpoint.
     + self.queryOptions.withDatasource('datasource', '-- Mixed --'),
 
-  link+: { '#':: d.package.newSub('link', '') },
-  thresholdStep+: { '#':: d.package.newSub('thresholdStep', '') },
-  transformation+: { '#':: d.package.newSub('transformation', '') },
-  valueMapping+: { '#':: d.package.newSub('valueMapping', '') },
+  // Backwards compatible entries, ignored in docs
+  link+: self.panelOptions.link + { '#':: { ignore: true } },
+  thresholdStep+: self.standardOptions.threshold.step + { '#':: { ignore: true } },
+  transformation+: self.queryOptions.transformation + { '#':: { ignore: true } },
+  valueMapping+: self.standardOptions.mapping + { '#':: { ignore: true } },
+  fieldOverride+: self.standardOptions.override + { '#':: { ignore: true } },
 
   '#gridPos': {},  // use withGridPos instead, a bit more concise.
   local gridPos = self.gridPos,
   panelOptions+: {
+    link+: { '#':: d.package.newSub('link', '') },
+
     '#withPluginVersion': {},
 
     '#withGridPos': d.func.new(
@@ -65,6 +69,8 @@ local getPanelName(type) =
   '#datasource':: {},  // use withDatasource instead, bit more concise
   local datasource = self.datasource,
   queryOptions+: {
+    transformation+: { '#':: d.package.newSub('transformation', '') },
+
     '#withDatasource':: d.func.new(
       |||
         `withDatasource` sets the datasource for all queries in a panel.
@@ -81,84 +87,91 @@ local getPanelName(type) =
       + datasource.withUid(uid),
   },
 
-  local overrides = super.fieldOverride,
-  local commonOverrideFunctions = {
-    '#new':: d.fn(
-      '`new` creates a new override of type `%s`.' % self.type,
-      args=[
-        d.arg('value', d.T.string),
-      ]
-    ),
-    new(value):
-      overrides.matcher.withId(self.type)
-      + overrides.matcher.withOptions(value),
+  standardOptions+: {
 
-    '#withProperty':: d.fn(
-      |||
-        `withProperty` adds a property that needs to be overridden. This function can
-        be called multiple time, adding more properties.
-      |||,
-      args=[
-        d.arg('id', d.T.string),
-        d.arg('value', d.T.any),
-      ]
-    ),
-    withProperty(id, value):
-      overrides.withPropertiesMixin([
-        overrides.properties.withId(id)
-        + overrides.properties.withValue(value),
-      ]),
+    mapping+: { '#':: d.package.newSub('mapping', '') },
+    threshold+: { step+: { '#':: d.package.newSub('threshold.step', '') } },
 
-    '#withPropertiesFromOptions':: d.fn(
-      |||
-        `withPropertiesFromOptions` takes an object with properties that need to be
-        overridden. See example code above.
-      |||,
-      args=[
-        d.arg('options', d.T.object),
-      ]
-    ),
-    withPropertiesFromOptions(options):
-      local infunc(input, path=[]) =
-        std.foldl(
-          function(acc, p)
-            acc + (
-              if p == 'custom'
-              then infunc(input[p], path=path + [p])
-              else
-                overrides.withPropertiesMixin([
-                  overrides.properties.withId(std.join('.', path + [p]))
-                  + overrides.properties.withValue(input[p]),
-                ])
-            ),
-          std.objectFields(input),
-          {}
-        );
-      infunc(options.fieldConfig.defaults),
-  },
-  fieldOverride:
-    {
-      '#':: d.package.newSub(
-        'fieldOverride',
-        |||
-          Overrides allow you to customize visualization settings for specific fields or
-          series. This is accomplished by adding an override rule that targets
-          a particular set of fields and that can each define multiple options.
-
-          ```jsonnet
-          fieldOverride.byType.new('number')
-          + fieldOverride.byType.withPropertiesFromOptions(
-            panel.standardOptions.withDecimals(2)
-            + panel.standardOptions.withUnit('s')
-          )
-          ```
-        |||
+    local overrides = super.override,
+    local commonOverrideFunctions = {
+      '#new':: d.fn(
+        '`new` creates a new override of type `%s`.' % self.type,
+        args=[
+          d.arg('value', d.T.string),
+        ]
       ),
-      byName: commonOverrideFunctions + { type:: 'byName' },
-      byRegexp: commonOverrideFunctions + { type:: 'byRegexp' },
-      byType: commonOverrideFunctions + { type:: 'byType' },
-      byQuery: commonOverrideFunctions + { type:: 'byQuery' },
-      // TODO: byValue takes more complex `options` than string
-      byValue: commonOverrideFunctions + { type:: 'byValue' },
+      new(value):
+        overrides.matcher.withId(self.type)
+        + overrides.matcher.withOptions(value),
+
+      '#withProperty':: d.fn(
+        |||
+          `withProperty` adds a property that needs to be overridden. This function can
+          be called multiple time, adding more properties.
+        |||,
+        args=[
+          d.arg('id', d.T.string),
+          d.arg('value', d.T.any),
+        ]
+      ),
+      withProperty(id, value):
+        overrides.withPropertiesMixin([
+          overrides.properties.withId(id)
+          + overrides.properties.withValue(value),
+        ]),
+
+      '#withPropertiesFromOptions':: d.fn(
+        |||
+          `withPropertiesFromOptions` takes an object with properties that need to be
+          overridden. See example code above.
+        |||,
+        args=[
+          d.arg('options', d.T.object),
+        ]
+      ),
+      withPropertiesFromOptions(options):
+        local infunc(input, path=[]) =
+          std.foldl(
+            function(acc, p)
+              acc + (
+                if p == 'custom'
+                then infunc(input[p], path=path + [p])
+                else
+                  overrides.withPropertiesMixin([
+                    overrides.properties.withId(std.join('.', path + [p]))
+                    + overrides.properties.withValue(input[p]),
+                  ])
+              ),
+            std.objectFields(input),
+            {}
+          );
+        infunc(options.fieldConfig.defaults),
     },
+
+    override:
+      {
+        '#':: d.package.newSub(
+          'override',
+          |||
+            Overrides allow you to customize visualization settings for specific fields or
+            series. This is accomplished by adding an override rule that targets
+            a particular set of fields and that can each define multiple options.
+
+            ```jsonnet
+            override.byType.new('number')
+            + override.byType.withPropertiesFromOptions(
+              panel.standardOptions.withDecimals(2)
+              + panel.standardOptions.withUnit('s')
+            )
+            ```
+          |||
+        ),
+        byName: commonOverrideFunctions + { type:: 'byName' },
+        byRegexp: commonOverrideFunctions + { type:: 'byRegexp' },
+        byType: commonOverrideFunctions + { type:: 'byType' },
+        byQuery: commonOverrideFunctions + { type:: 'byQuery' },
+        // TODO: byValue takes more complex `options` than string
+        byValue: commonOverrideFunctions + { type:: 'byValue' },
+      },
+  },
 }

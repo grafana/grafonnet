@@ -13,18 +13,15 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
     local grouped = self.groupFields(ast, groupings);
     local copied = self.copyFields(ast, copy);
 
-    self.joinObjects(grouped + copied),
+    jutils.deepMergeObjects(grouped + copied),
 
   groupFields(ast, groupings):
-    local objects = [
+    [
       jutils.setFieldsAtPath(
         key,
         jutils.getFieldsFromPaths(ast, insertDocPath(groupings[key]))
       )
       for key in std.objectFields(groupings)
-    ];
-    [
-      jutils.deepMergeObjects(objects),
     ],
 
   local insertDocPath(arr) =
@@ -48,11 +45,4 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       jutils.setFieldsAtPath(copy.to, obj.expr.members)
       for copy in toCopy
     ],
-
-  joinObjects(objects):
-    j.object.members([
-      member
-      for obj in objects
-      for member in obj.members
-    ]),
 }
