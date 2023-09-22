@@ -2,6 +2,9 @@
 
 LATEST := v10.0.0
 
+check_dependencies:
+	./scripts/dependancy_check.sh
+
 generate:
 	./scripts/generate.sh v10.0.0
 	./scripts/generate_latest.sh v10.0.0
