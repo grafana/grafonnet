@@ -9,7 +9,7 @@
             subdir: 'doc-util',
           },
         },
-        version: 'master',
+        version: 'v0.0.6',
       },
       {
         source: {
