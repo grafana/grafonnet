@@ -500,7 +500,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
           + var.datasource.withType(type)
           + var.datasource.withUid(uid),
 
-        '#newFromVariable':: d.func.new(
+        '#newFromDatasourceVariable':: d.func.new(
           'Same as `new` but selecting the datasource from another template variable.',
           args=[
             d.arg('name', d.T.string),

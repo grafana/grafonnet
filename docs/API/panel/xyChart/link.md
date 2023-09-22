@@ -20,7 +20,7 @@
 
 ### fn withAsDropdown
 
-```ts
+```jsonnet
 withAsDropdown(value=true)
 ```
 
@@ -28,7 +28,7 @@ withAsDropdown(value=true)
 
 ### fn withIcon
 
-```ts
+```jsonnet
 withIcon(value)
 ```
 
@@ -36,7 +36,7 @@ withIcon(value)
 
 ### fn withIncludeVars
 
-```ts
+```jsonnet
 withIncludeVars(value=true)
 ```
 
@@ -44,7 +44,7 @@ withIncludeVars(value=true)
 
 ### fn withKeepTime
 
-```ts
+```jsonnet
 withKeepTime(value=true)
 ```
 
@@ -52,7 +52,7 @@ withKeepTime(value=true)
 
 ### fn withTags
 
-```ts
+```jsonnet
 withTags(value)
 ```
 
@@ -60,7 +60,7 @@ withTags(value)
 
 ### fn withTagsMixin
 
-```ts
+```jsonnet
 withTagsMixin(value)
 ```
 
@@ -68,7 +68,7 @@ withTagsMixin(value)
 
 ### fn withTargetBlank
 
-```ts
+```jsonnet
 withTargetBlank(value=true)
 ```
 
@@ -76,7 +76,7 @@ withTargetBlank(value=true)
 
 ### fn withTitle
 
-```ts
+```jsonnet
 withTitle(value)
 ```
 
@@ -84,7 +84,7 @@ withTitle(value)
 
 ### fn withTooltip
 
-```ts
+```jsonnet
 withTooltip(value)
 ```
 
@@ -92,7 +92,7 @@ withTooltip(value)
 
 ### fn withType
 
-```ts
+```jsonnet
 withType(value)
 ```
 
@@ -102,7 +102,7 @@ Accepted values for `value` are "link", "dashboards"
 
 ### fn withUrl
 
-```ts
+```jsonnet
 withUrl(value)
 ```
 

@@ -57,7 +57,7 @@
 
 #### fn RangeMap.withOptions
 
-```ts
+```jsonnet
 withOptions(value)
 ```
 
@@ -65,7 +65,7 @@ withOptions(value)
 
 #### fn RangeMap.withOptionsMixin
 
-```ts
+```jsonnet
 withOptionsMixin(value)
 ```
 
@@ -73,7 +73,7 @@ withOptionsMixin(value)
 
 #### fn RangeMap.withType
 
-```ts
+```jsonnet
 withType(value)
 ```
 
@@ -84,7 +84,7 @@ withType(value)
 
 ##### fn RangeMap.options.withFrom
 
-```ts
+```jsonnet
 withFrom(value)
 ```
 
@@ -92,7 +92,7 @@ to and from are `number | null` in current ts, really not sure what to do
 
 ##### fn RangeMap.options.withResult
 
-```ts
+```jsonnet
 withResult(value)
 ```
 
@@ -100,7 +100,7 @@ TODO docs
 
 ##### fn RangeMap.options.withResultMixin
 
-```ts
+```jsonnet
 withResultMixin(value)
 ```
 
@@ -108,7 +108,7 @@ TODO docs
 
 ##### fn RangeMap.options.withTo
 
-```ts
+```jsonnet
 withTo(value)
 ```
 
@@ -119,7 +119,7 @@ withTo(value)
 
 ###### fn RangeMap.options.result.withColor
 
-```ts
+```jsonnet
 withColor(value)
 ```
 
@@ -127,7 +127,7 @@ withColor(value)
 
 ###### fn RangeMap.options.result.withIcon
 
-```ts
+```jsonnet
 withIcon(value)
 ```
 
@@ -135,7 +135,7 @@ withIcon(value)
 
 ###### fn RangeMap.options.result.withIndex
 
-```ts
+```jsonnet
 withIndex(value)
 ```
 
@@ -143,7 +143,7 @@ withIndex(value)
 
 ###### fn RangeMap.options.result.withText
 
-```ts
+```jsonnet
 withText(value)
 ```
 
@@ -154,7 +154,7 @@ withText(value)
 
 #### fn RegexMap.withOptions
 
-```ts
+```jsonnet
 withOptions(value)
 ```
 
@@ -162,7 +162,7 @@ withOptions(value)
 
 #### fn RegexMap.withOptionsMixin
 
-```ts
+```jsonnet
 withOptionsMixin(value)
 ```
 
@@ -170,7 +170,7 @@ withOptionsMixin(value)
 
 #### fn RegexMap.withType
 
-```ts
+```jsonnet
 withType(value)
 ```
 
@@ -181,7 +181,7 @@ withType(value)
 
 ##### fn RegexMap.options.withPattern
 
-```ts
+```jsonnet
 withPattern(value)
 ```
 
@@ -189,7 +189,7 @@ withPattern(value)
 
 ##### fn RegexMap.options.withResult
 
-```ts
+```jsonnet
 withResult(value)
 ```
 
@@ -197,7 +197,7 @@ TODO docs
 
 ##### fn RegexMap.options.withResultMixin
 
-```ts
+```jsonnet
 withResultMixin(value)
 ```
 
@@ -208,7 +208,7 @@ TODO docs
 
 ###### fn RegexMap.options.result.withColor
 
-```ts
+```jsonnet
 withColor(value)
 ```
 
@@ -216,7 +216,7 @@ withColor(value)
 
 ###### fn RegexMap.options.result.withIcon
 
-```ts
+```jsonnet
 withIcon(value)
 ```
 
@@ -224,7 +224,7 @@ withIcon(value)
 
 ###### fn RegexMap.options.result.withIndex
 
-```ts
+```jsonnet
 withIndex(value)
 ```
 
@@ -232,7 +232,7 @@ withIndex(value)
 
 ###### fn RegexMap.options.result.withText
 
-```ts
+```jsonnet
 withText(value)
 ```
 
@@ -243,7 +243,7 @@ withText(value)
 
 #### fn SpecialValueMap.withOptions
 
-```ts
+```jsonnet
 withOptions(value)
 ```
 
@@ -251,7 +251,7 @@ withOptions(value)
 
 #### fn SpecialValueMap.withOptionsMixin
 
-```ts
+```jsonnet
 withOptionsMixin(value)
 ```
 
@@ -259,7 +259,7 @@ withOptionsMixin(value)
 
 #### fn SpecialValueMap.withType
 
-```ts
+```jsonnet
 withType(value)
 ```
 
@@ -270,7 +270,7 @@ withType(value)
 
 ##### fn SpecialValueMap.options.withMatch
 
-```ts
+```jsonnet
 withMatch(value)
 ```
 
@@ -280,7 +280,7 @@ Accepted values for `value` are "true", "false"
 
 ##### fn SpecialValueMap.options.withPattern
 
-```ts
+```jsonnet
 withPattern(value)
 ```
 
@@ -288,7 +288,7 @@ withPattern(value)
 
 ##### fn SpecialValueMap.options.withResult
 
-```ts
+```jsonnet
 withResult(value)
 ```
 
@@ -296,7 +296,7 @@ TODO docs
 
 ##### fn SpecialValueMap.options.withResultMixin
 
-```ts
+```jsonnet
 withResultMixin(value)
 ```
 
@@ -307,7 +307,7 @@ TODO docs
 
 ###### fn SpecialValueMap.options.result.withColor
 
-```ts
+```jsonnet
 withColor(value)
 ```
 
@@ -315,7 +315,7 @@ withColor(value)
 
 ###### fn SpecialValueMap.options.result.withIcon
 
-```ts
+```jsonnet
 withIcon(value)
 ```
 
@@ -323,7 +323,7 @@ withIcon(value)
 
 ###### fn SpecialValueMap.options.result.withIndex
 
-```ts
+```jsonnet
 withIndex(value)
 ```
 
@@ -331,7 +331,7 @@ withIndex(value)
 
 ###### fn SpecialValueMap.options.result.withText
 
-```ts
+```jsonnet
 withText(value)
 ```
 
@@ -342,7 +342,7 @@ withText(value)
 
 #### fn ValueMap.withOptions
 
-```ts
+```jsonnet
 withOptions(value)
 ```
 
@@ -350,7 +350,7 @@ withOptions(value)
 
 #### fn ValueMap.withOptionsMixin
 
-```ts
+```jsonnet
 withOptionsMixin(value)
 ```
 
@@ -358,7 +358,7 @@ withOptionsMixin(value)
 
 #### fn ValueMap.withType
 
-```ts
+```jsonnet
 withType(value)
 ```
 
