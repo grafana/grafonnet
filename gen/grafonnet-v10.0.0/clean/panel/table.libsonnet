@@ -7,6 +7,17 @@
       '#withType': { 'function': { args: [], help: '' } },
       withType(): { type: 'table' },
     },
+  fieldConfig+:
+    {
+      defaults+:
+        {
+          custom+:
+            {
+              '#withFilterable': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'True if data source field supports ad-hoc filters' } },
+              withFilterable(value=true): { fieldConfig+: { defaults+: { custom+: { filterable: value } } } },
+            },
+        },
+    },
   options+:
     {
       '#withCellHeight': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Controls the height of the rows' } },
