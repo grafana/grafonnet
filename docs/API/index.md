@@ -7,7 +7,7 @@
 * [dashboard](dashboard/index.md)
 * [librarypanel](librarypanel.md)
 * [panel](panel/index.md)
-* [playlist](playlist.md)
+* [playlist](playlist/index.md)
 * [preferences](preferences.md)
 * [publicdashboard](publicdashboard.md)
 * [query](query/index.md)

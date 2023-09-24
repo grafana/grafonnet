@@ -71,6 +71,7 @@
                                                                                else [value]) } } },
           mappings+:
             {
+              '#': { help: '', name: 'mappings' },
               ValueMap+:
                 {
                   '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
@@ -198,6 +199,7 @@
                                                                                             else [value]) } } } },
               steps+:
                 {
+                  '#': { help: '', name: 'steps' },
                   '#withColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'TODO docs' } },
                   withColor(value): { color: value },
                   '#withIndex': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'integer' }], help: 'Threshold index, an old property that is not needed an should only appear in older dashboards' } },
@@ -223,6 +225,7 @@
                                                                 else [value]) } },
       overrides+:
         {
+          '#': { help: '', name: 'overrides' },
           '#withMatcher': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
           withMatcher(value): { matcher: value },
           '#withMatcherMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
@@ -244,6 +247,7 @@
                                                       else [value]) },
           properties+:
             {
+              '#': { help: '', name: 'properties' },
               '#withId': { 'function': { args: [{ default: '', enums: null, name: 'value', type: 'string' }], help: '' } },
               withId(value=''): { id: value },
               '#withValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
@@ -293,6 +297,7 @@
                                     else [value]) },
   links+:
     {
+      '#': { help: '', name: 'links' },
       '#withAsDropdown': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
       withAsDropdown(value=true): { asDropdown: value },
       '#withIcon': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
@@ -350,6 +355,10 @@
   withTargetsMixin(value): { targets+: (if std.isArray(value)
                                         then value
                                         else [value]) },
+  targets+:
+    {
+      '#': { help: '', name: 'targets' },
+    },
   '#withThresholds': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: 'TODO docs - seems to be an old field from old dashboard alerts?' } },
   withThresholds(value): { thresholds: (if std.isArray(value)
                                         then value
@@ -382,6 +391,7 @@
                                                         else [value]) },
   transformations+:
     {
+      '#': { help: '', name: 'transformations' },
       '#withDisabled': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Disabled transformations are skipped' } },
       withDisabled(value=true): { disabled: value },
       '#withFilter': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },

@@ -36,6 +36,7 @@
                                                                 else [value]) } } },
           arcs+:
             {
+              '#': { help: '', name: 'arcs' },
               '#withColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'The color of the arc.' } },
               withColor(value): { color: value },
               '#withField': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Field from which to get the value. Values should be less than 1, representing fraction of a circle.' } },

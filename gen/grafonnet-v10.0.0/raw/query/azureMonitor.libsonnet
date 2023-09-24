@@ -66,6 +66,7 @@
                                                                                else [value]) } },
       dimensionFilters+:
         {
+          '#': { help: '', name: 'dimensionFilters' },
           '#withDimension': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Name of Dimension to be filtered on.' } },
           withDimension(value): { dimension: value },
           '#withFilter': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '@deprecated filter is deprecated in favour of filters to support multiselect.' } },
@@ -105,6 +106,7 @@
                                                                  else [value]) } },
       resources+:
         {
+          '#': { help: '', name: 'resources' },
           '#withMetricNamespace': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
           withMetricNamespace(value): { metricNamespace: value },
           '#withRegion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
@@ -150,6 +152,7 @@
                                                             else [value]) } },
       filters+:
         {
+          '#': { help: '', name: 'filters' },
           '#withFilters': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: 'Values to filter by.' } },
           withFilters(value): { filters: (if std.isArray(value)
                                           then value

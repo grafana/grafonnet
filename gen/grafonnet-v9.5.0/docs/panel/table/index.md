@@ -4,11 +4,12 @@ grafonnet.panel.table
 
 ## Subpackages
 
-* [fieldOverride](fieldOverride.md)
-* [link](link.md)
-* [thresholdStep](thresholdStep.md)
-* [transformation](transformation.md)
-* [valueMapping](valueMapping.md)
+* [options.sortBy](options/sortBy.md)
+* [panelOptions.link](panelOptions/link.md)
+* [queryOptions.transformation](queryOptions/transformation.md)
+* [standardOptions.mapping](standardOptions/mapping.md)
+* [standardOptions.override](standardOptions/override.md)
+* [standardOptions.threshold.step](standardOptions/threshold/step.md)
 
 ## Index
 
@@ -36,9 +37,6 @@ grafonnet.panel.table
       * [`fn withReducer(value)`](#fn-optionsfootertablefooteroptionswithreducer)
       * [`fn withReducerMixin(value)`](#fn-optionsfootertablefooteroptionswithreducermixin)
       * [`fn withShow(value=true)`](#fn-optionsfootertablefooteroptionswithshow)
-  * [`obj sortBy`](#obj-optionssortby)
-    * [`fn withDesc(value=true)`](#fn-optionssortbywithdesc)
-    * [`fn withDisplayName(value)`](#fn-optionssortbywithdisplayname)
 * [`obj panelOptions`](#obj-paneloptions)
   * [`fn withDescription(value)`](#fn-paneloptionswithdescription)
   * [`fn withGridPos(h="null", w="null", x="null", y="null")`](#fn-paneloptionswithgridpos)
@@ -256,25 +254,6 @@ withShow(value=true)
 ```
 
 
-
-#### obj options.sortBy
-
-
-##### fn options.sortBy.withDesc
-
-```jsonnet
-withDesc(value=true)
-```
-
-Flag used to indicate descending sort order
-
-##### fn options.sortBy.withDisplayName
-
-```jsonnet
-withDisplayName(value)
-```
-
-Sets the display name of the field to sort by
 
 ### obj panelOptions
 

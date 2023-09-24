@@ -146,6 +146,7 @@
                                                       else [value]) } },
       list+:
         {
+          '#': { help: '', name: 'list' },
           '#withBuiltIn': { 'function': { args: [{ default: 0, enums: null, name: 'value', type: 'integer' }], help: '' } },
           withBuiltIn(value=0): { builtIn: value },
           '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'Datasource to use for annotation.' } },
@@ -196,7 +197,7 @@
           withType(value='dashboard'): { type: value },
         },
     },
-  templating+:
+  variable+:
     {
       '#withList': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
       withList(value): { templating+: { list: (if std.isArray(value)
@@ -208,6 +209,7 @@
                                                      else [value]) } },
       list+:
         {
+          '#': { help: '', name: 'list' },
           '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'Ref to a DataSource instance' } },
           withDatasource(value): { datasource: value },
           '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'Ref to a DataSource instance' } },

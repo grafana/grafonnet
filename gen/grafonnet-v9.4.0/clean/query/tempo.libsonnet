@@ -19,6 +19,7 @@
                                         else [value]) },
   filters+:
     {
+      '#': { help: '', name: 'filters' },
       '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Uniquely identify the filter, will not be used in the query generation' } },
       withId(value): { id: value },
       '#withOperator': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'The operator that connects the tag to the value, for example: =, >, !=, =~' } },

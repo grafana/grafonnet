@@ -4,11 +4,11 @@ grafonnet.panel.barChart
 
 ## Subpackages
 
-* [fieldOverride](fieldOverride.md)
-* [link](link.md)
-* [thresholdStep](thresholdStep.md)
-* [transformation](transformation.md)
-* [valueMapping](valueMapping.md)
+* [panelOptions.link](panelOptions/link.md)
+* [queryOptions.transformation](queryOptions/transformation.md)
+* [standardOptions.mapping](standardOptions/mapping.md)
+* [standardOptions.override](standardOptions/override.md)
+* [standardOptions.threshold.step](standardOptions/threshold/step.md)
 
 ## Index
 

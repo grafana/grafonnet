@@ -4,11 +4,12 @@ grafonnet.panel.nodeGraph
 
 ## Subpackages
 
-* [fieldOverride](fieldOverride.md)
-* [link](link.md)
-* [thresholdStep](thresholdStep.md)
-* [transformation](transformation.md)
-* [valueMapping](valueMapping.md)
+* [options.nodes.arcs](options/nodes/arcs.md)
+* [panelOptions.link](panelOptions/link.md)
+* [queryOptions.transformation](queryOptions/transformation.md)
+* [standardOptions.mapping](standardOptions/mapping.md)
+* [standardOptions.override](standardOptions/override.md)
+* [standardOptions.threshold.step](standardOptions/threshold/step.md)
 
 ## Index
 
@@ -29,9 +30,6 @@ grafonnet.panel.nodeGraph
     * [`fn withArcsMixin(value)`](#fn-optionsnodeswitharcsmixin)
     * [`fn withMainStatUnit(value)`](#fn-optionsnodeswithmainstatunit)
     * [`fn withSecondaryStatUnit(value)`](#fn-optionsnodeswithsecondarystatunit)
-    * [`obj arcs`](#obj-optionsnodesarcs)
-      * [`fn withColor(value)`](#fn-optionsnodesarcswithcolor)
-      * [`fn withField(value)`](#fn-optionsnodesarcswithfield)
 * [`obj panelOptions`](#obj-paneloptions)
   * [`fn withDescription(value)`](#fn-paneloptionswithdescription)
   * [`fn withGridPos(h="null", w="null", x="null", y="null")`](#fn-paneloptionswithgridpos)
@@ -191,25 +189,6 @@ withSecondaryStatUnit(value)
 ```
 
 Unit for the secondary stat to override what ever is set in the data frame.
-
-##### obj options.nodes.arcs
-
-
-###### fn options.nodes.arcs.withColor
-
-```jsonnet
-withColor(value)
-```
-
-The color of the arc.
-
-###### fn options.nodes.arcs.withField
-
-```jsonnet
-withField(value)
-```
-
-Field from which to get the value. Values should be less than 1, representing fraction of a circle.
 
 ### obj panelOptions
 

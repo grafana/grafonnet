@@ -25,6 +25,36 @@
       withPluginVersion(): { pluginVersion: 'v10.0.0' },
       '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'The panel plugin type id. May not be empty.' } },
       withType(value): { type: value },
+      link+:
+        {
+          '#': { help: '', name: 'links' },
+          '#withAsDropdown': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+          withAsDropdown(value=true): { asDropdown: value },
+          '#withIcon': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+          withIcon(value): { icon: value },
+          '#withIncludeVars': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+          withIncludeVars(value=true): { includeVars: value },
+          '#withKeepTime': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+          withKeepTime(value=true): { keepTime: value },
+          '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
+          withTags(value): { tags: (if std.isArray(value)
+                                    then value
+                                    else [value]) },
+          '#withTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
+          withTagsMixin(value): { tags+: (if std.isArray(value)
+                                          then value
+                                          else [value]) },
+          '#withTargetBlank': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
+          withTargetBlank(value=true): { targetBlank: value },
+          '#withTitle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+          withTitle(value): { title: value },
+          '#withTooltip': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+          withTooltip(value): { tooltip: value },
+          '#withType': { 'function': { args: [{ default: null, enums: ['link', 'dashboards'], name: 'value', type: 'string' }], help: 'TODO docs' } },
+          withType(value): { type: value },
+          '#withUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+          withUrl(value): { url: value },
+        },
     },
   queryOptions+:
     {
@@ -56,6 +86,27 @@
       withTransformationsMixin(value): { transformations+: (if std.isArray(value)
                                                             then value
                                                             else [value]) },
+      transformation+:
+        {
+          '#': { help: '', name: 'transformations' },
+          '#withDisabled': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Disabled transformations are skipped' } },
+          withDisabled(value=true): { disabled: value },
+          '#withFilter': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
+          withFilter(value): { filter: value },
+          '#withFilterMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
+          withFilterMixin(value): { filter+: value },
+          filter+:
+            {
+              '#withId': { 'function': { args: [{ default: '', enums: null, name: 'value', type: 'string' }], help: '' } },
+              withId(value=''): { filter+: { id: value } },
+              '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+              withOptions(value): { filter+: { options: value } },
+            },
+          '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Unique identifier of transformer' } },
+          withId(value): { id: value },
+          '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Options to be passed to the transformer\nValid options depend on the transformer id' } },
+          withOptions(value): { options: value },
+        },
     },
   standardOptions+:
     {
@@ -117,6 +168,156 @@
                                                                                         then value
                                                                                         else [value]) } } } },
         },
+      mapping+:
+        {
+          '#': { help: '', name: 'mappings' },
+          ValueMap+:
+            {
+              '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
+              withOptions(value): { options: value },
+              '#withOptionsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
+              withOptionsMixin(value): { options+: value },
+              '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+              withType(value): { type: value },
+            },
+          RangeMap+:
+            {
+              '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
+              withOptions(value): { options: value },
+              '#withOptionsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
+              withOptionsMixin(value): { options+: value },
+              options+:
+                {
+                  '#withFrom': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'number' }], help: 'to and from are `number | null` in current ts, really not sure what to do' } },
+                  withFrom(value): { options+: { from: value } },
+                  '#withResult': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'TODO docs' } },
+                  withResult(value): { options+: { result: value } },
+                  '#withResultMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'TODO docs' } },
+                  withResultMixin(value): { options+: { result+: value } },
+                  result+:
+                    {
+                      '#withColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+                      withColor(value): { options+: { result+: { color: value } } },
+                      '#withIcon': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+                      withIcon(value): { options+: { result+: { icon: value } } },
+                      '#withIndex': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'integer' }], help: '' } },
+                      withIndex(value): { options+: { result+: { index: value } } },
+                      '#withText': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+                      withText(value): { options+: { result+: { text: value } } },
+                    },
+                  '#withTo': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'number' }], help: '' } },
+                  withTo(value): { options+: { to: value } },
+                },
+              '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+              withType(value): { type: value },
+            },
+          RegexMap+:
+            {
+              '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
+              withOptions(value): { options: value },
+              '#withOptionsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
+              withOptionsMixin(value): { options+: value },
+              options+:
+                {
+                  '#withPattern': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+                  withPattern(value): { options+: { pattern: value } },
+                  '#withResult': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'TODO docs' } },
+                  withResult(value): { options+: { result: value } },
+                  '#withResultMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'TODO docs' } },
+                  withResultMixin(value): { options+: { result+: value } },
+                  result+:
+                    {
+                      '#withColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+                      withColor(value): { options+: { result+: { color: value } } },
+                      '#withIcon': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+                      withIcon(value): { options+: { result+: { icon: value } } },
+                      '#withIndex': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'integer' }], help: '' } },
+                      withIndex(value): { options+: { result+: { index: value } } },
+                      '#withText': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+                      withText(value): { options+: { result+: { text: value } } },
+                    },
+                },
+              '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+              withType(value): { type: value },
+            },
+          SpecialValueMap+:
+            {
+              '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
+              withOptions(value): { options: value },
+              '#withOptionsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
+              withOptionsMixin(value): { options+: value },
+              options+:
+                {
+                  '#withMatch': { 'function': { args: [{ default: null, enums: ['true', 'false'], name: 'value', type: 'string' }], help: '' } },
+                  withMatch(value): { options+: { match: value } },
+                  '#withPattern': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+                  withPattern(value): { options+: { pattern: value } },
+                  '#withResult': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'TODO docs' } },
+                  withResult(value): { options+: { result: value } },
+                  '#withResultMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'TODO docs' } },
+                  withResultMixin(value): { options+: { result+: value } },
+                  result+:
+                    {
+                      '#withColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+                      withColor(value): { options+: { result+: { color: value } } },
+                      '#withIcon': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+                      withIcon(value): { options+: { result+: { icon: value } } },
+                      '#withIndex': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'integer' }], help: '' } },
+                      withIndex(value): { options+: { result+: { index: value } } },
+                      '#withText': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+                      withText(value): { options+: { result+: { text: value } } },
+                    },
+                },
+              '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+              withType(value): { type: value },
+            },
+        },
+      threshold+:
+        {
+          step+:
+            {
+              '#': { help: '', name: 'steps' },
+              '#withColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'TODO docs' } },
+              withColor(value): { color: value },
+              '#withIndex': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'integer' }], help: 'Threshold index, an old property that is not needed an should only appear in older dashboards' } },
+              withIndex(value): { index: value },
+              '#withState': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'TODO docs\nTODO are the values here enumerable into a disjunction?\nSome seem to be listed in typescript comment' } },
+              withState(value): { state: value },
+              '#withValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'number' }], help: 'TODO docs\nFIXME the corresponding typescript field is required/non-optional, but nulls currently appear here when serializing -Infinity to JSON' } },
+              withValue(value): { value: value },
+            },
+        },
+      override+:
+        {
+          '#': { help: '', name: 'overrides' },
+          '#withMatcher': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
+          withMatcher(value): { matcher: value },
+          '#withMatcherMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
+          withMatcherMixin(value): { matcher+: value },
+          matcher+:
+            {
+              '#withId': { 'function': { args: [{ default: '', enums: null, name: 'value', type: 'string' }], help: '' } },
+              withId(value=''): { matcher+: { id: value } },
+              '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+              withOptions(value): { matcher+: { options: value } },
+            },
+          '#withProperties': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
+          withProperties(value): { properties: (if std.isArray(value)
+                                                then value
+                                                else [value]) },
+          '#withPropertiesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
+          withPropertiesMixin(value): { properties+: (if std.isArray(value)
+                                                      then value
+                                                      else [value]) },
+          properties+:
+            {
+              '#': { help: '', name: 'properties' },
+              '#withId': { 'function': { args: [{ default: '', enums: null, name: 'value', type: 'string' }], help: '' } },
+              withId(value=''): { id: value },
+              '#withValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
+              withValue(value): { value: value },
+            },
+        },
     },
   datasource+:
     {
@@ -144,198 +345,6 @@
       withX(value=0): { gridPos+: { x: value } },
       '#withY': { 'function': { args: [{ default: 0, enums: null, name: 'value', type: 'integer' }], help: 'Panel y' } },
       withY(value=0): { gridPos+: { y: value } },
-    },
-  link+:
-    {
-      '#withAsDropdown': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-      withAsDropdown(value=true): { asDropdown: value },
-      '#withIcon': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-      withIcon(value): { icon: value },
-      '#withIncludeVars': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-      withIncludeVars(value=true): { includeVars: value },
-      '#withKeepTime': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-      withKeepTime(value=true): { keepTime: value },
-      '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
-      withTags(value): { tags: (if std.isArray(value)
-                                then value
-                                else [value]) },
-      '#withTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
-      withTagsMixin(value): { tags+: (if std.isArray(value)
-                                      then value
-                                      else [value]) },
-      '#withTargetBlank': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
-      withTargetBlank(value=true): { targetBlank: value },
-      '#withTitle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-      withTitle(value): { title: value },
-      '#withTooltip': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-      withTooltip(value): { tooltip: value },
-      '#withType': { 'function': { args: [{ default: null, enums: ['link', 'dashboards'], name: 'value', type: 'string' }], help: 'TODO docs' } },
-      withType(value): { type: value },
-      '#withUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-      withUrl(value): { url: value },
-    },
-  transformation+:
-    {
-      '#withDisabled': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Disabled transformations are skipped' } },
-      withDisabled(value=true): { disabled: value },
-      '#withFilter': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
-      withFilter(value): { filter: value },
-      '#withFilterMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
-      withFilterMixin(value): { filter+: value },
-      filter+:
-        {
-          '#withId': { 'function': { args: [{ default: '', enums: null, name: 'value', type: 'string' }], help: '' } },
-          withId(value=''): { filter+: { id: value } },
-          '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-          withOptions(value): { filter+: { options: value } },
-        },
-      '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Unique identifier of transformer' } },
-      withId(value): { id: value },
-      '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Options to be passed to the transformer\nValid options depend on the transformer id' } },
-      withOptions(value): { options: value },
-    },
-  valueMapping+:
-    {
-      ValueMap+:
-        {
-          '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
-          withOptions(value): { options: value },
-          '#withOptionsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
-          withOptionsMixin(value): { options+: value },
-          '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-          withType(value): { type: value },
-        },
-      RangeMap+:
-        {
-          '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
-          withOptions(value): { options: value },
-          '#withOptionsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
-          withOptionsMixin(value): { options+: value },
-          options+:
-            {
-              '#withFrom': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'number' }], help: 'to and from are `number | null` in current ts, really not sure what to do' } },
-              withFrom(value): { options+: { from: value } },
-              '#withResult': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'TODO docs' } },
-              withResult(value): { options+: { result: value } },
-              '#withResultMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'TODO docs' } },
-              withResultMixin(value): { options+: { result+: value } },
-              result+:
-                {
-                  '#withColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-                  withColor(value): { options+: { result+: { color: value } } },
-                  '#withIcon': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-                  withIcon(value): { options+: { result+: { icon: value } } },
-                  '#withIndex': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'integer' }], help: '' } },
-                  withIndex(value): { options+: { result+: { index: value } } },
-                  '#withText': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-                  withText(value): { options+: { result+: { text: value } } },
-                },
-              '#withTo': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'number' }], help: '' } },
-              withTo(value): { options+: { to: value } },
-            },
-          '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-          withType(value): { type: value },
-        },
-      RegexMap+:
-        {
-          '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
-          withOptions(value): { options: value },
-          '#withOptionsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
-          withOptionsMixin(value): { options+: value },
-          options+:
-            {
-              '#withPattern': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-              withPattern(value): { options+: { pattern: value } },
-              '#withResult': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'TODO docs' } },
-              withResult(value): { options+: { result: value } },
-              '#withResultMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'TODO docs' } },
-              withResultMixin(value): { options+: { result+: value } },
-              result+:
-                {
-                  '#withColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-                  withColor(value): { options+: { result+: { color: value } } },
-                  '#withIcon': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-                  withIcon(value): { options+: { result+: { icon: value } } },
-                  '#withIndex': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'integer' }], help: '' } },
-                  withIndex(value): { options+: { result+: { index: value } } },
-                  '#withText': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-                  withText(value): { options+: { result+: { text: value } } },
-                },
-            },
-          '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-          withType(value): { type: value },
-        },
-      SpecialValueMap+:
-        {
-          '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
-          withOptions(value): { options: value },
-          '#withOptionsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
-          withOptionsMixin(value): { options+: value },
-          options+:
-            {
-              '#withMatch': { 'function': { args: [{ default: null, enums: ['true', 'false'], name: 'value', type: 'string' }], help: '' } },
-              withMatch(value): { options+: { match: value } },
-              '#withPattern': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-              withPattern(value): { options+: { pattern: value } },
-              '#withResult': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'TODO docs' } },
-              withResult(value): { options+: { result: value } },
-              '#withResultMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'TODO docs' } },
-              withResultMixin(value): { options+: { result+: value } },
-              result+:
-                {
-                  '#withColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-                  withColor(value): { options+: { result+: { color: value } } },
-                  '#withIcon': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-                  withIcon(value): { options+: { result+: { icon: value } } },
-                  '#withIndex': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'integer' }], help: '' } },
-                  withIndex(value): { options+: { result+: { index: value } } },
-                  '#withText': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-                  withText(value): { options+: { result+: { text: value } } },
-                },
-            },
-          '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-          withType(value): { type: value },
-        },
-    },
-  thresholdStep+:
-    {
-      '#withColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'TODO docs' } },
-      withColor(value): { color: value },
-      '#withIndex': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'integer' }], help: 'Threshold index, an old property that is not needed an should only appear in older dashboards' } },
-      withIndex(value): { index: value },
-      '#withState': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'TODO docs\nTODO are the values here enumerable into a disjunction?\nSome seem to be listed in typescript comment' } },
-      withState(value): { state: value },
-      '#withValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'number' }], help: 'TODO docs\nFIXME the corresponding typescript field is required/non-optional, but nulls currently appear here when serializing -Infinity to JSON' } },
-      withValue(value): { value: value },
-    },
-  fieldOverride+:
-    {
-      '#withMatcher': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
-      withMatcher(value): { matcher: value },
-      '#withMatcherMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
-      withMatcherMixin(value): { matcher+: value },
-      matcher+:
-        {
-          '#withId': { 'function': { args: [{ default: '', enums: null, name: 'value', type: 'string' }], help: '' } },
-          withId(value=''): { matcher+: { id: value } },
-          '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-          withOptions(value): { matcher+: { options: value } },
-        },
-      '#withProperties': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
-      withProperties(value): { properties: (if std.isArray(value)
-                                            then value
-                                            else [value]) },
-      '#withPropertiesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: '' } },
-      withPropertiesMixin(value): { properties+: (if std.isArray(value)
-                                                  then value
-                                                  else [value]) },
-      properties+:
-        {
-          '#withId': { 'function': { args: [{ default: '', enums: null, name: 'value', type: 'string' }], help: '' } },
-          withId(value=''): { id: value },
-          '#withValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
-          withValue(value): { value: value },
-        },
     },
 }
 + (import '../custom/panel.libsonnet')

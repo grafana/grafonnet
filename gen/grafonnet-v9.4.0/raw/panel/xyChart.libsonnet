@@ -367,6 +367,7 @@
                                                       else [value]) } },
       series+:
         {
+          '#': { help: '', name: 'series' },
           '#withHideFrom': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'TODO docs' } },
           withHideFrom(value): { hideFrom: value },
           '#withHideFromMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'TODO docs' } },

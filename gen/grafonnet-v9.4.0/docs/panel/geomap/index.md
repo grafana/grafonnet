@@ -4,11 +4,12 @@ grafonnet.panel.geomap
 
 ## Subpackages
 
-* [fieldOverride](fieldOverride.md)
-* [link](link.md)
-* [thresholdStep](thresholdStep.md)
-* [transformation](transformation.md)
-* [valueMapping](valueMapping.md)
+* [options.layers](options/layers.md)
+* [panelOptions.link](panelOptions/link.md)
+* [queryOptions.transformation](queryOptions/transformation.md)
+* [standardOptions.mapping](standardOptions/mapping.md)
+* [standardOptions.override](standardOptions/override.md)
+* [standardOptions.threshold.step](standardOptions/threshold/step.md)
 
 ## Index
 
@@ -51,23 +52,6 @@ grafonnet.panel.geomap
     * [`fn withShowMeasure(value=true)`](#fn-optionscontrolswithshowmeasure)
     * [`fn withShowScale(value=true)`](#fn-optionscontrolswithshowscale)
     * [`fn withShowZoom(value=true)`](#fn-optionscontrolswithshowzoom)
-  * [`obj layers`](#obj-optionslayers)
-    * [`fn withConfig(value)`](#fn-optionslayerswithconfig)
-    * [`fn withFilterData(value)`](#fn-optionslayerswithfilterdata)
-    * [`fn withLocation(value)`](#fn-optionslayerswithlocation)
-    * [`fn withLocationMixin(value)`](#fn-optionslayerswithlocationmixin)
-    * [`fn withName(value)`](#fn-optionslayerswithname)
-    * [`fn withOpacity(value)`](#fn-optionslayerswithopacity)
-    * [`fn withTooltip(value=true)`](#fn-optionslayerswithtooltip)
-    * [`fn withType(value)`](#fn-optionslayerswithtype)
-    * [`obj location`](#obj-optionslayerslocation)
-      * [`fn withGazetteer(value)`](#fn-optionslayerslocationwithgazetteer)
-      * [`fn withGeohash(value)`](#fn-optionslayerslocationwithgeohash)
-      * [`fn withLatitude(value)`](#fn-optionslayerslocationwithlatitude)
-      * [`fn withLongitude(value)`](#fn-optionslayerslocationwithlongitude)
-      * [`fn withLookup(value)`](#fn-optionslayerslocationwithlookup)
-      * [`fn withMode(value)`](#fn-optionslayerslocationwithmode)
-      * [`fn withWkt(value)`](#fn-optionslayerslocationwithwkt)
   * [`obj tooltip`](#obj-optionstooltip)
     * [`fn withMode(value)`](#fn-optionstooltipwithmode)
   * [`obj view`](#obj-optionsview)
@@ -416,136 +400,6 @@ withShowZoom(value=true)
 ```
 
 Zoom (upper left)
-
-#### obj options.layers
-
-
-##### fn options.layers.withConfig
-
-```jsonnet
-withConfig(value)
-```
-
-Custom options depending on the type
-
-##### fn options.layers.withFilterData
-
-```jsonnet
-withFilterData(value)
-```
-
-Defines a frame MatcherConfig that may filter data for the given layer
-
-##### fn options.layers.withLocation
-
-```jsonnet
-withLocation(value)
-```
-
-
-
-##### fn options.layers.withLocationMixin
-
-```jsonnet
-withLocationMixin(value)
-```
-
-
-
-##### fn options.layers.withName
-
-```jsonnet
-withName(value)
-```
-
-configured unique display name
-
-##### fn options.layers.withOpacity
-
-```jsonnet
-withOpacity(value)
-```
-
-Common properties:
-https://openlayers.org/en/latest/apidoc/module-ol_layer_Base-BaseLayer.html
-Layer opacity (0-1)
-
-##### fn options.layers.withTooltip
-
-```jsonnet
-withTooltip(value=true)
-```
-
-Check tooltip (defaults to true)
-
-##### fn options.layers.withType
-
-```jsonnet
-withType(value)
-```
-
-
-
-##### obj options.layers.location
-
-
-###### fn options.layers.location.withGazetteer
-
-```jsonnet
-withGazetteer(value)
-```
-
-Path to Gazetteer
-
-###### fn options.layers.location.withGeohash
-
-```jsonnet
-withGeohash(value)
-```
-
-Field mappings
-
-###### fn options.layers.location.withLatitude
-
-```jsonnet
-withLatitude(value)
-```
-
-
-
-###### fn options.layers.location.withLongitude
-
-```jsonnet
-withLongitude(value)
-```
-
-
-
-###### fn options.layers.location.withLookup
-
-```jsonnet
-withLookup(value)
-```
-
-
-
-###### fn options.layers.location.withMode
-
-```jsonnet
-withMode(value)
-```
-
-
-
-Accepted values for `value` are "auto", "geohash", "coords", "lookup"
-
-###### fn options.layers.location.withWkt
-
-```jsonnet
-withWkt(value)
-```
-
-
 
 #### obj options.tooltip
 
