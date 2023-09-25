@@ -16,6 +16,7 @@
 "repo_url": "https://github.com/grafana/grafonnet"
 "site_name": "Grafonnet"
 "site_url": "https://grafana.github.io/grafonnet"
+"extra_css": [ "assets/custom.css" ]
 "theme":
   "features":
     - "navigation.tabs"

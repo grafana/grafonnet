@@ -1,7 +1,7 @@
 local fileSnippet = (import './helpers.libsonnet').fileSnippet;
 
 |||
-  # Controller Runtime dashboard
+  # Controller runtime dashboard
 
   The [controller runtime dashboard](https://github.com/grafana/grafonnet/blob/master/examples/runtimeDashboard) example shows how to compose a dashboard from reusable components. There are separate definitions of panels, variables and queries. The queries are combined with the panels and then the panels are grouped into rows. Eventually the panels and rows are rendered into a grid. Let's break it down.
 
