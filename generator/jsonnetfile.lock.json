@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "dependencies": [
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/Duologic/jsonnet-libsonnet.git",
+          "subdir": ""
+        }
+      },
+      "version": "bd08bf5f0ffc156bd755b916367bceb7fbe3de03",
+      "sum": "ZYc3KrgzQIciDlQ786i2iHeqEZqjnB8KlPiX6w8Mp38="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/crdsonnet/crdsonnet.git",
+          "subdir": "crdsonnet"
+        }
+      },
+      "version": "49e60058145609c36722251e4b9f65dd136fc7b2",
+      "sum": "jDeXDXH/CDBMJTRNs0bbYX5BVxCF/eRqkS/H73wa1qU="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/crdsonnet/validate-libsonnet.git",
+          "subdir": ""
+        }
+      },
+      "version": "a78ca15fbfece3110c4807d1f059132ece01d97b",
+      "sum": "qYLH56MqvmgxE4YMNeTbuJ1XSsCpl1sumHN5x8IQv2I="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/jsonnet-libs/docsonnet.git",
+          "subdir": "doc-util"
+        }
+      },
+      "version": "4af7ba875dc578fc46a5e16d86ef3d0d4f4d2c15",
+      "sum": "O9XifwXLevw3HZxLJPDNmdk6VE2GH2xZfak1f9izF1s="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/jsonnet-libs/xtd.git",
+          "subdir": ""
+        }
+      },
+      "version": "0256a910ac71f0f842696d7bca0bf01ea77eb654",
+      "sum": "zBOpb1oTNvXdq9RF6yzTHill5r1YTJLBBoqyx4JYtAg="
+    }
+  ],
+  "legacyImports": false
+}
