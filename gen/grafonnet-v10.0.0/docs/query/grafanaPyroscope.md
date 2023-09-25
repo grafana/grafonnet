@@ -22,75 +22,105 @@ grafonnet.query.grafanaPyroscope
 withDatasource(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
 For mixed data sources the selected datasource is on the query level.
 For non mixed scenarios this is undefined.
 TODO find a better way to do this ^ that's friendly to schema
 TODO this shouldn't be unknown but DataSourceRef | null
-
 ### fn withGroupBy
 
 ```jsonnet
 withGroupBy(value)
 ```
 
-Allows to group the results.
+PARAMETERS:
 
+* **value** (`array`)
+
+Allows to group the results.
 ### fn withGroupByMixin
 
 ```jsonnet
 withGroupByMixin(value)
 ```
 
-Allows to group the results.
+PARAMETERS:
 
+* **value** (`array`)
+
+Allows to group the results.
 ### fn withHide
 
 ```jsonnet
 withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
 true if query is disabled (ie should not be returned to the dashboard)
 Note this does not always imply that the query should not be executed since
 the results from a hidden query may be used as the input to other queries (SSE etc)
-
 ### fn withLabelSelector
 
 ```jsonnet
 withLabelSelector(value="{}")
 ```
 
-Specifies the query label selectors.
+PARAMETERS:
 
+* **value** (`string`)
+   - default value: `"{}"`
+
+Specifies the query label selectors.
 ### fn withMaxNodes
 
 ```jsonnet
 withMaxNodes(value)
 ```
 
-Sets the maximum number of nodes in the flamegraph.
+PARAMETERS:
 
+* **value** (`integer`)
+
+Sets the maximum number of nodes in the flamegraph.
 ### fn withProfileTypeId
 
 ```jsonnet
 withProfileTypeId(value)
 ```
 
-Specifies the type of profile to query.
+PARAMETERS:
 
+* **value** (`string`)
+
+Specifies the type of profile to query.
 ### fn withQueryType
 
 ```jsonnet
 withQueryType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
 Specify the query flavor
 TODO make this required and give it a default
-
 ### fn withRefId
 
 ```jsonnet
 withRefId(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 A unique identifier for the query within the list of targets.
 In server side expressions, the refId is used as a variable name to identify results.

@@ -17,6 +17,9 @@
 withLabels(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withName
@@ -25,6 +28,9 @@ withLabels(value)
 withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withTimeStep
@@ -33,6 +39,9 @@ withName(value)
 withTimeStep(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 ### fn withValuesCSV
@@ -41,4 +50,7 @@ withTimeStep(value)
 withValuesCSV(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 

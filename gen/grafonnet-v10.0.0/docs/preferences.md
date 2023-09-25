@@ -22,22 +22,31 @@ grafonnet.preferences
 withHomeDashboardUID(value)
 ```
 
-UID for the home dashboard
+PARAMETERS:
 
+* **value** (`string`)
+
+UID for the home dashboard
 ### fn withLanguage
 
 ```jsonnet
 withLanguage(value)
 ```
 
-Selected language (beta)
+PARAMETERS:
 
+* **value** (`string`)
+
+Selected language (beta)
 ### fn withQueryHistory
 
 ```jsonnet
 withQueryHistory(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withQueryHistoryMixin
@@ -46,6 +55,9 @@ withQueryHistory(value)
 withQueryHistoryMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withTheme
@@ -54,32 +66,45 @@ withQueryHistoryMixin(value)
 withTheme(value)
 ```
 
-light, dark, empty is default
+PARAMETERS:
 
+* **value** (`string`)
+
+light, dark, empty is default
 ### fn withTimezone
 
 ```jsonnet
 withTimezone(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
 The timezone selection
 TODO: this should use the timezone defined in common
-
 ### fn withWeekStart
 
 ```jsonnet
 withWeekStart(value)
 ```
 
-day of the week (sunday, monday, etc)
+PARAMETERS:
 
+* **value** (`string`)
+
+day of the week (sunday, monday, etc)
 ### obj queryHistory
 
 
 #### fn queryHistory.withHomeTab
 
 ```jsonnet
-withHomeTab(value)
+queryHistory.withHomeTab(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 one of: '' | 'query' | 'starred';

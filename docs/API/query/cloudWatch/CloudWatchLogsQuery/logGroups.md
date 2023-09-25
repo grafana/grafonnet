@@ -17,28 +17,41 @@
 withAccountId(value)
 ```
 
-AccountId of the log group
+PARAMETERS:
 
+* **value** (`string`)
+
+AccountId of the log group
 ### fn withAccountLabel
 
 ```jsonnet
 withAccountLabel(value)
 ```
 
-Label of the log group
+PARAMETERS:
 
+* **value** (`string`)
+
+Label of the log group
 ### fn withArn
 
 ```jsonnet
 withArn(value)
 ```
 
-ARN of the log group
+PARAMETERS:
 
+* **value** (`string`)
+
+ARN of the log group
 ### fn withName
 
 ```jsonnet
 withName(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 Name of the log group

@@ -146,53 +146,76 @@ g.dashboard.new('my dashboard')
 #### fn adhoc.new
 
 ```jsonnet
-new(name, type, uid)
+adhoc.new(name, type, uid)
 ```
 
-`new` creates an adhoc template variable for datasource with `type` and `uid`.
+PARAMETERS:
 
+* **name** (`string`)
+* **type** (`string`)
+* **uid** (`string`)
+
+`new` creates an adhoc template variable for datasource with `type` and `uid`.
 #### fn adhoc.newFromDatasourceVariable
 
 ```jsonnet
-newFromDatasourceVariable(name, variable)
+adhoc.newFromDatasourceVariable(name, variable)
 ```
 
-Same as `new` but selecting the datasource from another template variable.
+PARAMETERS:
 
+* **name** (`string`)
+* **variable** (`object`)
+
+Same as `new` but selecting the datasource from another template variable.
 #### obj adhoc.generalOptions
 
 
 ##### fn adhoc.generalOptions.withCurrent
 
 ```jsonnet
-withCurrent(key, value="<same-as-key>")
+adhoc.generalOptions.withCurrent(key, value="<same-as-key>")
 ```
 
-`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
+PARAMETERS:
 
+* **key** (`any`)
+* **value** (`any`)
+   - default value: `"<same-as-key>"`
+
+`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
 
 ##### fn adhoc.generalOptions.withDescription
 
 ```jsonnet
-withDescription(value)
+adhoc.generalOptions.withDescription(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn adhoc.generalOptions.withLabel
 
 ```jsonnet
-withLabel(value)
+adhoc.generalOptions.withLabel(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn adhoc.generalOptions.withName
 
 ```jsonnet
-withName(value)
+adhoc.generalOptions.withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj adhoc.generalOptions.showOnDashboard
@@ -201,7 +224,7 @@ withName(value)
 ###### fn adhoc.generalOptions.showOnDashboard.withLabelAndValue
 
 ```jsonnet
-withLabelAndValue()
+adhoc.generalOptions.showOnDashboard.withLabelAndValue()
 ```
 
 
@@ -209,7 +232,7 @@ withLabelAndValue()
 ###### fn adhoc.generalOptions.showOnDashboard.withNothing
 
 ```jsonnet
-withNothing()
+adhoc.generalOptions.showOnDashboard.withNothing()
 ```
 
 
@@ -217,7 +240,7 @@ withNothing()
 ###### fn adhoc.generalOptions.showOnDashboard.withValueOnly
 
 ```jsonnet
-withValueOnly()
+adhoc.generalOptions.showOnDashboard.withValueOnly()
 ```
 
 
@@ -228,45 +251,63 @@ withValueOnly()
 #### fn constant.new
 
 ```jsonnet
-new(name, value)
+constant.new(name, value)
 ```
 
-`new` creates a hidden constant template variable.
+PARAMETERS:
 
+* **name** (`string`)
+* **value** (`string`)
+
+`new` creates a hidden constant template variable.
 #### obj constant.generalOptions
 
 
 ##### fn constant.generalOptions.withCurrent
 
 ```jsonnet
-withCurrent(key, value="<same-as-key>")
+constant.generalOptions.withCurrent(key, value="<same-as-key>")
 ```
 
-`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
+PARAMETERS:
 
+* **key** (`any`)
+* **value** (`any`)
+   - default value: `"<same-as-key>"`
+
+`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
 
 ##### fn constant.generalOptions.withDescription
 
 ```jsonnet
-withDescription(value)
+constant.generalOptions.withDescription(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn constant.generalOptions.withLabel
 
 ```jsonnet
-withLabel(value)
+constant.generalOptions.withLabel(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn constant.generalOptions.withName
 
 ```jsonnet
-withName(value)
+constant.generalOptions.withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj constant.generalOptions.showOnDashboard
@@ -275,7 +316,7 @@ withName(value)
 ###### fn constant.generalOptions.showOnDashboard.withLabelAndValue
 
 ```jsonnet
-withLabelAndValue()
+constant.generalOptions.showOnDashboard.withLabelAndValue()
 ```
 
 
@@ -283,7 +324,7 @@ withLabelAndValue()
 ###### fn constant.generalOptions.showOnDashboard.withNothing
 
 ```jsonnet
-withNothing()
+constant.generalOptions.showOnDashboard.withNothing()
 ```
 
 
@@ -291,7 +332,7 @@ withNothing()
 ###### fn constant.generalOptions.showOnDashboard.withValueOnly
 
 ```jsonnet
-withValueOnly()
+constant.generalOptions.showOnDashboard.withValueOnly()
 ```
 
 
@@ -302,8 +343,13 @@ withValueOnly()
 #### fn custom.new
 
 ```jsonnet
-new(name, values)
+custom.new(name, values)
 ```
+
+PARAMETERS:
+
+* **name** (`string`)
+* **values** (`array`)
 
 `new` creates a custom template variable.
 
@@ -318,41 +364,54 @@ Example:
   12,
 ]
 
-
 #### obj custom.generalOptions
 
 
 ##### fn custom.generalOptions.withCurrent
 
 ```jsonnet
-withCurrent(key, value="<same-as-key>")
+custom.generalOptions.withCurrent(key, value="<same-as-key>")
 ```
 
-`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
+PARAMETERS:
 
+* **key** (`any`)
+* **value** (`any`)
+   - default value: `"<same-as-key>"`
+
+`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
 
 ##### fn custom.generalOptions.withDescription
 
 ```jsonnet
-withDescription(value)
+custom.generalOptions.withDescription(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn custom.generalOptions.withLabel
 
 ```jsonnet
-withLabel(value)
+custom.generalOptions.withLabel(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn custom.generalOptions.withName
 
 ```jsonnet
-withName(value)
+custom.generalOptions.withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj custom.generalOptions.showOnDashboard
@@ -361,7 +420,7 @@ withName(value)
 ###### fn custom.generalOptions.showOnDashboard.withLabelAndValue
 
 ```jsonnet
-withLabelAndValue()
+custom.generalOptions.showOnDashboard.withLabelAndValue()
 ```
 
 
@@ -369,7 +428,7 @@ withLabelAndValue()
 ###### fn custom.generalOptions.showOnDashboard.withNothing
 
 ```jsonnet
-withNothing()
+custom.generalOptions.showOnDashboard.withNothing()
 ```
 
 
@@ -377,7 +436,7 @@ withNothing()
 ###### fn custom.generalOptions.showOnDashboard.withValueOnly
 
 ```jsonnet
-withValueOnly()
+custom.generalOptions.showOnDashboard.withValueOnly()
 ```
 
 
@@ -388,42 +447,58 @@ withValueOnly()
 ##### fn custom.selectionOptions.withIncludeAll
 
 ```jsonnet
-withIncludeAll(value=true, customAllValue)
+custom.selectionOptions.withIncludeAll(value=true, customAllValue)
 ```
+
+PARAMETERS:
+
+* **value** (`bool`)
+   - default value: `true`
+* **customAllValue** (`bool`)
 
 `withIncludeAll` enables an option to include all variables.
 
 Optionally you can set a `customAllValue`.
 
-
 ##### fn custom.selectionOptions.withMulti
 
 ```jsonnet
-withMulti(value=true)
+custom.selectionOptions.withMulti(value=true)
 ```
 
-Enable selecting multiple values.
+PARAMETERS:
 
+* **value** (`bool`)
+   - default value: `true`
+
+Enable selecting multiple values.
 ### obj datasource
 
 
 #### fn datasource.new
 
 ```jsonnet
-new(name, type)
+datasource.new(name, type)
 ```
 
-`new` creates a datasource template variable.
+PARAMETERS:
 
+* **name** (`string`)
+* **type** (`string`)
+
+`new` creates a datasource template variable.
 #### fn datasource.withRegex
 
 ```jsonnet
-withRegex(value)
+datasource.withRegex(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 `withRegex` filter for which data source instances to choose from in the
 variable value list. Example: `/^prod/`
-
 
 #### obj datasource.generalOptions
 
@@ -431,34 +506,48 @@ variable value list. Example: `/^prod/`
 ##### fn datasource.generalOptions.withCurrent
 
 ```jsonnet
-withCurrent(key, value="<same-as-key>")
+datasource.generalOptions.withCurrent(key, value="<same-as-key>")
 ```
 
-`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
+PARAMETERS:
 
+* **key** (`any`)
+* **value** (`any`)
+   - default value: `"<same-as-key>"`
+
+`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
 
 ##### fn datasource.generalOptions.withDescription
 
 ```jsonnet
-withDescription(value)
+datasource.generalOptions.withDescription(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn datasource.generalOptions.withLabel
 
 ```jsonnet
-withLabel(value)
+datasource.generalOptions.withLabel(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn datasource.generalOptions.withName
 
 ```jsonnet
-withName(value)
+datasource.generalOptions.withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj datasource.generalOptions.showOnDashboard
@@ -467,7 +556,7 @@ withName(value)
 ###### fn datasource.generalOptions.showOnDashboard.withLabelAndValue
 
 ```jsonnet
-withLabelAndValue()
+datasource.generalOptions.showOnDashboard.withLabelAndValue()
 ```
 
 
@@ -475,7 +564,7 @@ withLabelAndValue()
 ###### fn datasource.generalOptions.showOnDashboard.withNothing
 
 ```jsonnet
-withNothing()
+datasource.generalOptions.showOnDashboard.withNothing()
 ```
 
 
@@ -483,7 +572,7 @@ withNothing()
 ###### fn datasource.generalOptions.showOnDashboard.withValueOnly
 
 ```jsonnet
-withValueOnly()
+datasource.generalOptions.showOnDashboard.withValueOnly()
 ```
 
 
@@ -494,38 +583,56 @@ withValueOnly()
 ##### fn datasource.selectionOptions.withIncludeAll
 
 ```jsonnet
-withIncludeAll(value=true, customAllValue)
+datasource.selectionOptions.withIncludeAll(value=true, customAllValue)
 ```
+
+PARAMETERS:
+
+* **value** (`bool`)
+   - default value: `true`
+* **customAllValue** (`bool`)
 
 `withIncludeAll` enables an option to include all variables.
 
 Optionally you can set a `customAllValue`.
 
-
 ##### fn datasource.selectionOptions.withMulti
 
 ```jsonnet
-withMulti(value=true)
+datasource.selectionOptions.withMulti(value=true)
 ```
 
-Enable selecting multiple values.
+PARAMETERS:
 
+* **value** (`bool`)
+   - default value: `true`
+
+Enable selecting multiple values.
 ### obj interval
 
 
 #### fn interval.new
 
 ```jsonnet
-new(name, values)
+interval.new(name, values)
 ```
 
-`new` creates an interval template variable.
+PARAMETERS:
 
+* **name** (`string`)
+* **values** (`array`)
+
+`new` creates an interval template variable.
 #### fn interval.withAutoOption
 
 ```jsonnet
-withAutoOption(count, minInterval)
+interval.withAutoOption(count, minInterval)
 ```
+
+PARAMETERS:
+
+* **count** (`number`)
+* **minInterval** (`string`)
 
 `withAutoOption` adds an options to dynamically calculate interval by dividing
 time range by the count specified.
@@ -533,41 +640,54 @@ time range by the count specified.
 `minInterval' has to be either unit-less or end with one of the following units:
 "y, M, w, d, h, m, s, ms".
 
-
 #### obj interval.generalOptions
 
 
 ##### fn interval.generalOptions.withCurrent
 
 ```jsonnet
-withCurrent(key, value="<same-as-key>")
+interval.generalOptions.withCurrent(key, value="<same-as-key>")
 ```
 
-`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
+PARAMETERS:
 
+* **key** (`any`)
+* **value** (`any`)
+   - default value: `"<same-as-key>"`
+
+`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
 
 ##### fn interval.generalOptions.withDescription
 
 ```jsonnet
-withDescription(value)
+interval.generalOptions.withDescription(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn interval.generalOptions.withLabel
 
 ```jsonnet
-withLabel(value)
+interval.generalOptions.withLabel(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn interval.generalOptions.withName
 
 ```jsonnet
-withName(value)
+interval.generalOptions.withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj interval.generalOptions.showOnDashboard
@@ -576,7 +696,7 @@ withName(value)
 ###### fn interval.generalOptions.showOnDashboard.withLabelAndValue
 
 ```jsonnet
-withLabelAndValue()
+interval.generalOptions.showOnDashboard.withLabelAndValue()
 ```
 
 
@@ -584,7 +704,7 @@ withLabelAndValue()
 ###### fn interval.generalOptions.showOnDashboard.withNothing
 
 ```jsonnet
-withNothing()
+interval.generalOptions.showOnDashboard.withNothing()
 ```
 
 
@@ -592,7 +712,7 @@ withNothing()
 ###### fn interval.generalOptions.showOnDashboard.withValueOnly
 
 ```jsonnet
-withValueOnly()
+interval.generalOptions.showOnDashboard.withValueOnly()
 ```
 
 
@@ -603,46 +723,72 @@ withValueOnly()
 #### fn query.new
 
 ```jsonnet
-new(name, query="")
+query.new(name, query="")
 ```
+
+PARAMETERS:
+
+* **name** (`string`)
+* **query** (`string`)
+   - default value: `""`
 
 Create a query template variable.
 
 `query` argument is optional, this can also be set with `query.queryTypes`.
 
-
 #### fn query.withDatasource
 
 ```jsonnet
-withDatasource(type, uid)
+query.withDatasource(type, uid)
 ```
 
-Select a datasource for the variable template query.
+PARAMETERS:
 
+* **type** (`string`)
+* **uid** (`string`)
+
+Select a datasource for the variable template query.
 #### fn query.withDatasourceFromVariable
 
 ```jsonnet
-withDatasourceFromVariable(variable)
+query.withDatasourceFromVariable(variable)
 ```
 
-Select the datasource from another template variable.
+PARAMETERS:
 
+* **variable** (`object`)
+
+Select the datasource from another template variable.
 #### fn query.withRegex
 
 ```jsonnet
-withRegex(value)
+query.withRegex(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 `withRegex` can extract part of a series name or metric node segment. Named
 capture groups can be used to separate the display text and value
 ([see examples](https://grafana.com/docs/grafana/latest/variables/filter-variables-with-regex#filter-and-modify-using-named-text-and-value-capture-groups)).
 
-
 #### fn query.withSort
 
 ```jsonnet
-withSort(i=0, type="alphabetical", asc=true, caseInsensitive=false)
+query.withSort(i=0, type="alphabetical", asc=true, caseInsensitive=false)
 ```
+
+PARAMETERS:
+
+* **i** (`number`)
+   - default value: `0`
+* **type** (`string`)
+   - default value: `"alphabetical"`
+* **asc** (`bool`)
+   - default value: `true`
+* **caseInsensitive** (`bool`)
+   - default value: `false`
 
 Choose how to sort the values in the dropdown.
 
@@ -659,41 +805,54 @@ The numerical values are:
 - 5 - Alphabetical (case-insensitive, asc)
 - 6 - Alphabetical (case-insensitive, desc)
 
-
 #### obj query.generalOptions
 
 
 ##### fn query.generalOptions.withCurrent
 
 ```jsonnet
-withCurrent(key, value="<same-as-key>")
+query.generalOptions.withCurrent(key, value="<same-as-key>")
 ```
 
-`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
+PARAMETERS:
 
+* **key** (`any`)
+* **value** (`any`)
+   - default value: `"<same-as-key>"`
+
+`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
 
 ##### fn query.generalOptions.withDescription
 
 ```jsonnet
-withDescription(value)
+query.generalOptions.withDescription(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn query.generalOptions.withLabel
 
 ```jsonnet
-withLabel(value)
+query.generalOptions.withLabel(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn query.generalOptions.withName
 
 ```jsonnet
-withName(value)
+query.generalOptions.withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj query.generalOptions.showOnDashboard
@@ -702,7 +861,7 @@ withName(value)
 ###### fn query.generalOptions.showOnDashboard.withLabelAndValue
 
 ```jsonnet
-withLabelAndValue()
+query.generalOptions.showOnDashboard.withLabelAndValue()
 ```
 
 
@@ -710,7 +869,7 @@ withLabelAndValue()
 ###### fn query.generalOptions.showOnDashboard.withNothing
 
 ```jsonnet
-withNothing()
+query.generalOptions.showOnDashboard.withNothing()
 ```
 
 
@@ -718,7 +877,7 @@ withNothing()
 ###### fn query.generalOptions.showOnDashboard.withValueOnly
 
 ```jsonnet
-withValueOnly()
+query.generalOptions.showOnDashboard.withValueOnly()
 ```
 
 
@@ -729,97 +888,130 @@ withValueOnly()
 ##### fn query.queryTypes.withLabelValues
 
 ```jsonnet
-withLabelValues(label, metric="")
+query.queryTypes.withLabelValues(label, metric="")
 ```
 
-Construct a Prometheus template variable using `label_values()`.
+PARAMETERS:
 
+* **label** (`string`)
+* **metric** (`string`)
+   - default value: `""`
+
+Construct a Prometheus template variable using `label_values()`.
 #### obj query.refresh
 
 
 ##### fn query.refresh.onLoad
 
 ```jsonnet
-onLoad()
+query.refresh.onLoad()
 ```
 
-Refresh label values on dashboard load.
 
+Refresh label values on dashboard load.
 ##### fn query.refresh.onTime
 
 ```jsonnet
-onTime()
+query.refresh.onTime()
 ```
 
-Refresh label values on time range change.
 
+Refresh label values on time range change.
 #### obj query.selectionOptions
 
 
 ##### fn query.selectionOptions.withIncludeAll
 
 ```jsonnet
-withIncludeAll(value=true, customAllValue)
+query.selectionOptions.withIncludeAll(value=true, customAllValue)
 ```
+
+PARAMETERS:
+
+* **value** (`bool`)
+   - default value: `true`
+* **customAllValue** (`bool`)
 
 `withIncludeAll` enables an option to include all variables.
 
 Optionally you can set a `customAllValue`.
 
-
 ##### fn query.selectionOptions.withMulti
 
 ```jsonnet
-withMulti(value=true)
+query.selectionOptions.withMulti(value=true)
 ```
 
-Enable selecting multiple values.
+PARAMETERS:
 
+* **value** (`bool`)
+   - default value: `true`
+
+Enable selecting multiple values.
 ### obj textbox
 
 
 #### fn textbox.new
 
 ```jsonnet
-new(name, default="")
+textbox.new(name, default="")
 ```
 
-`new` creates a textbox template variable.
+PARAMETERS:
 
+* **name** (`string`)
+* **default** (`string`)
+   - default value: `""`
+
+`new` creates a textbox template variable.
 #### obj textbox.generalOptions
 
 
 ##### fn textbox.generalOptions.withCurrent
 
 ```jsonnet
-withCurrent(key, value="<same-as-key>")
+textbox.generalOptions.withCurrent(key, value="<same-as-key>")
 ```
 
-`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
+PARAMETERS:
 
+* **key** (`any`)
+* **value** (`any`)
+   - default value: `"<same-as-key>"`
+
+`withCurrent` sets the currently selected value of a variable. If key and value are different, both need to be given.
 
 ##### fn textbox.generalOptions.withDescription
 
 ```jsonnet
-withDescription(value)
+textbox.generalOptions.withDescription(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn textbox.generalOptions.withLabel
 
 ```jsonnet
-withLabel(value)
+textbox.generalOptions.withLabel(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn textbox.generalOptions.withName
 
 ```jsonnet
-withName(value)
+textbox.generalOptions.withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj textbox.generalOptions.showOnDashboard
@@ -828,7 +1020,7 @@ withName(value)
 ###### fn textbox.generalOptions.showOnDashboard.withLabelAndValue
 
 ```jsonnet
-withLabelAndValue()
+textbox.generalOptions.showOnDashboard.withLabelAndValue()
 ```
 
 
@@ -836,7 +1028,7 @@ withLabelAndValue()
 ###### fn textbox.generalOptions.showOnDashboard.withNothing
 
 ```jsonnet
-withNothing()
+textbox.generalOptions.showOnDashboard.withNothing()
 ```
 
 
@@ -844,7 +1036,7 @@ withNothing()
 ###### fn textbox.generalOptions.showOnDashboard.withValueOnly
 
 ```jsonnet
-withValueOnly()
+textbox.generalOptions.showOnDashboard.withValueOnly()
 ```
 
 

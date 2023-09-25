@@ -15,12 +15,20 @@
 withDesc(value=true)
 ```
 
-Flag used to indicate descending sort order
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Flag used to indicate descending sort order
 ### fn withDisplayName
 
 ```jsonnet
 withDisplayName(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 Sets the display name of the field to sort by

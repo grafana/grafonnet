@@ -15,6 +15,9 @@
 withLabel(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withQuery
@@ -23,4 +26,7 @@ withLabel(value)
 withQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 

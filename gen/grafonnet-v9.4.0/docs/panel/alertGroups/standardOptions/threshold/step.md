@@ -17,31 +17,44 @@
 withColor(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`string`)
+
+TODO docs
 ### fn withIndex
 
 ```jsonnet
 withIndex(value)
 ```
 
-Threshold index, an old property that is not needed an should only appear in older dashboards
+PARAMETERS:
 
+* **value** (`integer`)
+
+Threshold index, an old property that is not needed an should only appear in older dashboards
 ### fn withState
 
 ```jsonnet
 withState(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
 TODO docs
 TODO are the values here enumerable into a disjunction?
 Some seem to be listed in typescript comment
-
 ### fn withValue
 
 ```jsonnet
 withValue(value)
 ```
+
+PARAMETERS:
+
+* **value** (`number`)
 
 TODO docs
 FIXME the corresponding typescript field is required/non-optional, but nulls currently appear here when serializing -Infinity to JSON

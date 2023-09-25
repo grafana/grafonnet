@@ -19,44 +19,66 @@ grafonnet.publicdashboard
 withAccessToken(value)
 ```
 
-Unique public access token
+PARAMETERS:
 
+* **value** (`string`)
+
+Unique public access token
 ### fn withAnnotationsEnabled
 
 ```jsonnet
 withAnnotationsEnabled(value=true)
 ```
 
-Flag that indicates if annotations are enabled
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Flag that indicates if annotations are enabled
 ### fn withDashboardUid
 
 ```jsonnet
 withDashboardUid(value)
 ```
 
-Dashboard unique identifier referenced by this public dashboard
+PARAMETERS:
 
+* **value** (`string`)
+
+Dashboard unique identifier referenced by this public dashboard
 ### fn withIsEnabled
 
 ```jsonnet
 withIsEnabled(value=true)
 ```
 
-Flag that indicates if the public dashboard is enabled
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Flag that indicates if the public dashboard is enabled
 ### fn withTimeSelectionEnabled
 
 ```jsonnet
 withTimeSelectionEnabled(value=true)
 ```
 
-Flag that indicates if the time range picker is enabled
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Flag that indicates if the time range picker is enabled
 ### fn withUid
 
 ```jsonnet
 withUid(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 Unique public dashboard identifier

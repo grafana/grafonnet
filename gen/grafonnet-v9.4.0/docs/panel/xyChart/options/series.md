@@ -72,6 +72,10 @@
 withAxisCenteredZero(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ### fn withAxisColorMode
@@ -80,16 +84,22 @@ withAxisCenteredZero(value=true)
 withAxisColorMode(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"text"`, `"series"`
+
 TODO docs
-
-Accepted values for `value` are "text", "series"
-
 ### fn withAxisGridShow
 
 ```jsonnet
 withAxisGridShow(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ### fn withAxisLabel
@@ -98,6 +108,9 @@ withAxisGridShow(value=true)
 withAxisLabel(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withAxisPlacement
@@ -106,16 +119,21 @@ withAxisLabel(value)
 withAxisPlacement(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"top"`, `"right"`, `"bottom"`, `"left"`, `"hidden"`
+
 TODO docs
-
-Accepted values for `value` are "auto", "top", "right", "bottom", "left", "hidden"
-
 ### fn withAxisSoftMax
 
 ```jsonnet
 withAxisSoftMax(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 ### fn withAxisSoftMin
@@ -124,6 +142,9 @@ withAxisSoftMax(value)
 withAxisSoftMin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 ### fn withAxisWidth
@@ -132,6 +153,9 @@ withAxisSoftMin(value)
 withAxisWidth(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 ### fn withHideFrom
@@ -140,32 +164,43 @@ withAxisWidth(value)
 withHideFrom(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ### fn withHideFromMixin
 
 ```jsonnet
 withHideFromMixin(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ### fn withLabel
 
 ```jsonnet
 withLabel(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"never"`, `"always"`
+
 TODO docs
-
-Accepted values for `value` are "auto", "never", "always"
-
 ### fn withLabelValue
 
 ```jsonnet
 withLabelValue(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withLabelValueMixin
@@ -174,6 +209,9 @@ withLabelValue(value)
 withLabelValueMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withLineColor
@@ -182,38 +220,53 @@ withLabelValueMixin(value)
 withLineColor(value)
 ```
 
-This is actually an empty interface used mainly for naming?
+PARAMETERS:
 
+* **value** (`object`)
+
+This is actually an empty interface used mainly for naming?
 ### fn withLineColorMixin
 
 ```jsonnet
 withLineColorMixin(value)
 ```
 
-This is actually an empty interface used mainly for naming?
+PARAMETERS:
 
+* **value** (`object`)
+
+This is actually an empty interface used mainly for naming?
 ### fn withLineStyle
 
 ```jsonnet
 withLineStyle(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ### fn withLineStyleMixin
 
 ```jsonnet
 withLineStyleMixin(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ### fn withLineWidth
 
 ```jsonnet
 withLineWidth(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 ### fn withName
@@ -222,6 +275,9 @@ withLineWidth(value)
 withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withPointColor
@@ -230,22 +286,31 @@ withName(value)
 withPointColor(value)
 ```
 
-This is actually an empty interface used mainly for naming?
+PARAMETERS:
 
+* **value** (`object`)
+
+This is actually an empty interface used mainly for naming?
 ### fn withPointColorMixin
 
 ```jsonnet
 withPointColorMixin(value)
 ```
 
-This is actually an empty interface used mainly for naming?
+PARAMETERS:
 
+* **value** (`object`)
+
+This is actually an empty interface used mainly for naming?
 ### fn withPointSize
 
 ```jsonnet
 withPointSize(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withPointSizeMixin
@@ -254,6 +319,9 @@ withPointSize(value)
 withPointSizeMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withScaleDistribution
@@ -262,25 +330,33 @@ withPointSizeMixin(value)
 withScaleDistribution(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ### fn withScaleDistributionMixin
 
 ```jsonnet
 withScaleDistributionMixin(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ### fn withShow
 
 ```jsonnet
 withShow(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"points"`, `"lines"`, `"points+lines"`
 
-Accepted values for `value` are "points", "lines", "points+lines"
 
 ### fn withX
 
@@ -288,6 +364,9 @@ Accepted values for `value` are "points", "lines", "points+lines"
 withX(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withY
@@ -296,6 +375,9 @@ withX(value)
 withY(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj hideFrom
@@ -304,25 +386,37 @@ withY(value)
 #### fn hideFrom.withLegend
 
 ```jsonnet
-withLegend(value=true)
+hideFrom.withLegend(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 #### fn hideFrom.withTooltip
 
 ```jsonnet
-withTooltip(value=true)
+hideFrom.withTooltip(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 #### fn hideFrom.withViz
 
 ```jsonnet
-withViz(value=true)
+hideFrom.withViz(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ### obj labelValue
@@ -331,36 +425,47 @@ withViz(value=true)
 #### fn labelValue.withField
 
 ```jsonnet
-withField(value)
+labelValue.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn labelValue.withFixed
 
 ```jsonnet
-withFixed(value)
+labelValue.withFixed(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn labelValue.withFixedMixin
 
 ```jsonnet
-withFixedMixin(value)
+labelValue.withFixedMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn labelValue.withMode
 
 ```jsonnet
-withMode(value)
+labelValue.withMode(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"fixed"`, `"field"`, `"template"`
 
-Accepted values for `value` are "fixed", "field", "template"
 
 ### obj lineColor
 
@@ -368,25 +473,34 @@ Accepted values for `value` are "fixed", "field", "template"
 #### fn lineColor.withField
 
 ```jsonnet
-withField(value)
+lineColor.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn lineColor.withFixed
 
 ```jsonnet
-withFixed(value)
+lineColor.withFixed(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn lineColor.withFixedMixin
 
 ```jsonnet
-withFixedMixin(value)
+lineColor.withFixedMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj lineStyle
@@ -395,28 +509,36 @@ withFixedMixin(value)
 #### fn lineStyle.withDash
 
 ```jsonnet
-withDash(value)
+lineStyle.withDash(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 #### fn lineStyle.withDashMixin
 
 ```jsonnet
-withDashMixin(value)
+lineStyle.withDashMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 #### fn lineStyle.withFill
 
 ```jsonnet
-withFill(value)
+lineStyle.withFill(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"solid"`, `"dash"`, `"dot"`, `"square"`
 
-Accepted values for `value` are "solid", "dash", "dot", "square"
 
 ### obj pointColor
 
@@ -424,25 +546,34 @@ Accepted values for `value` are "solid", "dash", "dot", "square"
 #### fn pointColor.withField
 
 ```jsonnet
-withField(value)
+pointColor.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn pointColor.withFixed
 
 ```jsonnet
-withFixed(value)
+pointColor.withFixed(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn pointColor.withFixedMixin
 
 ```jsonnet
-withFixedMixin(value)
+pointColor.withFixedMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj pointSize
@@ -451,41 +582,56 @@ withFixedMixin(value)
 #### fn pointSize.withField
 
 ```jsonnet
-withField(value)
+pointSize.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn pointSize.withFixed
 
 ```jsonnet
-withFixed(value)
+pointSize.withFixed(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn pointSize.withFixedMixin
 
 ```jsonnet
-withFixedMixin(value)
+pointSize.withFixedMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn pointSize.withMax
 
 ```jsonnet
-withMax(value)
+pointSize.withMax(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 #### fn pointSize.withMin
 
 ```jsonnet
-withMin(value)
+pointSize.withMin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 ### obj scaleDistribution
@@ -494,25 +640,34 @@ withMin(value)
 #### fn scaleDistribution.withLinearThreshold
 
 ```jsonnet
-withLinearThreshold(value)
+scaleDistribution.withLinearThreshold(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 #### fn scaleDistribution.withLog
 
 ```jsonnet
-withLog(value)
+scaleDistribution.withLog(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 #### fn scaleDistribution.withType
 
 ```jsonnet
-withType(value)
+scaleDistribution.withType(value)
 ```
 
-TODO docs
+PARAMETERS:
 
-Accepted values for `value` are "linear", "log", "ordinal", "symlog"
+* **value** (`string`)
+   - valid values: `"linear"`, `"log"`, `"ordinal"`, `"symlog"`
+
+TODO docs

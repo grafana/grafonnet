@@ -18,36 +18,52 @@
 withDimension(value)
 ```
 
-Name of Dimension to be filtered on.
+PARAMETERS:
 
+* **value** (`string`)
+
+Name of Dimension to be filtered on.
 ### fn withFilter
 
 ```jsonnet
 withFilter(value)
 ```
 
-@deprecated filter is deprecated in favour of filters to support multiselect.
+PARAMETERS:
 
+* **value** (`string`)
+
+@deprecated filter is deprecated in favour of filters to support multiselect.
 ### fn withFilters
 
 ```jsonnet
 withFilters(value)
 ```
 
-Values to match with the filter.
+PARAMETERS:
 
+* **value** (`array`)
+
+Values to match with the filter.
 ### fn withFiltersMixin
 
 ```jsonnet
 withFiltersMixin(value)
 ```
 
-Values to match with the filter.
+PARAMETERS:
 
+* **value** (`array`)
+
+Values to match with the filter.
 ### fn withOperator
 
 ```jsonnet
 withOperator(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 String denoting the filter operation. Supports 'eq' - equals,'ne' - not equals, 'sw' - starts with. Note that some dimensions may not support all operators.

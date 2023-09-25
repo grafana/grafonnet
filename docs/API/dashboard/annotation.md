@@ -37,30 +37,43 @@
 withDatasource(value)
 ```
 
-TODO: Should be DataSourceRef
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO: Should be DataSourceRef
 ### fn withDatasourceMixin
 
 ```jsonnet
 withDatasourceMixin(value)
 ```
 
-TODO: Should be DataSourceRef
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO: Should be DataSourceRef
 ### fn withEnable
 
 ```jsonnet
 withEnable(value=true)
 ```
 
-When enabled the annotation query is issued with every dashboard refresh
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+When enabled the annotation query is issued with every dashboard refresh
 ### fn withFilter
 
 ```jsonnet
 withFilter(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withFilterMixin
@@ -69,6 +82,9 @@ withFilter(value)
 withFilterMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withHide
@@ -77,68 +93,93 @@ withFilterMixin(value)
 withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
 Annotation queries can be toggled on or off at the top of the dashboard.
 When hide is true, the toggle is not shown in the dashboard.
-
 ### fn withIconColor
 
 ```jsonnet
 withIconColor(value)
 ```
 
-Color to use for the annotation event markers
+PARAMETERS:
 
+* **value** (`string`)
+
+Color to use for the annotation event markers
 ### fn withName
 
 ```jsonnet
 withName(value)
 ```
 
-Name of annotation.
+PARAMETERS:
 
+* **value** (`string`)
+
+Name of annotation.
 ### fn withTarget
 
 ```jsonnet
 withTarget(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
+
 TODO: this should be a regular DataQuery that depends on the selected dashboard
 these match the properties of the "grafana" datasouce that is default in most dashboards
-
 ### fn withTargetMixin
 
 ```jsonnet
 withTargetMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
+
 TODO: this should be a regular DataQuery that depends on the selected dashboard
 these match the properties of the "grafana" datasouce that is default in most dashboards
-
 ### fn withType
 
 ```jsonnet
 withType(value)
 ```
 
-TODO -- this should not exist here, it is based on the --grafana-- datasource
+PARAMETERS:
 
+* **value** (`string`)
+
+TODO -- this should not exist here, it is based on the --grafana-- datasource
 ### obj datasource
 
 
 #### fn datasource.withType
 
 ```jsonnet
-withType(value)
+datasource.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn datasource.withUid
 
 ```jsonnet
-withUid(value)
+datasource.withUid(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj filter
@@ -147,71 +188,98 @@ withUid(value)
 #### fn filter.withExclude
 
 ```jsonnet
-withExclude(value=true)
+filter.withExclude(value=true)
 ```
 
-Should the specified panels be included or excluded
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Should the specified panels be included or excluded
 #### fn filter.withIds
 
 ```jsonnet
-withIds(value)
+filter.withIds(value)
 ```
 
-Panel IDs that should be included or excluded
+PARAMETERS:
 
+* **value** (`array`)
+
+Panel IDs that should be included or excluded
 #### fn filter.withIdsMixin
 
 ```jsonnet
-withIdsMixin(value)
+filter.withIdsMixin(value)
 ```
 
-Panel IDs that should be included or excluded
+PARAMETERS:
 
+* **value** (`array`)
+
+Panel IDs that should be included or excluded
 ### obj target
 
 
 #### fn target.withLimit
 
 ```jsonnet
-withLimit(value)
+target.withLimit(value)
 ```
+
+PARAMETERS:
+
+* **value** (`integer`)
 
 Only required/valid for the grafana datasource...
 but code+tests is already depending on it so hard to change
-
 #### fn target.withMatchAny
 
 ```jsonnet
-withMatchAny(value=true)
+target.withMatchAny(value=true)
 ```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 Only required/valid for the grafana datasource...
 but code+tests is already depending on it so hard to change
-
 #### fn target.withTags
 
 ```jsonnet
-withTags(value)
+target.withTags(value)
 ```
+
+PARAMETERS:
+
+* **value** (`array`)
 
 Only required/valid for the grafana datasource...
 but code+tests is already depending on it so hard to change
-
 #### fn target.withTagsMixin
 
 ```jsonnet
-withTagsMixin(value)
+target.withTagsMixin(value)
 ```
+
+PARAMETERS:
+
+* **value** (`array`)
 
 Only required/valid for the grafana datasource...
 but code+tests is already depending on it so hard to change
-
 #### fn target.withType
 
 ```jsonnet
-withType(value)
+target.withType(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 Only required/valid for the grafana datasource...
 but code+tests is already depending on it so hard to change

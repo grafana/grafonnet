@@ -24,6 +24,10 @@
 withAsDropdown(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ### fn withIcon
@@ -32,6 +36,9 @@ withAsDropdown(value=true)
 withIcon(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withIncludeVars
@@ -40,6 +47,10 @@ withIcon(value)
 withIncludeVars(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ### fn withKeepTime
@@ -48,6 +59,10 @@ withIncludeVars(value=true)
 withKeepTime(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ### fn withTags
@@ -56,6 +71,9 @@ withKeepTime(value=true)
 withTags(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ### fn withTagsMixin
@@ -64,6 +82,9 @@ withTags(value)
 withTagsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ### fn withTargetBlank
@@ -72,6 +93,10 @@ withTagsMixin(value)
 withTargetBlank(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ### fn withTitle
@@ -80,6 +105,9 @@ withTargetBlank(value=true)
 withTitle(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withTooltip
@@ -88,6 +116,9 @@ withTitle(value)
 withTooltip(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withType
@@ -96,14 +127,19 @@ withTooltip(value)
 withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"link"`, `"dashboards"`
+
 TODO docs
-
-Accepted values for `value` are "link", "dashboards"
-
 ### fn withUrl
 
 ```jsonnet
 withUrl(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 

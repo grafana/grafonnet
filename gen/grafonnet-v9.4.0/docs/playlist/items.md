@@ -16,23 +16,32 @@
 withTitle(value)
 ```
 
-Title is an unused property -- it will be removed in the future
+PARAMETERS:
 
+* **value** (`string`)
+
+Title is an unused property -- it will be removed in the future
 ### fn withType
 
 ```jsonnet
 withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"dashboard_by_uid"`, `"dashboard_by_id"`, `"dashboard_by_tag"`
+
 Type of the item.
-
-Accepted values for `value` are "dashboard_by_uid", "dashboard_by_id", "dashboard_by_tag"
-
 ### fn withValue
 
 ```jsonnet
 withValue(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 Value depends on type and describes the playlist item.
 

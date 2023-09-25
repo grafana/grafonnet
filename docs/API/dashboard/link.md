@@ -44,11 +44,15 @@ g.dashboard.new('Title dashboard')
 #### fn dashboards.new
 
 ```jsonnet
-new(title, tags)
+dashboards.new(title, tags)
 ```
 
-Create links to dashboards based on `tags`.
+PARAMETERS:
 
+* **title** (`string`)
+* **tags** (`array`)
+
+Create links to dashboards based on `tags`.
 
 #### obj dashboards.options
 
@@ -56,33 +60,49 @@ Create links to dashboards based on `tags`.
 ##### fn dashboards.options.withAsDropdown
 
 ```jsonnet
-withAsDropdown(value=true)
+dashboards.options.withAsDropdown(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn dashboards.options.withIncludeVars
 
 ```jsonnet
-withIncludeVars(value=true)
+dashboards.options.withIncludeVars(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn dashboards.options.withKeepTime
 
 ```jsonnet
-withKeepTime(value=true)
+dashboards.options.withKeepTime(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn dashboards.options.withTargetBlank
 
 ```jsonnet
-withTargetBlank(value=true)
+dashboards.options.withTargetBlank(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ### obj link
@@ -91,26 +111,36 @@ withTargetBlank(value=true)
 #### fn link.new
 
 ```jsonnet
-new(title, url)
+link.new(title, url)
 ```
 
-Create link to an arbitrary URL.
+PARAMETERS:
 
+* **title** (`string`)
+* **url** (`string`)
+
+Create link to an arbitrary URL.
 
 #### fn link.withIcon
 
 ```jsonnet
-withIcon(value)
+link.withIcon(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn link.withTooltip
 
 ```jsonnet
-withTooltip(value)
+link.withTooltip(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj link.options
@@ -119,31 +149,47 @@ withTooltip(value)
 ##### fn link.options.withAsDropdown
 
 ```jsonnet
-withAsDropdown(value=true)
+link.options.withAsDropdown(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn link.options.withIncludeVars
 
 ```jsonnet
-withIncludeVars(value=true)
+link.options.withIncludeVars(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn link.options.withKeepTime
 
 ```jsonnet
-withKeepTime(value=true)
+link.options.withKeepTime(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn link.options.withTargetBlank
 
 ```jsonnet
-withTargetBlank(value=true)
+link.options.withTargetBlank(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 

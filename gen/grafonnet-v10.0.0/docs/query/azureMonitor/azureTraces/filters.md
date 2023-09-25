@@ -17,28 +17,41 @@
 withFilters(value)
 ```
 
-Values to filter by.
+PARAMETERS:
 
+* **value** (`array`)
+
+Values to filter by.
 ### fn withFiltersMixin
 
 ```jsonnet
 withFiltersMixin(value)
 ```
 
-Values to filter by.
+PARAMETERS:
 
+* **value** (`array`)
+
+Values to filter by.
 ### fn withOperation
 
 ```jsonnet
 withOperation(value)
 ```
 
-Comparison operator to use. Either equals or not equals.
+PARAMETERS:
 
+* **value** (`string`)
+
+Comparison operator to use. Either equals or not equals.
 ### fn withProperty
 
 ```jsonnet
 withProperty(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 Property name, auto-populated based on available traces.
