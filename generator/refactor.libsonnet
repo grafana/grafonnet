@@ -42,7 +42,26 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
   copyFields(ast, toCopy):
     [
       local obj = jutils.getFieldFromPath(ast, copy.from);
-      jutils.setFieldsAtPath(copy.to, obj.expr.members)
+      local splitFromPath = xtd.string.splitEscape(copy.to, '.');
+      local lastKey = xtd.array.slice(splitFromPath, -1)[0];
+      local updated = self.updatePackageName(lastKey, obj.expr.members);
+      jutils.setFieldsAtPath(copy.to, updated)
       for copy in toCopy
     ],
+
+  updatePackageName(name, fields):
+    std.map(
+      function(field)
+        if jutils.isField(field)
+           && jutils.fieldnameValue(field.fieldname) == '#'
+           && jutils.type(field.expr) == 'literal'
+        then
+          j.field.field(
+            j.fieldname.string('#'),
+            j.literal(d.package.newSub(name, '')),
+            nobreak=true,
+          )
+        else field,
+      fields
+    ),
 }

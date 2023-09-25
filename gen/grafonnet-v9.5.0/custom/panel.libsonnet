@@ -42,8 +42,6 @@ local getPanelName(type) =
   '#gridPos': {},  // use withGridPos instead, a bit more concise.
   local gridPos = self.gridPos,
   panelOptions+: {
-    link+: { '#':: d.package.newSub('link', '') },
-
     '#withPluginVersion': {},
 
     '#withGridPos': d.func.new(
@@ -69,8 +67,6 @@ local getPanelName(type) =
   '#datasource':: {},  // use withDatasource instead, bit more concise
   local datasource = self.datasource,
   queryOptions+: {
-    transformation+: { '#':: d.package.newSub('transformation', '') },
-
     '#withDatasource':: d.func.new(
       |||
         `withDatasource` sets the datasource for all queries in a panel.
@@ -88,8 +84,6 @@ local getPanelName(type) =
   },
 
   standardOptions+: {
-
-    mapping+: { '#':: d.package.newSub('mapping', '') },
     threshold+: { step+: { '#':: d.package.newSub('threshold.step', '') } },
 
     local overrides = super.override,

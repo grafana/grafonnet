@@ -27,7 +27,7 @@
       withType(value): { type: value },
       link+:
         {
-          '#': { help: '', name: 'links' },
+          '#': { help: '', name: 'link' },
           '#withAsDropdown': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
           withAsDropdown(value=true): { asDropdown: value },
           '#withIcon': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
@@ -88,7 +88,7 @@
                                                             else [value]) },
       transformation+:
         {
-          '#': { help: '', name: 'transformations' },
+          '#': { help: '', name: 'transformation' },
           '#withDisabled': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Disabled transformations are skipped' } },
           withDisabled(value=true): { disabled: value },
           '#withFilter': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
@@ -170,7 +170,7 @@
         },
       mapping+:
         {
-          '#': { help: '', name: 'mappings' },
+          '#': { help: '', name: 'mapping' },
           ValueMap+:
             {
               '#withOptions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
@@ -276,7 +276,7 @@
         {
           step+:
             {
-              '#': { help: '', name: 'steps' },
+              '#': { help: '', name: 'step' },
               '#withColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'TODO docs' } },
               withColor(value): { color: value },
               '#withIndex': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'integer' }], help: 'Threshold index, an old property that is not needed an should only appear in older dashboards' } },
@@ -289,7 +289,7 @@
         },
       override+:
         {
-          '#': { help: '', name: 'overrides' },
+          '#': { help: '', name: 'override' },
           '#withMatcher': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
           withMatcher(value): { matcher: value },
           '#withMatcherMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: '' } },
