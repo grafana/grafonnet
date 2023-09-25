@@ -17,6 +17,7 @@
                                                       else [value]) } },
       list+:
         {
+          '#': { help: '', name: 'list' },
           '#withBuiltIn': { 'function': { args: [{ default: 0, enums: null, name: 'value', type: 'integer' }], help: '' } },
           withBuiltIn(value=0): { builtIn: value },
           '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'Datasource to use for annotation.' } },
@@ -89,6 +90,7 @@
                                     else [value]) },
   links+:
     {
+      '#': { help: '', name: 'links' },
       '#withAsDropdown': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
       withAsDropdown(value=true): { asDropdown: value },
       '#withIcon': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
@@ -189,6 +191,7 @@
                                                      else [value]) } },
       list+:
         {
+          '#': { help: '', name: 'list' },
           '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'Ref to a DataSource instance' } },
           withDatasource(value): { datasource: value },
           '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'object' }], help: 'Ref to a DataSource instance' } },

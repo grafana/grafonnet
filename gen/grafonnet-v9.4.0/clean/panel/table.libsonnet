@@ -65,6 +65,7 @@
                                                       else [value]) } },
       sortBy+:
         {
+          '#': { help: '', name: 'sortBy' },
           '#withDesc': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'Flag used to indicate descending sort order' } },
           withDesc(value=true): { desc: value },
           '#withDisplayName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Sets the display name of the field to sort by' } },

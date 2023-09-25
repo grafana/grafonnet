@@ -78,6 +78,7 @@
                                                       else [value]) } },
       layers+:
         {
+          '#': { help: '', name: 'layers' },
           '#withConfig': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Custom options depending on the type' } },
           withConfig(value): { config: value },
           '#withFilterData': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Defines a frame MatcherConfig that may filter data for the given layer' } },

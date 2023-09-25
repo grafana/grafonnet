@@ -213,7 +213,7 @@ local utils = import './utils.libsonnet';
         },
         {
           from: 'templating',
-          to: 'templating',
+          to: 'variable',
         },
       ],
     },
@@ -296,23 +296,23 @@ local utils = import './utils.libsonnet';
         },
         {
           from: 'links',
-          to: 'link',
+          to: 'panelOptions.link',
         },
         {
           from: 'transformations',
-          to: 'transformation',
+          to: 'queryOptions.transformation',
         },
         {
           from: 'fieldConfig.defaults.mappings',
-          to: 'valueMapping',
+          to: 'standardOptions.mapping',
         },
         {
           from: 'fieldConfig.defaults.thresholds.steps',
-          to: 'thresholdStep',
+          to: 'standardOptions.threshold.step',
         },
         {
           from: 'fieldConfig.overrides',
-          to: 'fieldOverride',
+          to: 'standardOptions.override',
         },
       ],
 

@@ -27,6 +27,7 @@
                                         else [value]) },
   csvWave+:
     {
+      '#': { help: '', name: 'csvWave' },
       '#withLabels': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
       withLabels(value): { labels: value },
       '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },

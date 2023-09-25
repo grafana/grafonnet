@@ -2,8 +2,7 @@ local util = import '../util/main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
 {
-  '#templating':: {},
-  local var = self.templating.list,
+  local var = super.variable.list,
 
   '#withVariables':
     d.func.new(
@@ -12,7 +11,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       |||,
       args=[d.arg('value', d.T.array)]
     ),
-  withVariables(value): self.templating.withList(value),
+  withVariables(value): super.variable.withList(value),
 
   '#withVariablesMixin':
     d.func.new(
@@ -23,7 +22,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       |||,
       args=[d.arg('value', d.T.array)]
     ),
-  withVariablesMixin(value): self.templating.withListMixin(value),
+  withVariablesMixin(value): super.variable.withListMixin(value),
 
   variable: {
     '#':: d.package.newSub(

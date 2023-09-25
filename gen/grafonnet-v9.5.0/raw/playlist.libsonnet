@@ -13,6 +13,7 @@
                                     else [value]) },
   items+:
     {
+      '#': { help: '', name: 'items' },
       '#withTitle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Title is an unused property -- it will be removed in the future' } },
       withTitle(value): { title: value },
       '#withType': { 'function': { args: [{ default: null, enums: ['dashboard_by_uid', 'dashboard_by_id', 'dashboard_by_tag'], name: 'value', type: 'string' }], help: 'Type of the item.' } },

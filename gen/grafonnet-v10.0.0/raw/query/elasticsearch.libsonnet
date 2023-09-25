@@ -21,6 +21,7 @@
                                               else [value]) },
   bucketAggs+:
     {
+      '#': { help: '', name: 'bucketAggs' },
       DateHistogram+:
         {
           '#withId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
@@ -115,6 +116,7 @@
                                                                  else [value]) } },
               filters+:
                 {
+                  '#': { help: '', name: 'filters' },
                   '#withLabel': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
                   withLabel(value): { label: value },
                   '#withQuery': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
@@ -164,6 +166,7 @@
                                         else [value]) },
   metrics+:
     {
+      '#': { help: '', name: 'metrics' },
       Count+:
         {
           '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: '' } },
@@ -254,6 +257,7 @@
                                                                         else [value]) },
               pipelineVariables+:
                 {
+                  '#': { help: '', name: 'pipelineVariables' },
                   '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
                   withName(value): { name: value },
                   '#withPipelineAgg': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
@@ -297,6 +301,7 @@
                                                                         else [value]) },
               pipelineVariables+:
                 {
+                  '#': { help: '', name: 'pipelineVariables' },
                   '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
                   withName(value): { name: value },
                   '#withPipelineAgg': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },

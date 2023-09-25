@@ -78,6 +78,7 @@
                                                 else [value]) },
       logGroups+:
         {
+          '#': { help: '', name: 'logGroups' },
           '#withAccountId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'AccountId of the log group' } },
           withAccountId(value): { accountId: value },
           '#withAccountLabel': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Label of the log group' } },
@@ -200,6 +201,7 @@
                                                                                else [value]) } } },
                   parameters+:
                     {
+                      '#': { help: '', name: 'parameters' },
                       '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
                       withName(value): { name: value },
                       '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
@@ -246,6 +248,7 @@
                                                                               else [value]) } } },
               parameters+:
                 {
+                  '#': { help: '', name: 'parameters' },
                   '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
                   withName(value): { name: value },
                   '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
@@ -274,6 +277,7 @@
                                                                              else [value]) } } },
               parameters+:
                 {
+                  '#': { help: '', name: 'parameters' },
                   '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
                   withName(value): { name: value },
                   '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: '' } },
