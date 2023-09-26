@@ -45,4 +45,5 @@ jrsonnet -J vendor \
 
 mkdir -p "${REPO_DIR}/docs/assets/"
 cp "${REPO_DIR}/.mkdocs/assets/logo.svg" "${REPO_DIR}/docs/assets/logo.svg"
+cp "${REPO_DIR}/.mkdocs/assets/custom.css" "${REPO_DIR}/docs/assets/custom.css"
 

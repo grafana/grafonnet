@@ -42,22 +42,31 @@ grafonnet.librarypanel
 withDescription(value)
 ```
 
-Panel description
+PARAMETERS:
 
+* **value** (`string`)
+
+Panel description
 ### fn withFolderUid
 
 ```jsonnet
 withFolderUid(value)
 ```
 
-Folder UID
+PARAMETERS:
 
+* **value** (`string`)
+
+Folder UID
 ### fn withMeta
 
 ```jsonnet
 withMeta(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withMetaMixin
@@ -66,6 +75,9 @@ withMeta(value)
 withMetaMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withModel
@@ -74,131 +86,179 @@ withMetaMixin(value)
 withModel(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
+
 TODO: should be the same panel schema defined in dashboard
 Typescript: Omit<Panel, 'gridPos' | 'id' | 'libraryPanel'>;
-
 ### fn withModelMixin
 
 ```jsonnet
 withModelMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
+
 TODO: should be the same panel schema defined in dashboard
 Typescript: Omit<Panel, 'gridPos' | 'id' | 'libraryPanel'>;
-
 ### fn withName
 
 ```jsonnet
 withName(value)
 ```
 
-Panel name (also saved in the model)
+PARAMETERS:
 
+* **value** (`string`)
+
+Panel name (also saved in the model)
 ### fn withSchemaVersion
 
 ```jsonnet
 withSchemaVersion(value)
 ```
 
-Dashboard version when this was saved (zero if unknown)
+PARAMETERS:
 
+* **value** (`integer`)
+
+Dashboard version when this was saved (zero if unknown)
 ### fn withType
 
 ```jsonnet
 withType(value)
 ```
 
-The panel type (from inside the model)
+PARAMETERS:
 
+* **value** (`string`)
+
+The panel type (from inside the model)
 ### fn withUid
 
 ```jsonnet
 withUid(value)
 ```
 
-Library element UID
+PARAMETERS:
 
+* **value** (`string`)
+
+Library element UID
 ### fn withVersion
 
 ```jsonnet
 withVersion(value)
 ```
 
-panel version, incremented each time the dashboard is updated.
+PARAMETERS:
 
+* **value** (`integer`)
+
+panel version, incremented each time the dashboard is updated.
 ### obj meta
 
 
 #### fn meta.withConnectedDashboards
 
 ```jsonnet
-withConnectedDashboards(value)
+meta.withConnectedDashboards(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 #### fn meta.withCreated
 
 ```jsonnet
-withCreated(value)
+meta.withCreated(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn meta.withCreatedBy
 
 ```jsonnet
-withCreatedBy(value)
+meta.withCreatedBy(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn meta.withCreatedByMixin
 
 ```jsonnet
-withCreatedByMixin(value)
+meta.withCreatedByMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn meta.withFolderName
 
 ```jsonnet
-withFolderName(value)
+meta.withFolderName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn meta.withFolderUid
 
 ```jsonnet
-withFolderUid(value)
+meta.withFolderUid(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn meta.withUpdated
 
 ```jsonnet
-withUpdated(value)
+meta.withUpdated(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn meta.withUpdatedBy
 
 ```jsonnet
-withUpdatedBy(value)
+meta.withUpdatedBy(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn meta.withUpdatedByMixin
 
 ```jsonnet
-withUpdatedByMixin(value)
+meta.withUpdatedByMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### obj meta.createdBy
@@ -207,25 +267,34 @@ withUpdatedByMixin(value)
 ##### fn meta.createdBy.withAvatarUrl
 
 ```jsonnet
-withAvatarUrl(value)
+meta.createdBy.withAvatarUrl(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn meta.createdBy.withId
 
 ```jsonnet
-withId(value)
+meta.createdBy.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 ##### fn meta.createdBy.withName
 
 ```jsonnet
-withName(value)
+meta.createdBy.withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj meta.updatedBy
@@ -234,23 +303,32 @@ withName(value)
 ##### fn meta.updatedBy.withAvatarUrl
 
 ```jsonnet
-withAvatarUrl(value)
+meta.updatedBy.withAvatarUrl(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn meta.updatedBy.withId
 
 ```jsonnet
-withId(value)
+meta.updatedBy.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 ##### fn meta.updatedBy.withName
 
 ```jsonnet
-withName(value)
+meta.updatedBy.withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 

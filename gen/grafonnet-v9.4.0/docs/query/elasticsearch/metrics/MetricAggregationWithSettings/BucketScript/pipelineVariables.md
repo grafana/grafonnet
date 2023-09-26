@@ -15,6 +15,9 @@
 withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withPipelineAgg
@@ -23,4 +26,7 @@ withName(value)
 withPipelineAgg(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 

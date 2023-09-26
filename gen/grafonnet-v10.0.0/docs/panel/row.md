@@ -34,14 +34,21 @@ grafonnet.panel.row
 new(title)
 ```
 
-Creates a new row panel with a title.
+PARAMETERS:
 
+* **title** (`string`)
+
+Creates a new row panel with a title.
 ### fn withCollapsed
 
 ```jsonnet
 withCollapsed(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ### fn withDatasource
@@ -50,22 +57,31 @@ withCollapsed(value=true)
 withDatasource(value)
 ```
 
-Name of default datasource.
+PARAMETERS:
 
+* **value** (`object`)
+
+Name of default datasource.
 ### fn withDatasourceMixin
 
 ```jsonnet
 withDatasourceMixin(value)
 ```
 
-Name of default datasource.
+PARAMETERS:
 
+* **value** (`object`)
+
+Name of default datasource.
 ### fn withGridPos
 
 ```jsonnet
 withGridPos(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withGridPosMixin
@@ -74,6 +90,9 @@ withGridPos(value)
 withGridPosMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withId
@@ -82,6 +101,9 @@ withGridPosMixin(value)
 withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 ### fn withPanels
@@ -90,6 +112,9 @@ withId(value)
 withPanels(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ### fn withPanelsMixin
@@ -98,6 +123,9 @@ withPanels(value)
 withPanelsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ### fn withRepeat
@@ -106,14 +134,20 @@ withPanelsMixin(value)
 withRepeat(value)
 ```
 
-Name of template variable to repeat for.
+PARAMETERS:
 
+* **value** (`string`)
+
+Name of template variable to repeat for.
 ### fn withTitle
 
 ```jsonnet
 withTitle(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withType
@@ -130,17 +164,23 @@ withType()
 #### fn datasource.withType
 
 ```jsonnet
-withType(value)
+datasource.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn datasource.withUid
 
 ```jsonnet
-withUid(value)
+datasource.withUid(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj gridPos
@@ -149,39 +189,60 @@ withUid(value)
 #### fn gridPos.withH
 
 ```jsonnet
-withH(value=9)
+gridPos.withH(value=9)
 ```
 
-Panel
+PARAMETERS:
 
+* **value** (`integer`)
+   - default value: `9`
+
+Panel
 #### fn gridPos.withStatic
 
 ```jsonnet
-withStatic(value=true)
+gridPos.withStatic(value=true)
 ```
 
-true if fixed
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+true if fixed
 #### fn gridPos.withW
 
 ```jsonnet
-withW(value=12)
+gridPos.withW(value=12)
 ```
 
-Panel
+PARAMETERS:
 
+* **value** (`integer`)
+   - default value: `12`
+
+Panel
 #### fn gridPos.withX
 
 ```jsonnet
-withX(value=0)
+gridPos.withX(value=0)
 ```
 
-Panel x
+PARAMETERS:
 
+* **value** (`integer`)
+   - default value: `0`
+
+Panel x
 #### fn gridPos.withY
 
 ```jsonnet
-withY(value=0)
+gridPos.withY(value=0)
 ```
+
+PARAMETERS:
+
+* **value** (`integer`)
+   - default value: `0`
 
 Panel y

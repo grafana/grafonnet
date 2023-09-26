@@ -34,6 +34,10 @@
 withBuiltIn(value=0)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
+   - default value: `0`
 
 
 ### fn withDatasource
@@ -42,62 +46,89 @@ withBuiltIn(value=0)
 withDatasource(value)
 ```
 
-Datasource to use for annotation.
+PARAMETERS:
 
+* **value** (`object`)
+
+Datasource to use for annotation.
 ### fn withDatasourceMixin
 
 ```jsonnet
 withDatasourceMixin(value)
 ```
 
-Datasource to use for annotation.
+PARAMETERS:
 
+* **value** (`object`)
+
+Datasource to use for annotation.
 ### fn withEnable
 
 ```jsonnet
 withEnable(value=true)
 ```
 
-Whether annotation is enabled.
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Whether annotation is enabled.
 ### fn withHide
 
 ```jsonnet
 withHide(value=true)
 ```
 
-Whether to hide annotation.
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Whether to hide annotation.
 ### fn withIconColor
 
 ```jsonnet
 withIconColor(value)
 ```
 
-Annotation icon color.
+PARAMETERS:
 
+* **value** (`string`)
+
+Annotation icon color.
 ### fn withName
 
 ```jsonnet
 withName(value)
 ```
 
-Name of annotation.
+PARAMETERS:
 
+* **value** (`string`)
+
+Name of annotation.
 ### fn withRawQuery
 
 ```jsonnet
 withRawQuery(value)
 ```
 
-Query for annotation data.
+PARAMETERS:
 
+* **value** (`string`)
+
+Query for annotation data.
 ### fn withShowIn
 
 ```jsonnet
 withShowIn(value=0)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
+   - default value: `0`
 
 
 ### fn withTarget
@@ -106,22 +137,32 @@ withShowIn(value=0)
 withTarget(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ### fn withTargetMixin
 
 ```jsonnet
 withTargetMixin(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ### fn withType
 
 ```jsonnet
 withType(value="dashboard")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"dashboard"`
 
 
 ### obj datasource
@@ -130,17 +171,23 @@ withType(value="dashboard")
 #### fn datasource.withType
 
 ```jsonnet
-withType(value)
+datasource.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn datasource.withUid
 
 ```jsonnet
-withUid(value)
+datasource.withUid(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj target
@@ -149,39 +196,55 @@ withUid(value)
 #### fn target.withLimit
 
 ```jsonnet
-withLimit(value)
+target.withLimit(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 #### fn target.withMatchAny
 
 ```jsonnet
-withMatchAny(value=true)
+target.withMatchAny(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 #### fn target.withTags
 
 ```jsonnet
-withTags(value)
+target.withTags(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 #### fn target.withTagsMixin
 
 ```jsonnet
-withTagsMixin(value)
+target.withTagsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 #### fn target.withType
 
 ```jsonnet
-withType(value)
+target.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 

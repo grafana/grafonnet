@@ -23,78 +23,108 @@ grafonnet.team
 withAccessControl(value)
 ```
 
-AccessControl metadata associated with a given resource.
+PARAMETERS:
 
+* **value** (`object`)
+
+AccessControl metadata associated with a given resource.
 ### fn withAccessControlMixin
 
 ```jsonnet
 withAccessControlMixin(value)
 ```
 
-AccessControl metadata associated with a given resource.
+PARAMETERS:
 
+* **value** (`object`)
+
+AccessControl metadata associated with a given resource.
 ### fn withAvatarUrl
 
 ```jsonnet
 withAvatarUrl(value)
 ```
 
-AvatarUrl is the team's avatar URL.
+PARAMETERS:
 
+* **value** (`string`)
+
+AvatarUrl is the team's avatar URL.
 ### fn withCreated
 
 ```jsonnet
 withCreated(value)
 ```
 
-Created indicates when the team was created.
+PARAMETERS:
 
+* **value** (`string`)
+
+Created indicates when the team was created.
 ### fn withEmail
 
 ```jsonnet
 withEmail(value)
 ```
 
-Email of the team.
+PARAMETERS:
 
+* **value** (`string`)
+
+Email of the team.
 ### fn withMemberCount
 
 ```jsonnet
 withMemberCount(value)
 ```
 
-MemberCount is the number of the team members.
+PARAMETERS:
 
+* **value** (`integer`)
+
+MemberCount is the number of the team members.
 ### fn withName
 
 ```jsonnet
 withName(value)
 ```
 
-Name of the team.
+PARAMETERS:
 
+* **value** (`string`)
+
+Name of the team.
 ### fn withOrgId
 
 ```jsonnet
 withOrgId(value)
 ```
 
-OrgId is the ID of an organisation the team belongs to.
+PARAMETERS:
 
+* **value** (`integer`)
+
+OrgId is the ID of an organisation the team belongs to.
 ### fn withPermission
 
 ```jsonnet
 withPermission(value)
 ```
 
+PARAMETERS:
 
+* **value** (`integer`)
+   - valid values: `0`, `1`, `2`, `4`
 
-Accepted values for `value` are 0, 1, 2, 4
 
 ### fn withUpdated
 
 ```jsonnet
 withUpdated(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 Updated indicates when the team was updated.

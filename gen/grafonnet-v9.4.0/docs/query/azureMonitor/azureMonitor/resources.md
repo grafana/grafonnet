@@ -18,6 +18,9 @@
 withMetricNamespace(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withRegion
@@ -26,6 +29,9 @@ withMetricNamespace(value)
 withRegion(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withResourceGroup
@@ -34,6 +40,9 @@ withRegion(value)
 withResourceGroup(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withResourceName
@@ -42,6 +51,9 @@ withResourceGroup(value)
 withResourceName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withSubscription
@@ -50,4 +62,7 @@ withResourceName(value)
 withSubscription(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 

@@ -29,22 +29,31 @@
 withConfig(value)
 ```
 
-Custom options depending on the type
+PARAMETERS:
 
+* **value** (`string`)
+
+Custom options depending on the type
 ### fn withFilterData
 
 ```jsonnet
 withFilterData(value)
 ```
 
-Defines a frame MatcherConfig that may filter data for the given layer
+PARAMETERS:
 
+* **value** (`string`)
+
+Defines a frame MatcherConfig that may filter data for the given layer
 ### fn withLocation
 
 ```jsonnet
 withLocation(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withLocationMixin
@@ -53,6 +62,9 @@ withLocation(value)
 withLocationMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withName
@@ -61,32 +73,45 @@ withLocationMixin(value)
 withName(value)
 ```
 
-configured unique display name
+PARAMETERS:
 
+* **value** (`string`)
+
+configured unique display name
 ### fn withOpacity
 
 ```jsonnet
 withOpacity(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
+
 Common properties:
 https://openlayers.org/en/latest/apidoc/module-ol_layer_Base-BaseLayer.html
 Layer opacity (0-1)
-
 ### fn withTooltip
 
 ```jsonnet
 withTooltip(value=true)
 ```
 
-Check tooltip (defaults to true)
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Check tooltip (defaults to true)
 ### fn withType
 
 ```jsonnet
 withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj location
@@ -95,57 +120,77 @@ withType(value)
 #### fn location.withGazetteer
 
 ```jsonnet
-withGazetteer(value)
+location.withGazetteer(value)
 ```
 
-Path to Gazetteer
+PARAMETERS:
 
+* **value** (`string`)
+
+Path to Gazetteer
 #### fn location.withGeohash
 
 ```jsonnet
-withGeohash(value)
+location.withGeohash(value)
 ```
 
-Field mappings
+PARAMETERS:
 
+* **value** (`string`)
+
+Field mappings
 #### fn location.withLatitude
 
 ```jsonnet
-withLatitude(value)
+location.withLatitude(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn location.withLongitude
 
 ```jsonnet
-withLongitude(value)
+location.withLongitude(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn location.withLookup
 
 ```jsonnet
-withLookup(value)
+location.withLookup(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn location.withMode
 
 ```jsonnet
-withMode(value)
+location.withMode(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"auto"`, `"geohash"`, `"coords"`, `"lookup"`
 
-Accepted values for `value` are "auto", "geohash", "coords", "lookup"
 
 #### fn location.withWkt
 
 ```jsonnet
-withWkt(value)
+location.withWkt(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 

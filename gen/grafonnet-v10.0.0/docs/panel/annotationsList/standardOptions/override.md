@@ -44,30 +44,40 @@ override.byType.new('number')
 #### fn byName.new
 
 ```jsonnet
-new(value)
+byName.new(value)
 ```
 
-`new` creates a new override of type `byName`.
+PARAMETERS:
 
+* **value** (`string`)
+
+`new` creates a new override of type `byName`.
 #### fn byName.withPropertiesFromOptions
 
 ```jsonnet
-withPropertiesFromOptions(options)
+byName.withPropertiesFromOptions(options)
 ```
+
+PARAMETERS:
+
+* **options** (`object`)
 
 `withPropertiesFromOptions` takes an object with properties that need to be
 overridden. See example code above.
 
-
 #### fn byName.withProperty
 
 ```jsonnet
-withProperty(id, value)
+byName.withProperty(id, value)
 ```
+
+PARAMETERS:
+
+* **id** (`string`)
+* **value** (`any`)
 
 `withProperty` adds a property that needs to be overridden. This function can
 be called multiple time, adding more properties.
-
 
 ### obj byQuery
 
@@ -75,30 +85,40 @@ be called multiple time, adding more properties.
 #### fn byQuery.new
 
 ```jsonnet
-new(value)
+byQuery.new(value)
 ```
 
-`new` creates a new override of type `byQuery`.
+PARAMETERS:
 
+* **value** (`string`)
+
+`new` creates a new override of type `byQuery`.
 #### fn byQuery.withPropertiesFromOptions
 
 ```jsonnet
-withPropertiesFromOptions(options)
+byQuery.withPropertiesFromOptions(options)
 ```
+
+PARAMETERS:
+
+* **options** (`object`)
 
 `withPropertiesFromOptions` takes an object with properties that need to be
 overridden. See example code above.
 
-
 #### fn byQuery.withProperty
 
 ```jsonnet
-withProperty(id, value)
+byQuery.withProperty(id, value)
 ```
+
+PARAMETERS:
+
+* **id** (`string`)
+* **value** (`any`)
 
 `withProperty` adds a property that needs to be overridden. This function can
 be called multiple time, adding more properties.
-
 
 ### obj byRegexp
 
@@ -106,30 +126,40 @@ be called multiple time, adding more properties.
 #### fn byRegexp.new
 
 ```jsonnet
-new(value)
+byRegexp.new(value)
 ```
 
-`new` creates a new override of type `byRegexp`.
+PARAMETERS:
 
+* **value** (`string`)
+
+`new` creates a new override of type `byRegexp`.
 #### fn byRegexp.withPropertiesFromOptions
 
 ```jsonnet
-withPropertiesFromOptions(options)
+byRegexp.withPropertiesFromOptions(options)
 ```
+
+PARAMETERS:
+
+* **options** (`object`)
 
 `withPropertiesFromOptions` takes an object with properties that need to be
 overridden. See example code above.
 
-
 #### fn byRegexp.withProperty
 
 ```jsonnet
-withProperty(id, value)
+byRegexp.withProperty(id, value)
 ```
+
+PARAMETERS:
+
+* **id** (`string`)
+* **value** (`any`)
 
 `withProperty` adds a property that needs to be overridden. This function can
 be called multiple time, adding more properties.
-
 
 ### obj byType
 
@@ -137,30 +167,40 @@ be called multiple time, adding more properties.
 #### fn byType.new
 
 ```jsonnet
-new(value)
+byType.new(value)
 ```
 
-`new` creates a new override of type `byType`.
+PARAMETERS:
 
+* **value** (`string`)
+
+`new` creates a new override of type `byType`.
 #### fn byType.withPropertiesFromOptions
 
 ```jsonnet
-withPropertiesFromOptions(options)
+byType.withPropertiesFromOptions(options)
 ```
+
+PARAMETERS:
+
+* **options** (`object`)
 
 `withPropertiesFromOptions` takes an object with properties that need to be
 overridden. See example code above.
 
-
 #### fn byType.withProperty
 
 ```jsonnet
-withProperty(id, value)
+byType.withProperty(id, value)
 ```
+
+PARAMETERS:
+
+* **id** (`string`)
+* **value** (`any`)
 
 `withProperty` adds a property that needs to be overridden. This function can
 be called multiple time, adding more properties.
-
 
 ### obj byValue
 
@@ -168,27 +208,37 @@ be called multiple time, adding more properties.
 #### fn byValue.new
 
 ```jsonnet
-new(value)
+byValue.new(value)
 ```
 
-`new` creates a new override of type `byValue`.
+PARAMETERS:
 
+* **value** (`string`)
+
+`new` creates a new override of type `byValue`.
 #### fn byValue.withPropertiesFromOptions
 
 ```jsonnet
-withPropertiesFromOptions(options)
+byValue.withPropertiesFromOptions(options)
 ```
+
+PARAMETERS:
+
+* **options** (`object`)
 
 `withPropertiesFromOptions` takes an object with properties that need to be
 overridden. See example code above.
 
-
 #### fn byValue.withProperty
 
 ```jsonnet
-withProperty(id, value)
+byValue.withProperty(id, value)
 ```
+
+PARAMETERS:
+
+* **id** (`string`)
+* **value** (`any`)
 
 `withProperty` adds a property that needs to be overridden. This function can
 be called multiple time, adding more properties.
-

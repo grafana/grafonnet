@@ -15,12 +15,19 @@
 withColor(value)
 ```
 
-The color of the arc.
+PARAMETERS:
 
+* **value** (`string`)
+
+The color of the arc.
 ### fn withField
 
 ```jsonnet
 withField(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 Field from which to get the value. Values should be less than 1, representing fraction of a circle.

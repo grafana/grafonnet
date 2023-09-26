@@ -21,25 +21,33 @@
 withId(value)
 ```
 
-Uniquely identify the filter, will not be used in the query generation
+PARAMETERS:
 
+* **value** (`string`)
+
+Uniquely identify the filter, will not be used in the query generation
 ### fn withOperator
 
 ```jsonnet
 withOperator(value)
 ```
 
-The operator that connects the tag to the value, for example: =, >, !=, =~
+PARAMETERS:
 
+* **value** (`string`)
+
+The operator that connects the tag to the value, for example: =, >, !=, =~
 ### fn withScope
 
 ```jsonnet
 withScope(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"unscoped"`, `"resource"`, `"span"`
 
-Accepted values for `value` are "unscoped", "resource", "span"
 
 ### fn withTag
 
@@ -47,38 +55,53 @@ Accepted values for `value` are "unscoped", "resource", "span"
 withTag(value)
 ```
 
-The tag for the search filter, for example: .http.status_code, .service.name, status
+PARAMETERS:
 
+* **value** (`string`)
+
+The tag for the search filter, for example: .http.status_code, .service.name, status
 ### fn withType
 
 ```jsonnet
 withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"static"`, `"dynamic"`
+
 static fields are pre-set in the UI, dynamic fields are added by the user
-
-Accepted values for `value` are "static", "dynamic"
-
 ### fn withValue
 
 ```jsonnet
 withValue(value)
 ```
 
-The value for the search filter
+PARAMETERS:
 
+* **value** (`string`)
+
+The value for the search filter
 ### fn withValueMixin
 
 ```jsonnet
 withValueMixin(value)
 ```
 
-The value for the search filter
+PARAMETERS:
 
+* **value** (`string`)
+
+The value for the search filter
 ### fn withValueType
 
 ```jsonnet
 withValueType(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 The type of the value, used for example to check whether we need to wrap the value in quotes when generating the query

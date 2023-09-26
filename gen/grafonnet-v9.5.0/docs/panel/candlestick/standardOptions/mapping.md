@@ -58,25 +58,34 @@
 #### fn RangeMap.withOptions
 
 ```jsonnet
-withOptions(value)
+RangeMap.withOptions(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn RangeMap.withOptionsMixin
 
 ```jsonnet
-withOptionsMixin(value)
+RangeMap.withOptionsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn RangeMap.withType
 
 ```jsonnet
-withType(value)
+RangeMap.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj RangeMap.options
@@ -85,33 +94,45 @@ withType(value)
 ##### fn RangeMap.options.withFrom
 
 ```jsonnet
-withFrom(value)
+RangeMap.options.withFrom(value)
 ```
 
-to and from are `number | null` in current ts, really not sure what to do
+PARAMETERS:
 
+* **value** (`number`)
+
+to and from are `number | null` in current ts, really not sure what to do
 ##### fn RangeMap.options.withResult
 
 ```jsonnet
-withResult(value)
+RangeMap.options.withResult(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ##### fn RangeMap.options.withResultMixin
 
 ```jsonnet
-withResultMixin(value)
+RangeMap.options.withResultMixin(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ##### fn RangeMap.options.withTo
 
 ```jsonnet
-withTo(value)
+RangeMap.options.withTo(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 ##### obj RangeMap.options.result
@@ -120,33 +141,45 @@ withTo(value)
 ###### fn RangeMap.options.result.withColor
 
 ```jsonnet
-withColor(value)
+RangeMap.options.result.withColor(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn RangeMap.options.result.withIcon
 
 ```jsonnet
-withIcon(value)
+RangeMap.options.result.withIcon(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn RangeMap.options.result.withIndex
 
 ```jsonnet
-withIndex(value)
+RangeMap.options.result.withIndex(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 ###### fn RangeMap.options.result.withText
 
 ```jsonnet
-withText(value)
+RangeMap.options.result.withText(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj RegexMap
@@ -155,25 +188,34 @@ withText(value)
 #### fn RegexMap.withOptions
 
 ```jsonnet
-withOptions(value)
+RegexMap.withOptions(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn RegexMap.withOptionsMixin
 
 ```jsonnet
-withOptionsMixin(value)
+RegexMap.withOptionsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn RegexMap.withType
 
 ```jsonnet
-withType(value)
+RegexMap.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj RegexMap.options
@@ -182,60 +224,81 @@ withType(value)
 ##### fn RegexMap.options.withPattern
 
 ```jsonnet
-withPattern(value)
+RegexMap.options.withPattern(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn RegexMap.options.withResult
 
 ```jsonnet
-withResult(value)
+RegexMap.options.withResult(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ##### fn RegexMap.options.withResultMixin
 
 ```jsonnet
-withResultMixin(value)
+RegexMap.options.withResultMixin(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ##### obj RegexMap.options.result
 
 
 ###### fn RegexMap.options.result.withColor
 
 ```jsonnet
-withColor(value)
+RegexMap.options.result.withColor(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn RegexMap.options.result.withIcon
 
 ```jsonnet
-withIcon(value)
+RegexMap.options.result.withIcon(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn RegexMap.options.result.withIndex
 
 ```jsonnet
-withIndex(value)
+RegexMap.options.result.withIndex(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 ###### fn RegexMap.options.result.withText
 
 ```jsonnet
-withText(value)
+RegexMap.options.result.withText(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj SpecialValueMap
@@ -244,25 +307,34 @@ withText(value)
 #### fn SpecialValueMap.withOptions
 
 ```jsonnet
-withOptions(value)
+SpecialValueMap.withOptions(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn SpecialValueMap.withOptionsMixin
 
 ```jsonnet
-withOptionsMixin(value)
+SpecialValueMap.withOptionsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn SpecialValueMap.withType
 
 ```jsonnet
-withType(value)
+SpecialValueMap.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj SpecialValueMap.options
@@ -271,70 +343,93 @@ withType(value)
 ##### fn SpecialValueMap.options.withMatch
 
 ```jsonnet
-withMatch(value)
+SpecialValueMap.options.withMatch(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"true"`, `"false"`
 
-Accepted values for `value` are "true", "false"
 
 ##### fn SpecialValueMap.options.withPattern
 
 ```jsonnet
-withPattern(value)
+SpecialValueMap.options.withPattern(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn SpecialValueMap.options.withResult
 
 ```jsonnet
-withResult(value)
+SpecialValueMap.options.withResult(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ##### fn SpecialValueMap.options.withResultMixin
 
 ```jsonnet
-withResultMixin(value)
+SpecialValueMap.options.withResultMixin(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ##### obj SpecialValueMap.options.result
 
 
 ###### fn SpecialValueMap.options.result.withColor
 
 ```jsonnet
-withColor(value)
+SpecialValueMap.options.result.withColor(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn SpecialValueMap.options.result.withIcon
 
 ```jsonnet
-withIcon(value)
+SpecialValueMap.options.result.withIcon(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn SpecialValueMap.options.result.withIndex
 
 ```jsonnet
-withIndex(value)
+SpecialValueMap.options.result.withIndex(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 ###### fn SpecialValueMap.options.result.withText
 
 ```jsonnet
-withText(value)
+SpecialValueMap.options.result.withText(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj ValueMap
@@ -343,23 +438,32 @@ withText(value)
 #### fn ValueMap.withOptions
 
 ```jsonnet
-withOptions(value)
+ValueMap.withOptions(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn ValueMap.withOptionsMixin
 
 ```jsonnet
-withOptionsMixin(value)
+ValueMap.withOptionsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn ValueMap.withType
 
 ```jsonnet
-withType(value)
+ValueMap.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 

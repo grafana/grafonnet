@@ -72,41 +72,56 @@
 #### fn DateHistogram.withField
 
 ```jsonnet
-withField(value)
+DateHistogram.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn DateHistogram.withId
 
 ```jsonnet
-withId(value)
+DateHistogram.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn DateHistogram.withSettings
 
 ```jsonnet
-withSettings(value)
+DateHistogram.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn DateHistogram.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+DateHistogram.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn DateHistogram.withType
 
 ```jsonnet
-withType(value)
+DateHistogram.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj DateHistogram.settings
@@ -115,41 +130,56 @@ withType(value)
 ##### fn DateHistogram.settings.withInterval
 
 ```jsonnet
-withInterval(value)
+DateHistogram.settings.withInterval(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn DateHistogram.settings.withMinDocCount
 
 ```jsonnet
-withMinDocCount(value)
+DateHistogram.settings.withMinDocCount(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn DateHistogram.settings.withOffset
 
 ```jsonnet
-withOffset(value)
+DateHistogram.settings.withOffset(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn DateHistogram.settings.withTimeZone
 
 ```jsonnet
-withTimeZone(value)
+DateHistogram.settings.withTimeZone(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn DateHistogram.settings.withTrimEdges
 
 ```jsonnet
-withTrimEdges(value)
+DateHistogram.settings.withTrimEdges(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj Filters
@@ -158,33 +188,45 @@ withTrimEdges(value)
 #### fn Filters.withId
 
 ```jsonnet
-withId(value)
+Filters.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn Filters.withSettings
 
 ```jsonnet
-withSettings(value)
+Filters.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn Filters.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+Filters.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn Filters.withType
 
 ```jsonnet
-withType(value)
+Filters.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj Filters.settings
@@ -193,17 +235,23 @@ withType(value)
 ##### fn Filters.settings.withFilters
 
 ```jsonnet
-withFilters(value)
+Filters.settings.withFilters(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ##### fn Filters.settings.withFiltersMixin
 
 ```jsonnet
-withFiltersMixin(value)
+Filters.settings.withFiltersMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ### obj GeoHashGrid
@@ -212,41 +260,56 @@ withFiltersMixin(value)
 #### fn GeoHashGrid.withField
 
 ```jsonnet
-withField(value)
+GeoHashGrid.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn GeoHashGrid.withId
 
 ```jsonnet
-withId(value)
+GeoHashGrid.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn GeoHashGrid.withSettings
 
 ```jsonnet
-withSettings(value)
+GeoHashGrid.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn GeoHashGrid.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+GeoHashGrid.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn GeoHashGrid.withType
 
 ```jsonnet
-withType(value)
+GeoHashGrid.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj GeoHashGrid.settings
@@ -255,9 +318,12 @@ withType(value)
 ##### fn GeoHashGrid.settings.withPrecision
 
 ```jsonnet
-withPrecision(value)
+GeoHashGrid.settings.withPrecision(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj Histogram
@@ -266,41 +332,56 @@ withPrecision(value)
 #### fn Histogram.withField
 
 ```jsonnet
-withField(value)
+Histogram.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn Histogram.withId
 
 ```jsonnet
-withId(value)
+Histogram.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn Histogram.withSettings
 
 ```jsonnet
-withSettings(value)
+Histogram.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn Histogram.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+Histogram.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn Histogram.withType
 
 ```jsonnet
-withType(value)
+Histogram.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj Histogram.settings
@@ -309,17 +390,23 @@ withType(value)
 ##### fn Histogram.settings.withInterval
 
 ```jsonnet
-withInterval(value)
+Histogram.settings.withInterval(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn Histogram.settings.withMinDocCount
 
 ```jsonnet
-withMinDocCount(value)
+Histogram.settings.withMinDocCount(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj Nested
@@ -328,41 +415,56 @@ withMinDocCount(value)
 #### fn Nested.withField
 
 ```jsonnet
-withField(value)
+Nested.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn Nested.withId
 
 ```jsonnet
-withId(value)
+Nested.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn Nested.withSettings
 
 ```jsonnet
-withSettings(value)
+Nested.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn Nested.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+Nested.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn Nested.withType
 
 ```jsonnet
-withType(value)
+Nested.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj Terms
@@ -371,41 +473,56 @@ withType(value)
 #### fn Terms.withField
 
 ```jsonnet
-withField(value)
+Terms.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn Terms.withId
 
 ```jsonnet
-withId(value)
+Terms.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn Terms.withSettings
 
 ```jsonnet
-withSettings(value)
+Terms.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn Terms.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+Terms.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn Terms.withType
 
 ```jsonnet
-withType(value)
+Terms.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj Terms.settings
@@ -414,41 +531,55 @@ withType(value)
 ##### fn Terms.settings.withMinDocCount
 
 ```jsonnet
-withMinDocCount(value)
+Terms.settings.withMinDocCount(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn Terms.settings.withMissing
 
 ```jsonnet
-withMissing(value)
+Terms.settings.withMissing(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn Terms.settings.withOrder
 
 ```jsonnet
-withOrder(value)
+Terms.settings.withOrder(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"desc"`, `"asc"`
 
-Accepted values for `value` are "desc", "asc"
 
 ##### fn Terms.settings.withOrderBy
 
 ```jsonnet
-withOrderBy(value)
+Terms.settings.withOrderBy(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn Terms.settings.withSize
 
 ```jsonnet
-withSize(value)
+Terms.settings.withSize(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 

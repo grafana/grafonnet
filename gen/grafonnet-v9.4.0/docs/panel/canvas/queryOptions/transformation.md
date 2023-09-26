@@ -21,14 +21,21 @@
 withDisabled(value=true)
 ```
 
-Disabled transformations are skipped
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Disabled transformations are skipped
 ### fn withFilter
 
 ```jsonnet
 withFilter(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withFilterMixin
@@ -37,6 +44,9 @@ withFilter(value)
 withFilterMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withId
@@ -45,32 +55,45 @@ withFilterMixin(value)
 withId(value)
 ```
 
-Unique identifier of transformer
+PARAMETERS:
 
+* **value** (`string`)
+
+Unique identifier of transformer
 ### fn withOptions
 
 ```jsonnet
 withOptions(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
 Options to be passed to the transformer
 Valid options depend on the transformer id
-
 ### obj filter
 
 
 #### fn filter.withId
 
 ```jsonnet
-withId(value="")
+filter.withId(value="")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `""`
 
 
 #### fn filter.withOptions
 
 ```jsonnet
-withOptions(value)
+filter.withOptions(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 

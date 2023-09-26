@@ -269,25 +269,35 @@
 #### fn Count.withHide
 
 ```jsonnet
-withHide(value=true)
+Count.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 #### fn Count.withId
 
 ```jsonnet
-withId(value)
+Count.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn Count.withType
 
 ```jsonnet
-withType(value)
+Count.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj MetricAggregationWithSettings
@@ -299,49 +309,68 @@ withType(value)
 ##### fn MetricAggregationWithSettings.Average.withField
 
 ```jsonnet
-withField(value)
+MetricAggregationWithSettings.Average.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.Average.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.Average.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.Average.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.Average.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.Average.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.Average.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.Average.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.Average.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.Average.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.Average.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.Average.settings
@@ -350,25 +379,34 @@ withType(value)
 ###### fn MetricAggregationWithSettings.Average.settings.withMissing
 
 ```jsonnet
-withMissing(value)
+MetricAggregationWithSettings.Average.settings.withMissing(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.Average.settings.withScript
 
 ```jsonnet
-withScript(value)
+MetricAggregationWithSettings.Average.settings.withScript(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.Average.settings.withScriptMixin
 
 ```jsonnet
-withScriptMixin(value)
+MetricAggregationWithSettings.Average.settings.withScriptMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### obj MetricAggregationWithSettings.Average.settings.script
@@ -377,9 +415,12 @@ withScriptMixin(value)
 ####### fn MetricAggregationWithSettings.Average.settings.script.withInline
 
 ```jsonnet
-withInline(value)
+MetricAggregationWithSettings.Average.settings.script.withInline(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.BucketScript
@@ -388,57 +429,79 @@ withInline(value)
 ##### fn MetricAggregationWithSettings.BucketScript.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.BucketScript.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.BucketScript.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.BucketScript.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.BucketScript.withPipelineVariables
 
 ```jsonnet
-withPipelineVariables(value)
+MetricAggregationWithSettings.BucketScript.withPipelineVariables(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ##### fn MetricAggregationWithSettings.BucketScript.withPipelineVariablesMixin
 
 ```jsonnet
-withPipelineVariablesMixin(value)
+MetricAggregationWithSettings.BucketScript.withPipelineVariablesMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ##### fn MetricAggregationWithSettings.BucketScript.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.BucketScript.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.BucketScript.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.BucketScript.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.BucketScript.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.BucketScript.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.BucketScript.settings
@@ -447,17 +510,23 @@ withType(value)
 ###### fn MetricAggregationWithSettings.BucketScript.settings.withScript
 
 ```jsonnet
-withScript(value)
+MetricAggregationWithSettings.BucketScript.settings.withScript(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.BucketScript.settings.withScriptMixin
 
 ```jsonnet
-withScriptMixin(value)
+MetricAggregationWithSettings.BucketScript.settings.withScriptMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### obj MetricAggregationWithSettings.BucketScript.settings.script
@@ -466,9 +535,12 @@ withScriptMixin(value)
 ####### fn MetricAggregationWithSettings.BucketScript.settings.script.withInline
 
 ```jsonnet
-withInline(value)
+MetricAggregationWithSettings.BucketScript.settings.script.withInline(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.CumulativeSum
@@ -477,57 +549,79 @@ withInline(value)
 ##### fn MetricAggregationWithSettings.CumulativeSum.withField
 
 ```jsonnet
-withField(value)
+MetricAggregationWithSettings.CumulativeSum.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.CumulativeSum.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.CumulativeSum.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.CumulativeSum.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.CumulativeSum.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.CumulativeSum.withPipelineAgg
 
 ```jsonnet
-withPipelineAgg(value)
+MetricAggregationWithSettings.CumulativeSum.withPipelineAgg(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.CumulativeSum.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.CumulativeSum.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.CumulativeSum.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.CumulativeSum.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.CumulativeSum.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.CumulativeSum.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.CumulativeSum.settings
@@ -536,9 +630,12 @@ withType(value)
 ###### fn MetricAggregationWithSettings.CumulativeSum.settings.withFormat
 
 ```jsonnet
-withFormat(value)
+MetricAggregationWithSettings.CumulativeSum.settings.withFormat(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.Derivative
@@ -547,57 +644,79 @@ withFormat(value)
 ##### fn MetricAggregationWithSettings.Derivative.withField
 
 ```jsonnet
-withField(value)
+MetricAggregationWithSettings.Derivative.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.Derivative.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.Derivative.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.Derivative.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.Derivative.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.Derivative.withPipelineAgg
 
 ```jsonnet
-withPipelineAgg(value)
+MetricAggregationWithSettings.Derivative.withPipelineAgg(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.Derivative.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.Derivative.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.Derivative.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.Derivative.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.Derivative.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.Derivative.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.Derivative.settings
@@ -606,9 +725,12 @@ withType(value)
 ###### fn MetricAggregationWithSettings.Derivative.settings.withUnit
 
 ```jsonnet
-withUnit(value)
+MetricAggregationWithSettings.Derivative.settings.withUnit(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.ExtendedStats
@@ -617,65 +739,90 @@ withUnit(value)
 ##### fn MetricAggregationWithSettings.ExtendedStats.withField
 
 ```jsonnet
-withField(value)
+MetricAggregationWithSettings.ExtendedStats.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.ExtendedStats.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.ExtendedStats.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.ExtendedStats.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.ExtendedStats.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.ExtendedStats.withMeta
 
 ```jsonnet
-withMeta(value)
+MetricAggregationWithSettings.ExtendedStats.withMeta(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.ExtendedStats.withMetaMixin
 
 ```jsonnet
-withMetaMixin(value)
+MetricAggregationWithSettings.ExtendedStats.withMetaMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.ExtendedStats.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.ExtendedStats.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.ExtendedStats.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.ExtendedStats.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.ExtendedStats.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.ExtendedStats.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.ExtendedStats.settings
@@ -684,33 +831,45 @@ withType(value)
 ###### fn MetricAggregationWithSettings.ExtendedStats.settings.withMissing
 
 ```jsonnet
-withMissing(value)
+MetricAggregationWithSettings.ExtendedStats.settings.withMissing(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.ExtendedStats.settings.withScript
 
 ```jsonnet
-withScript(value)
+MetricAggregationWithSettings.ExtendedStats.settings.withScript(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.ExtendedStats.settings.withScriptMixin
 
 ```jsonnet
-withScriptMixin(value)
+MetricAggregationWithSettings.ExtendedStats.settings.withScriptMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.ExtendedStats.settings.withSigma
 
 ```jsonnet
-withSigma(value)
+MetricAggregationWithSettings.ExtendedStats.settings.withSigma(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### obj MetricAggregationWithSettings.ExtendedStats.settings.script
@@ -719,9 +878,12 @@ withSigma(value)
 ####### fn MetricAggregationWithSettings.ExtendedStats.settings.script.withInline
 
 ```jsonnet
-withInline(value)
+MetricAggregationWithSettings.ExtendedStats.settings.script.withInline(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.Logs
@@ -730,41 +892,57 @@ withInline(value)
 ##### fn MetricAggregationWithSettings.Logs.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.Logs.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.Logs.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.Logs.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.Logs.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.Logs.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.Logs.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.Logs.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.Logs.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.Logs.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.Logs.settings
@@ -773,9 +951,12 @@ withType(value)
 ###### fn MetricAggregationWithSettings.Logs.settings.withLimit
 
 ```jsonnet
-withLimit(value)
+MetricAggregationWithSettings.Logs.settings.withLimit(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.Max
@@ -784,49 +965,68 @@ withLimit(value)
 ##### fn MetricAggregationWithSettings.Max.withField
 
 ```jsonnet
-withField(value)
+MetricAggregationWithSettings.Max.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.Max.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.Max.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.Max.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.Max.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.Max.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.Max.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.Max.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.Max.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.Max.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.Max.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.Max.settings
@@ -835,25 +1035,34 @@ withType(value)
 ###### fn MetricAggregationWithSettings.Max.settings.withMissing
 
 ```jsonnet
-withMissing(value)
+MetricAggregationWithSettings.Max.settings.withMissing(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.Max.settings.withScript
 
 ```jsonnet
-withScript(value)
+MetricAggregationWithSettings.Max.settings.withScript(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.Max.settings.withScriptMixin
 
 ```jsonnet
-withScriptMixin(value)
+MetricAggregationWithSettings.Max.settings.withScriptMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### obj MetricAggregationWithSettings.Max.settings.script
@@ -862,9 +1071,12 @@ withScriptMixin(value)
 ####### fn MetricAggregationWithSettings.Max.settings.script.withInline
 
 ```jsonnet
-withInline(value)
+MetricAggregationWithSettings.Max.settings.script.withInline(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.Min
@@ -873,49 +1085,68 @@ withInline(value)
 ##### fn MetricAggregationWithSettings.Min.withField
 
 ```jsonnet
-withField(value)
+MetricAggregationWithSettings.Min.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.Min.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.Min.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.Min.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.Min.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.Min.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.Min.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.Min.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.Min.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.Min.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.Min.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.Min.settings
@@ -924,25 +1155,34 @@ withType(value)
 ###### fn MetricAggregationWithSettings.Min.settings.withMissing
 
 ```jsonnet
-withMissing(value)
+MetricAggregationWithSettings.Min.settings.withMissing(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.Min.settings.withScript
 
 ```jsonnet
-withScript(value)
+MetricAggregationWithSettings.Min.settings.withScript(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.Min.settings.withScriptMixin
 
 ```jsonnet
-withScriptMixin(value)
+MetricAggregationWithSettings.Min.settings.withScriptMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### obj MetricAggregationWithSettings.Min.settings.script
@@ -951,9 +1191,12 @@ withScriptMixin(value)
 ####### fn MetricAggregationWithSettings.Min.settings.script.withInline
 
 ```jsonnet
-withInline(value)
+MetricAggregationWithSettings.Min.settings.script.withInline(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.MovingAverage
@@ -962,57 +1205,79 @@ withInline(value)
 ##### fn MetricAggregationWithSettings.MovingAverage.withField
 
 ```jsonnet
-withField(value)
+MetricAggregationWithSettings.MovingAverage.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.MovingAverage.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.MovingAverage.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.MovingAverage.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.MovingAverage.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.MovingAverage.withPipelineAgg
 
 ```jsonnet
-withPipelineAgg(value)
+MetricAggregationWithSettings.MovingAverage.withPipelineAgg(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.MovingAverage.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.MovingAverage.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.MovingAverage.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.MovingAverage.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.MovingAverage.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.MovingAverage.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.MovingFunction
@@ -1021,57 +1286,79 @@ withType(value)
 ##### fn MetricAggregationWithSettings.MovingFunction.withField
 
 ```jsonnet
-withField(value)
+MetricAggregationWithSettings.MovingFunction.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.MovingFunction.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.MovingFunction.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.MovingFunction.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.MovingFunction.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.MovingFunction.withPipelineAgg
 
 ```jsonnet
-withPipelineAgg(value)
+MetricAggregationWithSettings.MovingFunction.withPipelineAgg(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.MovingFunction.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.MovingFunction.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.MovingFunction.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.MovingFunction.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.MovingFunction.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.MovingFunction.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.MovingFunction.settings
@@ -1080,33 +1367,45 @@ withType(value)
 ###### fn MetricAggregationWithSettings.MovingFunction.settings.withScript
 
 ```jsonnet
-withScript(value)
+MetricAggregationWithSettings.MovingFunction.settings.withScript(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.MovingFunction.settings.withScriptMixin
 
 ```jsonnet
-withScriptMixin(value)
+MetricAggregationWithSettings.MovingFunction.settings.withScriptMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.MovingFunction.settings.withShift
 
 ```jsonnet
-withShift(value)
+MetricAggregationWithSettings.MovingFunction.settings.withShift(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.MovingFunction.settings.withWindow
 
 ```jsonnet
-withWindow(value)
+MetricAggregationWithSettings.MovingFunction.settings.withWindow(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### obj MetricAggregationWithSettings.MovingFunction.settings.script
@@ -1115,9 +1414,12 @@ withWindow(value)
 ####### fn MetricAggregationWithSettings.MovingFunction.settings.script.withInline
 
 ```jsonnet
-withInline(value)
+MetricAggregationWithSettings.MovingFunction.settings.script.withInline(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.Percentiles
@@ -1126,49 +1428,68 @@ withInline(value)
 ##### fn MetricAggregationWithSettings.Percentiles.withField
 
 ```jsonnet
-withField(value)
+MetricAggregationWithSettings.Percentiles.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.Percentiles.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.Percentiles.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.Percentiles.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.Percentiles.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.Percentiles.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.Percentiles.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.Percentiles.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.Percentiles.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.Percentiles.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.Percentiles.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.Percentiles.settings
@@ -1177,41 +1498,56 @@ withType(value)
 ###### fn MetricAggregationWithSettings.Percentiles.settings.withMissing
 
 ```jsonnet
-withMissing(value)
+MetricAggregationWithSettings.Percentiles.settings.withMissing(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.Percentiles.settings.withPercents
 
 ```jsonnet
-withPercents(value)
+MetricAggregationWithSettings.Percentiles.settings.withPercents(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ###### fn MetricAggregationWithSettings.Percentiles.settings.withPercentsMixin
 
 ```jsonnet
-withPercentsMixin(value)
+MetricAggregationWithSettings.Percentiles.settings.withPercentsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ###### fn MetricAggregationWithSettings.Percentiles.settings.withScript
 
 ```jsonnet
-withScript(value)
+MetricAggregationWithSettings.Percentiles.settings.withScript(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.Percentiles.settings.withScriptMixin
 
 ```jsonnet
-withScriptMixin(value)
+MetricAggregationWithSettings.Percentiles.settings.withScriptMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### obj MetricAggregationWithSettings.Percentiles.settings.script
@@ -1220,9 +1556,12 @@ withScriptMixin(value)
 ####### fn MetricAggregationWithSettings.Percentiles.settings.script.withInline
 
 ```jsonnet
-withInline(value)
+MetricAggregationWithSettings.Percentiles.settings.script.withInline(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.Rate
@@ -1231,49 +1570,68 @@ withInline(value)
 ##### fn MetricAggregationWithSettings.Rate.withField
 
 ```jsonnet
-withField(value)
+MetricAggregationWithSettings.Rate.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.Rate.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.Rate.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.Rate.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.Rate.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.Rate.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.Rate.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.Rate.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.Rate.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.Rate.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.Rate.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.Rate.settings
@@ -1282,17 +1640,23 @@ withType(value)
 ###### fn MetricAggregationWithSettings.Rate.settings.withMode
 
 ```jsonnet
-withMode(value)
+MetricAggregationWithSettings.Rate.settings.withMode(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.Rate.settings.withUnit
 
 ```jsonnet
-withUnit(value)
+MetricAggregationWithSettings.Rate.settings.withUnit(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.RawData
@@ -1301,41 +1665,57 @@ withUnit(value)
 ##### fn MetricAggregationWithSettings.RawData.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.RawData.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.RawData.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.RawData.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.RawData.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.RawData.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.RawData.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.RawData.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.RawData.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.RawData.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.RawData.settings
@@ -1344,9 +1724,12 @@ withType(value)
 ###### fn MetricAggregationWithSettings.RawData.settings.withSize
 
 ```jsonnet
-withSize(value)
+MetricAggregationWithSettings.RawData.settings.withSize(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.RawDocument
@@ -1355,41 +1738,57 @@ withSize(value)
 ##### fn MetricAggregationWithSettings.RawDocument.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.RawDocument.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.RawDocument.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.RawDocument.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.RawDocument.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.RawDocument.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.RawDocument.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.RawDocument.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.RawDocument.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.RawDocument.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.RawDocument.settings
@@ -1398,9 +1797,12 @@ withType(value)
 ###### fn MetricAggregationWithSettings.RawDocument.settings.withSize
 
 ```jsonnet
-withSize(value)
+MetricAggregationWithSettings.RawDocument.settings.withSize(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.SerialDiff
@@ -1409,57 +1811,79 @@ withSize(value)
 ##### fn MetricAggregationWithSettings.SerialDiff.withField
 
 ```jsonnet
-withField(value)
+MetricAggregationWithSettings.SerialDiff.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.SerialDiff.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.SerialDiff.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.SerialDiff.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.SerialDiff.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.SerialDiff.withPipelineAgg
 
 ```jsonnet
-withPipelineAgg(value)
+MetricAggregationWithSettings.SerialDiff.withPipelineAgg(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.SerialDiff.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.SerialDiff.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.SerialDiff.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.SerialDiff.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.SerialDiff.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.SerialDiff.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.SerialDiff.settings
@@ -1468,9 +1892,12 @@ withType(value)
 ###### fn MetricAggregationWithSettings.SerialDiff.settings.withLag
 
 ```jsonnet
-withLag(value)
+MetricAggregationWithSettings.SerialDiff.settings.withLag(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.Sum
@@ -1479,49 +1906,68 @@ withLag(value)
 ##### fn MetricAggregationWithSettings.Sum.withField
 
 ```jsonnet
-withField(value)
+MetricAggregationWithSettings.Sum.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.Sum.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.Sum.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.Sum.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.Sum.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.Sum.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.Sum.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.Sum.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.Sum.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.Sum.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.Sum.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.Sum.settings
@@ -1530,25 +1976,34 @@ withType(value)
 ###### fn MetricAggregationWithSettings.Sum.settings.withMissing
 
 ```jsonnet
-withMissing(value)
+MetricAggregationWithSettings.Sum.settings.withMissing(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.Sum.settings.withScript
 
 ```jsonnet
-withScript(value)
+MetricAggregationWithSettings.Sum.settings.withScript(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.Sum.settings.withScriptMixin
 
 ```jsonnet
-withScriptMixin(value)
+MetricAggregationWithSettings.Sum.settings.withScriptMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### obj MetricAggregationWithSettings.Sum.settings.script
@@ -1557,9 +2012,12 @@ withScriptMixin(value)
 ####### fn MetricAggregationWithSettings.Sum.settings.script.withInline
 
 ```jsonnet
-withInline(value)
+MetricAggregationWithSettings.Sum.settings.script.withInline(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.TopMetrics
@@ -1568,41 +2026,57 @@ withInline(value)
 ##### fn MetricAggregationWithSettings.TopMetrics.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.TopMetrics.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.TopMetrics.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.TopMetrics.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.TopMetrics.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.TopMetrics.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.TopMetrics.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.TopMetrics.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.TopMetrics.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.TopMetrics.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.TopMetrics.settings
@@ -1611,33 +2085,45 @@ withType(value)
 ###### fn MetricAggregationWithSettings.TopMetrics.settings.withMetrics
 
 ```jsonnet
-withMetrics(value)
+MetricAggregationWithSettings.TopMetrics.settings.withMetrics(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ###### fn MetricAggregationWithSettings.TopMetrics.settings.withMetricsMixin
 
 ```jsonnet
-withMetricsMixin(value)
+MetricAggregationWithSettings.TopMetrics.settings.withMetricsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ###### fn MetricAggregationWithSettings.TopMetrics.settings.withOrder
 
 ```jsonnet
-withOrder(value)
+MetricAggregationWithSettings.TopMetrics.settings.withOrder(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.TopMetrics.settings.withOrderBy
 
 ```jsonnet
-withOrderBy(value)
+MetricAggregationWithSettings.TopMetrics.settings.withOrderBy(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj MetricAggregationWithSettings.UniqueCount
@@ -1646,49 +2132,68 @@ withOrderBy(value)
 ##### fn MetricAggregationWithSettings.UniqueCount.withField
 
 ```jsonnet
-withField(value)
+MetricAggregationWithSettings.UniqueCount.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.UniqueCount.withHide
 
 ```jsonnet
-withHide(value=true)
+MetricAggregationWithSettings.UniqueCount.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn MetricAggregationWithSettings.UniqueCount.withId
 
 ```jsonnet
-withId(value)
+MetricAggregationWithSettings.UniqueCount.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn MetricAggregationWithSettings.UniqueCount.withSettings
 
 ```jsonnet
-withSettings(value)
+MetricAggregationWithSettings.UniqueCount.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.UniqueCount.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+MetricAggregationWithSettings.UniqueCount.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn MetricAggregationWithSettings.UniqueCount.withType
 
 ```jsonnet
-withType(value)
+MetricAggregationWithSettings.UniqueCount.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.UniqueCount.settings
@@ -1697,17 +2202,23 @@ withType(value)
 ###### fn MetricAggregationWithSettings.UniqueCount.settings.withMissing
 
 ```jsonnet
-withMissing(value)
+MetricAggregationWithSettings.UniqueCount.settings.withMissing(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn MetricAggregationWithSettings.UniqueCount.settings.withPrecisionThreshold
 
 ```jsonnet
-withPrecisionThreshold(value)
+MetricAggregationWithSettings.UniqueCount.settings.withPrecisionThreshold(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj PipelineMetricAggregation
@@ -1719,57 +2230,79 @@ withPrecisionThreshold(value)
 ##### fn PipelineMetricAggregation.BucketScript.withHide
 
 ```jsonnet
-withHide(value=true)
+PipelineMetricAggregation.BucketScript.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn PipelineMetricAggregation.BucketScript.withId
 
 ```jsonnet
-withId(value)
+PipelineMetricAggregation.BucketScript.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn PipelineMetricAggregation.BucketScript.withPipelineVariables
 
 ```jsonnet
-withPipelineVariables(value)
+PipelineMetricAggregation.BucketScript.withPipelineVariables(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ##### fn PipelineMetricAggregation.BucketScript.withPipelineVariablesMixin
 
 ```jsonnet
-withPipelineVariablesMixin(value)
+PipelineMetricAggregation.BucketScript.withPipelineVariablesMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ##### fn PipelineMetricAggregation.BucketScript.withSettings
 
 ```jsonnet
-withSettings(value)
+PipelineMetricAggregation.BucketScript.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn PipelineMetricAggregation.BucketScript.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+PipelineMetricAggregation.BucketScript.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn PipelineMetricAggregation.BucketScript.withType
 
 ```jsonnet
-withType(value)
+PipelineMetricAggregation.BucketScript.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj PipelineMetricAggregation.BucketScript.settings
@@ -1778,17 +2311,23 @@ withType(value)
 ###### fn PipelineMetricAggregation.BucketScript.settings.withScript
 
 ```jsonnet
-withScript(value)
+PipelineMetricAggregation.BucketScript.settings.withScript(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn PipelineMetricAggregation.BucketScript.settings.withScriptMixin
 
 ```jsonnet
-withScriptMixin(value)
+PipelineMetricAggregation.BucketScript.settings.withScriptMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### obj PipelineMetricAggregation.BucketScript.settings.script
@@ -1797,9 +2336,12 @@ withScriptMixin(value)
 ####### fn PipelineMetricAggregation.BucketScript.settings.script.withInline
 
 ```jsonnet
-withInline(value)
+PipelineMetricAggregation.BucketScript.settings.script.withInline(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj PipelineMetricAggregation.CumulativeSum
@@ -1808,57 +2350,79 @@ withInline(value)
 ##### fn PipelineMetricAggregation.CumulativeSum.withField
 
 ```jsonnet
-withField(value)
+PipelineMetricAggregation.CumulativeSum.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn PipelineMetricAggregation.CumulativeSum.withHide
 
 ```jsonnet
-withHide(value=true)
+PipelineMetricAggregation.CumulativeSum.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn PipelineMetricAggregation.CumulativeSum.withId
 
 ```jsonnet
-withId(value)
+PipelineMetricAggregation.CumulativeSum.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn PipelineMetricAggregation.CumulativeSum.withPipelineAgg
 
 ```jsonnet
-withPipelineAgg(value)
+PipelineMetricAggregation.CumulativeSum.withPipelineAgg(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn PipelineMetricAggregation.CumulativeSum.withSettings
 
 ```jsonnet
-withSettings(value)
+PipelineMetricAggregation.CumulativeSum.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn PipelineMetricAggregation.CumulativeSum.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+PipelineMetricAggregation.CumulativeSum.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn PipelineMetricAggregation.CumulativeSum.withType
 
 ```jsonnet
-withType(value)
+PipelineMetricAggregation.CumulativeSum.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj PipelineMetricAggregation.CumulativeSum.settings
@@ -1867,9 +2431,12 @@ withType(value)
 ###### fn PipelineMetricAggregation.CumulativeSum.settings.withFormat
 
 ```jsonnet
-withFormat(value)
+PipelineMetricAggregation.CumulativeSum.settings.withFormat(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj PipelineMetricAggregation.Derivative
@@ -1878,57 +2445,79 @@ withFormat(value)
 ##### fn PipelineMetricAggregation.Derivative.withField
 
 ```jsonnet
-withField(value)
+PipelineMetricAggregation.Derivative.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn PipelineMetricAggregation.Derivative.withHide
 
 ```jsonnet
-withHide(value=true)
+PipelineMetricAggregation.Derivative.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn PipelineMetricAggregation.Derivative.withId
 
 ```jsonnet
-withId(value)
+PipelineMetricAggregation.Derivative.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn PipelineMetricAggregation.Derivative.withPipelineAgg
 
 ```jsonnet
-withPipelineAgg(value)
+PipelineMetricAggregation.Derivative.withPipelineAgg(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn PipelineMetricAggregation.Derivative.withSettings
 
 ```jsonnet
-withSettings(value)
+PipelineMetricAggregation.Derivative.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn PipelineMetricAggregation.Derivative.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+PipelineMetricAggregation.Derivative.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn PipelineMetricAggregation.Derivative.withType
 
 ```jsonnet
-withType(value)
+PipelineMetricAggregation.Derivative.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj PipelineMetricAggregation.Derivative.settings
@@ -1937,9 +2526,12 @@ withType(value)
 ###### fn PipelineMetricAggregation.Derivative.settings.withUnit
 
 ```jsonnet
-withUnit(value)
+PipelineMetricAggregation.Derivative.settings.withUnit(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj PipelineMetricAggregation.MovingAverage
@@ -1948,55 +2540,77 @@ withUnit(value)
 ##### fn PipelineMetricAggregation.MovingAverage.withField
 
 ```jsonnet
-withField(value)
+PipelineMetricAggregation.MovingAverage.withField(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn PipelineMetricAggregation.MovingAverage.withHide
 
 ```jsonnet
-withHide(value=true)
+PipelineMetricAggregation.MovingAverage.withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn PipelineMetricAggregation.MovingAverage.withId
 
 ```jsonnet
-withId(value)
+PipelineMetricAggregation.MovingAverage.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn PipelineMetricAggregation.MovingAverage.withPipelineAgg
 
 ```jsonnet
-withPipelineAgg(value)
+PipelineMetricAggregation.MovingAverage.withPipelineAgg(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn PipelineMetricAggregation.MovingAverage.withSettings
 
 ```jsonnet
-withSettings(value)
+PipelineMetricAggregation.MovingAverage.withSettings(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn PipelineMetricAggregation.MovingAverage.withSettingsMixin
 
 ```jsonnet
-withSettingsMixin(value)
+PipelineMetricAggregation.MovingAverage.withSettingsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn PipelineMetricAggregation.MovingAverage.withType
 
 ```jsonnet
-withType(value)
+PipelineMetricAggregation.MovingAverage.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 

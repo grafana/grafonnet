@@ -15,6 +15,9 @@
 withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withType
@@ -23,4 +26,7 @@ withName(value)
 withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 

@@ -87,25 +87,34 @@ grafonnet.panel.table
 new(title)
 ```
 
-Creates a new table panel with a title.
+PARAMETERS:
 
+* **title** (`string`)
+
+Creates a new table panel with a title.
 ### obj libraryPanel
 
 
 #### fn libraryPanel.withName
 
 ```jsonnet
-withName(value)
+libraryPanel.withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn libraryPanel.withUid
 
 ```jsonnet
-withUid(value)
+libraryPanel.withUid(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj options
@@ -114,143 +123,202 @@ withUid(value)
 #### fn options.withCellHeight
 
 ```jsonnet
-withCellHeight(value)
+options.withCellHeight(value)
 ```
 
-Controls the height of the rows
+PARAMETERS:
 
+* **value** (`string`)
+
+Controls the height of the rows
 #### fn options.withFooter
 
 ```jsonnet
-withFooter(value={"countRows": false,"reducer": [],"show": false})
+options.withFooter(value={"countRows": false,"reducer": [],"show": false})
 ```
 
-Controls footer options
+PARAMETERS:
 
+* **value** (`object`)
+   - default value: `{"countRows": false,"reducer": [],"show": false}`
+
+Controls footer options
 #### fn options.withFooterMixin
 
 ```jsonnet
-withFooterMixin(value={"countRows": false,"reducer": [],"show": false})
+options.withFooterMixin(value={"countRows": false,"reducer": [],"show": false})
 ```
 
-Controls footer options
+PARAMETERS:
 
+* **value** (`object`)
+   - default value: `{"countRows": false,"reducer": [],"show": false}`
+
+Controls footer options
 #### fn options.withFrameIndex
 
 ```jsonnet
-withFrameIndex(value=0)
+options.withFrameIndex(value=0)
 ```
 
-Represents the index of the selected frame
+PARAMETERS:
 
+* **value** (`number`)
+   - default value: `0`
+
+Represents the index of the selected frame
 #### fn options.withShowHeader
 
 ```jsonnet
-withShowHeader(value=true)
+options.withShowHeader(value=true)
 ```
 
-Controls whether the panel should show the header
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Controls whether the panel should show the header
 #### fn options.withShowTypeIcons
 
 ```jsonnet
-withShowTypeIcons(value=true)
+options.withShowTypeIcons(value=true)
 ```
 
-Controls whether the header should show icons for the column types
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Controls whether the header should show icons for the column types
 #### fn options.withSortBy
 
 ```jsonnet
-withSortBy(value)
+options.withSortBy(value)
 ```
 
-Used to control row sorting
+PARAMETERS:
 
+* **value** (`array`)
+
+Used to control row sorting
 #### fn options.withSortByMixin
 
 ```jsonnet
-withSortByMixin(value)
+options.withSortByMixin(value)
 ```
 
-Used to control row sorting
+PARAMETERS:
 
+* **value** (`array`)
+
+Used to control row sorting
 #### obj options.footer
 
 
 ##### fn options.footer.withTableFooterOptions
 
 ```jsonnet
-withTableFooterOptions(value)
+options.footer.withTableFooterOptions(value)
 ```
 
-Footer options
+PARAMETERS:
 
+* **value** (`object`)
+
+Footer options
 ##### fn options.footer.withTableFooterOptionsMixin
 
 ```jsonnet
-withTableFooterOptionsMixin(value)
+options.footer.withTableFooterOptionsMixin(value)
 ```
 
-Footer options
+PARAMETERS:
 
+* **value** (`object`)
+
+Footer options
 ##### obj options.footer.TableFooterOptions
 
 
 ###### fn options.footer.TableFooterOptions.withCountRows
 
 ```jsonnet
-withCountRows(value=true)
+options.footer.TableFooterOptions.withCountRows(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ###### fn options.footer.TableFooterOptions.withEnablePagination
 
 ```jsonnet
-withEnablePagination(value=true)
+options.footer.TableFooterOptions.withEnablePagination(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ###### fn options.footer.TableFooterOptions.withFields
 
 ```jsonnet
-withFields(value)
+options.footer.TableFooterOptions.withFields(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ###### fn options.footer.TableFooterOptions.withFieldsMixin
 
 ```jsonnet
-withFieldsMixin(value)
+options.footer.TableFooterOptions.withFieldsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ###### fn options.footer.TableFooterOptions.withReducer
 
 ```jsonnet
-withReducer(value)
+options.footer.TableFooterOptions.withReducer(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ###### fn options.footer.TableFooterOptions.withReducerMixin
 
 ```jsonnet
-withReducerMixin(value)
+options.footer.TableFooterOptions.withReducerMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ###### fn options.footer.TableFooterOptions.withShow
 
 ```jsonnet
-withShow(value=true)
+options.footer.TableFooterOptions.withShow(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ### obj panelOptions
@@ -259,163 +327,226 @@ withShow(value=true)
 #### fn panelOptions.withDescription
 
 ```jsonnet
-withDescription(value)
+panelOptions.withDescription(value)
 ```
 
-Description.
+PARAMETERS:
 
+* **value** (`string`)
+
+Description.
 #### fn panelOptions.withGridPos
 
 ```jsonnet
-withGridPos(h="null", w="null", x="null", y="null")
+panelOptions.withGridPos(h="null", w="null", x="null", y="null")
 ```
+
+PARAMETERS:
+
+* **h** (`number`)
+   - default value: `"null"`
+* **w** (`number`)
+   - default value: `"null"`
+* **x** (`number`)
+   - default value: `"null"`
+* **y** (`number`)
+   - default value: `"null"`
 
 `withGridPos` configures the height, width and xy coordinates of the panel. Also see `grafonnet.util.grid` for helper functions to calculate these fields.
 
 All arguments default to `null`, which means they will remain unchanged or unset.
 
-
 #### fn panelOptions.withLinks
 
 ```jsonnet
-withLinks(value)
+panelOptions.withLinks(value)
 ```
+
+PARAMETERS:
+
+* **value** (`array`)
 
 Panel links.
 TODO fill this out - seems there are a couple variants?
-
 #### fn panelOptions.withLinksMixin
 
 ```jsonnet
-withLinksMixin(value)
+panelOptions.withLinksMixin(value)
 ```
+
+PARAMETERS:
+
+* **value** (`array`)
 
 Panel links.
 TODO fill this out - seems there are a couple variants?
-
 #### fn panelOptions.withRepeat
 
 ```jsonnet
-withRepeat(value)
+panelOptions.withRepeat(value)
 ```
 
-Name of template variable to repeat for.
+PARAMETERS:
 
+* **value** (`string`)
+
+Name of template variable to repeat for.
 #### fn panelOptions.withRepeatDirection
 
 ```jsonnet
-withRepeatDirection(value="h")
+panelOptions.withRepeatDirection(value="h")
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"h"`
+   - valid values: `"h"`, `"v"`
 
 Direction to repeat in if 'repeat' is set.
 "h" for horizontal, "v" for vertical.
 TODO this is probably optional
-
-Accepted values for `value` are "h", "v"
-
 #### fn panelOptions.withTitle
 
 ```jsonnet
-withTitle(value)
+panelOptions.withTitle(value)
 ```
 
-Panel title.
+PARAMETERS:
 
+* **value** (`string`)
+
+Panel title.
 #### fn panelOptions.withTransparent
 
 ```jsonnet
-withTransparent(value=true)
+panelOptions.withTransparent(value=true)
 ```
 
-Whether to display the panel without a background.
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Whether to display the panel without a background.
 ### obj queryOptions
 
 
 #### fn queryOptions.withDatasource
 
 ```jsonnet
-withDatasource(type, uid)
+queryOptions.withDatasource(type, uid)
 ```
+
+PARAMETERS:
+
+* **type** (`string`)
+* **uid** (`string`)
 
 `withDatasource` sets the datasource for all queries in a panel.
 
 The default datasource for a panel is set to 'Mixed datasource' so panels can be datasource agnostic, which is a lot more interesting from a reusability standpoint. Note that this requires query targets to explicitly set datasource for the same reason.
 
-
 #### fn queryOptions.withDatasourceMixin
 
 ```jsonnet
-withDatasourceMixin(value)
+queryOptions.withDatasourceMixin(value)
 ```
 
-The datasource used in all targets.
+PARAMETERS:
 
+* **value** (`object`)
+
+The datasource used in all targets.
 #### fn queryOptions.withInterval
 
 ```jsonnet
-withInterval(value)
+queryOptions.withInterval(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 TODO docs
 TODO tighter constraint
-
 #### fn queryOptions.withMaxDataPoints
 
 ```jsonnet
-withMaxDataPoints(value)
+queryOptions.withMaxDataPoints(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`number`)
+
+TODO docs
 #### fn queryOptions.withTargets
 
 ```jsonnet
-withTargets(value)
+queryOptions.withTargets(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`array`)
+
+TODO docs
 #### fn queryOptions.withTargetsMixin
 
 ```jsonnet
-withTargetsMixin(value)
+queryOptions.withTargetsMixin(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`array`)
+
+TODO docs
 #### fn queryOptions.withTimeFrom
 
 ```jsonnet
-withTimeFrom(value)
+queryOptions.withTimeFrom(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 TODO docs
 TODO tighter constraint
-
 #### fn queryOptions.withTimeShift
 
 ```jsonnet
-withTimeShift(value)
+queryOptions.withTimeShift(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 TODO docs
 TODO tighter constraint
-
 #### fn queryOptions.withTransformations
 
 ```jsonnet
-withTransformations(value)
+queryOptions.withTransformations(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 #### fn queryOptions.withTransformationsMixin
 
 ```jsonnet
-withTransformationsMixin(value)
+queryOptions.withTransformationsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ### obj standardOptions
@@ -424,153 +555,206 @@ withTransformationsMixin(value)
 #### fn standardOptions.withDecimals
 
 ```jsonnet
-withDecimals(value)
+standardOptions.withDecimals(value)
 ```
 
-Significant digits (for display)
+PARAMETERS:
 
+* **value** (`number`)
+
+Significant digits (for display)
 #### fn standardOptions.withDisplayName
 
 ```jsonnet
-withDisplayName(value)
+standardOptions.withDisplayName(value)
 ```
 
-The display value for this field.  This supports template variables blank is auto
+PARAMETERS:
 
+* **value** (`string`)
+
+The display value for this field.  This supports template variables blank is auto
 #### fn standardOptions.withLinks
 
 ```jsonnet
-withLinks(value)
+standardOptions.withLinks(value)
 ```
 
-The behavior when clicking on a result
+PARAMETERS:
 
+* **value** (`array`)
+
+The behavior when clicking on a result
 #### fn standardOptions.withLinksMixin
 
 ```jsonnet
-withLinksMixin(value)
+standardOptions.withLinksMixin(value)
 ```
 
-The behavior when clicking on a result
+PARAMETERS:
 
+* **value** (`array`)
+
+The behavior when clicking on a result
 #### fn standardOptions.withMappings
 
 ```jsonnet
-withMappings(value)
+standardOptions.withMappings(value)
 ```
 
-Convert input values into a display string
+PARAMETERS:
 
+* **value** (`array`)
+
+Convert input values into a display string
 #### fn standardOptions.withMappingsMixin
 
 ```jsonnet
-withMappingsMixin(value)
+standardOptions.withMappingsMixin(value)
 ```
 
-Convert input values into a display string
+PARAMETERS:
 
+* **value** (`array`)
+
+Convert input values into a display string
 #### fn standardOptions.withMax
 
 ```jsonnet
-withMax(value)
+standardOptions.withMax(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 #### fn standardOptions.withMin
 
 ```jsonnet
-withMin(value)
+standardOptions.withMin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 #### fn standardOptions.withNoValue
 
 ```jsonnet
-withNoValue(value)
+standardOptions.withNoValue(value)
 ```
 
-Alternative to empty string
+PARAMETERS:
 
+* **value** (`string`)
+
+Alternative to empty string
 #### fn standardOptions.withOverrides
 
 ```jsonnet
-withOverrides(value)
+standardOptions.withOverrides(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 #### fn standardOptions.withOverridesMixin
 
 ```jsonnet
-withOverridesMixin(value)
+standardOptions.withOverridesMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 #### fn standardOptions.withUnit
 
 ```jsonnet
-withUnit(value)
+standardOptions.withUnit(value)
 ```
 
-Numeric Options
+PARAMETERS:
 
+* **value** (`string`)
+
+Numeric Options
 #### obj standardOptions.color
 
 
 ##### fn standardOptions.color.withFixedColor
 
 ```jsonnet
-withFixedColor(value)
+standardOptions.color.withFixedColor(value)
 ```
 
-Stores the fixed color value if mode is fixed
+PARAMETERS:
 
+* **value** (`string`)
+
+Stores the fixed color value if mode is fixed
 ##### fn standardOptions.color.withMode
 
 ```jsonnet
-withMode(value)
+standardOptions.color.withMode(value)
 ```
 
-The main color scheme mode
+PARAMETERS:
 
+* **value** (`string`)
+
+The main color scheme mode
 ##### fn standardOptions.color.withSeriesBy
 
 ```jsonnet
-withSeriesBy(value)
+standardOptions.color.withSeriesBy(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"min"`, `"max"`, `"last"`
+
 TODO docs
-
-Accepted values for `value` are "min", "max", "last"
-
 #### obj standardOptions.thresholds
 
 
 ##### fn standardOptions.thresholds.withMode
 
 ```jsonnet
-withMode(value)
+standardOptions.thresholds.withMode(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"absolute"`, `"percentage"`
 
-Accepted values for `value` are "absolute", "percentage"
 
 ##### fn standardOptions.thresholds.withSteps
 
 ```jsonnet
-withSteps(value)
+standardOptions.thresholds.withSteps(value)
 ```
 
-Must be sorted by 'value', first value is always -Infinity
+PARAMETERS:
 
+* **value** (`array`)
+
+Must be sorted by 'value', first value is always -Infinity
 ##### fn standardOptions.thresholds.withStepsMixin
 
 ```jsonnet
-withStepsMixin(value)
+standardOptions.thresholds.withStepsMixin(value)
 ```
+
+PARAMETERS:
+
+* **value** (`array`)
 
 Must be sorted by 'value', first value is always -Infinity

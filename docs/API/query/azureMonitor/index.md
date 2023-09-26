@@ -151,22 +151,31 @@ grafonnet.query.azureMonitor
 withAzureLogAnalytics(value)
 ```
 
-Azure Monitor Logs sub-query properties
+PARAMETERS:
 
+* **value** (`object`)
+
+Azure Monitor Logs sub-query properties
 ### fn withAzureLogAnalyticsMixin
 
 ```jsonnet
 withAzureLogAnalyticsMixin(value)
 ```
 
-Azure Monitor Logs sub-query properties
+PARAMETERS:
 
+* **value** (`object`)
+
+Azure Monitor Logs sub-query properties
 ### fn withAzureMonitor
 
 ```jsonnet
 withAzureMonitor(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withAzureMonitorMixin
@@ -175,6 +184,9 @@ withAzureMonitor(value)
 withAzureMonitorMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withAzureResourceGraph
@@ -183,6 +195,9 @@ withAzureMonitorMixin(value)
 withAzureResourceGraph(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withAzureResourceGraphMixin
@@ -191,6 +206,9 @@ withAzureResourceGraph(value)
 withAzureResourceGraphMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withAzureTraces
@@ -199,33 +217,45 @@ withAzureResourceGraphMixin(value)
 withAzureTraces(value)
 ```
 
-Application Insights Traces sub-query properties
+PARAMETERS:
 
+* **value** (`object`)
+
+Application Insights Traces sub-query properties
 ### fn withAzureTracesMixin
 
 ```jsonnet
 withAzureTracesMixin(value)
 ```
 
-Application Insights Traces sub-query properties
+PARAMETERS:
 
+* **value** (`object`)
+
+Application Insights Traces sub-query properties
 ### fn withDatasource
 
 ```jsonnet
 withDatasource(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
 For mixed data sources the selected datasource is on the query level.
 For non mixed scenarios this is undefined.
 TODO find a better way to do this ^ that's friendly to schema
 TODO this shouldn't be unknown but DataSourceRef | null
-
 ### fn withGrafanaTemplateVariableFn
 
 ```jsonnet
 withGrafanaTemplateVariableFn(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withGrafanaTemplateVariableFnMixin
@@ -234,6 +264,9 @@ withGrafanaTemplateVariableFn(value)
 withGrafanaTemplateVariableFnMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withHide
@@ -242,16 +275,23 @@ withGrafanaTemplateVariableFnMixin(value)
 withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
 true if query is disabled (ie should not be returned to the dashboard)
 Note this does not always imply that the query should not be executed since
 the results from a hidden query may be used as the input to other queries (SSE etc)
-
 ### fn withNamespace
 
 ```jsonnet
 withNamespace(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withQueryType
@@ -260,34 +300,46 @@ withNamespace(value)
 withQueryType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
 Specify the query flavor
 TODO make this required and give it a default
-
 ### fn withRefId
 
 ```jsonnet
 withRefId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
 A unique identifier for the query within the list of targets.
 In server side expressions, the refId is used as a variable name to identify results.
 By default, the UI will assign A->Z; however setting meaningful names may be useful.
-
 ### fn withRegion
 
 ```jsonnet
 withRegion(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
 Azure Monitor query type.
 queryType: #AzureQueryType
-
 ### fn withResource
 
 ```jsonnet
 withResource(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withResourceGroup
@@ -296,515 +348,699 @@ withResource(value)
 withResourceGroup(value)
 ```
 
-Template variables params. These exist for backwards compatiblity with legacy template variables.
+PARAMETERS:
 
+* **value** (`string`)
+
+Template variables params. These exist for backwards compatiblity with legacy template variables.
 ### fn withSubscription
 
 ```jsonnet
 withSubscription(value)
 ```
 
-Azure subscription containing the resource(s) to be queried.
+PARAMETERS:
 
+* **value** (`string`)
+
+Azure subscription containing the resource(s) to be queried.
 ### fn withSubscriptions
 
 ```jsonnet
 withSubscriptions(value)
 ```
 
-Subscriptions to be queried via Azure Resource Graph.
+PARAMETERS:
 
+* **value** (`array`)
+
+Subscriptions to be queried via Azure Resource Graph.
 ### fn withSubscriptionsMixin
 
 ```jsonnet
 withSubscriptionsMixin(value)
 ```
 
-Subscriptions to be queried via Azure Resource Graph.
+PARAMETERS:
 
+* **value** (`array`)
+
+Subscriptions to be queried via Azure Resource Graph.
 ### obj azureLogAnalytics
 
 
 #### fn azureLogAnalytics.withQuery
 
 ```jsonnet
-withQuery(value)
+azureLogAnalytics.withQuery(value)
 ```
 
-KQL query to be executed.
+PARAMETERS:
 
+* **value** (`string`)
+
+KQL query to be executed.
 #### fn azureLogAnalytics.withResource
 
 ```jsonnet
-withResource(value)
+azureLogAnalytics.withResource(value)
 ```
 
-@deprecated Use resources instead
+PARAMETERS:
 
+* **value** (`string`)
+
+@deprecated Use resources instead
 #### fn azureLogAnalytics.withResources
 
 ```jsonnet
-withResources(value)
+azureLogAnalytics.withResources(value)
 ```
 
-Array of resource URIs to be queried.
+PARAMETERS:
 
+* **value** (`array`)
+
+Array of resource URIs to be queried.
 #### fn azureLogAnalytics.withResourcesMixin
 
 ```jsonnet
-withResourcesMixin(value)
+azureLogAnalytics.withResourcesMixin(value)
 ```
 
-Array of resource URIs to be queried.
+PARAMETERS:
 
+* **value** (`array`)
+
+Array of resource URIs to be queried.
 #### fn azureLogAnalytics.withResultFormat
 
 ```jsonnet
-withResultFormat(value)
+azureLogAnalytics.withResultFormat(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"table"`, `"time_series"`, `"trace"`
 
-Accepted values for `value` are "table", "time_series", "trace"
 
 #### fn azureLogAnalytics.withWorkspace
 
 ```jsonnet
-withWorkspace(value)
+azureLogAnalytics.withWorkspace(value)
 ```
 
-Workspace ID. This was removed in Grafana 8, but remains for backwards compat
+PARAMETERS:
 
+* **value** (`string`)
+
+Workspace ID. This was removed in Grafana 8, but remains for backwards compat
 ### obj azureMonitor
 
 
 #### fn azureMonitor.withAggregation
 
 ```jsonnet
-withAggregation(value)
+azureMonitor.withAggregation(value)
 ```
 
-The aggregation to be used within the query. Defaults to the primaryAggregationType defined by the metric.
+PARAMETERS:
 
+* **value** (`string`)
+
+The aggregation to be used within the query. Defaults to the primaryAggregationType defined by the metric.
 #### fn azureMonitor.withAlias
 
 ```jsonnet
-withAlias(value)
+azureMonitor.withAlias(value)
 ```
 
-Aliases can be set to modify the legend labels. e.g. {{ resourceGroup }}. See docs for more detail.
+PARAMETERS:
 
+* **value** (`string`)
+
+Aliases can be set to modify the legend labels. e.g. {{ resourceGroup }}. See docs for more detail.
 #### fn azureMonitor.withAllowedTimeGrainsMs
 
 ```jsonnet
-withAllowedTimeGrainsMs(value)
+azureMonitor.withAllowedTimeGrainsMs(value)
 ```
 
-Time grains that are supported by the metric.
+PARAMETERS:
 
+* **value** (`array`)
+
+Time grains that are supported by the metric.
 #### fn azureMonitor.withAllowedTimeGrainsMsMixin
 
 ```jsonnet
-withAllowedTimeGrainsMsMixin(value)
+azureMonitor.withAllowedTimeGrainsMsMixin(value)
 ```
 
-Time grains that are supported by the metric.
+PARAMETERS:
 
+* **value** (`array`)
+
+Time grains that are supported by the metric.
 #### fn azureMonitor.withCustomNamespace
 
 ```jsonnet
-withCustomNamespace(value)
+azureMonitor.withCustomNamespace(value)
 ```
 
-Used as the value for the metricNamespace property when it's different from the resource namespace.
+PARAMETERS:
 
+* **value** (`string`)
+
+Used as the value for the metricNamespace property when it's different from the resource namespace.
 #### fn azureMonitor.withDimension
 
 ```jsonnet
-withDimension(value)
+azureMonitor.withDimension(value)
 ```
 
-@deprecated This property was migrated to dimensionFilters and should only be accessed in the migration
+PARAMETERS:
 
+* **value** (`string`)
+
+@deprecated This property was migrated to dimensionFilters and should only be accessed in the migration
 #### fn azureMonitor.withDimensionFilter
 
 ```jsonnet
-withDimensionFilter(value)
+azureMonitor.withDimensionFilter(value)
 ```
 
-@deprecated This property was migrated to dimensionFilters and should only be accessed in the migration
+PARAMETERS:
 
+* **value** (`string`)
+
+@deprecated This property was migrated to dimensionFilters and should only be accessed in the migration
 #### fn azureMonitor.withDimensionFilters
 
 ```jsonnet
-withDimensionFilters(value)
+azureMonitor.withDimensionFilters(value)
 ```
 
-Filters to reduce the set of data returned. Dimensions that can be filtered on are defined by the metric.
+PARAMETERS:
 
+* **value** (`array`)
+
+Filters to reduce the set of data returned. Dimensions that can be filtered on are defined by the metric.
 #### fn azureMonitor.withDimensionFiltersMixin
 
 ```jsonnet
-withDimensionFiltersMixin(value)
+azureMonitor.withDimensionFiltersMixin(value)
 ```
 
-Filters to reduce the set of data returned. Dimensions that can be filtered on are defined by the metric.
+PARAMETERS:
 
+* **value** (`array`)
+
+Filters to reduce the set of data returned. Dimensions that can be filtered on are defined by the metric.
 #### fn azureMonitor.withMetricDefinition
 
 ```jsonnet
-withMetricDefinition(value)
+azureMonitor.withMetricDefinition(value)
 ```
 
-@deprecated Use metricNamespace instead
+PARAMETERS:
 
+* **value** (`string`)
+
+@deprecated Use metricNamespace instead
 #### fn azureMonitor.withMetricName
 
 ```jsonnet
-withMetricName(value)
+azureMonitor.withMetricName(value)
 ```
 
-The metric to query data for within the specified metricNamespace. e.g. UsedCapacity
+PARAMETERS:
 
+* **value** (`string`)
+
+The metric to query data for within the specified metricNamespace. e.g. UsedCapacity
 #### fn azureMonitor.withMetricNamespace
 
 ```jsonnet
-withMetricNamespace(value)
+azureMonitor.withMetricNamespace(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 metricNamespace is used as the resource type (or resource namespace).
 It's usually equal to the target metric namespace. e.g. microsoft.storage/storageaccounts
 Kept the name of the variable as metricNamespace to avoid backward incompatibility issues.
-
 #### fn azureMonitor.withRegion
 
 ```jsonnet
-withRegion(value)
+azureMonitor.withRegion(value)
 ```
 
-The Azure region containing the resource(s).
+PARAMETERS:
 
+* **value** (`string`)
+
+The Azure region containing the resource(s).
 #### fn azureMonitor.withResourceGroup
 
 ```jsonnet
-withResourceGroup(value)
+azureMonitor.withResourceGroup(value)
 ```
 
-@deprecated Use resources instead
+PARAMETERS:
 
+* **value** (`string`)
+
+@deprecated Use resources instead
 #### fn azureMonitor.withResourceName
 
 ```jsonnet
-withResourceName(value)
+azureMonitor.withResourceName(value)
 ```
 
-@deprecated Use resources instead
+PARAMETERS:
 
+* **value** (`string`)
+
+@deprecated Use resources instead
 #### fn azureMonitor.withResourceUri
 
 ```jsonnet
-withResourceUri(value)
+azureMonitor.withResourceUri(value)
 ```
 
-@deprecated Use resourceGroup, resourceName and metricNamespace instead
+PARAMETERS:
 
+* **value** (`string`)
+
+@deprecated Use resourceGroup, resourceName and metricNamespace instead
 #### fn azureMonitor.withResources
 
 ```jsonnet
-withResources(value)
+azureMonitor.withResources(value)
 ```
 
-Array of resource URIs to be queried.
+PARAMETERS:
 
+* **value** (`array`)
+
+Array of resource URIs to be queried.
 #### fn azureMonitor.withResourcesMixin
 
 ```jsonnet
-withResourcesMixin(value)
+azureMonitor.withResourcesMixin(value)
 ```
 
-Array of resource URIs to be queried.
+PARAMETERS:
 
+* **value** (`array`)
+
+Array of resource URIs to be queried.
 #### fn azureMonitor.withTimeGrain
 
 ```jsonnet
-withTimeGrain(value)
+azureMonitor.withTimeGrain(value)
 ```
 
-The granularity of data points to be queried. Defaults to auto.
+PARAMETERS:
 
+* **value** (`string`)
+
+The granularity of data points to be queried. Defaults to auto.
 #### fn azureMonitor.withTimeGrainUnit
 
 ```jsonnet
-withTimeGrainUnit(value)
+azureMonitor.withTimeGrainUnit(value)
 ```
 
-@deprecated
+PARAMETERS:
 
+* **value** (`string`)
+
+@deprecated
 #### fn azureMonitor.withTop
 
 ```jsonnet
-withTop(value)
+azureMonitor.withTop(value)
 ```
 
-Maximum number of records to return. Defaults to 10.
+PARAMETERS:
 
+* **value** (`string`)
+
+Maximum number of records to return. Defaults to 10.
 ### obj azureResourceGraph
 
 
 #### fn azureResourceGraph.withQuery
 
 ```jsonnet
-withQuery(value)
+azureResourceGraph.withQuery(value)
 ```
 
-Azure Resource Graph KQL query to be executed.
+PARAMETERS:
 
+* **value** (`string`)
+
+Azure Resource Graph KQL query to be executed.
 #### fn azureResourceGraph.withResultFormat
 
 ```jsonnet
-withResultFormat(value)
+azureResourceGraph.withResultFormat(value)
 ```
 
-Specifies the format results should be returned as. Defaults to table.
+PARAMETERS:
 
+* **value** (`string`)
+
+Specifies the format results should be returned as. Defaults to table.
 ### obj azureTraces
 
 
 #### fn azureTraces.withFilters
 
 ```jsonnet
-withFilters(value)
+azureTraces.withFilters(value)
 ```
 
-Filters for property values.
+PARAMETERS:
 
+* **value** (`array`)
+
+Filters for property values.
 #### fn azureTraces.withFiltersMixin
 
 ```jsonnet
-withFiltersMixin(value)
+azureTraces.withFiltersMixin(value)
 ```
 
-Filters for property values.
+PARAMETERS:
 
+* **value** (`array`)
+
+Filters for property values.
 #### fn azureTraces.withOperationId
 
 ```jsonnet
-withOperationId(value)
+azureTraces.withOperationId(value)
 ```
 
-Operation ID. Used only for Traces queries.
+PARAMETERS:
 
+* **value** (`string`)
+
+Operation ID. Used only for Traces queries.
 #### fn azureTraces.withQuery
 
 ```jsonnet
-withQuery(value)
+azureTraces.withQuery(value)
 ```
 
-KQL query to be executed.
+PARAMETERS:
 
+* **value** (`string`)
+
+KQL query to be executed.
 #### fn azureTraces.withResources
 
 ```jsonnet
-withResources(value)
+azureTraces.withResources(value)
 ```
 
-Array of resource URIs to be queried.
+PARAMETERS:
 
+* **value** (`array`)
+
+Array of resource URIs to be queried.
 #### fn azureTraces.withResourcesMixin
 
 ```jsonnet
-withResourcesMixin(value)
+azureTraces.withResourcesMixin(value)
 ```
 
-Array of resource URIs to be queried.
+PARAMETERS:
 
+* **value** (`array`)
+
+Array of resource URIs to be queried.
 #### fn azureTraces.withResultFormat
 
 ```jsonnet
-withResultFormat(value)
+azureTraces.withResultFormat(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"table"`, `"time_series"`, `"trace"`
 
-Accepted values for `value` are "table", "time_series", "trace"
 
 #### fn azureTraces.withTraceTypes
 
 ```jsonnet
-withTraceTypes(value)
+azureTraces.withTraceTypes(value)
 ```
 
-Types of events to filter by.
+PARAMETERS:
 
+* **value** (`array`)
+
+Types of events to filter by.
 #### fn azureTraces.withTraceTypesMixin
 
 ```jsonnet
-withTraceTypesMixin(value)
+azureTraces.withTraceTypesMixin(value)
 ```
 
-Types of events to filter by.
+PARAMETERS:
 
+* **value** (`array`)
+
+Types of events to filter by.
 ### obj grafanaTemplateVariableFn
 
 
 #### fn grafanaTemplateVariableFn.withAppInsightsGroupByQuery
 
 ```jsonnet
-withAppInsightsGroupByQuery(value)
+grafanaTemplateVariableFn.withAppInsightsGroupByQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withAppInsightsGroupByQueryMixin
 
 ```jsonnet
-withAppInsightsGroupByQueryMixin(value)
+grafanaTemplateVariableFn.withAppInsightsGroupByQueryMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withAppInsightsMetricNameQuery
 
 ```jsonnet
-withAppInsightsMetricNameQuery(value)
+grafanaTemplateVariableFn.withAppInsightsMetricNameQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withAppInsightsMetricNameQueryMixin
 
 ```jsonnet
-withAppInsightsMetricNameQueryMixin(value)
+grafanaTemplateVariableFn.withAppInsightsMetricNameQueryMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withMetricDefinitionsQuery
 
 ```jsonnet
-withMetricDefinitionsQuery(value)
+grafanaTemplateVariableFn.withMetricDefinitionsQuery(value)
 ```
 
-@deprecated Use MetricNamespaceQuery instead
+PARAMETERS:
 
+* **value** (`object`)
+
+@deprecated Use MetricNamespaceQuery instead
 #### fn grafanaTemplateVariableFn.withMetricDefinitionsQueryMixin
 
 ```jsonnet
-withMetricDefinitionsQueryMixin(value)
+grafanaTemplateVariableFn.withMetricDefinitionsQueryMixin(value)
 ```
 
-@deprecated Use MetricNamespaceQuery instead
+PARAMETERS:
 
+* **value** (`object`)
+
+@deprecated Use MetricNamespaceQuery instead
 #### fn grafanaTemplateVariableFn.withMetricNamesQuery
 
 ```jsonnet
-withMetricNamesQuery(value)
+grafanaTemplateVariableFn.withMetricNamesQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withMetricNamesQueryMixin
 
 ```jsonnet
-withMetricNamesQueryMixin(value)
+grafanaTemplateVariableFn.withMetricNamesQueryMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withMetricNamespaceQuery
 
 ```jsonnet
-withMetricNamespaceQuery(value)
+grafanaTemplateVariableFn.withMetricNamespaceQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withMetricNamespaceQueryMixin
 
 ```jsonnet
-withMetricNamespaceQueryMixin(value)
+grafanaTemplateVariableFn.withMetricNamespaceQueryMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withResourceGroupsQuery
 
 ```jsonnet
-withResourceGroupsQuery(value)
+grafanaTemplateVariableFn.withResourceGroupsQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withResourceGroupsQueryMixin
 
 ```jsonnet
-withResourceGroupsQueryMixin(value)
+grafanaTemplateVariableFn.withResourceGroupsQueryMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withResourceNamesQuery
 
 ```jsonnet
-withResourceNamesQuery(value)
+grafanaTemplateVariableFn.withResourceNamesQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withResourceNamesQueryMixin
 
 ```jsonnet
-withResourceNamesQueryMixin(value)
+grafanaTemplateVariableFn.withResourceNamesQueryMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withSubscriptionsQuery
 
 ```jsonnet
-withSubscriptionsQuery(value)
+grafanaTemplateVariableFn.withSubscriptionsQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withSubscriptionsQueryMixin
 
 ```jsonnet
-withSubscriptionsQueryMixin(value)
+grafanaTemplateVariableFn.withSubscriptionsQueryMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withUnknownQuery
 
 ```jsonnet
-withUnknownQuery(value)
+grafanaTemplateVariableFn.withUnknownQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withUnknownQueryMixin
 
 ```jsonnet
-withUnknownQueryMixin(value)
+grafanaTemplateVariableFn.withUnknownQueryMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withWorkspacesQuery
 
 ```jsonnet
-withWorkspacesQuery(value)
+grafanaTemplateVariableFn.withWorkspacesQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn grafanaTemplateVariableFn.withWorkspacesQueryMixin
 
 ```jsonnet
-withWorkspacesQueryMixin(value)
+grafanaTemplateVariableFn.withWorkspacesQueryMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### obj grafanaTemplateVariableFn.AppInsightsGroupByQuery
@@ -813,27 +1049,35 @@ withWorkspacesQueryMixin(value)
 ##### fn grafanaTemplateVariableFn.AppInsightsGroupByQuery.withKind
 
 ```jsonnet
-withKind(value)
+grafanaTemplateVariableFn.AppInsightsGroupByQuery.withKind(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"AppInsightsGroupByQuery"`
 
-Accepted values for `value` are "AppInsightsGroupByQuery"
 
 ##### fn grafanaTemplateVariableFn.AppInsightsGroupByQuery.withMetricName
 
 ```jsonnet
-withMetricName(value)
+grafanaTemplateVariableFn.AppInsightsGroupByQuery.withMetricName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.AppInsightsGroupByQuery.withRawQuery
 
 ```jsonnet
-withRawQuery(value)
+grafanaTemplateVariableFn.AppInsightsGroupByQuery.withRawQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj grafanaTemplateVariableFn.AppInsightsMetricNameQuery
@@ -842,19 +1086,24 @@ withRawQuery(value)
 ##### fn grafanaTemplateVariableFn.AppInsightsMetricNameQuery.withKind
 
 ```jsonnet
-withKind(value)
+grafanaTemplateVariableFn.AppInsightsMetricNameQuery.withKind(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"AppInsightsMetricNameQuery"`
 
-Accepted values for `value` are "AppInsightsMetricNameQuery"
 
 ##### fn grafanaTemplateVariableFn.AppInsightsMetricNameQuery.withRawQuery
 
 ```jsonnet
-withRawQuery(value)
+grafanaTemplateVariableFn.AppInsightsMetricNameQuery.withRawQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj grafanaTemplateVariableFn.MetricDefinitionsQuery
@@ -863,51 +1112,68 @@ withRawQuery(value)
 ##### fn grafanaTemplateVariableFn.MetricDefinitionsQuery.withKind
 
 ```jsonnet
-withKind(value)
+grafanaTemplateVariableFn.MetricDefinitionsQuery.withKind(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"MetricDefinitionsQuery"`
 
-Accepted values for `value` are "MetricDefinitionsQuery"
 
 ##### fn grafanaTemplateVariableFn.MetricDefinitionsQuery.withMetricNamespace
 
 ```jsonnet
-withMetricNamespace(value)
+grafanaTemplateVariableFn.MetricDefinitionsQuery.withMetricNamespace(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.MetricDefinitionsQuery.withRawQuery
 
 ```jsonnet
-withRawQuery(value)
+grafanaTemplateVariableFn.MetricDefinitionsQuery.withRawQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.MetricDefinitionsQuery.withResourceGroup
 
 ```jsonnet
-withResourceGroup(value)
+grafanaTemplateVariableFn.MetricDefinitionsQuery.withResourceGroup(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.MetricDefinitionsQuery.withResourceName
 
 ```jsonnet
-withResourceName(value)
+grafanaTemplateVariableFn.MetricDefinitionsQuery.withResourceName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.MetricDefinitionsQuery.withSubscription
 
 ```jsonnet
-withSubscription(value)
+grafanaTemplateVariableFn.MetricDefinitionsQuery.withSubscription(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj grafanaTemplateVariableFn.MetricNamesQuery
@@ -916,51 +1182,68 @@ withSubscription(value)
 ##### fn grafanaTemplateVariableFn.MetricNamesQuery.withKind
 
 ```jsonnet
-withKind(value)
+grafanaTemplateVariableFn.MetricNamesQuery.withKind(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"MetricNamesQuery"`
 
-Accepted values for `value` are "MetricNamesQuery"
 
 ##### fn grafanaTemplateVariableFn.MetricNamesQuery.withMetricNamespace
 
 ```jsonnet
-withMetricNamespace(value)
+grafanaTemplateVariableFn.MetricNamesQuery.withMetricNamespace(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.MetricNamesQuery.withRawQuery
 
 ```jsonnet
-withRawQuery(value)
+grafanaTemplateVariableFn.MetricNamesQuery.withRawQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.MetricNamesQuery.withResourceGroup
 
 ```jsonnet
-withResourceGroup(value)
+grafanaTemplateVariableFn.MetricNamesQuery.withResourceGroup(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.MetricNamesQuery.withResourceName
 
 ```jsonnet
-withResourceName(value)
+grafanaTemplateVariableFn.MetricNamesQuery.withResourceName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.MetricNamesQuery.withSubscription
 
 ```jsonnet
-withSubscription(value)
+grafanaTemplateVariableFn.MetricNamesQuery.withSubscription(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj grafanaTemplateVariableFn.MetricNamespaceQuery
@@ -969,51 +1252,68 @@ withSubscription(value)
 ##### fn grafanaTemplateVariableFn.MetricNamespaceQuery.withKind
 
 ```jsonnet
-withKind(value)
+grafanaTemplateVariableFn.MetricNamespaceQuery.withKind(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"MetricNamespaceQuery"`
 
-Accepted values for `value` are "MetricNamespaceQuery"
 
 ##### fn grafanaTemplateVariableFn.MetricNamespaceQuery.withMetricNamespace
 
 ```jsonnet
-withMetricNamespace(value)
+grafanaTemplateVariableFn.MetricNamespaceQuery.withMetricNamespace(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.MetricNamespaceQuery.withRawQuery
 
 ```jsonnet
-withRawQuery(value)
+grafanaTemplateVariableFn.MetricNamespaceQuery.withRawQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.MetricNamespaceQuery.withResourceGroup
 
 ```jsonnet
-withResourceGroup(value)
+grafanaTemplateVariableFn.MetricNamespaceQuery.withResourceGroup(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.MetricNamespaceQuery.withResourceName
 
 ```jsonnet
-withResourceName(value)
+grafanaTemplateVariableFn.MetricNamespaceQuery.withResourceName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.MetricNamespaceQuery.withSubscription
 
 ```jsonnet
-withSubscription(value)
+grafanaTemplateVariableFn.MetricNamespaceQuery.withSubscription(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj grafanaTemplateVariableFn.ResourceGroupsQuery
@@ -1022,27 +1322,35 @@ withSubscription(value)
 ##### fn grafanaTemplateVariableFn.ResourceGroupsQuery.withKind
 
 ```jsonnet
-withKind(value)
+grafanaTemplateVariableFn.ResourceGroupsQuery.withKind(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"ResourceGroupsQuery"`
 
-Accepted values for `value` are "ResourceGroupsQuery"
 
 ##### fn grafanaTemplateVariableFn.ResourceGroupsQuery.withRawQuery
 
 ```jsonnet
-withRawQuery(value)
+grafanaTemplateVariableFn.ResourceGroupsQuery.withRawQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.ResourceGroupsQuery.withSubscription
 
 ```jsonnet
-withSubscription(value)
+grafanaTemplateVariableFn.ResourceGroupsQuery.withSubscription(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj grafanaTemplateVariableFn.ResourceNamesQuery
@@ -1051,43 +1359,57 @@ withSubscription(value)
 ##### fn grafanaTemplateVariableFn.ResourceNamesQuery.withKind
 
 ```jsonnet
-withKind(value)
+grafanaTemplateVariableFn.ResourceNamesQuery.withKind(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"ResourceNamesQuery"`
 
-Accepted values for `value` are "ResourceNamesQuery"
 
 ##### fn grafanaTemplateVariableFn.ResourceNamesQuery.withMetricNamespace
 
 ```jsonnet
-withMetricNamespace(value)
+grafanaTemplateVariableFn.ResourceNamesQuery.withMetricNamespace(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.ResourceNamesQuery.withRawQuery
 
 ```jsonnet
-withRawQuery(value)
+grafanaTemplateVariableFn.ResourceNamesQuery.withRawQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.ResourceNamesQuery.withResourceGroup
 
 ```jsonnet
-withResourceGroup(value)
+grafanaTemplateVariableFn.ResourceNamesQuery.withResourceGroup(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.ResourceNamesQuery.withSubscription
 
 ```jsonnet
-withSubscription(value)
+grafanaTemplateVariableFn.ResourceNamesQuery.withSubscription(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj grafanaTemplateVariableFn.SubscriptionsQuery
@@ -1096,19 +1418,24 @@ withSubscription(value)
 ##### fn grafanaTemplateVariableFn.SubscriptionsQuery.withKind
 
 ```jsonnet
-withKind(value)
+grafanaTemplateVariableFn.SubscriptionsQuery.withKind(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"SubscriptionsQuery"`
 
-Accepted values for `value` are "SubscriptionsQuery"
 
 ##### fn grafanaTemplateVariableFn.SubscriptionsQuery.withRawQuery
 
 ```jsonnet
-withRawQuery(value)
+grafanaTemplateVariableFn.SubscriptionsQuery.withRawQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj grafanaTemplateVariableFn.UnknownQuery
@@ -1117,19 +1444,24 @@ withRawQuery(value)
 ##### fn grafanaTemplateVariableFn.UnknownQuery.withKind
 
 ```jsonnet
-withKind(value)
+grafanaTemplateVariableFn.UnknownQuery.withKind(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"UnknownQuery"`
 
-Accepted values for `value` are "UnknownQuery"
 
 ##### fn grafanaTemplateVariableFn.UnknownQuery.withRawQuery
 
 ```jsonnet
-withRawQuery(value)
+grafanaTemplateVariableFn.UnknownQuery.withRawQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### obj grafanaTemplateVariableFn.WorkspacesQuery
@@ -1138,25 +1470,33 @@ withRawQuery(value)
 ##### fn grafanaTemplateVariableFn.WorkspacesQuery.withKind
 
 ```jsonnet
-withKind(value)
+grafanaTemplateVariableFn.WorkspacesQuery.withKind(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"WorkspacesQuery"`
 
-Accepted values for `value` are "WorkspacesQuery"
 
 ##### fn grafanaTemplateVariableFn.WorkspacesQuery.withRawQuery
 
 ```jsonnet
-withRawQuery(value)
+grafanaTemplateVariableFn.WorkspacesQuery.withRawQuery(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn grafanaTemplateVariableFn.WorkspacesQuery.withSubscription
 
 ```jsonnet
-withSubscription(value)
+grafanaTemplateVariableFn.WorkspacesQuery.withSubscription(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 

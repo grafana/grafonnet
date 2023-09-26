@@ -82,6 +82,9 @@ grafonnet.query.testData
 withAlias(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withChannel
@@ -90,6 +93,9 @@ withAlias(value)
 withChannel(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withCsvContent
@@ -98,6 +104,9 @@ withChannel(value)
 withCsvContent(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withCsvFileName
@@ -106,6 +115,9 @@ withCsvContent(value)
 withCsvFileName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withCsvWave
@@ -114,6 +126,9 @@ withCsvFileName(value)
 withCsvWave(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ### fn withCsvWaveMixin
@@ -122,6 +137,9 @@ withCsvWave(value)
 withCsvWaveMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ### fn withDatasource
@@ -130,20 +148,25 @@ withCsvWaveMixin(value)
 withDatasource(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
 For mixed data sources the selected datasource is on the query level.
 For non mixed scenarios this is undefined.
 TODO find a better way to do this ^ that's friendly to schema
 TODO this shouldn't be unknown but DataSourceRef | null
-
 ### fn withErrorType
 
 ```jsonnet
 withErrorType(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"server_panic"`, `"frontend_exception"`, `"frontend_observable"`
 
-Accepted values for `value` are "server_panic", "frontend_exception", "frontend_observable"
 
 ### fn withHide
 
@@ -151,16 +174,23 @@ Accepted values for `value` are "server_panic", "frontend_exception", "frontend_
 withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
 true if query is disabled (ie should not be returned to the dashboard)
 Note this does not always imply that the query should not be executed since
 the results from a hidden query may be used as the input to other queries (SSE etc)
-
 ### fn withLabels
 
 ```jsonnet
 withLabels(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withLevelColumn
@@ -169,6 +199,10 @@ withLabels(value)
 withLevelColumn(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ### fn withLines
@@ -177,6 +211,9 @@ withLevelColumn(value=true)
 withLines(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 ### fn withNodes
@@ -185,6 +222,9 @@ withLines(value)
 withNodes(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withNodesMixin
@@ -193,6 +233,9 @@ withNodes(value)
 withNodesMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withPoints
@@ -201,6 +244,9 @@ withNodesMixin(value)
 withPoints(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ### fn withPointsMixin
@@ -209,6 +255,9 @@ withPoints(value)
 withPointsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ### fn withPulseWave
@@ -217,6 +266,9 @@ withPointsMixin(value)
 withPulseWave(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withPulseWaveMixin
@@ -225,6 +277,9 @@ withPulseWave(value)
 withPulseWaveMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withQueryType
@@ -233,15 +288,21 @@ withPulseWaveMixin(value)
 withQueryType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
 Specify the query flavor
 TODO make this required and give it a default
-
 ### fn withRawFrameContent
 
 ```jsonnet
 withRawFrameContent(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withRefId
@@ -250,19 +311,24 @@ withRawFrameContent(value)
 withRefId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
 A unique identifier for the query within the list of targets.
 In server side expressions, the refId is used as a variable name to identify results.
 By default, the UI will assign A->Z; however setting meaningful names may be useful.
-
 ### fn withScenarioId
 
 ```jsonnet
 withScenarioId(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"random_walk"`, `"slow_query"`, `"random_walk_with_error"`, `"random_walk_table"`, `"exponential_heatmap_bucket_data"`, `"linear_heatmap_bucket_data"`, `"no_data_points"`, `"datapoints_outside_range"`, `"csv_metric_values"`, `"predictable_pulse"`, `"predictable_csv_wave"`, `"streaming_client"`, `"simulation"`, `"usa"`, `"live"`, `"grafana_api"`, `"arrow"`, `"annotations"`, `"table_static"`, `"server_error_500"`, `"logs"`, `"node_graph"`, `"flame_graph"`, `"raw_frame"`, `"csv_file"`, `"csv_content"`, `"trace"`, `"manual_entry"`, `"variables-query"`
 
-Accepted values for `value` are "random_walk", "slow_query", "random_walk_with_error", "random_walk_table", "exponential_heatmap_bucket_data", "linear_heatmap_bucket_data", "no_data_points", "datapoints_outside_range", "csv_metric_values", "predictable_pulse", "predictable_csv_wave", "streaming_client", "simulation", "usa", "live", "grafana_api", "arrow", "annotations", "table_static", "server_error_500", "logs", "node_graph", "flame_graph", "raw_frame", "csv_file", "csv_content", "trace", "manual_entry", "variables-query"
 
 ### fn withSeriesCount
 
@@ -270,6 +336,9 @@ Accepted values for `value` are "random_walk", "slow_query", "random_walk_with_e
 withSeriesCount(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 ### fn withSim
@@ -278,6 +347,9 @@ withSeriesCount(value)
 withSim(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withSimMixin
@@ -286,6 +358,9 @@ withSim(value)
 withSimMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withSpanCount
@@ -294,6 +369,9 @@ withSimMixin(value)
 withSpanCount(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 ### fn withStream
@@ -302,6 +380,9 @@ withSpanCount(value)
 withStream(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withStreamMixin
@@ -310,6 +391,9 @@ withStream(value)
 withStreamMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withStringInput
@@ -318,6 +402,9 @@ withStreamMixin(value)
 withStringInput(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### fn withUsa
@@ -326,6 +413,9 @@ withStringInput(value)
 withUsa(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withUsaMixin
@@ -334,6 +424,9 @@ withUsa(value)
 withUsaMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### obj nodes
@@ -342,20 +435,25 @@ withUsaMixin(value)
 #### fn nodes.withCount
 
 ```jsonnet
-withCount(value)
+nodes.withCount(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 #### fn nodes.withType
 
 ```jsonnet
-withType(value)
+nodes.withType(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"random"`, `"response"`, `"random edges"`
 
-Accepted values for `value` are "random", "response", "random edges"
 
 ### obj pulseWave
 
@@ -363,41 +461,56 @@ Accepted values for `value` are "random", "response", "random edges"
 #### fn pulseWave.withOffCount
 
 ```jsonnet
-withOffCount(value)
+pulseWave.withOffCount(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 #### fn pulseWave.withOffValue
 
 ```jsonnet
-withOffValue(value)
+pulseWave.withOffValue(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 #### fn pulseWave.withOnCount
 
 ```jsonnet
-withOnCount(value)
+pulseWave.withOnCount(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 #### fn pulseWave.withOnValue
 
 ```jsonnet
-withOnValue(value)
+pulseWave.withOnValue(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 #### fn pulseWave.withTimeStep
 
 ```jsonnet
-withTimeStep(value)
+pulseWave.withTimeStep(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 ### obj sim
@@ -406,49 +519,69 @@ withTimeStep(value)
 #### fn sim.withConfig
 
 ```jsonnet
-withConfig(value)
+sim.withConfig(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn sim.withConfigMixin
 
 ```jsonnet
-withConfigMixin(value)
+sim.withConfigMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn sim.withKey
 
 ```jsonnet
-withKey(value)
+sim.withKey(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn sim.withKeyMixin
 
 ```jsonnet
-withKeyMixin(value)
+sim.withKeyMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn sim.withLast
 
 ```jsonnet
-withLast(value=true)
+sim.withLast(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 #### fn sim.withStream
 
 ```jsonnet
-withStream(value=true)
+sim.withStream(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 #### obj sim.key
@@ -457,25 +590,34 @@ withStream(value=true)
 ##### fn sim.key.withTick
 
 ```jsonnet
-withTick(value)
+sim.key.withTick(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 ##### fn sim.key.withType
 
 ```jsonnet
-withType(value)
+sim.key.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn sim.key.withUid
 
 ```jsonnet
-withUid(value)
+sim.key.withUid(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj stream
@@ -484,51 +626,68 @@ withUid(value)
 #### fn stream.withBands
 
 ```jsonnet
-withBands(value)
+stream.withBands(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 #### fn stream.withNoise
 
 ```jsonnet
-withNoise(value)
+stream.withNoise(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 #### fn stream.withSpeed
 
 ```jsonnet
-withSpeed(value)
+stream.withSpeed(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 #### fn stream.withSpread
 
 ```jsonnet
-withSpread(value)
+stream.withSpread(value)
 ```
 
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 #### fn stream.withType
 
 ```jsonnet
-withType(value)
+stream.withType(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"signal"`, `"logs"`, `"fetch"`
 
-Accepted values for `value` are "signal", "logs", "fetch"
 
 #### fn stream.withUrl
 
 ```jsonnet
-withUrl(value)
+stream.withUrl(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj usa
@@ -537,47 +696,65 @@ withUrl(value)
 #### fn usa.withFields
 
 ```jsonnet
-withFields(value)
+usa.withFields(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 #### fn usa.withFieldsMixin
 
 ```jsonnet
-withFieldsMixin(value)
+usa.withFieldsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 #### fn usa.withMode
 
 ```jsonnet
-withMode(value)
+usa.withMode(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn usa.withPeriod
 
 ```jsonnet
-withPeriod(value)
+usa.withPeriod(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn usa.withStates
 
 ```jsonnet
-withStates(value)
+usa.withStates(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 #### fn usa.withStatesMixin
 
 ```jsonnet
-withStatesMixin(value)
+usa.withStatesMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 

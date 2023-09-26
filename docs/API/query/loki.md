@@ -25,25 +25,34 @@ grafonnet.query.loki
 new(datasource, expr)
 ```
 
-Creates a new loki query target for panels.
+PARAMETERS:
 
+* **datasource** (`string`)
+* **expr** (`string`)
+
+Creates a new loki query target for panels.
 ### fn withDatasource
 
 ```jsonnet
 withDatasource(value)
 ```
 
-Set the datasource for this query.
+PARAMETERS:
 
+* **value** (`string`)
+
+Set the datasource for this query.
 ### fn withEditorMode
 
 ```jsonnet
 withEditorMode(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"code"`, `"builder"`
 
-Accepted values for `value` are "code", "builder"
 
 ### fn withExpr
 
@@ -51,73 +60,104 @@ Accepted values for `value` are "code", "builder"
 withExpr(value)
 ```
 
-The LogQL query.
+PARAMETERS:
 
+* **value** (`string`)
+
+The LogQL query.
 ### fn withHide
 
 ```jsonnet
 withHide(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
 true if query is disabled (ie should not be returned to the dashboard)
 Note this does not always imply that the query should not be executed since
 the results from a hidden query may be used as the input to other queries (SSE etc)
-
 ### fn withInstant
 
 ```jsonnet
 withInstant(value=true)
 ```
 
-@deprecated, now use queryType.
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+@deprecated, now use queryType.
 ### fn withLegendFormat
 
 ```jsonnet
 withLegendFormat(value)
 ```
 
-Used to override the name of the series.
+PARAMETERS:
 
+* **value** (`string`)
+
+Used to override the name of the series.
 ### fn withMaxLines
 
 ```jsonnet
 withMaxLines(value)
 ```
 
-Used to limit the number of log rows returned.
+PARAMETERS:
 
+* **value** (`integer`)
+
+Used to limit the number of log rows returned.
 ### fn withQueryType
 
 ```jsonnet
 withQueryType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
 Specify the query flavor
 TODO make this required and give it a default
-
 ### fn withRange
 
 ```jsonnet
 withRange(value=true)
 ```
 
-@deprecated, now use queryType.
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+@deprecated, now use queryType.
 ### fn withRefId
 
 ```jsonnet
 withRefId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
 A unique identifier for the query within the list of targets.
 In server side expressions, the refId is used as a variable name to identify results.
 By default, the UI will assign A->Z; however setting meaningful names may be useful.
-
 ### fn withResolution
 
 ```jsonnet
 withResolution(value)
 ```
+
+PARAMETERS:
+
+* **value** (`integer`)
 
 Used to scale the interval value.

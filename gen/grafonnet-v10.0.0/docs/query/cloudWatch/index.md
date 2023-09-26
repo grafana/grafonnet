@@ -129,611 +129,822 @@ grafonnet.query.cloudWatch
 #### fn CloudWatchAnnotationQuery.withAccountId
 
 ```jsonnet
-withAccountId(value)
+CloudWatchAnnotationQuery.withAccountId(value)
 ```
 
-The ID of the AWS account to query for the metric, specifying `all` will query all accounts that the monitoring account is permitted to query.
+PARAMETERS:
 
+* **value** (`string`)
+
+The ID of the AWS account to query for the metric, specifying `all` will query all accounts that the monitoring account is permitted to query.
 #### fn CloudWatchAnnotationQuery.withActionPrefix
 
 ```jsonnet
-withActionPrefix(value)
+CloudWatchAnnotationQuery.withActionPrefix(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 Use this parameter to filter the results of the operation to only those alarms
 that use a certain alarm action. For example, you could specify the ARN of
 an SNS topic to find all alarms that send notifications to that topic.
 e.g. `arn:aws:sns:us-east-1:123456789012:my-app-` would match `arn:aws:sns:us-east-1:123456789012:my-app-action`
 but not match `arn:aws:sns:us-east-1:123456789012:your-app-action`
-
 #### fn CloudWatchAnnotationQuery.withAlarmNamePrefix
 
 ```jsonnet
-withAlarmNamePrefix(value)
+CloudWatchAnnotationQuery.withAlarmNamePrefix(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 An alarm name prefix. If you specify this parameter, you receive information
 about all alarms that have names that start with this prefix.
 e.g. `my-team-service-` would match `my-team-service-high-cpu` but not match `your-team-service-high-cpu`
-
 #### fn CloudWatchAnnotationQuery.withDatasource
 
 ```jsonnet
-withDatasource(value)
+CloudWatchAnnotationQuery.withDatasource(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 For mixed data sources the selected datasource is on the query level.
 For non mixed scenarios this is undefined.
 TODO find a better way to do this ^ that's friendly to schema
 TODO this shouldn't be unknown but DataSourceRef | null
-
 #### fn CloudWatchAnnotationQuery.withDimensions
 
 ```jsonnet
-withDimensions(value)
+CloudWatchAnnotationQuery.withDimensions(value)
 ```
 
-A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.
+PARAMETERS:
 
+* **value** (`object`)
+
+A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.
 #### fn CloudWatchAnnotationQuery.withDimensionsMixin
 
 ```jsonnet
-withDimensionsMixin(value)
+CloudWatchAnnotationQuery.withDimensionsMixin(value)
 ```
 
-A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.
+PARAMETERS:
 
+* **value** (`object`)
+
+A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.
 #### fn CloudWatchAnnotationQuery.withHide
 
 ```jsonnet
-withHide(value=true)
+CloudWatchAnnotationQuery.withHide(value=true)
 ```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 true if query is disabled (ie should not be returned to the dashboard)
 Note this does not always imply that the query should not be executed since
 the results from a hidden query may be used as the input to other queries (SSE etc)
-
 #### fn CloudWatchAnnotationQuery.withMatchExact
 
 ```jsonnet
-withMatchExact(value=true)
+CloudWatchAnnotationQuery.withMatchExact(value=true)
 ```
 
-Only show metrics that exactly match all defined dimension names.
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Only show metrics that exactly match all defined dimension names.
 #### fn CloudWatchAnnotationQuery.withMetricName
 
 ```jsonnet
-withMetricName(value)
+CloudWatchAnnotationQuery.withMetricName(value)
 ```
 
-Name of the metric
+PARAMETERS:
 
+* **value** (`string`)
+
+Name of the metric
 #### fn CloudWatchAnnotationQuery.withNamespace
 
 ```jsonnet
-withNamespace(value)
+CloudWatchAnnotationQuery.withNamespace(value)
 ```
 
-A namespace is a container for CloudWatch metrics. Metrics in different namespaces are isolated from each other, so that metrics from different applications are not mistakenly aggregated into the same statistics. For example, Amazon EC2 uses the AWS/EC2 namespace.
+PARAMETERS:
 
+* **value** (`string`)
+
+A namespace is a container for CloudWatch metrics. Metrics in different namespaces are isolated from each other, so that metrics from different applications are not mistakenly aggregated into the same statistics. For example, Amazon EC2 uses the AWS/EC2 namespace.
 #### fn CloudWatchAnnotationQuery.withPeriod
 
 ```jsonnet
-withPeriod(value)
+CloudWatchAnnotationQuery.withPeriod(value)
 ```
 
-The length of time associated with a specific Amazon CloudWatch statistic. Can be specified by a number of seconds, 'auto', or as a duration string e.g. '15m' being 15 minutes
+PARAMETERS:
 
+* **value** (`string`)
+
+The length of time associated with a specific Amazon CloudWatch statistic. Can be specified by a number of seconds, 'auto', or as a duration string e.g. '15m' being 15 minutes
 #### fn CloudWatchAnnotationQuery.withPrefixMatching
 
 ```jsonnet
-withPrefixMatching(value=true)
+CloudWatchAnnotationQuery.withPrefixMatching(value=true)
 ```
 
-Enable matching on the prefix of the action name or alarm name, specify the prefixes with actionPrefix and/or alarmNamePrefix
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Enable matching on the prefix of the action name or alarm name, specify the prefixes with actionPrefix and/or alarmNamePrefix
 #### fn CloudWatchAnnotationQuery.withQueryMode
 
 ```jsonnet
-withQueryMode(value)
+CloudWatchAnnotationQuery.withQueryMode(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"Metrics"`, `"Logs"`, `"Annotations"`
 
-Accepted values for `value` are "Metrics", "Logs", "Annotations"
 
 #### fn CloudWatchAnnotationQuery.withQueryType
 
 ```jsonnet
-withQueryType(value)
+CloudWatchAnnotationQuery.withQueryType(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 Specify the query flavor
 TODO make this required and give it a default
-
 #### fn CloudWatchAnnotationQuery.withRefId
 
 ```jsonnet
-withRefId(value)
+CloudWatchAnnotationQuery.withRefId(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 A unique identifier for the query within the list of targets.
 In server side expressions, the refId is used as a variable name to identify results.
 By default, the UI will assign A->Z; however setting meaningful names may be useful.
-
 #### fn CloudWatchAnnotationQuery.withRegion
 
 ```jsonnet
-withRegion(value)
+CloudWatchAnnotationQuery.withRegion(value)
 ```
 
-AWS region to query for the metric
+PARAMETERS:
 
+* **value** (`string`)
+
+AWS region to query for the metric
 #### fn CloudWatchAnnotationQuery.withStatistic
 
 ```jsonnet
-withStatistic(value)
+CloudWatchAnnotationQuery.withStatistic(value)
 ```
 
-Metric data aggregations over specified periods of time. For detailed definitions of the statistics supported by CloudWatch, see https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.
+PARAMETERS:
 
+* **value** (`string`)
+
+Metric data aggregations over specified periods of time. For detailed definitions of the statistics supported by CloudWatch, see https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.
 #### fn CloudWatchAnnotationQuery.withStatistics
 
 ```jsonnet
-withStatistics(value)
+CloudWatchAnnotationQuery.withStatistics(value)
 ```
 
-@deprecated use statistic
+PARAMETERS:
 
+* **value** (`array`)
+
+@deprecated use statistic
 #### fn CloudWatchAnnotationQuery.withStatisticsMixin
 
 ```jsonnet
-withStatisticsMixin(value)
+CloudWatchAnnotationQuery.withStatisticsMixin(value)
 ```
 
-@deprecated use statistic
+PARAMETERS:
 
+* **value** (`array`)
+
+@deprecated use statistic
 ### obj CloudWatchLogsQuery
 
 
 #### fn CloudWatchLogsQuery.withDatasource
 
 ```jsonnet
-withDatasource(value)
+CloudWatchLogsQuery.withDatasource(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 For mixed data sources the selected datasource is on the query level.
 For non mixed scenarios this is undefined.
 TODO find a better way to do this ^ that's friendly to schema
 TODO this shouldn't be unknown but DataSourceRef | null
-
 #### fn CloudWatchLogsQuery.withExpression
 
 ```jsonnet
-withExpression(value)
+CloudWatchLogsQuery.withExpression(value)
 ```
 
-The CloudWatch Logs Insights query to execute
+PARAMETERS:
 
+* **value** (`string`)
+
+The CloudWatch Logs Insights query to execute
 #### fn CloudWatchLogsQuery.withHide
 
 ```jsonnet
-withHide(value=true)
+CloudWatchLogsQuery.withHide(value=true)
 ```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 true if query is disabled (ie should not be returned to the dashboard)
 Note this does not always imply that the query should not be executed since
 the results from a hidden query may be used as the input to other queries (SSE etc)
-
 #### fn CloudWatchLogsQuery.withId
 
 ```jsonnet
-withId(value)
+CloudWatchLogsQuery.withId(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn CloudWatchLogsQuery.withLogGroupNames
 
 ```jsonnet
-withLogGroupNames(value)
+CloudWatchLogsQuery.withLogGroupNames(value)
 ```
 
-@deprecated use logGroups
+PARAMETERS:
 
+* **value** (`array`)
+
+@deprecated use logGroups
 #### fn CloudWatchLogsQuery.withLogGroupNamesMixin
 
 ```jsonnet
-withLogGroupNamesMixin(value)
+CloudWatchLogsQuery.withLogGroupNamesMixin(value)
 ```
 
-@deprecated use logGroups
+PARAMETERS:
 
+* **value** (`array`)
+
+@deprecated use logGroups
 #### fn CloudWatchLogsQuery.withLogGroups
 
 ```jsonnet
-withLogGroups(value)
+CloudWatchLogsQuery.withLogGroups(value)
 ```
 
-Log groups to query
+PARAMETERS:
 
+* **value** (`array`)
+
+Log groups to query
 #### fn CloudWatchLogsQuery.withLogGroupsMixin
 
 ```jsonnet
-withLogGroupsMixin(value)
+CloudWatchLogsQuery.withLogGroupsMixin(value)
 ```
 
-Log groups to query
+PARAMETERS:
 
+* **value** (`array`)
+
+Log groups to query
 #### fn CloudWatchLogsQuery.withQueryMode
 
 ```jsonnet
-withQueryMode(value)
+CloudWatchLogsQuery.withQueryMode(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"Metrics"`, `"Logs"`, `"Annotations"`
 
-Accepted values for `value` are "Metrics", "Logs", "Annotations"
 
 #### fn CloudWatchLogsQuery.withQueryType
 
 ```jsonnet
-withQueryType(value)
+CloudWatchLogsQuery.withQueryType(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 Specify the query flavor
 TODO make this required and give it a default
-
 #### fn CloudWatchLogsQuery.withRefId
 
 ```jsonnet
-withRefId(value)
+CloudWatchLogsQuery.withRefId(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 A unique identifier for the query within the list of targets.
 In server side expressions, the refId is used as a variable name to identify results.
 By default, the UI will assign A->Z; however setting meaningful names may be useful.
-
 #### fn CloudWatchLogsQuery.withRegion
 
 ```jsonnet
-withRegion(value)
+CloudWatchLogsQuery.withRegion(value)
 ```
 
-AWS region to query for the logs
+PARAMETERS:
 
+* **value** (`string`)
+
+AWS region to query for the logs
 #### fn CloudWatchLogsQuery.withStatsGroups
 
 ```jsonnet
-withStatsGroups(value)
+CloudWatchLogsQuery.withStatsGroups(value)
 ```
 
-Fields to group the results by, this field is automatically populated whenever the query is updated
+PARAMETERS:
 
+* **value** (`array`)
+
+Fields to group the results by, this field is automatically populated whenever the query is updated
 #### fn CloudWatchLogsQuery.withStatsGroupsMixin
 
 ```jsonnet
-withStatsGroupsMixin(value)
+CloudWatchLogsQuery.withStatsGroupsMixin(value)
 ```
 
-Fields to group the results by, this field is automatically populated whenever the query is updated
+PARAMETERS:
 
+* **value** (`array`)
+
+Fields to group the results by, this field is automatically populated whenever the query is updated
 ### obj CloudWatchMetricsQuery
 
 
 #### fn CloudWatchMetricsQuery.withAccountId
 
 ```jsonnet
-withAccountId(value)
+CloudWatchMetricsQuery.withAccountId(value)
 ```
 
-The ID of the AWS account to query for the metric, specifying `all` will query all accounts that the monitoring account is permitted to query.
+PARAMETERS:
 
+* **value** (`string`)
+
+The ID of the AWS account to query for the metric, specifying `all` will query all accounts that the monitoring account is permitted to query.
 #### fn CloudWatchMetricsQuery.withAlias
 
 ```jsonnet
-withAlias(value)
+CloudWatchMetricsQuery.withAlias(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 Deprecated: use label
 @deprecated use label
-
 #### fn CloudWatchMetricsQuery.withDatasource
 
 ```jsonnet
-withDatasource(value)
+CloudWatchMetricsQuery.withDatasource(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 For mixed data sources the selected datasource is on the query level.
 For non mixed scenarios this is undefined.
 TODO find a better way to do this ^ that's friendly to schema
 TODO this shouldn't be unknown but DataSourceRef | null
-
 #### fn CloudWatchMetricsQuery.withDimensions
 
 ```jsonnet
-withDimensions(value)
+CloudWatchMetricsQuery.withDimensions(value)
 ```
 
-A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.
+PARAMETERS:
 
+* **value** (`object`)
+
+A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.
 #### fn CloudWatchMetricsQuery.withDimensionsMixin
 
 ```jsonnet
-withDimensionsMixin(value)
+CloudWatchMetricsQuery.withDimensionsMixin(value)
 ```
 
-A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.
+PARAMETERS:
 
+* **value** (`object`)
+
+A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.
 #### fn CloudWatchMetricsQuery.withExpression
 
 ```jsonnet
-withExpression(value)
+CloudWatchMetricsQuery.withExpression(value)
 ```
 
-Math expression query
+PARAMETERS:
 
+* **value** (`string`)
+
+Math expression query
 #### fn CloudWatchMetricsQuery.withHide
 
 ```jsonnet
-withHide(value=true)
+CloudWatchMetricsQuery.withHide(value=true)
 ```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 true if query is disabled (ie should not be returned to the dashboard)
 Note this does not always imply that the query should not be executed since
 the results from a hidden query may be used as the input to other queries (SSE etc)
-
 #### fn CloudWatchMetricsQuery.withId
 
 ```jsonnet
-withId(value)
+CloudWatchMetricsQuery.withId(value)
 ```
 
-ID can be used to reference other queries in math expressions. The ID can include numbers, letters, and underscore, and must start with a lowercase letter.
+PARAMETERS:
 
+* **value** (`string`)
+
+ID can be used to reference other queries in math expressions. The ID can include numbers, letters, and underscore, and must start with a lowercase letter.
 #### fn CloudWatchMetricsQuery.withLabel
 
 ```jsonnet
-withLabel(value)
+CloudWatchMetricsQuery.withLabel(value)
 ```
 
-Change the time series legend names using dynamic labels. See https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/graph-dynamic-labels.html for more details.
+PARAMETERS:
 
+* **value** (`string`)
+
+Change the time series legend names using dynamic labels. See https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/graph-dynamic-labels.html for more details.
 #### fn CloudWatchMetricsQuery.withMatchExact
 
 ```jsonnet
-withMatchExact(value=true)
+CloudWatchMetricsQuery.withMatchExact(value=true)
 ```
 
-Only show metrics that exactly match all defined dimension names.
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Only show metrics that exactly match all defined dimension names.
 #### fn CloudWatchMetricsQuery.withMetricEditorMode
 
 ```jsonnet
-withMetricEditorMode(value)
+CloudWatchMetricsQuery.withMetricEditorMode(value)
 ```
 
+PARAMETERS:
 
+* **value** (`integer`)
+   - valid values: `0`, `1`
 
-Accepted values for `value` are 0, 1
 
 #### fn CloudWatchMetricsQuery.withMetricName
 
 ```jsonnet
-withMetricName(value)
+CloudWatchMetricsQuery.withMetricName(value)
 ```
 
-Name of the metric
+PARAMETERS:
 
+* **value** (`string`)
+
+Name of the metric
 #### fn CloudWatchMetricsQuery.withMetricQueryType
 
 ```jsonnet
-withMetricQueryType(value)
+CloudWatchMetricsQuery.withMetricQueryType(value)
 ```
 
+PARAMETERS:
 
+* **value** (`integer`)
+   - valid values: `0`, `1`
 
-Accepted values for `value` are 0, 1
 
 #### fn CloudWatchMetricsQuery.withNamespace
 
 ```jsonnet
-withNamespace(value)
+CloudWatchMetricsQuery.withNamespace(value)
 ```
 
-A namespace is a container for CloudWatch metrics. Metrics in different namespaces are isolated from each other, so that metrics from different applications are not mistakenly aggregated into the same statistics. For example, Amazon EC2 uses the AWS/EC2 namespace.
+PARAMETERS:
 
+* **value** (`string`)
+
+A namespace is a container for CloudWatch metrics. Metrics in different namespaces are isolated from each other, so that metrics from different applications are not mistakenly aggregated into the same statistics. For example, Amazon EC2 uses the AWS/EC2 namespace.
 #### fn CloudWatchMetricsQuery.withPeriod
 
 ```jsonnet
-withPeriod(value)
+CloudWatchMetricsQuery.withPeriod(value)
 ```
 
-The length of time associated with a specific Amazon CloudWatch statistic. Can be specified by a number of seconds, 'auto', or as a duration string e.g. '15m' being 15 minutes
+PARAMETERS:
 
+* **value** (`string`)
+
+The length of time associated with a specific Amazon CloudWatch statistic. Can be specified by a number of seconds, 'auto', or as a duration string e.g. '15m' being 15 minutes
 #### fn CloudWatchMetricsQuery.withQueryMode
 
 ```jsonnet
-withQueryMode(value)
+CloudWatchMetricsQuery.withQueryMode(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"Metrics"`, `"Logs"`, `"Annotations"`
 
-Accepted values for `value` are "Metrics", "Logs", "Annotations"
 
 #### fn CloudWatchMetricsQuery.withQueryType
 
 ```jsonnet
-withQueryType(value)
+CloudWatchMetricsQuery.withQueryType(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 Specify the query flavor
 TODO make this required and give it a default
-
 #### fn CloudWatchMetricsQuery.withRefId
 
 ```jsonnet
-withRefId(value)
+CloudWatchMetricsQuery.withRefId(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 A unique identifier for the query within the list of targets.
 In server side expressions, the refId is used as a variable name to identify results.
 By default, the UI will assign A->Z; however setting meaningful names may be useful.
-
 #### fn CloudWatchMetricsQuery.withRegion
 
 ```jsonnet
-withRegion(value)
+CloudWatchMetricsQuery.withRegion(value)
 ```
 
-AWS region to query for the metric
+PARAMETERS:
 
+* **value** (`string`)
+
+AWS region to query for the metric
 #### fn CloudWatchMetricsQuery.withSql
 
 ```jsonnet
-withSql(value)
+CloudWatchMetricsQuery.withSql(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn CloudWatchMetricsQuery.withSqlExpression
 
 ```jsonnet
-withSqlExpression(value)
+CloudWatchMetricsQuery.withSqlExpression(value)
 ```
 
-When the metric query type is `metricQueryType` is set to `Query`, this field is used to specify the query string.
+PARAMETERS:
 
+* **value** (`string`)
+
+When the metric query type is `metricQueryType` is set to `Query`, this field is used to specify the query string.
 #### fn CloudWatchMetricsQuery.withSqlMixin
 
 ```jsonnet
-withSqlMixin(value)
+CloudWatchMetricsQuery.withSqlMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn CloudWatchMetricsQuery.withStatistic
 
 ```jsonnet
-withStatistic(value)
+CloudWatchMetricsQuery.withStatistic(value)
 ```
 
-Metric data aggregations over specified periods of time. For detailed definitions of the statistics supported by CloudWatch, see https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.
+PARAMETERS:
 
+* **value** (`string`)
+
+Metric data aggregations over specified periods of time. For detailed definitions of the statistics supported by CloudWatch, see https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.
 #### fn CloudWatchMetricsQuery.withStatistics
 
 ```jsonnet
-withStatistics(value)
+CloudWatchMetricsQuery.withStatistics(value)
 ```
 
-@deprecated use statistic
+PARAMETERS:
 
+* **value** (`array`)
+
+@deprecated use statistic
 #### fn CloudWatchMetricsQuery.withStatisticsMixin
 
 ```jsonnet
-withStatisticsMixin(value)
+CloudWatchMetricsQuery.withStatisticsMixin(value)
 ```
 
-@deprecated use statistic
+PARAMETERS:
 
+* **value** (`array`)
+
+@deprecated use statistic
 #### obj CloudWatchMetricsQuery.sql
 
 
 ##### fn CloudWatchMetricsQuery.sql.withFrom
 
 ```jsonnet
-withFrom(value)
+CloudWatchMetricsQuery.sql.withFrom(value)
 ```
 
-FROM part of the SQL expression
+PARAMETERS:
 
+* **value** (`object`)
+
+FROM part of the SQL expression
 ##### fn CloudWatchMetricsQuery.sql.withFromMixin
 
 ```jsonnet
-withFromMixin(value)
+CloudWatchMetricsQuery.sql.withFromMixin(value)
 ```
 
-FROM part of the SQL expression
+PARAMETERS:
 
+* **value** (`object`)
+
+FROM part of the SQL expression
 ##### fn CloudWatchMetricsQuery.sql.withGroupBy
 
 ```jsonnet
-withGroupBy(value)
+CloudWatchMetricsQuery.sql.withGroupBy(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn CloudWatchMetricsQuery.sql.withGroupByMixin
 
 ```jsonnet
-withGroupByMixin(value)
+CloudWatchMetricsQuery.sql.withGroupByMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn CloudWatchMetricsQuery.sql.withLimit
 
 ```jsonnet
-withLimit(value)
+CloudWatchMetricsQuery.sql.withLimit(value)
 ```
 
-LIMIT part of the SQL expression
+PARAMETERS:
 
+* **value** (`integer`)
+
+LIMIT part of the SQL expression
 ##### fn CloudWatchMetricsQuery.sql.withOrderBy
 
 ```jsonnet
-withOrderBy(value)
+CloudWatchMetricsQuery.sql.withOrderBy(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn CloudWatchMetricsQuery.sql.withOrderByDirection
 
 ```jsonnet
-withOrderByDirection(value)
+CloudWatchMetricsQuery.sql.withOrderByDirection(value)
 ```
 
-The sort order of the SQL expression, `ASC` or `DESC`
+PARAMETERS:
 
+* **value** (`string`)
+
+The sort order of the SQL expression, `ASC` or `DESC`
 ##### fn CloudWatchMetricsQuery.sql.withOrderByMixin
 
 ```jsonnet
-withOrderByMixin(value)
+CloudWatchMetricsQuery.sql.withOrderByMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn CloudWatchMetricsQuery.sql.withSelect
 
 ```jsonnet
-withSelect(value)
+CloudWatchMetricsQuery.sql.withSelect(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn CloudWatchMetricsQuery.sql.withSelectMixin
 
 ```jsonnet
-withSelectMixin(value)
+CloudWatchMetricsQuery.sql.withSelectMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn CloudWatchMetricsQuery.sql.withWhere
 
 ```jsonnet
-withWhere(value)
+CloudWatchMetricsQuery.sql.withWhere(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn CloudWatchMetricsQuery.sql.withWhereMixin
 
 ```jsonnet
-withWhereMixin(value)
+CloudWatchMetricsQuery.sql.withWhereMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### obj CloudWatchMetricsQuery.sql.from
@@ -742,33 +953,45 @@ withWhereMixin(value)
 ###### fn CloudWatchMetricsQuery.sql.from.withQueryEditorFunctionExpression
 
 ```jsonnet
-withQueryEditorFunctionExpression(value)
+CloudWatchMetricsQuery.sql.from.withQueryEditorFunctionExpression(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ###### fn CloudWatchMetricsQuery.sql.from.withQueryEditorFunctionExpressionMixin
 
 ```jsonnet
-withQueryEditorFunctionExpressionMixin(value)
+CloudWatchMetricsQuery.sql.from.withQueryEditorFunctionExpressionMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ###### fn CloudWatchMetricsQuery.sql.from.withQueryEditorPropertyExpression
 
 ```jsonnet
-withQueryEditorPropertyExpression(value)
+CloudWatchMetricsQuery.sql.from.withQueryEditorPropertyExpression(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ###### fn CloudWatchMetricsQuery.sql.from.withQueryEditorPropertyExpressionMixin
 
 ```jsonnet
-withQueryEditorPropertyExpressionMixin(value)
+CloudWatchMetricsQuery.sql.from.withQueryEditorPropertyExpressionMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ###### obj CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression
@@ -777,33 +1000,45 @@ withQueryEditorPropertyExpressionMixin(value)
 ####### fn CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.withName
 
 ```jsonnet
-withName(value)
+CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ####### fn CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.withParameters
 
 ```jsonnet
-withParameters(value)
+CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.withParameters(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ####### fn CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.withParametersMixin
 
 ```jsonnet
-withParametersMixin(value)
+CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.withParametersMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ####### fn CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.withType
 
 ```jsonnet
-withType(value)
+CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### obj CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression
@@ -812,25 +1047,34 @@ withType(value)
 ####### fn CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.withProperty
 
 ```jsonnet
-withProperty(value)
+CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.withProperty(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ####### fn CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.withPropertyMixin
 
 ```jsonnet
-withPropertyMixin(value)
+CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.withPropertyMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ####### fn CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.withType
 
 ```jsonnet
-withType(value)
+CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ####### obj CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.property
@@ -839,20 +1083,25 @@ withType(value)
 ######## fn CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.property.withName
 
 ```jsonnet
-withName(value)
+CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.property.withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ######## fn CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.property.withType
 
 ```jsonnet
-withType(value)
+CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.property.withType(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"string"`
 
-Accepted values for `value` are "string"
 
 ##### obj CloudWatchMetricsQuery.sql.groupBy
 
@@ -860,28 +1109,36 @@ Accepted values for `value` are "string"
 ###### fn CloudWatchMetricsQuery.sql.groupBy.withExpressions
 
 ```jsonnet
-withExpressions(value)
+CloudWatchMetricsQuery.sql.groupBy.withExpressions(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ###### fn CloudWatchMetricsQuery.sql.groupBy.withExpressionsMixin
 
 ```jsonnet
-withExpressionsMixin(value)
+CloudWatchMetricsQuery.sql.groupBy.withExpressionsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ###### fn CloudWatchMetricsQuery.sql.groupBy.withType
 
 ```jsonnet
-withType(value)
+CloudWatchMetricsQuery.sql.groupBy.withType(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"and"`, `"or"`
 
-Accepted values for `value` are "and", "or"
 
 ##### obj CloudWatchMetricsQuery.sql.orderBy
 
@@ -889,33 +1146,45 @@ Accepted values for `value` are "and", "or"
 ###### fn CloudWatchMetricsQuery.sql.orderBy.withName
 
 ```jsonnet
-withName(value)
+CloudWatchMetricsQuery.sql.orderBy.withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn CloudWatchMetricsQuery.sql.orderBy.withParameters
 
 ```jsonnet
-withParameters(value)
+CloudWatchMetricsQuery.sql.orderBy.withParameters(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ###### fn CloudWatchMetricsQuery.sql.orderBy.withParametersMixin
 
 ```jsonnet
-withParametersMixin(value)
+CloudWatchMetricsQuery.sql.orderBy.withParametersMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ###### fn CloudWatchMetricsQuery.sql.orderBy.withType
 
 ```jsonnet
-withType(value)
+CloudWatchMetricsQuery.sql.orderBy.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj CloudWatchMetricsQuery.sql.select
@@ -924,33 +1193,45 @@ withType(value)
 ###### fn CloudWatchMetricsQuery.sql.select.withName
 
 ```jsonnet
-withName(value)
+CloudWatchMetricsQuery.sql.select.withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ###### fn CloudWatchMetricsQuery.sql.select.withParameters
 
 ```jsonnet
-withParameters(value)
+CloudWatchMetricsQuery.sql.select.withParameters(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ###### fn CloudWatchMetricsQuery.sql.select.withParametersMixin
 
 ```jsonnet
-withParametersMixin(value)
+CloudWatchMetricsQuery.sql.select.withParametersMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ###### fn CloudWatchMetricsQuery.sql.select.withType
 
 ```jsonnet
-withType(value)
+CloudWatchMetricsQuery.sql.select.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj CloudWatchMetricsQuery.sql.where
@@ -959,25 +1240,33 @@ withType(value)
 ###### fn CloudWatchMetricsQuery.sql.where.withExpressions
 
 ```jsonnet
-withExpressions(value)
+CloudWatchMetricsQuery.sql.where.withExpressions(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ###### fn CloudWatchMetricsQuery.sql.where.withExpressionsMixin
 
 ```jsonnet
-withExpressionsMixin(value)
+CloudWatchMetricsQuery.sql.where.withExpressionsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ###### fn CloudWatchMetricsQuery.sql.where.withType
 
 ```jsonnet
-withType(value)
+CloudWatchMetricsQuery.sql.where.withType(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"and"`, `"or"`
 
-Accepted values for `value` are "and", "or"

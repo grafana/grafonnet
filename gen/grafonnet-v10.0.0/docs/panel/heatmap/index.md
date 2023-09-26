@@ -182,8 +182,11 @@ grafonnet.panel.heatmap
 new(title)
 ```
 
-Creates a new heatmap panel with a title.
+PARAMETERS:
 
+* **title** (`string`)
+
+Creates a new heatmap panel with a title.
 ### obj fieldConfig
 
 
@@ -196,60 +199,84 @@ Creates a new heatmap panel with a title.
 ###### fn fieldConfig.defaults.custom.withHideFrom
 
 ```jsonnet
-withHideFrom(value)
+fieldConfig.defaults.custom.withHideFrom(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ###### fn fieldConfig.defaults.custom.withHideFromMixin
 
 ```jsonnet
-withHideFromMixin(value)
+fieldConfig.defaults.custom.withHideFromMixin(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ###### fn fieldConfig.defaults.custom.withScaleDistribution
 
 ```jsonnet
-withScaleDistribution(value)
+fieldConfig.defaults.custom.withScaleDistribution(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ###### fn fieldConfig.defaults.custom.withScaleDistributionMixin
 
 ```jsonnet
-withScaleDistributionMixin(value)
+fieldConfig.defaults.custom.withScaleDistributionMixin(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ###### obj fieldConfig.defaults.custom.hideFrom
 
 
 ####### fn fieldConfig.defaults.custom.hideFrom.withLegend
 
 ```jsonnet
-withLegend(value=true)
+fieldConfig.defaults.custom.hideFrom.withLegend(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ####### fn fieldConfig.defaults.custom.hideFrom.withTooltip
 
 ```jsonnet
-withTooltip(value=true)
+fieldConfig.defaults.custom.hideFrom.withTooltip(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ####### fn fieldConfig.defaults.custom.hideFrom.withViz
 
 ```jsonnet
-withViz(value=true)
+fieldConfig.defaults.custom.hideFrom.withViz(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ###### obj fieldConfig.defaults.custom.scaleDistribution
@@ -258,46 +285,60 @@ withViz(value=true)
 ####### fn fieldConfig.defaults.custom.scaleDistribution.withLinearThreshold
 
 ```jsonnet
-withLinearThreshold(value)
+fieldConfig.defaults.custom.scaleDistribution.withLinearThreshold(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 ####### fn fieldConfig.defaults.custom.scaleDistribution.withLog
 
 ```jsonnet
-withLog(value)
+fieldConfig.defaults.custom.scaleDistribution.withLog(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 ####### fn fieldConfig.defaults.custom.scaleDistribution.withType
 
 ```jsonnet
-withType(value)
+fieldConfig.defaults.custom.scaleDistribution.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"linear"`, `"log"`, `"ordinal"`, `"symlog"`
+
 TODO docs
-
-Accepted values for `value` are "linear", "log", "ordinal", "symlog"
-
 ### obj libraryPanel
 
 
 #### fn libraryPanel.withName
 
 ```jsonnet
-withName(value)
+libraryPanel.withName(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 #### fn libraryPanel.withUid
 
 ```jsonnet
-withUid(value)
+libraryPanel.withUid(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj options
@@ -306,215 +347,301 @@ withUid(value)
 #### fn options.withCalculate
 
 ```jsonnet
-withCalculate(value=true)
+options.withCalculate(value=true)
 ```
 
-Controls if the heatmap should be calculated from data
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Controls if the heatmap should be calculated from data
 #### fn options.withCalculation
 
 ```jsonnet
-withCalculation(value)
+options.withCalculation(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn options.withCalculationMixin
 
 ```jsonnet
-withCalculationMixin(value)
+options.withCalculationMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 #### fn options.withCellGap
 
 ```jsonnet
-withCellGap(value=1)
+options.withCellGap(value=1)
 ```
 
-Controls gap between cells
+PARAMETERS:
 
+* **value** (`integer`)
+   - default value: `1`
+
+Controls gap between cells
 #### fn options.withCellRadius
 
 ```jsonnet
-withCellRadius(value)
+options.withCellRadius(value)
 ```
 
-Controls cell radius
+PARAMETERS:
 
+* **value** (`number`)
+
+Controls cell radius
 #### fn options.withCellValues
 
 ```jsonnet
-withCellValues(value={})
+options.withCellValues(value={})
 ```
 
-Controls cell value unit
+PARAMETERS:
 
+* **value** (`object`)
+   - default value: `{}`
+
+Controls cell value unit
 #### fn options.withCellValuesMixin
 
 ```jsonnet
-withCellValuesMixin(value={})
+options.withCellValuesMixin(value={})
 ```
 
-Controls cell value unit
+PARAMETERS:
 
+* **value** (`object`)
+   - default value: `{}`
+
+Controls cell value unit
 #### fn options.withColor
 
 ```jsonnet
-withColor(value={"exponent": 0.5,"fill": "dark-orange","reverse": false,"scheme": "Oranges","steps": 64})
+options.withColor(value={"exponent": 0.5,"fill": "dark-orange","reverse": false,"scheme": "Oranges","steps": 64})
 ```
 
-Controls the color options
+PARAMETERS:
 
+* **value** (`object`)
+   - default value: `{"exponent": 0.5,"fill": "dark-orange","reverse": false,"scheme": "Oranges","steps": 64}`
+
+Controls the color options
 #### fn options.withColorMixin
 
 ```jsonnet
-withColorMixin(value={"exponent": 0.5,"fill": "dark-orange","reverse": false,"scheme": "Oranges","steps": 64})
+options.withColorMixin(value={"exponent": 0.5,"fill": "dark-orange","reverse": false,"scheme": "Oranges","steps": 64})
 ```
 
-Controls the color options
+PARAMETERS:
 
+* **value** (`object`)
+   - default value: `{"exponent": 0.5,"fill": "dark-orange","reverse": false,"scheme": "Oranges","steps": 64}`
+
+Controls the color options
 #### fn options.withExemplars
 
 ```jsonnet
-withExemplars(value)
+options.withExemplars(value)
 ```
 
-Controls exemplar options
+PARAMETERS:
 
+* **value** (`object`)
+
+Controls exemplar options
 #### fn options.withExemplarsMixin
 
 ```jsonnet
-withExemplarsMixin(value)
+options.withExemplarsMixin(value)
 ```
 
-Controls exemplar options
+PARAMETERS:
 
+* **value** (`object`)
+
+Controls exemplar options
 #### fn options.withFilterValues
 
 ```jsonnet
-withFilterValues(value={"le": 0.000000001})
+options.withFilterValues(value={"le": 0.000000001})
 ```
 
-Filters values between a given range
+PARAMETERS:
 
+* **value** (`object`)
+   - default value: `{"le": 0.000000001}`
+
+Filters values between a given range
 #### fn options.withFilterValuesMixin
 
 ```jsonnet
-withFilterValuesMixin(value={"le": 0.000000001})
+options.withFilterValuesMixin(value={"le": 0.000000001})
 ```
 
-Filters values between a given range
+PARAMETERS:
 
+* **value** (`object`)
+   - default value: `{"le": 0.000000001}`
+
+Filters values between a given range
 #### fn options.withLegend
 
 ```jsonnet
-withLegend(value)
+options.withLegend(value)
 ```
 
-Controls legend options
+PARAMETERS:
 
+* **value** (`object`)
+
+Controls legend options
 #### fn options.withLegendMixin
 
 ```jsonnet
-withLegendMixin(value)
+options.withLegendMixin(value)
 ```
 
-Controls legend options
+PARAMETERS:
 
+* **value** (`object`)
+
+Controls legend options
 #### fn options.withRowsFrame
 
 ```jsonnet
-withRowsFrame(value)
+options.withRowsFrame(value)
 ```
 
-Controls frame rows options
+PARAMETERS:
 
+* **value** (`object`)
+
+Controls frame rows options
 #### fn options.withRowsFrameMixin
 
 ```jsonnet
-withRowsFrameMixin(value)
+options.withRowsFrameMixin(value)
 ```
 
-Controls frame rows options
+PARAMETERS:
 
+* **value** (`object`)
+
+Controls frame rows options
 #### fn options.withShowValue
 
 ```jsonnet
-withShowValue(value)
+options.withShowValue(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 | *{
 	layout: ui.HeatmapCellLayout & "auto" // TODO: fix after remove when https://github.com/grafana/cuetsy/issues/74 is fixed
 }
 Controls the display of the value in the cell
-
 #### fn options.withTooltip
 
 ```jsonnet
-withTooltip(value)
+options.withTooltip(value)
 ```
 
-Controls tooltip options
+PARAMETERS:
 
+* **value** (`object`)
+
+Controls tooltip options
 #### fn options.withTooltipMixin
 
 ```jsonnet
-withTooltipMixin(value)
+options.withTooltipMixin(value)
 ```
 
-Controls tooltip options
+PARAMETERS:
 
+* **value** (`object`)
+
+Controls tooltip options
 #### fn options.withYAxis
 
 ```jsonnet
-withYAxis(value)
+options.withYAxis(value)
 ```
 
-Configuration options for the yAxis
+PARAMETERS:
 
+* **value** (`object`)
+
+Configuration options for the yAxis
 #### fn options.withYAxisMixin
 
 ```jsonnet
-withYAxisMixin(value)
+options.withYAxisMixin(value)
 ```
 
-Configuration options for the yAxis
+PARAMETERS:
 
+* **value** (`object`)
+
+Configuration options for the yAxis
 #### obj options.calculation
 
 
 ##### fn options.calculation.withXBuckets
 
 ```jsonnet
-withXBuckets(value)
+options.calculation.withXBuckets(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn options.calculation.withXBucketsMixin
 
 ```jsonnet
-withXBucketsMixin(value)
+options.calculation.withXBucketsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn options.calculation.withYBuckets
 
 ```jsonnet
-withYBuckets(value)
+options.calculation.withYBuckets(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### fn options.calculation.withYBucketsMixin
 
 ```jsonnet
-withYBucketsMixin(value)
+options.calculation.withYBucketsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ##### obj options.calculation.xBuckets
@@ -523,687 +650,918 @@ withYBucketsMixin(value)
 ###### fn options.calculation.xBuckets.withMode
 
 ```jsonnet
-withMode(value)
+options.calculation.xBuckets.withMode(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"size"`, `"count"`
 
-Accepted values for `value` are "size", "count"
 
 ###### fn options.calculation.xBuckets.withScale
 
 ```jsonnet
-withScale(value)
+options.calculation.xBuckets.withScale(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ###### fn options.calculation.xBuckets.withScaleMixin
 
 ```jsonnet
-withScaleMixin(value)
+options.calculation.xBuckets.withScaleMixin(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ###### fn options.calculation.xBuckets.withValue
 
 ```jsonnet
-withValue(value)
+options.calculation.xBuckets.withValue(value)
 ```
 
-The number of buckets to use for the axis in the heatmap
+PARAMETERS:
 
+* **value** (`string`)
+
+The number of buckets to use for the axis in the heatmap
 ###### obj options.calculation.xBuckets.scale
 
 
 ####### fn options.calculation.xBuckets.scale.withLinearThreshold
 
 ```jsonnet
-withLinearThreshold(value)
+options.calculation.xBuckets.scale.withLinearThreshold(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 ####### fn options.calculation.xBuckets.scale.withLog
 
 ```jsonnet
-withLog(value)
+options.calculation.xBuckets.scale.withLog(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 ####### fn options.calculation.xBuckets.scale.withType
 
 ```jsonnet
-withType(value)
+options.calculation.xBuckets.scale.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"linear"`, `"log"`, `"ordinal"`, `"symlog"`
+
 TODO docs
-
-Accepted values for `value` are "linear", "log", "ordinal", "symlog"
-
 ##### obj options.calculation.yBuckets
 
 
 ###### fn options.calculation.yBuckets.withMode
 
 ```jsonnet
-withMode(value)
+options.calculation.yBuckets.withMode(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"size"`, `"count"`
 
-Accepted values for `value` are "size", "count"
 
 ###### fn options.calculation.yBuckets.withScale
 
 ```jsonnet
-withScale(value)
+options.calculation.yBuckets.withScale(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ###### fn options.calculation.yBuckets.withScaleMixin
 
 ```jsonnet
-withScaleMixin(value)
+options.calculation.yBuckets.withScaleMixin(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ###### fn options.calculation.yBuckets.withValue
 
 ```jsonnet
-withValue(value)
+options.calculation.yBuckets.withValue(value)
 ```
 
-The number of buckets to use for the axis in the heatmap
+PARAMETERS:
 
+* **value** (`string`)
+
+The number of buckets to use for the axis in the heatmap
 ###### obj options.calculation.yBuckets.scale
 
 
 ####### fn options.calculation.yBuckets.scale.withLinearThreshold
 
 ```jsonnet
-withLinearThreshold(value)
+options.calculation.yBuckets.scale.withLinearThreshold(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 ####### fn options.calculation.yBuckets.scale.withLog
 
 ```jsonnet
-withLog(value)
+options.calculation.yBuckets.scale.withLog(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 ####### fn options.calculation.yBuckets.scale.withType
 
 ```jsonnet
-withType(value)
+options.calculation.yBuckets.scale.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"linear"`, `"log"`, `"ordinal"`, `"symlog"`
+
 TODO docs
-
-Accepted values for `value` are "linear", "log", "ordinal", "symlog"
-
 #### obj options.cellValues
 
 
 ##### fn options.cellValues.withCellValues
 
 ```jsonnet
-withCellValues(value)
+options.cellValues.withCellValues(value)
 ```
 
-Controls cell value options
+PARAMETERS:
 
+* **value** (`object`)
+
+Controls cell value options
 ##### fn options.cellValues.withCellValuesMixin
 
 ```jsonnet
-withCellValuesMixin(value)
+options.cellValues.withCellValuesMixin(value)
 ```
 
-Controls cell value options
+PARAMETERS:
 
+* **value** (`object`)
+
+Controls cell value options
 ##### obj options.cellValues.CellValues
 
 
 ###### fn options.cellValues.CellValues.withDecimals
 
 ```jsonnet
-withDecimals(value)
+options.cellValues.CellValues.withDecimals(value)
 ```
 
-Controls the number of decimals for cell values
+PARAMETERS:
 
+* **value** (`number`)
+
+Controls the number of decimals for cell values
 ###### fn options.cellValues.CellValues.withUnit
 
 ```jsonnet
-withUnit(value)
+options.cellValues.CellValues.withUnit(value)
 ```
 
-Controls the cell value unit
+PARAMETERS:
 
+* **value** (`string`)
+
+Controls the cell value unit
 #### obj options.color
 
 
 ##### fn options.color.withHeatmapColorOptions
 
 ```jsonnet
-withHeatmapColorOptions(value)
+options.color.withHeatmapColorOptions(value)
 ```
 
-Controls various color options
+PARAMETERS:
 
+* **value** (`object`)
+
+Controls various color options
 ##### fn options.color.withHeatmapColorOptionsMixin
 
 ```jsonnet
-withHeatmapColorOptionsMixin(value)
+options.color.withHeatmapColorOptionsMixin(value)
 ```
 
-Controls various color options
+PARAMETERS:
 
+* **value** (`object`)
+
+Controls various color options
 ##### obj options.color.HeatmapColorOptions
 
 
 ###### fn options.color.HeatmapColorOptions.withExponent
 
 ```jsonnet
-withExponent(value)
+options.color.HeatmapColorOptions.withExponent(value)
 ```
 
-Controls the exponent when scale is set to exponential
+PARAMETERS:
 
+* **value** (`number`)
+
+Controls the exponent when scale is set to exponential
 ###### fn options.color.HeatmapColorOptions.withFill
 
 ```jsonnet
-withFill(value)
+options.color.HeatmapColorOptions.withFill(value)
 ```
 
-Controls the color fill when in opacity mode
+PARAMETERS:
 
+* **value** (`string`)
+
+Controls the color fill when in opacity mode
 ###### fn options.color.HeatmapColorOptions.withMax
 
 ```jsonnet
-withMax(value)
+options.color.HeatmapColorOptions.withMax(value)
 ```
 
-Sets the maximum value for the color scale
+PARAMETERS:
 
+* **value** (`number`)
+
+Sets the maximum value for the color scale
 ###### fn options.color.HeatmapColorOptions.withMin
 
 ```jsonnet
-withMin(value)
+options.color.HeatmapColorOptions.withMin(value)
 ```
 
-Sets the minimum value for the color scale
+PARAMETERS:
 
+* **value** (`number`)
+
+Sets the minimum value for the color scale
 ###### fn options.color.HeatmapColorOptions.withMode
 
 ```jsonnet
-withMode(value)
+options.color.HeatmapColorOptions.withMode(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"opacity"`, `"scheme"`
+
 Controls the color mode of the heatmap
-
-Accepted values for `value` are "opacity", "scheme"
-
 ###### fn options.color.HeatmapColorOptions.withReverse
 
 ```jsonnet
-withReverse(value=true)
+options.color.HeatmapColorOptions.withReverse(value=true)
 ```
 
-Reverses the color scheme
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Reverses the color scheme
 ###### fn options.color.HeatmapColorOptions.withScale
 
 ```jsonnet
-withScale(value)
+options.color.HeatmapColorOptions.withScale(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"linear"`, `"exponential"`
+
 Controls the color scale of the heatmap
-
-Accepted values for `value` are "linear", "exponential"
-
 ###### fn options.color.HeatmapColorOptions.withScheme
 
 ```jsonnet
-withScheme(value)
+options.color.HeatmapColorOptions.withScheme(value)
 ```
 
-Controls the color scheme used
+PARAMETERS:
 
+* **value** (`string`)
+
+Controls the color scheme used
 ###### fn options.color.HeatmapColorOptions.withSteps
 
 ```jsonnet
-withSteps(value)
+options.color.HeatmapColorOptions.withSteps(value)
 ```
 
-Controls the number of color steps
+PARAMETERS:
 
+* **value** (`integer`)
+
+Controls the number of color steps
 #### obj options.exemplars
 
 
 ##### fn options.exemplars.withColor
 
 ```jsonnet
-withColor(value)
+options.exemplars.withColor(value)
 ```
 
-Sets the color of the exemplar markers
+PARAMETERS:
 
+* **value** (`string`)
+
+Sets the color of the exemplar markers
 #### obj options.filterValues
 
 
 ##### fn options.filterValues.withFilterValueRange
 
 ```jsonnet
-withFilterValueRange(value)
+options.filterValues.withFilterValueRange(value)
 ```
 
-Controls the value filter range
+PARAMETERS:
 
+* **value** (`object`)
+
+Controls the value filter range
 ##### fn options.filterValues.withFilterValueRangeMixin
 
 ```jsonnet
-withFilterValueRangeMixin(value)
+options.filterValues.withFilterValueRangeMixin(value)
 ```
 
-Controls the value filter range
+PARAMETERS:
 
+* **value** (`object`)
+
+Controls the value filter range
 ##### obj options.filterValues.FilterValueRange
 
 
 ###### fn options.filterValues.FilterValueRange.withGe
 
 ```jsonnet
-withGe(value)
+options.filterValues.FilterValueRange.withGe(value)
 ```
 
-Sets the filter range to values greater than or equal to the given value
+PARAMETERS:
 
+* **value** (`number`)
+
+Sets the filter range to values greater than or equal to the given value
 ###### fn options.filterValues.FilterValueRange.withLe
 
 ```jsonnet
-withLe(value)
+options.filterValues.FilterValueRange.withLe(value)
 ```
 
-Sets the filter range to values less than or equal to the given value
+PARAMETERS:
 
+* **value** (`number`)
+
+Sets the filter range to values less than or equal to the given value
 #### obj options.legend
 
 
 ##### fn options.legend.withShow
 
 ```jsonnet
-withShow(value=true)
+options.legend.withShow(value=true)
 ```
 
-Controls if the legend is shown
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Controls if the legend is shown
 #### obj options.rowsFrame
 
 
 ##### fn options.rowsFrame.withLayout
 
 ```jsonnet
-withLayout(value)
+options.rowsFrame.withLayout(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"le"`, `"ge"`, `"unknown"`, `"auto"`
 
-Accepted values for `value` are "le", "ge", "unknown", "auto"
 
 ##### fn options.rowsFrame.withValue
 
 ```jsonnet
-withValue(value)
+options.rowsFrame.withValue(value)
 ```
 
-Sets the name of the cell when not calculating from data
+PARAMETERS:
 
+* **value** (`string`)
+
+Sets the name of the cell when not calculating from data
 #### obj options.tooltip
 
 
 ##### fn options.tooltip.withShow
 
 ```jsonnet
-withShow(value=true)
+options.tooltip.withShow(value=true)
 ```
 
-Controls if the tooltip is shown
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Controls if the tooltip is shown
 ##### fn options.tooltip.withYHistogram
 
 ```jsonnet
-withYHistogram(value=true)
+options.tooltip.withYHistogram(value=true)
 ```
 
-Controls if the tooltip shows a histogram of the y-axis values
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Controls if the tooltip shows a histogram of the y-axis values
 #### obj options.yAxis
 
 
 ##### fn options.yAxis.withAxisCenteredZero
 
 ```jsonnet
-withAxisCenteredZero(value=true)
+options.yAxis.withAxisCenteredZero(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn options.yAxis.withAxisColorMode
 
 ```jsonnet
-withAxisColorMode(value)
+options.yAxis.withAxisColorMode(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"text"`, `"series"`
+
 TODO docs
-
-Accepted values for `value` are "text", "series"
-
 ##### fn options.yAxis.withAxisGridShow
 
 ```jsonnet
-withAxisGridShow(value=true)
+options.yAxis.withAxisGridShow(value=true)
 ```
 
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn options.yAxis.withAxisLabel
 
 ```jsonnet
-withAxisLabel(value)
+options.yAxis.withAxisLabel(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### fn options.yAxis.withAxisPlacement
 
 ```jsonnet
-withAxisPlacement(value)
+options.yAxis.withAxisPlacement(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"top"`, `"right"`, `"bottom"`, `"left"`, `"hidden"`
+
 TODO docs
-
-Accepted values for `value` are "auto", "top", "right", "bottom", "left", "hidden"
-
 ##### fn options.yAxis.withAxisSoftMax
 
 ```jsonnet
-withAxisSoftMax(value)
+options.yAxis.withAxisSoftMax(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 ##### fn options.yAxis.withAxisSoftMin
 
 ```jsonnet
-withAxisSoftMin(value)
+options.yAxis.withAxisSoftMin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 ##### fn options.yAxis.withAxisWidth
 
 ```jsonnet
-withAxisWidth(value)
+options.yAxis.withAxisWidth(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 ##### fn options.yAxis.withDecimals
 
 ```jsonnet
-withDecimals(value)
+options.yAxis.withDecimals(value)
 ```
 
-Controls the number of decimals for yAxis values
+PARAMETERS:
 
+* **value** (`number`)
+
+Controls the number of decimals for yAxis values
 ##### fn options.yAxis.withMax
 
 ```jsonnet
-withMax(value)
+options.yAxis.withMax(value)
 ```
 
-Sets the maximum value for the yAxis
+PARAMETERS:
 
+* **value** (`number`)
+
+Sets the maximum value for the yAxis
 ##### fn options.yAxis.withMin
 
 ```jsonnet
-withMin(value)
+options.yAxis.withMin(value)
 ```
 
-Sets the minimum value for the yAxis
+PARAMETERS:
 
+* **value** (`number`)
+
+Sets the minimum value for the yAxis
 ##### fn options.yAxis.withReverse
 
 ```jsonnet
-withReverse(value=true)
+options.yAxis.withReverse(value=true)
 ```
 
-Reverses the yAxis
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Reverses the yAxis
 ##### fn options.yAxis.withScaleDistribution
 
 ```jsonnet
-withScaleDistribution(value)
+options.yAxis.withScaleDistribution(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ##### fn options.yAxis.withScaleDistributionMixin
 
 ```jsonnet
-withScaleDistributionMixin(value)
+options.yAxis.withScaleDistributionMixin(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`object`)
+
+TODO docs
 ##### fn options.yAxis.withUnit
 
 ```jsonnet
-withUnit(value)
+options.yAxis.withUnit(value)
 ```
 
-Sets the yAxis unit
+PARAMETERS:
 
+* **value** (`string`)
+
+Sets the yAxis unit
 ##### obj options.yAxis.scaleDistribution
 
 
 ###### fn options.yAxis.scaleDistribution.withLinearThreshold
 
 ```jsonnet
-withLinearThreshold(value)
+options.yAxis.scaleDistribution.withLinearThreshold(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 ###### fn options.yAxis.scaleDistribution.withLog
 
 ```jsonnet
-withLog(value)
+options.yAxis.scaleDistribution.withLog(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 ###### fn options.yAxis.scaleDistribution.withType
 
 ```jsonnet
-withType(value)
+options.yAxis.scaleDistribution.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"linear"`, `"log"`, `"ordinal"`, `"symlog"`
+
 TODO docs
-
-Accepted values for `value` are "linear", "log", "ordinal", "symlog"
-
 ### obj panelOptions
 
 
 #### fn panelOptions.withDescription
 
 ```jsonnet
-withDescription(value)
+panelOptions.withDescription(value)
 ```
 
-Description.
+PARAMETERS:
 
+* **value** (`string`)
+
+Description.
 #### fn panelOptions.withGridPos
 
 ```jsonnet
-withGridPos(h="null", w="null", x="null", y="null")
+panelOptions.withGridPos(h="null", w="null", x="null", y="null")
 ```
+
+PARAMETERS:
+
+* **h** (`number`)
+   - default value: `"null"`
+* **w** (`number`)
+   - default value: `"null"`
+* **x** (`number`)
+   - default value: `"null"`
+* **y** (`number`)
+   - default value: `"null"`
 
 `withGridPos` configures the height, width and xy coordinates of the panel. Also see `grafonnet.util.grid` for helper functions to calculate these fields.
 
 All arguments default to `null`, which means they will remain unchanged or unset.
 
-
 #### fn panelOptions.withLinks
 
 ```jsonnet
-withLinks(value)
+panelOptions.withLinks(value)
 ```
+
+PARAMETERS:
+
+* **value** (`array`)
 
 Panel links.
 TODO fill this out - seems there are a couple variants?
-
 #### fn panelOptions.withLinksMixin
 
 ```jsonnet
-withLinksMixin(value)
+panelOptions.withLinksMixin(value)
 ```
+
+PARAMETERS:
+
+* **value** (`array`)
 
 Panel links.
 TODO fill this out - seems there are a couple variants?
-
 #### fn panelOptions.withRepeat
 
 ```jsonnet
-withRepeat(value)
+panelOptions.withRepeat(value)
 ```
 
-Name of template variable to repeat for.
+PARAMETERS:
 
+* **value** (`string`)
+
+Name of template variable to repeat for.
 #### fn panelOptions.withRepeatDirection
 
 ```jsonnet
-withRepeatDirection(value="h")
+panelOptions.withRepeatDirection(value="h")
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"h"`
+   - valid values: `"h"`, `"v"`
 
 Direction to repeat in if 'repeat' is set.
 "h" for horizontal, "v" for vertical.
 TODO this is probably optional
-
-Accepted values for `value` are "h", "v"
-
 #### fn panelOptions.withTitle
 
 ```jsonnet
-withTitle(value)
+panelOptions.withTitle(value)
 ```
 
-Panel title.
+PARAMETERS:
 
+* **value** (`string`)
+
+Panel title.
 #### fn panelOptions.withTransparent
 
 ```jsonnet
-withTransparent(value=true)
+panelOptions.withTransparent(value=true)
 ```
 
-Whether to display the panel without a background.
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+Whether to display the panel without a background.
 ### obj queryOptions
 
 
 #### fn queryOptions.withDatasource
 
 ```jsonnet
-withDatasource(type, uid)
+queryOptions.withDatasource(type, uid)
 ```
+
+PARAMETERS:
+
+* **type** (`string`)
+* **uid** (`string`)
 
 `withDatasource` sets the datasource for all queries in a panel.
 
 The default datasource for a panel is set to 'Mixed datasource' so panels can be datasource agnostic, which is a lot more interesting from a reusability standpoint. Note that this requires query targets to explicitly set datasource for the same reason.
 
-
 #### fn queryOptions.withDatasourceMixin
 
 ```jsonnet
-withDatasourceMixin(value)
+queryOptions.withDatasourceMixin(value)
 ```
 
-The datasource used in all targets.
+PARAMETERS:
 
+* **value** (`object`)
+
+The datasource used in all targets.
 #### fn queryOptions.withInterval
 
 ```jsonnet
-withInterval(value)
+queryOptions.withInterval(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 TODO docs
 TODO tighter constraint
-
 #### fn queryOptions.withMaxDataPoints
 
 ```jsonnet
-withMaxDataPoints(value)
+queryOptions.withMaxDataPoints(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`number`)
+
+TODO docs
 #### fn queryOptions.withTargets
 
 ```jsonnet
-withTargets(value)
+queryOptions.withTargets(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`array`)
+
+TODO docs
 #### fn queryOptions.withTargetsMixin
 
 ```jsonnet
-withTargetsMixin(value)
+queryOptions.withTargetsMixin(value)
 ```
 
-TODO docs
+PARAMETERS:
 
+* **value** (`array`)
+
+TODO docs
 #### fn queryOptions.withTimeFrom
 
 ```jsonnet
-withTimeFrom(value)
+queryOptions.withTimeFrom(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 TODO docs
 TODO tighter constraint
-
 #### fn queryOptions.withTimeShift
 
 ```jsonnet
-withTimeShift(value)
+queryOptions.withTimeShift(value)
 ```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 TODO docs
 TODO tighter constraint
-
 #### fn queryOptions.withTransformations
 
 ```jsonnet
-withTransformations(value)
+queryOptions.withTransformations(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 #### fn queryOptions.withTransformationsMixin
 
 ```jsonnet
-withTransformationsMixin(value)
+queryOptions.withTransformationsMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 ### obj standardOptions
@@ -1212,153 +1570,206 @@ withTransformationsMixin(value)
 #### fn standardOptions.withDecimals
 
 ```jsonnet
-withDecimals(value)
+standardOptions.withDecimals(value)
 ```
 
-Significant digits (for display)
+PARAMETERS:
 
+* **value** (`number`)
+
+Significant digits (for display)
 #### fn standardOptions.withDisplayName
 
 ```jsonnet
-withDisplayName(value)
+standardOptions.withDisplayName(value)
 ```
 
-The display value for this field.  This supports template variables blank is auto
+PARAMETERS:
 
+* **value** (`string`)
+
+The display value for this field.  This supports template variables blank is auto
 #### fn standardOptions.withLinks
 
 ```jsonnet
-withLinks(value)
+standardOptions.withLinks(value)
 ```
 
-The behavior when clicking on a result
+PARAMETERS:
 
+* **value** (`array`)
+
+The behavior when clicking on a result
 #### fn standardOptions.withLinksMixin
 
 ```jsonnet
-withLinksMixin(value)
+standardOptions.withLinksMixin(value)
 ```
 
-The behavior when clicking on a result
+PARAMETERS:
 
+* **value** (`array`)
+
+The behavior when clicking on a result
 #### fn standardOptions.withMappings
 
 ```jsonnet
-withMappings(value)
+standardOptions.withMappings(value)
 ```
 
-Convert input values into a display string
+PARAMETERS:
 
+* **value** (`array`)
+
+Convert input values into a display string
 #### fn standardOptions.withMappingsMixin
 
 ```jsonnet
-withMappingsMixin(value)
+standardOptions.withMappingsMixin(value)
 ```
 
-Convert input values into a display string
+PARAMETERS:
 
+* **value** (`array`)
+
+Convert input values into a display string
 #### fn standardOptions.withMax
 
 ```jsonnet
-withMax(value)
+standardOptions.withMax(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 #### fn standardOptions.withMin
 
 ```jsonnet
-withMin(value)
+standardOptions.withMin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`number`)
 
 
 #### fn standardOptions.withNoValue
 
 ```jsonnet
-withNoValue(value)
+standardOptions.withNoValue(value)
 ```
 
-Alternative to empty string
+PARAMETERS:
 
+* **value** (`string`)
+
+Alternative to empty string
 #### fn standardOptions.withOverrides
 
 ```jsonnet
-withOverrides(value)
+standardOptions.withOverrides(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 #### fn standardOptions.withOverridesMixin
 
 ```jsonnet
-withOverridesMixin(value)
+standardOptions.withOverridesMixin(value)
 ```
 
+PARAMETERS:
+
+* **value** (`array`)
 
 
 #### fn standardOptions.withUnit
 
 ```jsonnet
-withUnit(value)
+standardOptions.withUnit(value)
 ```
 
-Numeric Options
+PARAMETERS:
 
+* **value** (`string`)
+
+Numeric Options
 #### obj standardOptions.color
 
 
 ##### fn standardOptions.color.withFixedColor
 
 ```jsonnet
-withFixedColor(value)
+standardOptions.color.withFixedColor(value)
 ```
 
-Stores the fixed color value if mode is fixed
+PARAMETERS:
 
+* **value** (`string`)
+
+Stores the fixed color value if mode is fixed
 ##### fn standardOptions.color.withMode
 
 ```jsonnet
-withMode(value)
+standardOptions.color.withMode(value)
 ```
 
-The main color scheme mode
+PARAMETERS:
 
+* **value** (`string`)
+
+The main color scheme mode
 ##### fn standardOptions.color.withSeriesBy
 
 ```jsonnet
-withSeriesBy(value)
+standardOptions.color.withSeriesBy(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"min"`, `"max"`, `"last"`
+
 TODO docs
-
-Accepted values for `value` are "min", "max", "last"
-
 #### obj standardOptions.thresholds
 
 
 ##### fn standardOptions.thresholds.withMode
 
 ```jsonnet
-withMode(value)
+standardOptions.thresholds.withMode(value)
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - valid values: `"absolute"`, `"percentage"`
 
-Accepted values for `value` are "absolute", "percentage"
 
 ##### fn standardOptions.thresholds.withSteps
 
 ```jsonnet
-withSteps(value)
+standardOptions.thresholds.withSteps(value)
 ```
 
-Must be sorted by 'value', first value is always -Infinity
+PARAMETERS:
 
+* **value** (`array`)
+
+Must be sorted by 'value', first value is always -Infinity
 ##### fn standardOptions.thresholds.withStepsMixin
 
 ```jsonnet
-withStepsMixin(value)
+standardOptions.thresholds.withStepsMixin(value)
 ```
+
+PARAMETERS:
+
+* **value** (`array`)
 
 Must be sorted by 'value', first value is always -Infinity

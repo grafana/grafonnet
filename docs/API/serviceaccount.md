@@ -25,96 +25,133 @@ grafonnet.serviceaccount
 withAccessControl(value)
 ```
 
-AccessControl metadata associated with a given resource.
+PARAMETERS:
 
+* **value** (`object`)
+
+AccessControl metadata associated with a given resource.
 ### fn withAccessControlMixin
 
 ```jsonnet
 withAccessControlMixin(value)
 ```
 
-AccessControl metadata associated with a given resource.
+PARAMETERS:
 
+* **value** (`object`)
+
+AccessControl metadata associated with a given resource.
 ### fn withAvatarUrl
 
 ```jsonnet
 withAvatarUrl(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
 AvatarUrl is the service account's avatar URL. It allows the frontend to display a picture in front
 of the service account.
-
 ### fn withId
 
 ```jsonnet
 withId(value)
 ```
 
-ID is the unique identifier of the service account in the database.
+PARAMETERS:
 
+* **value** (`integer`)
+
+ID is the unique identifier of the service account in the database.
 ### fn withIsDisabled
 
 ```jsonnet
 withIsDisabled(value=true)
 ```
 
-IsDisabled indicates if the service account is disabled.
+PARAMETERS:
 
+* **value** (`boolean`)
+   - default value: `true`
+
+IsDisabled indicates if the service account is disabled.
 ### fn withLogin
 
 ```jsonnet
 withLogin(value)
 ```
 
-Login of the service account.
+PARAMETERS:
 
+* **value** (`string`)
+
+Login of the service account.
 ### fn withName
 
 ```jsonnet
 withName(value)
 ```
 
-Name of the service account.
+PARAMETERS:
 
+* **value** (`string`)
+
+Name of the service account.
 ### fn withOrgId
 
 ```jsonnet
 withOrgId(value)
 ```
 
-OrgId is the ID of an organisation the service account belongs to.
+PARAMETERS:
 
+* **value** (`integer`)
+
+OrgId is the ID of an organisation the service account belongs to.
 ### fn withRole
 
 ```jsonnet
 withRole(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"Admin"`, `"Editor"`, `"Viewer"`
+
 OrgRole is a Grafana Organization Role which can be 'Viewer', 'Editor', 'Admin'.
-
-Accepted values for `value` are "Admin", "Editor", "Viewer"
-
 ### fn withTeams
 
 ```jsonnet
 withTeams(value)
 ```
 
-Teams is a list of teams the service account belongs to.
+PARAMETERS:
 
+* **value** (`array`)
+
+Teams is a list of teams the service account belongs to.
 ### fn withTeamsMixin
 
 ```jsonnet
 withTeamsMixin(value)
 ```
 
-Teams is a list of teams the service account belongs to.
+PARAMETERS:
 
+* **value** (`array`)
+
+Teams is a list of teams the service account belongs to.
 ### fn withTokens
 
 ```jsonnet
 withTokens(value)
 ```
+
+PARAMETERS:
+
+* **value** (`integer`)
 
 Tokens is the number of active tokens for the service account.
 Tokens are used to authenticate the service account against Grafana.
