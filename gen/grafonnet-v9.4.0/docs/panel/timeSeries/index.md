@@ -114,6 +114,7 @@ grafonnet.panel.timeSeries
 * [`obj standardOptions`](#obj-standardoptions)
   * [`fn withDecimals(value)`](#fn-standardoptionswithdecimals)
   * [`fn withDisplayName(value)`](#fn-standardoptionswithdisplayname)
+  * [`fn withFilterable(value=true)`](#fn-standardoptionswithfilterable)
   * [`fn withLinks(value)`](#fn-standardoptionswithlinks)
   * [`fn withLinksMixin(value)`](#fn-standardoptionswithlinksmixin)
   * [`fn withMappings(value)`](#fn-standardoptionswithmappings)
@@ -123,6 +124,7 @@ grafonnet.panel.timeSeries
   * [`fn withNoValue(value)`](#fn-standardoptionswithnovalue)
   * [`fn withOverrides(value)`](#fn-standardoptionswithoverrides)
   * [`fn withOverridesMixin(value)`](#fn-standardoptionswithoverridesmixin)
+  * [`fn withPath(value)`](#fn-standardoptionswithpath)
   * [`fn withUnit(value)`](#fn-standardoptionswithunit)
   * [`obj color`](#obj-standardoptionscolor)
     * [`fn withFixedColor(value)`](#fn-standardoptionscolorwithfixedcolor)
@@ -1191,6 +1193,18 @@ PARAMETERS:
 * **value** (`string`)
 
 The display value for this field.  This supports template variables blank is auto
+#### fn standardOptions.withFilterable
+
+```jsonnet
+standardOptions.withFilterable(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+True if data source field supports ad-hoc filters
 #### fn standardOptions.withLinks
 
 ```jsonnet
@@ -1290,6 +1304,21 @@ PARAMETERS:
 * **value** (`array`)
 
 
+#### fn standardOptions.withPath
+
+```jsonnet
+standardOptions.withPath(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+An explicit path to the field in the datasource.  When the frame meta includes a path,
+This will default to `${frame.meta.path}/${field.name}
+
+When defined, this value can be used as an identifier within the datasource scope, and
+may be used to update the results
 #### fn standardOptions.withUnit
 
 ```jsonnet

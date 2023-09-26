@@ -265,11 +265,13 @@ local utils = import './utils.libsonnet';
           'fieldConfig.withOverrides',  // known as 'Overrides' in UI, uses fieldOverrides subpackage
           'fieldConfig.withOverridesMixin',
 
+          // only found in overrides
+          'fieldConfig.defaults.withFilterable',
+          'fieldConfig.defaults.withPath',
+
           // TODO: consider relevancy of these fields
           //'fieldConfig.defaults.withDescription',
           //'fieldConfig.defaults.withDisplayNameFromDS',
-          //'fieldConfig.defaults.withFilterable',  // only found in overrides
-          //'fieldConfig.defaults.withPath',  // also related to overrides
           //'fieldConfig.defaults.withWriteable',
 
         ],
