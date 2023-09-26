@@ -155,6 +155,10 @@
       withOverridesMixin(value): { fieldConfig+: { overrides+: (if std.isArray(value)
                                                                 then value
                                                                 else [value]) } },
+      '#withFilterable': { 'function': { args: [{ default: true, enums: null, name: 'value', type: 'boolean' }], help: 'True if data source field supports ad-hoc filters' } },
+      withFilterable(value=true): { fieldConfig+: { defaults+: { filterable: value } } },
+      '#withPath': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'An explicit path to the field in the datasource.  When the frame meta includes a path,\nThis will default to `${frame.meta.path}/${field.name}\n\nWhen defined, this value can be used as an identifier within the datasource scope, and\nmay be used to update the results' } },
+      withPath(value): { fieldConfig+: { defaults+: { path: value } } },
       thresholds+:
         {
           '#withMode': { 'function': { args: [{ default: null, enums: ['absolute', 'percentage'], name: 'value', type: 'string' }], help: '' } },
