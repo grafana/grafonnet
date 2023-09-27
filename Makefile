@@ -1,10 +1,24 @@
-.PHONY: generate localmkdocs test
+.PHONY: generate regenerate localmkdocs test
 
 LATEST := v10.0.0
 
-generate:
-	./scripts/generate.sh v10.0.0
-	./scripts/generate_latest.sh v10.0.0
+generate: gen/grafonnet-latest
+
+gen/grafonnet-latest:
+	./scripts/generate.sh ${LATEST} && \
+	./scripts/generate_latest.sh ${LATEST}
+
+regenerate: gen/grafonnet-v*
+
+# is latest, use `make generate` instead
+#gen/grafonnet-v10.0.0:
+#	./scripts/generate.sh v10.0.0
+
+gen/grafonnet-v9.5.0:
+	./scripts/generate.sh v9.5.0
+
+gen/grafonnet-v9.4.0:
+	./scripts/generate.sh v9.4.0
 
 localmkdocs:
 	python -m venv .mkdocs/.venv; \

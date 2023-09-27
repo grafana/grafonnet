@@ -16,8 +16,10 @@ trap finish EXIT
 cd "${TEMP}"
 
 jb init
-jb install "github.com/grafana/grok/jsonnet/${VERSION}@main"
 cp -r "${REPO_DIR}/generator" generator
+cp -r "${REPO_DIR}/generator/jsonnetfile.lock.json" .
+jb install
+jb install "github.com/grafana/grok/jsonnet/${VERSION}@main"
 jb install ./generator
 
 OUT_DIR="${REPO_DIR}/gen"
