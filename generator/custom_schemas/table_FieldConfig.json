@@ -1,0 +1,523 @@
+{
+  "$ref": "#/definitions/TableFieldOptions",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "AxisColorMode": {
+      "description": "TODO docs",
+      "enum": [
+        "series",
+        "text"
+      ],
+      "type": "string"
+    },
+    "AxisPlacement": {
+      "description": "TODO docs",
+      "enum": [
+        "auto",
+        "bottom",
+        "hidden",
+        "left",
+        "right",
+        "top"
+      ],
+      "type": "string"
+    },
+    "BarAlignment": {
+      "description": "TODO docs",
+      "enum": [
+        1,
+        -1,
+        0
+      ],
+      "type": "number"
+    },
+    "BarGaugeDisplayMode": {
+      "description": "Enum expressing the possible display modes for the bar gauge component of Grafana UI",
+      "enum": [
+        "basic",
+        "gradient",
+        "lcd"
+      ],
+      "type": "string"
+    },
+    "BarGaugeValueMode": {
+      "description": "Allows for the table cell gauge display type to set the gauge mode.",
+      "enum": [
+        "color",
+        "hidden",
+        "text"
+      ],
+      "type": "string"
+    },
+    "FieldTextAlignment": {
+      "description": "TODO -- should not be table specific! TODO docs",
+      "enum": [
+        "auto",
+        "left",
+        "right",
+        "center"
+      ],
+      "type": "string"
+    },
+    "GraphDrawStyle": {
+      "description": "TODO docs",
+      "enum": [
+        "bars",
+        "line",
+        "points"
+      ],
+      "type": "string"
+    },
+    "GraphGradientMode": {
+      "description": "TODO docs",
+      "enum": [
+        "hue",
+        "none",
+        "opacity",
+        "scheme"
+      ],
+      "type": "string"
+    },
+    "GraphThresholdsStyleConfig": {
+      "additionalProperties": false,
+      "description": "TODO docs",
+      "properties": {
+        "mode": {
+          "$ref": "#/definitions/GraphTresholdsStyleMode"
+        }
+      },
+      "required": [
+        "mode"
+      ],
+      "type": "object"
+    },
+    "GraphTransform": {
+      "description": "TODO docs",
+      "enum": [
+        "constant",
+        "negative-Y"
+      ],
+      "type": "string"
+    },
+    "GraphTresholdsStyleMode": {
+      "description": "TODO docs",
+      "enum": [
+        "area",
+        "dashed",
+        "dashed+area",
+        "line",
+        "line+area",
+        "off",
+        "series"
+      ],
+      "type": "string"
+    },
+    "HideSeriesConfig": {
+      "additionalProperties": false,
+      "description": "TODO docs",
+      "properties": {
+        "legend": {
+          "type": "boolean"
+        },
+        "tooltip": {
+          "type": "boolean"
+        },
+        "viz": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "legend",
+        "tooltip",
+        "viz"
+      ],
+      "type": "object"
+    },
+    "LineInterpolation": {
+      "description": "TODO docs",
+      "enum": [
+        "linear",
+        "smooth",
+        "stepAfter",
+        "stepBefore"
+      ],
+      "type": "string"
+    },
+    "LineStyle": {
+      "additionalProperties": false,
+      "description": "TODO docs",
+      "properties": {
+        "dash": {
+          "items": {
+            "type": "number"
+          },
+          "type": "array"
+        },
+        "fill": {
+          "enum": [
+            "solid",
+            "dash",
+            "dot",
+            "square"
+          ],
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "ScaleDistribution": {
+      "description": "TODO docs",
+      "enum": [
+        "linear",
+        "log",
+        "ordinal",
+        "symlog"
+      ],
+      "type": "string"
+    },
+    "ScaleDistributionConfig": {
+      "additionalProperties": false,
+      "description": "TODO docs",
+      "properties": {
+        "linearThreshold": {
+          "type": "number"
+        },
+        "log": {
+          "type": "number"
+        },
+        "type": {
+          "$ref": "#/definitions/ScaleDistribution"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "StackingConfig": {
+      "additionalProperties": false,
+      "description": "TODO docs",
+      "properties": {
+        "group": {
+          "type": "string"
+        },
+        "mode": {
+          "$ref": "#/definitions/StackingMode"
+        }
+      },
+      "type": "object"
+    },
+    "StackingMode": {
+      "description": "TODO docs",
+      "enum": [
+        "none",
+        "normal",
+        "percent"
+      ],
+      "type": "string"
+    },
+    "TableAutoCellOptions": {
+      "additionalProperties": false,
+      "description": "Auto mode table cell options",
+      "properties": {
+        "type": {
+          "const": "auto",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "TableBarGaugeCellOptions": {
+      "additionalProperties": false,
+      "description": "Gauge cell options",
+      "properties": {
+        "mode": {
+          "$ref": "#/definitions/BarGaugeDisplayMode"
+        },
+        "type": {
+          "const": "gauge",
+          "type": "string"
+        },
+        "valueDisplayMode": {
+          "$ref": "#/definitions/BarGaugeValueMode"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "TableCellBackgroundDisplayMode": {
+      "description": "Display mode to the \"Colored Background\" display mode for table cells. Either displays a solid color (basic mode) or a gradient.",
+      "enum": [
+        "basic",
+        "gradient"
+      ],
+      "type": "string"
+    },
+    "TableCellDisplayMode": {
+      "description": "Internally, this is the \"type\" of cell that's being displayed in the table such as colored text, JSON, gauge, etc. The color-background-solid, gradient-gauge, and lcd-gauge modes are deprecated in favor of new cell subOptions",
+      "enum": [
+        "auto",
+        "basic",
+        "color-background",
+        "color-background-solid",
+        "color-text",
+        "custom",
+        "gauge",
+        "gradient-gauge",
+        "image",
+        "json-view",
+        "lcd-gauge",
+        "sparkline"
+      ],
+      "type": "string"
+    },
+    "TableCellOptions": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/TableAutoCellOptions"
+        },
+        {
+          "$ref": "#/definitions/TableSparklineCellOptions"
+        },
+        {
+          "$ref": "#/definitions/TableBarGaugeCellOptions"
+        },
+        {
+          "$ref": "#/definitions/TableColoredBackgroundCellOptions"
+        },
+        {
+          "$ref": "#/definitions/TableColorTextCellOptions"
+        },
+        {
+          "$ref": "#/definitions/TableImageCellOptions"
+        },
+        {
+          "$ref": "#/definitions/TableJsonViewCellOptions"
+        }
+      ],
+      "description": "Table cell options. Each cell has a display mode and other potential options for that display."
+    },
+    "TableColorTextCellOptions": {
+      "additionalProperties": false,
+      "description": "Colored text cell options",
+      "properties": {
+        "type": {
+          "const": "color-text",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "TableColoredBackgroundCellOptions": {
+      "additionalProperties": false,
+      "description": "Colored background cell options",
+      "properties": {
+        "mode": {
+          "$ref": "#/definitions/TableCellBackgroundDisplayMode"
+        },
+        "type": {
+          "const": "color-background",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "TableFieldOptions": {
+      "additionalProperties": false,
+      "description": "Field options for each field within a table (e.g 10, \"The String\", 64.20, etc.) Generally defines alignment, filtering capabilties, display options, etc.",
+      "properties": {
+        "align": {
+          "$ref": "#/definitions/FieldTextAlignment"
+        },
+        "cellOptions": {
+          "$ref": "#/definitions/TableCellOptions"
+        },
+        "displayMode": {
+          "$ref": "#/definitions/TableCellDisplayMode",
+          "description": "This field is deprecated in favor of using cellOptions"
+        },
+        "filterable": {
+          "type": "boolean"
+        },
+        "hidden": {
+          "type": "boolean"
+        },
+        "hideHeader": {
+          "description": "Hides any header for a column, usefull for columns that show some static content or buttons.",
+          "type": "boolean"
+        },
+        "inspect": {
+          "type": "boolean"
+        },
+        "minWidth": {
+          "type": "number"
+        },
+        "width": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "align",
+        "cellOptions",
+        "inspect"
+      ],
+      "type": "object"
+    },
+    "TableImageCellOptions": {
+      "additionalProperties": false,
+      "description": "Json view cell options",
+      "properties": {
+        "type": {
+          "const": "image",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "TableJsonViewCellOptions": {
+      "additionalProperties": false,
+      "description": "Json view cell options",
+      "properties": {
+        "type": {
+          "const": "json-view",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "TableSparklineCellOptions": {
+      "additionalProperties": false,
+      "description": "Sparkline cell options",
+      "properties": {
+        "axisCenteredZero": {
+          "type": "boolean"
+        },
+        "axisColorMode": {
+          "$ref": "#/definitions/AxisColorMode"
+        },
+        "axisGridShow": {
+          "type": "boolean"
+        },
+        "axisLabel": {
+          "type": "string"
+        },
+        "axisPlacement": {
+          "$ref": "#/definitions/AxisPlacement"
+        },
+        "axisSoftMax": {
+          "type": "number"
+        },
+        "axisSoftMin": {
+          "type": "number"
+        },
+        "axisWidth": {
+          "type": "number"
+        },
+        "barAlignment": {
+          "$ref": "#/definitions/BarAlignment"
+        },
+        "barMaxWidth": {
+          "type": "number"
+        },
+        "barWidthFactor": {
+          "type": "number"
+        },
+        "drawStyle": {
+          "$ref": "#/definitions/GraphDrawStyle"
+        },
+        "fillBelowTo": {
+          "type": "string"
+        },
+        "fillColor": {
+          "type": "string"
+        },
+        "fillOpacity": {
+          "type": "number"
+        },
+        "gradientMode": {
+          "$ref": "#/definitions/GraphGradientMode"
+        },
+        "hideFrom": {
+          "$ref": "#/definitions/HideSeriesConfig"
+        },
+        "lineColor": {
+          "type": "string"
+        },
+        "lineInterpolation": {
+          "$ref": "#/definitions/LineInterpolation"
+        },
+        "lineStyle": {
+          "$ref": "#/definitions/LineStyle"
+        },
+        "lineWidth": {
+          "type": "number"
+        },
+        "pointColor": {
+          "type": "string"
+        },
+        "pointSize": {
+          "type": "number"
+        },
+        "pointSymbol": {
+          "type": "string"
+        },
+        "scaleDistribution": {
+          "$ref": "#/definitions/ScaleDistributionConfig"
+        },
+        "showPoints": {
+          "$ref": "#/definitions/VisibilityMode"
+        },
+        "spanNulls": {
+          "description": "Indicate if null values should be treated as gaps or connected. When the value is a number, it represents the maximum delta in the X axis that should be considered connected.  For timeseries, this is milliseconds",
+          "type": [
+            "boolean",
+            "number"
+          ]
+        },
+        "stacking": {
+          "$ref": "#/definitions/StackingConfig"
+        },
+        "thresholdsStyle": {
+          "$ref": "#/definitions/GraphThresholdsStyleConfig"
+        },
+        "transform": {
+          "$ref": "#/definitions/GraphTransform"
+        },
+        "type": {
+          "const": "sparkline",
+          "type": "string"
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "type": "object"
+    },
+    "VisibilityMode": {
+      "description": "TODO docs",
+      "enum": [
+        "always",
+        "auto",
+        "never"
+      ],
+      "type": "string"
+    }
+  }
+}

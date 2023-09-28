@@ -151,11 +151,32 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       if !std.member(allSchemaTitles, title)
     ],
 
+  addTableFieldConfig(schema):
+    if schema.info.title == 'TablePanelCfg'
+       && !('FieldConfig' in schema.components.schemas.TablePanelCfg.properties)
+       && !('PanelFieldConfig' in schema.components.schemas.TablePanelCfg.properties)
+    then {
+      definitions: (import './custom_schemas/table_FieldConfig.json').definitions,
+      components+: {
+        schemas+: {
+          TablePanelCfg+: {
+            properties+: {
+              PanelFieldConfig: {
+                '$ref': '#/definitions/TableFieldOptions',
+              },
+            },
+          },
+        },
+      },
+    }
+    else {},
+
   restructure(schema):
     local title = schema.info.title;
     local formatted = self.formatPanelName(title);
 
     schema
+    + root.addTableFieldConfig(schema)
     + {
       info+: {
         title: formatted,
