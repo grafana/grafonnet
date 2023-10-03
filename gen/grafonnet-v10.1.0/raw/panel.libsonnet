@@ -349,10 +349,6 @@
   withTargetsMixin(value): { targets+: (if std.isArray(value)
                                         then value
                                         else [value]) },
-  targets+:
-    {
-      '#': { help: '', name: 'targets' },
-    },
   '#withTimeFrom': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Overrides the relative time range for individual panels,\nwhich causes them to be different than what is selected in\nthe dashboard time picker in the top-right corner of the dashboard. You can use this to show metrics from different\ntime periods or days on the same dashboard.\nThe value is formatted as time operation like: `now-5m` (Last 5 minutes), `now/d` (the day so far),\n`now-5d/d`(Last 5 days), `now/w` (This week so far), `now-2y/y` (Last 2 years).\nNote: Panel time overrides have no effect when the dashboard’s time range is absolute.\nSee: https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/#query-options' } },
   withTimeFrom(value): { timeFrom: value },
   '#withTimeShift': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'string' }], help: 'Overrides the time range for individual panels by shifting its start and end relative to the time picker.\nFor example, you can shift the time range for the panel to be two hours earlier than the dashboard time picker setting `2h`.\nNote: Panel time overrides have no effect when the dashboard’s time range is absolute.\nSee: https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/#query-options' } },
