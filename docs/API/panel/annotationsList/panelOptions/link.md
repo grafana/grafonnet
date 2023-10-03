@@ -29,7 +29,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+If true, all dashboards links will be displayed in a dropdown. If false, all dashboards links will be displayed side by side. Only valid if the type is dashboards
 ### fn withIcon
 
 ```jsonnet
@@ -40,7 +40,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Icon name to be displayed with the link
 ### fn withIncludeVars
 
 ```jsonnet
@@ -52,7 +52,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+If true, includes current template variables values in the link as query params
 ### fn withKeepTime
 
 ```jsonnet
@@ -64,7 +64,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+If true, includes current time range in the link as query params
 ### fn withTags
 
 ```jsonnet
@@ -75,7 +75,7 @@ PARAMETERS:
 
 * **value** (`array`)
 
-
+List of tags to limit the linked dashboards. If empty, all dashboards will be displayed. Only valid if the type is dashboards
 ### fn withTagsMixin
 
 ```jsonnet
@@ -86,7 +86,7 @@ PARAMETERS:
 
 * **value** (`array`)
 
-
+List of tags to limit the linked dashboards. If empty, all dashboards will be displayed. Only valid if the type is dashboards
 ### fn withTargetBlank
 
 ```jsonnet
@@ -98,7 +98,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+If true, the link will be opened in a new tab
 ### fn withTitle
 
 ```jsonnet
@@ -109,7 +109,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Title to display with the link
 ### fn withTooltip
 
 ```jsonnet
@@ -120,7 +120,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Tooltip to display when the user hovers their mouse over it
 ### fn withType
 
 ```jsonnet
@@ -132,7 +132,7 @@ PARAMETERS:
 * **value** (`string`)
    - valid values: `"link"`, `"dashboards"`
 
-TODO docs
+Dashboard Link type. Accepted values are dashboards (to refer to another dashboard) and link (to refer to an external resource)
 ### fn withUrl
 
 ```jsonnet
@@ -143,3 +143,4 @@ PARAMETERS:
 
 * **value** (`string`)
 
+Link URL. Only required/valid if the type is link
