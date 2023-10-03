@@ -15,6 +15,7 @@ grafonnet.query.testData
 * [`fn withCsvWave(value)`](#fn-withcsvwave)
 * [`fn withCsvWaveMixin(value)`](#fn-withcsvwavemixin)
 * [`fn withDatasource(value)`](#fn-withdatasource)
+* [`fn withDropPercent(value)`](#fn-withdroppercent)
 * [`fn withErrorType(value)`](#fn-witherrortype)
 * [`fn withHide(value=true)`](#fn-withhide)
 * [`fn withLabels(value)`](#fn-withlabels)
@@ -156,6 +157,17 @@ For mixed data sources the selected datasource is on the query level.
 For non mixed scenarios this is undefined.
 TODO find a better way to do this ^ that's friendly to schema
 TODO this shouldn't be unknown but DataSourceRef | null
+### fn withDropPercent
+
+```jsonnet
+withDropPercent(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+Drop percentage (the chance we will lose a point 0-100)
 ### fn withErrorType
 
 ```jsonnet

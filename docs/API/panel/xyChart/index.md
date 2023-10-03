@@ -14,6 +14,62 @@ grafonnet.panel.xyChart
 ## Index
 
 * [`fn new(title)`](#fn-new)
+* [`obj fieldConfig`](#obj-fieldconfig)
+  * [`obj defaults`](#obj-fieldconfigdefaults)
+    * [`obj custom`](#obj-fieldconfigdefaultscustom)
+      * [`fn withAxisCenteredZero(value=true)`](#fn-fieldconfigdefaultscustomwithaxiscenteredzero)
+      * [`fn withAxisColorMode(value)`](#fn-fieldconfigdefaultscustomwithaxiscolormode)
+      * [`fn withAxisGridShow(value=true)`](#fn-fieldconfigdefaultscustomwithaxisgridshow)
+      * [`fn withAxisLabel(value)`](#fn-fieldconfigdefaultscustomwithaxislabel)
+      * [`fn withAxisPlacement(value)`](#fn-fieldconfigdefaultscustomwithaxisplacement)
+      * [`fn withAxisSoftMax(value)`](#fn-fieldconfigdefaultscustomwithaxissoftmax)
+      * [`fn withAxisSoftMin(value)`](#fn-fieldconfigdefaultscustomwithaxissoftmin)
+      * [`fn withAxisWidth(value)`](#fn-fieldconfigdefaultscustomwithaxiswidth)
+      * [`fn withHideFrom(value)`](#fn-fieldconfigdefaultscustomwithhidefrom)
+      * [`fn withHideFromMixin(value)`](#fn-fieldconfigdefaultscustomwithhidefrommixin)
+      * [`fn withLabel(value)`](#fn-fieldconfigdefaultscustomwithlabel)
+      * [`fn withLabelValue(value)`](#fn-fieldconfigdefaultscustomwithlabelvalue)
+      * [`fn withLabelValueMixin(value)`](#fn-fieldconfigdefaultscustomwithlabelvaluemixin)
+      * [`fn withLineColor(value)`](#fn-fieldconfigdefaultscustomwithlinecolor)
+      * [`fn withLineColorMixin(value)`](#fn-fieldconfigdefaultscustomwithlinecolormixin)
+      * [`fn withLineStyle(value)`](#fn-fieldconfigdefaultscustomwithlinestyle)
+      * [`fn withLineStyleMixin(value)`](#fn-fieldconfigdefaultscustomwithlinestylemixin)
+      * [`fn withLineWidth(value)`](#fn-fieldconfigdefaultscustomwithlinewidth)
+      * [`fn withPointColor(value)`](#fn-fieldconfigdefaultscustomwithpointcolor)
+      * [`fn withPointColorMixin(value)`](#fn-fieldconfigdefaultscustomwithpointcolormixin)
+      * [`fn withPointSize(value)`](#fn-fieldconfigdefaultscustomwithpointsize)
+      * [`fn withPointSizeMixin(value)`](#fn-fieldconfigdefaultscustomwithpointsizemixin)
+      * [`fn withScaleDistribution(value)`](#fn-fieldconfigdefaultscustomwithscaledistribution)
+      * [`fn withScaleDistributionMixin(value)`](#fn-fieldconfigdefaultscustomwithscaledistributionmixin)
+      * [`fn withShow(value)`](#fn-fieldconfigdefaultscustomwithshow)
+      * [`obj hideFrom`](#obj-fieldconfigdefaultscustomhidefrom)
+        * [`fn withLegend(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithlegend)
+        * [`fn withTooltip(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithtooltip)
+        * [`fn withViz(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithviz)
+      * [`obj labelValue`](#obj-fieldconfigdefaultscustomlabelvalue)
+        * [`fn withField(value)`](#fn-fieldconfigdefaultscustomlabelvaluewithfield)
+        * [`fn withFixed(value)`](#fn-fieldconfigdefaultscustomlabelvaluewithfixed)
+        * [`fn withMode(value)`](#fn-fieldconfigdefaultscustomlabelvaluewithmode)
+      * [`obj lineColor`](#obj-fieldconfigdefaultscustomlinecolor)
+        * [`fn withField(value)`](#fn-fieldconfigdefaultscustomlinecolorwithfield)
+        * [`fn withFixed(value)`](#fn-fieldconfigdefaultscustomlinecolorwithfixed)
+      * [`obj lineStyle`](#obj-fieldconfigdefaultscustomlinestyle)
+        * [`fn withDash(value)`](#fn-fieldconfigdefaultscustomlinestylewithdash)
+        * [`fn withDashMixin(value)`](#fn-fieldconfigdefaultscustomlinestylewithdashmixin)
+        * [`fn withFill(value)`](#fn-fieldconfigdefaultscustomlinestylewithfill)
+      * [`obj pointColor`](#obj-fieldconfigdefaultscustompointcolor)
+        * [`fn withField(value)`](#fn-fieldconfigdefaultscustompointcolorwithfield)
+        * [`fn withFixed(value)`](#fn-fieldconfigdefaultscustompointcolorwithfixed)
+      * [`obj pointSize`](#obj-fieldconfigdefaultscustompointsize)
+        * [`fn withField(value)`](#fn-fieldconfigdefaultscustompointsizewithfield)
+        * [`fn withFixed(value)`](#fn-fieldconfigdefaultscustompointsizewithfixed)
+        * [`fn withMax(value)`](#fn-fieldconfigdefaultscustompointsizewithmax)
+        * [`fn withMin(value)`](#fn-fieldconfigdefaultscustompointsizewithmin)
+        * [`fn withMode(value)`](#fn-fieldconfigdefaultscustompointsizewithmode)
+      * [`obj scaleDistribution`](#obj-fieldconfigdefaultscustomscaledistribution)
+        * [`fn withLinearThreshold(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithlinearthreshold)
+        * [`fn withLog(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithlog)
+        * [`fn withType(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithtype)
 * [`obj libraryPanel`](#obj-librarypanel)
   * [`fn withName(value)`](#fn-librarypanelwithname)
   * [`fn withUid(value)`](#fn-librarypanelwithuid)
@@ -103,6 +159,555 @@ PARAMETERS:
 * **title** (`string`)
 
 Creates a new xyChart panel with a title.
+### obj fieldConfig
+
+
+#### obj fieldConfig.defaults
+
+
+##### obj fieldConfig.defaults.custom
+
+
+###### fn fieldConfig.defaults.custom.withAxisCenteredZero
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisCenteredZero(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn fieldConfig.defaults.custom.withAxisColorMode
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisColorMode(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"text"`, `"series"`
+
+TODO docs
+###### fn fieldConfig.defaults.custom.withAxisGridShow
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisGridShow(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn fieldConfig.defaults.custom.withAxisLabel
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisLabel(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+###### fn fieldConfig.defaults.custom.withAxisPlacement
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisPlacement(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"top"`, `"right"`, `"bottom"`, `"left"`, `"hidden"`
+
+TODO docs
+###### fn fieldConfig.defaults.custom.withAxisSoftMax
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisSoftMax(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+###### fn fieldConfig.defaults.custom.withAxisSoftMin
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisSoftMin(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+###### fn fieldConfig.defaults.custom.withAxisWidth
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisWidth(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+###### fn fieldConfig.defaults.custom.withHideFrom
+
+```jsonnet
+fieldConfig.defaults.custom.withHideFrom(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+TODO docs
+###### fn fieldConfig.defaults.custom.withHideFromMixin
+
+```jsonnet
+fieldConfig.defaults.custom.withHideFromMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+TODO docs
+###### fn fieldConfig.defaults.custom.withLabel
+
+```jsonnet
+fieldConfig.defaults.custom.withLabel(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"never"`, `"always"`
+
+TODO docs
+###### fn fieldConfig.defaults.custom.withLabelValue
+
+```jsonnet
+fieldConfig.defaults.custom.withLabelValue(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+###### fn fieldConfig.defaults.custom.withLabelValueMixin
+
+```jsonnet
+fieldConfig.defaults.custom.withLabelValueMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+###### fn fieldConfig.defaults.custom.withLineColor
+
+```jsonnet
+fieldConfig.defaults.custom.withLineColor(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+###### fn fieldConfig.defaults.custom.withLineColorMixin
+
+```jsonnet
+fieldConfig.defaults.custom.withLineColorMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+###### fn fieldConfig.defaults.custom.withLineStyle
+
+```jsonnet
+fieldConfig.defaults.custom.withLineStyle(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+TODO docs
+###### fn fieldConfig.defaults.custom.withLineStyleMixin
+
+```jsonnet
+fieldConfig.defaults.custom.withLineStyleMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+TODO docs
+###### fn fieldConfig.defaults.custom.withLineWidth
+
+```jsonnet
+fieldConfig.defaults.custom.withLineWidth(value)
+```
+
+PARAMETERS:
+
+* **value** (`integer`)
+
+
+###### fn fieldConfig.defaults.custom.withPointColor
+
+```jsonnet
+fieldConfig.defaults.custom.withPointColor(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+###### fn fieldConfig.defaults.custom.withPointColorMixin
+
+```jsonnet
+fieldConfig.defaults.custom.withPointColorMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+###### fn fieldConfig.defaults.custom.withPointSize
+
+```jsonnet
+fieldConfig.defaults.custom.withPointSize(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+###### fn fieldConfig.defaults.custom.withPointSizeMixin
+
+```jsonnet
+fieldConfig.defaults.custom.withPointSizeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+###### fn fieldConfig.defaults.custom.withScaleDistribution
+
+```jsonnet
+fieldConfig.defaults.custom.withScaleDistribution(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+TODO docs
+###### fn fieldConfig.defaults.custom.withScaleDistributionMixin
+
+```jsonnet
+fieldConfig.defaults.custom.withScaleDistributionMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+TODO docs
+###### fn fieldConfig.defaults.custom.withShow
+
+```jsonnet
+fieldConfig.defaults.custom.withShow(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"points"`, `"lines"`, `"points+lines"`
+
+
+###### obj fieldConfig.defaults.custom.hideFrom
+
+
+####### fn fieldConfig.defaults.custom.hideFrom.withLegend
+
+```jsonnet
+fieldConfig.defaults.custom.hideFrom.withLegend(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+####### fn fieldConfig.defaults.custom.hideFrom.withTooltip
+
+```jsonnet
+fieldConfig.defaults.custom.hideFrom.withTooltip(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+####### fn fieldConfig.defaults.custom.hideFrom.withViz
+
+```jsonnet
+fieldConfig.defaults.custom.hideFrom.withViz(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### obj fieldConfig.defaults.custom.labelValue
+
+
+####### fn fieldConfig.defaults.custom.labelValue.withField
+
+```jsonnet
+fieldConfig.defaults.custom.labelValue.withField(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+fixed: T -- will be added by each element
+####### fn fieldConfig.defaults.custom.labelValue.withFixed
+
+```jsonnet
+fieldConfig.defaults.custom.labelValue.withFixed(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+####### fn fieldConfig.defaults.custom.labelValue.withMode
+
+```jsonnet
+fieldConfig.defaults.custom.labelValue.withMode(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"fixed"`, `"field"`, `"template"`
+
+
+###### obj fieldConfig.defaults.custom.lineColor
+
+
+####### fn fieldConfig.defaults.custom.lineColor.withField
+
+```jsonnet
+fieldConfig.defaults.custom.lineColor.withField(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+fixed: T -- will be added by each element
+####### fn fieldConfig.defaults.custom.lineColor.withFixed
+
+```jsonnet
+fieldConfig.defaults.custom.lineColor.withFixed(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+###### obj fieldConfig.defaults.custom.lineStyle
+
+
+####### fn fieldConfig.defaults.custom.lineStyle.withDash
+
+```jsonnet
+fieldConfig.defaults.custom.lineStyle.withDash(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+
+####### fn fieldConfig.defaults.custom.lineStyle.withDashMixin
+
+```jsonnet
+fieldConfig.defaults.custom.lineStyle.withDashMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+
+####### fn fieldConfig.defaults.custom.lineStyle.withFill
+
+```jsonnet
+fieldConfig.defaults.custom.lineStyle.withFill(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"solid"`, `"dash"`, `"dot"`, `"square"`
+
+
+###### obj fieldConfig.defaults.custom.pointColor
+
+
+####### fn fieldConfig.defaults.custom.pointColor.withField
+
+```jsonnet
+fieldConfig.defaults.custom.pointColor.withField(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+fixed: T -- will be added by each element
+####### fn fieldConfig.defaults.custom.pointColor.withFixed
+
+```jsonnet
+fieldConfig.defaults.custom.pointColor.withFixed(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+###### obj fieldConfig.defaults.custom.pointSize
+
+
+####### fn fieldConfig.defaults.custom.pointSize.withField
+
+```jsonnet
+fieldConfig.defaults.custom.pointSize.withField(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+fixed: T -- will be added by each element
+####### fn fieldConfig.defaults.custom.pointSize.withFixed
+
+```jsonnet
+fieldConfig.defaults.custom.pointSize.withFixed(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+####### fn fieldConfig.defaults.custom.pointSize.withMax
+
+```jsonnet
+fieldConfig.defaults.custom.pointSize.withMax(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+####### fn fieldConfig.defaults.custom.pointSize.withMin
+
+```jsonnet
+fieldConfig.defaults.custom.pointSize.withMin(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+####### fn fieldConfig.defaults.custom.pointSize.withMode
+
+```jsonnet
+fieldConfig.defaults.custom.pointSize.withMode(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"linear"`, `"quad"`
+
+
+###### obj fieldConfig.defaults.custom.scaleDistribution
+
+
+####### fn fieldConfig.defaults.custom.scaleDistribution.withLinearThreshold
+
+```jsonnet
+fieldConfig.defaults.custom.scaleDistribution.withLinearThreshold(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+####### fn fieldConfig.defaults.custom.scaleDistribution.withLog
+
+```jsonnet
+fieldConfig.defaults.custom.scaleDistribution.withLog(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+####### fn fieldConfig.defaults.custom.scaleDistribution.withType
+
+```jsonnet
+fieldConfig.defaults.custom.scaleDistribution.withType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"linear"`, `"log"`, `"ordinal"`, `"symlog"`
+
+TODO docs
 ### obj libraryPanel
 
 
@@ -116,7 +721,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Library panel name
 #### fn libraryPanel.withUid
 
 ```jsonnet
@@ -127,7 +732,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Library panel uid
 ### obj options
 
 
@@ -438,7 +1043,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Description.
+Panel description.
 #### fn panelOptions.withGridPos
 
 ```jsonnet
@@ -471,7 +1076,6 @@ PARAMETERS:
 * **value** (`array`)
 
 Panel links.
-TODO fill this out - seems there are a couple variants?
 #### fn panelOptions.withLinksMixin
 
 ```jsonnet
@@ -483,7 +1087,6 @@ PARAMETERS:
 * **value** (`array`)
 
 Panel links.
-TODO fill this out - seems there are a couple variants?
 #### fn panelOptions.withRepeat
 
 ```jsonnet
@@ -508,8 +1111,7 @@ PARAMETERS:
    - valid values: `"h"`, `"v"`
 
 Direction to repeat in if 'repeat' is set.
-"h" for horizontal, "v" for vertical.
-TODO this is probably optional
+`h` for horizontal, `v` for vertical.
 #### fn panelOptions.withTitle
 
 ```jsonnet
@@ -561,7 +1163,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-The datasource used in all targets.
+Ref to a DataSource instance
 #### fn queryOptions.withInterval
 
 ```jsonnet
@@ -572,8 +1174,10 @@ PARAMETERS:
 
 * **value** (`string`)
 
-TODO docs
-TODO tighter constraint
+The min time interval setting defines a lower limit for the $__interval and $__interval_ms variables.
+This value must be formatted as a number followed by a valid time
+identifier like: "40s", "3d", etc.
+See: https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/#query-options
 #### fn queryOptions.withMaxDataPoints
 
 ```jsonnet
@@ -584,7 +1188,7 @@ PARAMETERS:
 
 * **value** (`number`)
 
-TODO docs
+The maximum number of data points that the panel queries are retrieving.
 #### fn queryOptions.withTargets
 
 ```jsonnet
@@ -595,7 +1199,7 @@ PARAMETERS:
 
 * **value** (`array`)
 
-TODO docs
+Depends on the panel plugin. See the plugin documentation for details.
 #### fn queryOptions.withTargetsMixin
 
 ```jsonnet
@@ -606,7 +1210,7 @@ PARAMETERS:
 
 * **value** (`array`)
 
-TODO docs
+Depends on the panel plugin. See the plugin documentation for details.
 #### fn queryOptions.withTimeFrom
 
 ```jsonnet
@@ -617,8 +1221,14 @@ PARAMETERS:
 
 * **value** (`string`)
 
-TODO docs
-TODO tighter constraint
+Overrides the relative time range for individual panels,
+which causes them to be different than what is selected in
+the dashboard time picker in the top-right corner of the dashboard. You can use this to show metrics from different
+time periods or days on the same dashboard.
+The value is formatted as time operation like: `now-5m` (Last 5 minutes), `now/d` (the day so far),
+`now-5d/d`(Last 5 days), `now/w` (This week so far), `now-2y/y` (Last 2 years).
+Note: Panel time overrides have no effect when the dashboard’s time range is absolute.
+See: https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/#query-options
 #### fn queryOptions.withTimeShift
 
 ```jsonnet
@@ -629,8 +1239,10 @@ PARAMETERS:
 
 * **value** (`string`)
 
-TODO docs
-TODO tighter constraint
+Overrides the time range for individual panels by shifting its start and end relative to the time picker.
+For example, you can shift the time range for the panel to be two hours earlier than the dashboard time picker setting `2h`.
+Note: Panel time overrides have no effect when the dashboard’s time range is absolute.
+See: https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/#query-options
 #### fn queryOptions.withTransformations
 
 ```jsonnet
@@ -641,7 +1253,9 @@ PARAMETERS:
 
 * **value** (`array`)
 
-
+List of transformations that are applied to the panel data before rendering.
+When there are multiple transformations, Grafana applies them in the order they are listed.
+Each transformation creates a result set that then passes on to the next transformation in the processing pipeline.
 #### fn queryOptions.withTransformationsMixin
 
 ```jsonnet
@@ -652,7 +1266,9 @@ PARAMETERS:
 
 * **value** (`array`)
 
-
+List of transformations that are applied to the panel data before rendering.
+When there are multiple transformations, Grafana applies them in the order they are listed.
+Each transformation creates a result set that then passes on to the next transformation in the processing pipeline.
 ### obj standardOptions
 
 
@@ -666,7 +1282,10 @@ PARAMETERS:
 
 * **value** (`number`)
 
-Significant digits (for display)
+Specify the number of decimals Grafana includes in the rendered value.
+If you leave this field blank, Grafana automatically truncates the number of decimals based on the value.
+For example 1.1234 will display as 1.12 and 100.456 will display as 100.
+To display all decimals, set the unit to `String`.
 #### fn standardOptions.withDisplayName
 
 ```jsonnet
@@ -744,7 +1363,7 @@ PARAMETERS:
 
 * **value** (`number`)
 
-
+The maximum value used in percentage threshold calculations. Leave blank for auto calculation based on all series and fields.
 #### fn standardOptions.withMin
 
 ```jsonnet
@@ -755,7 +1374,7 @@ PARAMETERS:
 
 * **value** (`number`)
 
-
+The minimum value used in percentage threshold calculations. Leave blank for auto calculation based on all series and fields.
 #### fn standardOptions.withNoValue
 
 ```jsonnet
@@ -777,7 +1396,7 @@ PARAMETERS:
 
 * **value** (`array`)
 
-
+Overrides are the options applied to specific fields overriding the defaults.
 #### fn standardOptions.withOverridesMixin
 
 ```jsonnet
@@ -788,7 +1407,7 @@ PARAMETERS:
 
 * **value** (`array`)
 
-
+Overrides are the options applied to specific fields overriding the defaults.
 #### fn standardOptions.withPath
 
 ```jsonnet
@@ -814,7 +1433,16 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Numeric Options
+Unit a field should use. The unit you select is applied to all fields except time.
+You can use the units ID availables in Grafana or a custom unit.
+Available units in Grafana: https://github.com/grafana/grafana/blob/main/packages/grafana-data/src/valueFormats/categories.ts
+As custom unit, you can use the following formats:
+`suffix:<suffix>` for custom unit that should go after value.
+`prefix:<prefix>` for custom unit that should go before value.
+`time:<format>` For custom date time formats type for example `time:YYYY-MM-DD`.
+`si:<base scale><unit characters>` for custom SI units. For example: `si: mF`. This one is a bit more advanced as you can specify both a unit and the source data scale. So if your source data is represented as milli (thousands of) something prefix the unit with that SI scale character.
+`count:<unit>` for a custom count unit.
+`currency:<unit>` for custom a currency unit.
 #### obj standardOptions.color
 
 
@@ -828,7 +1456,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Stores the fixed color value if mode is fixed
+The fixed color value for fixed or shades color modes.
 ##### fn standardOptions.color.withMode
 
 ```jsonnet
@@ -838,8 +1466,26 @@ standardOptions.color.withMode(value)
 PARAMETERS:
 
 * **value** (`string`)
+   - valid values: `"thresholds"`, `"palette-classic"`, `"palette-classic-by-name"`, `"continuous-GrYlRd"`, `"continuous-RdYlGr"`, `"continuous-BlYlRd"`, `"continuous-YlRd"`, `"continuous-BlPu"`, `"continuous-YlBl"`, `"continuous-blues"`, `"continuous-reds"`, `"continuous-greens"`, `"continuous-purples"`, `"fixed"`, `"shades"`
 
-The main color scheme mode
+Color mode for a field. You can specify a single color, or select a continuous (gradient) color schemes, based on a value.
+Continuous color interpolates a color using the percentage of a value relative to min and max.
+Accepted values are:
+`thresholds`: From thresholds. Informs Grafana to take the color from the matching threshold
+`palette-classic`: Classic palette. Grafana will assign color by looking up a color in a palette by series index. Useful for Graphs and pie charts and other categorical data visualizations
+`palette-classic-by-name`: Classic palette (by name). Grafana will assign color by looking up a color in a palette by series name. Useful for Graphs and pie charts and other categorical data visualizations
+`continuous-GrYlRd`: ontinuous Green-Yellow-Red palette mode
+`continuous-RdYlGr`: Continuous Red-Yellow-Green palette mode
+`continuous-BlYlRd`: Continuous Blue-Yellow-Red palette mode
+`continuous-YlRd`: Continuous Yellow-Red palette mode
+`continuous-BlPu`: Continuous Blue-Purple palette mode
+`continuous-YlBl`: Continuous Yellow-Blue palette mode
+`continuous-blues`: Continuous Blue palette mode
+`continuous-reds`: Continuous Red palette mode
+`continuous-greens`: Continuous Green palette mode
+`continuous-purples`: Continuous Purple palette mode
+`shades`: Shades of a single color. Specify a single color, useful in an override rule.
+`fixed`: Fixed color mode. Specify a single color, useful in an override rule.
 ##### fn standardOptions.color.withSeriesBy
 
 ```jsonnet
@@ -851,7 +1497,7 @@ PARAMETERS:
 * **value** (`string`)
    - valid values: `"min"`, `"max"`, `"last"`
 
-TODO docs
+Defines how to assign a series color from "by value" color schemes. For example for an aggregated data points like a timeseries, the color can be assigned by the min, max or last value.
 #### obj standardOptions.thresholds
 
 
@@ -866,7 +1512,7 @@ PARAMETERS:
 * **value** (`string`)
    - valid values: `"absolute"`, `"percentage"`
 
-
+Thresholds can either be `absolute` (specific number) or `percentage` (relative to min or max, it will be values between 0 and 1).
 ##### fn standardOptions.thresholds.withSteps
 
 ```jsonnet

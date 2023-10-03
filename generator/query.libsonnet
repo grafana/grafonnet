@@ -129,6 +129,11 @@ local utils = import './utils.libsonnet';
         '$ref': '#/components/schemas/TempoQuery',
       },
     },
+    [utils.formatPanelName('GoogleCloudMonitoringDataQuery')]: {
+      [utils.formatPanelName('GoogleCloudMonitoringDataQuery')]: {
+        '$ref': '#/components/schemas/CloudMonitoringQuery',
+      },
+    },
     [utils.formatPanelName('TestDataDataQuery')]: {
       [utils.formatPanelName('TestDataDataQuery')]+: {
         properties+: {

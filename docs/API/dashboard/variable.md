@@ -195,7 +195,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Description of variable. It can be defined but `null`.
 ##### fn adhoc.generalOptions.withLabel
 
 ```jsonnet
@@ -206,7 +206,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Optional display name
 ##### fn adhoc.generalOptions.withName
 
 ```jsonnet
@@ -217,7 +217,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Name of variable
 ##### obj adhoc.generalOptions.showOnDashboard
 
 
@@ -287,7 +287,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Description of variable. It can be defined but `null`.
 ##### fn constant.generalOptions.withLabel
 
 ```jsonnet
@@ -298,7 +298,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Optional display name
 ##### fn constant.generalOptions.withName
 
 ```jsonnet
@@ -309,7 +309,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Name of variable
 ##### obj constant.generalOptions.showOnDashboard
 
 
@@ -391,7 +391,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Description of variable. It can be defined but `null`.
 ##### fn custom.generalOptions.withLabel
 
 ```jsonnet
@@ -402,7 +402,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Optional display name
 ##### fn custom.generalOptions.withName
 
 ```jsonnet
@@ -413,7 +413,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Name of variable
 ##### obj custom.generalOptions.showOnDashboard
 
 
@@ -527,7 +527,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Description of variable. It can be defined but `null`.
 ##### fn datasource.generalOptions.withLabel
 
 ```jsonnet
@@ -538,7 +538,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Optional display name
 ##### fn datasource.generalOptions.withName
 
 ```jsonnet
@@ -549,7 +549,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Name of variable
 ##### obj datasource.generalOptions.showOnDashboard
 
 
@@ -667,7 +667,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Description of variable. It can be defined but `null`.
 ##### fn interval.generalOptions.withLabel
 
 ```jsonnet
@@ -678,7 +678,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Optional display name
 ##### fn interval.generalOptions.withName
 
 ```jsonnet
@@ -689,7 +689,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Name of variable
 ##### obj interval.generalOptions.showOnDashboard
 
 
@@ -832,7 +832,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Description of variable. It can be defined but `null`.
 ##### fn query.generalOptions.withLabel
 
 ```jsonnet
@@ -843,7 +843,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Optional display name
 ##### fn query.generalOptions.withName
 
 ```jsonnet
@@ -854,7 +854,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Name of variable
 ##### obj query.generalOptions.showOnDashboard
 
 
@@ -991,7 +991,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Description of variable. It can be defined but `null`.
 ##### fn textbox.generalOptions.withLabel
 
 ```jsonnet
@@ -1002,7 +1002,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Optional display name
 ##### fn textbox.generalOptions.withName
 
 ```jsonnet
@@ -1013,7 +1013,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Name of variable
 ##### obj textbox.generalOptions.showOnDashboard
 
 

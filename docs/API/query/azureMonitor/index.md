@@ -32,6 +32,7 @@ grafonnet.query.azureMonitor
 * [`fn withSubscriptions(value)`](#fn-withsubscriptions)
 * [`fn withSubscriptionsMixin(value)`](#fn-withsubscriptionsmixin)
 * [`obj azureLogAnalytics`](#obj-azureloganalytics)
+  * [`fn withIntersectTime(value=true)`](#fn-azureloganalyticswithintersecttime)
   * [`fn withQuery(value)`](#fn-azureloganalyticswithquery)
   * [`fn withResource(value)`](#fn-azureloganalyticswithresource)
   * [`fn withResources(value)`](#fn-azureloganalyticswithresources)
@@ -389,6 +390,18 @@ Subscriptions to be queried via Azure Resource Graph.
 ### obj azureLogAnalytics
 
 
+#### fn azureLogAnalytics.withIntersectTime
+
+```jsonnet
+azureLogAnalytics.withIntersectTime(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+If set to true the intersection of time ranges specified in the query and Grafana will be used. Otherwise the query time ranges will be used. Defaults to false
 #### fn azureLogAnalytics.withQuery
 
 ```jsonnet

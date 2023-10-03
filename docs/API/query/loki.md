@@ -16,6 +16,7 @@ grafonnet.query.loki
 * [`fn withRange(value=true)`](#fn-withrange)
 * [`fn withRefId(value)`](#fn-withrefid)
 * [`fn withResolution(value)`](#fn-withresolution)
+* [`fn withStep(value)`](#fn-withstep)
 
 ## Fields
 
@@ -160,4 +161,15 @@ PARAMETERS:
 
 * **value** (`integer`)
 
-Used to scale the interval value.
+@deprecated, now use step.
+### fn withStep
+
+```jsonnet
+withStep(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Used to set step value for range queries.

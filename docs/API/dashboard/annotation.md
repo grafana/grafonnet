@@ -41,7 +41,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-TODO: Should be DataSourceRef
+Ref to a DataSource instance
 ### fn withDatasourceMixin
 
 ```jsonnet
@@ -52,7 +52,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-TODO: Should be DataSourceRef
+Ref to a DataSource instance
 ### fn withEnable
 
 ```jsonnet
@@ -170,7 +170,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+The plugin type-id
 #### fn datasource.withUid
 
 ```jsonnet
@@ -181,7 +181,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Specific datasource instance
 ### obj filter
 
 

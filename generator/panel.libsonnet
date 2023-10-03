@@ -44,6 +44,7 @@ local utils = import './utils.libsonnet';
     local customSubSchema =
       subSchema
       + self.setPanelTypeConstant(title)
+      + self.hidePanelOptionsAndFieldConfig()
       + self.moveOptions(subSchema)
       + self.moveFieldConfig(subSchema);
 
@@ -67,6 +68,7 @@ local utils = import './utils.libsonnet';
     local customSubSchema =
       subSchema
       + self.setPanelTypeConstant(title)
+      + self.hidePanelOptionsAndFieldConfig()
       + self.moveOptions(subSchema)
       + self.moveFieldConfig(subSchema);
 
@@ -89,7 +91,7 @@ local utils = import './utils.libsonnet';
     };
     local copy =
       []
-      + (if self.hasFieldConfig(subSchema)
+      + (if self.hasPanelFieldConfig(subSchema)
          //then [{ from: 'fieldConfig.defaults.custom', to: 'optionsCustom' }]
          then [{ from: 'fieldConfig.defaults.custom', to: 'fieldConfig.defaults.custom' }]
          else [])
@@ -129,8 +131,6 @@ local utils = import './utils.libsonnet';
   setPanelTypeConstant(title): {
     type: 'object',
     properties+: {
-      PanelOptions:: {},
-      PanelFieldConfig:: {},
       type: {
         const:
           std.get(
@@ -139,6 +139,16 @@ local utils = import './utils.libsonnet';
             std.asciiLower(title),
           ),
       },
+    },
+  },
+
+  hidePanelOptionsAndFieldConfig(): {
+    type: 'object',
+    properties+: {
+      PanelOptions:: {},
+      Options:: {},
+      PanelFieldConfig:: {},
+      FieldConfig:: {},
     },
   },
 
@@ -154,27 +164,42 @@ local utils = import './utils.libsonnet';
     ),
 
   hasPanelOptions(schema):
-    self.hasProperty('PanelOptions', schema),
+    self.hasProperty('PanelOptions', schema)
+    || self.hasProperty('Options', schema),
 
-  hasFieldConfig(schema):
-    self.hasProperty('PanelFieldConfig', schema),
+  getPanelOptions(schema):
+    std.get(
+      schema.properties,
+      'PanelOptions',
+      std.get(schema.properties, 'Options', {})
+    ),
+
+  hasPanelFieldConfig(schema):
+    self.hasProperty('PanelFieldConfig', schema)
+    || self.hasProperty('FieldConfig', schema),
+
+  getPanelFieldConfig(schema):
+    std.get(
+      schema.properties,
+      'PanelFieldConfig',
+      std.get(schema.properties, 'FieldConfig', {})
+    ),
 
   moveOptions(schema): {
     [if self.hasPanelOptions(schema) then 'properties']+: {
-      options+:
-        schema.properties.PanelOptions,
+      options+: root.getPanelOptions(schema),
     },
   },
 
   moveFieldConfig(schema): {
-    [if self.hasFieldConfig(schema) then 'properties']+: {
+    [if self.hasPanelFieldConfig(schema) then 'properties']+: {
       fieldConfig+: {
         type: 'object',
         properties+: {
           defaults+: {
             type: 'object',
             properties+: {
-              custom: schema.properties.PanelFieldConfig,
+              custom: root.getPanelFieldConfig(schema),
             },
           },
         },

@@ -194,7 +194,7 @@ PARAMETERS:
    - default value: `true`
 
 When set to true, the dashboard will redraw panels at an interval matching the pixel width.
-This will keep data "moving left" regardless of the query refresh rate.  This setting helps
+This will keep data "moving left" regardless of the query refresh rate. This setting helps
 avoid dashboards presenting stale live data
 ### fn withPanels
 
@@ -253,7 +253,6 @@ PARAMETERS:
 
 Version of the JSON schema, incremented each time a Grafana update brings
 changes to said schema.
-TODO this is the existing schema numbering system. It will be replaced by Thema's themaVersion
 ### fn withStyle
 
 ```jsonnet
@@ -267,6 +266,7 @@ PARAMETERS:
    - valid values: `"dark"`, `"light"`
 
 Theme of dashboard.
+Default value: dark.
 ### fn withTags
 
 ```jsonnet
@@ -299,7 +299,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-TODO docs
+Configured template variables
 ### fn withTemplatingMixin
 
 ```jsonnet
@@ -310,7 +310,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-TODO docs
+Configured template variables
 ### fn withTimezone
 
 ```jsonnet
@@ -322,7 +322,7 @@ PARAMETERS:
 * **value** (`string`)
    - default value: `"browser"`
 
-Timezone of dashboard. Accepts IANA TZDB zone ID or "browser" or "utc".
+Timezone of dashboard. Accepted values are IANA TZDB zone ID or "browser" or "utc".
 ### fn withTitle
 
 ```jsonnet
@@ -381,7 +381,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-TODO docs
+Day when the week starts. Expressed by the name of the day in lowercase, e.g. "monday".
 ### obj graphTooltip
 
 
@@ -442,7 +442,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-Whether timepicker is collapsed or not.
+Whether timepicker is collapsed or not. Has no effect on provisioned dashboard.
 #### fn timepicker.withEnable
 
 ```jsonnet
@@ -454,7 +454,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-Whether timepicker is enabled or not.
+Whether timepicker is enabled or not. Has no effect on provisioned dashboard.
 #### fn timepicker.withHidden
 
 ```jsonnet
@@ -478,7 +478,7 @@ PARAMETERS:
 * **value** (`array`)
    - default value: `["5s","10s","30s","1m","5m","15m","30m","1h","2h","1d"]`
 
-Selectable intervals for auto-refresh.
+Interval options available in the refresh picker dropdown.
 #### fn timepicker.withRefreshIntervalsMixin
 
 ```jsonnet
@@ -490,7 +490,7 @@ PARAMETERS:
 * **value** (`array`)
    - default value: `["5s","10s","30s","1m","5m","15m","30m","1h","2h","1d"]`
 
-Selectable intervals for auto-refresh.
+Interval options available in the refresh picker dropdown.
 #### fn timepicker.withTimeOptions
 
 ```jsonnet
@@ -502,7 +502,7 @@ PARAMETERS:
 * **value** (`array`)
    - default value: `["5m","15m","1h","6h","12h","24h","2d","7d","30d"]`
 
-TODO docs
+Selectable options available in the time picker dropdown. Has no effect on provisioned dashboard.
 #### fn timepicker.withTimeOptionsMixin
 
 ```jsonnet
@@ -514,4 +514,4 @@ PARAMETERS:
 * **value** (`array`)
    - default value: `["5m","15m","1h","6h","12h","24h","2d","7d","30d"]`
 
-TODO docs
+Selectable options available in the time picker dropdown. Has no effect on provisioned dashboard.

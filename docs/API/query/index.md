@@ -7,6 +7,7 @@ grafonnet.query
 * [azureMonitor](azureMonitor/index.md)
 * [cloudWatch](cloudWatch/index.md)
 * [elasticsearch](elasticsearch/index.md)
+* [googleCloudMonitoring](googleCloudMonitoring.md)
 * [grafanaPyroscope](grafanaPyroscope.md)
 * [loki](loki.md)
 * [parca](parca.md)

@@ -37,7 +37,6 @@
   * [`fn withType(value)`](#fn-specialvaluemapwithtype)
   * [`obj options`](#obj-specialvaluemapoptions)
     * [`fn withMatch(value)`](#fn-specialvaluemapoptionswithmatch)
-    * [`fn withPattern(value)`](#fn-specialvaluemapoptionswithpattern)
     * [`fn withResult(value)`](#fn-specialvaluemapoptionswithresult)
     * [`fn withResultMixin(value)`](#fn-specialvaluemapoptionswithresultmixin)
     * [`obj result`](#obj-specialvaluemapoptionsresult)
@@ -65,7 +64,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-
+Range to match against and the result to apply when the value is within the range
 #### fn RangeMap.withOptionsMixin
 
 ```jsonnet
@@ -76,7 +75,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-
+Range to match against and the result to apply when the value is within the range
 #### fn RangeMap.withType
 
 ```jsonnet
@@ -99,9 +98,9 @@ RangeMap.options.withFrom(value)
 
 PARAMETERS:
 
-* **value** (`number`)
+* **value** (`["number", "null"]`)
 
-to and from are `number | null` in current ts, really not sure what to do
+Min value of the range. It can be null which means -Infinity
 ##### fn RangeMap.options.withResult
 
 ```jsonnet
@@ -112,7 +111,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-TODO docs
+Result used as replacement with text and color when the value matches
 ##### fn RangeMap.options.withResultMixin
 
 ```jsonnet
@@ -123,7 +122,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-TODO docs
+Result used as replacement with text and color when the value matches
 ##### fn RangeMap.options.withTo
 
 ```jsonnet
@@ -132,9 +131,9 @@ RangeMap.options.withTo(value)
 
 PARAMETERS:
 
-* **value** (`number`)
+* **value** (`["number", "null"]`)
 
-
+Max value of the range. It can be null which means +Infinity
 ##### obj RangeMap.options.result
 
 
@@ -148,7 +147,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Text to use when the value matches
 ###### fn RangeMap.options.result.withIcon
 
 ```jsonnet
@@ -159,7 +158,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Icon to display when the value matches. Only specific visualizations.
 ###### fn RangeMap.options.result.withIndex
 
 ```jsonnet
@@ -170,7 +169,7 @@ PARAMETERS:
 
 * **value** (`integer`)
 
-
+Position in the mapping array. Only used internally.
 ###### fn RangeMap.options.result.withText
 
 ```jsonnet
@@ -181,7 +180,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Text to display when the value matches
 ### obj RegexMap
 
 
@@ -195,7 +194,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-
+Regular expression to match against and the result to apply when the value matches the regex
 #### fn RegexMap.withOptionsMixin
 
 ```jsonnet
@@ -206,7 +205,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-
+Regular expression to match against and the result to apply when the value matches the regex
 #### fn RegexMap.withType
 
 ```jsonnet
@@ -231,7 +230,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Regular expression to match against
 ##### fn RegexMap.options.withResult
 
 ```jsonnet
@@ -242,7 +241,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-TODO docs
+Result used as replacement with text and color when the value matches
 ##### fn RegexMap.options.withResultMixin
 
 ```jsonnet
@@ -253,7 +252,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-TODO docs
+Result used as replacement with text and color when the value matches
 ##### obj RegexMap.options.result
 
 
@@ -267,7 +266,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Text to use when the value matches
 ###### fn RegexMap.options.result.withIcon
 
 ```jsonnet
@@ -278,7 +277,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Icon to display when the value matches. Only specific visualizations.
 ###### fn RegexMap.options.result.withIndex
 
 ```jsonnet
@@ -289,7 +288,7 @@ PARAMETERS:
 
 * **value** (`integer`)
 
-
+Position in the mapping array. Only used internally.
 ###### fn RegexMap.options.result.withText
 
 ```jsonnet
@@ -300,7 +299,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Text to display when the value matches
 ### obj SpecialValueMap
 
 
@@ -349,20 +348,9 @@ SpecialValueMap.options.withMatch(value)
 PARAMETERS:
 
 * **value** (`string`)
-   - valid values: `"true"`, `"false"`
+   - valid values: `"true"`, `"false"`, `"null"`, `"nan"`, `"null+nan"`, `"empty"`
 
-
-##### fn SpecialValueMap.options.withPattern
-
-```jsonnet
-SpecialValueMap.options.withPattern(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-
+Special value types supported by the `SpecialValueMap`
 ##### fn SpecialValueMap.options.withResult
 
 ```jsonnet
@@ -373,7 +361,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-TODO docs
+Result used as replacement with text and color when the value matches
 ##### fn SpecialValueMap.options.withResultMixin
 
 ```jsonnet
@@ -384,7 +372,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-TODO docs
+Result used as replacement with text and color when the value matches
 ##### obj SpecialValueMap.options.result
 
 
@@ -398,7 +386,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Text to use when the value matches
 ###### fn SpecialValueMap.options.result.withIcon
 
 ```jsonnet
@@ -409,7 +397,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Icon to display when the value matches. Only specific visualizations.
 ###### fn SpecialValueMap.options.result.withIndex
 
 ```jsonnet
@@ -420,7 +408,7 @@ PARAMETERS:
 
 * **value** (`integer`)
 
-
+Position in the mapping array. Only used internally.
 ###### fn SpecialValueMap.options.result.withText
 
 ```jsonnet
@@ -431,7 +419,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Text to display when the value matches
 ### obj ValueMap
 
 
@@ -445,7 +433,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-
+Map with <value_to_match>: ValueMappingResult. For example: { "10": { text: "Perfection!", color: "green" } }
 #### fn ValueMap.withOptionsMixin
 
 ```jsonnet
@@ -456,7 +444,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-
+Map with <value_to_match>: ValueMappingResult. For example: { "10": { text: "Perfection!", color: "green" } }
 #### fn ValueMap.withType
 
 ```jsonnet

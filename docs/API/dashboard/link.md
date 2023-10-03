@@ -68,7 +68,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+If true, all dashboards links will be displayed in a dropdown. If false, all dashboards links will be displayed side by side. Only valid if the type is dashboards
 ##### fn dashboards.options.withIncludeVars
 
 ```jsonnet
@@ -80,7 +80,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+If true, includes current template variables values in the link as query params
 ##### fn dashboards.options.withKeepTime
 
 ```jsonnet
@@ -92,7 +92,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+If true, includes current time range in the link as query params
 ##### fn dashboards.options.withTargetBlank
 
 ```jsonnet
@@ -104,7 +104,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+If true, the link will be opened in a new tab
 ### obj link
 
 
@@ -131,7 +131,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Icon name to be displayed with the link
 #### fn link.withTooltip
 
 ```jsonnet
@@ -142,7 +142,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Tooltip to display when the user hovers their mouse over it
 #### obj link.options
 
 
@@ -157,7 +157,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+If true, all dashboards links will be displayed in a dropdown. If false, all dashboards links will be displayed side by side. Only valid if the type is dashboards
 ##### fn link.options.withIncludeVars
 
 ```jsonnet
@@ -169,7 +169,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+If true, includes current template variables values in the link as query params
 ##### fn link.options.withKeepTime
 
 ```jsonnet
@@ -181,7 +181,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+If true, includes current time range in the link as query params
 ##### fn link.options.withTargetBlank
 
 ```jsonnet
@@ -193,3 +193,4 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
+If true, the link will be opened in a new tab

@@ -5,8 +5,6 @@
 ## Index
 
 * [`fn withColor(value)`](#fn-withcolor)
-* [`fn withIndex(value)`](#fn-withindex)
-* [`fn withState(value)`](#fn-withstate)
 * [`fn withValue(value)`](#fn-withvalue)
 
 ## Fields
@@ -21,31 +19,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-TODO docs
-### fn withIndex
-
-```jsonnet
-withIndex(value)
-```
-
-PARAMETERS:
-
-* **value** (`integer`)
-
-Threshold index, an old property that is not needed an should only appear in older dashboards
-### fn withState
-
-```jsonnet
-withState(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-TODO docs
-TODO are the values here enumerable into a disjunction?
-Some seem to be listed in typescript comment
+Color represents the color of the visual change that will occur in the dashboard when the threshold value is met or exceeded.
 ### fn withValue
 
 ```jsonnet
@@ -54,7 +28,7 @@ withValue(value)
 
 PARAMETERS:
 
-* **value** (`number`)
+* **value** (`["number", "null"]`)
 
-TODO docs
-FIXME the corresponding typescript field is required/non-optional, but nulls currently appear here when serializing -Infinity to JSON
+Value represents a specified metric for the threshold, which triggers a visual change in the dashboard when this value is met or exceeded.
+Nulls currently appear here when serializing -Infinity to JSON.

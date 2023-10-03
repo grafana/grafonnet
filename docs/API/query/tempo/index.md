@@ -20,6 +20,7 @@ grafonnet.query.tempo
 * [`fn withQueryType(value)`](#fn-withquerytype)
 * [`fn withRefId(value)`](#fn-withrefid)
 * [`fn withSearch(value)`](#fn-withsearch)
+* [`fn withServiceMapIncludeNamespace(value=true)`](#fn-withservicemapincludenamespace)
 * [`fn withServiceMapQuery(value)`](#fn-withservicemapquery)
 * [`fn withServiceName(value)`](#fn-withservicename)
 * [`fn withSpanName(value)`](#fn-withspanname)
@@ -107,7 +108,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Define the maximum duration to select traces. Use duration format, for example: 1.2s, 100ms
+@deprecated Define the maximum duration to select traces. Use duration format, for example: 1.2s, 100ms
 ### fn withMinDuration
 
 ```jsonnet
@@ -118,7 +119,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Define the minimum duration to select traces. Use duration format, for example: 1.2s, 100ms
+@deprecated Define the minimum duration to select traces. Use duration format, for example: 1.2s, 100ms
 ### fn withQuery
 
 ```jsonnet
@@ -165,7 +166,19 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Logfmt query to filter traces by their tags. Example: http.status_code=200 error=true
+@deprecated Logfmt query to filter traces by their tags. Example: http.status_code=200 error=true
+### fn withServiceMapIncludeNamespace
+
+```jsonnet
+withServiceMapIncludeNamespace(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+Use service.namespace in addition to service.name to uniquely identify a service.
 ### fn withServiceMapQuery
 
 ```jsonnet
@@ -187,7 +200,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Query traces by service name
+@deprecated Query traces by service name
 ### fn withSpanName
 
 ```jsonnet
@@ -198,4 +211,4 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Query traces by span name
+@deprecated Query traces by span name

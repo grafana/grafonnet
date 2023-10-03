@@ -391,7 +391,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Library panel name
 #### fn libraryPanel.withUid
 
 ```jsonnet
@@ -402,7 +402,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Library panel uid
 ### obj options
 
 
@@ -645,7 +645,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Description.
+Panel description.
 #### fn panelOptions.withGridPos
 
 ```jsonnet
@@ -678,7 +678,6 @@ PARAMETERS:
 * **value** (`array`)
 
 Panel links.
-TODO fill this out - seems there are a couple variants?
 #### fn panelOptions.withLinksMixin
 
 ```jsonnet
@@ -690,7 +689,6 @@ PARAMETERS:
 * **value** (`array`)
 
 Panel links.
-TODO fill this out - seems there are a couple variants?
 #### fn panelOptions.withRepeat
 
 ```jsonnet
@@ -715,8 +713,7 @@ PARAMETERS:
    - valid values: `"h"`, `"v"`
 
 Direction to repeat in if 'repeat' is set.
-"h" for horizontal, "v" for vertical.
-TODO this is probably optional
+`h` for horizontal, `v` for vertical.
 #### fn panelOptions.withTitle
 
 ```jsonnet
@@ -768,7 +765,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-The datasource used in all targets.
+Ref to a DataSource instance
 #### fn queryOptions.withInterval
 
 ```jsonnet
@@ -779,8 +776,10 @@ PARAMETERS:
 
 * **value** (`string`)
 
-TODO docs
-TODO tighter constraint
+The min time interval setting defines a lower limit for the $__interval and $__interval_ms variables.
+This value must be formatted as a number followed by a valid time
+identifier like: "40s", "3d", etc.
+See: https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/#query-options
 #### fn queryOptions.withMaxDataPoints
 
 ```jsonnet
@@ -791,7 +790,7 @@ PARAMETERS:
 
 * **value** (`number`)
 
-TODO docs
+The maximum number of data points that the panel queries are retrieving.
 #### fn queryOptions.withTargets
 
 ```jsonnet
@@ -802,7 +801,7 @@ PARAMETERS:
 
 * **value** (`array`)
 
-TODO docs
+Depends on the panel plugin. See the plugin documentation for details.
 #### fn queryOptions.withTargetsMixin
 
 ```jsonnet
@@ -813,7 +812,7 @@ PARAMETERS:
 
 * **value** (`array`)
 
-TODO docs
+Depends on the panel plugin. See the plugin documentation for details.
 #### fn queryOptions.withTimeFrom
 
 ```jsonnet
@@ -824,8 +823,14 @@ PARAMETERS:
 
 * **value** (`string`)
 
-TODO docs
-TODO tighter constraint
+Overrides the relative time range for individual panels,
+which causes them to be different than what is selected in
+the dashboard time picker in the top-right corner of the dashboard. You can use this to show metrics from different
+time periods or days on the same dashboard.
+The value is formatted as time operation like: `now-5m` (Last 5 minutes), `now/d` (the day so far),
+`now-5d/d`(Last 5 days), `now/w` (This week so far), `now-2y/y` (Last 2 years).
+Note: Panel time overrides have no effect when the dashboard’s time range is absolute.
+See: https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/#query-options
 #### fn queryOptions.withTimeShift
 
 ```jsonnet
@@ -836,8 +841,10 @@ PARAMETERS:
 
 * **value** (`string`)
 
-TODO docs
-TODO tighter constraint
+Overrides the time range for individual panels by shifting its start and end relative to the time picker.
+For example, you can shift the time range for the panel to be two hours earlier than the dashboard time picker setting `2h`.
+Note: Panel time overrides have no effect when the dashboard’s time range is absolute.
+See: https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/#query-options
 #### fn queryOptions.withTransformations
 
 ```jsonnet
@@ -848,7 +855,9 @@ PARAMETERS:
 
 * **value** (`array`)
 
-
+List of transformations that are applied to the panel data before rendering.
+When there are multiple transformations, Grafana applies them in the order they are listed.
+Each transformation creates a result set that then passes on to the next transformation in the processing pipeline.
 #### fn queryOptions.withTransformationsMixin
 
 ```jsonnet
@@ -859,7 +868,9 @@ PARAMETERS:
 
 * **value** (`array`)
 
-
+List of transformations that are applied to the panel data before rendering.
+When there are multiple transformations, Grafana applies them in the order they are listed.
+Each transformation creates a result set that then passes on to the next transformation in the processing pipeline.
 ### obj standardOptions
 
 
@@ -873,7 +884,10 @@ PARAMETERS:
 
 * **value** (`number`)
 
-Significant digits (for display)
+Specify the number of decimals Grafana includes in the rendered value.
+If you leave this field blank, Grafana automatically truncates the number of decimals based on the value.
+For example 1.1234 will display as 1.12 and 100.456 will display as 100.
+To display all decimals, set the unit to `String`.
 #### fn standardOptions.withDisplayName
 
 ```jsonnet
@@ -951,7 +965,7 @@ PARAMETERS:
 
 * **value** (`number`)
 
-
+The maximum value used in percentage threshold calculations. Leave blank for auto calculation based on all series and fields.
 #### fn standardOptions.withMin
 
 ```jsonnet
@@ -962,7 +976,7 @@ PARAMETERS:
 
 * **value** (`number`)
 
-
+The minimum value used in percentage threshold calculations. Leave blank for auto calculation based on all series and fields.
 #### fn standardOptions.withNoValue
 
 ```jsonnet
@@ -984,7 +998,7 @@ PARAMETERS:
 
 * **value** (`array`)
 
-
+Overrides are the options applied to specific fields overriding the defaults.
 #### fn standardOptions.withOverridesMixin
 
 ```jsonnet
@@ -995,7 +1009,7 @@ PARAMETERS:
 
 * **value** (`array`)
 
-
+Overrides are the options applied to specific fields overriding the defaults.
 #### fn standardOptions.withPath
 
 ```jsonnet
@@ -1021,7 +1035,16 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Numeric Options
+Unit a field should use. The unit you select is applied to all fields except time.
+You can use the units ID availables in Grafana or a custom unit.
+Available units in Grafana: https://github.com/grafana/grafana/blob/main/packages/grafana-data/src/valueFormats/categories.ts
+As custom unit, you can use the following formats:
+`suffix:<suffix>` for custom unit that should go after value.
+`prefix:<prefix>` for custom unit that should go before value.
+`time:<format>` For custom date time formats type for example `time:YYYY-MM-DD`.
+`si:<base scale><unit characters>` for custom SI units. For example: `si: mF`. This one is a bit more advanced as you can specify both a unit and the source data scale. So if your source data is represented as milli (thousands of) something prefix the unit with that SI scale character.
+`count:<unit>` for a custom count unit.
+`currency:<unit>` for custom a currency unit.
 #### obj standardOptions.color
 
 
@@ -1035,7 +1058,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Stores the fixed color value if mode is fixed
+The fixed color value for fixed or shades color modes.
 ##### fn standardOptions.color.withMode
 
 ```jsonnet
@@ -1045,8 +1068,26 @@ standardOptions.color.withMode(value)
 PARAMETERS:
 
 * **value** (`string`)
+   - valid values: `"thresholds"`, `"palette-classic"`, `"palette-classic-by-name"`, `"continuous-GrYlRd"`, `"continuous-RdYlGr"`, `"continuous-BlYlRd"`, `"continuous-YlRd"`, `"continuous-BlPu"`, `"continuous-YlBl"`, `"continuous-blues"`, `"continuous-reds"`, `"continuous-greens"`, `"continuous-purples"`, `"fixed"`, `"shades"`
 
-The main color scheme mode
+Color mode for a field. You can specify a single color, or select a continuous (gradient) color schemes, based on a value.
+Continuous color interpolates a color using the percentage of a value relative to min and max.
+Accepted values are:
+`thresholds`: From thresholds. Informs Grafana to take the color from the matching threshold
+`palette-classic`: Classic palette. Grafana will assign color by looking up a color in a palette by series index. Useful for Graphs and pie charts and other categorical data visualizations
+`palette-classic-by-name`: Classic palette (by name). Grafana will assign color by looking up a color in a palette by series name. Useful for Graphs and pie charts and other categorical data visualizations
+`continuous-GrYlRd`: ontinuous Green-Yellow-Red palette mode
+`continuous-RdYlGr`: Continuous Red-Yellow-Green palette mode
+`continuous-BlYlRd`: Continuous Blue-Yellow-Red palette mode
+`continuous-YlRd`: Continuous Yellow-Red palette mode
+`continuous-BlPu`: Continuous Blue-Purple palette mode
+`continuous-YlBl`: Continuous Yellow-Blue palette mode
+`continuous-blues`: Continuous Blue palette mode
+`continuous-reds`: Continuous Red palette mode
+`continuous-greens`: Continuous Green palette mode
+`continuous-purples`: Continuous Purple palette mode
+`shades`: Shades of a single color. Specify a single color, useful in an override rule.
+`fixed`: Fixed color mode. Specify a single color, useful in an override rule.
 ##### fn standardOptions.color.withSeriesBy
 
 ```jsonnet
@@ -1058,7 +1099,7 @@ PARAMETERS:
 * **value** (`string`)
    - valid values: `"min"`, `"max"`, `"last"`
 
-TODO docs
+Defines how to assign a series color from "by value" color schemes. For example for an aggregated data points like a timeseries, the color can be assigned by the min, max or last value.
 #### obj standardOptions.thresholds
 
 
@@ -1073,7 +1114,7 @@ PARAMETERS:
 * **value** (`string`)
    - valid values: `"absolute"`, `"percentage"`
 
-
+Thresholds can either be `absolute` (specific number) or `percentage` (relative to min or max, it will be values between 0 and 1).
 ##### fn standardOptions.thresholds.withSteps
 
 ```jsonnet
