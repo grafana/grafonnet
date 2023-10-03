@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://grafana.github.io/grafonnet/API/folder.html</loc>
+         <lastmod>2023-10-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://grafana.github.io/grafonnet/API/librarypanel.html</loc>
          <lastmod>2023-10-03</lastmod>
          <changefreq>daily</changefreq>
@@ -26,7 +31,12 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://grafana.github.io/grafonnet/API/serviceaccount.html</loc>
+         <loc>https://grafana.github.io/grafonnet/API/role.html</loc>
+         <lastmod>2023-10-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/API/rolebinding.html</loc>
          <lastmod>2023-10-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -37,6 +47,16 @@
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/util.html</loc>
+         <lastmod>2023-10-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/API/accesspolicy/index.html</loc>
+         <lastmod>2023-10-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/API/accesspolicy/rules.html</loc>
          <lastmod>2023-10-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -222,6 +242,16 @@
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/canvas/index.html</loc>
+         <lastmod>2023-10-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/API/panel/canvas/options/root/elements/index.html</loc>
+         <lastmod>2023-10-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/API/panel/canvas/options/root/elements/connections.html</loc>
          <lastmod>2023-10-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
@@ -852,6 +882,11 @@
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/index.html</loc>
+         <lastmod>2023-10-03</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://grafana.github.io/grafonnet/API/query/googleCloudMonitoring.html</loc>
          <lastmod>2023-10-03</lastmod>
          <changefreq>daily</changefreq>
     </url>
