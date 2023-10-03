@@ -151,6 +151,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       if !std.member(allSchemaTitles, title)
     ],
 
+  // ref: https://github.com/grafana/grafana/issues/75610
   addTableFieldConfig(schema):
     if schema.info.title == 'TablePanelCfg'
        && !('FieldConfig' in schema.components.schemas.TablePanelCfg.properties)
