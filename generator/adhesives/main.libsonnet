@@ -1,0 +1,3 @@
+{
+  schemas: import './schemas.libsonnet',
+}

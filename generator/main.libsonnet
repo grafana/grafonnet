@@ -4,17 +4,18 @@ local panel = import './panel.libsonnet';
 local query = import './query.libsonnet';
 local row = import './row.libsonnet';
 
+local adhesives = import './adhesives/main.libsonnet';
 local spec = import './spec.libsonnet';
 local utils = import './utils.libsonnet';
 
 function(version, schemas, openapiSpec)
-  local processedSchemas = utils.processSchemas(version, schemas);
+  local fixedSchemas = adhesives.schemas.process(version, schemas);
   local processedSpec = spec.process(openapiSpec);
   local files =
-    core.render(version, processedSchemas.core)
-    + panel.render(processedSchemas.panel)
-    + query.render(processedSchemas.query)
-    + row.render(processedSchemas.row)
+    core.render(version, fixedSchemas.core)
+    + panel.render(fixedSchemas.panel)
+    + query.render(fixedSchemas.query)
+    + row.render(fixedSchemas.row)
     + alerting.render(processedSpec);
   {
     ['grafonnet-' + version + '/' + file]:
