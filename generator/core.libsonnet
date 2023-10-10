@@ -149,6 +149,11 @@ local utils = import './utils.libsonnet';
           j.importF('custom/util/main.libsonnet'),
           nobreak=true,
         ),
+        j.field.field(
+          j.fieldname.id('alerting'),
+          j.importF('alerting.libsonnet'),
+          nobreak=true,
+        ),
       ]
     ).toString(break='\n'),
 

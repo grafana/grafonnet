@@ -20,6 +20,7 @@ cp -r "${REPO_DIR}/generator" generator
 cp -r "${REPO_DIR}/generator/jsonnetfile.lock.json" .
 jb install
 jb install "github.com/grafana/grok/jsonnet/${VERSION}@main"
+jb install "github.com/grafana/grafana/public@${VERSION}"
 jb install ./generator
 
 OUT_DIR="${REPO_DIR}/gen"
@@ -35,6 +36,7 @@ mapfile -t FILES < <(
         -S -c -m "${OUT_DIR}" \
         --tla-str version="${VERSION}" \
         --tla-code-file schemas="github.com/grafana/grok/jsonnet/${VERSION}/imports.libsonnet" \
+        --tla-code-file openapiSpec="github.com/grafana/grafana/public/openapi3.json" \
         -e "(import 'generator/main.libsonnet')"
     )
 
