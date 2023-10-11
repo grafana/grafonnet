@@ -1,6 +1,7 @@
 // This file is generated, do not manually edit.
 {
   '#': { help: 'grafonnet.panel', name: 'panel' },
+  alertList: import 'clean/panel/alertList.libsonnet',
   alertGroups: import 'clean/panel/alertGroups.libsonnet',
   annotationsList: import 'clean/panel/annotationsList.libsonnet',
   barChart: import 'clean/panel/barChart.libsonnet',
