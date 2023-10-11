@@ -355,10 +355,6 @@
   withTargetsMixin(value): { targets+: (if std.isArray(value)
                                         then value
                                         else [value]) },
-  targets+:
-    {
-      '#': { help: '', name: 'targets' },
-    },
   '#withThresholds': { 'function': { args: [{ default: null, enums: null, name: 'value', type: 'array' }], help: 'TODO docs - seems to be an old field from old dashboard alerts?' } },
   withThresholds(value): { thresholds: (if std.isArray(value)
                                         then value
