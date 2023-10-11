@@ -68,6 +68,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 
     panel:
       root.getMissingPanelSchemas(schemas)
+      + root.getMissingAlertListPanel(schemas)
       + std.filterMap(
         function(schema) std.endsWith(schema.info.title, 'PanelCfg'),
         root.restructure,
@@ -171,6 +172,37 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       },
     }
     else {},
+
+  // ref: https://github.com/grafana/grafonnet/issues/137
+  getMissingAlertListPanel(schemas):
+    local title = 'AlertListPanelCfg';
+    local allSchemaTitles = std.map(function(x) x.info.title, schemas);
+    if !std.member(allSchemaTitles, title)
+    then
+      [
+        root.restructure({
+          info: {
+            title: title,
+          },
+          definitions: (import './custom_schemas/alertList.json').definitions,
+          components: {
+            schemas: {
+              [title]: {
+                type: 'object',
+                properties: {
+                  Options: {
+                    oneOf: [
+                      { '$ref': '#/definitions/AlertListOptions' },
+                      { '$ref': '#/definitions/UnifiedAlertListOptions' },
+                    ],
+                  },
+                },
+              },
+            },
+          },
+        }),
+      ]
+    else [],
 
   restructure(schema):
     local title = schema.info.title;

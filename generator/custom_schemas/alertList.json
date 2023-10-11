@@ -1,0 +1,215 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "AlertListOptions": {
+      "additionalProperties": false,
+      "properties": {
+        "alertName": {
+          "type": "string"
+        },
+        "dashboardAlerts": {
+          "type": "boolean"
+        },
+        "dashboardTitle": {
+          "type": "string"
+        },
+        "folderId": {
+          "type": "number"
+        },
+        "maxItems": {
+          "type": "number"
+        },
+        "showOptions": {
+          "$ref": "#/definitions/ShowOption"
+        },
+        "sortOrder": {
+          "$ref": "#/definitions/SortOrder"
+        },
+        "stateFilter": {
+          "additionalProperties": false,
+          "properties": {
+            "alerting": {
+              "type": "boolean"
+            },
+            "execution_error": {
+              "type": "boolean"
+            },
+            "no_data": {
+              "type": "boolean"
+            },
+            "ok": {
+              "type": "boolean"
+            },
+            "paused": {
+              "type": "boolean"
+            },
+            "pending": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "ok",
+            "paused",
+            "no_data",
+            "execution_error",
+            "alerting",
+            "pending"
+          ],
+          "type": "object"
+        },
+        "tags": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "showOptions",
+        "maxItems",
+        "sortOrder",
+        "dashboardAlerts",
+        "alertName",
+        "dashboardTitle",
+        "tags",
+        "stateFilter",
+        "folderId"
+      ],
+      "type": "object"
+    },
+    "GroupMode": {
+      "enum": [
+        "default",
+        "custom"
+      ],
+      "type": "string"
+    },
+    "ShowOption": {
+      "enum": [
+        "current",
+        "changes"
+      ],
+      "type": "string"
+    },
+    "SortOrder": {
+      "enum": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "type": "number"
+    },
+    "StateFilter": {
+      "additionalProperties": false,
+      "properties": {
+        "error": {
+          "type": "boolean"
+        },
+        "firing": {
+          "type": "boolean"
+        },
+        "inactive": {
+          "type": "boolean"
+        },
+        "noData": {
+          "type": "boolean"
+        },
+        "normal": {
+          "type": "boolean"
+        },
+        "pending": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "firing",
+        "pending",
+        "noData",
+        "normal",
+        "error"
+      ],
+      "type": "object"
+    },
+    "UnifiedAlertListOptions": {
+      "additionalProperties": false,
+      "properties": {
+        "alertInstanceLabelFilter": {
+          "type": "string"
+        },
+        "alertName": {
+          "type": "string"
+        },
+        "dashboardAlerts": {
+          "type": "boolean"
+        },
+        "datasource": {
+          "type": "string"
+        },
+        "folder": {
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "number"
+            },
+            "title": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "title"
+          ],
+          "type": "object"
+        },
+        "groupBy": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "groupMode": {
+          "$ref": "#/definitions/GroupMode"
+        },
+        "maxItems": {
+          "type": "number"
+        },
+        "showInstances": {
+          "type": "boolean"
+        },
+        "sortOrder": {
+          "$ref": "#/definitions/SortOrder"
+        },
+        "stateFilter": {
+          "$ref": "#/definitions/StateFilter"
+        },
+        "viewMode": {
+          "$ref": "#/definitions/ViewMode"
+        }
+      },
+      "required": [
+        "maxItems",
+        "sortOrder",
+        "dashboardAlerts",
+        "groupMode",
+        "groupBy",
+        "alertName",
+        "showInstances",
+        "folder",
+        "stateFilter",
+        "alertInstanceLabelFilter",
+        "datasource",
+        "viewMode"
+      ],
+      "type": "object"
+    },
+    "ViewMode": {
+      "enum": [
+        "list",
+        "stat"
+      ],
+      "type": "string"
+    }
+  }
+}
