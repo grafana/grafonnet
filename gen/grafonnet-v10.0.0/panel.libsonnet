@@ -3,6 +3,7 @@
   '#': { help: 'grafonnet.panel', name: 'panel' },
   candlestick: import 'clean/panel/candlestick.libsonnet',
   canvas: import 'clean/panel/canvas.libsonnet',
+  alertList: import 'clean/panel/alertList.libsonnet',
   alertGroups: import 'clean/panel/alertGroups.libsonnet',
   annotationsList: import 'clean/panel/annotationsList.libsonnet',
   barChart: import 'clean/panel/barChart.libsonnet',

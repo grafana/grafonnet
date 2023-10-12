@@ -5,6 +5,7 @@ grafonnet.panel
 ## Subpackages
 
 * [alertGroups](alertGroups/index.md)
+* [alertList](alertList/index.md)
 * [annotationsList](annotationsList/index.md)
 * [barChart](barChart/index.md)
 * [barGauge](barGauge/index.md)
