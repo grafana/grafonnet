@@ -3,9 +3,9 @@ local utils = import '../utils.libsonnet';
 {
   local root = self,
 
-  // Process the JSON Schemas into categories.
+  // Patch the JSON Schemas and put them into categories.
   // This function also restructures the schemas for processing by CRDsonnet.
-  process(version, schemas): {
+  patch(version, schemas): {
     core:
       std.filterMap(
         function(schema)
