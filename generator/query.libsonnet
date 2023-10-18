@@ -102,8 +102,8 @@ local utils = import './utils.libsonnet';
 
   // FIXME: Some schemas follow a different structure,  temporarily covering for this.
   local fixes = {
-    [utils.formatPanelName('CloudWatchDataQuery')]: {
-      [utils.formatPanelName('CloudWatchDataQuery')]: {
+    [utils.formatSchemaName('CloudWatchDataQuery')]: {
+      [utils.formatSchemaName('CloudWatchDataQuery')]: {
         type: 'object',
         oneOf: [
           { '$ref': '#/components/schemas/CloudWatchAnnotationQuery' },
@@ -119,23 +119,23 @@ local utils = import './utils.libsonnet';
         },
       },
     },
-    [utils.formatPanelName('AzureMonitorDataQuery')]: {
-      [utils.formatPanelName('AzureMonitorDataQuery')]: {
+    [utils.formatSchemaName('AzureMonitorDataQuery')]: {
+      [utils.formatSchemaName('AzureMonitorDataQuery')]: {
         '$ref': '#/components/schemas/AzureMonitorQuery',
       },
     },
-    [utils.formatPanelName('TempoDataQuery')]: {
-      [utils.formatPanelName('TempoDataQuery')]: {
+    [utils.formatSchemaName('TempoDataQuery')]: {
+      [utils.formatSchemaName('TempoDataQuery')]: {
         '$ref': '#/components/schemas/TempoQuery',
       },
     },
-    [utils.formatPanelName('GoogleCloudMonitoringDataQuery')]: {
-      [utils.formatPanelName('GoogleCloudMonitoringDataQuery')]: {
+    [utils.formatSchemaName('GoogleCloudMonitoringDataQuery')]: {
+      [utils.formatSchemaName('GoogleCloudMonitoringDataQuery')]: {
         '$ref': '#/components/schemas/CloudMonitoringQuery',
       },
     },
-    [utils.formatPanelName('TestDataDataQuery')]: {
-      [utils.formatPanelName('TestDataDataQuery')]+: {
+    [utils.formatSchemaName('TestDataDataQuery')]: {
+      [utils.formatSchemaName('TestDataDataQuery')]+: {
         properties+: {
           // `points` is an array of arrays, this renders awkwardly with CRDsonnet
           points: { type: 'array' },

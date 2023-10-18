@@ -1,6 +1,6 @@
 {
-  // Fix a few issues in the openapi spec so it renders properly, see individual function descriptions for more details.
-  process(spec):
+  // Patch a few issues in the openapi spec so it renders properly, see individual function descriptions for more details.
+  patch(spec):
     self.renameTitleToDescription(spec)
     + self.addIsPausedToProvisionedAlertRule()
     + self.removeRecursiveRefOnRoute()
