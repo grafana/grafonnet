@@ -16,6 +16,7 @@ local grafonnet = import "github.com/grafana/grafonnet/gen/grafonnet-v10.0.0/mai
 
 ## Subpackages
 
+* [alerting](alerting/index.md)
 * [dashboard](dashboard/index.md)
 * [librarypanel](librarypanel.md)
 * [panel](panel/index.md)

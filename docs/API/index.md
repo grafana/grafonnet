@@ -5,6 +5,7 @@
 ## Subpackages
 
 * [accesspolicy](accesspolicy/index.md)
+* [alerting](alerting/index.md)
 * [dashboard](dashboard/index.md)
 * [folder](folder.md)
 * [librarypanel](librarypanel.md)
