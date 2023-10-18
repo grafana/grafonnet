@@ -9,7 +9,7 @@ local utils = import './utils.libsonnet';
 
 function(version, schemas, openapiSpec)
   local fixedSchemas = patches.schemas.patch(version, schemas);
-  local processedSpec = patches.spec.process(openapiSpec);
+  local processedSpec = patches.spec.patch(openapiSpec);
   local files =
     core.render(version, fixedSchemas.core)
     + panel.render(fixedSchemas.panel)
