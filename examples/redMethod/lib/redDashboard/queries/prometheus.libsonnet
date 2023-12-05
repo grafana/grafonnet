@@ -68,7 +68,7 @@ local g = import 'g.libsonnet';
       prometheusQuery.new(
         '$' + self.variables.datasource.name,
         |||
-          histogram_quantile(%s,
+          histogram_quantile(%0.4g,
             sum by (le) (
               rate(request_duration_seconds_bucket{%s}[$__rate_interval])
             )

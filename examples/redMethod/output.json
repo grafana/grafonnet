@@ -84,7 +84,7 @@
                   "type": "prometheus",
                   "uid": "$datasource"
                },
-               "expr": "histogram_quantile(0.98999999999999999,\n  sum by (le) (\n    rate(request_duration_seconds_bucket{cluster=\"$cluster\",namespace=\"$namespace\",job=~\".*/faro-api\"}[$__rate_interval])\n  )\n) * 1e3\n",
+               "expr": "histogram_quantile(0.99,\n  sum by (le) (\n    rate(request_duration_seconds_bucket{cluster=\"$cluster\",namespace=\"$namespace\",job=~\".*/faro-api\"}[$__rate_interval])\n  )\n) * 1e3\n",
                "legendFormat": "99th Percentile"
             },
             {
@@ -181,7 +181,7 @@
                   "type": "prometheus",
                   "uid": "$datasource"
                },
-               "expr": "histogram_quantile(0.98999999999999999,\n  sum by (le) (\n    rate(request_duration_seconds_bucket{cluster=\"$cluster\",namespace=\"$namespace\",job=~\".*/faro-collector\"}[$__rate_interval])\n  )\n) * 1e3\n",
+               "expr": "histogram_quantile(0.99,\n  sum by (le) (\n    rate(request_duration_seconds_bucket{cluster=\"$cluster\",namespace=\"$namespace\",job=~\".*/faro-collector\"}[$__rate_interval])\n  )\n) * 1e3\n",
                "legendFormat": "99th Percentile"
             },
             {
