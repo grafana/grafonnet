@@ -19,6 +19,8 @@ local getPanelIDs(panels) =
   );
 
 test.new(std.thisFile)
+
+// util.panel.setPanelIDs
 + (
   local initialPanels = [
     {
@@ -90,6 +92,7 @@ test.new(std.thisFile)
   )
 )
 
+// util.dashboard.getOptionsForCustomQuery
 + (
   local query = '1, a : b, ab :  , aa: bb, a     :b';
 
@@ -136,6 +139,8 @@ test.new(std.thisFile)
     )
   )
 )
+
+// util.dashboard.getCurrentFromValues
 + (
   local options = [
     { key: 'a', value: 'b' },
@@ -175,6 +180,7 @@ test.new(std.thisFile)
   )
 )
 
+// util.dashboard.parseCustomQuery
 + (
   local query = '1, a : b, ab :  , aa: bb, a     :b';
   local expected = [
@@ -231,6 +237,205 @@ test.new(std.thisFile)
     test=test.expect.eq(
       actual=util.dashboard.parseCustomQuery(query),
       expected=expected,
+    )
+  )
+)
+
+// util.panel.sanitizePanel
++ (
+  local panel = g.panel.row.new('a');
+  local actual = util.panel.sanitizePanel(panel);
+  local expected =
+    g.panel.row.new('a')
+    + g.panel.row.withPanels([])
+    + g.panel.row.gridPos.withY(0);
+  test.case.new(
+    name='util.panel.sanitizePanel - sanitize row panel',
+    test=test.expect.eqDiff(
+      actual,
+      expected,
+    )
+  )
+)
++ (
+  local panel = g.panel.row.new('a');
+  local actual = util.panel.sanitizePanel(panel, defaultX=1, defaultY=2, defaultHeight=3, defaultWidth=4);
+  local expected =
+    g.panel.row.new('a')
+    + g.panel.row.withPanels([])
+    + g.panel.row.gridPos.withY(2);
+  test.case.new(
+    name='util.panel.sanitizePanel - sanitize row panel, varying defaults',
+    test=test.expect.eqDiff(
+      actual,
+      expected,
+    )
+  )
+)
++ (
+  local panel = g.panel.timeSeries.new('a');
+  local actual = util.panel.sanitizePanel(panel);
+  local expected =
+    g.panel.timeSeries.new('a')
+    + g.panel.timeSeries.panelOptions.withGridPos(
+      x=0,
+      y=0,
+      h=8,
+      w=8,
+    );
+  test.case.new(
+    name='util.panel.sanitizePanel - sanitize timeSeries panel',
+    test=test.expect.eqDiff(
+      actual,
+      expected,
+    )
+  )
+)
++ (
+  local panel = g.panel.timeSeries.new('a');
+  local actual = util.panel.sanitizePanel(panel, defaultX=1, defaultY=2, defaultHeight=3, defaultWidth=4);
+  local expected =
+    g.panel.timeSeries.new('a')
+    + g.panel.timeSeries.panelOptions.withGridPos(
+      x=1,
+      y=2,
+      h=3,
+      w=4,
+    );
+  test.case.new(
+    name='util.panel.sanitizePanel - sanitize timeSeries panel',
+    test=test.expect.eqDiff(
+      actual,
+      expected,
+    )
+  )
+)
+
+// util.panel.groupPanelsInRows
++ (
+  local panels = [
+    g.panel.timeSeries.new('a'),
+    g.panel.timeSeries.new('b'),
+    g.panel.row.new('c'),
+    g.panel.timeSeries.new('d'),
+    g.panel.timeSeries.new('e'),
+    g.panel.row.new('f'),
+    g.panel.timeSeries.new('g'),
+  ];
+  local expected = [
+    g.panel.timeSeries.new('a'),
+    g.panel.timeSeries.new('b'),
+    g.panel.row.new('c')
+    + g.panel.row.withPanels([
+      g.panel.timeSeries.new('d'),
+      g.panel.timeSeries.new('e'),
+    ]),
+    g.panel.row.new('f')
+    + g.panel.row.withPanels([
+      g.panel.timeSeries.new('g'),
+    ]),
+  ];
+  test.case.new(
+    name='util.panel.groupPanelsInRows',
+    test=test.expect.eqDiff(
+      util.panel.groupPanelsInRows(panels),
+      expected,
+    )
+  )
+)
+
+// util.panel.getPanelsBeforeNextRow
++ (
+  local panels = [
+    g.panel.timeSeries.new('a'),
+    g.panel.timeSeries.new('b'),
+    g.panel.row.new('c'),
+    g.panel.timeSeries.new('d'),
+    g.panel.timeSeries.new('e'),
+    g.panel.row.new('f'),
+    g.panel.timeSeries.new('g'),
+  ];
+  local expected = [
+    g.panel.timeSeries.new('a'),
+    g.panel.timeSeries.new('b'),
+  ];
+  test.case.new(
+    name='util.panel.getPanelsBeforeNextRow',
+    test=test.expect.eqDiff(
+      util.panel.getPanelsBeforeNextRow(panels),
+      expected,
+    )
+  )
+)
+
+// util.panel.resolveCollapsedFlagOnRows
++ (
+  local panels = [
+    g.panel.timeSeries.new('a'),
+    g.panel.timeSeries.new('b'),
+    g.panel.row.new('c')
+    + g.panel.row.withCollapsed()
+    + g.panel.row.withPanels([
+      g.panel.timeSeries.new('d'),
+      g.panel.timeSeries.new('e'),
+    ]),
+    g.panel.row.new('f')
+    + g.panel.row.withCollapsed(false)
+    + g.panel.row.withPanels([
+      g.panel.timeSeries.new('g'),
+    ]),
+  ];
+  local expected = [
+    g.panel.timeSeries.new('a'),
+    g.panel.timeSeries.new('b'),
+    g.panel.row.new('c')
+    + g.panel.row.withCollapsed()
+    + g.panel.row.withPanels([
+      g.panel.timeSeries.new('d'),
+      g.panel.timeSeries.new('e'),
+    ]),
+    g.panel.row.new('f')
+    + g.panel.row.withCollapsed(false)
+    + g.panel.row.withPanels([]),
+    g.panel.timeSeries.new('g'),
+  ];
+  test.case.new(
+    name='util.panel.resolveCollapsedFlagOnRows',
+    test=test.expect.eqDiff(
+      util.panel.resolveCollapsedFlagOnRows(panels),
+      expected,
+    )
+  )
+)
+
+// util.panel.normalizeY
++ (
+  local p1 = [
+    g.panel.timeSeries.new('a'),
+    g.panel.timeSeries.new('b'),
+    g.panel.row.new('c'),
+    g.panel.timeSeries.new('d'),
+    g.panel.timeSeries.new('e'),
+    g.panel.row.new('f'),
+    g.panel.timeSeries.new('g'),
+  ];
+  local sanitized = std.map(util.panel.sanitizePanel, p1);
+  local p2 = [
+    g.panel.timeSeries.new('a') + { gridPos: { y: 0 } },
+    g.panel.timeSeries.new('b') + { gridPos: { y: 8 } },
+    g.panel.row.new('c') + { gridPos: { y: 16 } },
+    g.panel.timeSeries.new('d') + { gridPos: { y: 17 } },
+    g.panel.timeSeries.new('e') + { gridPos: { y: 25 } },
+    g.panel.row.new('f') + { gridPos: { y: 33 } },
+    g.panel.timeSeries.new('g') + { gridPos: { y: 34 } },
+  ];
+  local expected = std.map(util.panel.sanitizePanel, p2);
+
+  test.case.new(
+    name='util.panel.normalizeY',
+    test=test.expect.eqDiff(
+      util.panel.normalizeY(sanitized),
+      expected,
     )
   )
 )
