@@ -76,7 +76,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
           panels: std.map(infunc, std.get(panel, 'panels', [])),
           gridPos: {  // x, h, w are fixed
             x: 0,
-            y: std.get(gridPos, 'y', 0),
+            y: std.get(gridPos, 'y', defaultY),
             h: 1,
             w: 24,
           },
@@ -229,7 +229,8 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
     xtd.number.maxInArray(  // the new position is highest value (max) on the Y-scale
       std.filterMap(
         function(p)  // find panels that overlap on X-scale
-          xtd.number.inRange(p.gridPos.x, x1, x2)
+          p.gridPos.x == x1
+          || xtd.number.inRange(p.gridPos.x, x1, x2)
           || xtd.number.inRange((p.gridPos.x + p.gridPos.w), x1, x2),
         function(p)  // return new position on Y-scale
           p.gridPos.y + p.gridPos.h,
