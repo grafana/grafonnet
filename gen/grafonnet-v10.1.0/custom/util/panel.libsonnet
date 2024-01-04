@@ -224,14 +224,15 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
     ]
   ),
   calculateLowestYforPanel(panel, panels):
-    local x1 = panel.gridPos.x;
-    local x2 = panel.gridPos.x + panel.gridPos.w;
     xtd.number.maxInArray(  // the new position is highest value (max) on the Y-scale
       std.filterMap(
         function(p)  // find panels that overlap on X-scale
-          p.gridPos.x == x1
-          || xtd.number.inRange(p.gridPos.x, x1, x2)
-          || xtd.number.inRange((p.gridPos.x + p.gridPos.w), x1, x2),
+          local v1 = panel.gridPos.x;
+          local v2 = panel.gridPos.x + panel.gridPos.w;
+          local x1 = p.gridPos.x;
+          local x2 = p.gridPos.x + p.gridPos.w;
+          (v1 >= x1 && v1 < x2)
+          || (v2 >= x1 && v2 < x2),
         function(p)  // return new position on Y-scale
           p.gridPos.y + p.gridPos.h,
         panels,
