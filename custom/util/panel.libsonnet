@@ -73,7 +73,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
         if panel.type == 'row'
         then {
           collapsed: std.get(panel, 'collapsed', false),
-          panels: std.map(this.infunc, std.get(panel, 'panels', [])),
+          panels: std.map(infunc, std.get(panel, 'panels', [])),
           gridPos: {  // x, h, w are fixed
             x: 0,
             y: std.get(gridPos, 'y', 0),
