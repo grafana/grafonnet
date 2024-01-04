@@ -1,6 +1,6 @@
 .PHONY: generate regenerate localmkdocs test
 
-LATEST := v10.1.0
+LATEST := v10.2.0
 
 generate: gen/grafonnet-latest
 
@@ -9,6 +9,9 @@ gen/grafonnet-latest:
 	./scripts/generate_latest.sh ${LATEST}
 
 regenerate: gen/grafonnet-v*
+
+gen/grafonnet-v10.1.0:
+	./scripts/generate.sh v10.1.0
 
 gen/grafonnet-v10.0.0:
 	./scripts/generate.sh v10.0.0
