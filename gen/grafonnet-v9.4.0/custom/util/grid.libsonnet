@@ -20,7 +20,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       w: panelWidth,
       h: panelHeight,
       x: panelWidth * col,
-      y: startY + (panelHeight * row) + row,
+      y: startY + (panelHeight * row),
     },
   },
 
@@ -87,8 +87,12 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       function(acc, rowGroup) acc + {
         local y = acc.nexty,
         nexty: y  // previous y
-               + (rowGroup.rows * panelHeight)  // height of all rows
-               + rowGroup.rows  // plus 1 for each row
+               + (
+                 if rowGroup.header.collapsed
+                 then rowPanelHeight
+                 else (rowGroup.rows * panelHeight)  // height of all rows
+                      + rowGroup.rows  // plus 1 for each row
+               )
                + acc.lastRowPanelHeight,
 
         lastRowPanelHeight: rowPanelHeight,  // set height for next round
@@ -109,7 +113,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
               panels:
                 // If row is collapsed, then store panels inside Row panel
                 if rowGroup.header.collapsed
-                then panels
+                then std.map(function(p) p + { gridPos+: { y: 0 } }, panels)
                 else [],
             },
           ]
@@ -128,7 +132,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
           then panels[0:rowIndexes[0]]
           else panels,  // matches all panels if no Row panels found
         local rows = root.countRows(panelsBeforeRowGroups, panelWidth),
-        nexty: startY + (rows * panelHeight) + rows,
+        nexty: startY + (rows * panelHeight),
 
         lastRowPanelHeight: 0,  // starts without a row panel
 
