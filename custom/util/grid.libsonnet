@@ -1,4 +1,5 @@
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
+local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 
 {
   local root = self,
@@ -52,11 +53,12 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
   ),
   makeGrid(panels, panelWidth=8, panelHeight=8, startY=0):
     // Get indexes for all Row panels
-    local rowIndexes = [
-      i
-      for i in std.range(0, std.length(panels) - 1)
-      if panels[i].type == 'row'
-    ];
+    local rowIndexes =
+      xtd.array.filterMapWithIndex(
+        function(i, p) p.type == 'row',
+        function(i, p) i,
+        panels,
+      );
 
     // Group panels below each Row panel
     local rowGroups =

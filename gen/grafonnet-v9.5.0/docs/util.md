@@ -10,7 +10,17 @@ Helper functions that work well with Grafonnet.
   * [`fn makeGrid(panels, panelWidth, panelHeight, startY)`](#fn-gridmakegrid)
   * [`fn wrapPanels(panels, panelWidth, panelHeight, startY)`](#fn-gridwrappanels)
 * [`obj panel`](#obj-panel)
+  * [`fn calculateLowestYforPanel(panel, panels)`](#fn-panelcalculatelowestyforpanel)
+  * [`fn getPanelsBeforeNextRow(panels)`](#fn-panelgetpanelsbeforenextrow)
+  * [`fn groupPanelsInRows(panels)`](#fn-panelgrouppanelsinrows)
+  * [`fn mapToRows(func, panels)`](#fn-panelmaptorows)
+  * [`fn normalizeY(panels)`](#fn-panelnormalizey)
+  * [`fn normalizeYInRow(rowPanel)`](#fn-panelnormalizeyinrow)
+  * [`fn resolveCollapsedFlagOnRows(panels)`](#fn-panelresolvecollapsedflagonrows)
+  * [`fn sanitizePanel(panel, defaultX=0, defaultY=0, defaultHeight=8, defaultWidth=8)`](#fn-panelsanitizepanel)
   * [`fn setPanelIDs(panels)`](#fn-panelsetpanelids)
+  * [`fn sortPanelsByXY(panels)`](#fn-panelsortpanelsbyxy)
+  * [`fn sortPanelsInRow(rowPanel)`](#fn-panelsortpanelsinrow)
 * [`obj string`](#obj-string)
   * [`fn slugify(string)`](#fn-stringslugify)
 
@@ -82,6 +92,116 @@ PARAMETERS:
 ### obj panel
 
 
+#### fn panel.calculateLowestYforPanel
+
+```jsonnet
+panel.calculateLowestYforPanel(panel, panels)
+```
+
+PARAMETERS:
+
+* **panel** (`object`)
+* **panels** (`array`)
+
+`calculateLowestYforPanel` calculates Y for a given `panel` from the `gridPos` of an array of `panels`. This function is used in `normalizeY`.
+
+#### fn panel.getPanelsBeforeNextRow
+
+```jsonnet
+panel.getPanelsBeforeNextRow(panels)
+```
+
+PARAMETERS:
+
+* **panels** (`array`)
+
+`getPanelsBeforeNextRow` returns all panels in an array up until a row has been found. Used in `groupPanelsInRows`.
+
+#### fn panel.groupPanelsInRows
+
+```jsonnet
+panel.groupPanelsInRows(panels)
+```
+
+PARAMETERS:
+
+* **panels** (`array`)
+
+`groupPanelsInRows` ensures that panels that come after a row panel in an array are added to the `row.panels` attribute. This can be useful to apply intermediate functions to only the panels that belong to a row. Finally the panel array should get processed by `resolveCollapsedFlagOnRows` to "unfold" the rows that are not collapsed into the main array.
+
+#### fn panel.mapToRows
+
+```jsonnet
+panel.mapToRows(func, panels)
+```
+
+PARAMETERS:
+
+* **func** (`function`)
+* **panels** (`array`)
+
+`mapToRows` is a little helper function that applies `func` to all row panels in an array. Other panels in that array are returned ad verbatim.
+
+#### fn panel.normalizeY
+
+```jsonnet
+panel.normalizeY(panels)
+```
+
+PARAMETERS:
+
+* **panels** (`array`)
+
+`normalizeY` applies negative gravity on the inverted Y axis. This mimics the behavior of Grafana: when a panel is created without panel above it, then it'll float upward.
+
+This is strictly not required as Grafana will do this on dashboard load, however it might be helpful when used when calculating the correct `gridPos`.
+
+#### fn panel.normalizeYInRow
+
+```jsonnet
+panel.normalizeYInRow(rowPanel)
+```
+
+PARAMETERS:
+
+* **rowPanel** (`object`)
+
+`normalizeYInRow` applies `normalizeY` to the panels in a row panel.
+
+#### fn panel.resolveCollapsedFlagOnRows
+
+```jsonnet
+panel.resolveCollapsedFlagOnRows(panels)
+```
+
+PARAMETERS:
+
+* **panels** (`array`)
+
+`resolveCollapsedFlagOnRows` should be applied to the final panel array to "unfold" the rows that are not collapsed into the main array.
+
+#### fn panel.sanitizePanel
+
+```jsonnet
+panel.sanitizePanel(panel, defaultX=0, defaultY=0, defaultHeight=8, defaultWidth=8)
+```
+
+PARAMETERS:
+
+* **panel** (`object`)
+* **defaultX** (`number`)
+   - default value: `0`
+* **defaultY** (`number`)
+   - default value: `0`
+* **defaultHeight** (`number`)
+   - default value: `8`
+* **defaultWidth** (`number`)
+   - default value: `8`
+
+`sanitizePanel` ensures the panel has a valid `gridPos` and row panels have `collapsed` and `panels`. This function is recursively applied to panels inside row panels.
+
+The default values for x,y,h,w are only applied if not already set.
+
 #### fn panel.setPanelIDs
 
 ```jsonnet
@@ -97,6 +217,30 @@ PARAMETERS:
 experience.
 
 used in ../dashboard.libsonnet
+
+#### fn panel.sortPanelsByXY
+
+```jsonnet
+panel.sortPanelsByXY(panels)
+```
+
+PARAMETERS:
+
+* **panels** (`array`)
+
+`sortPanelsByXY` applies a simple sorting algorithm, first by x then again by y. This does not take width and height into account.
+
+#### fn panel.sortPanelsInRow
+
+```jsonnet
+panel.sortPanelsInRow(rowPanel)
+```
+
+PARAMETERS:
+
+* **rowPanel** (`object`)
+
+`sortPanelsInRow` applies `sortPanelsByXY` on the panels in a rowPanel.
 
 ### obj string
 
