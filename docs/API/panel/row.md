@@ -8,7 +8,7 @@ grafonnet.panel.row
 * [`fn withCollapsed(value=true)`](#fn-withcollapsed)
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withDatasourceMixin(value)`](#fn-withdatasourcemixin)
-* [`fn withGridPos(value)`](#fn-withgridpos)
+* [`fn withGridPos(y)`](#fn-withgridpos)
 * [`fn withGridPosMixin(value)`](#fn-withgridposmixin)
 * [`fn withId(value)`](#fn-withid)
 * [`fn withPanels(value)`](#fn-withpanels)
@@ -19,12 +19,6 @@ grafonnet.panel.row
 * [`obj datasource`](#obj-datasource)
   * [`fn withType(value)`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
-* [`obj gridPos`](#obj-gridpos)
-  * [`fn withH(value=9)`](#fn-gridposwithh)
-  * [`fn withStatic(value=true)`](#fn-gridposwithstatic)
-  * [`fn withW(value=12)`](#fn-gridposwithw)
-  * [`fn withX(value=0)`](#fn-gridposwithx)
-  * [`fn withY(value=0)`](#fn-gridposwithy)
 
 ## Fields
 
@@ -76,14 +70,14 @@ Ref to a DataSource instance
 ### fn withGridPos
 
 ```jsonnet
-withGridPos(value)
+withGridPos(y)
 ```
 
 PARAMETERS:
 
-* **value** (`object`)
+* **y** (`number`)
 
-Position and dimensions of a panel in the grid
+`withGridPos` sets the Y-axis on a row panel. x, width and height are fixed values.
 ### fn withGridPosMixin
 
 ```jsonnet
@@ -183,66 +177,3 @@ PARAMETERS:
 * **value** (`string`)
 
 Specific datasource instance
-### obj gridPos
-
-
-#### fn gridPos.withH
-
-```jsonnet
-gridPos.withH(value=9)
-```
-
-PARAMETERS:
-
-* **value** (`integer`)
-   - default value: `9`
-
-Panel height. The height is the number of rows from the top edge of the panel.
-#### fn gridPos.withStatic
-
-```jsonnet
-gridPos.withStatic(value=true)
-```
-
-PARAMETERS:
-
-* **value** (`boolean`)
-   - default value: `true`
-
-Whether the panel is fixed within the grid. If true, the panel will not be affected by other panels' interactions
-#### fn gridPos.withW
-
-```jsonnet
-gridPos.withW(value=12)
-```
-
-PARAMETERS:
-
-* **value** (`integer`)
-   - default value: `12`
-
-Panel width. The width is the number of columns from the left edge of the panel.
-#### fn gridPos.withX
-
-```jsonnet
-gridPos.withX(value=0)
-```
-
-PARAMETERS:
-
-* **value** (`integer`)
-   - default value: `0`
-
-Panel x. The x coordinate is the number of columns from the left edge of the grid
-#### fn gridPos.withY
-
-```jsonnet
-gridPos.withY(value=0)
-```
-
-PARAMETERS:
-
-* **value** (`integer`)
-   - default value: `0`
-
-Panel y. The y coordinate is the number of rows from the top edge of the grid
