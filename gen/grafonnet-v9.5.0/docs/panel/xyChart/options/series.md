@@ -441,7 +441,7 @@ labelValue.withFixed(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`number`,`string`)
 
 
 #### fn labelValue.withFixedMixin
@@ -452,7 +452,7 @@ labelValue.withFixedMixin(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`number`,`string`)
 
 
 #### fn labelValue.withMode
@@ -489,7 +489,7 @@ lineColor.withFixed(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`number`,`string`)
 
 
 #### fn lineColor.withFixedMixin
@@ -500,7 +500,7 @@ lineColor.withFixedMixin(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`number`,`string`)
 
 
 ### obj lineStyle
@@ -562,7 +562,7 @@ pointColor.withFixed(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`number`,`string`)
 
 
 #### fn pointColor.withFixedMixin
@@ -573,7 +573,7 @@ pointColor.withFixedMixin(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`number`,`string`)
 
 
 ### obj pointSize
@@ -598,7 +598,7 @@ pointSize.withFixed(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`number`,`string`)
 
 
 #### fn pointSize.withFixedMixin
@@ -609,7 +609,7 @@ pointSize.withFixedMixin(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`number`,`string`)
 
 
 #### fn pointSize.withMax

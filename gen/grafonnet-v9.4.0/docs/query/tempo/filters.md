@@ -80,7 +80,7 @@ withValue(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`array`,`string`)
 
 The value for the search filter
 ### fn withValueMixin
@@ -91,7 +91,7 @@ withValueMixin(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`array`,`string`)
 
 The value for the search filter
 ### fn withValueType

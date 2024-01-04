@@ -98,7 +98,7 @@ RangeMap.options.withFrom(value)
 
 PARAMETERS:
 
-* **value** (`["number", "null"]`)
+* **value** (`null`,`number`)
 
 Min value of the range. It can be null which means -Infinity
 ##### fn RangeMap.options.withResult
@@ -131,7 +131,7 @@ RangeMap.options.withTo(value)
 
 PARAMETERS:
 
-* **value** (`["number", "null"]`)
+* **value** (`null`,`number`)
 
 Max value of the range. It can be null which means +Infinity
 ##### obj RangeMap.options.result

@@ -9,7 +9,7 @@
     },
   options+:
     {
-      '#withSelectedSeries': { 'function': { args: [{ default: 0, enums: null, name: 'value', type: 'integer' }], help: '' } },
+      '#withSelectedSeries': { 'function': { args: [{ default: 0, enums: null, name: 'value', type: ['integer'] }], help: '' } },
       withSelectedSeries(value=0): { options+: { selectedSeries: value } },
     },
 }

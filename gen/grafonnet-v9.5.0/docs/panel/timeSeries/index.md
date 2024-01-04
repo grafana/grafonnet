@@ -495,7 +495,7 @@ fieldConfig.defaults.custom.withSpanNulls(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`boolean`,`number`)
 
 Indicate if null values should be treated as gaps or connected.
 When the value is a number, it represents the maximum delta in the
@@ -508,7 +508,7 @@ fieldConfig.defaults.custom.withSpanNullsMixin(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`boolean`,`number`)
 
 Indicate if null values should be treated as gaps or connected.
 When the value is a number, it represents the maximum delta in the
