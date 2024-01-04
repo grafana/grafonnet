@@ -28,7 +28,7 @@ withValue(value)
 
 PARAMETERS:
 
-* **value** (`["number", "null"]`)
+* **value** (`null`,`number`)
 
 Value represents a specified metric for the threshold, which triggers a visual change in the dashboard when this value is met or exceeded.
 Nulls currently appear here when serializing -Infinity to JSON.

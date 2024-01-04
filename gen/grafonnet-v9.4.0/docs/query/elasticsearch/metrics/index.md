@@ -395,7 +395,7 @@ MetricAggregationWithSettings.Average.settings.withScript(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### fn MetricAggregationWithSettings.Average.settings.withScriptMixin
@@ -406,7 +406,7 @@ MetricAggregationWithSettings.Average.settings.withScriptMixin(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### obj MetricAggregationWithSettings.Average.settings.script
@@ -515,7 +515,7 @@ MetricAggregationWithSettings.BucketScript.settings.withScript(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### fn MetricAggregationWithSettings.BucketScript.settings.withScriptMixin
@@ -526,7 +526,7 @@ MetricAggregationWithSettings.BucketScript.settings.withScriptMixin(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### obj MetricAggregationWithSettings.BucketScript.settings.script
@@ -847,7 +847,7 @@ MetricAggregationWithSettings.ExtendedStats.settings.withScript(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### fn MetricAggregationWithSettings.ExtendedStats.settings.withScriptMixin
@@ -858,7 +858,7 @@ MetricAggregationWithSettings.ExtendedStats.settings.withScriptMixin(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### fn MetricAggregationWithSettings.ExtendedStats.settings.withSigma
@@ -1051,7 +1051,7 @@ MetricAggregationWithSettings.Max.settings.withScript(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### fn MetricAggregationWithSettings.Max.settings.withScriptMixin
@@ -1062,7 +1062,7 @@ MetricAggregationWithSettings.Max.settings.withScriptMixin(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### obj MetricAggregationWithSettings.Max.settings.script
@@ -1171,7 +1171,7 @@ MetricAggregationWithSettings.Min.settings.withScript(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### fn MetricAggregationWithSettings.Min.settings.withScriptMixin
@@ -1182,7 +1182,7 @@ MetricAggregationWithSettings.Min.settings.withScriptMixin(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### obj MetricAggregationWithSettings.Min.settings.script
@@ -1372,7 +1372,7 @@ MetricAggregationWithSettings.MovingFunction.settings.withScript(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### fn MetricAggregationWithSettings.MovingFunction.settings.withScriptMixin
@@ -1383,7 +1383,7 @@ MetricAggregationWithSettings.MovingFunction.settings.withScriptMixin(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### fn MetricAggregationWithSettings.MovingFunction.settings.withShift
@@ -1536,7 +1536,7 @@ MetricAggregationWithSettings.Percentiles.settings.withScript(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### fn MetricAggregationWithSettings.Percentiles.settings.withScriptMixin
@@ -1547,7 +1547,7 @@ MetricAggregationWithSettings.Percentiles.settings.withScriptMixin(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### obj MetricAggregationWithSettings.Percentiles.settings.script
@@ -1992,7 +1992,7 @@ MetricAggregationWithSettings.Sum.settings.withScript(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### fn MetricAggregationWithSettings.Sum.settings.withScriptMixin
@@ -2003,7 +2003,7 @@ MetricAggregationWithSettings.Sum.settings.withScriptMixin(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### obj MetricAggregationWithSettings.Sum.settings.script
@@ -2316,7 +2316,7 @@ PipelineMetricAggregation.BucketScript.settings.withScript(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### fn PipelineMetricAggregation.BucketScript.settings.withScriptMixin
@@ -2327,7 +2327,7 @@ PipelineMetricAggregation.BucketScript.settings.withScriptMixin(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`,`string`)
 
 
 ###### obj PipelineMetricAggregation.BucketScript.settings.script

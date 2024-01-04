@@ -220,7 +220,7 @@ fieldConfig.defaults.custom.withCellOptions(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`)
 
 Table cell options. Each cell has a display mode and other potential options for that display.
 ###### fn fieldConfig.defaults.custom.withCellOptionsMixin
@@ -231,7 +231,7 @@ fieldConfig.defaults.custom.withCellOptionsMixin(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`)
 
 Table cell options. Each cell has a display mode and other potential options for that display.
 ###### fn fieldConfig.defaults.custom.withDisplayMode
@@ -914,7 +914,7 @@ fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withSpanNulls(
 
 PARAMETERS:
 
-* **value** (`["boolean", "number"]`)
+* **value** (`boolean`,`number`)
 
 Indicate if null values should be treated as gaps or connected. When the value is a number, it represents the maximum delta in the X axis that should be considered connected.  For timeseries, this is milliseconds
 ######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withStacking
