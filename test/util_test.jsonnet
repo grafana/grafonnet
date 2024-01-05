@@ -439,3 +439,131 @@ test.new(std.thisFile)
     )
   )
 )
+
+// util.grid.makeGrid
++ (
+  local p1 = [
+    g.panel.timeSeries.new('a'),
+    g.panel.timeSeries.new('b'),
+    g.panel.timeSeries.new('c'),
+    g.panel.timeSeries.new('d'),
+    g.panel.timeSeries.new('e'),
+  ];
+  local p2 = [
+    g.panel.timeSeries.new('a')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 0, 0),
+    g.panel.timeSeries.new('b')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 8, 0),
+    g.panel.timeSeries.new('c')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 16, 0),
+    g.panel.timeSeries.new('d')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 0, 8),
+    g.panel.timeSeries.new('e')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 8, 8),
+  ];
+
+  test.case.new(
+    name='util.grid.makeGrid -- just panels',
+    test=test.expect.eqDiff(
+      util.grid.makeGrid(p1),
+      p2,
+    )
+  )
+)
++ (
+  local p1 = [
+    g.panel.timeSeries.new('a'),
+    g.panel.timeSeries.new('b'),
+    g.panel.row.new('row'),
+    g.panel.timeSeries.new('c'),
+    g.panel.timeSeries.new('d'),
+    g.panel.timeSeries.new('e'),
+    g.panel.row.new('rowCollapsed') + g.panel.row.withCollapsed(),
+    g.panel.timeSeries.new('f'),
+    g.panel.timeSeries.new('g'),
+    g.panel.timeSeries.new('h'),
+  ];
+  local p2 = [
+    g.panel.timeSeries.new('a')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 0, 0),
+    g.panel.timeSeries.new('b')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 8, 0),
+    g.panel.row.new('row')
+    + g.panel.row.withPanels([])
+    + g.panel.row.withGridPos(8),
+    g.panel.timeSeries.new('c')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 0, 9),
+    g.panel.timeSeries.new('d')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 8, 9),
+    g.panel.timeSeries.new('e')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 16, 9),
+    g.panel.row.new('rowCollapsed')
+    + g.panel.row.withCollapsed()
+    + g.panel.row.withGridPos(17)
+    + g.panel.row.withPanels([
+      g.panel.timeSeries.new('f')
+      + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 0, 0),
+      g.panel.timeSeries.new('g')
+      + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 8, 0),
+      g.panel.timeSeries.new('h')
+      + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 16, 0),
+    ]),
+  ];
+
+  test.case.new(
+    name='util.grid.makeGrid -- with rows',
+    test=test.expect.eqDiff(
+      util.grid.makeGrid(p1),
+      p2,
+    )
+  )
+)
++ (
+  local p1 = [
+    g.panel.timeSeries.new('a'),
+    g.panel.timeSeries.new('b'),
+    g.panel.row.new('rowCollapsed') + g.panel.row.withCollapsed(),
+    g.panel.timeSeries.new('c'),
+    g.panel.timeSeries.new('d'),
+    g.panel.timeSeries.new('e'),
+    g.panel.row.new('row'),
+    g.panel.timeSeries.new('f'),
+    g.panel.timeSeries.new('g'),
+    g.panel.timeSeries.new('h'),
+  ];
+  local p2 = [
+    g.panel.timeSeries.new('a')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 0, 0),
+    g.panel.timeSeries.new('b')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 8, 0),
+    g.panel.row.new('rowCollapsed')
+    + g.panel.row.withCollapsed()
+    + g.panel.row.withPanels([])
+    + g.panel.row.withGridPos(8)
+    + g.panel.row.withPanels([
+      g.panel.timeSeries.new('c')
+      + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 0, 0),
+      g.panel.timeSeries.new('d')
+      + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 8, 0),
+      g.panel.timeSeries.new('e')
+      + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 16, 0),
+    ]),
+    g.panel.row.new('row')
+    + g.panel.row.withPanels([])
+    + g.panel.row.withGridPos(9),
+    g.panel.timeSeries.new('f')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 0, 10),
+    g.panel.timeSeries.new('g')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 8, 10),
+    g.panel.timeSeries.new('h')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 16, 10),
+  ];
+
+  test.case.new(
+    name='util.grid.makeGrid -- with collapsed row in middle',
+    test=test.expect.eqDiff(
+      util.grid.makeGrid(p1),
+      p2,
+    )
+  )
+)
