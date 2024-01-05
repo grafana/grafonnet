@@ -73,7 +73,9 @@ local panelUtil = import './panel.libsonnet';
 
     local uncollapsed = panelUtil.resolveCollapsedFlagOnRows(panelsBeforeRowsWithX + rowPanelsWithX);
 
-    panelUtil.normalizeY(uncollapsed),
+    local normalized = panelUtil.normalizeY(uncollapsed);
+
+    std.map(function(p) p + { gridPos+: { y+: startY } }, normalized),
 
   '#wrapPanels':: d.func.new(
     |||
