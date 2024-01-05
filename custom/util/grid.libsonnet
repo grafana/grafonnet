@@ -28,16 +28,26 @@ local panelUtil = import './panel.libsonnet';
     ],
   ),
   makeGrid(panels, panelWidth=8, panelHeight=8, startY=0):
-    local sanitizedPanels = std.map(
+    local sanitizePanels(ps) = std.map(
       function(p)
-        panelUtil.sanitizePanel(p)
-        + (
-          if p.type != 'row'
-          then { gridPos+: { h: panelHeight, w: panelWidth } }
-          else {}
+        local sanePanel = panelUtil.sanitizePanel(p);
+        (
+          if p.type == 'row'
+          then sanePanel + {
+            panels: sanitizePanels(sanePanel.panels),
+          }
+          else sanePanel + {
+            gridPos+: {
+              h: panelHeight,
+              w: panelWidth,
+            },
+          }
         ),
-      panels
+      ps
     );
+
+    local sanitizedPanels = sanitizePanels(panels);
+
     local grouped = panelUtil.groupPanelsInRows(sanitizedPanels);
 
     local panelsBeforeRows = panelUtil.getPanelsBeforeNextRow(grouped);
