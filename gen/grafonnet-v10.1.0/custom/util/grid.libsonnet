@@ -1,36 +1,12 @@
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 
+local panelUtil = import './panel.libsonnet';
+
 {
   local root = self,
 
-  local rowPanelHeight = 1,
   local gridWidth = 24,
-
-  // Calculates the number of rows for a set of panels.
-  countRows(panels, panelWidth):
-    std.ceil(std.length(panels) / std.floor(gridWidth / panelWidth)),
-
-  // Calculates gridPos for a panel based on its index, width and height.
-  gridPosForIndex(index, panelWidth, panelHeight, startY): {
-    local panelsPerRow = std.floor(gridWidth / panelWidth),
-    local row = std.floor(index / panelsPerRow),
-    local col = std.mod(index, panelsPerRow),
-    gridPos: {
-      w: panelWidth,
-      h: panelHeight,
-      x: panelWidth * col,
-      y: startY + (panelHeight * row),
-    },
-  },
-
-  // Configures gridPos for each panel in a grid with equal width and equal height.
-  makePanelGrid(panels, panelWidth, panelHeight, startY):
-    std.mapWithIndex(
-      function(i, panel)
-        panel + root.gridPosForIndex(i, panelWidth, panelHeight, startY),
-      panels
-    ),
 
   '#makeGrid':: d.func.new(
     |||
@@ -52,94 +28,42 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
     ],
   ),
   makeGrid(panels, panelWidth=8, panelHeight=8, startY=0):
-    // Get indexes for all Row panels
-    local rowIndexes =
-      xtd.array.filterMapWithIndex(
-        function(i, p) p.type == 'row',
-        function(i, p) i,
-        panels,
+    local sanitizedPanels = std.map(
+      function(p)
+        panelUtil.sanitizePanel(p)
+        + (
+          if p.type != 'row'
+          then { gridPos+: { h: panelHeight, w: panelWidth } }
+          else {}
+        ),
+      panels
+    );
+    local grouped = panelUtil.groupPanelsInRows(sanitizedPanels);
+
+    local panelsBeforeRows = panelUtil.getPanelsBeforeNextRow(grouped);
+    local rowPanels =
+      std.filter(
+        function(p) p.type == 'row',
+        grouped
       );
 
-    // Group panels below each Row panel
-    local rowGroups =
-      std.mapWithIndex(
-        function(i, r) {
-          header:
-            {
-              // Set initial values to ensure a value is set
-              // may be overridden at per Row panel
-              collapsed: false,
-              panels: [],
-            }
-            + panels[r],
-          panels:
-            self.header.panels  // prepend panels that are part of the Row panel
-            + (if i == std.length(rowIndexes) - 1  // last rowIndex
-               then panels[r + 1:]
-               else panels[r + 1:rowIndexes[i + 1]]),
-          rows: root.countRows(self.panels, panelWidth),
-        },
-        rowIndexes
+    local CalculateXforPanel(index, panel) =
+      local panelsPerRow = std.floor(gridWidth / panelWidth);
+      local col = std.mod(index, panelsPerRow);
+      panel + { gridPos+: { x: panelWidth * col } };
+
+    local panelsBeforeRowsWithX = std.mapWithIndex(CalculateXforPanel, panelsBeforeRows);
+
+    local rowPanelsWithX =
+      std.map(
+        function(row)
+          row + { panels: std.mapWithIndex(CalculateXforPanel, row.panels) },
+        rowPanels
       );
 
-    // Loop over rowGroups
-    std.foldl(
-      function(acc, rowGroup) acc + {
-        local y = acc.nexty,
-        nexty: y  // previous y
-               + (
-                 if rowGroup.header.collapsed
-                 then rowPanelHeight
-                 else (rowGroup.rows * panelHeight)  // height of all rows
-                      + rowGroup.rows  // plus 1 for each row
-               )
-               + acc.lastRowPanelHeight,
+    local uncollapsed = panelUtil.resolveCollapsedFlagOnRows(panelsBeforeRowsWithX + rowPanelsWithX);
 
-        lastRowPanelHeight: rowPanelHeight,  // set height for next round
-
-        // Create a grid per group
-        local panels = root.makePanelGrid(rowGroup.panels, panelWidth, panelHeight, y + 1),
-
-        panels+:
-          [
-            // Add row header aka the Row panel
-            rowGroup.header + {
-              gridPos: {
-                w: gridWidth,  // always full length
-                h: rowPanelHeight,  // always 1 height
-                x: 0,  // always at beginning
-                y: y,
-              },
-              panels:
-                // If row is collapsed, then store panels inside Row panel
-                if rowGroup.header.collapsed
-                then std.map(function(p) p + { gridPos+: { y: 0 } }, panels)
-                else [],
-            },
-          ]
-          + (
-            // If row is not collapsed, then expose panels directly
-            if !rowGroup.header.collapsed
-            then panels
-            else []
-          ),
-      },
-      rowGroups,
-      {
-        // Get panels that come before the rowGroups
-        local panelsBeforeRowGroups =
-          if std.length(rowIndexes) != 0
-          then panels[0:rowIndexes[0]]
-          else panels,  // matches all panels if no Row panels found
-        local rows = root.countRows(panelsBeforeRowGroups, panelWidth),
-        nexty: startY + (rows * panelHeight),
-
-        lastRowPanelHeight: 0,  // starts without a row panel
-
-        // Create a grid for the panels that come before the rowGroups
-        panels: root.makePanelGrid(panelsBeforeRowGroups, panelWidth, panelHeight, startY),
-      }
-    ).panels,
+    panelUtil.normalizeY(uncollapsed),
 
   '#wrapPanels':: d.func.new(
     |||
