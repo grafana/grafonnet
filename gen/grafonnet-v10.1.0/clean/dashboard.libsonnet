@@ -31,8 +31,6 @@
   withRefreshMixin(value): { refresh+: value },
   '#withSchemaVersion': { 'function': { args: [{ default: 36, enums: null, name: 'value', type: ['integer'] }], help: 'Version of the JSON schema, incremented each time a Grafana update brings\nchanges to said schema.' } },
   withSchemaVersion(value=36): { schemaVersion: value },
-  '#withStyle': { 'function': { args: [{ default: 'dark', enums: ['dark', 'light'], name: 'value', type: ['string'] }], help: 'Theme of dashboard.\nDefault value: dark.' } },
-  withStyle(value='dark'): { style: value },
   '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'Tags associated with dashboard.' } },
   withTags(value): { tags: (if std.isArray(value)
                             then value

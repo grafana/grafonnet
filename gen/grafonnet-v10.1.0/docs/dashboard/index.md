@@ -24,7 +24,6 @@ grafonnet.dashboard
 * [`fn withRefresh(value)`](#fn-withrefresh)
 * [`fn withRefreshMixin(value)`](#fn-withrefreshmixin)
 * [`fn withSchemaVersion(value=36)`](#fn-withschemaversion)
-* [`fn withStyle(value="dark")`](#fn-withstyle)
 * [`fn withTags(value)`](#fn-withtags)
 * [`fn withTagsMixin(value)`](#fn-withtagsmixin)
 * [`fn withTemplating(value)`](#fn-withtemplating)
@@ -253,20 +252,6 @@ PARAMETERS:
 
 Version of the JSON schema, incremented each time a Grafana update brings
 changes to said schema.
-### fn withStyle
-
-```jsonnet
-withStyle(value="dark")
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-   - default value: `"dark"`
-   - valid values: `"dark"`, `"light"`
-
-Theme of dashboard.
-Default value: dark.
 ### fn withTags
 
 ```jsonnet
