@@ -46,6 +46,6 @@ done
 
 jsonnet -S -c -m "${GEN_DIR}" vendor/generator/dependencies.libsonnet
 
-jsonnet -J vendor \
+jrsonnet -J vendor \
     -S -c -m "${GEN_DIR}/docs/" \
     --exec "(import 'doc-util/main.libsonnet').render(import '${GEN_DIR}/main.libsonnet')"

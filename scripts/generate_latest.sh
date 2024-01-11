@@ -41,7 +41,7 @@ jb install ./grafonnet-latest
 
 rm -rf "${REPO_DIR}/docs/"
 
-jsonnet -J vendor \
+jrsonnet -J vendor \
     -S -c -m "${REPO_DIR}/docs/" \
     -e "(import 'generator/latest_docs.libsonnet')"
 
