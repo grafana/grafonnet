@@ -474,6 +474,35 @@ test.new(std.thisFile)
   local p1 = [
     g.panel.timeSeries.new('a'),
     g.panel.timeSeries.new('b'),
+    g.panel.timeSeries.new('c'),
+    g.panel.timeSeries.new('d'),
+    g.panel.timeSeries.new('e'),
+  ];
+  local p2 = [
+    g.panel.timeSeries.new('a')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 0, 10),
+    g.panel.timeSeries.new('b')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 8, 10),
+    g.panel.timeSeries.new('c')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 16, 10),
+    g.panel.timeSeries.new('d')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 0, 18),
+    g.panel.timeSeries.new('e')
+    + g.panel.timeSeries.panelOptions.withGridPos(8, 8, 8, 18),
+  ];
+
+  test.case.new(
+    name='util.grid.makeGrid -- startY defined',
+    test=test.expect.eqDiff(
+      util.grid.makeGrid(p1, startY=10),
+      p2,
+    )
+  )
+)
++ (
+  local p1 = [
+    g.panel.timeSeries.new('a'),
+    g.panel.timeSeries.new('b'),
     g.panel.row.new('row'),
     g.panel.timeSeries.new('c'),
     g.panel.timeSeries.new('d'),
