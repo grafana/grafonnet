@@ -10,7 +10,6 @@
 * [folder](folder.md)
 * [librarypanel](librarypanel.md)
 * [panel](panel/index.md)
-* [playlist](playlist/index.md)
 * [preferences](preferences.md)
 * [publicdashboard](publicdashboard.md)
 * [query](query/index.md)

@@ -1,1 +1,1 @@
-import 'github.com/grafana/grafonnet/gen/grafonnet-v10.1.0/main.libsonnet'
+import 'github.com/grafana/grafonnet/gen/grafonnet-v10.2.0/main.libsonnet'

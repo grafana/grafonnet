@@ -28,7 +28,7 @@ local utils = import './utils.libsonnet';
           content: root.generateRawLib(schema),
         };
         acc
-        + {
+        {
           raw+:
             (if title in root.structure
              then [raw]
@@ -173,7 +173,7 @@ local utils = import './utils.libsonnet';
           'withRefresh',
           'withRefreshMixin',
           'withSchemaVersion',
-          'withStyle',
+          // 'withStyle', // removed in version 10.2.0
           'withTags',
           'withTagsMixin',
           'withTemplating',

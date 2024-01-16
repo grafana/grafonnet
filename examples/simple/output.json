@@ -17,7 +17,7 @@
             w: 24,
           },
           id: 1,
-          pluginVersion: 'v10.1.0',
+          pluginVersion: 'v10.2.0',
           targets: [
             {
               datasource: {
