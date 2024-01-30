@@ -92,7 +92,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-`new` creates a new override of type `byQuery`.
+`new` creates a new override of type `byFrameRefID`.
 #### fn byQuery.withPropertiesFromOptions
 
 ```jsonnet

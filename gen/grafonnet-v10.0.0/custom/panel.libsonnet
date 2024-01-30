@@ -163,7 +163,7 @@ local getPanelName(type) =
         byName: commonOverrideFunctions + { type:: 'byName' },
         byRegexp: commonOverrideFunctions + { type:: 'byRegexp' },
         byType: commonOverrideFunctions + { type:: 'byType' },
-        byQuery: commonOverrideFunctions + { type:: 'byQuery' },
+        byQuery: commonOverrideFunctions + { type:: 'byFrameRefID' },
         // TODO: byValue takes more complex `options` than string
         byValue: commonOverrideFunctions + { type:: 'byValue' },
       },
