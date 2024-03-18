@@ -27,8 +27,7 @@ local utils = import './utils.libsonnet';
           path: 'raw/' + title + '.libsonnet',
           content: root.generateRawLib(schema),
         };
-        acc
-        {
+        acc + {
           raw+:
             (if title in root.structure
              then [raw]

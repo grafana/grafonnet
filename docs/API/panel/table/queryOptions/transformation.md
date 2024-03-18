@@ -9,6 +9,7 @@
 * [`fn withFilterMixin(value)`](#fn-withfiltermixin)
 * [`fn withId(value)`](#fn-withid)
 * [`fn withOptions(value)`](#fn-withoptions)
+* [`fn withTopic(value)`](#fn-withtopic)
 * [`obj filter`](#obj-filter)
   * [`fn withId(value="")`](#fn-filterwithid)
   * [`fn withOptions(value)`](#fn-filterwithoptions)
@@ -74,6 +75,18 @@ PARAMETERS:
 
 Options to be passed to the transformer
 Valid options depend on the transformer id
+### fn withTopic
+
+```jsonnet
+withTopic(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"series"`, `"annotations"`, `"alertStates"`
+
+Where to pull DataFrames from as input to transformation
 ### obj filter
 
 

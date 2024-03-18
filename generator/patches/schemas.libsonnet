@@ -14,7 +14,10 @@ local utils = import '../utils.libsonnet';
         root.restructure,
         schemas
       )
-      + [root.getPanelSchema(version, schemas)],
+      + [
+        root.getPanelSchema(version, schemas),
+        root.getFolderSchema(),
+      ],
 
     panel:
       root.getMissingPanelSchemas(schemas)
@@ -70,6 +73,10 @@ local utils = import '../utils.libsonnet';
         } } } },
       },
     ),
+
+  // Folder schema got removed from CUE/grok in https://github.com/grafana/grafana/pull/79413
+  // This adds it back as it is a really simple object.
+  getFolderSchema(): import './custom_schemas/folder.json',
 
   // FIXME: Should we care about missing panel schemas at this level?
   getMissingPanelSchemas(schemas):
