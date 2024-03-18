@@ -1,0 +1,28 @@
+{
+  "info": { "title": "folder" },
+  "components": {
+    "schemas": {
+      "folder": {
+        "properties": {
+          "parentUid": {
+            "description": "only used if nested folders are enabled",
+            "type": "string"
+          },
+          "title": {
+            "description": "Folder title",
+            "type": "string"
+          },
+          "uid": {
+            "description": "Unique folder id",
+            "type": "string"
+          },
+        },
+        "required": [
+          "uid",
+          "title"
+        ],
+        "type": "object"
+      }
+    }
+  }
+}
