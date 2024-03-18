@@ -50,7 +50,7 @@
                "displayMode": "table"
             }
          },
-         "pluginVersion": "v10.2.0",
+         "pluginVersion": "v10.3.0",
          "targets": [
             {
                "datasource": {
@@ -128,7 +128,7 @@
                "displayMode": "table"
             }
          },
-         "pluginVersion": "v10.2.0",
+         "pluginVersion": "v10.3.0",
          "targets": [
             {
                "datasource": {
@@ -200,7 +200,7 @@
                "displayMode": "table"
             }
          },
-         "pluginVersion": "v10.2.0",
+         "pluginVersion": "v10.3.0",
          "targets": [
             {
                "datasource": {
@@ -245,7 +245,7 @@
                "displayMode": "table"
             }
          },
-         "pluginVersion": "v10.2.0",
+         "pluginVersion": "v10.3.0",
          "targets": [
             {
                "datasource": {
@@ -295,7 +295,7 @@
                "displayMode": "table"
             }
          },
-         "pluginVersion": "v10.2.0",
+         "pluginVersion": "v10.3.0",
          "targets": [
             {
                "datasource": {
@@ -352,7 +352,7 @@
                      "unit": "s"
                   }
                },
-               "pluginVersion": "v10.2.0",
+               "pluginVersion": "v10.3.0",
                "targets": [
                   {
                      "datasource": {
@@ -422,7 +422,7 @@
                      "displayMode": "table"
                   }
                },
-               "pluginVersion": "v10.2.0",
+               "pluginVersion": "v10.3.0",
                "targets": [
                   {
                      "datasource": {
@@ -487,7 +487,7 @@
                      "displayMode": "table"
                   }
                },
-               "pluginVersion": "v10.2.0",
+               "pluginVersion": "v10.3.0",
                "targets": [
                   {
                      "datasource": {
@@ -534,7 +534,7 @@
                      "displayMode": "table"
                   }
                },
-               "pluginVersion": "v10.2.0",
+               "pluginVersion": "v10.3.0",
                "targets": [
                   {
                      "datasource": {
@@ -595,7 +595,7 @@
                      "unit": "s"
                   }
                },
-               "pluginVersion": "v10.2.0",
+               "pluginVersion": "v10.3.0",
                "targets": [
                   {
                      "datasource": {
@@ -665,7 +665,7 @@
                      "displayMode": "table"
                   }
                },
-               "pluginVersion": "v10.2.0",
+               "pluginVersion": "v10.3.0",
                "targets": [
                   {
                      "datasource": {
