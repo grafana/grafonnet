@@ -13,13 +13,19 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
     + self.time.withFrom('now-6h')
     + self.time.withTo('now'),
 
-  withPanels(value): {
+  withPanels(value, setPanelIDs=true): {
     _panels:: if std.isArray(value) then value else [value],
-    panels: util.panel.setPanelIDs(self._panels),
+    panels:
+      if setPanelIDs
+      then util.panel.setPanelIDs(self._panels)
+      else self._panels,
   },
-  withPanelsMixin(value): {
+  withPanelsMixin(value, setPanelIDs=true): {
     _panels+:: if std.isArray(value) then value else [value],
-    panels: util.panel.setPanelIDs(self._panels),
+    panels:
+      if setPanelIDs
+      then util.panel.setPanelIDs(self._panels)
+      else self._panels,
   },
 
   graphTooltip+: {
