@@ -91,6 +91,93 @@ test.new(std.thisFile)
     )
   )
 )
++ (
+  local panelsWithIntentionalManualIDs = [
+    { type: 'timeseries' },
+    { type: 'row' },
+    { type: 'timeseries' },
+    { type: 'stat' },
+    {
+      type: 'row',
+      panels: [
+        { type: 'timeseries' },
+        { type: 'stat' },
+        { type: 'table', id: 500 },
+        { type: 'timeseries' },
+      ],
+    },
+    { type: 'table' },
+    { type: 'timeseries' },
+  ];
+
+  local expected = [
+    { type: 'timeseries', id: 1 },
+    { type: 'row', id: 2 },
+    { type: 'timeseries', id: 3 },
+    { type: 'stat', id: 4 },
+    {
+      type: 'row',
+      id: 5,
+      panels: [
+        { type: 'timeseries', id: 6 },
+        { type: 'stat', id: 7 },
+        { type: 'table', id: 500 },
+        { type: 'timeseries', id: 9 },
+      ],
+    },
+    { type: 'table', id: 10 },
+    { type: 'timeseries', id: 11 },
+  ];
+
+  local actual =
+    util.panel.setPanelIDs(
+      panelsWithIntentionalManualIDs,
+      overrideExistingIDs=false,
+    );
+
+  test.case.new(
+    name='Panel IDs are sanitized without overriding existing IDs',
+    test=test.expect.eqDiff(
+      actual=actual,
+      expected=expected,
+    )
+  )
+  + test.case.new(
+    name='Panel IDs validation - success',
+    test=test.expect.eqDiff(
+      actual=util.panel.validatePanelIDs(expected),
+      expected=true,
+    )
+  )
+)
++ (
+  local panelWithDuplicateIDs = [
+    { type: 'timeseries', id: 1 },
+    { type: 'row', id: 2 },
+    { type: 'timeseries', id: 3 },
+    { type: 'stat', id: 4 },
+    {
+      type: 'row',
+      id: 5,
+      panels: [
+        { type: 'timeseries', id: 6 },
+        { type: 'stat', id: 7 },
+        { type: 'table', id: 3 },
+        { type: 'timeseries', id: 9 },
+      ],
+    },
+    { type: 'table', id: 10 },
+    { type: 'timeseries', id: 11 },
+  ];
+
+  test.case.new(
+    name='Panel IDs validation - failure',
+    test=test.expect.eqDiff(
+      actual=util.panel.validatePanelIDs(panelWithDuplicateIDs),
+      expected=false,
+    )
+  )
+)
 
 // util.dashboard.getOptionsForCustomQuery
 + (

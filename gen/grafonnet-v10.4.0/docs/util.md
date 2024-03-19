@@ -11,6 +11,7 @@ Helper functions that work well with Grafonnet.
   * [`fn wrapPanels(panels, panelWidth, panelHeight, startY)`](#fn-gridwrappanels)
 * [`obj panel`](#obj-panel)
   * [`fn calculateLowestYforPanel(panel, panels)`](#fn-panelcalculatelowestyforpanel)
+  * [`fn getPanelIDs(panels)`](#fn-panelgetpanelids)
   * [`fn getPanelsBeforeNextRow(panels)`](#fn-panelgetpanelsbeforenextrow)
   * [`fn groupPanelsInRows(panels)`](#fn-panelgrouppanelsinrows)
   * [`fn mapToRows(func, panels)`](#fn-panelmaptorows)
@@ -18,9 +19,10 @@ Helper functions that work well with Grafonnet.
   * [`fn normalizeYInRow(rowPanel)`](#fn-panelnormalizeyinrow)
   * [`fn resolveCollapsedFlagOnRows(panels)`](#fn-panelresolvecollapsedflagonrows)
   * [`fn sanitizePanel(panel, defaultX=0, defaultY=0, defaultHeight=8, defaultWidth=8)`](#fn-panelsanitizepanel)
-  * [`fn setPanelIDs(panels)`](#fn-panelsetpanelids)
+  * [`fn setPanelIDs(panels, overrideExistingIDs=true)`](#fn-panelsetpanelids)
   * [`fn sortPanelsByXY(panels)`](#fn-panelsortpanelsbyxy)
   * [`fn sortPanelsInRow(rowPanel)`](#fn-panelsortpanelsinrow)
+  * [`fn validatePanelIDs(panels)`](#fn-panelvalidatepanelids)
 * [`obj string`](#obj-string)
   * [`fn slugify(string)`](#fn-stringslugify)
 
@@ -104,6 +106,18 @@ PARAMETERS:
 * **panels** (`array`)
 
 `calculateLowestYforPanel` calculates Y for a given `panel` from the `gridPos` of an array of `panels`. This function is used in `normalizeY`.
+
+#### fn panel.getPanelIDs
+
+```jsonnet
+panel.getPanelIDs(panels)
+```
+
+PARAMETERS:
+
+* **panels** (`array`)
+
+`getPanelIDs` returns an array with all panel IDs including IDs from panels in rows.
 
 #### fn panel.getPanelsBeforeNextRow
 
@@ -205,18 +219,18 @@ The default values for x,y,h,w are only applied if not already set.
 #### fn panel.setPanelIDs
 
 ```jsonnet
-panel.setPanelIDs(panels)
+panel.setPanelIDs(panels, overrideExistingIDs=true)
 ```
 
 PARAMETERS:
 
 * **panels** (`array`)
+* **overrideExistingIDs** (`bool`)
+   - default value: `true`
 
-`setPanelIDs` ensures that all `panels` have a unique ID, this functions is used in
-`dashboard.withPanels` and `dashboard.withPanelsMixin` to provide a consistent
-experience.
+`setPanelIDs` ensures that all `panels` have a unique ID, this function is used in `dashboard.withPanels` and `dashboard.withPanelsMixin` to provide a consistent experience.
 
-used in ../dashboard.libsonnet
+`overrideExistingIDs` can be set to not replace existing IDs, consider validating the IDs with `validatePanelIDs()` to ensure there are no duplicate IDs.
 
 #### fn panel.sortPanelsByXY
 
@@ -241,6 +255,18 @@ PARAMETERS:
 * **rowPanel** (`object`)
 
 `sortPanelsInRow` applies `sortPanelsByXY` on the panels in a rowPanel.
+
+#### fn panel.validatePanelIDs
+
+```jsonnet
+panel.validatePanelIDs(panels)
+```
+
+PARAMETERS:
+
+* **panels** (`array`)
+
+`validatePanelIDs` validates returns `false` if there are duplicate panel IDs in `panels`.
 
 ### obj string
 
