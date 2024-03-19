@@ -13,15 +13,29 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
     + self.time.withFrom('now-6h')
     + self.time.withTo('now'),
 
-  withPanels(value, setPanelIDs=true): {
-    _panels:: if std.isArray(value) then value else [value],
+  '#withPanels':: d.func.new(
+    '`withPanels` sets the panels on a dashboard authoratively. It automatically adds IDs to the panels, this can be disabled with `setPanelIDs=false`.',
+    args=[
+      d.arg('panels', d.T.array),
+      d.arg('setPanelIDs', d.T.bool, default=true),
+    ]
+  ),
+  withPanels(panels, setPanelIDs=true): {
+    _panels:: if std.isArray(panels) then panels else [panels],
     panels:
       if setPanelIDs
       then util.panel.setPanelIDs(self._panels)
       else self._panels,
   },
-  withPanelsMixin(value, setPanelIDs=true): {
-    _panels+:: if std.isArray(value) then value else [value],
+  '#withPanelsMixin':: d.func.new(
+    '`withPanelsMixin` adds more panels to a dashboard.',
+    args=[
+      d.arg('panels', d.T.array),
+      d.arg('setPanelIDs', d.T.bool, default=true),
+    ]
+  ),
+  withPanelsMixin(panels, setPanelIDs=true): {
+    _panels+:: if std.isArray(panels) then panels else [panels],
     panels:
       if setPanelIDs
       then util.panel.setPanelIDs(self._panels)
