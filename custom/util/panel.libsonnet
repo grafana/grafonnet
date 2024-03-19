@@ -4,13 +4,12 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 {
   local this = self,
 
+  // used in ../dashboard.libsonnet
   '#setPanelIDs':: d.func.new(
     |||
-      `setPanelIDs` ensures that all `panels` have a unique ID, this functions is used in
-      `dashboard.withPanels` and `dashboard.withPanelsMixin` to provide a consistent
-      experience.
+      `setPanelIDs` ensures that all `panels` have a unique ID, this function is used in `dashboard.withPanels` and `dashboard.withPanelsMixin` to provide a consistent experience.
 
-      used in ../dashboard.libsonnet
+      `overrideExistingIDs` can be set to not replace existing IDs, consider validating the IDs with `validatePanelIDs()` to ensure there are no duplicate IDs.
     |||,
     args=[
       d.arg('panels', d.T.array),
@@ -56,6 +55,38 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
         { index: start, panels: [] }
       ).panels;
     infunc(panels),
+
+  '#getPanelIDs':: d.func.new(
+    |||
+      `getPanelIDs` returns an array with all panel IDs including IDs from panels in rows.
+    |||,
+    args=[
+      d.arg('panels', d.T.array),
+    ]
+  ),
+  getPanelIDs(panels):
+    std.flattenArrays(
+      std.map(
+        function(panel)
+          [panel.id]
+          + (if panel.type == 'row'
+             then this.getPanelIDs(std.get(panel, 'panels', []))
+             else []),
+        panels
+      )
+    ),
+
+  '#validatePanelIDs':: d.func.new(
+    |||
+      `validatePanelIDs` validates returns `false` if there are duplicate panel IDs in `panels`.
+    |||,
+    args=[
+      d.arg('panels', d.T.array),
+    ]
+  ),
+  validatePanelIDs(panels):
+    local ids = this.getPanelIDs(panels);
+    std.set(ids) == std.sort(ids),
 
   '#sanitizePanel':: d.func.new(
     |||
