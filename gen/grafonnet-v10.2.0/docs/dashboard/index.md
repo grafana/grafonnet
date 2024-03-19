@@ -19,8 +19,8 @@ grafonnet.dashboard
 * [`fn withLinks(value)`](#fn-withlinks)
 * [`fn withLinksMixin(value)`](#fn-withlinksmixin)
 * [`fn withLiveNow(value=true)`](#fn-withlivenow)
-* [`fn withPanels(value)`](#fn-withpanels)
-* [`fn withPanelsMixin(value)`](#fn-withpanelsmixin)
+* [`fn withPanels(panels, setPanelIDs=true)`](#fn-withpanels)
+* [`fn withPanelsMixin(panels, setPanelIDs=true)`](#fn-withpanelsmixin)
 * [`fn withRefresh(value)`](#fn-withrefresh)
 * [`fn withSchemaVersion(value=36)`](#fn-withschemaversion)
 * [`fn withTags(value)`](#fn-withtags)
@@ -196,25 +196,29 @@ avoid dashboards presenting stale live data
 ### fn withPanels
 
 ```jsonnet
-withPanels(value)
+withPanels(panels, setPanelIDs=true)
 ```
 
 PARAMETERS:
 
-* **value** (`array`)
+* **panels** (`array`)
+* **setPanelIDs** (`bool`)
+   - default value: `true`
 
-
+`withPanels` sets the panels on a dashboard authoratively. It automatically adds IDs to the panels, this can be disabled with `setPanelIDs=false`.
 ### fn withPanelsMixin
 
 ```jsonnet
-withPanelsMixin(value)
+withPanelsMixin(panels, setPanelIDs=true)
 ```
 
 PARAMETERS:
 
-* **value** (`array`)
+* **panels** (`array`)
+* **setPanelIDs** (`bool`)
+   - default value: `true`
 
-
+`withPanelsMixin` adds more panels to a dashboard.
 ### fn withRefresh
 
 ```jsonnet
