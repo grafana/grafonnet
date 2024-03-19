@@ -79,7 +79,9 @@ local utils = import '../utils.libsonnet';
   // This adds it back as it is a really simple object.
   getFolderSchema(version, schemas):
     local allSchemaTitles = std.map(function(x) x.info.title, schemas);
+    local ignoreOnVersions = ['v10.0.0', 'v9.5.0', 'v9.4.0'];
     if !std.member(allSchemaTitles, 'folder')
+       && !std.member(ignoreOnVersions, version)
     then (import './custom_schemas/folder.json')
     else {},
 

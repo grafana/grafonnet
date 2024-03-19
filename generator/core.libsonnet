@@ -170,7 +170,7 @@ local utils = import './utils.libsonnet';
           'withPanels',
           'withPanelsMixin',
           'withRefresh',
-          'withRefreshMixin',
+          // 'withRefreshMixin', // changed type to only "string" in 10.4.0, was oneOf with an enum before
           'withSchemaVersion',
           // 'withStyle', // removed in version 10.2.0
           'withTags',

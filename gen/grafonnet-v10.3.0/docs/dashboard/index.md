@@ -22,7 +22,6 @@ grafonnet.dashboard
 * [`fn withPanels(value)`](#fn-withpanels)
 * [`fn withPanelsMixin(value)`](#fn-withpanelsmixin)
 * [`fn withRefresh(value)`](#fn-withrefresh)
-* [`fn withRefreshMixin(value)`](#fn-withrefreshmixin)
 * [`fn withSchemaVersion(value=36)`](#fn-withschemaversion)
 * [`fn withTags(value)`](#fn-withtags)
 * [`fn withTagsMixin(value)`](#fn-withtagsmixin)
@@ -219,17 +218,6 @@ PARAMETERS:
 
 ```jsonnet
 withRefresh(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-Refresh rate of dashboard. Represented via interval string, e.g. "5s", "1m", "1h", "1d".
-### fn withRefreshMixin
-
-```jsonnet
-withRefreshMixin(value)
 ```
 
 PARAMETERS:
