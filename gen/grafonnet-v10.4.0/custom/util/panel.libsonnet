@@ -14,9 +14,10 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
     |||,
     args=[
       d.arg('panels', d.T.array),
+      d.arg('overrideExistingIDs', d.T.bool, default=true),
     ]
   ),
-  setPanelIDs(panels):
+  setPanelIDs(panels, overrideExistingIDs=true):
     local infunc(panels, start=1) =
       std.foldl(
         function(acc, panel)
@@ -31,7 +32,12 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 
             panels+: [
               panel
-              + { id: acc.index }
+              + (
+                if overrideExistingIDs
+                   || std.get(panel, 'id', null) == null
+                then { id: acc.index }
+                else {}
+              )
               + (
                 if panel.type == 'row'
                    && 'panels' in panel

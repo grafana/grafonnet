@@ -18,7 +18,7 @@ Helper functions that work well with Grafonnet.
   * [`fn normalizeYInRow(rowPanel)`](#fn-panelnormalizeyinrow)
   * [`fn resolveCollapsedFlagOnRows(panels)`](#fn-panelresolvecollapsedflagonrows)
   * [`fn sanitizePanel(panel, defaultX=0, defaultY=0, defaultHeight=8, defaultWidth=8)`](#fn-panelsanitizepanel)
-  * [`fn setPanelIDs(panels)`](#fn-panelsetpanelids)
+  * [`fn setPanelIDs(panels, overrideExistingIDs=true)`](#fn-panelsetpanelids)
   * [`fn sortPanelsByXY(panels)`](#fn-panelsortpanelsbyxy)
   * [`fn sortPanelsInRow(rowPanel)`](#fn-panelsortpanelsinrow)
 * [`obj string`](#obj-string)
@@ -205,12 +205,14 @@ The default values for x,y,h,w are only applied if not already set.
 #### fn panel.setPanelIDs
 
 ```jsonnet
-panel.setPanelIDs(panels)
+panel.setPanelIDs(panels, overrideExistingIDs=true)
 ```
 
 PARAMETERS:
 
 * **panels** (`array`)
+* **overrideExistingIDs** (`bool`)
+   - default value: `true`
 
 `setPanelIDs` ensures that all `panels` have a unique ID, this functions is used in
 `dashboard.withPanels` and `dashboard.withPanelsMixin` to provide a consistent
