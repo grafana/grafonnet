@@ -27,8 +27,6 @@
                                       else [value]) },
   '#withRefresh': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string', 'string'] }], help: 'Refresh rate of dashboard. Represented via interval string, e.g. "5s", "1m", "1h", "1d".' } },
   withRefresh(value): { refresh: value },
-  '#withRefreshMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string', 'string'] }], help: 'Refresh rate of dashboard. Represented via interval string, e.g. "5s", "1m", "1h", "1d".' } },
-  withRefreshMixin(value): { refresh+: value },
   '#withSchemaVersion': { 'function': { args: [{ default: 36, enums: null, name: 'value', type: ['integer'] }], help: "Version of the JSON schema, incremented each time a Grafana update brings\nchanges to said schema.\nTODO this is the existing schema numbering system. It will be replaced by Thema's themaVersion" } },
   withSchemaVersion(value=36): { schemaVersion: value },
   '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'Tags associated with dashboard.' } },
