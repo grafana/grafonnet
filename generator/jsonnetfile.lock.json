@@ -4,12 +4,12 @@
     {
       "source": {
         "git": {
-          "remote": "https://github.com/Duologic/jsonnet-libsonnet.git",
+          "remote": "https://github.com/crdsonnet/astsonnet.git",
           "subdir": ""
         }
       },
-      "version": "bd08bf5f0ffc156bd755b916367bceb7fbe3de03",
-      "sum": "ZYc3KrgzQIciDlQ786i2iHeqEZqjnB8KlPiX6w8Mp38="
+      "version": "9ec96767a318858430e547f2d9204c97a4d2095d",
+      "sum": "JvQ7Uj20CHVt+xXQ/t2pAWTtrFFcYxz6Sd2xIIpVJUo="
     },
     {
       "source": {
@@ -18,8 +18,8 @@
           "subdir": "crdsonnet"
         }
       },
-      "version": "49e60058145609c36722251e4b9f65dd136fc7b2",
-      "sum": "jDeXDXH/CDBMJTRNs0bbYX5BVxCF/eRqkS/H73wa1qU="
+      "version": "c099c057fc446baab1d32e7710e924e1d8cd56bc",
+      "sum": "e67TAUmkXDuMuK7nvRKaxA6tLb7wpuVvtUMP8FCBMvc="
     },
     {
       "source": {
@@ -38,8 +38,8 @@
           "subdir": "doc-util"
         }
       },
-      "version": "fd8de9039b3c06da77d635a3a8289809a5bfb542",
-      "sum": "mFebrE9fhyAKW4zbnidcjVFupziN5LPA/Z7ii94uCzs="
+      "version": "6ac6c69685b8c29c54515448eaca583da2d88150",
+      "sum": "BrAL/k23jq+xy9oA7TWIhUx07dsA/QLm3g7ktCwe//U="
     },
     {
       "source": {
@@ -48,8 +48,8 @@
           "subdir": ""
         }
       },
-      "version": "0256a910ac71f0f842696d7bca0bf01ea77eb654",
-      "sum": "zBOpb1oTNvXdq9RF6yzTHill5r1YTJLBBoqyx4JYtAg="
+      "version": "fc2e57a8839902ed4ba6cab5a99d642500f7102b",
+      "sum": "43waffw1QzvpY4rKcWoo3L7Vpee+DCYexwLDd5cPG0M="
     }
   ],
   "legacyImports": false
