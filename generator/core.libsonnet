@@ -27,8 +27,7 @@ local utils = import './utils.libsonnet';
           path: 'raw/' + title + '.libsonnet',
           content: root.generateRawLib(schema),
         };
-        acc
-        {
+        acc + {
           raw+:
             (if title in root.structure
              then [raw]
@@ -171,7 +170,7 @@ local utils = import './utils.libsonnet';
           'withPanels',
           'withPanelsMixin',
           'withRefresh',
-          'withRefreshMixin',
+          // 'withRefreshMixin', // changed type to only "string" in 10.4.0, was oneOf with an enum before
           'withSchemaVersion',
           // 'withStyle', // removed in version 10.2.0
           'withTags',

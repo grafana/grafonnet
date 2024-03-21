@@ -97,10 +97,10 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
           ),
           withCurrent(key, value=key): {
             local multi(v) =
-              if self.multi
-                 && std.isArray(v)
-              then v
-              else [v],
+              if std.get(self, 'multi', false)
+                 && !std.isArray(v)
+              then [v]
+              else v,
             current: {
               selected: false,
               text: multi(key),
@@ -132,7 +132,7 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
               |||,
               args=[
                 d.arg('value', d.T.boolean, default=true),
-                d.arg('customAllValue', d.T.boolean, default=null),
+                d.arg('customAllValue', d.T.string, default=null),
               ]
             ),
             withIncludeAll(value=true, customAllValue=null): {
