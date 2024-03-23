@@ -5,7 +5,15 @@
   panelOptions+:
     {
       '#withType': { 'function': { args: [], help: '' } },
-      withType(): { type: 'canvas' },
+      withType(): {
+        type: 'canvas',
+      },
     },
 }
-+ { panelOptions+: { '#withType':: {} } }
++ {
+  panelOptions+: {
+    '#withType':: {
+
+    },
+  },
+}

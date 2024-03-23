@@ -2,5 +2,7 @@
 {
   '#': { help: 'grafonnet.panel.canvas', name: 'canvas' },
   '#withType': { 'function': { args: [], help: '' } },
-  withType(): { type: 'canvas' },
+  withType(): {
+    type: 'canvas',
+  },
 }

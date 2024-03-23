@@ -2,5 +2,7 @@
 {
   '#': { help: 'grafonnet.panel.candlestick', name: 'candlestick' },
   '#withType': { 'function': { args: [], help: '' } },
-  withType(): { type: 'candlestick' },
+  withType(): {
+    type: 'candlestick',
+  },
 }

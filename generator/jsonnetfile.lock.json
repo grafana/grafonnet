@@ -8,8 +8,8 @@
           "subdir": ""
         }
       },
-      "version": "9ec96767a318858430e547f2d9204c97a4d2095d",
-      "sum": "JvQ7Uj20CHVt+xXQ/t2pAWTtrFFcYxz6Sd2xIIpVJUo="
+      "version": "a771663cb9594cd10b30815933fe55554e6a3755",
+      "sum": "k/SJ+F+jjdg+dBMKczPEjcYCEuQ6v0BROdXKdXOCi9o="
     },
     {
       "source": {
@@ -18,8 +18,8 @@
           "subdir": "crdsonnet"
         }
       },
-      "version": "c099c057fc446baab1d32e7710e924e1d8cd56bc",
-      "sum": "e67TAUmkXDuMuK7nvRKaxA6tLb7wpuVvtUMP8FCBMvc="
+      "version": "055776f0edb0d20d1f347795f8e1a8578afd21d4",
+      "sum": "zNOFzroEVuERFyHsV6nVqlQoFyUMHgiceLOQvuGc2Rk="
     },
     {
       "source": {
@@ -48,8 +48,8 @@
           "subdir": ""
         }
       },
-      "version": "fc2e57a8839902ed4ba6cab5a99d642500f7102b",
-      "sum": "43waffw1QzvpY4rKcWoo3L7Vpee+DCYexwLDd5cPG0M="
+      "version": "63d430b69a95741061c2f7fc9d84b1a778511d9c",
+      "sum": "qiZi3axUSXCVzKUF83zSAxklwrnitMmrDK4XAfjPMdE="
     }
   ],
   "legacyImports": false
