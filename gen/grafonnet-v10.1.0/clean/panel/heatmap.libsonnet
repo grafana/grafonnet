@@ -7,41 +7,35 @@
       '#withType': { 'function': { args: [], help: '' } },
       withType(): { type: 'heatmap' },
     },
-  fieldConfig+:
+  fieldConfig+: { defaults+: { custom+:
     {
-      defaults+:
+      '#withHideFrom': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'TODO docs' } },
+      withHideFrom(value): { fieldConfig+: { defaults+: { custom+: { hideFrom: value } } } },
+      '#withHideFromMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'TODO docs' } },
+      withHideFromMixin(value): { fieldConfig+: { defaults+: { custom+: { hideFrom+: value } } } },
+      hideFrom+:
         {
-          custom+:
-            {
-              '#withHideFrom': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'TODO docs' } },
-              withHideFrom(value): { fieldConfig+: { defaults+: { custom+: { hideFrom: value } } } },
-              '#withHideFromMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'TODO docs' } },
-              withHideFromMixin(value): { fieldConfig+: { defaults+: { custom+: { hideFrom+: value } } } },
-              hideFrom+:
-                {
-                  '#withLegend': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
-                  withLegend(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { legend: value } } } } },
-                  '#withTooltip': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
-                  withTooltip(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { tooltip: value } } } } },
-                  '#withViz': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
-                  withViz(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { viz: value } } } } },
-                },
-              '#withScaleDistribution': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'TODO docs' } },
-              withScaleDistribution(value): { fieldConfig+: { defaults+: { custom+: { scaleDistribution: value } } } },
-              '#withScaleDistributionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'TODO docs' } },
-              withScaleDistributionMixin(value): { fieldConfig+: { defaults+: { custom+: { scaleDistribution+: value } } } },
-              scaleDistribution+:
-                {
-                  '#withLinearThreshold': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
-                  withLinearThreshold(value): { fieldConfig+: { defaults+: { custom+: { scaleDistribution+: { linearThreshold: value } } } } },
-                  '#withLog': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
-                  withLog(value): { fieldConfig+: { defaults+: { custom+: { scaleDistribution+: { log: value } } } } },
-                  '#withType': { 'function': { args: [{ default: null, enums: ['linear', 'log', 'ordinal', 'symlog'], name: 'value', type: ['string'] }], help: 'TODO docs' } },
-                  withType(value): { fieldConfig+: { defaults+: { custom+: { scaleDistribution+: { type: value } } } } },
-                },
-            },
+          '#withLegend': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
+          withLegend(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { legend: value } } } } },
+          '#withTooltip': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
+          withTooltip(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { tooltip: value } } } } },
+          '#withViz': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
+          withViz(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { viz: value } } } } },
         },
-    },
+      '#withScaleDistribution': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'TODO docs' } },
+      withScaleDistribution(value): { fieldConfig+: { defaults+: { custom+: { scaleDistribution: value } } } },
+      '#withScaleDistributionMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'TODO docs' } },
+      withScaleDistributionMixin(value): { fieldConfig+: { defaults+: { custom+: { scaleDistribution+: value } } } },
+      scaleDistribution+:
+        {
+          '#withLinearThreshold': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
+          withLinearThreshold(value): { fieldConfig+: { defaults+: { custom+: { scaleDistribution+: { linearThreshold: value } } } } },
+          '#withLog': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: '' } },
+          withLog(value): { fieldConfig+: { defaults+: { custom+: { scaleDistribution+: { log: value } } } } },
+          '#withType': { 'function': { args: [{ default: null, enums: ['linear', 'log', 'ordinal', 'symlog'], name: 'value', type: ['string'] }], help: 'TODO docs' } },
+          withType(value): { fieldConfig+: { defaults+: { custom+: { scaleDistribution+: { type: value } } } } },
+        },
+    } } },
   options+:
     {
       '#withCalculate': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'Controls if the heatmap should be calculated from data' } },

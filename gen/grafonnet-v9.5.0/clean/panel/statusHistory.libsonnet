@@ -7,32 +7,26 @@
       '#withType': { 'function': { args: [], help: '' } },
       withType(): { type: 'status-history' },
     },
-  fieldConfig+:
+  fieldConfig+: { defaults+: { custom+:
     {
-      defaults+:
+      '#withHideFrom': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'TODO docs' } },
+      withHideFrom(value): { fieldConfig+: { defaults+: { custom+: { hideFrom: value } } } },
+      '#withHideFromMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'TODO docs' } },
+      withHideFromMixin(value): { fieldConfig+: { defaults+: { custom+: { hideFrom+: value } } } },
+      hideFrom+:
         {
-          custom+:
-            {
-              '#withHideFrom': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'TODO docs' } },
-              withHideFrom(value): { fieldConfig+: { defaults+: { custom+: { hideFrom: value } } } },
-              '#withHideFromMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'TODO docs' } },
-              withHideFromMixin(value): { fieldConfig+: { defaults+: { custom+: { hideFrom+: value } } } },
-              hideFrom+:
-                {
-                  '#withLegend': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
-                  withLegend(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { legend: value } } } } },
-                  '#withTooltip': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
-                  withTooltip(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { tooltip: value } } } } },
-                  '#withViz': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
-                  withViz(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { viz: value } } } } },
-                },
-              '#withFillOpacity': { 'function': { args: [{ default: 70, enums: null, name: 'value', type: ['integer'] }], help: '' } },
-              withFillOpacity(value=70): { fieldConfig+: { defaults+: { custom+: { fillOpacity: value } } } },
-              '#withLineWidth': { 'function': { args: [{ default: 1, enums: null, name: 'value', type: ['integer'] }], help: '' } },
-              withLineWidth(value=1): { fieldConfig+: { defaults+: { custom+: { lineWidth: value } } } },
-            },
+          '#withLegend': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
+          withLegend(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { legend: value } } } } },
+          '#withTooltip': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
+          withTooltip(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { tooltip: value } } } } },
+          '#withViz': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
+          withViz(value=true): { fieldConfig+: { defaults+: { custom+: { hideFrom+: { viz: value } } } } },
         },
-    },
+      '#withFillOpacity': { 'function': { args: [{ default: 70, enums: null, name: 'value', type: ['integer'] }], help: '' } },
+      withFillOpacity(value=70): { fieldConfig+: { defaults+: { custom+: { fillOpacity: value } } } },
+      '#withLineWidth': { 'function': { args: [{ default: 1, enums: null, name: 'value', type: ['integer'] }], help: '' } },
+      withLineWidth(value=1): { fieldConfig+: { defaults+: { custom+: { lineWidth: value } } } },
+    } } },
   options+:
     {
       '#withLegend': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'TODO docs' } },

@@ -4,11 +4,20 @@
     {
       "source": {
         "git": {
+          "remote": "https://github.com/crdsonnet/astsonnet.git",
+          "subdir": ""
+        }
+      },
+      "version": "main"
+    },
+    {
+      "source": {
+        "git": {
           "remote": "https://github.com/crdsonnet/crdsonnet.git",
           "subdir": "crdsonnet"
         }
       },
-      "version": "master"
+      "version": "astsonnet"
     }
   ],
   "legacyImports": true

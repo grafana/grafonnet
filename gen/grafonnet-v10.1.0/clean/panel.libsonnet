@@ -274,17 +274,14 @@
               withType(value): { type: value },
             },
         },
-      threshold+:
+      threshold+: { step+:
         {
-          step+:
-            {
-              '#': { help: '', name: 'step' },
-              '#withColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Color represents the color of the visual change that will occur in the dashboard when the threshold value is met or exceeded.' } },
-              withColor(value): { color: value },
-              '#withValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number', 'null'] }], help: 'Value represents a specified metric for the threshold, which triggers a visual change in the dashboard when this value is met or exceeded.\nNulls currently appear here when serializing -Infinity to JSON.' } },
-              withValue(value): { value: value },
-            },
-        },
+          '#': { help: '', name: 'step' },
+          '#withColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Color represents the color of the visual change that will occur in the dashboard when the threshold value is met or exceeded.' } },
+          withColor(value): { color: value },
+          '#withValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number', 'null'] }], help: 'Value represents a specified metric for the threshold, which triggers a visual change in the dashboard when this value is met or exceeded.\nNulls currently appear here when serializing -Infinity to JSON.' } },
+          withValue(value): { value: value },
+        } },
       override+:
         {
           '#': { help: '', name: 'override' },

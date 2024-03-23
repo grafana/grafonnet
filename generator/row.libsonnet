@@ -1,4 +1,4 @@
-local j = import 'github.com/Duologic/jsonnet-libsonnet/main.libsonnet';
+local a = import 'github.com/crdsonnet/astsonnet/main.libsonnet';
 local crdsonnet = import 'github.com/crdsonnet/crdsonnet/crdsonnet/main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
@@ -44,9 +44,9 @@ local utils = import './utils.libsonnet';
         title,
       );
 
-    utils.addDoc(ast, title, 'panel.').toString(break='\n')
+    utils.addDoc(ast, title, 'panel.').toString()
     + '\n +'
-    + j.parenthesis(
-      j.importF('../../custom/row.libsonnet'),
-    ).toString(break='\n'),
+    + a.parenthesis.new(
+      a.import_statement.new('../../custom/row.libsonnet'),
+    ).toString(),
 }

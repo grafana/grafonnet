@@ -1,5 +1,5 @@
-local j = import 'github.com/Duologic/jsonnet-libsonnet/main.libsonnet';
-local jutils = import 'github.com/Duologic/jsonnet-libsonnet/utils.libsonnet';
+local a = import 'github.com/crdsonnet/astsonnet/main.libsonnet';
+local autils = import 'github.com/crdsonnet/astsonnet/utils.libsonnet';
 local crdsonnet = import 'github.com/crdsonnet/crdsonnet/crdsonnet/main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
@@ -13,13 +13,13 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
     local grouped = self.groupFields(ast, groupings);
     local copied = self.copyFields(ast, copy);
 
-    jutils.deepMergeObjects(grouped + copied),
+    autils.deepMergeObjects(grouped + copied),
 
   groupFields(ast, groupings):
     [
-      jutils.setFieldsAtPath(
+      autils.setFieldsAtPath(
         key,
-        jutils.getFieldsFromPaths(ast, insertDocPath(groupings[key]))
+        autils.getFieldsFromPaths(ast, insertDocPath(groupings[key]))
       )
       for key in std.objectFields(groupings)
     ],
@@ -41,25 +41,24 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 
   copyFields(ast, toCopy):
     [
-      local obj = jutils.getFieldFromPath(ast, copy.from);
+      local obj = autils.getFieldFromPath(ast, copy.from);
       local splitFromPath = xtd.string.splitEscape(copy.to, '.');
       local lastKey = xtd.array.slice(splitFromPath, -1)[0];
       local updated = self.updatePackageName(lastKey, obj.expr.members);
-      jutils.setFieldsAtPath(copy.to, updated)
+      autils.setFieldsAtPath(copy.to, updated)
       for copy in toCopy
     ],
 
   updatePackageName(name, fields):
     std.map(
       function(field)
-        if jutils.isField(field)
-           && jutils.fieldnameValue(field.fieldname) == '#'
-           && jutils.type(field.expr) == 'literal'
+        if autils.isField(field)
+           && autils.fieldnameValue(field.fieldname) == '#'
+           && autils.type(field.expr) == 'literal'
         then
-          j.field.field(
-            j.fieldname.string('#'),
-            j.literal(d.package.newSub(name, '')),
-            nobreak=true,
+          a.field.new(
+            a.string.new('#'),
+            a.literal.new(d.package.newSub(name, '')),
           )
         else field,
       fields

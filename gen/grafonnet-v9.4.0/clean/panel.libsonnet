@@ -276,21 +276,18 @@
               withType(value): { type: value },
             },
         },
-      threshold+:
+      threshold+: { step+:
         {
-          step+:
-            {
-              '#': { help: '', name: 'step' },
-              '#withColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'TODO docs' } },
-              withColor(value): { color: value },
-              '#withIndex': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['integer'] }], help: 'Threshold index, an old property that is not needed an should only appear in older dashboards' } },
-              withIndex(value): { index: value },
-              '#withState': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'TODO docs\nTODO are the values here enumerable into a disjunction?\nSome seem to be listed in typescript comment' } },
-              withState(value): { state: value },
-              '#withValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: 'TODO docs\nFIXME the corresponding typescript field is required/non-optional, but nulls currently appear here when serializing -Infinity to JSON' } },
-              withValue(value): { value: value },
-            },
-        },
+          '#': { help: '', name: 'step' },
+          '#withColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'TODO docs' } },
+          withColor(value): { color: value },
+          '#withIndex': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['integer'] }], help: 'Threshold index, an old property that is not needed an should only appear in older dashboards' } },
+          withIndex(value): { index: value },
+          '#withState': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'TODO docs\nTODO are the values here enumerable into a disjunction?\nSome seem to be listed in typescript comment' } },
+          withState(value): { state: value },
+          '#withValue': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: 'TODO docs\nFIXME the corresponding typescript field is required/non-optional, but nulls currently appear here when serializing -Infinity to JSON' } },
+          withValue(value): { value: value },
+        } },
       override+:
         {
           '#': { help: '', name: 'override' },

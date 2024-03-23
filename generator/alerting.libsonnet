@@ -1,4 +1,4 @@
-local j = import 'github.com/Duologic/jsonnet-libsonnet/main.libsonnet';
+local a = import 'github.com/crdsonnet/astsonnet/main.libsonnet';
 local crdsonnet = import 'github.com/crdsonnet/crdsonnet/crdsonnet/main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
@@ -85,7 +85,7 @@ local utils = import './utils.libsonnet';
       ast,
       displayName,
       'alerting.'
-    ).toString(break='\n'),
+    ).toString(),
 
   generateCleanLib(name, displayName, spec):
     local ast =
@@ -117,38 +117,36 @@ local utils = import './utils.libsonnet';
       newAST,
       displayName,
       'alerting.'
-    ).toString(break='\n')
+    ).toString()
     + (if 'custom' in structure
        then
          '\n +'
-         + j.parenthesis(
-           j.importF('../../custom/' + structure.custom),
-         ).toString(break='\n')
+         + a.parenthesis.new(
+           a.import_statement.new('../../custom/' + structure.custom),
+         ).toString()
        else ''),
 
   alertingIndex(files):
-    j.object.members(
+    a.object.new(
       [
-        j.field.field(
-          j.fieldname.string('#'),
-          j.literal(  // render docsonnet as literal to avoid docsonnet dependency
+        a.field.new(
+          a.string.new('#'),
+          a.literal.new(  // render docsonnet as literal to avoid docsonnet dependency
             d.package.newSub(
               'alerting',
               'grafonnet.alerting'
             ),
           ),
-          nobreak=true,
         ),
       ]
       + [
-        j.field.field(
-          j.fieldname.string(file.title),
-          j.importF(file.path),
-          nobreak=true,
+        a.field.new(
+          a.string.new(file.title),
+          a.import_statement.new(file.path),
         )
         for file in files
       ]
-    ).toString(break='\n'),
+    ).toString(),
 
   structure: {
     contactPoint: {
