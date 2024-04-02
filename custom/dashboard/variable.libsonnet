@@ -255,10 +255,18 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
               d.arg('metric', d.T.string, default=''),
             ]
           ),
+          '#withQueryResult':: d.func.new(
+            'Construct a Prometheus template variable using `label_values()`.',
+            args=[
+              d.arg('query', d.T.string),
+            ]
+          ),
           withLabelValues(label, metric=''):
             if metric == ''
             then var.withQuery('label_values(%s)' % label)
             else var.withQuery('label_values(%s, %s)' % [metric, label]),
+          withQueryResult(query):
+            var.withQuery('query_result(%s)' % query),
         },
 
         // Deliberately undocumented, use `refresh` below
