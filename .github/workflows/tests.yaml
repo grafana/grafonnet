@@ -17,12 +17,14 @@ jobs:
 
       - name: Install jsonnet
         run: |
-          wget -qO- https://github.com/google/go-jsonnet/releases/download/v${{ matrix.jsonnet-version }}/go-jsonnet_${{ matrix.jsonnet-version }}_Linux_x86_64.tar.gz \
+          J_VER=${{ matrix.jsonnet-version }}
+          wget -qO- https://github.com/google/go-jsonnet/releases/download/v${J_VER}/go-jsonnet_${J_VER}_Linux_x86_64.tar.gz \
             | tar -xvz --one-top-level=$HOME/.local/bin
 
       - name: Install jsonnet-bundler
         run: |
-          wget -qO "$HOME/.local/bin/jb" https://github.com/jsonnet-bundler/jsonnet-bundler/releases/download/v${{ matrix.jsonnet-bundler-version }}/jb-linux-amd64
+          JB_VER={{ matrix.jsonnet-bundler-version }}
+          wget -qO "$HOME/.local/bin/jb" https://github.com/jsonnet-bundler/jsonnet-bundler/releases/download/v${JB_VER}/jb-linux-amd64
           chmod u+x "$HOME/.local/bin/jb"
 
       - name: Run tests
