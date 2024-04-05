@@ -6,7 +6,6 @@ on:
 
 jobs:
   publish-docs:
-    name: Publish docs
     runs-on: ubuntu-latest
 
     steps:
