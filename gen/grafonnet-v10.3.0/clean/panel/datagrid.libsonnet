@@ -5,12 +5,24 @@
   panelOptions+:
     {
       '#withType': { 'function': { args: [], help: '' } },
-      withType(): { type: 'datagrid' },
+      withType(): {
+        type: 'datagrid',
+      },
     },
   options+:
     {
       '#withSelectedSeries': { 'function': { args: [{ default: 0, enums: null, name: 'value', type: ['integer'] }], help: '' } },
-      withSelectedSeries(value=0): { options+: { selectedSeries: value } },
+      withSelectedSeries(value=0): {
+        options+: {
+          selectedSeries: value,
+        },
+      },
     },
 }
-+ { panelOptions+: { '#withType':: {} } }
++ {
+  panelOptions+: {
+    '#withType':: {
+
+    },
+  },
+}

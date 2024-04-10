@@ -1,4 +1,4 @@
-local j = import 'github.com/Duologic/jsonnet-libsonnet/main.libsonnet';
+local a = import 'github.com/crdsonnet/astsonnet/main.libsonnet';
 local crdsonnet = import 'github.com/crdsonnet/crdsonnet/crdsonnet/main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
@@ -48,19 +48,20 @@ local utils = import './utils.libsonnet';
       + self.moveOptions(subSchema)
       + self.moveFieldConfig(subSchema);
 
+    local render = crdsonnet.openapi.render(
+      title,
+      customSubSchema,
+      schema,
+      refactor.ASTProcessor,
+      addNewFunction=false,
+    );
     local ast =
       utils.unwrapFromCRDsonnet(
-        crdsonnet.openapi.render(
-          title,
-          customSubSchema,
-          schema,
-          refactor.ASTProcessor,
-          addNewFunction=false,
-        ),
+        render,
         title,
       );
 
-    utils.addDoc(ast, title, 'panel.').toString(break='\n'),
+    utils.addDoc(ast, title, 'panel.').toString(),
 
   generateCleanLib(schema):
     local title = schema.info.title;
@@ -105,27 +106,25 @@ local utils = import './utils.libsonnet';
       copy,
     );
 
-    j.parenthesis(
-      j.importF('../../clean/panel.libsonnet'),
-    ).toString(break='\n')
+    a.parenthesis.new(
+      a.import_statement.new('../../clean/panel.libsonnet'),
+    ).toString()
     + '\n +'
-    + utils.addDoc(newAST, title, 'panel.').toString(break='\n')
+    + utils.addDoc(newAST, title, 'panel.').toString()
     + '\n +'
-    + j.object.members([
-      j.field.field(
-        j.fieldname.string('panelOptions'),
-        j.object.members([
-          j.field.field(
+    + a.object.new([
+      a.field.new(
+        a.string.new('panelOptions'),
+        a.object.new([
+          a.field.new(
             // Hide #withType from docs
-            j.fieldname.string('#withType'),
-            j.object.members(),
-            hidden=true,
-            nobreak=true
-          ),
+            a.string.new('#withType'),
+            a.object.new([])
+          )
+          + a.field.withHidden(),
         ]),
-        additive=true,
-        nobreak=true
-      ),
+      )
+      + a.field.withAdditive(),
     ]).toString(),
 
   setPanelTypeConstant(title): {
@@ -208,33 +207,30 @@ local utils = import './utils.libsonnet';
   },
 
   panelIndex(files):
-    j.object.members(
+    a.object.new(
       [
-        j.field.field(
-          j.fieldname.string('#'),
-          j.literal(  // render docsonnet as literal to avoid docsonnet dependency
+        a.field.new(
+          a.string.new('#'),
+          a.literal.new(  // render docsonnet as literal to avoid docsonnet dependency
             d.package.newSub(
               'panel',
               'grafonnet.panel'
             ),
           ),
-          nobreak=true,
         ),
       ]
       + [
-        j.field.field(
-          j.fieldname.string(file.title),
-          j.importF(file.path),
-          nobreak=true,
+        a.field.new(
+          a.string.new(file.title),
+          a.import_statement.new(file.path),
         )
         for file in files
       ]
       + [
-        j.field.field(
-          j.fieldname.id('row'),
-          j.importF('raw/panel/row.libsonnet'),
-          nobreak=true,
+        a.field.new(
+          a.id.new('row'),
+          a.import_statement.new('raw/panel/row.libsonnet'),
         ),
       ]
-    ).toString(break='\n'),
+    ).toString(),
 }

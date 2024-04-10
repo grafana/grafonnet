@@ -5,27 +5,69 @@
   panelOptions+:
     {
       '#withType': { 'function': { args: [], help: '' } },
-      withType(): { type: 'text' },
+      withType(): {
+        type: 'text',
+      },
     },
   options+:
     {
       '#withCode': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
-      withCode(value): { options+: { code: value } },
+      withCode(value): {
+        options+: {
+          code: value,
+        },
+      },
       '#withCodeMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
-      withCodeMixin(value): { options+: { code+: value } },
+      withCodeMixin(value): {
+        options+: {
+          code+: value,
+        },
+      },
       code+:
         {
           '#withLanguage': { 'function': { args: [{ default: 'plaintext', enums: ['plaintext', 'yaml', 'xml', 'typescript', 'sql', 'go', 'markdown', 'html', 'json'], name: 'value', type: ['string'] }], help: '' } },
-          withLanguage(value='plaintext'): { options+: { code+: { language: value } } },
+          withLanguage(value='plaintext'): {
+            options+: {
+              code+: {
+                language: value,
+              },
+            },
+          },
           '#withShowLineNumbers': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
-          withShowLineNumbers(value=true): { options+: { code+: { showLineNumbers: value } } },
+          withShowLineNumbers(value=true): {
+            options+: {
+              code+: {
+                showLineNumbers: value,
+              },
+            },
+          },
           '#withShowMiniMap': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
-          withShowMiniMap(value=true): { options+: { code+: { showMiniMap: value } } },
+          withShowMiniMap(value=true): {
+            options+: {
+              code+: {
+                showMiniMap: value,
+              },
+            },
+          },
         },
       '#withContent': { 'function': { args: [{ default: '# Title\n\nFor markdown syntax help: [commonmark.org/help](https://commonmark.org/help/)', enums: null, name: 'value', type: ['string'] }], help: '' } },
-      withContent(value='# Title\n\nFor markdown syntax help: [commonmark.org/help](https://commonmark.org/help/)'): { options+: { content: value } },
+      withContent(value='# Title\n\nFor markdown syntax help: [commonmark.org/help](https://commonmark.org/help/)'): {
+        options+: {
+          content: value,
+        },
+      },
       '#withMode': { 'function': { args: [{ default: null, enums: ['html', 'markdown', 'code'], name: 'value', type: ['string'] }], help: '' } },
-      withMode(value): { options+: { mode: value } },
+      withMode(value): {
+        options+: {
+          mode: value,
+        },
+      },
     },
 }
-+ { panelOptions+: { '#withType':: {} } }
++ {
+  panelOptions+: {
+    '#withType':: {
+
+    },
+  },
+}

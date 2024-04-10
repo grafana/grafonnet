@@ -1,5 +1,4 @@
-local j = import 'github.com/Duologic/jsonnet-libsonnet/main.libsonnet';
-local jutils = import 'github.com/Duologic/jsonnet-libsonnet/utils.libsonnet';
+local a = import 'github.com/crdsonnet/astsonnet/main.libsonnet';
 local crdsonnet = import 'github.com/crdsonnet/crdsonnet/crdsonnet/main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
@@ -64,7 +63,7 @@ local utils = import './utils.libsonnet';
         title,
       );
 
-    utils.addDoc(ast, title).toString(break='\n'),
+    utils.addDoc(ast, title).toString(),
 
   generateCleanLib(schema):
     local title = schema.info.title;
@@ -93,68 +92,61 @@ local utils = import './utils.libsonnet';
       std.get(structure, 'copy', [])
     );
 
-    utils.addDoc(newAST, title).toString(break='\n')
+    utils.addDoc(newAST, title).toString()
     + (if 'custom' in structure
        then
          '\n +'
-         + j.parenthesis(
-           j.importF('../custom/' + structure.custom),
-         ).toString(break='\n')
+         + a.parenthesis.new(
+           a.import_statement.new('../custom/' + structure.custom),
+         ).toString()
        else ''),
 
   mainIndex(version, files):
-    j.object.members(
+    a.object.new(
       [
-        j.field.field(
-          j.fieldname.string('#'),
-          {
-            toString(indent='', break=''):
-              std.manifestJsonEx(
-                d.package.new(
-                  'grafonnet',
-                  'github.com/grafana/grafonnet/gen/grafonnet-%s' % version,
-                  'Jsonnet library for rendering Grafana resources',
-                  'main.libsonnet',
-                  'main',
-                )
-                , '  ', '\n'
-              ),
-          },
-          nobreak=true,
+        a.field.new(
+          a.string.new('#'),
+          a.literal.new(
+            std.manifestJsonEx(
+              d.package.new(
+                'grafonnet',
+                'github.com/grafana/grafonnet/gen/grafonnet-%s' % version,
+                'Jsonnet library for rendering Grafana resources',
+                'main.libsonnet',
+                'main',
+              )
+              , '  ', '\n'
+            ),
+          )
         ),
       ]
       + [
-        j.field.field(
-          j.fieldname.string(file.title),
-          j.importF(file.path),
-          nobreak=true,
+        a.field.new(
+          a.string.new(file.title),
+          a.import_statement.new(file.path),
         )
         for file in files
         if file.title != 'panel'
       ]
       + [
-        j.field.field(
-          j.fieldname.id('panel'),
-          j.importF('panel.libsonnet'),
-          nobreak=true,
+        a.field.new(
+          a.id.new('panel'),
+          a.import_statement.new('panel.libsonnet'),
         ),
-        j.field.field(
-          j.fieldname.id('query'),
-          j.importF('query.libsonnet'),
-          nobreak=true,
+        a.field.new(
+          a.id.new('query'),
+          a.import_statement.new('query.libsonnet'),
         ),
-        j.field.field(
-          j.fieldname.id('util'),
-          j.importF('custom/util/main.libsonnet'),
-          nobreak=true,
+        a.field.new(
+          a.id.new('util'),
+          a.import_statement.new('custom/util/main.libsonnet'),
         ),
-        j.field.field(
-          j.fieldname.id('alerting'),
-          j.importF('alerting.libsonnet'),
-          nobreak=true,
+        a.field.new(
+          a.id.new('alerting'),
+          a.import_statement.new('alerting.libsonnet'),
         ),
       ]
-    ).toString(break='\n'),
+    ).toString(),
 
   structure: {
     dashboard: {

@@ -1,5 +1,5 @@
-local j = import 'github.com/Duologic/jsonnet-libsonnet/main.libsonnet';
-local jutils = import 'github.com/Duologic/jsonnet-libsonnet/utils.libsonnet';
+local a = import 'github.com/crdsonnet/astsonnet/main.libsonnet';
+local autils = import 'github.com/crdsonnet/astsonnet/utils.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
 
@@ -7,29 +7,28 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
   local root = self,
 
   addDoc(obj, name, path=''):
-    j.object.members(
+    a.object.new(
       [
-        j.field.field(
-          j.fieldname.string('#'),
-          j.literal(  // render docsonnet as literal to avoid docsonnet dependency
+        a.field.new(
+          a.string.new('#'),
+          a.literal.new(  // render docsonnet as literal to avoid docsonnet dependency
             d.package.newSub(
               name,
               'grafonnet.%(path)s%(name)s' % { name: name, path: path }
             ),
           ),
-          nobreak=true,
         ),
       ]
       + std.filter(
         // '#' docstring replaced by above
-        function(m) jutils.fieldnameValue(m.fieldname) != '#',
+        function(m) autils.fieldnameValue(m.fieldname) != '#',
         obj.members
       )
     ),
 
   // CRDsonnet wraps a library in { [title]: {} }, this unwraps it
   unwrapFromCRDsonnet(astObject, title):
-    jutils.get(
+    autils.get(
       astObject,
       title,
       default=error 'field %s not found in ast' % title

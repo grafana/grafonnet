@@ -1,4 +1,4 @@
-local j = import 'github.com/Duologic/jsonnet-libsonnet/main.libsonnet';
+local a = import 'github.com/crdsonnet/astsonnet/main.libsonnet';
 local crdsonnet = import 'github.com/crdsonnet/crdsonnet/crdsonnet/main.libsonnet';
 local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
 
@@ -26,8 +26,8 @@ local utils = import './utils.libsonnet';
           path: 'raw/query/' + title + '.libsonnet',
           content: root.generateRawLib(schema),
         };
-        acc
-        + {
+        acc +
+        {
           raw+:
             (if std.member(root.hasCustom, title)
              then [raw]
@@ -67,7 +67,7 @@ local utils = import './utils.libsonnet';
         title,
       );
 
-    utils.addDoc(ast, title, 'query.').toString(break='\n'),
+    utils.addDoc(ast, title, 'query.').toString(),
 
   generateCleanLib(schema):
     local title = schema.info.title;
@@ -91,13 +91,13 @@ local utils = import './utils.libsonnet';
         title,
       );
 
-    utils.addDoc(ast, title, 'query.').toString(break='\n')
+    utils.addDoc(ast, title, 'query.').toString()
     + (if std.member(self.hasCustom, title)
        then
          '\n +'
-         + j.parenthesis(
-           j.importF('../../custom/query/' + title + '.libsonnet'),
-         ).toString(break='\n')
+         + a.parenthesis.new(
+           a.import_statement.new('../../custom/query/' + title + '.libsonnet'),
+         ).toString()
        else ''),
 
   // FIXME: Some schemas follow a different structure,  temporarily covering for this.
@@ -145,28 +145,26 @@ local utils = import './utils.libsonnet';
   },
 
   queryIndex(files):
-    j.object.members(
+    a.object.new(
       [
-        j.field.field(
-          j.fieldname.string('#'),
-          j.literal(  // render docsonnet as literal to avoid docsonnet dependency
+        a.field.new(
+          a.string.new('#'),
+          a.literal.new(  // render docsonnet as literal to avoid docsonnet dependency
             d.package.newSub(
               'query',
               'grafonnet.query'
             ),
           ),
-          nobreak=true,
         ),
       ]
       + [
-        j.field.field(
-          j.fieldname.string(file.title),
-          j.importF(file.path),
-          nobreak=true,
+        a.field.new(
+          a.string.new(file.title),
+          a.import_statement.new(file.path),
         )
         for file in files
       ]
-    ).toString(break='\n'),
+    ).toString(),
 
   hasCustom: [
     'loki',
