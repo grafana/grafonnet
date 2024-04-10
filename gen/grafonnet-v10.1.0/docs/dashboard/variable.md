@@ -454,7 +454,7 @@ PARAMETERS:
 
 * **value** (`bool`)
    - default value: `true`
-* **customAllValue** (`bool`)
+* **customAllValue** (`string`)
 
 `withIncludeAll` enables an option to include all variables.
 
@@ -590,7 +590,7 @@ PARAMETERS:
 
 * **value** (`bool`)
    - default value: `true`
-* **customAllValue** (`bool`)
+* **customAllValue** (`string`)
 
 `withIncludeAll` enables an option to include all variables.
 
@@ -930,7 +930,7 @@ PARAMETERS:
 
 * **value** (`bool`)
    - default value: `true`
-* **customAllValue** (`bool`)
+* **customAllValue** (`string`)
 
 `withIncludeAll` enables an option to include all variables.
 
