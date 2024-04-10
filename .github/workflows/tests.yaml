@@ -2,29 +2,25 @@ name: Tests
 on:
   pull_request:
 
+env:
+  JSONNET_VERSION: "0.20.0"
+  JSONNET_BUNDLER_VERSION: "0.5.1"
+
 jobs:
   tests:
     runs-on: ubuntu-latest
-
-    strategy:
-      fail-fast: false
-      matrix:
-        jsonnet-version: ["0.20.0"]
-        jsonnet-bundler-version: ["0.5.1"]
 
     steps:
       - uses: actions/checkout@v4
 
       - name: Install jsonnet
         run: |
-          J_VER=${{ matrix.jsonnet-version }}
-          wget -qO- https://github.com/google/go-jsonnet/releases/download/v${J_VER}/go-jsonnet_${J_VER}_Linux_x86_64.tar.gz \
+          wget -qO- https://github.com/google/go-jsonnet/releases/download/v${JSONNET_VERSION}/go-jsonnet_${JSONNET_VERSION}_Linux_x86_64.tar.gz \
             | tar -xvz --one-top-level=$HOME/.local/bin
 
       - name: Install jsonnet-bundler
         run: |
-          JB_VER={{ matrix.jsonnet-bundler-version }}
-          wget -qO "$HOME/.local/bin/jb" https://github.com/jsonnet-bundler/jsonnet-bundler/releases/download/v${JB_VER}/jb-linux-amd64
+          wget -qO "$HOME/.local/bin/jb" https://github.com/jsonnet-bundler/jsonnet-bundler/releases/download/v${JSONNET_BUNDLER_VERSION}/jb-linux-amd64
           chmod u+x "$HOME/.local/bin/jb"
 
       - name: Run tests
