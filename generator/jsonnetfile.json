@@ -17,7 +17,7 @@
           "subdir": "crdsonnet"
         }
       },
-      "version": "astsonnet"
+      "version": "master"
     }
   ],
   "legacyImports": true
