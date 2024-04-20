@@ -9,30 +9,27 @@ local utils = import '../utils.libsonnet';
     core:
       std.filterMap(
         function(schema)
-          !std.endsWith(schema.info.title, 'PanelCfg')
-          && !std.endsWith(schema.info.title, 'DataQuery'),
-        root.restructure,
+          std.get(schema.info, 'x-schema-kind', '') == 'core',
+        root.removePanelsFromDashboardSchema,
         schemas
       )
-      + [root.getPanelSchema(version, schemas)]
-      + (
-        local folderSchema = root.getFolderSchema(version, schemas);
-        if folderSchema != {} then [folderSchema] else []
-      ),
+      + [
+        root.getPanelSchema(version, schemas),
+        root.getFolderSchema(version, schemas),
+      ],
 
     panel:
-      root.getMissingPanelSchemas(schemas)
-      + root.getMissingAlertListPanel(schemas)
-      + std.filterMap(
-        function(schema) std.endsWith(schema.info.title, 'PanelCfg'),
-        root.restructure,
+      root.getMissingAlertListPanel(schemas)
+      + std.filter(
+        function(schema)
+          std.get(schema.info, 'x-schema-variant', '') == 'panelcfg',
         schemas
       ),
 
     query:
-      std.filterMap(
-        function(schema) std.endsWith(schema.info.title, 'DataQuery'),
-        root.restructure,
+      std.filter(
+        function(schema)
+          std.get(schema.info, 'x-schema-variant', '') == 'dataquery',
         schemas,
       ),
 
@@ -40,40 +37,53 @@ local utils = import '../utils.libsonnet';
       [root.getRowSchema(schemas)],
   },
 
-  restructure(schema):
-    local title = schema.info.title;
-    local formatted = utils.formatSchemaName(title);
-
+  removePanelsFromDashboardSchema(schema):
     schema
-    + root.addTableFieldConfig(schema)
+    + (
+      if schema.info.title == 'dashboard'
+      then {
+        components+: {
+          schemas+: {
+            Dashboard+: {
+              properties+: {
+                panels: { type: 'array' },
+              },
+            },
+          },
+        },
+      }
+      else {}
+    ),
+
+  getPanelSchema(version, schemas):
+    root.getDashboardSchema(schemas)
     + {
       info+: {
-        title: formatted,
+        title: 'panel',
+        version: '0.0.0',
+        'x-schema-identifier': 'Panel',
       },
       components+: {
         schemas+: {
-          [formatted]:
-            super[title]
-            + root.removePanelsFromDashboardSchema(schema),
+          local v = super.ValueMapping,
+          ValueMapping: {
+            type: 'object',
+            description: v.description,
+            oneOf: v.anyOf,  // This used to be a oneOf, by changing to an anyOf it gets rendered differently.
+          },
+          Panel+: {
+            properties+: {
+              pluginVersion: {
+                // HACK: Grafana uses the pluginVersion to decide which migrations to execute
+                // however the pluginVersion is currently not part of the plugin schema's.
+                // This hack ensures that the pluginVersion matches the Grafana version.
+                const: version,
+              },
+            },
+          },
         },
       },
     },
-
-  getPanelSchema(version, schemas):
-    root.restructure(
-      root.getDashboardSchema(schemas)
-      + {
-        info+: { title: 'Panel' },
-        components+: { schemas+: { Panel+: { properties+: {
-          pluginVersion: {
-            // HACK: Grafana uses the pluginVersion to decide which migrations to execute
-            // however the pluginVersion is currently not part of the plugin schema's.
-            // This hack ensures that the pluginVersion matches the Grafana version.
-            const: version,
-          },
-        } } } },
-      },
-    ),
 
   // Folder schema got removed from CUE/grok in https://github.com/grafana/grafana/pull/79413
   // This adds it back as it is a really simple object.
@@ -85,47 +95,24 @@ local utils = import '../utils.libsonnet';
     then (import './custom_schemas/folder.json')
     else {},
 
-  // FIXME: Should we care about missing panel schemas at this level?
-  getMissingPanelSchemas(schemas):
-    local genericSchema(title) =
-      root.restructure({
-        info: {
-          title: title,
-        },
-        components: {
-          schemas: {
-            [title]: {
-              type: 'object',
-            },
-          },
-        },
-      });
-    local allSchemaTitles = std.map(function(x) x.info.title, schemas);
-    local missingPanelSchemas = [
-      'CandlestickPanelCfg',
-      'CanvasPanelCfg',
-    ];
-    [
-      genericSchema(title)
-      for title in missingPanelSchemas
-      if !std.member(allSchemaTitles, title)
-    ],
-
   // ref: https://github.com/grafana/grafonnet/issues/137
   getMissingAlertListPanel(schemas):
-    local title = 'AlertListPanelCfg';
+    local title = 'alertlist';
     local allSchemaTitles = std.map(function(x) x.info.title, schemas);
     if !std.member(allSchemaTitles, title)
     then
       [
-        root.restructure({
+        {
           info: {
             title: title,
+            'x-schema-identifier': 'AlertList',
+            'x-schema-kind': 'composable',
+            'x-schema-variant': 'panelcfg',
           },
           definitions: (import './custom_schemas/alertList.json').definitions,
           components: {
             schemas: {
-              [title]: {
+              AlertList: {
                 type: 'object',
                 properties: {
                   Options: {
@@ -138,27 +125,28 @@ local utils = import '../utils.libsonnet';
               },
             },
           },
-        }),
+        },
       ]
     else [],
 
   getRowSchema(schemas):
-    root.restructure(
-      root.getDashboardSchema(schemas)
-      + {
-        info+: { title: 'RowPanelCfg' },
-        components+: { schemas+: {
-          RowPanelCfg:
-            super.RowPanel
-            + {
-              properties+: {
-                type: { const: 'row' },
-                panels: { type: 'array' },
-              },
+    root.getDashboardSchema(schemas)
+    + {
+      info+: {
+        title: 'row',
+        'x-schema-identifier': 'RowPanel',
+      },
+      components+: {
+        schemas+: {
+          RowPanel+: {
+            properties+: {
+              type: { const: 'row' },
+              panels: { type: 'array' },
             },
-        } },
-      }
-    ),
+          },
+        },
+      },
+    },
 
   // ref: https://github.com/grafana/grafana/issues/75610
   addTableFieldConfig(schema):
@@ -179,24 +167,6 @@ local utils = import '../utils.libsonnet';
         },
       },
     }
-    else {},
-
-  removePanelsFromDashboardSchema(schema):
-    if schema.info.title == 'dashboard'
-    then
-      if 'spec' in schema.components.schemas.dashboard.properties
-      then {
-        properties+: { spec+: {
-          properties+: {
-            panels: { type: 'array' },
-          },
-        } },
-      }
-      else {
-        properties+: {
-          panels: { type: 'array' },
-        },
-      }
     else {},
 
   getDashboardSchema(schemas):

@@ -53,9 +53,7 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
   },
 
   formatSchemaName(name):
-    local woDataQuery = std.strReplace(name, 'DataQuery', '');
-    local woPanelCfg = std.strReplace(woDataQuery, 'PanelCfg', '');
-    local split = xtd.camelcase.split(woPanelCfg);
+    local split = xtd.camelcase.split(name);
     std.join(
       '',
       [std.asciiLower(split[0])]

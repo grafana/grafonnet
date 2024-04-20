@@ -8,64 +8,49 @@ local utils = import './utils.libsonnet';
 {
   local root = self,
 
+  titleMapping: {
+    alertgroups: 'alertGroups',
+    alertlist: 'alertList',
+    annotationslist: 'annotationsList',
+    barchart: 'barChart',
+    bargauge: 'barGauge',
+    dashboardlist: 'dashboardList',
+    nodegraph: 'nodeGraph',
+    piechart: 'pieChart',
+    statetimeline: 'stateTimeline',
+    statushistory: 'statusHistory',
+    timeseries: 'timeSeries',
+    xychart: 'xyChart',
+  },
+
   render(schemas):
     local files = self.getFilesForSchemas(schemas);
-    { 'panel.libsonnet': root.panelIndex(files.clean) }
+    { 'panelindex.libsonnet': root.panelIndex(files) }
     + {
       [file.path]: file.content
-      for type in std.objectFields(files)
-      for file in files[type]
+      for file in files
     },
 
   getFilesForSchemas(schemas):
     std.foldl(
       function(acc, schema)
-        local title = schema.info.title;
-        acc
-        + {
-          raw+: [{
-            title: title,
-            path: 'raw/panel/' + title + '.libsonnet',
-            content: root.generateRawLib(schema),
-          }],
-          clean+: [{
-            title: title,
-            path: 'clean/panel/' + title + '.libsonnet',
-            content: root.generateCleanLib(schema),
-          }],
-        },
+        local title = std.get(root.titleMapping, std.asciiLower(schema.info.title), schema.info.title);
+        acc + [{
+          title: title,
+          path: 'panel/' + title + '.libsonnet',
+          content: root.generateLib(schema),
+        }],
       schemas,
-      {},
+      [],
     ),
 
-  generateRawLib(schema):
+  generateLib(schema):
     local title = schema.info.title;
-    local subSchema = schema.components.schemas[title];
-    local customSubSchema =
-      subSchema
-      + self.setPanelTypeConstant(title)
-      + self.hidePanelOptionsAndFieldConfig()
-      + self.moveOptions(subSchema)
-      + self.moveFieldConfig(subSchema);
-
-    local render = crdsonnet.openapi.render(
-      title,
-      customSubSchema,
-      schema,
-      refactor.ASTProcessor,
-      addNewFunction=false,
-    );
-    local ast =
-      utils.unwrapFromCRDsonnet(
-        render,
-        title,
-      );
-
-    utils.addDoc(ast, title, 'panel.').toString(),
-
-  generateCleanLib(schema):
-    local title = schema.info.title;
-    local subSchema = schema.components.schemas[title];
+    local subSchema = {
+      type: 'object',
+      properties+:
+        schema.components.schemas,
+    };
     local customSubSchema =
       subSchema
       + self.setPanelTypeConstant(title)
@@ -100,17 +85,18 @@ local utils = import './utils.libsonnet';
          then [{ from: 'options', to: 'options' }]
          else []);
 
-    local newAST = refactor.refactor(
-      ast,
-      groupings,
-      copy,
-    );
+    local refactored =
+      refactor.refactor(
+        ast,
+        groupings,
+        copy,
+      );
 
     a.parenthesis.new(
-      a.import_statement.new('../../clean/panel.libsonnet'),
+      a.import_statement.new('../panel.libsonnet'),
     ).toString()
     + '\n +'
-    + utils.addDoc(newAST, title, 'panel.').toString()
+    + utils.addDoc(refactored, std.get(root.titleMapping, std.asciiLower(title), title), 'panel.').toString()
     + '\n +'
     + a.object.new([
       a.field.new(
@@ -229,7 +215,7 @@ local utils = import './utils.libsonnet';
       + [
         a.field.new(
           a.id.new('row'),
-          a.import_statement.new('raw/panel/row.libsonnet'),
+          a.import_statement.new('panel/row.libsonnet'),
         ),
       ]
     ).toString(),

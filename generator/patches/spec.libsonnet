@@ -4,7 +4,8 @@
     self.renameTitleToDescription(spec)
     + self.addIsPausedToProvisionedAlertRule()
     + self.removeRecursiveRefOnRoute()
-    + self.fixMatchType(),
+    + self.fixMatchType()
+    + self.fixRefOnTimeInterval(),
 
   // the OpenAPI schema currently holds a number of `title` fields that contain a description of a parameter, this is used for godoc comments. This lacks standardisation upstream but should dissapear over time. In mean time we'll merge it here with `description` so it shows up in Grafonnet docs.
   renameTitleToDescription(spec):
@@ -82,4 +83,19 @@
       },
     },
   },
+
+  // Fix ref on TimeInterval
+  fixRefOnTimeInterval(): {
+    components+: {
+      schemas+: {
+        TimeInterval+: {
+          properties+: {
+            time_intervals+:
+              { items: { '$ref': '#/components/schemas/TimeIntervalItem' } },
+          },
+        },
+      },
+    },
+  },
+
 }

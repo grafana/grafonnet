@@ -1,8 +1,12 @@
 {
-  "info": { "title": "folder" },
+  "info": {
+    "title": "folder",
+    "x-schema-identifier": "Folder",
+    "x-schema-kind": "core"
+  },
   "components": {
     "schemas": {
-      "folder": {
+      "Folder": {
         "properties": {
           "parentUid": {
             "description": "only used if nested folders are enabled",
