@@ -9,10 +9,12 @@
 * [`fn withFilterMixin(value)`](#fn-withfiltermixin)
 * [`fn withId(value)`](#fn-withid)
 * [`fn withOptions(value)`](#fn-withoptions)
+* [`fn withOptionsMixin(value)`](#fn-withoptionsmixin)
 * [`fn withTopic(value)`](#fn-withtopic)
 * [`obj filter`](#obj-filter)
   * [`fn withId(value="")`](#fn-filterwithid)
   * [`fn withOptions(value)`](#fn-filterwithoptions)
+  * [`fn withOptionsMixin(value)`](#fn-filterwithoptionsmixin)
 
 ## Fields
 
@@ -71,7 +73,19 @@ withOptions(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`)
+
+Options to be passed to the transformer
+Valid options depend on the transformer id
+### fn withOptionsMixin
+
+```jsonnet
+withOptionsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
 
 Options to be passed to the transformer
 Valid options depend on the transformer id
@@ -110,6 +124,17 @@ filter.withOptions(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`)
+
+The matcher options. This is specific to the matcher implementation.
+#### fn filter.withOptionsMixin
+
+```jsonnet
+filter.withOptionsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
 
 The matcher options. This is specific to the matcher implementation.

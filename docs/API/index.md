@@ -8,7 +8,7 @@
 * [alerting](alerting/index.md)
 * [dashboard](dashboard/index.md)
 * [folder](folder.md)
-* [librarypanel](librarypanel.md)
+* [librarypanel](librarypanel/index.md)
 * [panel](panel/index.md)
 * [preferences](preferences.md)
 * [publicdashboard](publicdashboard.md)
