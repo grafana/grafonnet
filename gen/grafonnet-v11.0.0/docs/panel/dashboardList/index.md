@@ -23,6 +23,7 @@ grafonnet.panel.dashboardList
   * [`fn withKeepTime(value=true)`](#fn-optionswithkeeptime)
   * [`fn withMaxItems(value=10)`](#fn-optionswithmaxitems)
   * [`fn withQuery(value="")`](#fn-optionswithquery)
+  * [`fn withShowFolderNames(value=true)`](#fn-optionswithshowfoldernames)
   * [`fn withShowHeadings(value=true)`](#fn-optionswithshowheadings)
   * [`fn withShowRecentlyViewed(value=true)`](#fn-optionswithshowrecentlyviewed)
   * [`fn withShowSearch(value=true)`](#fn-optionswithshowsearch)
@@ -182,6 +183,18 @@ PARAMETERS:
 
 * **value** (`string`)
    - default value: `""`
+
+
+#### fn options.withShowFolderNames
+
+```jsonnet
+options.withShowFolderNames(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 #### fn options.withShowHeadings

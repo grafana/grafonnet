@@ -47,6 +47,12 @@
           query: value,
         },
       },
+      '#withShowFolderNames': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
+      withShowFolderNames(value=true): {
+        options+: {
+          showFolderNames: value,
+        },
+      },
       '#withShowHeadings': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
       withShowHeadings(value=true): {
         options+: {
