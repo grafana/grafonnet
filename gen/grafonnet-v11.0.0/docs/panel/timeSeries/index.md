@@ -35,6 +35,8 @@ grafonnet.panel.timeSeries
       * [`fn withGradientMode(value)`](#fn-fieldconfigdefaultscustomwithgradientmode)
       * [`fn withHideFrom(value)`](#fn-fieldconfigdefaultscustomwithhidefrom)
       * [`fn withHideFromMixin(value)`](#fn-fieldconfigdefaultscustomwithhidefrommixin)
+      * [`fn withInsertNulls(value)`](#fn-fieldconfigdefaultscustomwithinsertnulls)
+      * [`fn withInsertNullsMixin(value)`](#fn-fieldconfigdefaultscustomwithinsertnullsmixin)
       * [`fn withLineColor(value)`](#fn-fieldconfigdefaultscustomwithlinecolor)
       * [`fn withLineInterpolation(value)`](#fn-fieldconfigdefaultscustomwithlineinterpolation)
       * [`fn withLineStyle(value)`](#fn-fieldconfigdefaultscustomwithlinestyle)
@@ -383,6 +385,28 @@ PARAMETERS:
 * **value** (`object`)
 
 TODO docs
+###### fn fieldConfig.defaults.custom.withInsertNulls
+
+```jsonnet
+fieldConfig.defaults.custom.withInsertNulls(value)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`,`number`)
+
+
+###### fn fieldConfig.defaults.custom.withInsertNullsMixin
+
+```jsonnet
+fieldConfig.defaults.custom.withInsertNullsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`,`number`)
+
+
 ###### fn fieldConfig.defaults.custom.withLineColor
 
 ```jsonnet

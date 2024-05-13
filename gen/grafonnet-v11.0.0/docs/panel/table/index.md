@@ -83,6 +83,8 @@ grafonnet.panel.table
           * [`fn withHideFrom(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithhidefrom)
           * [`fn withHideFromMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithhidefrommixin)
           * [`fn withHideValue(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithhidevalue)
+          * [`fn withInsertNulls(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithinsertnulls)
+          * [`fn withInsertNullsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithinsertnullsmixin)
           * [`fn withLineColor(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithlinecolor)
           * [`fn withLineInterpolation(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithlineinterpolation)
           * [`fn withLineStyle(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithlinestyle)
@@ -864,6 +866,28 @@ PARAMETERS:
 
 * **value** (`boolean`)
    - default value: `true`
+
+
+######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withInsertNulls
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withInsertNulls(value)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`,`number`)
+
+
+######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withInsertNullsMixin
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withInsertNullsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`,`number`)
 
 
 ######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withLineColor
