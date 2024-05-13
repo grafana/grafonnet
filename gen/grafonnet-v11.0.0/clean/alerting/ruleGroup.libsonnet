@@ -59,6 +59,10 @@
       withExecErrState(value): {
         execErrState: value,
       },
+      '#withFolderUID': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
+      withFolderUID(value): {
+        folderUID: value,
+      },
       '#withFor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['integer'] }], help: 'A Duration represents the elapsed time between two instants\nas an int64 nanosecond count. The representation limits the\nlargest representable duration to approximately 290 years.' } },
       withFor(value): {
         'for': value,
@@ -78,6 +82,14 @@
       '#withNoDataState': { 'function': { args: [{ default: null, enums: ['Alerting', 'NoData', 'OK'], name: 'value', type: ['string'] }], help: '' } },
       withNoDataState(value): {
         noDataState: value,
+      },
+      '#withOrgID': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['integer'] }], help: '' } },
+      withOrgID(value): {
+        orgID: value,
+      },
+      '#withRuleGroup': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
+      withRuleGroup(value): {
+        ruleGroup: value,
       },
       '#withTitle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
       withTitle(value): {

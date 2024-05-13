@@ -14,12 +14,15 @@
 * [`fn withData(value)`](#fn-withdata)
 * [`fn withDataMixin(value)`](#fn-withdatamixin)
 * [`fn withExecErrState(value)`](#fn-withexecerrstate)
+* [`fn withFolderUID(value)`](#fn-withfolderuid)
 * [`fn withFor(value)`](#fn-withfor)
 * [`fn withIsPaused(value=true)`](#fn-withispaused)
 * [`fn withLabels(value)`](#fn-withlabels)
 * [`fn withLabelsMixin(value)`](#fn-withlabelsmixin)
 * [`fn withName(value)`](#fn-withname)
 * [`fn withNoDataState(value)`](#fn-withnodatastate)
+* [`fn withOrgID(value)`](#fn-withorgid)
+* [`fn withRuleGroup(value)`](#fn-withrulegroup)
 
 ## Fields
 
@@ -90,6 +93,17 @@ PARAMETERS:
    - valid values: `"OK"`, `"Alerting"`, `"Error"`
 
 
+### fn withFolderUID
+
+```jsonnet
+withFolderUID(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
 ### fn withFor
 
 ```jsonnet
@@ -158,4 +172,26 @@ PARAMETERS:
 
 * **value** (`string`)
    - valid values: `"Alerting"`, `"NoData"`, `"OK"`
+
+
+### fn withOrgID
+
+```jsonnet
+withOrgID(value)
+```
+
+PARAMETERS:
+
+* **value** (`integer`)
+
+
+### fn withRuleGroup
+
+```jsonnet
+withRuleGroup(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 

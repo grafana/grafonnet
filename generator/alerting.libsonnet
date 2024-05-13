@@ -208,19 +208,21 @@ local utils = import './utils.libsonnet';
           'rules.withData',
           'rules.withDataMixin',
           'rules.withExecErrState',
+          'rules.withFolderUID',
           'rules.withFor',
           'rules.withIsPaused',
           'rules.withLabels',
           'rules.withLabelsMixin',
           'rules.withNoDataState',
+          'rules.withOrgID',
+          'rules.withRuleGroup',
           'rules.withTitle',  // rename to withName
 
           // Given by parent object, may be read-only!?
-          //'rules.withFolderUID',
-          //'rules.withId',
-          //'rules.withOrgID',
           //'rules.withProvenance',
-          //'rules.withRuleGroup',
+
+          // Read-only
+          //'rules.withId',
           //'rules.withUid',
           //'rules.withUpdated',
         ],
