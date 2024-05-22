@@ -26,4 +26,5 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
       uid: value,
     },
   },
+  '#withDatasourceMixin':: { ignore: true },
 }

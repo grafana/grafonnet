@@ -6,7 +6,6 @@ grafonnet.query.prometheus
 
 * [`fn new(datasource, expr)`](#fn-new)
 * [`fn withDatasource(value)`](#fn-withdatasource)
-* [`fn withDatasourceMixin(value)`](#fn-withdatasourcemixin)
 * [`fn withEditorMode(value)`](#fn-witheditormode)
 * [`fn withExemplar(value=true)`](#fn-withexemplar)
 * [`fn withExpr(value)`](#fn-withexpr)
@@ -45,17 +44,6 @@ PARAMETERS:
 * **value** (`string`)
 
 Set the datasource for this query.
-### fn withDatasourceMixin
-
-```jsonnet
-withDatasourceMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
 ### fn withEditorMode
 
 ```jsonnet
@@ -79,7 +67,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+Execute an additional query to identify interesting raw samples relevant for the given expr
 ### fn withExpr
 
 ```jsonnet
@@ -90,7 +78,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+The actual expression/query that will be evaluated by Prometheus
 ### fn withFormat
 
 ```jsonnet
@@ -114,7 +102,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+If hide is set to true, Grafana will filter out the response(s) associated with this query before returning it to the panel.
 ### fn withInstant
 
 ```jsonnet
@@ -126,7 +114,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+Returns only the latest value that Prometheus has scraped for the requested time series
 ### fn withInterval
 
 ```jsonnet
@@ -171,7 +159,8 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Specify the query flavor
+TODO make this required and give it a default
 ### fn withRange
 
 ```jsonnet
@@ -183,7 +172,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+Returns a Range vector, comprised of a set of time series containing a range of data points over time for each time series
 ### fn withRefId
 
 ```jsonnet
@@ -194,3 +183,6 @@ PARAMETERS:
 
 * **value** (`string`)
 
+A unique identifier for the query within the list of targets.
+In server side expressions, the refId is used as a variable name to identify results.
+By default, the UI will assign A->Z; however setting meaningful names may be useful.

@@ -1,18 +1,18 @@
 // This file is generated, do not manually edit.
 {
   '#': { help: 'grafonnet.query.elasticsearch', name: 'elasticsearch' },
-  '#withAlias': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
+  '#withAlias': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Alias pattern' } },
   withAlias(value): {
     alias: value,
   },
-  '#withBucketAggs': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
+  '#withBucketAggs': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'List of bucket aggregations' } },
   withBucketAggs(value): {
     bucketAggs:
       (if std.isArray(value)
        then value
        else [value]),
   },
-  '#withBucketAggsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
+  '#withBucketAggsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'List of bucket aggregations' } },
   withBucketAggsMixin(value): {
     bucketAggs+:
       (if std.isArray(value)
@@ -279,26 +279,26 @@
           },
         },
     },
-  '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
+  '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: "For mixed data sources the selected datasource is on the query level.\nFor non mixed scenarios this is undefined.\nTODO find a better way to do this ^ that's friendly to schema\nTODO this shouldn't be unknown but DataSourceRef | null" } },
   withDatasource(value): {
     datasource: value,
   },
-  '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
+  '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: "For mixed data sources the selected datasource is on the query level.\nFor non mixed scenarios this is undefined.\nTODO find a better way to do this ^ that's friendly to schema\nTODO this shouldn't be unknown but DataSourceRef | null" } },
   withDatasourceMixin(value): {
     datasource+: value,
   },
-  '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
+  '#withHide': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'If hide is set to true, Grafana will filter out the response(s) associated with this query before returning it to the panel.' } },
   withHide(value=true): {
     hide: value,
   },
-  '#withMetrics': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
+  '#withMetrics': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'List of metric aggregations' } },
   withMetrics(value): {
     metrics:
       (if std.isArray(value)
        then value
        else [value]),
   },
-  '#withMetricsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
+  '#withMetricsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'List of metric aggregations' } },
   withMetricsMixin(value): {
     metrics+:
       (if std.isArray(value)
@@ -1432,19 +1432,19 @@
             },
         },
     },
-  '#withQuery': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
+  '#withQuery': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Lucene query' } },
   withQuery(value): {
     query: value,
   },
-  '#withQueryType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
+  '#withQueryType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Specify the query flavor\nTODO make this required and give it a default' } },
   withQueryType(value): {
     queryType: value,
   },
-  '#withRefId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
+  '#withRefId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'A unique identifier for the query within the list of targets.\nIn server side expressions, the refId is used as a variable name to identify results.\nBy default, the UI will assign A->Z; however setting meaningful names may be useful.' } },
   withRefId(value): {
     refId: value,
   },
-  '#withTimeField': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
+  '#withTimeField': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Name of time field' } },
   withTimeField(value): {
     timeField: value,
   },

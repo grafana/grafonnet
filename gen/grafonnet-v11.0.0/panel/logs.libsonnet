@@ -70,7 +70,7 @@
 + {
   panelOptions+: {
     '#withType':: {
-
+      ignore: true,
     },
   },
 }

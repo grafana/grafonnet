@@ -67,7 +67,7 @@
 + {
   panelOptions+: {
     '#withType':: {
-
+      ignore: true,
     },
   },
 }

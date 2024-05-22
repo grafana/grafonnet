@@ -47,13 +47,9 @@
   rules+:
     {
       '#': { help: '', name: 'rules' },
-      '#withKind': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string', 'string'] }], help: 'The kind this rule applies to (dashboards, alert, etc)' } },
-      withKind(value): {
+      '#withKind': { 'function': { args: [{ default: '*', enums: null, name: 'value', type: ['string'] }], help: 'The kind this rule applies to (dashboards, alert, etc)' } },
+      withKind(value='*'): {
         kind: value,
-      },
-      '#withKindMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string', 'string'] }], help: 'The kind this rule applies to (dashboards, alert, etc)' } },
-      withKindMixin(value): {
-        kind+: value,
       },
       '#withTarget': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Specific sub-elements like "alert.rules" or "dashboard.permissions"????' } },
       withTarget(value): {

@@ -4,8 +4,7 @@
 
 ## Index
 
-* [`fn withKind(value)`](#fn-withkind)
-* [`fn withKindMixin(value)`](#fn-withkindmixin)
+* [`fn withKind(value="*")`](#fn-withkind)
 * [`fn withTarget(value)`](#fn-withtarget)
 * [`fn withVerb(value)`](#fn-withverb)
 * [`fn withVerbMixin(value)`](#fn-withverbmixin)
@@ -15,23 +14,13 @@
 ### fn withKind
 
 ```jsonnet
-withKind(value)
+withKind(value="*")
 ```
 
 PARAMETERS:
 
 * **value** (`string`)
-
-The kind this rule applies to (dashboards, alert, etc)
-### fn withKindMixin
-
-```jsonnet
-withKindMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
+   - default value: `"*"`
 
 The kind this rule applies to (dashboards, alert, etc)
 ### fn withTarget

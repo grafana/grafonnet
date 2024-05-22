@@ -13,13 +13,9 @@
   withGroupName(value): {
     groupName: value,
   },
-  '#withHidden': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['boolean', 'boolean'] }], help: 'Do not show this role' } },
-  withHidden(value): {
+  '#withHidden': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'Do not show this role' } },
+  withHidden(value=true): {
     hidden: value,
-  },
-  '#withHiddenMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['boolean', 'boolean'] }], help: 'Do not show this role' } },
-  withHiddenMixin(value): {
-    hidden+: value,
   },
   '#withName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The role identifier `managed:builtins:editor:permissions`' } },
   withName(value): {

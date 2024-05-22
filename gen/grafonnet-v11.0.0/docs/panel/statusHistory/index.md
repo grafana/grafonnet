@@ -39,8 +39,8 @@ grafonnet.panel.statusHistory
   * [`fn withTooltipMixin(value)`](#fn-optionswithtooltipmixin)
   * [`obj legend`](#obj-optionslegend)
     * [`fn withAsTable(value=true)`](#fn-optionslegendwithastable)
-    * [`fn withCalcs(value)`](#fn-optionslegendwithcalcs)
-    * [`fn withCalcsMixin(value)`](#fn-optionslegendwithcalcsmixin)
+    * [`fn withCalcs(value=[])`](#fn-optionslegendwithcalcs)
+    * [`fn withCalcsMixin(value=[])`](#fn-optionslegendwithcalcsmixin)
     * [`fn withDisplayMode(value)`](#fn-optionslegendwithdisplaymode)
     * [`fn withIsVisible(value=true)`](#fn-optionslegendwithisvisible)
     * [`fn withPlacement(value)`](#fn-optionslegendwithplacement)
@@ -355,23 +355,25 @@ PARAMETERS:
 ##### fn options.legend.withCalcs
 
 ```jsonnet
-options.legend.withCalcs(value)
+options.legend.withCalcs(value=[])
 ```
 
 PARAMETERS:
 
 * **value** (`array`)
+   - default value: `[]`
 
 
 ##### fn options.legend.withCalcsMixin
 
 ```jsonnet
-options.legend.withCalcsMixin(value)
+options.legend.withCalcsMixin(value=[])
 ```
 
 PARAMETERS:
 
 * **value** (`array`)
+   - default value: `[]`
 
 
 ##### fn options.legend.withDisplayMode

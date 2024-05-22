@@ -16,6 +16,56 @@ grafonnet.panel.alertList
 * [`obj libraryPanel`](#obj-librarypanel)
   * [`fn withName(value)`](#fn-librarypanelwithname)
   * [`fn withUid(value)`](#fn-librarypanelwithuid)
+* [`obj options`](#obj-options)
+  * [`fn withAlertListOptions(value)`](#fn-optionswithalertlistoptions)
+  * [`fn withAlertListOptionsMixin(value)`](#fn-optionswithalertlistoptionsmixin)
+  * [`fn withUnifiedAlertListOptions(value)`](#fn-optionswithunifiedalertlistoptions)
+  * [`fn withUnifiedAlertListOptionsMixin(value)`](#fn-optionswithunifiedalertlistoptionsmixin)
+  * [`obj AlertListOptions`](#obj-optionsalertlistoptions)
+    * [`fn withAlertName(value)`](#fn-optionsalertlistoptionswithalertname)
+    * [`fn withDashboardAlerts(value=true)`](#fn-optionsalertlistoptionswithdashboardalerts)
+    * [`fn withDashboardTitle(value)`](#fn-optionsalertlistoptionswithdashboardtitle)
+    * [`fn withFolderId(value)`](#fn-optionsalertlistoptionswithfolderid)
+    * [`fn withMaxItems(value)`](#fn-optionsalertlistoptionswithmaxitems)
+    * [`fn withShowOptions(value)`](#fn-optionsalertlistoptionswithshowoptions)
+    * [`fn withSortOrder(value)`](#fn-optionsalertlistoptionswithsortorder)
+    * [`fn withStateFilter(value)`](#fn-optionsalertlistoptionswithstatefilter)
+    * [`fn withStateFilterMixin(value)`](#fn-optionsalertlistoptionswithstatefiltermixin)
+    * [`fn withTags(value)`](#fn-optionsalertlistoptionswithtags)
+    * [`fn withTagsMixin(value)`](#fn-optionsalertlistoptionswithtagsmixin)
+    * [`obj stateFilter`](#obj-optionsalertlistoptionsstatefilter)
+      * [`fn withAlerting(value=true)`](#fn-optionsalertlistoptionsstatefilterwithalerting)
+      * [`fn withExecutionError(value=true)`](#fn-optionsalertlistoptionsstatefilterwithexecutionerror)
+      * [`fn withNoData(value=true)`](#fn-optionsalertlistoptionsstatefilterwithnodata)
+      * [`fn withOk(value=true)`](#fn-optionsalertlistoptionsstatefilterwithok)
+      * [`fn withPaused(value=true)`](#fn-optionsalertlistoptionsstatefilterwithpaused)
+      * [`fn withPending(value=true)`](#fn-optionsalertlistoptionsstatefilterwithpending)
+  * [`obj UnifiedAlertListOptions`](#obj-optionsunifiedalertlistoptions)
+    * [`fn withAlertInstanceLabelFilter(value)`](#fn-optionsunifiedalertlistoptionswithalertinstancelabelfilter)
+    * [`fn withAlertName(value)`](#fn-optionsunifiedalertlistoptionswithalertname)
+    * [`fn withDashboardAlerts(value=true)`](#fn-optionsunifiedalertlistoptionswithdashboardalerts)
+    * [`fn withDatasource(value)`](#fn-optionsunifiedalertlistoptionswithdatasource)
+    * [`fn withFolder(value)`](#fn-optionsunifiedalertlistoptionswithfolder)
+    * [`fn withFolderMixin(value)`](#fn-optionsunifiedalertlistoptionswithfoldermixin)
+    * [`fn withGroupBy(value)`](#fn-optionsunifiedalertlistoptionswithgroupby)
+    * [`fn withGroupByMixin(value)`](#fn-optionsunifiedalertlistoptionswithgroupbymixin)
+    * [`fn withGroupMode(value)`](#fn-optionsunifiedalertlistoptionswithgroupmode)
+    * [`fn withMaxItems(value)`](#fn-optionsunifiedalertlistoptionswithmaxitems)
+    * [`fn withShowInstances(value=true)`](#fn-optionsunifiedalertlistoptionswithshowinstances)
+    * [`fn withSortOrder(value)`](#fn-optionsunifiedalertlistoptionswithsortorder)
+    * [`fn withStateFilter(value)`](#fn-optionsunifiedalertlistoptionswithstatefilter)
+    * [`fn withStateFilterMixin(value)`](#fn-optionsunifiedalertlistoptionswithstatefiltermixin)
+    * [`fn withViewMode(value)`](#fn-optionsunifiedalertlistoptionswithviewmode)
+    * [`obj folder`](#obj-optionsunifiedalertlistoptionsfolder)
+      * [`fn withId(value)`](#fn-optionsunifiedalertlistoptionsfolderwithid)
+      * [`fn withTitle(value)`](#fn-optionsunifiedalertlistoptionsfolderwithtitle)
+    * [`obj stateFilter`](#obj-optionsunifiedalertlistoptionsstatefilter)
+      * [`fn withError(value=true)`](#fn-optionsunifiedalertlistoptionsstatefilterwitherror)
+      * [`fn withFiring(value=true)`](#fn-optionsunifiedalertlistoptionsstatefilterwithfiring)
+      * [`fn withInactive(value=true)`](#fn-optionsunifiedalertlistoptionsstatefilterwithinactive)
+      * [`fn withNoData(value=true)`](#fn-optionsunifiedalertlistoptionsstatefilterwithnodata)
+      * [`fn withNormal(value=true)`](#fn-optionsunifiedalertlistoptionsstatefilterwithnormal)
+      * [`fn withPending(value=true)`](#fn-optionsunifiedalertlistoptionsstatefilterwithpending)
 * [`obj panelOptions`](#obj-paneloptions)
   * [`fn withDescription(value)`](#fn-paneloptionswithdescription)
   * [`fn withGridPos(h="null", w="null", x="null", y="null")`](#fn-paneloptionswithgridpos)
@@ -72,7 +122,7 @@ PARAMETERS:
 
 * **title** (`string`)
 
-Creates a new alertlist panel with a title.
+Creates a new AlertList panel with a title.
 ### obj libraryPanel
 
 
@@ -98,6 +148,528 @@ PARAMETERS:
 * **value** (`string`)
 
 Library panel uid
+### obj options
+
+
+#### fn options.withAlertListOptions
+
+```jsonnet
+options.withAlertListOptions(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+#### fn options.withAlertListOptionsMixin
+
+```jsonnet
+options.withAlertListOptionsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+#### fn options.withUnifiedAlertListOptions
+
+```jsonnet
+options.withUnifiedAlertListOptions(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+#### fn options.withUnifiedAlertListOptionsMixin
+
+```jsonnet
+options.withUnifiedAlertListOptionsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+#### obj options.AlertListOptions
+
+
+##### fn options.AlertListOptions.withAlertName
+
+```jsonnet
+options.AlertListOptions.withAlertName(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn options.AlertListOptions.withDashboardAlerts
+
+```jsonnet
+options.AlertListOptions.withDashboardAlerts(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+##### fn options.AlertListOptions.withDashboardTitle
+
+```jsonnet
+options.AlertListOptions.withDashboardTitle(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn options.AlertListOptions.withFolderId
+
+```jsonnet
+options.AlertListOptions.withFolderId(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+##### fn options.AlertListOptions.withMaxItems
+
+```jsonnet
+options.AlertListOptions.withMaxItems(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+##### fn options.AlertListOptions.withShowOptions
+
+```jsonnet
+options.AlertListOptions.withShowOptions(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"current"`, `"changes"`
+
+
+##### fn options.AlertListOptions.withSortOrder
+
+```jsonnet
+options.AlertListOptions.withSortOrder(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+   - valid values: `1`, `2`, `3`, `4`, `5`
+
+
+##### fn options.AlertListOptions.withStateFilter
+
+```jsonnet
+options.AlertListOptions.withStateFilter(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+##### fn options.AlertListOptions.withStateFilterMixin
+
+```jsonnet
+options.AlertListOptions.withStateFilterMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+##### fn options.AlertListOptions.withTags
+
+```jsonnet
+options.AlertListOptions.withTags(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+
+##### fn options.AlertListOptions.withTagsMixin
+
+```jsonnet
+options.AlertListOptions.withTagsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+
+##### obj options.AlertListOptions.stateFilter
+
+
+###### fn options.AlertListOptions.stateFilter.withAlerting
+
+```jsonnet
+options.AlertListOptions.stateFilter.withAlerting(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn options.AlertListOptions.stateFilter.withExecutionError
+
+```jsonnet
+options.AlertListOptions.stateFilter.withExecutionError(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn options.AlertListOptions.stateFilter.withNoData
+
+```jsonnet
+options.AlertListOptions.stateFilter.withNoData(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn options.AlertListOptions.stateFilter.withOk
+
+```jsonnet
+options.AlertListOptions.stateFilter.withOk(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn options.AlertListOptions.stateFilter.withPaused
+
+```jsonnet
+options.AlertListOptions.stateFilter.withPaused(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn options.AlertListOptions.stateFilter.withPending
+
+```jsonnet
+options.AlertListOptions.stateFilter.withPending(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+#### obj options.UnifiedAlertListOptions
+
+
+##### fn options.UnifiedAlertListOptions.withAlertInstanceLabelFilter
+
+```jsonnet
+options.UnifiedAlertListOptions.withAlertInstanceLabelFilter(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn options.UnifiedAlertListOptions.withAlertName
+
+```jsonnet
+options.UnifiedAlertListOptions.withAlertName(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn options.UnifiedAlertListOptions.withDashboardAlerts
+
+```jsonnet
+options.UnifiedAlertListOptions.withDashboardAlerts(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+##### fn options.UnifiedAlertListOptions.withDatasource
+
+```jsonnet
+options.UnifiedAlertListOptions.withDatasource(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn options.UnifiedAlertListOptions.withFolder
+
+```jsonnet
+options.UnifiedAlertListOptions.withFolder(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+##### fn options.UnifiedAlertListOptions.withFolderMixin
+
+```jsonnet
+options.UnifiedAlertListOptions.withFolderMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+##### fn options.UnifiedAlertListOptions.withGroupBy
+
+```jsonnet
+options.UnifiedAlertListOptions.withGroupBy(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+
+##### fn options.UnifiedAlertListOptions.withGroupByMixin
+
+```jsonnet
+options.UnifiedAlertListOptions.withGroupByMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+
+##### fn options.UnifiedAlertListOptions.withGroupMode
+
+```jsonnet
+options.UnifiedAlertListOptions.withGroupMode(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"default"`, `"custom"`
+
+
+##### fn options.UnifiedAlertListOptions.withMaxItems
+
+```jsonnet
+options.UnifiedAlertListOptions.withMaxItems(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+##### fn options.UnifiedAlertListOptions.withShowInstances
+
+```jsonnet
+options.UnifiedAlertListOptions.withShowInstances(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+##### fn options.UnifiedAlertListOptions.withSortOrder
+
+```jsonnet
+options.UnifiedAlertListOptions.withSortOrder(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+   - valid values: `1`, `2`, `3`, `4`, `5`
+
+
+##### fn options.UnifiedAlertListOptions.withStateFilter
+
+```jsonnet
+options.UnifiedAlertListOptions.withStateFilter(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+##### fn options.UnifiedAlertListOptions.withStateFilterMixin
+
+```jsonnet
+options.UnifiedAlertListOptions.withStateFilterMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+
+##### fn options.UnifiedAlertListOptions.withViewMode
+
+```jsonnet
+options.UnifiedAlertListOptions.withViewMode(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"list"`, `"stat"`
+
+
+##### obj options.UnifiedAlertListOptions.folder
+
+
+###### fn options.UnifiedAlertListOptions.folder.withId
+
+```jsonnet
+options.UnifiedAlertListOptions.folder.withId(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+###### fn options.UnifiedAlertListOptions.folder.withTitle
+
+```jsonnet
+options.UnifiedAlertListOptions.folder.withTitle(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### obj options.UnifiedAlertListOptions.stateFilter
+
+
+###### fn options.UnifiedAlertListOptions.stateFilter.withError
+
+```jsonnet
+options.UnifiedAlertListOptions.stateFilter.withError(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn options.UnifiedAlertListOptions.stateFilter.withFiring
+
+```jsonnet
+options.UnifiedAlertListOptions.stateFilter.withFiring(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn options.UnifiedAlertListOptions.stateFilter.withInactive
+
+```jsonnet
+options.UnifiedAlertListOptions.stateFilter.withInactive(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn options.UnifiedAlertListOptions.stateFilter.withNoData
+
+```jsonnet
+options.UnifiedAlertListOptions.stateFilter.withNoData(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn options.UnifiedAlertListOptions.stateFilter.withNormal
+
+```jsonnet
+options.UnifiedAlertListOptions.stateFilter.withNormal(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn options.UnifiedAlertListOptions.stateFilter.withPending
+
+```jsonnet
+options.UnifiedAlertListOptions.stateFilter.withPending(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
 ### obj panelOptions
 
 

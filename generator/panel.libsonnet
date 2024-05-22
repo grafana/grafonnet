@@ -53,7 +53,7 @@ local utils = import './utils.libsonnet';
     };
     local customSubSchema =
       subSchema
-      + self.setPanelTypeConstant(title)
+      + self.setPanelTypeConstant(schema)
       + self.hidePanelOptionsAndFieldConfig()
       + self.moveOptions(subSchema)
       + self.moveFieldConfig(subSchema);
@@ -105,7 +105,12 @@ local utils = import './utils.libsonnet';
           a.field.new(
             // Hide #withType from docs
             a.string.new('#withType'),
-            a.object.new([])
+            a.object.new([
+              a.field.new(
+                a.literal.new('ignore'),
+                a.literal.new('true')
+              ),
+            ])
           )
           + a.field.withHidden(),
         ]),
@@ -113,16 +118,11 @@ local utils = import './utils.libsonnet';
       + a.field.withAdditive(),
     ]).toString(),
 
-  setPanelTypeConstant(title): {
+  setPanelTypeConstant(schema): {
     type: 'object',
     properties+: {
       type: {
-        const:
-          std.get(
-            utils.irregularPluginNames,
-            std.asciiLower(title),
-            std.asciiLower(title),
-          ),
+        const: schema.info['x-schema-identifier'],
       },
     },
   },

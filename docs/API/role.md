@@ -7,8 +7,7 @@ grafonnet.role
 * [`fn withDescription(value)`](#fn-withdescription)
 * [`fn withDisplayName(value)`](#fn-withdisplayname)
 * [`fn withGroupName(value)`](#fn-withgroupname)
-* [`fn withHidden(value)`](#fn-withhidden)
-* [`fn withHiddenMixin(value)`](#fn-withhiddenmixin)
+* [`fn withHidden(value=true)`](#fn-withhidden)
 * [`fn withName(value)`](#fn-withname)
 
 ## Fields
@@ -49,23 +48,13 @@ Name of the team.
 ### fn withHidden
 
 ```jsonnet
-withHidden(value)
+withHidden(value=true)
 ```
 
 PARAMETERS:
 
 * **value** (`boolean`)
-
-Do not show this role
-### fn withHiddenMixin
-
-```jsonnet
-withHiddenMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`boolean`)
+   - default value: `true`
 
 Do not show this role
 ### fn withName

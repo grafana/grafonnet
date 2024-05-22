@@ -53,8 +53,7 @@ grafonnet.query.googlecloudmonitoring
   * [`fn withTitle(value)`](#fn-timeserieslistwithtitle)
   * [`fn withView(value)`](#fn-timeserieslistwithview)
 * [`obj timeSeriesQuery`](#obj-timeseriesquery)
-  * [`fn withGraphPeriod(value)`](#fn-timeseriesquerywithgraphperiod)
-  * [`fn withGraphPeriodMixin(value)`](#fn-timeseriesquerywithgraphperiodmixin)
+  * [`fn withGraphPeriod(value="disabled")`](#fn-timeseriesquerywithgraphperiod)
   * [`fn withProjectName(value)`](#fn-timeseriesquerywithprojectname)
   * [`fn withQuery(value)`](#fn-timeseriesquerywithquery)
 
@@ -581,23 +580,13 @@ Data view, defaults to FULL.
 #### fn timeSeriesQuery.withGraphPeriod
 
 ```jsonnet
-timeSeriesQuery.withGraphPeriod(value)
+timeSeriesQuery.withGraphPeriod(value="disabled")
 ```
 
 PARAMETERS:
 
 * **value** (`string`)
-
-To disable the graphPeriod, it should explictly be set to 'disabled'.
-#### fn timeSeriesQuery.withGraphPeriodMixin
-
-```jsonnet
-timeSeriesQuery.withGraphPeriodMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
+   - default value: `"disabled"`
 
 To disable the graphPeriod, it should explictly be set to 'disabled'.
 #### fn timeSeriesQuery.withProjectName

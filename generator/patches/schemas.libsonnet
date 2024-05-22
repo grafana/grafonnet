@@ -112,16 +112,11 @@ local utils = import '../utils.libsonnet';
           definitions: (import './custom_schemas/alertList.json').definitions,
           components: {
             schemas: {
-              AlertList: {
-                type: 'object',
-                properties: {
-                  Options: {
-                    oneOf: [
-                      { '$ref': '#/definitions/AlertListOptions' },
-                      { '$ref': '#/definitions/UnifiedAlertListOptions' },
-                    ],
-                  },
-                },
+              Options: {
+                oneOf: [
+                  { '$ref': '#/definitions/AlertListOptions' },
+                  { '$ref': '#/definitions/UnifiedAlertListOptions' },
+                ],
               },
             },
           },

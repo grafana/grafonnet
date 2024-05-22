@@ -11,7 +11,6 @@ grafonnet.query.tempo
 
 * [`fn new(datasource, query, filters)`](#fn-new)
 * [`fn withDatasource(value)`](#fn-withdatasource)
-* [`fn withDatasourceMixin(value)`](#fn-withdatasourcemixin)
 * [`fn withFilters(value)`](#fn-withfilters)
 * [`fn withFiltersMixin(value)`](#fn-withfiltersmixin)
 * [`fn withGroupBy(value)`](#fn-withgroupby)
@@ -58,20 +57,6 @@ PARAMETERS:
 * **value** (`string`)
 
 Set the datasource for this query.
-### fn withDatasourceMixin
-
-```jsonnet
-withDatasourceMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-For mixed data sources the selected datasource is on the query level.
-For non mixed scenarios this is undefined.
-TODO find a better way to do this ^ that's friendly to schema
-TODO this shouldn't be unknown but DataSourceRef | null
 ### fn withFilters
 
 ```jsonnet

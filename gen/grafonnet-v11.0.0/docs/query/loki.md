@@ -6,7 +6,6 @@ grafonnet.query.loki
 
 * [`fn new(datasource, expr)`](#fn-new)
 * [`fn withDatasource(value)`](#fn-withdatasource)
-* [`fn withDatasourceMixin(value)`](#fn-withdatasourcemixin)
 * [`fn withEditorMode(value)`](#fn-witheditormode)
 * [`fn withExpr(value)`](#fn-withexpr)
 * [`fn withHide(value=true)`](#fn-withhide)
@@ -44,17 +43,6 @@ PARAMETERS:
 * **value** (`string`)
 
 Set the datasource for this query.
-### fn withDatasourceMixin
-
-```jsonnet
-withDatasourceMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
 ### fn withEditorMode
 
 ```jsonnet
@@ -77,7 +65,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+The LogQL query.
 ### fn withHide
 
 ```jsonnet
@@ -89,7 +77,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+If hide is set to true, Grafana will filter out the response(s) associated with this query before returning it to the panel.
 ### fn withInstant
 
 ```jsonnet
@@ -101,7 +89,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+@deprecated, now use queryType.
 ### fn withLegendFormat
 
 ```jsonnet
@@ -112,7 +100,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Used to override the name of the series.
 ### fn withMaxLines
 
 ```jsonnet
@@ -123,7 +111,7 @@ PARAMETERS:
 
 * **value** (`integer`)
 
-
+Used to limit the number of log rows returned.
 ### fn withQueryType
 
 ```jsonnet
@@ -134,7 +122,8 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Specify the query flavor
+TODO make this required and give it a default
 ### fn withRange
 
 ```jsonnet
@@ -146,7 +135,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+@deprecated, now use queryType.
 ### fn withRefId
 
 ```jsonnet
@@ -157,7 +146,9 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+A unique identifier for the query within the list of targets.
+In server side expressions, the refId is used as a variable name to identify results.
+By default, the UI will assign A->Z; however setting meaningful names may be useful.
 ### fn withResolution
 
 ```jsonnet
@@ -168,7 +159,7 @@ PARAMETERS:
 
 * **value** (`integer`)
 
-
+@deprecated, now use step.
 ### fn withStep
 
 ```jsonnet
@@ -179,3 +170,4 @@ PARAMETERS:
 
 * **value** (`string`)
 
+Used to set step value for range queries.

@@ -24,7 +24,10 @@ PARAMETERS:
 
 * **value** (`object`)
 
-
+For mixed data sources the selected datasource is on the query level.
+For non mixed scenarios this is undefined.
+TODO find a better way to do this ^ that's friendly to schema
+TODO this shouldn't be unknown but DataSourceRef | null
 ### fn withDatasourceMixin
 
 ```jsonnet
@@ -35,7 +38,10 @@ PARAMETERS:
 
 * **value** (`object`)
 
-
+For mixed data sources the selected datasource is on the query level.
+For non mixed scenarios this is undefined.
+TODO find a better way to do this ^ that's friendly to schema
+TODO this shouldn't be unknown but DataSourceRef | null
 ### fn withHide
 
 ```jsonnet
@@ -47,7 +53,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+If hide is set to true, Grafana will filter out the response(s) associated with this query before returning it to the panel.
 ### fn withLabelSelector
 
 ```jsonnet
@@ -59,7 +65,7 @@ PARAMETERS:
 * **value** (`string`)
    - default value: `"{}"`
 
-
+Specifies the query label selectors.
 ### fn withProfileTypeId
 
 ```jsonnet
@@ -70,7 +76,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Specifies the type of profile to query.
 ### fn withQueryType
 
 ```jsonnet
@@ -81,7 +87,8 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Specify the query flavor
+TODO make this required and give it a default
 ### fn withRefId
 
 ```jsonnet
@@ -92,3 +99,6 @@ PARAMETERS:
 
 * **value** (`string`)
 
+A unique identifier for the query within the list of targets.
+In server side expressions, the refId is used as a variable name to identify results.
+By default, the UI will assign A->Z; however setting meaningful names may be useful.

@@ -707,7 +707,7 @@
               },
             },
           },
-          '#withCalcs': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
+          '#withCalcs': { 'function': { args: [{ default: [], enums: null, name: 'value', type: ['array'] }], help: '' } },
           withCalcs(value): {
             options+: {
               legend+: {
@@ -718,7 +718,7 @@
               },
             },
           },
-          '#withCalcsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
+          '#withCalcsMixin': { 'function': { args: [{ default: [], enums: null, name: 'value', type: ['array'] }], help: '' } },
           withCalcsMixin(value): {
             options+: {
               legend+: {
@@ -844,7 +844,7 @@
 + {
   panelOptions+: {
     '#withType':: {
-
+      ignore: true,
     },
   },
 }

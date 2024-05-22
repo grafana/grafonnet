@@ -270,16 +270,10 @@
   },
   timeSeriesQuery+:
     {
-      '#withGraphPeriod': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string', 'string'] }], help: "To disable the graphPeriod, it should explictly be set to 'disabled'." } },
-      withGraphPeriod(value): {
+      '#withGraphPeriod': { 'function': { args: [{ default: 'disabled', enums: null, name: 'value', type: ['string'] }], help: "To disable the graphPeriod, it should explictly be set to 'disabled'." } },
+      withGraphPeriod(value='disabled'): {
         timeSeriesQuery+: {
           graphPeriod: value,
-        },
-      },
-      '#withGraphPeriodMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string', 'string'] }], help: "To disable the graphPeriod, it should explictly be set to 'disabled'." } },
-      withGraphPeriodMixin(value): {
-        timeSeriesQuery+: {
-          graphPeriod+: value,
         },
       },
       '#withProjectName': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'GCP project to execute the query against.' } },
