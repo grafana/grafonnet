@@ -1,6 +1,6 @@
-# cloudwatch
+# cloudWatch
 
-grafonnet.query.cloudwatch
+grafonnet.query.cloudWatch
 
 ## Subpackages
 

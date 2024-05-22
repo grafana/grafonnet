@@ -4,11 +4,11 @@ grafonnet.query
 
 ## Subpackages
 
-* [azuremonitor](azuremonitor/index.md)
-* [cloudwatch](cloudwatch/index.md)
+* [azureMonitor](azureMonitor/index.md)
+* [cloudWatch](cloudWatch/index.md)
 * [elasticsearch](elasticsearch/index.md)
-* [googlecloudmonitoring](googlecloudmonitoring.md)
-* [grafanapyroscope](grafanapyroscope.md)
+* [googleCloudMonitoring](googleCloudMonitoring.md)
+* [grafanaPyroscope](grafanaPyroscope.md)
 * [loki](loki.md)
 * [parca](parca.md)
 * [prometheus](prometheus.md)

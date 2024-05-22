@@ -1,6 +1,6 @@
 // This file is generated, do not manually edit.
 {
-  '#': { help: 'grafonnet.query.grafanapyroscope', name: 'grafanapyroscope' },
+  '#': { help: 'grafonnet.query.grafanaPyroscope', name: 'grafanaPyroscope' },
   '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: "For mixed data sources the selected datasource is on the query level.\nFor non mixed scenarios this is undefined.\nTODO find a better way to do this ^ that's friendly to schema\nTODO this shouldn't be unknown but DataSourceRef | null" } },
   withDatasource(value): {
     datasource: value,

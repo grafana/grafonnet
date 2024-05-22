@@ -1,6 +1,6 @@
-# azuremonitor
+# azureMonitor
 
-grafonnet.query.azuremonitor
+grafonnet.query.azureMonitor
 
 ## Subpackages
 

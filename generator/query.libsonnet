@@ -8,6 +8,13 @@ local utils = import './utils.libsonnet';
 {
   local root = self,
 
+  titleMapping: {
+    azuremonitor: 'azureMonitor',
+    cloudwatch: 'cloudWatch',
+    googlecloudmonitoring: 'googleCloudMonitoring',
+    grafanapyroscope: 'grafanaPyroscope',
+  },
+
   render(schemas):
     local files = self.getFilesForSchemas(schemas);
     { 'query.libsonnet': root.queryIndex(files) }
@@ -19,7 +26,7 @@ local utils = import './utils.libsonnet';
   getFilesForSchemas(schemas):
     std.foldl(
       function(acc, schema)
-        local title = schema.info.title;
+        local title = std.get(root.titleMapping, std.asciiLower(schema.info.title), schema.info.title);
         acc + [{
           title: title,
           path: 'query/' + title + '.libsonnet',
@@ -32,7 +39,7 @@ local utils = import './utils.libsonnet';
   generateLib(schema):
     local title = schema.info.title;
     local customSchema =
-      schema + {
+      schema {
         components+: {
           schemas+: std.get(fixes, title, {}),
         },
@@ -51,7 +58,11 @@ local utils = import './utils.libsonnet';
         title,
       );
 
-    utils.addDoc(ast, title, 'query.').toString()
+    utils.addDoc(
+      ast,
+      std.get(root.titleMapping, std.asciiLower(title), title),
+      'query.'
+    ).toString()
     + (if std.member(self.hasCustom, title)
        then
          '\n +'

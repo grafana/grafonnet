@@ -1,6 +1,6 @@
 // This file is generated, do not manually edit.
 {
-  '#': { help: 'grafonnet.query.googlecloudmonitoring', name: 'googlecloudmonitoring' },
+  '#': { help: 'grafonnet.query.googleCloudMonitoring', name: 'googleCloudMonitoring' },
   '#withAliasBy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Aliases can be set to modify the legend labels. e.g. {{metric.label.xxx}}. See docs for more detail.' } },
   withAliasBy(value): {
     aliasBy: value,

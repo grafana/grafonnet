@@ -1,6 +1,6 @@
-# grafanapyroscope
+# grafanaPyroscope
 
-grafonnet.query.grafanapyroscope
+grafonnet.query.grafanaPyroscope
 
 ## Index
 

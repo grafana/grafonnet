@@ -1,6 +1,6 @@
 // This file is generated, do not manually edit.
 {
-  '#': { help: 'grafonnet.query.azuremonitor', name: 'azuremonitor' },
+  '#': { help: 'grafonnet.query.azureMonitor', name: 'azureMonitor' },
   '#withAzureLogAnalytics': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Azure Monitor Logs sub-query properties' } },
   withAzureLogAnalytics(value): {
     azureLogAnalytics: value,

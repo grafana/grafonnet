@@ -96,7 +96,11 @@ local utils = import './utils.libsonnet';
       a.import_statement.new('../panel.libsonnet'),
     ).toString()
     + '\n +'
-    + utils.addDoc(refactored, std.get(root.titleMapping, std.asciiLower(title), title), 'panel.').toString()
+    + utils.addDoc(
+      refactored,
+      std.get(root.titleMapping, std.asciiLower(title), title),
+      'panel.'
+    ).toString()
     + '\n +'
     + a.object.new([
       a.field.new(

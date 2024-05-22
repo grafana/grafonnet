@@ -1,6 +1,6 @@
-# googlecloudmonitoring
+# googleCloudMonitoring
 
-grafonnet.query.googlecloudmonitoring
+grafonnet.query.googleCloudMonitoring
 
 ## Index
 

@@ -1,6 +1,6 @@
 // This file is generated, do not manually edit.
 {
-  '#': { help: 'grafonnet.query.cloudwatch', name: 'cloudwatch' },
+  '#': { help: 'grafonnet.query.cloudWatch', name: 'cloudWatch' },
   CloudWatchAnnotationQuery+:
     {
       '#withAccountId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The ID of the AWS account to query for the metric, specifying `all` will query all accounts that the monitoring account is permitted to query.' } },
