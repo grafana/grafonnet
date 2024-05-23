@@ -10,4 +10,5 @@
   parca: import 'query/parca.libsonnet',
   prometheus: import 'query/prometheus.libsonnet',
   tempo: import 'query/tempo.libsonnet',
+  testData: import 'query/testData.libsonnet',
 }

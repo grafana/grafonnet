@@ -13,6 +13,7 @@ local utils = import './utils.libsonnet';
     cloudwatch: 'cloudWatch',
     googlecloudmonitoring: 'googleCloudMonitoring',
     grafanapyroscope: 'grafanaPyroscope',
+    testdata: 'testData',
   },
 
   render(schemas):
