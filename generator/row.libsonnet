@@ -21,32 +21,33 @@ local utils = import './utils.libsonnet';
         local title = schema.info.title;
         acc + [{
           title: title,
-          path: 'raw/panel/' + title + '.libsonnet',
-          content: root.generateRawLib(schema),
+          path: 'panel/' + title + '.libsonnet',
+          content: root.generateLib(schema),
         }],
       schemas,
       [],
     ),
 
-  generateRawLib(schema):
+  generateLib(schema):
+    local id = schema.info['x-schema-identifier'];
     local title = schema.info.title;
-    local subSchema = schema.components.schemas[title];
+    local subSchema = schema.components.schemas[id];
 
     local ast =
       utils.unwrapFromCRDsonnet(
         crdsonnet.openapi.render(
-          title,
+          id,
           subSchema,
           schema,
           refactor.ASTProcessor,
           addNewFunction=false,
         ),
-        title,
+        id,
       );
 
     utils.addDoc(ast, title, 'panel.').toString()
     + '\n +'
     + a.parenthesis.new(
-      a.import_statement.new('../../custom/row.libsonnet'),
+      a.import_statement.new('../custom/row.libsonnet'),
     ).toString(),
 }

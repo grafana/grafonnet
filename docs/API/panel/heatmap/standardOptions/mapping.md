@@ -7,7 +7,7 @@
 * [`obj RangeMap`](#obj-rangemap)
   * [`fn withOptions(value)`](#fn-rangemapwithoptions)
   * [`fn withOptionsMixin(value)`](#fn-rangemapwithoptionsmixin)
-  * [`fn withType(value)`](#fn-rangemapwithtype)
+  * [`fn withType()`](#fn-rangemapwithtype)
   * [`obj options`](#obj-rangemapoptions)
     * [`fn withFrom(value)`](#fn-rangemapoptionswithfrom)
     * [`fn withResult(value)`](#fn-rangemapoptionswithresult)
@@ -21,7 +21,7 @@
 * [`obj RegexMap`](#obj-regexmap)
   * [`fn withOptions(value)`](#fn-regexmapwithoptions)
   * [`fn withOptionsMixin(value)`](#fn-regexmapwithoptionsmixin)
-  * [`fn withType(value)`](#fn-regexmapwithtype)
+  * [`fn withType()`](#fn-regexmapwithtype)
   * [`obj options`](#obj-regexmapoptions)
     * [`fn withPattern(value)`](#fn-regexmapoptionswithpattern)
     * [`fn withResult(value)`](#fn-regexmapoptionswithresult)
@@ -34,7 +34,7 @@
 * [`obj SpecialValueMap`](#obj-specialvaluemap)
   * [`fn withOptions(value)`](#fn-specialvaluemapwithoptions)
   * [`fn withOptionsMixin(value)`](#fn-specialvaluemapwithoptionsmixin)
-  * [`fn withType(value)`](#fn-specialvaluemapwithtype)
+  * [`fn withType()`](#fn-specialvaluemapwithtype)
   * [`obj options`](#obj-specialvaluemapoptions)
     * [`fn withMatch(value)`](#fn-specialvaluemapoptionswithmatch)
     * [`fn withResult(value)`](#fn-specialvaluemapoptionswithresult)
@@ -47,7 +47,7 @@
 * [`obj ValueMap`](#obj-valuemap)
   * [`fn withOptions(value)`](#fn-valuemapwithoptions)
   * [`fn withOptionsMixin(value)`](#fn-valuemapwithoptionsmixin)
-  * [`fn withType(value)`](#fn-valuemapwithtype)
+  * [`fn withType()`](#fn-valuemapwithtype)
 
 ## Fields
 
@@ -79,12 +79,9 @@ Range to match against and the result to apply when the value is within the rang
 #### fn RangeMap.withType
 
 ```jsonnet
-RangeMap.withType(value)
+RangeMap.withType()
 ```
 
-PARAMETERS:
-
-* **value** (`string`)
 
 
 #### obj RangeMap.options
@@ -98,7 +95,7 @@ RangeMap.options.withFrom(value)
 
 PARAMETERS:
 
-* **value** (`null`,`number`)
+* **value** (`number`)
 
 Min value of the range. It can be null which means -Infinity
 ##### fn RangeMap.options.withResult
@@ -131,7 +128,7 @@ RangeMap.options.withTo(value)
 
 PARAMETERS:
 
-* **value** (`null`,`number`)
+* **value** (`number`)
 
 Max value of the range. It can be null which means +Infinity
 ##### obj RangeMap.options.result
@@ -209,12 +206,9 @@ Regular expression to match against and the result to apply when the value match
 #### fn RegexMap.withType
 
 ```jsonnet
-RegexMap.withType(value)
+RegexMap.withType()
 ```
 
-PARAMETERS:
-
-* **value** (`string`)
 
 
 #### obj RegexMap.options
@@ -328,12 +322,9 @@ PARAMETERS:
 #### fn SpecialValueMap.withType
 
 ```jsonnet
-SpecialValueMap.withType(value)
+SpecialValueMap.withType()
 ```
 
-PARAMETERS:
-
-* **value** (`string`)
 
 
 #### obj SpecialValueMap.options
@@ -448,10 +439,7 @@ Map with <value_to_match>: ValueMappingResult. For example: { "10": { text: "Per
 #### fn ValueMap.withType
 
 ```jsonnet
-ValueMap.withType(value)
+ValueMap.withType()
 ```
 
-PARAMETERS:
-
-* **value** (`string`)
 

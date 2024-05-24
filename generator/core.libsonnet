@@ -10,67 +10,33 @@ local utils = import './utils.libsonnet';
 
   render(version, schemas):
     local files = self.getFilesForSchemas(schemas);
-    { 'main.libsonnet': root.mainIndex(version, files.clean) }
+    { 'main.libsonnet': root.mainIndex(version, files) }
     + {
       [file.path]: file.content
-      for type in std.objectFields(files)
-      for file in files[type]
+      for file in files
     },
 
   getFilesForSchemas(schemas):
     std.foldl(
       function(acc, schema)
-        local title = schema.info.title;
-        local raw = {
+        local id = schema.info['x-schema-identifier'];
+        local title = std.asciiLower(id);
+        acc + [{
           title: title,
-          path: 'raw/' + title + '.libsonnet',
-          content: root.generateRawLib(schema),
-        };
-        acc + {
-          raw+:
-            (if title in root.structure
-             then [raw]
-             else []),
-          clean+:
-            (if title in root.structure
-             then [{
-               title: title,
-               path: 'clean/' + title + '.libsonnet',
-               content: root.generateCleanLib(schema),
-             }]
-             else [raw]),
-        },
+          path: title + '.libsonnet',
+          content: root.generateLib(schema),
+        }],
       schemas,
-      {},
+      [],
     ),
 
-  generateRawLib(schema):
-    local title = schema.info.title;
+  generateLib(schema):
+    local id = schema.info['x-schema-identifier'];
+    local title = std.asciiLower(id);
     local subSchema =
-      if 'spec' in schema.components.schemas[title].properties
-      then schema.components.schemas[title].properties.spec
-      else schema.components.schemas[title];
-
-    local ast =
-      utils.unwrapFromCRDsonnet(
-        crdsonnet.openapi.render(
-          title,
-          subSchema,
-          schema,
-          refactor.ASTProcessor,
-          addNewFunction=false,
-        ),
-        title,
-      );
-
-    utils.addDoc(ast, title).toString(),
-
-  generateCleanLib(schema):
-    local title = schema.info.title;
-    local subSchema =
-      if 'spec' in schema.components.schemas[title].properties
-      then schema.components.schemas[title].properties.spec
-      else schema.components.schemas[title];
+      if 'spec' in schema.components.schemas[id].properties
+      then schema.components.schemas[id].properties.spec
+      else schema.components.schemas[id];
 
     local ast =
       utils.unwrapFromCRDsonnet(
@@ -86,18 +52,22 @@ local utils = import './utils.libsonnet';
 
     local structure = std.get(root.structure, title, default={});
 
-    local newAST = refactor.refactor(
-      ast,
-      std.get(structure, 'groupings', {}),
-      std.get(structure, 'copy', [])
-    );
+    local restructured =
+      if structure != {}
+      then
+        refactor.refactor(
+          ast,
+          std.get(structure, 'groupings', {}),
+          std.get(structure, 'copy', [])
+        )
+      else ast;
 
-    utils.addDoc(newAST, title).toString()
+    utils.addDoc(restructured, title).toString()
     + (if 'custom' in structure
        then
          '\n +'
          + a.parenthesis.new(
-           a.import_statement.new('../custom/' + structure.custom),
+           a.import_statement.new('custom/' + structure.custom),
          ).toString()
        else ''),
 
@@ -131,7 +101,7 @@ local utils = import './utils.libsonnet';
       + [
         a.field.new(
           a.id.new('panel'),
-          a.import_statement.new('panel.libsonnet'),
+          a.import_statement.new('panelindex.libsonnet'),
         ),
         a.field.new(
           a.id.new('query'),
@@ -162,9 +132,7 @@ local utils = import './utils.libsonnet';
           'withPanels',
           'withPanelsMixin',
           'withRefresh',
-          // 'withRefreshMixin', // changed type to only "string" in 10.4.0, was oneOf with an enum before
           'withSchemaVersion',
-          // 'withStyle', // removed in version 10.2.0
           'withTags',
           'withTagsMixin',
           'withTemplating',

@@ -8,52 +8,44 @@ local utils = import './utils.libsonnet';
 {
   local root = self,
 
+  titleMapping: {
+    azuremonitor: 'azureMonitor',
+    cloudwatch: 'cloudWatch',
+    googlecloudmonitoring: 'googleCloudMonitoring',
+    grafanapyroscope: 'grafanaPyroscope',
+    testdata: 'testData',
+  },
+
   render(schemas):
     local files = self.getFilesForSchemas(schemas);
-    { 'query.libsonnet': root.queryIndex(files.clean) }
+    { 'query.libsonnet': root.queryIndex(files) }
     + {
       [file.path]: file.content
-      for type in std.objectFields(files)
-      for file in files[type]
+      for file in files
     },
 
   getFilesForSchemas(schemas):
     std.foldl(
       function(acc, schema)
-        local title = schema.info.title;
-        local raw = {
+        local title = std.get(root.titleMapping, std.asciiLower(schema.info.title), schema.info.title);
+        acc + [{
           title: title,
-          path: 'raw/query/' + title + '.libsonnet',
-          content: root.generateRawLib(schema),
-        };
-        acc +
-        {
-          raw+:
-            (if std.member(root.hasCustom, title)
-             then [raw]
-             else []),
-          clean+:
-            (if std.member(root.hasCustom, title)
-             then [{
-               title: title,
-               path: 'clean/query/' + title + '.libsonnet',
-               content: root.generateCleanLib(schema),
-             }]
-             else [raw]),
-        },
+          path: 'query/' + title + '.libsonnet',
+          content: root.generateLib(schema),
+        }],
       schemas,
-      {},
+      [],
     ),
 
-  generateRawLib(schema):
-    local title = schema.info.title;
+  generateLib(schema):
+    local title = std.get(root.titleMapping, std.asciiLower(schema.info.title), schema.info.title);
     local customSchema =
-      schema + {
+      schema {
         components+: {
           schemas+: std.get(fixes, title, {}),
         },
       };
-    local subSchema = customSchema.components.schemas[title];
+    local subSchema = customSchema.components.schemas.dataquery;
 
     local ast =
       utils.unwrapFromCRDsonnet(
@@ -67,43 +59,23 @@ local utils = import './utils.libsonnet';
         title,
       );
 
-    utils.addDoc(ast, title, 'query.').toString(),
-
-  generateCleanLib(schema):
-    local title = schema.info.title;
-    local customSchema =
-      schema + {
-        components+: {
-          schemas+: std.get(fixes, title, {}),
-        },
-      };
-    local subSchema = customSchema.components.schemas[title];
-
-    local ast =
-      utils.unwrapFromCRDsonnet(
-        crdsonnet.openapi.render(
-          title,
-          subSchema,
-          customSchema,
-          refactor.ASTProcessor,
-          addNewFunction=false,
-        ),
-        title,
-      );
-
-    utils.addDoc(ast, title, 'query.').toString()
+    utils.addDoc(
+      ast,
+      title,
+      'query.'
+    ).toString()
     + (if std.member(self.hasCustom, title)
        then
          '\n +'
          + a.parenthesis.new(
-           a.import_statement.new('../../custom/query/' + title + '.libsonnet'),
+           a.import_statement.new('../custom/query/' + title + '.libsonnet'),
          ).toString()
        else ''),
 
   // FIXME: Some schemas follow a different structure,  temporarily covering for this.
   local fixes = {
-    [utils.formatSchemaName('CloudWatchDataQuery')]: {
-      [utils.formatSchemaName('CloudWatchDataQuery')]: {
+    cloudWatch: {
+      dataquery: {
         type: 'object',
         oneOf: [
           { '$ref': '#/components/schemas/CloudWatchAnnotationQuery' },
@@ -119,27 +91,32 @@ local utils = import './utils.libsonnet';
         },
       },
     },
-    [utils.formatSchemaName('AzureMonitorDataQuery')]: {
-      [utils.formatSchemaName('AzureMonitorDataQuery')]: {
+    azureMonitor: {
+      dataquery: {
         '$ref': '#/components/schemas/AzureMonitorQuery',
       },
     },
-    [utils.formatSchemaName('TempoDataQuery')]: {
-      [utils.formatSchemaName('TempoDataQuery')]: {
+    tempo: {
+      dataquery: {
         '$ref': '#/components/schemas/TempoQuery',
       },
     },
-    [utils.formatSchemaName('GoogleCloudMonitoringDataQuery')]: {
-      [utils.formatSchemaName('GoogleCloudMonitoringDataQuery')]: {
+    googleCloudMonitoring: {
+      dataquery: {
         '$ref': '#/components/schemas/CloudMonitoringQuery',
       },
     },
-    [utils.formatSchemaName('TestDataDataQuery')]: {
-      [utils.formatSchemaName('TestDataDataQuery')]+: {
+    testData: {
+      dataquery+: {
         properties+: {
           // `points` is an array of arrays, this renders awkwardly with CRDsonnet
           points: { type: 'array' },
         },
+      },
+    },
+    expr: {
+      dataquery: {
+        '$ref': '#/components/schemas/expr',
       },
     },
   },
@@ -167,8 +144,16 @@ local utils = import './utils.libsonnet';
     ).toString(),
 
   hasCustom: [
+    'azureMonitor',
+    'cloudWatch',
+    'elasticsearch',
+    'expr',
+    'googleCloudMonitoring',
+    'grafanaPyroscope',
     'loki',
+    'parca',
     'prometheus',
     'tempo',
+    'testData',
   ],
 }

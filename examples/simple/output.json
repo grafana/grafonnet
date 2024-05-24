@@ -17,7 +17,7 @@
             w: 24,
           },
           id: 1,
-          pluginVersion: 'v10.4.0',
+          pluginVersion: 'v11.0.0',
           targets: [
             {
               datasource: {
@@ -31,7 +31,7 @@
           type: 'timeseries',
         },
       ],
-      schemaVersion: 36,
+      schemaVersion: 39,
       time: {
         from: 'now-6h',
         to: 'now',

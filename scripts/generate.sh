@@ -3,6 +3,7 @@ set -euo pipefail
 set -x
 
 VERSION="${1}"
+COG_VERSION="${VERSION%?}x"
 
 DIRNAME0="$(dirname "$0")"
 SCRIPT_DIR=$(cd "$DIRNAME0" && pwd)
@@ -19,9 +20,13 @@ jb init
 cp -r "${REPO_DIR}/generator" generator
 cp -r "${REPO_DIR}/generator/jsonnetfile.lock.json" .
 jb install
-jb install "github.com/grafana/grok/jsonnet/${VERSION}@main"
-jb install "github.com/grafana/grafana/public@${VERSION}"
+jb install "github.com/grafana/grafana-foundation-sdk/openapi@${COG_VERSION}+cog-v0.0.x"
+jb install "github.com/grafana/grafana/public@${VERSION}-preview"
 jb install ./generator
+
+echo '[' > imports.libsonnet
+find vendor/github.com/grafana/grafana-foundation-sdk/openapi -type f | awk '{print "import \""$1"\","}' >> imports.libsonnet
+echo ']' >> imports.libsonnet
 
 OUT_DIR="${REPO_DIR}/gen"
 GEN_DIR="${OUT_DIR}/grafonnet-${VERSION}"
@@ -35,7 +40,7 @@ mapfile -t FILES < <(
     jsonnet -J vendor \
         -S -c -m "${OUT_DIR}" \
         --tla-str version="${VERSION}" \
-        --tla-code-file schemas="github.com/grafana/grok/jsonnet/${VERSION}/imports.libsonnet" \
+        --tla-code-file schemas="./imports.libsonnet" \
         --tla-code-file openapiSpec="github.com/grafana/grafana/public/openapi3.json" \
         -e "(import 'generator/main.libsonnet')"
     )

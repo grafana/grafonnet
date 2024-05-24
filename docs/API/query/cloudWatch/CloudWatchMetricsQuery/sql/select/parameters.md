@@ -5,7 +5,7 @@
 ## Index
 
 * [`fn withName(value)`](#fn-withname)
-* [`fn withType(value)`](#fn-withtype)
+* [`fn withType()`](#fn-withtype)
 
 ## Fields
 
@@ -23,10 +23,7 @@ PARAMETERS:
 ### fn withType
 
 ```jsonnet
-withType(value)
+withType()
 ```
 
-PARAMETERS:
-
-* **value** (`string`)
 
