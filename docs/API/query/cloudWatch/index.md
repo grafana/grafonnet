@@ -16,7 +16,6 @@ grafonnet.query.cloudWatch
   * [`fn withActionPrefix(value)`](#fn-cloudwatchannotationquerywithactionprefix)
   * [`fn withAlarmNamePrefix(value)`](#fn-cloudwatchannotationquerywithalarmnameprefix)
   * [`fn withDatasource(value)`](#fn-cloudwatchannotationquerywithdatasource)
-  * [`fn withDatasourceMixin(value)`](#fn-cloudwatchannotationquerywithdatasourcemixin)
   * [`fn withDimensions(value)`](#fn-cloudwatchannotationquerywithdimensions)
   * [`fn withDimensionsMixin(value)`](#fn-cloudwatchannotationquerywithdimensionsmixin)
   * [`fn withHide(value=true)`](#fn-cloudwatchannotationquerywithhide)
@@ -34,7 +33,6 @@ grafonnet.query.cloudWatch
   * [`fn withStatisticsMixin(value)`](#fn-cloudwatchannotationquerywithstatisticsmixin)
 * [`obj CloudWatchLogsQuery`](#obj-cloudwatchlogsquery)
   * [`fn withDatasource(value)`](#fn-cloudwatchlogsquerywithdatasource)
-  * [`fn withDatasourceMixin(value)`](#fn-cloudwatchlogsquerywithdatasourcemixin)
   * [`fn withExpression(value)`](#fn-cloudwatchlogsquerywithexpression)
   * [`fn withHide(value=true)`](#fn-cloudwatchlogsquerywithhide)
   * [`fn withId(value)`](#fn-cloudwatchlogsquerywithid)
@@ -52,7 +50,6 @@ grafonnet.query.cloudWatch
   * [`fn withAccountId(value)`](#fn-cloudwatchmetricsquerywithaccountid)
   * [`fn withAlias(value)`](#fn-cloudwatchmetricsquerywithalias)
   * [`fn withDatasource(value)`](#fn-cloudwatchmetricsquerywithdatasource)
-  * [`fn withDatasourceMixin(value)`](#fn-cloudwatchmetricsquerywithdatasourcemixin)
   * [`fn withDimensions(value)`](#fn-cloudwatchmetricsquerywithdimensions)
   * [`fn withDimensionsMixin(value)`](#fn-cloudwatchmetricsquerywithdimensionsmixin)
   * [`fn withExpression(value)`](#fn-cloudwatchmetricsquerywithexpression)
@@ -176,26 +173,9 @@ CloudWatchAnnotationQuery.withDatasource(value)
 
 PARAMETERS:
 
-* **value** (`object`)
+* **value** (`string`)
 
-For mixed data sources the selected datasource is on the query level.
-For non mixed scenarios this is undefined.
-TODO find a better way to do this ^ that's friendly to schema
-TODO this shouldn't be unknown but DataSourceRef | null
-#### fn CloudWatchAnnotationQuery.withDatasourceMixin
-
-```jsonnet
-CloudWatchAnnotationQuery.withDatasourceMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-For mixed data sources the selected datasource is on the query level.
-For non mixed scenarios this is undefined.
-TODO find a better way to do this ^ that's friendly to schema
-TODO this shouldn't be unknown but DataSourceRef | null
+Set the datasource for this query.
 #### fn CloudWatchAnnotationQuery.withDimensions
 
 ```jsonnet
@@ -379,26 +359,9 @@ CloudWatchLogsQuery.withDatasource(value)
 
 PARAMETERS:
 
-* **value** (`object`)
+* **value** (`string`)
 
-For mixed data sources the selected datasource is on the query level.
-For non mixed scenarios this is undefined.
-TODO find a better way to do this ^ that's friendly to schema
-TODO this shouldn't be unknown but DataSourceRef | null
-#### fn CloudWatchLogsQuery.withDatasourceMixin
-
-```jsonnet
-CloudWatchLogsQuery.withDatasourceMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-For mixed data sources the selected datasource is on the query level.
-For non mixed scenarios this is undefined.
-TODO find a better way to do this ^ that's friendly to schema
-TODO this shouldn't be unknown but DataSourceRef | null
+Set the datasource for this query.
 #### fn CloudWatchLogsQuery.withExpression
 
 ```jsonnet
@@ -581,26 +544,9 @@ CloudWatchMetricsQuery.withDatasource(value)
 
 PARAMETERS:
 
-* **value** (`object`)
+* **value** (`string`)
 
-For mixed data sources the selected datasource is on the query level.
-For non mixed scenarios this is undefined.
-TODO find a better way to do this ^ that's friendly to schema
-TODO this shouldn't be unknown but DataSourceRef | null
-#### fn CloudWatchMetricsQuery.withDatasourceMixin
-
-```jsonnet
-CloudWatchMetricsQuery.withDatasourceMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-For mixed data sources the selected datasource is on the query level.
-For non mixed scenarios this is undefined.
-TODO find a better way to do this ^ that's friendly to schema
-TODO this shouldn't be unknown but DataSourceRef | null
+Set the datasource for this query.
 #### fn CloudWatchMetricsQuery.withDimensions
 
 ```jsonnet

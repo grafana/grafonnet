@@ -30,3 +30,4 @@
     refId: value,
   },
 }
++ (import '../custom/query/parca.libsonnet')

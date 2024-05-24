@@ -857,3 +857,4 @@
        else [value]),
   },
 }
++ (import '../custom/query/azureMonitor.libsonnet')

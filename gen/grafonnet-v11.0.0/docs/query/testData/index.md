@@ -15,7 +15,6 @@ grafonnet.query.testData
 * [`fn withCsvWave(value)`](#fn-withcsvwave)
 * [`fn withCsvWaveMixin(value)`](#fn-withcsvwavemixin)
 * [`fn withDatasource(value)`](#fn-withdatasource)
-* [`fn withDatasourceMixin(value)`](#fn-withdatasourcemixin)
 * [`fn withDropPercent(value)`](#fn-withdroppercent)
 * [`fn withErrorType(value)`](#fn-witherrortype)
 * [`fn withFlamegraphDiff(value=true)`](#fn-withflamegraphdiff)
@@ -177,20 +176,9 @@ withDatasource(value)
 
 PARAMETERS:
 
-* **value** (`object`)
+* **value** (`string`)
 
-
-### fn withDatasourceMixin
-
-```jsonnet
-withDatasourceMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
+Set the datasource for this query.
 ### fn withDropPercent
 
 ```jsonnet

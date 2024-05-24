@@ -38,7 +38,7 @@ local utils = import './utils.libsonnet';
     ),
 
   generateLib(schema):
-    local title = schema.info.title;
+    local title = std.get(root.titleMapping, std.asciiLower(schema.info.title), schema.info.title);
     local customSchema =
       schema {
         components+: {
@@ -61,7 +61,7 @@ local utils = import './utils.libsonnet';
 
     utils.addDoc(
       ast,
-      std.get(root.titleMapping, std.asciiLower(title), title),
+      title,
       'query.'
     ).toString()
     + (if std.member(self.hasCustom, title)
@@ -74,7 +74,7 @@ local utils = import './utils.libsonnet';
 
   // FIXME: Some schemas follow a different structure,  temporarily covering for this.
   local fixes = {
-    cloudwatch: {
+    cloudWatch: {
       dataquery: {
         type: 'object',
         oneOf: [
@@ -91,7 +91,7 @@ local utils = import './utils.libsonnet';
         },
       },
     },
-    azuremonitor: {
+    azureMonitor: {
       dataquery: {
         '$ref': '#/components/schemas/AzureMonitorQuery',
       },
@@ -101,12 +101,12 @@ local utils = import './utils.libsonnet';
         '$ref': '#/components/schemas/TempoQuery',
       },
     },
-    googlecloudmonitoring: {
+    googleCloudMonitoring: {
       dataquery: {
         '$ref': '#/components/schemas/CloudMonitoringQuery',
       },
     },
-    testdata: {
+    testData: {
       dataquery+: {
         properties+: {
           // `points` is an array of arrays, this renders awkwardly with CRDsonnet
@@ -144,9 +144,15 @@ local utils = import './utils.libsonnet';
     ).toString(),
 
   hasCustom: [
+    'azureMonitor',
+    'cloudWatch',
+    'expr',
+    'googleCloudMonitoring',
+    'grafanaPyroscope',
     'loki',
+    'parca',
     'prometheus',
     'tempo',
-    'expr',
+    'testData',
   ],
 }

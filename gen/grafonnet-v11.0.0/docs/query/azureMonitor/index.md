@@ -19,7 +19,6 @@ grafonnet.query.azureMonitor
 * [`fn withAzureTraces(value)`](#fn-withazuretraces)
 * [`fn withAzureTracesMixin(value)`](#fn-withazuretracesmixin)
 * [`fn withDatasource(value)`](#fn-withdatasource)
-* [`fn withDatasourceMixin(value)`](#fn-withdatasourcemixin)
 * [`fn withGrafanaTemplateVariableFn(value)`](#fn-withgrafanatemplatevariablefn)
 * [`fn withGrafanaTemplateVariableFnMixin(value)`](#fn-withgrafanatemplatevariablefnmixin)
 * [`fn withHide(value=true)`](#fn-withhide)
@@ -245,26 +244,9 @@ withDatasource(value)
 
 PARAMETERS:
 
-* **value** (`object`)
+* **value** (`string`)
 
-For mixed data sources the selected datasource is on the query level.
-For non mixed scenarios this is undefined.
-TODO find a better way to do this ^ that's friendly to schema
-TODO this shouldn't be unknown but DataSourceRef | null
-### fn withDatasourceMixin
-
-```jsonnet
-withDatasourceMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-For mixed data sources the selected datasource is on the query level.
-For non mixed scenarios this is undefined.
-TODO find a better way to do this ^ that's friendly to schema
-TODO this shouldn't be unknown but DataSourceRef | null
+Set the datasource for this query.
 ### fn withGrafanaTemplateVariableFn
 
 ```jsonnet
