@@ -146,6 +146,7 @@ local utils = import './utils.libsonnet';
   hasCustom: [
     'azureMonitor',
     'cloudWatch',
+    'elasticsearch',
     'expr',
     'googleCloudMonitoring',
     'grafanaPyroscope',
