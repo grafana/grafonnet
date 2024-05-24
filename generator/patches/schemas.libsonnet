@@ -85,7 +85,7 @@ local utils = import '../utils.libsonnet';
       },
     },
 
-  // Folder schema got removed from CUE/grok in https://github.com/grafana/grafana/pull/79413
+  // Folder schema got removed from CUE in https://github.com/grafana/grafana/pull/79413
   // This adds it back as it is a really simple object.
   getFolderSchema(version, schemas):
     local allSchemaTitles = std.map(function(x) x.info.title, schemas);
