@@ -197,7 +197,7 @@
          "type": "timeseries"
       }
    ],
-   "schemaVersion": 36,
+   "schemaVersion": 39,
    "templating": {
       "list": [
          {

@@ -31,7 +31,7 @@
           type: 'timeseries',
         },
       ],
-      schemaVersion: 36,
+      schemaVersion: 39,
       time: {
         from: 'now-6h',
         to: 'now',
