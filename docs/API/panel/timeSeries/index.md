@@ -393,7 +393,7 @@ fieldConfig.defaults.custom.withInsertNulls(value)
 
 PARAMETERS:
 
-* **value** (`boolean`,`number`)
+* **value** (`boolean`,`integer`)
 
 
 ###### fn fieldConfig.defaults.custom.withInsertNullsMixin
@@ -404,7 +404,7 @@ fieldConfig.defaults.custom.withInsertNullsMixin(value)
 
 PARAMETERS:
 
-* **value** (`boolean`,`number`)
+* **value** (`boolean`,`integer`)
 
 
 ###### fn fieldConfig.defaults.custom.withLineColor

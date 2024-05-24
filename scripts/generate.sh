@@ -3,6 +3,7 @@ set -euo pipefail
 set -x
 
 VERSION="${1}"
+COG_VERSION="${VERSION%?}x"
 
 DIRNAME0="$(dirname "$0")"
 SCRIPT_DIR=$(cd "$DIRNAME0" && pwd)
@@ -19,7 +20,7 @@ jb init
 cp -r "${REPO_DIR}/generator" generator
 cp -r "${REPO_DIR}/generator/jsonnetfile.lock.json" .
 jb install
-jb install "github.com/grafana/grafana-foundation-sdk/openapi@next+cog-v0.0.x"
+jb install "github.com/grafana/grafana-foundation-sdk/openapi@${COG_VERSION}+cog-v0.0.x"
 jb install "github.com/grafana/grafana/public@${VERSION}-preview"
 jb install ./generator
 

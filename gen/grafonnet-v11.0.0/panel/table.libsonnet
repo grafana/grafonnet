@@ -395,30 +395,6 @@
                       },
                     },
                   },
-                  '#withInsertNulls': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['boolean', 'number'] }], help: '' } },
-                  withInsertNulls(value): {
-                    fieldConfig+: {
-                      defaults+: {
-                        custom+: {
-                          cellOptions+: {
-                            insertNulls: value,
-                          },
-                        },
-                      },
-                    },
-                  },
-                  '#withInsertNullsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['boolean', 'number'] }], help: '' } },
-                  withInsertNullsMixin(value): {
-                    fieldConfig+: {
-                      defaults+: {
-                        custom+: {
-                          cellOptions+: {
-                            insertNulls+: value,
-                          },
-                        },
-                      },
-                    },
-                  },
                   '#withLineColor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
                   withLineColor(value): {
                     fieldConfig+: {

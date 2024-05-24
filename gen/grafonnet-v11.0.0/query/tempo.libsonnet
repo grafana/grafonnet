@@ -157,7 +157,7 @@
   withSpss(value): {
     spss: value,
   },
-  '#withTableType': { 'function': { args: [{ default: null, enums: ['traces', 'spans', 'raw'], name: 'value', type: ['string'] }], help: 'The type of the table that is used to display the search results' } },
+  '#withTableType': { 'function': { args: [{ default: null, enums: ['traces', 'spans'], name: 'value', type: ['string'] }], help: 'The type of the table that is used to display the search results' } },
   withTableType(value): {
     tableType: value,
   },

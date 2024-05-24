@@ -242,7 +242,7 @@
                 },
               },
             },
-          '#withInsertNulls': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['boolean', 'number'] }], help: '' } },
+          '#withInsertNulls': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['boolean', 'integer'] }], help: '' } },
           withInsertNulls(value): {
             fieldConfig+: {
               defaults+: {
@@ -252,7 +252,7 @@
               },
             },
           },
-          '#withInsertNullsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['boolean', 'number'] }], help: '' } },
+          '#withInsertNullsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['boolean', 'integer'] }], help: '' } },
           withInsertNullsMixin(value): {
             fieldConfig+: {
               defaults+: {

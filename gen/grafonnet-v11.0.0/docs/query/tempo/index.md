@@ -269,6 +269,6 @@ withTableType(value)
 PARAMETERS:
 
 * **value** (`string`)
-   - valid values: `"traces"`, `"spans"`, `"raw"`
+   - valid values: `"traces"`, `"spans"`
 
 The type of the table that is used to display the search results
