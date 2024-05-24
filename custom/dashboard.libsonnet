@@ -13,6 +13,11 @@ local d = import 'github.com/jsonnet-libs/docsonnet/doc-util/main.libsonnet';
     + self.time.withFrom('now-6h')
     + self.time.withTo('now'),
 
+  '#withSchemaVersion': { 'function'+: { args: [d.arg('value', d.T.integer, default=39)] } },
+  withSchemaVersion(value=39): {
+    schemaVersion: value,
+  },
+
   '#withPanels':: d.func.new(
     '`withPanels` sets the panels on a dashboard authoratively. It automatically adds IDs to the panels, this can be disabled with `setPanelIDs=false`.',
     args=[

@@ -22,7 +22,7 @@ grafonnet.dashboard
 * [`fn withPanels(panels, setPanelIDs=true)`](#fn-withpanels)
 * [`fn withPanelsMixin(panels, setPanelIDs=true)`](#fn-withpanelsmixin)
 * [`fn withRefresh(value)`](#fn-withrefresh)
-* [`fn withSchemaVersion(value=36)`](#fn-withschemaversion)
+* [`fn withSchemaVersion(value=39)`](#fn-withschemaversion)
 * [`fn withTags(value)`](#fn-withtags)
 * [`fn withTagsMixin(value)`](#fn-withtagsmixin)
 * [`fn withTemplating(value)`](#fn-withtemplating)
@@ -233,16 +233,15 @@ Refresh rate of dashboard. Represented via interval string, e.g. "5s", "1m", "1h
 ### fn withSchemaVersion
 
 ```jsonnet
-withSchemaVersion(value=36)
+withSchemaVersion(value=39)
 ```
 
 PARAMETERS:
 
-* **value** (`integer`)
-   - default value: `36`
+* **value** (`number`)
+   - default value: `39`
 
-Version of the JSON schema, incremented each time a Grafana update brings
-changes to said schema.
+
 ### fn withTags
 
 ```jsonnet
