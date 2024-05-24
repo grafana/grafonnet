@@ -114,6 +114,11 @@ local utils = import './utils.libsonnet';
         },
       },
     },
+    expr: {
+      dataquery: {
+        '$ref': '#/components/schemas/expr',
+      },
+    },
   },
 
   queryIndex(files):
@@ -142,5 +147,6 @@ local utils = import './utils.libsonnet';
     'loki',
     'prometheus',
     'tempo',
+    'expr',
   ],
 }

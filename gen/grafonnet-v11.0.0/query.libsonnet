@@ -4,6 +4,7 @@
   azureMonitor: import 'query/azureMonitor.libsonnet',
   cloudWatch: import 'query/cloudWatch.libsonnet',
   elasticsearch: import 'query/elasticsearch.libsonnet',
+  expr: import 'query/expr.libsonnet',
   googleCloudMonitoring: import 'query/googleCloudMonitoring.libsonnet',
   grafanaPyroscope: import 'query/grafanaPyroscope.libsonnet',
   loki: import 'query/loki.libsonnet',
