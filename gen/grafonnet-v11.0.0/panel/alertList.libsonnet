@@ -6,7 +6,7 @@
     {
       '#withType': { 'function': { args: [], help: '' } },
       withType(): {
-        type: 'alertList',
+        type: 'alertlist',
       },
     },
   options+:

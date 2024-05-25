@@ -122,7 +122,7 @@ PARAMETERS:
 
 * **title** (`string`)
 
-Creates a new alertList panel with a title.
+Creates a new alertlist panel with a title.
 ### obj libraryPanel
 
 
