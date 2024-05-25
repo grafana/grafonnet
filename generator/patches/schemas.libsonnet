@@ -105,7 +105,7 @@ local utils = import '../utils.libsonnet';
         {
           info: {
             title: title,
-            'x-schema-identifier': 'alertList',
+            'x-schema-identifier': 'alertlist',
             'x-schema-kind': 'composable',
             'x-schema-variant': 'panelcfg',
           },
