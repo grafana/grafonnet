@@ -11,6 +11,7 @@ Helper functions that work well with Grafonnet.
   * [`fn wrapPanels(panels, panelWidth, panelHeight, startY)`](#fn-gridwrappanels)
 * [`obj panel`](#obj-panel)
   * [`fn calculateLowestYforPanel(panel, panels)`](#fn-panelcalculatelowestyforpanel)
+  * [`fn dedupeQueryTargets(panels)`](#fn-paneldedupequerytargets)
   * [`fn getPanelIDs(panels)`](#fn-panelgetpanelids)
   * [`fn getPanelsBeforeNextRow(panels)`](#fn-panelgetpanelsbeforenextrow)
   * [`fn groupPanelsInRows(panels)`](#fn-panelgrouppanelsinrows)
@@ -20,6 +21,8 @@ Helper functions that work well with Grafonnet.
   * [`fn resolveCollapsedFlagOnRows(panels)`](#fn-panelresolvecollapsedflagonrows)
   * [`fn sanitizePanel(panel, defaultX=0, defaultY=0, defaultHeight=8, defaultWidth=8)`](#fn-panelsanitizepanel)
   * [`fn setPanelIDs(panels, overrideExistingIDs=true)`](#fn-panelsetpanelids)
+  * [`fn setRefIDs(panel, overrideExistingIDs=true)`](#fn-panelsetrefids)
+  * [`fn setRefIDsOnPanels(panels)`](#fn-panelsetrefidsonpanels)
   * [`fn sortPanelsByXY(panels)`](#fn-panelsortpanelsbyxy)
   * [`fn sortPanelsInRow(rowPanel)`](#fn-panelsortpanelsinrow)
   * [`fn validatePanelIDs(panels)`](#fn-panelvalidatepanelids)
@@ -106,6 +109,20 @@ PARAMETERS:
 * **panels** (`array`)
 
 `calculateLowestYforPanel` calculates Y for a given `panel` from the `gridPos` of an array of `panels`. This function is used in `normalizeY`.
+
+#### fn panel.dedupeQueryTargets
+
+```jsonnet
+panel.dedupeQueryTargets(panels)
+```
+
+PARAMETERS:
+
+* **panels** (`array`)
+
+`dedupeQueryTargets` dedupes the query targets in a set of panels and replaces the duplicates with a ['shared query'](https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/share-query/). Sharing query results across panels reduces the number of queries made to your data source, which can improve the performance of your dashboard.
+
+This function requires that the query targets have `refId` set, `setRefIDs` and `setRefIDsOnPanels` can help with that.
 
 #### fn panel.getPanelIDs
 
@@ -231,6 +248,32 @@ PARAMETERS:
 `setPanelIDs` ensures that all `panels` have a unique ID, this function is used in `dashboard.withPanels` and `dashboard.withPanelsMixin` to provide a consistent experience.
 
 `overrideExistingIDs` can be set to not replace existing IDs, consider validating the IDs with `validatePanelIDs()` to ensure there are no duplicate IDs.
+
+#### fn panel.setRefIDs
+
+```jsonnet
+panel.setRefIDs(panel, overrideExistingIDs=true)
+```
+
+PARAMETERS:
+
+* **panel** (`object`)
+* **overrideExistingIDs** (`bool`)
+   - default value: `true`
+
+`setRefIDs` calculates the `refId` field for each target on a panel.
+
+#### fn panel.setRefIDsOnPanels
+
+```jsonnet
+panel.setRefIDsOnPanels(panels)
+```
+
+PARAMETERS:
+
+* **panels** (`array`)
+
+`setRefIDsOnPanels` applies `setRefIDs on all `panels`.
 
 #### fn panel.sortPanelsByXY
 
