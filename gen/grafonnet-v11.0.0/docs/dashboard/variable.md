@@ -120,6 +120,7 @@ g.dashboard.new('my dashboard')
       * [`fn withValueOnly()`](#fn-querygeneraloptionsshowondashboardwithvalueonly)
   * [`obj queryTypes`](#obj-queryquerytypes)
     * [`fn withLabelValues(label, metric="")`](#fn-queryquerytypeswithlabelvalues)
+    * [`fn withQueryResult(query)`](#fn-queryquerytypeswithqueryresult)
   * [`obj refresh`](#obj-queryrefresh)
     * [`fn onLoad()`](#fn-queryrefreshonload)
     * [`fn onTime()`](#fn-queryrefreshontime)
@@ -898,6 +899,17 @@ PARAMETERS:
    - default value: `""`
 
 Construct a Prometheus template variable using `label_values()`.
+##### fn query.queryTypes.withQueryResult
+
+```jsonnet
+query.queryTypes.withQueryResult(query)
+```
+
+PARAMETERS:
+
+* **query** (`string`)
+
+Construct a Prometheus template variable using `query_result()`.
 #### obj query.refresh
 
 
