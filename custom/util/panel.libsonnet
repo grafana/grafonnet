@@ -318,4 +318,103 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
         else p,
       panels
     ),
+
+
+  '#setRefIDs':: d.func.new(
+    |||
+      `setRefIDs` calculates the `refId` field for each target on a panel.
+    |||,
+    args=[
+      d.arg('panel', d.T.object),
+      d.arg('overrideExistingIDs', d.T.bool, default=true),
+    ]
+  ),
+  setRefIDs(panel, overrideExistingIDs=true):
+    local calculateRefID(n) =
+      // From: https://github.com/grafana/grafana/blob/bffd87107b786930edd091060143ee013843efac/packages/grafana-data/src/query/refId.ts#L15
+      local letters = std.map(std.char, std.range(std.codepoint('A'), std.codepoint('Z')));
+      if n < std.length(letters)
+      then letters[n]
+      else calculateRefID(std.floor(n / std.length(letters)) - 1) + letters[std.mod(n, std.length(letters))];
+    panel + {
+      targets:
+        std.mapWithIndex(
+          function(i, target)
+            if overrideExistingIDs
+               || !std.objectHas(target, 'refId')
+            then target + {
+              refId: calculateRefID(i),
+            }
+            else target,
+          panel.targets,
+        ),
+    },
+
+  '#setRefIDsOnPanels':: d.func.new(
+    |||
+      `setRefIDsOnPanels` applies `setRefIDs on all `panels`.
+    |||,
+    args=[
+      d.arg('panels', d.T.array),
+    ]
+  ),
+  setRefIDsOnPanels(panels):
+    std.map(self.setRefIDs, panels),
+
+  '#dedupeQueryTargets':: d.func.new(
+    |||
+      `dedupeQueryTargets` dedupes the query targets in a set of panels and replaces the duplicates with a ['shared query'](https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/share-query/). Sharing query results across panels reduces the number of queries made to your data source, which can improve the performance of your dashboard.
+
+      This function requires that the query targets have `refId` set, `setRefIDs` and `setRefIDsOnPanels` can help with that.
+    |||,
+    args=[
+      d.arg('panels', d.T.array),
+    ]
+  ),
+  dedupeQueryTargets(panels):
+    // Hide ref so it doesn't compare in equality
+    local targetWithoutRef(target) =
+      target + { refId:: target.refId };
+
+    // Find targets that are the same
+    local findTargets(targets, target) =
+      std.filter(
+        function(t)
+          targetWithoutRef(t) == targetWithoutRef(target),
+        targets
+      );
+
+    // Get a flat array of all targets including their panelId
+    local targets = std.flattenArrays([
+      std.map(function(t) t + { panelId:: panel.id }, panel.targets)
+      for panel in panels
+    ]);
+
+    std.map(
+      function(panel)
+        // Replace target with 'shared query' target if found in other panels
+        local replaceTarget(target) =
+          local found = findTargets(targets, target);
+          if std.length(found) > 0
+             // Do not reference queries from the same panel
+             && found[0].panelId != panel.id
+          then {
+            datasource: {
+              type: 'datasource',
+              uid: '-- Dashboard --',
+            },
+            refId: found[0].refId,
+            panelId: found[0].panelId,
+          }
+          else target;
+
+        panel + {
+          targets:
+            std.map(
+              replaceTarget,
+              panel.targets,
+            ),
+        },
+      panels
+    ),
 }
