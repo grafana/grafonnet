@@ -29,6 +29,10 @@
            then value
            else [value]),
       },
+      '#withMaxPerRow': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: 'Option for repeated panels that controls max items per row\nOnly relevant for horizontally repeated panels' } },
+      withMaxPerRow(value): {
+        maxPerRow: value,
+      },
       '#withRepeat': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Name of template variable to repeat for.' } },
       withRepeat(value): {
         repeat: value,
@@ -118,6 +122,10 @@
       withInterval(value): {
         interval: value,
       },
+      '#withQueryCachingTTL': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['number'] }], help: 'Overrides the data source configured time-to-live for a query cache item in milliseconds' } },
+      withQueryCachingTTL(value): {
+        queryCachingTTL: value,
+      },
       '#withTimeFrom': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Overrides the relative time range for individual panels,\nwhich causes them to be different than what is selected in\nthe dashboard time picker in the top-right corner of the dashboard. You can use this to show metrics from different\ntime periods or days on the same dashboard.\nThe value is formatted as time operation like: `now-5m` (Last 5 minutes), `now/d` (the day so far),\n`now-5d/d`(Last 5 days), `now/w` (This week so far), `now-2y/y` (Last 2 years).\nNote: Panel time overrides have no effect when the dashboard’s time range is absolute.\nSee: https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/#query-options' } },
       withTimeFrom(value): {
         timeFrom: value,
@@ -125,6 +133,10 @@
       '#withTimeShift': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Overrides the time range for individual panels by shifting its start and end relative to the time picker.\nFor example, you can shift the time range for the panel to be two hours earlier than the dashboard time picker setting `2h`.\nNote: Panel time overrides have no effect when the dashboard’s time range is absolute.\nSee: https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/#query-options' } },
       withTimeShift(value): {
         timeShift: value,
+      },
+      '#withHideTimeOverride': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'Controls if the timeFrom or timeShift overrides are shown in the panel header' } },
+      withHideTimeOverride(value=true): {
+        hideTimeOverride: value,
       },
       '#withTargets': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'Depends on the panel plugin. See the plugin documentation for details.' } },
       withTargets(value): {

@@ -190,7 +190,8 @@ local utils = import './utils.libsonnet';
           'withTransparent',
           'withLinks',  // depend on sub package
           'withLinksMixin',
-          'withRepeat',  // missing maxPerRow
+          'withMaxPerRow',
+          'withRepeat',
           'withRepeatDirection',
           'withPluginVersion',
           'withType',
@@ -200,11 +201,11 @@ local utils = import './utils.libsonnet';
           'withDatasource',  // In as-code, default to per-query datasources
           'withDatasourceMixin',
           'withMaxDataPoints',
-          'withInterval',  //minInterval
-          //'queryCachingTTL',  // not in schema
+          'withInterval',
+          'withQueryCachingTTL',
           'withTimeFrom',  //relativeTime
           'withTimeShift',
-          //'hideTimeOverride', // not in schema
+          'withHideTimeOverride',
           'withTargets',  // query, expression or recorded query, not clear from schema
           'withTargetsMixin',
           'withTransformations',  // depend on very bare sub package for a very useful feature

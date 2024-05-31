@@ -29,6 +29,7 @@ grafonnet.panel.debug
   * [`fn withGridPos(h="null", w="null", x="null", y="null")`](#fn-paneloptionswithgridpos)
   * [`fn withLinks(value)`](#fn-paneloptionswithlinks)
   * [`fn withLinksMixin(value)`](#fn-paneloptionswithlinksmixin)
+  * [`fn withMaxPerRow(value)`](#fn-paneloptionswithmaxperrow)
   * [`fn withRepeat(value)`](#fn-paneloptionswithrepeat)
   * [`fn withRepeatDirection(value="h")`](#fn-paneloptionswithrepeatdirection)
   * [`fn withTitle(value)`](#fn-paneloptionswithtitle)
@@ -36,8 +37,10 @@ grafonnet.panel.debug
 * [`obj queryOptions`](#obj-queryoptions)
   * [`fn withDatasource(type, uid)`](#fn-queryoptionswithdatasource)
   * [`fn withDatasourceMixin(value)`](#fn-queryoptionswithdatasourcemixin)
+  * [`fn withHideTimeOverride(value=true)`](#fn-queryoptionswithhidetimeoverride)
   * [`fn withInterval(value)`](#fn-queryoptionswithinterval)
   * [`fn withMaxDataPoints(value)`](#fn-queryoptionswithmaxdatapoints)
+  * [`fn withQueryCachingTTL(value)`](#fn-queryoptionswithquerycachingttl)
   * [`fn withTargets(value)`](#fn-queryoptionswithtargets)
   * [`fn withTargetsMixin(value)`](#fn-queryoptionswithtargetsmixin)
   * [`fn withTimeFrom(value)`](#fn-queryoptionswithtimefrom)
@@ -239,6 +242,18 @@ PARAMETERS:
 * **value** (`array`)
 
 Panel links.
+#### fn panelOptions.withMaxPerRow
+
+```jsonnet
+panelOptions.withMaxPerRow(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+Option for repeated panels that controls max items per row
+Only relevant for horizontally repeated panels
 #### fn panelOptions.withRepeat
 
 ```jsonnet
@@ -316,6 +331,18 @@ PARAMETERS:
 * **value** (`object`)
 
 Ref to a DataSource instance
+#### fn queryOptions.withHideTimeOverride
+
+```jsonnet
+queryOptions.withHideTimeOverride(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+Controls if the timeFrom or timeShift overrides are shown in the panel header
 #### fn queryOptions.withInterval
 
 ```jsonnet
@@ -341,6 +368,17 @@ PARAMETERS:
 * **value** (`number`)
 
 The maximum number of data points that the panel queries are retrieving.
+#### fn queryOptions.withQueryCachingTTL
+
+```jsonnet
+queryOptions.withQueryCachingTTL(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+Overrides the data source configured time-to-live for a query cache item in milliseconds
 #### fn queryOptions.withTargets
 
 ```jsonnet
