@@ -21,6 +21,7 @@ grafonnet.query.expr.TypeResample
 * [`fn withUpsampler(value)`](#fn-withupsampler)
 * [`fn withWindow(value)`](#fn-withwindow)
 * [`obj datasource`](#obj-datasource)
+  * [`fn withApiVersion(value)`](#fn-datasourcewithapiversion)
   * [`fn withType()`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj resultAssertions`](#obj-resultassertions)
@@ -235,6 +236,17 @@ The time duration
 ### obj datasource
 
 
+#### fn datasource.withApiVersion
+
+```jsonnet
+datasource.withApiVersion(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+The apiserver version
 #### fn datasource.withType
 
 ```jsonnet
@@ -253,7 +265,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Datasource UID
+Datasource UID (NOTE: name in k8s)
 ### obj resultAssertions
 
 

@@ -13,13 +13,19 @@
       },
       datasource+:
         {
+          '#withApiVersion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The apiserver version' } },
+          withApiVersion(value): {
+            datasource+: {
+              apiVersion: value,
+            },
+          },
           '#withType': { 'function': { args: [], help: 'The datasource plugin type' } },
           withType(): {
             datasource+: {
               type: '__expr__',
             },
           },
-          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID' } },
+          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID (NOTE: name in k8s)' } },
           withUid(value): {
             datasource+: {
               uid: value,
@@ -131,13 +137,19 @@
       },
       datasource+:
         {
+          '#withApiVersion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The apiserver version' } },
+          withApiVersion(value): {
+            datasource+: {
+              apiVersion: value,
+            },
+          },
           '#withType': { 'function': { args: [], help: 'The datasource plugin type' } },
           withType(): {
             datasource+: {
               type: '__expr__',
             },
           },
-          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID' } },
+          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID (NOTE: name in k8s)' } },
           withUid(value): {
             datasource+: {
               uid: value,
@@ -276,13 +288,19 @@
       },
       datasource+:
         {
+          '#withApiVersion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The apiserver version' } },
+          withApiVersion(value): {
+            datasource+: {
+              apiVersion: value,
+            },
+          },
           '#withType': { 'function': { args: [], help: 'The datasource plugin type' } },
           withType(): {
             datasource+: {
               type: '__expr__',
             },
           },
-          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID' } },
+          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID (NOTE: name in k8s)' } },
           withUid(value): {
             datasource+: {
               uid: value,
@@ -522,13 +540,19 @@
       },
       datasource+:
         {
+          '#withApiVersion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The apiserver version' } },
+          withApiVersion(value): {
+            datasource+: {
+              apiVersion: value,
+            },
+          },
           '#withType': { 'function': { args: [], help: 'The datasource plugin type' } },
           withType(): {
             datasource+: {
               type: '__expr__',
             },
           },
-          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID' } },
+          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID (NOTE: name in k8s)' } },
           withUid(value): {
             datasource+: {
               uid: value,
@@ -732,13 +756,19 @@
       },
       datasource+:
         {
+          '#withApiVersion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The apiserver version' } },
+          withApiVersion(value): {
+            datasource+: {
+              apiVersion: value,
+            },
+          },
           '#withType': { 'function': { args: [], help: 'The datasource plugin type' } },
           withType(): {
             datasource+: {
               type: '__expr__',
             },
           },
-          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID' } },
+          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID (NOTE: name in k8s)' } },
           withUid(value): {
             datasource+: {
               uid: value,
@@ -850,13 +880,19 @@
       },
       datasource+:
         {
+          '#withApiVersion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The apiserver version' } },
+          withApiVersion(value): {
+            datasource+: {
+              apiVersion: value,
+            },
+          },
           '#withType': { 'function': { args: [], help: 'The datasource plugin type' } },
           withType(): {
             datasource+: {
               type: '__expr__',
             },
           },
-          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID' } },
+          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID (NOTE: name in k8s)' } },
           withUid(value): {
             datasource+: {
               uid: value,

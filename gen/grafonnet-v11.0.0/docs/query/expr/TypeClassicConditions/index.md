@@ -23,6 +23,7 @@ grafonnet.query.expr.TypeClassicConditions
 * [`fn withTimeRangeMixin(value)`](#fn-withtimerangemixin)
 * [`fn withType()`](#fn-withtype)
 * [`obj datasource`](#obj-datasource)
+  * [`fn withApiVersion(value)`](#fn-datasourcewithapiversion)
   * [`fn withType()`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj resultAssertions`](#obj-resultassertions)
@@ -202,6 +203,17 @@ withType()
 ### obj datasource
 
 
+#### fn datasource.withApiVersion
+
+```jsonnet
+datasource.withApiVersion(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+The apiserver version
 #### fn datasource.withType
 
 ```jsonnet
@@ -220,7 +232,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Datasource UID
+Datasource UID (NOTE: name in k8s)
 ### obj resultAssertions
 
 
