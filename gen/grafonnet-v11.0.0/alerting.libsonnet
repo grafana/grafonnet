@@ -5,5 +5,5 @@
   notificationPolicy: import 'clean/alerting/notificationPolicy.libsonnet',
   muteTiming: import 'clean/alerting/muteTiming.libsonnet',
   ruleGroup: import 'clean/alerting/ruleGroup.libsonnet',
-  messageTemplate: import 'clean/alerting/messageTemplate.libsonnet',
+  notificationTemplate: import 'clean/alerting/notificationTemplate.libsonnet',
 }

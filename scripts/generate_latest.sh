@@ -28,7 +28,7 @@ LATEST_DIR="${OUT_DIR}/grafonnet-${VERSION}"
 rm -rf "${GEN_DIR}"
 mkdir -p "${GEN_DIR}"
 
-jsonnet -S -c -m "${OUT_DIR}" \
+jrsonnet -S -c -m "${OUT_DIR}" \
     --tla-str version="${VERSION}" \
     generator/latest.libsonnet
 jsonnetfmt --no-use-implicit-plus -i "${GEN_DIR}/main.libsonnet"

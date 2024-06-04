@@ -18,6 +18,16 @@
         }
       },
       "version": "master"
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/grafana/grafana-foundation-sdk.git",
+          "subdir": "openapi"
+        }
+      },
+      "version": "v11.0.x+cog-v0.0.x",
+      "name": "grafana-foundation-sdk-v11.0.0"
     }
   ],
   "legacyImports": true

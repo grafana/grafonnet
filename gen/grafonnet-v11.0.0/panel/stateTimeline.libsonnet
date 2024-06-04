@@ -210,8 +210,8 @@
           mergeValues: value,
         },
       },
-      '#withRowHeight': { 'function': { args: [{ default: 0.90000000000000002, enums: null, name: 'value', type: ['number'] }], help: 'Controls the row height' } },
-      withRowHeight(value=0.90000000000000002): {
+      '#withRowHeight': { 'function': { args: [{ default: 0.9, enums: null, name: 'value', type: ['number'] }], help: 'Controls the row height' } },
+      withRowHeight(value=0.9): {
         options+: {
           rowHeight: value,
         },

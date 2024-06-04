@@ -34,7 +34,8 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+A Route is a node that contains definitions of how to handle alerts. This is modified
+from the upstream alertmanager in that it adds the ObjectMatchers property.
 ### fn withContinue
 
 ```jsonnet
@@ -46,7 +47,8 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-
+A Route is a node that contains definitions of how to handle alerts. This is modified
+from the upstream alertmanager in that it adds the ObjectMatchers property.
 ### fn withGroupBy
 
 ```jsonnet
@@ -57,7 +59,8 @@ PARAMETERS:
 
 * **value** (`array`)
 
-
+A Route is a node that contains definitions of how to handle alerts. This is modified
+from the upstream alertmanager in that it adds the ObjectMatchers property.
 ### fn withGroupByMixin
 
 ```jsonnet
@@ -68,7 +71,8 @@ PARAMETERS:
 
 * **value** (`array`)
 
-
+A Route is a node that contains definitions of how to handle alerts. This is modified
+from the upstream alertmanager in that it adds the ObjectMatchers property.
 ### fn withGroupInterval
 
 ```jsonnet
@@ -79,7 +83,8 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+A Route is a node that contains definitions of how to handle alerts. This is modified
+from the upstream alertmanager in that it adds the ObjectMatchers property.
 ### fn withGroupWait
 
 ```jsonnet
@@ -90,7 +95,8 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+A Route is a node that contains definitions of how to handle alerts. This is modified
+from the upstream alertmanager in that it adds the ObjectMatchers property.
 ### fn withMatchers
 
 ```jsonnet
@@ -127,7 +133,8 @@ PARAMETERS:
 
 * **value** (`array`)
 
-
+A Route is a node that contains definitions of how to handle alerts. This is modified
+from the upstream alertmanager in that it adds the ObjectMatchers property.
 ### fn withMuteTimeIntervalsMixin
 
 ```jsonnet
@@ -138,7 +145,8 @@ PARAMETERS:
 
 * **value** (`array`)
 
-
+A Route is a node that contains definitions of how to handle alerts. This is modified
+from the upstream alertmanager in that it adds the ObjectMatchers property.
 ### fn withPolicy
 
 ```jsonnet
@@ -149,7 +157,8 @@ PARAMETERS:
 
 * **value** (`array`)
 
-
+A Route is a node that contains definitions of how to handle alerts. This is modified
+from the upstream alertmanager in that it adds the ObjectMatchers property.
 ### fn withPolicyMixin
 
 ```jsonnet
@@ -160,7 +169,8 @@ PARAMETERS:
 
 * **value** (`array`)
 
-
+A Route is a node that contains definitions of how to handle alerts. This is modified
+from the upstream alertmanager in that it adds the ObjectMatchers property.
 ### fn withRepeatInterval
 
 ```jsonnet
@@ -171,3 +181,5 @@ PARAMETERS:
 
 * **value** (`string`)
 
+A Route is a node that contains definitions of how to handle alerts. This is modified
+from the upstream alertmanager in that it adds the ObjectMatchers property.

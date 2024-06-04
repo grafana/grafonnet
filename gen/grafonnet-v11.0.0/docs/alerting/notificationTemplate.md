@@ -1,10 +1,11 @@
-# messageTemplate
+# notificationTemplate
 
-grafonnet.alerting.messageTemplate
+grafonnet.alerting.notificationTemplate
 
 ## Index
 
 * [`fn withName(value)`](#fn-withname)
+* [`fn withProvenance(value)`](#fn-withprovenance)
 * [`fn withTemplate(value)`](#fn-withtemplate)
 
 ## Fields
@@ -13,6 +14,17 @@ grafonnet.alerting.messageTemplate
 
 ```jsonnet
 withName(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+### fn withProvenance
+
+```jsonnet
+withProvenance(value)
 ```
 
 PARAMETERS:

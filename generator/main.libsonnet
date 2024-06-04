@@ -6,15 +6,14 @@ local row = import './row.libsonnet';
 
 local patches = import './patches/main.libsonnet';
 
-function(version, schemas, openapiSpec)
-  local patchedSchemas = patches.schemas.patch(version, schemas);
-  local patchedSpec = patches.spec.patch(openapiSpec);
+function(version, schemas)
+  local patchedSchemas = patches.patch(version, schemas);
   local files =
     core.render(version, patchedSchemas.core)
     + panel.render(patchedSchemas.panel)
     + query.render(patchedSchemas.query)
     + row.render(patchedSchemas.row)
-    + alerting.render(patchedSpec);
+    + alerting.render(patchedSchemas.alerting);
   {
     ['grafonnet-' + version + '/' + file]:
       '// This file is generated, do not manually edit.\n'

@@ -18,8 +18,8 @@
           "subdir": "crdsonnet"
         }
       },
-      "version": "c2662f7949525ec7d4a6a68083d2d6c9f90434d4",
-      "sum": "oPdtP9B3pW1DH7/WNek/Qw1i3OfWFImfNgJugQbYqbk="
+      "version": "c352197a5ba95b2e28f5b75d60faeb0cd1c64592",
+      "sum": "za+MrbUYBEqaYX/wPHpGxvCGV1q8/jtH6qhxd8ODb+U="
     },
     {
       "source": {
@@ -30,6 +30,17 @@
       },
       "version": "a78ca15fbfece3110c4807d1f059132ece01d97b",
       "sum": "qYLH56MqvmgxE4YMNeTbuJ1XSsCpl1sumHN5x8IQv2I="
+    },
+    {
+      "source": {
+        "git": {
+          "remote": "https://github.com/grafana/grafana-foundation-sdk.git",
+          "subdir": "openapi"
+        }
+      },
+      "version": "a4c73587770f1a44b3afc3c12a514d49a1d74632",
+      "sum": "9ndfNQnSlr9DI/VZGDosPxXLsdb7M3erxrBOIpiAfhw=",
+      "name": "grafana-foundation-sdk-v11.0.0"
     },
     {
       "source": {

@@ -9,98 +9,53 @@ local utils = import './utils.libsonnet';
   local root = self,
 
   render(schemas):
-    local files = self.getFilesForSpec(schemas);
-    { 'alerting.libsonnet': root.alertingIndex(files.clean) }
+    local files = self.getFilesForSchema(schemas[0]);
+    { 'alerting.libsonnet': root.alertingIndex(files) }
     + {
       [file.path]: file.content
-      for type in std.objectFields(files)
-      for file in files[type]
+      for file in files
     },
 
-  // `name` matches the schema name
-  // `displayName` is how we want to show it in Grafonnet, matches GUI
   schemas: [
-    {
-      name: 'EmbeddedContactPoint',
-      displayName: 'contactPoint',
-    },
-    {
-      name: 'Route',
-      displayName: 'notificationPolicy',
-    },
-    {
-      name: 'MuteTimeInterval',
-      displayName: 'muteTiming',
-    },
-    {
-      name: 'AlertRuleGroup',
-      displayName: 'ruleGroup',
-    },
-    {
-      name: 'NotificationTemplate',
-      displayName: 'messageTemplate',
-    },
+    'ContactPoint',
+    'NotificationPolicy',
+    'MuteTiming',
+    'RuleGroup',
+    'NotificationTemplate',
   ],
 
-  getFilesForSpec(spec):
+  local displayName(name) =
+    std.asciiLower(name[0]) + name[1:],
+
+  getFilesForSchema(schemas):
     std.foldl(
-      function(acc, schema)
-        local raw = {
-          title: schema.displayName,
-          path: 'raw/alerting/' + schema.displayName + '.libsonnet',
-          content: root.generateRawLib(schema.name, schema.displayName, spec),
-        };
-        acc + {
-          raw+:
-            (if schema.displayName in root.structure
-             then [raw]
-             else []),
-          clean+:
-            (if schema.displayName in root.structure
-             then [{
-               title: schema.displayName,
-               path: 'clean/alerting/' + schema.displayName + '.libsonnet',
-               content: root.generateCleanLib(schema.name, schema.displayName, spec),
-             }]
-             else [raw]),
-        },
+      function(acc, name)
+        acc + [
+          {
+            title: displayName(name),
+            path: 'clean/alerting/' + displayName(name) + '.libsonnet',
+            content: root.generateLib(schemas, name),
+          },
+        ],
       root.schemas,
-      {}
+      []
     ),
 
-  generateRawLib(name, displayName, spec):
+  generateLib(schema, name):
+    assert std.trace(name, true);
     local ast =
       utils.unwrapFromCRDsonnet(
         crdsonnet.openapi.render(
           name,
-          spec.components.schemas[name],
-          spec,
+          schema.components.schemas[name],
+          schema,
           refactor.ASTProcessor,
           addNewFunction=false,
         ),
         name
       );
 
-    utils.addDoc(
-      ast,
-      displayName,
-      'alerting.'
-    ).toString(),
-
-  generateCleanLib(name, displayName, spec):
-    local ast =
-      utils.unwrapFromCRDsonnet(
-        crdsonnet.openapi.render(
-          name,
-          spec.components.schemas[name],
-          spec,
-          refactor.ASTProcessor,
-          addNewFunction=false,
-        ),
-        name
-      );
-
-    local structure = std.get(root.structure, displayName, default={});
+    local structure = std.get(root.structure, name, default={});
 
     local newAST =
       if 'groupings' in structure
@@ -115,7 +70,7 @@ local utils = import './utils.libsonnet';
 
     utils.addDoc(
       newAST,
-      displayName,
+      displayName(name),
       'alerting.'
     ).toString()
     + (if 'custom' in structure
@@ -149,10 +104,10 @@ local utils = import './utils.libsonnet';
     ).toString(),
 
   structure: {
-    contactPoint: {
+    ContactPoint: {
       custom: 'alerting/contactPoint.libsonnet',
     },
-    notificationPolicy: {
+    NotificationPolicy: {
       custom: 'alerting/notificationPolicy.libsonnet',
       groupings: {
         '.': [
@@ -178,7 +133,7 @@ local utils = import './utils.libsonnet';
         { from: 'matchers', to: 'matcher' },
       ],
     },
-    muteTiming: {
+    MuteTiming: {
       custom: 'alerting/muteTiming.libsonnet',
       groupings: {
         '.': [
@@ -191,7 +146,7 @@ local utils = import './utils.libsonnet';
         { from: 'time_intervals', to: 'interval' },
       ],
     },
-    ruleGroup: {
+    RuleGroup: {
       custom: 'alerting/ruleGroup.libsonnet',
       groupings: {
         '.': [
@@ -231,7 +186,7 @@ local utils = import './utils.libsonnet';
         { from: 'rules.data', to: 'rule.data' },
       ],
     },
-    messageTemplate: {
+    MessageTemplate: {
       groupings: {
         '.': [
           'withName',
