@@ -5,7 +5,7 @@
   withFolderUid(value): {
     folderUid: value,
   },
-  '#withInterval': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['integer'] }], help: '' } },
+  '#withInterval': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['integer'] }], help: 'Duration in seconds.' } },
   withInterval(value): {
     interval: value,
   },
@@ -63,7 +63,7 @@
       withFolderUID(value): {
         folderUID: value,
       },
-      '#withFor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['integer'] }], help: 'A Duration represents the elapsed time between two instants\nas an int64 nanosecond count. The representation limits the\nlargest representable duration to approximately 290 years.' } },
+      '#withFor': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The amount of time, in seconds, for which the rule must be breached for the rule to be considered to be Firing.\nBefore this time has elapsed, the rule is only considered to be Pending.' } },
       withFor(value): {
         'for': value,
       },
@@ -98,23 +98,23 @@
       data+:
         {
           '#': { help: '', name: 'data' },
-          '#withDatasourceUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: "Grafana data source unique identifier; it should be '__expr__' for a Server Side Expression operation." } },
+          '#withDatasourceUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
           withDatasourceUid(value): {
             datasourceUid: value,
           },
-          '#withModel': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'JSON is the raw JSON query and includes the above properties as well as custom properties.' } },
+          '#withModel': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withModel(value): {
             model: value,
           },
-          '#withModelMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'JSON is the raw JSON query and includes the above properties as well as custom properties.' } },
+          '#withModelMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
           withModelMixin(value): {
             model+: value,
           },
-          '#withQueryType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'QueryType is an optional identifier for the type of query.\nIt can be used to distinguish different types of queries.' } },
+          '#withQueryType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
           withQueryType(value): {
             queryType: value,
           },
-          '#withRefId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'RefID is the unique identifier of the query, set by the frontend call.' } },
+          '#withRefId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
           withRefId(value): {
             refId: value,
           },
@@ -128,13 +128,13 @@
           },
           relativeTimeRange+:
             {
-              '#withFrom': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['integer'] }], help: 'A Duration represents the elapsed time between two instants\nas an int64 nanosecond count. The representation limits the\nlargest representable duration to approximately 290 years.' } },
+              '#withFrom': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['integer'] }], help: 'Duration in seconds.' } },
               withFrom(value): {
                 relativeTimeRange+: {
                   from: value,
                 },
               },
-              '#withTo': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['integer'] }], help: 'A Duration represents the elapsed time between two instants\nas an int64 nanosecond count. The representation limits the\nlargest representable duration to approximately 290 years.' } },
+              '#withTo': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['integer'] }], help: 'Duration in seconds.' } },
               withTo(value): {
                 relativeTimeRange+: {
                   to: value,

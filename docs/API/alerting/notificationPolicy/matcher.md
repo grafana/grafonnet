@@ -32,7 +32,7 @@ PARAMETERS:
 * **value** (`string`)
    - valid values: `"="`, `"!="`, `"=~"`, `"!~"`
 
-MatchType is an enum for label matching types.
+
 ### fn withValue
 
 ```jsonnet

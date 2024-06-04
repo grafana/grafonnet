@@ -27,7 +27,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Grafana data source unique identifier; it should be '__expr__' for a Server Side Expression operation.
+
 ### fn withModel
 
 ```jsonnet
@@ -38,7 +38,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-JSON is the raw JSON query and includes the above properties as well as custom properties.
+
 ### fn withModelMixin
 
 ```jsonnet
@@ -49,7 +49,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-JSON is the raw JSON query and includes the above properties as well as custom properties.
+
 ### fn withQueryType
 
 ```jsonnet
@@ -60,8 +60,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-QueryType is an optional identifier for the type of query.
-It can be used to distinguish different types of queries.
+
 ### fn withRefId
 
 ```jsonnet
@@ -72,7 +71,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-RefID is the unique identifier of the query, set by the frontend call.
+
 ### fn withRelativeTimeRange
 
 ```jsonnet
@@ -110,9 +109,7 @@ PARAMETERS:
 
 * **value** (`integer`)
 
-A Duration represents the elapsed time between two instants
-as an int64 nanosecond count. The representation limits the
-largest representable duration to approximately 290 years.
+Duration in seconds.
 #### fn relativeTimeRange.withTo
 
 ```jsonnet
@@ -123,6 +120,4 @@ PARAMETERS:
 
 * **value** (`integer`)
 
-A Duration represents the elapsed time between two instants
-as an int64 nanosecond count. The representation limits the
-largest representable duration to approximately 290 years.
+Duration in seconds.

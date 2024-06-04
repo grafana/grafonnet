@@ -112,11 +112,10 @@ withFor(value)
 
 PARAMETERS:
 
-* **value** (`integer`)
+* **value** (`string`)
 
-A Duration represents the elapsed time between two instants
-as an int64 nanosecond count. The representation limits the
-largest representable duration to approximately 290 years.
+The amount of time, in seconds, for which the rule must be breached for the rule to be considered to be Firing.
+Before this time has elapsed, the rule is only considered to be Pending.
 ### fn withIsPaused
 
 ```jsonnet

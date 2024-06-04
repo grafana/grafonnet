@@ -37,7 +37,7 @@ PARAMETERS:
 
 * **value** (`integer`)
 
-
+Duration in seconds.
 ### fn withName
 
 ```jsonnet

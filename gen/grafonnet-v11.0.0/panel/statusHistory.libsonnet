@@ -97,8 +97,8 @@
   },
   options+:
     {
-      '#withColWidth': { 'function': { args: [{ default: 0.90000000000000002, enums: null, name: 'value', type: ['number'] }], help: 'Controls the column width' } },
-      withColWidth(value=0.90000000000000002): {
+      '#withColWidth': { 'function': { args: [{ default: 0.9, enums: null, name: 'value', type: ['number'] }], help: 'Controls the column width' } },
+      withColWidth(value=0.9): {
         options+: {
           colWidth: value,
         },
@@ -204,8 +204,8 @@
             },
           },
         },
-      '#withRowHeight': { 'function': { args: [{ default: 0.90000000000000002, enums: null, name: 'value', type: ['number'] }], help: 'Set the height of the rows' } },
-      withRowHeight(value=0.90000000000000002): {
+      '#withRowHeight': { 'function': { args: [{ default: 0.9, enums: null, name: 'value', type: ['number'] }], help: 'Set the height of the rows' } },
+      withRowHeight(value=0.9): {
         options+: {
           rowHeight: value,
         },

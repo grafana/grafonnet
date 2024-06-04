@@ -297,8 +297,8 @@
           barRadius: value,
         },
       },
-      '#withBarWidth': { 'function': { args: [{ default: 0.96999999999999997, enums: null, name: 'value', type: ['number'] }], help: 'Controls the width of bars. 1 = Max width, 0 = Min width.' } },
-      withBarWidth(value=0.96999999999999997): {
+      '#withBarWidth': { 'function': { args: [{ default: 0.97, enums: null, name: 'value', type: ['number'] }], help: 'Controls the width of bars. 1 = Max width, 0 = Min width.' } },
+      withBarWidth(value=0.97): {
         options+: {
           barWidth: value,
         },
@@ -315,8 +315,8 @@
           fullHighlight: value,
         },
       },
-      '#withGroupWidth': { 'function': { args: [{ default: 0.69999999999999996, enums: null, name: 'value', type: ['number'] }], help: 'Controls the width of groups. 1 = max with, 0 = min width.' } },
-      withGroupWidth(value=0.69999999999999996): {
+      '#withGroupWidth': { 'function': { args: [{ default: 0.7, enums: null, name: 'value', type: ['number'] }], help: 'Controls the width of groups. 1 = max with, 0 = min width.' } },
+      withGroupWidth(value=0.7): {
         options+: {
           groupWidth: value,
         },
