@@ -154,27 +154,6 @@ local utils = import '../utils.libsonnet';
       },
     },
 
-  // ref: https://github.com/grafana/grafana/issues/75610
-  addTableFieldConfig(schema):
-    if schema.info.title == 'TablePanelCfg'
-       && !('FieldConfig' in schema.components.schemas.TablePanelCfg.properties)
-       && !('PanelFieldConfig' in schema.components.schemas.TablePanelCfg.properties)
-    then {
-      definitions: (import './custom_schemas/table_FieldConfig.json').definitions,
-      components+: {
-        schemas+: {
-          TablePanelCfg+: {
-            properties+: {
-              PanelFieldConfig: {
-                '$ref': '#/definitions/TableFieldOptions',
-              },
-            },
-          },
-        },
-      },
-    }
-    else {},
-
   getDashboardSchema(schemas):
     std.filter(
       function(s) s.info.title == 'dashboard',
