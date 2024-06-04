@@ -40,7 +40,7 @@ local utils = import './utils.libsonnet';
   generateLib(schema):
     local title = std.get(root.titleMapping, std.asciiLower(schema.info.title), schema.info.title);
     local customSchema =
-      schema {
+      schema + {
         components+: {
           schemas+: std.get(fixes, title, {}),
         },
