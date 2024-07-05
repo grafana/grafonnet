@@ -90,77 +90,116 @@ local panelUtil = import './panel.libsonnet';
     ],
   ),
   wrapPanels(panels, panelWidth=8, panelHeight=8, startY=0):
+
+    local calculateGridPosForPanel(acc, panel) =
+      local gridPos = std.get(panel, 'gridPos', {});
+      local width = std.get(gridPos, 'w', panelWidth);
+      local height = std.get(gridPos, 'h', panelHeight);
+      if acc.cursor.x + width > gridWidth
+      then
+        // start new row as width exceeds gridWidth
+        {
+          panels+: [
+            panel {
+              gridPos+:
+                {
+                  x: 0,
+                  y: acc.cursor.y + height,
+                  w: width,
+                  h: height,
+                },
+            },
+          ],
+          cursor+:: {
+            x: 0 + width,
+            y: acc.cursor.y + height,
+            maxH: if height > acc.cursor.maxH then height else acc.cursor.maxH,
+          },
+        }
+      else
+        // enough width, place panel on current row
+        {
+          panels+: [
+            panel {
+              gridPos+:
+                {
+                  x: acc.cursor.x,
+                  y: acc.cursor.y,
+                  w: width,
+                  h: height,
+                },
+            },
+          ],
+          cursor+:: {
+            x: acc.cursor.x + width,
+            y: acc.cursor.y,
+            maxH: if height > acc.cursor.maxH then height else acc.cursor.maxH,
+          },
+        };
+
     std.foldl(
       function(acc, panel)
         if panel.type == 'row'
         then
-          // when type=row, start new row immediatly and shift Y of new row by max height recorded
-          acc + {
-            panels+: [
-              panel + {
-                gridPos+:
+          (
+            if std.objectHas(panel, 'panels') && std.length(panel.panels) > 0
+            then
+              local rowPanels =
+                std.foldl(
+                  function(acc, panel)
+                    acc + calculateGridPosForPanel(acc, panel),
+                  panel.panels,
                   {
-                    x: acc.cursor.x,
-                    y: acc.cursor.y + acc.cursor.maxH,
-                    w: 0,
-                    h: 1,
+                    panels+: [],
+                    // initial
+                    cursor:: {
+                      x: 0,
+                      y: acc.cursor.y + acc.cursor.maxH + 1,
+                      maxH: 0,
+                    },
                   },
-              },
-            ],
-            cursor:: {
-              x: 0,
-              y: acc.cursor.y + acc.cursor.maxH + 1,
-              maxH: 0,
-            },
-          }
+                );
+              acc {
+                panels+: [
+                  panel {
+                    //rows panels
+                    panels: rowPanels.panels,
+                    gridPos+: {
+                      x: 0,
+                      y: acc.cursor.y + acc.cursor.maxH,
+                      w: 0,
+                    },
+
+                  },
+                ],
+                cursor:: rowPanels.cursor,
+              }
+            else
+              acc {
+                panels+: [
+                  panel {
+                    panels: [],
+                    gridPos+:
+                      {
+                        x: acc.cursor.x,
+                        y: acc.cursor.y + acc.cursor.maxH,
+                        w: 0,
+                        h: 1,
+                      },
+                  },
+                ],
+                cursor:: {
+                  x: 0,
+                  y: acc.cursor.y + acc.cursor.maxH + 1,
+                  maxH: 0,
+                },
+              }
+          )
         else
           // handle regular panel
-          local gridPos = std.get(panel, 'gridPos', {});
-          local width = std.get(gridPos, 'w', panelWidth);
-          local height = std.get(gridPos, 'h', panelHeight);
-          if acc.cursor.x + width > gridWidth
-          then
-            // start new row as width exceeds gridWidth
-            acc + {
-              panels+: [
-                panel + {
-                  gridPos+:
-                    {
-                      x: 0,
-                      y: acc.cursor.y + height,
-                      w: width,
-                      h: height,
-                    },
-                },
-              ],
-              cursor+:: {
-                x: 0 + width,
-                y: acc.cursor.y + height,
-                maxH: if height > super.maxH then height else super.maxH,
-              },
-            }
-          else
-            // enough width, place panel on current row
-            acc + {
-              panels+: [
-                panel + {
-                  gridPos+:
-                    {
-                      x: acc.cursor.x,
-                      y: acc.cursor.y,
-                      w: width,
-                      h: height,
-                    },
-                },
-              ],
-              cursor+:: {
-                x: acc.cursor.x + width,
-                y: acc.cursor.y,
-                maxH: if height > super.maxH then height else super.maxH,
-              },
-            },
+          acc + calculateGridPosForPanel(acc, panel),
       panels,
-      // Initial value for acc
+      // Initial value for acc:
       {
         panels: [],
         cursor:: {
