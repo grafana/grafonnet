@@ -95,8 +95,8 @@ local panelUtil = import './panel.libsonnet';
         if panel.type == 'row'
         then
           // when type=row, start new row immediately and shift Y of new row by max height recorded
-          local wrappedPanels = if std.objectHas(panel, 'panels') then wrapPanels(panel.panels, panelWidth, panelHeight, acc.cursor.y + acc.cursor.maxH + 1) else [];
-          local maxWrappedY = std.foldl(function(maxY, p) if p.gridPos.y + p.gridPos.h > maxY then p.gridPos.y + p.gridPos.h else maxY, 0, wrappedPanels);
+          local wrappedPanels = if std.objectHas(panel, 'panels') then root.wrapPanels(panel.panels, panelWidth, panelHeight, acc.cursor.y + acc.cursor.maxH + 1) else [];
+          local maxWrappedY = std.foldl(function(maxY, p) if p.gridPos.y + p.gridPos.h > maxY then p.gridPos.y + p.gridPos.h else maxY, wrappedPanels, 0);
           acc + {
             panels+: [
               panel + {
