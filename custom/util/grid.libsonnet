@@ -94,7 +94,9 @@ local panelUtil = import './panel.libsonnet';
       function(acc, panel)
         if panel.type == 'row'
         then
-          // when type=row, start new row immediatly and shift Y of new row by max height recorded
+          // when type=row, start new row immediately and shift Y of new row by max height recorded
+          local wrappedPanels = if std.objectHas(panel, 'panels') then wrapPanels(panel.panels, panelWidth, panelHeight, acc.cursor.y + acc.cursor.maxH + 1) else [];
+          local maxWrappedY = std.foldl(function(maxY, p) if p.gridPos.y + p.gridPos.h > maxY then p.gridPos.y + p.gridPos.h else maxY, 0, wrappedPanels);
           acc + {
             panels+: [
               panel + {
@@ -105,11 +107,12 @@ local panelUtil = import './panel.libsonnet';
                     w: 0,
                     h: 1,
                   },
+                panels: wrappedPanels,
               },
             ],
-            cursor:: {
+            cursor+:: {
               x: 0,
-              y: acc.cursor.y + acc.cursor.maxH + 1,
+              y: acc.cursor.y + acc.cursor.maxH + 1 + maxWrappedY,
               maxH: 0,
             },
           }
@@ -127,7 +130,7 @@ local panelUtil = import './panel.libsonnet';
                   gridPos+:
                     {
                       x: 0,
-                      y: acc.cursor.y + height,
+                      y: acc.cursor.y + acc.cursor.maxH,
                       w: width,
                       h: height,
                     },
@@ -135,8 +138,8 @@ local panelUtil = import './panel.libsonnet';
               ],
               cursor+:: {
                 x: 0 + width,
-                y: acc.cursor.y + height,
-                maxH: if height > super.maxH then height else super.maxH,
+                y: acc.cursor.y + acc.cursor.maxH,
+                maxH: height,
               },
             }
           else
@@ -156,7 +159,7 @@ local panelUtil = import './panel.libsonnet';
               cursor+:: {
                 x: acc.cursor.x + width,
                 y: acc.cursor.y,
-                maxH: if height > super.maxH then height else super.maxH,
+                maxH: if height > acc.cursor.maxH then height else acc.cursor.maxH,
               },
             },
       panels,
