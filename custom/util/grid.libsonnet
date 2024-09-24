@@ -100,7 +100,7 @@ local panelUtil = import './panel.libsonnet';
         // start new row as width exceeds gridWidth
         {
           panels+: [
-            panel {
+            panel + {
               gridPos+:
                 {
                   x: 0,
@@ -120,7 +120,7 @@ local panelUtil = import './panel.libsonnet';
         // enough width, place panel on current row
         {
           panels+: [
-            panel {
+            panel + {
               gridPos+:
                 {
                   x: acc.cursor.x,
@@ -159,9 +159,9 @@ local panelUtil = import './panel.libsonnet';
                     },
                   },
                 );
-              acc {
+              acc + {
                 panels+: [
-                  panel {
+                  panel + {
                     //rows panels
                     panels: rowPanels.panels,
                     gridPos+: {
@@ -175,9 +175,9 @@ local panelUtil = import './panel.libsonnet';
                 cursor:: rowPanels.cursor,
               }
             else
-              acc {
+              acc + {
                 panels+: [
-                  panel {
+                  panel + {
                     panels: [],
                     gridPos+:
                       {
