@@ -1,25 +1,14 @@
-# team
+# pipelineVariables
 
-grafonnet.team
+
 
 ## Index
 
-* [`fn withEmail(value)`](#fn-withemail)
 * [`fn withName(value)`](#fn-withname)
+* [`fn withPipelineAgg(value)`](#fn-withpipelineagg)
 
 ## Fields
 
-### fn withEmail
-
-```jsonnet
-withEmail(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-Email of the team.
 ### fn withName
 
 ```jsonnet
@@ -30,4 +19,14 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Name of the team.
+
+### fn withPipelineAgg
+
+```jsonnet
+withPipelineAgg(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
