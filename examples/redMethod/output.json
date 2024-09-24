@@ -41,7 +41,7 @@
             "y": 1
          },
          "id": 2,
-         "pluginVersion": "v11.1.0",
+         "pluginVersion": "v11.2.0",
          "targets": [
             {
                "datasource": {
@@ -77,7 +77,7 @@
             "y": 1
          },
          "id": 3,
-         "pluginVersion": "v11.1.0",
+         "pluginVersion": "v11.2.0",
          "targets": [
             {
                "datasource": {
@@ -138,7 +138,7 @@
             "y": 10
          },
          "id": 5,
-         "pluginVersion": "v11.1.0",
+         "pluginVersion": "v11.2.0",
          "targets": [
             {
                "datasource": {
@@ -174,7 +174,7 @@
             "y": 10
          },
          "id": 6,
-         "pluginVersion": "v11.1.0",
+         "pluginVersion": "v11.2.0",
          "targets": [
             {
                "datasource": {
