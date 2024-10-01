@@ -1,6 +1,6 @@
 .PHONY: generate regenerate localmkdocs test
 
-LATEST := v11.0.0
+LATEST := v11.1.0
 
 generate: gen/grafonnet-latest
 
