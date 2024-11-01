@@ -2,918 +2,918 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://grafana.github.io/grafonnet/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/folder.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/preferences.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/publicdashboard.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/role.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/rolebinding.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/team.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/util.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/accesspolicy/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/accesspolicy/rules.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/alerting/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/alerting/contactPoint.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/alerting/notificationTemplate.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/alerting/muteTiming/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/alerting/muteTiming/interval/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/alerting/muteTiming/interval/time_intervals/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/alerting/muteTiming/interval/time_intervals/times.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/alerting/notificationPolicy/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/alerting/notificationPolicy/matcher.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/alerting/ruleGroup/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/alerting/ruleGroup/rule/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/alerting/ruleGroup/rule/data.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/dashboard/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/dashboard/annotation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/dashboard/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/dashboard/variable.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/librarypanel/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/librarypanel/model/links.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/librarypanel/model/transformations.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/librarypanel/model/fieldConfig/defaults/thresholds/steps.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/librarypanel/model/fieldConfig/overrides/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/librarypanel/model/fieldConfig/overrides/properties.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/row.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/alertList/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/alertList/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/alertList/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/alertList/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/alertList/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/alertList/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/annotationsList/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/annotationsList/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/annotationsList/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/annotationsList/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/annotationsList/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/annotationsList/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/barChart/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/barChart/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/barChart/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/barChart/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/barChart/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/barChart/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/barGauge/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/barGauge/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/barGauge/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/barGauge/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/barGauge/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/barGauge/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/candlestick/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/candlestick/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/candlestick/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/candlestick/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/candlestick/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/candlestick/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/canvas/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/canvas/options/root/elements/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/canvas/options/root/elements/connections/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/canvas/options/root/elements/connections/vertices.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/canvas/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/canvas/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/canvas/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/canvas/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/canvas/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/dashboardList/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/dashboardList/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/dashboardList/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/dashboardList/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/dashboardList/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/dashboardList/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/datagrid/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/datagrid/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/datagrid/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/datagrid/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/datagrid/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/datagrid/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/debug/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/debug/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/debug/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/debug/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/debug/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/debug/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/gauge/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/gauge/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/gauge/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/gauge/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/gauge/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/gauge/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/geomap/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/geomap/options/layers.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/geomap/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/geomap/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/geomap/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/geomap/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/geomap/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/heatmap/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/heatmap/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/heatmap/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/heatmap/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/heatmap/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/heatmap/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/histogram/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/histogram/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/histogram/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/histogram/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/histogram/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/histogram/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/logs/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/logs/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/logs/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/logs/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/logs/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/logs/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/news/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/news/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/news/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/news/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/news/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/news/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/nodeGraph/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/nodeGraph/options/nodes/arcs.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/nodeGraph/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/nodeGraph/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/nodeGraph/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/nodeGraph/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/nodeGraph/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/pieChart/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/pieChart/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/pieChart/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/pieChart/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/pieChart/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/pieChart/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/stat/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/stat/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/stat/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/stat/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/stat/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/stat/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/stateTimeline/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/stateTimeline/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/stateTimeline/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/stateTimeline/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/stateTimeline/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/stateTimeline/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/statusHistory/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/statusHistory/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/statusHistory/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/statusHistory/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/statusHistory/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/statusHistory/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/table/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/table/options/sortBy.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/table/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/table/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/table/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/table/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/table/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/text/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/text/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/text/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/text/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/text/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/text/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/timeSeries/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/timeSeries/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/timeSeries/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/timeSeries/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/timeSeries/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/timeSeries/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/trend/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/trend/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/trend/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/trend/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/trend/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/trend/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/xyChart/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/xyChart/options/series.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/xyChart/panelOptions/link.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/xyChart/queryOptions/transformation.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/xyChart/standardOptions/mapping.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/xyChart/standardOptions/override.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/panel/xyChart/standardOptions/threshold/step.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/googleCloudMonitoring.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/grafanaPyroscope.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/loki.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/parca.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/prometheus.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/azureMonitor/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/azureMonitor/azureMonitor/dimensionFilters.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/azureMonitor/azureMonitor/resources.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/azureMonitor/azureTraces/filters.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/cloudWatch/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/cloudWatch/CloudWatchLogsQuery/logGroups.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/cloudWatch/CloudWatchMetricsQuery/sql/from/QueryEditorFunctionExpression/parameters.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/cloudWatch/CloudWatchMetricsQuery/sql/orderBy/parameters.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/cloudWatch/CloudWatchMetricsQuery/sql/select/parameters.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/elasticsearch/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/elasticsearch/bucketAggs/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/elasticsearch/bucketAggs/Filters/settings/filters.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/elasticsearch/metrics/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/elasticsearch/metrics/MetricAggregationWithSettings/BucketScript/pipelineVariables.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/elasticsearch/metrics/PipelineMetricAggregation/BucketScript/pipelineVariables.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/expr/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/expr/TypeMath.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/expr/TypeReduce.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/expr/TypeResample.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/expr/TypeSql.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/expr/TypeClassicConditions/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/expr/TypeClassicConditions/conditions.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/expr/TypeThreshold/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/expr/TypeThreshold/conditions.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/tempo/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/tempo/filters.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/tempo/groupBy.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/testData/index.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/API/query/testData/csvWave.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/examples/runtimeDashboard.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
     <url>
          <loc>https://grafana.github.io/grafonnet/examples/simple.html</loc>
-         <lastmod>2024-10-01</lastmod>
+         <lastmod>2024-11-01</lastmod>
     </url>
 </urlset>
