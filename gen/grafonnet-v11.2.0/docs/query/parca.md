@@ -10,6 +10,9 @@ grafonnet.query.parca
 * [`fn withProfileTypeId(value)`](#fn-withprofiletypeid)
 * [`fn withQueryType(value)`](#fn-withquerytype)
 * [`fn withRefId(value)`](#fn-withrefid)
+* [`obj datasource`](#obj-datasource)
+  * [`fn withType(value)`](#fn-datasourcewithtype)
+  * [`fn withUid(value)`](#fn-datasourcewithuid)
 
 ## Fields
 
@@ -84,3 +87,28 @@ PARAMETERS:
 A unique identifier for the query within the list of targets.
 In server side expressions, the refId is used as a variable name to identify results.
 By default, the UI will assign A->Z; however setting meaningful names may be useful.
+### obj datasource
+
+
+#### fn datasource.withType
+
+```jsonnet
+datasource.withType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+The plugin type-id
+#### fn datasource.withUid
+
+```jsonnet
+datasource.withUid(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Specific datasource instance

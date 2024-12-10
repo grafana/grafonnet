@@ -78,6 +78,9 @@ grafonnet.query.azureMonitor
   * [`fn withResultFormat(value)`](#fn-azuretraceswithresultformat)
   * [`fn withTraceTypes(value)`](#fn-azuretraceswithtracetypes)
   * [`fn withTraceTypesMixin(value)`](#fn-azuretraceswithtracetypesmixin)
+* [`obj datasource`](#obj-datasource)
+  * [`fn withType(value)`](#fn-datasourcewithtype)
+  * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj grafanaTemplateVariableFn`](#obj-grafanatemplatevariablefn)
   * [`fn withAppInsightsGroupByQuery(value)`](#fn-grafanatemplatevariablefnwithappinsightsgroupbyquery)
   * [`fn withAppInsightsGroupByQueryMixin(value)`](#fn-grafanatemplatevariablefnwithappinsightsgroupbyquerymixin)
@@ -877,6 +880,31 @@ PARAMETERS:
 * **value** (`array`)
 
 Types of events to filter by.
+### obj datasource
+
+
+#### fn datasource.withType
+
+```jsonnet
+datasource.withType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+The plugin type-id
+#### fn datasource.withUid
+
+```jsonnet
+datasource.withUid(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Specific datasource instance
 ### obj grafanaTemplateVariableFn
 
 

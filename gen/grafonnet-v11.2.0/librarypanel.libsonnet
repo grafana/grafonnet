@@ -128,11 +128,11 @@
           },
         },
     },
-  '#withModel': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: "TODO: should be the same panel schema defined in dashboard\nTypescript: Omit<Panel, 'gridPos' | 'id' | 'libraryPanel'>;" } },
+  '#withModel': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Dashboard panels are the basic visualization building blocks.' } },
   withModel(value): {
     model: value,
   },
-  '#withModelMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: "TODO: should be the same panel schema defined in dashboard\nTypescript: Omit<Panel, 'gridPos' | 'id' | 'libraryPanel'>;" } },
+  '#withModelMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Dashboard panels are the basic visualization building blocks.' } },
   withModelMixin(value): {
     model+: value,
   },
@@ -368,6 +368,60 @@
                   },
                 },
               },
+              links+:
+                {
+                  '#': { help: '', name: 'links' },
+                  '#withAsDropdown': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'If true, all dashboards links will be displayed in a dropdown. If false, all dashboards links will be displayed side by side. Only valid if the type is dashboards' } },
+                  withAsDropdown(value=true): {
+                    asDropdown: value,
+                  },
+                  '#withIcon': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Icon name to be displayed with the link' } },
+                  withIcon(value): {
+                    icon: value,
+                  },
+                  '#withIncludeVars': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'If true, includes current template variables values in the link as query params' } },
+                  withIncludeVars(value=true): {
+                    includeVars: value,
+                  },
+                  '#withKeepTime': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'If true, includes current time range in the link as query params' } },
+                  withKeepTime(value=true): {
+                    keepTime: value,
+                  },
+                  '#withTags': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'List of tags to limit the linked dashboards. If empty, all dashboards will be displayed. Only valid if the type is dashboards' } },
+                  withTags(value): {
+                    tags:
+                      (if std.isArray(value)
+                       then value
+                       else [value]),
+                  },
+                  '#withTagsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'List of tags to limit the linked dashboards. If empty, all dashboards will be displayed. Only valid if the type is dashboards' } },
+                  withTagsMixin(value): {
+                    tags+:
+                      (if std.isArray(value)
+                       then value
+                       else [value]),
+                  },
+                  '#withTargetBlank': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'If true, the link will be opened in a new tab' } },
+                  withTargetBlank(value=true): {
+                    targetBlank: value,
+                  },
+                  '#withTitle': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Title to display with the link' } },
+                  withTitle(value): {
+                    title: value,
+                  },
+                  '#withTooltip': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Tooltip to display when the user hovers their mouse over it' } },
+                  withTooltip(value): {
+                    tooltip: value,
+                  },
+                  '#withType': { 'function': { args: [{ default: null, enums: ['link', 'dashboards'], name: 'value', type: ['string'] }], help: 'Dashboard Link type. Accepted values are dashboards (to refer to another dashboard) and link (to refer to an external resource)' } },
+                  withType(value): {
+                    type: value,
+                  },
+                  '#withUrl': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Link URL. Only required/valid if the type is link' } },
+                  withUrl(value): {
+                    url: value,
+                  },
+                },
               '#withMappings': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'Convert input values into a display string' } },
               withMappings(value): {
                 model+: {

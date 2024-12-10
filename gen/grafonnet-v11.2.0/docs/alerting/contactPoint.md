@@ -28,8 +28,7 @@ PARAMETERS:
 * **value** (`boolean`)
    - default value: `true`
 
-EmbeddedContactPoint is the contact point type that is used
-by grafanas embedded alertmanager implementation.
+
 ### fn withName
 
 ```jsonnet
@@ -40,8 +39,8 @@ PARAMETERS:
 
 * **value** (`string`)
 
-EmbeddedContactPoint is the contact point type that is used
-by grafanas embedded alertmanager implementation.
+Name is used as grouping key in the UI. Contact points with the
+same name will be grouped in the UI.
 ### fn withProvenance
 
 ```jsonnet
@@ -52,8 +51,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-EmbeddedContactPoint is the contact point type that is used
-by grafanas embedded alertmanager implementation.
+
 ### fn withSettings
 
 ```jsonnet
@@ -64,8 +62,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-EmbeddedContactPoint is the contact point type that is used
-by grafanas embedded alertmanager implementation.
+
 ### fn withSettingsMixin
 
 ```jsonnet
@@ -76,8 +73,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-EmbeddedContactPoint is the contact point type that is used
-by grafanas embedded alertmanager implementation.
+
 ### fn withType
 
 ```jsonnet
@@ -89,8 +85,7 @@ PARAMETERS:
 * **value** (`string`)
    - valid values: `"alertmanager"`, `" dingding"`, `" discord"`, `" email"`, `" googlechat"`, `" kafka"`, `" line"`, `" opsgenie"`, `" pagerduty"`, `" pushover"`, `" sensugo"`, `" slack"`, `" teams"`, `" telegram"`, `" threema"`, `" victorops"`, `" webhook"`, `" wecom"`
 
-EmbeddedContactPoint is the contact point type that is used
-by grafanas embedded alertmanager implementation.
+
 ### fn withUid
 
 ```jsonnet
@@ -101,5 +96,5 @@ PARAMETERS:
 
 * **value** (`string`)
 
-EmbeddedContactPoint is the contact point type that is used
-by grafanas embedded alertmanager implementation.
+UID is the unique identifier of the contact point. The UID can be
+set by the user.

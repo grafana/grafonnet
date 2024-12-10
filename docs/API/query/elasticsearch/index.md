@@ -20,6 +20,9 @@ grafonnet.query.elasticsearch
 * [`fn withQueryType(value)`](#fn-withquerytype)
 * [`fn withRefId(value)`](#fn-withrefid)
 * [`fn withTimeField(value)`](#fn-withtimefield)
+* [`obj datasource`](#obj-datasource)
+  * [`fn withType(value)`](#fn-datasourcewithtype)
+  * [`fn withUid(value)`](#fn-datasourcewithuid)
 
 ## Fields
 
@@ -148,3 +151,28 @@ PARAMETERS:
 * **value** (`string`)
 
 Name of time field
+### obj datasource
+
+
+#### fn datasource.withType
+
+```jsonnet
+datasource.withType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+The plugin type-id
+#### fn datasource.withUid
+
+```jsonnet
+datasource.withUid(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Specific datasource instance

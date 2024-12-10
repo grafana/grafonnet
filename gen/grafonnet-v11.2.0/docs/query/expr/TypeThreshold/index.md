@@ -24,8 +24,7 @@ grafonnet.query.expr.TypeThreshold
 * [`fn withTimeRangeMixin(value)`](#fn-withtimerangemixin)
 * [`fn withType()`](#fn-withtype)
 * [`obj datasource`](#obj-datasource)
-  * [`fn withApiVersion(value)`](#fn-datasourcewithapiversion)
-  * [`fn withType()`](#fn-datasourcewithtype)
+  * [`fn withType(value)`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj resultAssertions`](#obj-resultassertions)
   * [`fn withMaxFrames(value)`](#fn-resultassertionswithmaxframes)
@@ -70,7 +69,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-The datasource
+Ref to a DataSource instance
 ### fn withDatasourceMixin
 
 ```jsonnet
@@ -81,7 +80,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-The datasource
+Ref to a DataSource instance
 ### fn withExpression
 
 ```jsonnet
@@ -215,25 +214,17 @@ withType()
 ### obj datasource
 
 
-#### fn datasource.withApiVersion
+#### fn datasource.withType
 
 ```jsonnet
-datasource.withApiVersion(value)
+datasource.withType(value)
 ```
 
 PARAMETERS:
 
 * **value** (`string`)
 
-The apiserver version
-#### fn datasource.withType
-
-```jsonnet
-datasource.withType()
-```
-
-
-The datasource plugin type
+The plugin type-id
 #### fn datasource.withUid
 
 ```jsonnet
@@ -244,7 +235,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Datasource UID (NOTE: name in k8s)
+Specific datasource instance
 ### obj resultAssertions
 
 

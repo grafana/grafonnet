@@ -31,6 +31,9 @@ grafonnet.query.tempo
 * [`fn withSpss(value)`](#fn-withspss)
 * [`fn withStep(value)`](#fn-withstep)
 * [`fn withTableType(value)`](#fn-withtabletype)
+* [`obj datasource`](#obj-datasource)
+  * [`fn withType(value)`](#fn-datasourcewithtype)
+  * [`fn withUid(value)`](#fn-datasourcewithuid)
 
 ## Fields
 
@@ -284,3 +287,28 @@ PARAMETERS:
    - valid values: `"traces"`, `"spans"`, `"raw"`
 
 The type of the table that is used to display the search results
+### obj datasource
+
+
+#### fn datasource.withType
+
+```jsonnet
+datasource.withType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+The plugin type-id
+#### fn datasource.withUid
+
+```jsonnet
+datasource.withUid(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Specific datasource instance

@@ -4,7 +4,9 @@ grafonnet.query
 
 ## Subpackages
 
+* [athena](athena.md)
 * [azureMonitor](azureMonitor/index.md)
+* [bigquery](bigquery/index.md)
 * [cloudWatch](cloudWatch/index.md)
 * [elasticsearch](elasticsearch/index.md)
 * [expr](expr/index.md)

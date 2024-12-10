@@ -15,14 +15,29 @@
       withAlarmNamePrefix(value): {
         alarmNamePrefix: value,
       },
-      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: "For mixed data sources the selected datasource is on the query level.\nFor non mixed scenarios this is undefined.\nTODO find a better way to do this ^ that's friendly to schema\nTODO this shouldn't be unknown but DataSourceRef | null" } },
+      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasource(value): {
         datasource: value,
       },
-      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: "For mixed data sources the selected datasource is on the query level.\nFor non mixed scenarios this is undefined.\nTODO find a better way to do this ^ that's friendly to schema\nTODO this shouldn't be unknown but DataSourceRef | null" } },
+      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasourceMixin(value): {
         datasource+: value,
       },
+      datasource+:
+        {
+          '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The plugin type-id' } },
+          withType(value): {
+            datasource+: {
+              type: value,
+            },
+          },
+          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Specific datasource instance' } },
+          withUid(value): {
+            datasource+: {
+              uid: value,
+            },
+          },
+        },
       '#withDimensions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.' } },
       withDimensions(value): {
         dimensions: value,
@@ -92,14 +107,29 @@
     },
   CloudWatchLogsQuery+:
     {
-      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: "For mixed data sources the selected datasource is on the query level.\nFor non mixed scenarios this is undefined.\nTODO find a better way to do this ^ that's friendly to schema\nTODO this shouldn't be unknown but DataSourceRef | null" } },
+      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasource(value): {
         datasource: value,
       },
-      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: "For mixed data sources the selected datasource is on the query level.\nFor non mixed scenarios this is undefined.\nTODO find a better way to do this ^ that's friendly to schema\nTODO this shouldn't be unknown but DataSourceRef | null" } },
+      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasourceMixin(value): {
         datasource+: value,
       },
+      datasource+:
+        {
+          '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The plugin type-id' } },
+          withType(value): {
+            datasource+: {
+              type: value,
+            },
+          },
+          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Specific datasource instance' } },
+          withUid(value): {
+            datasource+: {
+              uid: value,
+            },
+          },
+        },
       '#withExpression': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The CloudWatch Logs Insights query to execute' } },
       withExpression(value): {
         expression: value,
@@ -201,14 +231,29 @@
       withAlias(value): {
         alias: value,
       },
-      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: "For mixed data sources the selected datasource is on the query level.\nFor non mixed scenarios this is undefined.\nTODO find a better way to do this ^ that's friendly to schema\nTODO this shouldn't be unknown but DataSourceRef | null" } },
+      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasource(value): {
         datasource: value,
       },
-      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: "For mixed data sources the selected datasource is on the query level.\nFor non mixed scenarios this is undefined.\nTODO find a better way to do this ^ that's friendly to schema\nTODO this shouldn't be unknown but DataSourceRef | null" } },
+      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasourceMixin(value): {
         datasource+: value,
       },
+      datasource+:
+        {
+          '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The plugin type-id' } },
+          withType(value): {
+            datasource+: {
+              type: value,
+            },
+          },
+          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Specific datasource instance' } },
+          withUid(value): {
+            datasource+: {
+              uid: value,
+            },
+          },
+        },
       '#withDimensions': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.' } },
       withDimensions(value): {
         dimensions: value,

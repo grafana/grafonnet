@@ -4,6 +4,7 @@ grafonnet.librarypanel
 
 ## Subpackages
 
+* [model.fieldConfig.defaults.links](model/fieldConfig/defaults/links.md)
 * [model.fieldConfig.defaults.thresholds.steps](model/fieldConfig/defaults/thresholds/steps.md)
 * [model.fieldConfig.overrides](model/fieldConfig/overrides/index.md)
 * [model.links](model/links.md)
@@ -208,8 +209,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-TODO: should be the same panel schema defined in dashboard
-Typescript: Omit<Panel, 'gridPos' | 'id' | 'libraryPanel'>;
+Dashboard panels are the basic visualization building blocks.
 ### fn withModelMixin
 
 ```jsonnet
@@ -220,8 +220,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-TODO: should be the same panel schema defined in dashboard
-Typescript: Omit<Panel, 'gridPos' | 'id' | 'libraryPanel'>;
+Dashboard panels are the basic visualization building blocks.
 ### fn withName
 
 ```jsonnet

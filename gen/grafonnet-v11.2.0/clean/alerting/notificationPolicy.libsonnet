@@ -1,30 +1,30 @@
 // This file is generated, do not manually edit.
 {
   '#': { help: 'grafonnet.alerting.notificationPolicy', name: 'notificationPolicy' },
-  '#withContinue': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'A Route is a node that contains definitions of how to handle alerts. This is modified\nfrom the upstream alertmanager in that it adds the ObjectMatchers property.' } },
+  '#withContinue': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: '' } },
   withContinue(value=true): {
     continue: value,
   },
-  '#withGroupInterval': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'A Route is a node that contains definitions of how to handle alerts. This is modified\nfrom the upstream alertmanager in that it adds the ObjectMatchers property.' } },
+  '#withGroupInterval': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
   withGroupInterval(value): {
     group_interval: value,
   },
-  '#withGroupWait': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'A Route is a node that contains definitions of how to handle alerts. This is modified\nfrom the upstream alertmanager in that it adds the ObjectMatchers property.' } },
+  '#withGroupWait': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
   withGroupWait(value): {
     group_wait: value,
   },
-  '#withRepeatInterval': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'A Route is a node that contains definitions of how to handle alerts. This is modified\nfrom the upstream alertmanager in that it adds the ObjectMatchers property.' } },
+  '#withRepeatInterval': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
   withRepeatInterval(value): {
     repeat_interval: value,
   },
-  '#withGroupBy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'A Route is a node that contains definitions of how to handle alerts. This is modified\nfrom the upstream alertmanager in that it adds the ObjectMatchers property.' } },
+  '#withGroupBy': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
   withGroupBy(value): {
     group_by:
       (if std.isArray(value)
        then value
        else [value]),
   },
-  '#withGroupByMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'A Route is a node that contains definitions of how to handle alerts. This is modified\nfrom the upstream alertmanager in that it adds the ObjectMatchers property.' } },
+  '#withGroupByMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
   withGroupByMixin(value): {
     group_by+:
       (if std.isArray(value)
@@ -45,32 +45,32 @@
        then value
        else [value]),
   },
-  '#withMuteTimeIntervals': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'A Route is a node that contains definitions of how to handle alerts. This is modified\nfrom the upstream alertmanager in that it adds the ObjectMatchers property.' } },
+  '#withMuteTimeIntervals': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
   withMuteTimeIntervals(value): {
     mute_time_intervals:
       (if std.isArray(value)
        then value
        else [value]),
   },
-  '#withMuteTimeIntervalsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'A Route is a node that contains definitions of how to handle alerts. This is modified\nfrom the upstream alertmanager in that it adds the ObjectMatchers property.' } },
+  '#withMuteTimeIntervalsMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
   withMuteTimeIntervalsMixin(value): {
     mute_time_intervals+:
       (if std.isArray(value)
        then value
        else [value]),
   },
-  '#withReceiver': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'A Route is a node that contains definitions of how to handle alerts. This is modified\nfrom the upstream alertmanager in that it adds the ObjectMatchers property.' } },
+  '#withReceiver': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
   withReceiver(value): {
     receiver: value,
   },
-  '#withRoutes': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'A Route is a node that contains definitions of how to handle alerts. This is modified\nfrom the upstream alertmanager in that it adds the ObjectMatchers property.' } },
+  '#withRoutes': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
   withRoutes(value): {
     routes:
       (if std.isArray(value)
        then value
        else [value]),
   },
-  '#withRoutesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: 'A Route is a node that contains definitions of how to handle alerts. This is modified\nfrom the upstream alertmanager in that it adds the ObjectMatchers property.' } },
+  '#withRoutesMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['array'] }], help: '' } },
   withRoutesMixin(value): {
     routes+:
       (if std.isArray(value)

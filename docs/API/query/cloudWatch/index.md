@@ -31,6 +31,9 @@ grafonnet.query.cloudWatch
   * [`fn withStatistic(value)`](#fn-cloudwatchannotationquerywithstatistic)
   * [`fn withStatistics(value)`](#fn-cloudwatchannotationquerywithstatistics)
   * [`fn withStatisticsMixin(value)`](#fn-cloudwatchannotationquerywithstatisticsmixin)
+  * [`obj datasource`](#obj-cloudwatchannotationquerydatasource)
+    * [`fn withType(value)`](#fn-cloudwatchannotationquerydatasourcewithtype)
+    * [`fn withUid(value)`](#fn-cloudwatchannotationquerydatasourcewithuid)
 * [`obj CloudWatchLogsQuery`](#obj-cloudwatchlogsquery)
   * [`fn withDatasource(value)`](#fn-cloudwatchlogsquerywithdatasource)
   * [`fn withExpression(value)`](#fn-cloudwatchlogsquerywithexpression)
@@ -46,6 +49,9 @@ grafonnet.query.cloudWatch
   * [`fn withRegion(value)`](#fn-cloudwatchlogsquerywithregion)
   * [`fn withStatsGroups(value)`](#fn-cloudwatchlogsquerywithstatsgroups)
   * [`fn withStatsGroupsMixin(value)`](#fn-cloudwatchlogsquerywithstatsgroupsmixin)
+  * [`obj datasource`](#obj-cloudwatchlogsquerydatasource)
+    * [`fn withType(value)`](#fn-cloudwatchlogsquerydatasourcewithtype)
+    * [`fn withUid(value)`](#fn-cloudwatchlogsquerydatasourcewithuid)
 * [`obj CloudWatchMetricsQuery`](#obj-cloudwatchmetricsquery)
   * [`fn withAccountId(value)`](#fn-cloudwatchmetricsquerywithaccountid)
   * [`fn withAlias(value)`](#fn-cloudwatchmetricsquerywithalias)
@@ -72,6 +78,9 @@ grafonnet.query.cloudWatch
   * [`fn withStatistic(value)`](#fn-cloudwatchmetricsquerywithstatistic)
   * [`fn withStatistics(value)`](#fn-cloudwatchmetricsquerywithstatistics)
   * [`fn withStatisticsMixin(value)`](#fn-cloudwatchmetricsquerywithstatisticsmixin)
+  * [`obj datasource`](#obj-cloudwatchmetricsquerydatasource)
+    * [`fn withType(value)`](#fn-cloudwatchmetricsquerydatasourcewithtype)
+    * [`fn withUid(value)`](#fn-cloudwatchmetricsquerydatasourcewithuid)
   * [`obj sql`](#obj-cloudwatchmetricsquerysql)
     * [`fn withFrom(value)`](#fn-cloudwatchmetricsquerysqlwithfrom)
     * [`fn withFromMixin(value)`](#fn-cloudwatchmetricsquerysqlwithfrommixin)
@@ -349,6 +358,31 @@ PARAMETERS:
 * **value** (`array`)
 
 @deprecated use statistic
+#### obj CloudWatchAnnotationQuery.datasource
+
+
+##### fn CloudWatchAnnotationQuery.datasource.withType
+
+```jsonnet
+CloudWatchAnnotationQuery.datasource.withType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+The plugin type-id
+##### fn CloudWatchAnnotationQuery.datasource.withUid
+
+```jsonnet
+CloudWatchAnnotationQuery.datasource.withUid(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Specific datasource instance
 ### obj CloudWatchLogsQuery
 
 
@@ -512,6 +546,31 @@ PARAMETERS:
 * **value** (`array`)
 
 Fields to group the results by, this field is automatically populated whenever the query is updated
+#### obj CloudWatchLogsQuery.datasource
+
+
+##### fn CloudWatchLogsQuery.datasource.withType
+
+```jsonnet
+CloudWatchLogsQuery.datasource.withType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+The plugin type-id
+##### fn CloudWatchLogsQuery.datasource.withUid
+
+```jsonnet
+CloudWatchLogsQuery.datasource.withUid(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Specific datasource instance
 ### obj CloudWatchMetricsQuery
 
 
@@ -800,6 +859,31 @@ PARAMETERS:
 * **value** (`array`)
 
 @deprecated use statistic
+#### obj CloudWatchMetricsQuery.datasource
+
+
+##### fn CloudWatchMetricsQuery.datasource.withType
+
+```jsonnet
+CloudWatchMetricsQuery.datasource.withType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+The plugin type-id
+##### fn CloudWatchMetricsQuery.datasource.withUid
+
+```jsonnet
+CloudWatchMetricsQuery.datasource.withUid(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Specific datasource instance
 #### obj CloudWatchMetricsQuery.sql
 
 

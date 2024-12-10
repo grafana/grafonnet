@@ -17,6 +17,9 @@ grafonnet.query.loki
 * [`fn withRefId(value)`](#fn-withrefid)
 * [`fn withResolution(value)`](#fn-withresolution)
 * [`fn withStep(value)`](#fn-withstep)
+* [`obj datasource`](#obj-datasource)
+  * [`fn withType(value)`](#fn-datasourcewithtype)
+  * [`fn withUid(value)`](#fn-datasourcewithuid)
 
 ## Fields
 
@@ -171,3 +174,28 @@ PARAMETERS:
 * **value** (`string`)
 
 Used to set step value for range queries.
+### obj datasource
+
+
+#### fn datasource.withType
+
+```jsonnet
+datasource.withType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+The plugin type-id
+#### fn datasource.withUid
+
+```jsonnet
+datasource.withUid(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Specific datasource instance

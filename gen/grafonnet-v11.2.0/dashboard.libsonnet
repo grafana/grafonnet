@@ -424,6 +424,18 @@
           withAllValue(value): {
             allValue: value,
           },
+          '#withAuto': { 'function': { args: [{ default: true, enums: null, name: 'value', type: ['boolean'] }], help: 'Dynamically calculates interval by dividing time range by the count specified.' } },
+          withAuto(value=true): {
+            auto: value,
+          },
+          '#withAutoCount': { 'function': { args: [{ default: 30, enums: null, name: 'value', type: ['integer'] }], help: 'How many times the current time range should be divided to calculate the value, similar to the Max data points query option.\nFor example, if the current visible time range is 30 minutes, then the auto interval groups the data into 30 one-minute increments.' } },
+          withAutoCount(value=30): {
+            auto_count: value,
+          },
+          '#withAutoMin': { 'function': { args: [{ default: '10s', enums: null, name: 'value', type: ['string'] }], help: 'The minimum threshold below which the step count intervals will not divide the time.' } },
+          withAutoMin(value='10s'): {
+            auto_min: value,
+          },
           '#withCurrent': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Option to be selected in a variable.' } },
           withCurrent(value): {
             current: value,

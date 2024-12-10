@@ -54,7 +54,6 @@ grafonnet.query.testData
 * [`fn withUsaMixin(value)`](#fn-withusamixin)
 * [`fn withWithNil(value=true)`](#fn-withwithnil)
 * [`obj datasource`](#obj-datasource)
-  * [`fn withApiVersion(value)`](#fn-datasourcewithapiversion)
   * [`fn withType(value)`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
 * [`obj nodes`](#obj-nodes)
@@ -650,17 +649,6 @@ PARAMETERS:
 ### obj datasource
 
 
-#### fn datasource.withApiVersion
-
-```jsonnet
-datasource.withApiVersion(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-The apiserver version
 #### fn datasource.withType
 
 ```jsonnet
@@ -671,7 +659,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-The datasource plugin type
+The plugin type-id
 #### fn datasource.withUid
 
 ```jsonnet
@@ -682,7 +670,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Datasource UID (NOTE: name in k8s)
+Specific datasource instance
 ### obj nodes
 
 

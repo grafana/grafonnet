@@ -3,29 +3,23 @@
   '#': { help: 'grafonnet.query.expr', name: 'expr' },
   TypeMath+:
     {
-      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'The datasource' } },
+      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasource(value): {
         datasource: value,
       },
-      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'The datasource' } },
+      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasourceMixin(value): {
         datasource+: value,
       },
       datasource+:
         {
-          '#withApiVersion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The apiserver version' } },
-          withApiVersion(value): {
+          '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The plugin type-id' } },
+          withType(value): {
             datasource+: {
-              apiVersion: value,
+              type: value,
             },
           },
-          '#withType': { 'function': { args: [], help: 'The datasource plugin type' } },
-          withType(): {
-            datasource+: {
-              type: '__expr__',
-            },
-          },
-          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID (NOTE: name in k8s)' } },
+          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Specific datasource instance' } },
           withUid(value): {
             datasource+: {
               uid: value,
@@ -127,29 +121,23 @@
     },
   TypeReduce+:
     {
-      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'The datasource' } },
+      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasource(value): {
         datasource: value,
       },
-      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'The datasource' } },
+      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasourceMixin(value): {
         datasource+: value,
       },
       datasource+:
         {
-          '#withApiVersion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The apiserver version' } },
-          withApiVersion(value): {
+          '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The plugin type-id' } },
+          withType(value): {
             datasource+: {
-              apiVersion: value,
+              type: value,
             },
           },
-          '#withType': { 'function': { args: [], help: 'The datasource plugin type' } },
-          withType(): {
-            datasource+: {
-              type: '__expr__',
-            },
-          },
-          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID (NOTE: name in k8s)' } },
+          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Specific datasource instance' } },
           withUid(value): {
             datasource+: {
               uid: value,
@@ -278,29 +266,23 @@
     },
   TypeResample+:
     {
-      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'The datasource' } },
+      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasource(value): {
         datasource: value,
       },
-      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'The datasource' } },
+      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasourceMixin(value): {
         datasource+: value,
       },
       datasource+:
         {
-          '#withApiVersion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The apiserver version' } },
-          withApiVersion(value): {
+          '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The plugin type-id' } },
+          withType(value): {
             datasource+: {
-              apiVersion: value,
+              type: value,
             },
           },
-          '#withType': { 'function': { args: [], help: 'The datasource plugin type' } },
-          withType(): {
-            datasource+: {
-              type: '__expr__',
-            },
-          },
-          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID (NOTE: name in k8s)' } },
+          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Specific datasource instance' } },
           withUid(value): {
             datasource+: {
               uid: value,
@@ -530,29 +512,23 @@
               },
             },
         },
-      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'The datasource' } },
+      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasource(value): {
         datasource: value,
       },
-      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'The datasource' } },
+      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasourceMixin(value): {
         datasource+: value,
       },
       datasource+:
         {
-          '#withApiVersion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The apiserver version' } },
-          withApiVersion(value): {
+          '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The plugin type-id' } },
+          withType(value): {
             datasource+: {
-              apiVersion: value,
+              type: value,
             },
           },
-          '#withType': { 'function': { args: [], help: 'The datasource plugin type' } },
-          withType(): {
-            datasource+: {
-              type: '__expr__',
-            },
-          },
-          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID (NOTE: name in k8s)' } },
+          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Specific datasource instance' } },
           withUid(value): {
             datasource+: {
               uid: value,
@@ -746,29 +722,23 @@
               },
             },
         },
-      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'The datasource' } },
+      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasource(value): {
         datasource: value,
       },
-      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'The datasource' } },
+      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasourceMixin(value): {
         datasource+: value,
       },
       datasource+:
         {
-          '#withApiVersion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The apiserver version' } },
-          withApiVersion(value): {
+          '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The plugin type-id' } },
+          withType(value): {
             datasource+: {
-              apiVersion: value,
+              type: value,
             },
           },
-          '#withType': { 'function': { args: [], help: 'The datasource plugin type' } },
-          withType(): {
-            datasource+: {
-              type: '__expr__',
-            },
-          },
-          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID (NOTE: name in k8s)' } },
+          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Specific datasource instance' } },
           withUid(value): {
             datasource+: {
               uid: value,
@@ -870,29 +840,23 @@
     },
   TypeSql+:
     {
-      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'The datasource' } },
+      '#withDatasource': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasource(value): {
         datasource: value,
       },
-      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'The datasource' } },
+      '#withDatasourceMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'Ref to a DataSource instance' } },
       withDatasourceMixin(value): {
         datasource+: value,
       },
       datasource+:
         {
-          '#withApiVersion': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The apiserver version' } },
-          withApiVersion(value): {
+          '#withType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'The plugin type-id' } },
+          withType(value): {
             datasource+: {
-              apiVersion: value,
+              type: value,
             },
           },
-          '#withType': { 'function': { args: [], help: 'The datasource plugin type' } },
-          withType(): {
-            datasource+: {
-              type: '__expr__',
-            },
-          },
-          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Datasource UID (NOTE: name in k8s)' } },
+          '#withUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'Specific datasource instance' } },
           withUid(value): {
             datasource+: {
               uid: value,

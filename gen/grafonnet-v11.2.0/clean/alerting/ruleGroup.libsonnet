@@ -98,23 +98,23 @@
       data+:
         {
           '#': { help: '', name: 'data' },
-          '#withDatasourceUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
+          '#withDatasourceUid': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: "Grafana data source unique identifier; it should be '__expr__' for a Server Side Expression operation." } },
           withDatasourceUid(value): {
             datasourceUid: value,
           },
-          '#withModel': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
+          '#withModel': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'JSON is the raw JSON query and includes the above properties as well as custom properties.' } },
           withModel(value): {
             model: value,
           },
-          '#withModelMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: '' } },
+          '#withModelMixin': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['object'] }], help: 'JSON is the raw JSON query and includes the above properties as well as custom properties.' } },
           withModelMixin(value): {
             model+: value,
           },
-          '#withQueryType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
+          '#withQueryType': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'QueryType is an optional identifier for the type of query.\nIt can be used to distinguish different types of queries.' } },
           withQueryType(value): {
             queryType: value,
           },
-          '#withRefId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: '' } },
+          '#withRefId': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['string'] }], help: 'RefID is the unique identifier of the query, set by the frontend call.' } },
           withRefId(value): {
             refId: value,
           },
