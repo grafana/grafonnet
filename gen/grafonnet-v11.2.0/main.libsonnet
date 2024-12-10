@@ -17,6 +17,7 @@
   publicdashboard: import 'publicdashboard.libsonnet',
   role: import 'role.libsonnet',
   rolebinding: import 'rolebinding.libsonnet',
+  team: import 'team.libsonnet',
   folder: import 'folder.libsonnet',
   panel: import 'panelindex.libsonnet',
   query: import 'query.libsonnet',

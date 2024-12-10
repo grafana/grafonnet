@@ -9,7 +9,9 @@ local utils = import '../utils.libsonnet';
     core:
       std.filterMap(
         function(schema)
-          std.get(schema.info, 'x-schema-kind', '') == 'core',
+          std.get(schema.info, 'x-schema-kind', '') == 'core'
+          && std.get(schema.info, 'title', '') != 'alerting'
+        ,
         root.sanitizeDashboardSchema,
         schemas
       )

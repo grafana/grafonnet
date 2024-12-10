@@ -27,4 +27,5 @@ local grafonnet = import "github.com/grafana/grafonnet/gen/grafonnet-v11.2.0/mai
 * [query](query/index.md)
 * [role](role.md)
 * [rolebinding](rolebinding.md)
+* [team](team.md)
 * [util](util.md)
