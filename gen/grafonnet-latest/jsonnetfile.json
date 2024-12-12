@@ -4,7 +4,7 @@
       "source": {
         "git": {
           "remote": "https://github.com/grafana/grafonnet.git",
-          "subdir": "gen/grafonnet-v11.2.0"
+          "subdir": "gen/grafonnet-v11.3.0"
         }
       },
       "version": "main"
