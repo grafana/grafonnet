@@ -38,9 +38,9 @@
           "subdir": "openapi"
         }
       },
-      "version": "08b50cb69e5139c4533dbda7d871761cb76d1612",
-      "sum": "RDmuZzgGK9AcQd2FZxWOh8Su7Ai5dvWlWGlX4/my0oI=",
-      "name": "grafana-foundation-sdk-v11.3.0"
+      "version": "6b98ba6b000d0fc0244d93e7dcda789530d48bbd",
+      "sum": "qg8w+E0yVeTFDmm51Ky+y5CBh+Nti3Nb+6xabi4n0e4=",
+      "name": "grafana-foundation-sdk-v11.4.0"
     },
     {
       "source": {
