@@ -119,6 +119,16 @@ local utils = import './utils.libsonnet';
         '$ref': '#/components/schemas/expr',
       },
     },
+    athena: {
+      dataquery: {
+        '$ref': '#/components/schemas/Dataquery',
+      },
+    },
+    bigquery: {
+      dataquery: {
+        '$ref': '#/components/schemas/Dataquery',
+      },
+    },
   },
 
   queryIndex(files):
