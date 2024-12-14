@@ -229,7 +229,7 @@ local variables = import './variables.libsonnet';
     prometheusQuery.new(
       '$' + variables.datasource.name,
       |||
-        sum by (cluster, namesapce, job,le,controller) (
+        sum by (cluster, namespace, job, le, controller) (
           rate(
             controller_runtime_reconcile_time_seconds_bucket{
                 cluster=~"$cluster",
