@@ -602,7 +602,7 @@
                         "type": "prometheus",
                         "uid": "$datasource"
                      },
-                     "expr": "sum by (cluster, namesapce, job,le,controller) (\n  rate(\n    controller_runtime_reconcile_time_seconds_bucket{\n        cluster=~\"$cluster\",\n        namespace=~\"$namespace\",\n        job=~\"$job\"\n    }\n  [$__rate_interval])\n)\n",
+                     "expr": "sum by (cluster, namespace, job, le, controller) (\n  rate(\n    controller_runtime_reconcile_time_seconds_bucket{\n        cluster=~\"$cluster\",\n        namespace=~\"$namespace\",\n        job=~\"$job\"\n    }\n  [$__rate_interval])\n)\n",
                      "legendFormat": "{{cluster}} - {{namespace}}\n"
                   }
                ],
