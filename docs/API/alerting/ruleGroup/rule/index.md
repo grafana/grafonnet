@@ -21,7 +21,9 @@
 * [`fn withLabelsMixin(value)`](#fn-withlabelsmixin)
 * [`fn withName(value)`](#fn-withname)
 * [`fn withNoDataState(value)`](#fn-withnodatastate)
+* [`fn withNotificationSettings(value)`](#fn-withnotificationsettings)
 * [`fn withOrgID(value)`](#fn-withorgid)
+* [`fn withPanel(value)`](#fn-withpanel)
 * [`fn withRuleGroup(value)`](#fn-withrulegroup)
 
 ## Fields
@@ -193,4 +195,31 @@ withRuleGroup(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+### fn withNotificationSettings
+
+```jsonnet
+withNotificationSettings(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+  - required keys: `receiver`
+
+Set notification settings for the alert rule. Produces a structure with `notification_settings: { receiver: value.receiver }`.
+
+### fn withPanel
+
+```jsonnet
+withPanel(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+  - required keys: `dashboardId`, `panelId`
+
+Link the alert rule to a panel. Produces a structure with `dashboardUid: value.dashboardId, panelId: value.panelId`.
 
