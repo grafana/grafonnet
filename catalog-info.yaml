@@ -1,0 +1,18 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: grafonnet
+  title: grafonnet
+  description: Jsonnet library for generating Grafana dashboards.
+  tags:
+    - gitops
+  links:
+    - title: "Internal Slack Channel #grafonnet"
+      type: slack
+      url: https://grafanalabs.enterprise.slack.com/archives/C0574V70AAC
+  annotations:
+    github.com/project-slug: grafana/grafonnet
+spec:
+  type: tool
+  owner: group:default/platform-monitoring
+  lifecycle: experimental
