@@ -92,6 +92,26 @@
               },
             },
           },
+          '#withInsertNulls': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['integer'] }], help: 'Disconnect values, controls separation threshold of the gap in milliseconds.' } },
+          withInsertNulls(value=null): {
+            fieldConfig+: {
+              defaults+: {
+                custom+: {
+                  insertNulls: value,
+                },
+              },
+            },
+          },
+          '#withSpanNulls': { 'function': { args: [{ default: null, enums: null, name: 'value', type: ['integer', 'boolean'] }], help: 'Connect null values, controlls the threshold of the gap in milliseconds. Could be `true` if should always connect.' } },
+          withSpanNulls(value=null): {
+            fieldConfig+: {
+              defaults+: {
+                custom+: {
+                  spanNulls: value,
+                },
+              },
+            },
+          },
         },
     },
   },
