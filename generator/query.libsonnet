@@ -45,7 +45,13 @@ local utils = import './utils.libsonnet';
           schemas+: std.get(fixes, title, {}),
         },
       };
-    local subSchema = customSchema.components.schemas.dataquery;
+    assert std.trace(title, true);
+    local subSchema =
+      std.get(
+        customSchema.components.schemas,
+        'dataquery',
+        customSchema.components.schemas.Dataquery
+      );
 
     local ast =
       utils.unwrapFromCRDsonnet(
@@ -78,9 +84,9 @@ local utils = import './utils.libsonnet';
       dataquery: {
         type: 'object',
         oneOf: [
-          { '$ref': '#/components/schemas/CloudWatchAnnotationQuery' },
-          { '$ref': '#/components/schemas/CloudWatchLogsQuery' },
-          { '$ref': '#/components/schemas/CloudWatchMetricsQuery' },
+          { '$ref': '#/components/schemas/AnnotationQuery' },
+          { '$ref': '#/components/schemas/LogsQuery' },
+          { '$ref': '#/components/schemas/MetricsQuery' },
         ],
       },
 
@@ -93,12 +99,7 @@ local utils = import './utils.libsonnet';
     },
     azureMonitor: {
       dataquery: {
-        '$ref': '#/components/schemas/AzureMonitorQuery',
-      },
-    },
-    tempo: {
-      dataquery: {
-        '$ref': '#/components/schemas/TempoQuery',
+        '$ref': '#/components/schemas/MonitorQuery',
       },
     },
     googleCloudMonitoring: {
@@ -117,16 +118,6 @@ local utils = import './utils.libsonnet';
     expr: {
       dataquery: {
         '$ref': '#/components/schemas/expr',
-      },
-    },
-    athena: {
-      dataquery: {
-        '$ref': '#/components/schemas/Dataquery',
-      },
-    },
-    bigquery: {
-      dataquery: {
-        '$ref': '#/components/schemas/Dataquery',
       },
     },
   },

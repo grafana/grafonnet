@@ -26,8 +26,8 @@
           "subdir": "openapi"
         }
       },
-      "version": "v11.4.x+cog-v0.0.x",
-      "name": "grafana-foundation-sdk-v11.4.0"
+      "version": "v0.0.18",
+      "name": "grafana-foundation-sdk-v13.0.0"
     }
   ],
   "legacyImports": true

@@ -78,11 +78,8 @@ local utils = import '../utils.libsonnet';
       },
       components+: {
         schemas+: {
-          local v = super.ValueMapping,
-          ValueMapping: {
+          ValueMapping+: {
             type: 'object',
-            description: v.description,
-            oneOf: v.anyOf,  // This used to be a oneOf, by changing to an anyOf it gets rendered differently.
           },
           Panel+: {
             properties+: {

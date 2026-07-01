@@ -8,8 +8,8 @@
           "subdir": ""
         }
       },
-      "version": "0c82db246c00af8a25ead5240d82db195febee60",
-      "sum": "zgyJG+0zLt/9OreKeHzJD4NaEltwwMYJ5O5obKBk35I="
+      "version": "3d6c89b30321ff4f5f55158bd48a91d745a3dfe6",
+      "sum": "NTet3g9kU+/zU5N1f/vvR1WwivDz+tAC5pznx95Y9Mk="
     },
     {
       "source": {
@@ -28,8 +28,8 @@
           "subdir": ""
         }
       },
-      "version": "a78ca15fbfece3110c4807d1f059132ece01d97b",
-      "sum": "qYLH56MqvmgxE4YMNeTbuJ1XSsCpl1sumHN5x8IQv2I="
+      "version": "6892dcbb6440a6882007a2e035a7fa331c71c6f0",
+      "sum": "7CDZQ/l+BF8hhqwwjec75fp/pOKUcjgZdBeh9dd14Nw="
     },
     {
       "source": {
@@ -38,9 +38,9 @@
           "subdir": "openapi"
         }
       },
-      "version": "6b98ba6b000d0fc0244d93e7dcda789530d48bbd",
-      "sum": "qg8w+E0yVeTFDmm51Ky+y5CBh+Nti3Nb+6xabi4n0e4=",
-      "name": "grafana-foundation-sdk-v11.4.0"
+      "version": "b3d52a7cbaffff15aeada9a7dbc55be1a417bdab",
+      "sum": "XYGFvVyapboPuKz3t5KWAR/bXOLoStq7YwLmzh2ziaw=",
+      "name": "grafana-foundation-sdk-v13.0.0"
     },
     {
       "source": {
@@ -49,7 +49,7 @@
           "subdir": "doc-util"
         }
       },
-      "version": "6ac6c69685b8c29c54515448eaca583da2d88150",
+      "version": "bf6f08ae02a51c48bdcec4629b1c1a5a62c6f803",
       "sum": "BrAL/k23jq+xy9oA7TWIhUx07dsA/QLm3g7ktCwe//U="
     },
     {
@@ -59,8 +59,8 @@
           "subdir": ""
         }
       },
-      "version": "63d430b69a95741061c2f7fc9d84b1a778511d9c",
-      "sum": "qiZi3axUSXCVzKUF83zSAxklwrnitMmrDK4XAfjPMdE="
+      "version": "4d7f8cb24d613430799f9d56809cc6964f35cea9",
+      "sum": "hOrwkOx34tOXqoDVnwuI/Uf/dr9HFFSPWpDPOvnEGrk="
     }
   ],
   "legacyImports": false
