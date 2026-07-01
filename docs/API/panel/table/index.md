@@ -28,104 +28,138 @@ grafonnet.panel.table
       * [`fn withMinWidth(value)`](#fn-fieldconfigdefaultscustomwithminwidth)
       * [`fn withWidth(value)`](#fn-fieldconfigdefaultscustomwithwidth)
       * [`obj cellOptions`](#obj-fieldconfigdefaultscustomcelloptions)
-        * [`fn withTableAutoCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtableautocelloptions)
-        * [`fn withTableAutoCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtableautocelloptionsmixin)
-        * [`fn withTableBarGaugeCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtablebargaugecelloptions)
-        * [`fn withTableBarGaugeCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtablebargaugecelloptionsmixin)
-        * [`fn withTableColorTextCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtablecolortextcelloptions)
-        * [`fn withTableColorTextCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtablecolortextcelloptionsmixin)
-        * [`fn withTableColoredBackgroundCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtablecoloredbackgroundcelloptions)
-        * [`fn withTableColoredBackgroundCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtablecoloredbackgroundcelloptionsmixin)
-        * [`fn withTableDataLinksCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtabledatalinkscelloptions)
-        * [`fn withTableDataLinksCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtabledatalinkscelloptionsmixin)
-        * [`fn withTableImageCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtableimagecelloptions)
-        * [`fn withTableImageCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtableimagecelloptionsmixin)
-        * [`fn withTableJsonViewCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtablejsonviewcelloptions)
-        * [`fn withTableJsonViewCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtablejsonviewcelloptionsmixin)
-        * [`fn withTableSparklineCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtablesparklinecelloptions)
-        * [`fn withTableSparklineCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtablesparklinecelloptionsmixin)
-        * [`obj TableAutoCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstableautocelloptions)
-          * [`fn withType()`](#fn-fieldconfigdefaultscustomcelloptionstableautocelloptionswithtype)
-          * [`fn withWrapText(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstableautocelloptionswithwraptext)
-        * [`obj TableBarGaugeCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstablebargaugecelloptions)
-          * [`fn withMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablebargaugecelloptionswithmode)
-          * [`fn withType()`](#fn-fieldconfigdefaultscustomcelloptionstablebargaugecelloptionswithtype)
-          * [`fn withValueDisplayMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablebargaugecelloptionswithvaluedisplaymode)
-        * [`obj TableColorTextCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstablecolortextcelloptions)
-          * [`fn withType()`](#fn-fieldconfigdefaultscustomcelloptionstablecolortextcelloptionswithtype)
-          * [`fn withWrapText(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablecolortextcelloptionswithwraptext)
-        * [`obj TableColoredBackgroundCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstablecoloredbackgroundcelloptions)
-          * [`fn withApplyToRow(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablecoloredbackgroundcelloptionswithapplytorow)
-          * [`fn withMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecoloredbackgroundcelloptionswithmode)
-          * [`fn withType()`](#fn-fieldconfigdefaultscustomcelloptionstablecoloredbackgroundcelloptionswithtype)
-          * [`fn withWrapText(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablecoloredbackgroundcelloptionswithwraptext)
-        * [`obj TableDataLinksCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstabledatalinkscelloptions)
-          * [`fn withType()`](#fn-fieldconfigdefaultscustomcelloptionstabledatalinkscelloptionswithtype)
-        * [`obj TableImageCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstableimagecelloptions)
-          * [`fn withAlt(value)`](#fn-fieldconfigdefaultscustomcelloptionstableimagecelloptionswithalt)
-          * [`fn withTitle(value)`](#fn-fieldconfigdefaultscustomcelloptionstableimagecelloptionswithtitle)
-          * [`fn withType()`](#fn-fieldconfigdefaultscustomcelloptionstableimagecelloptionswithtype)
-        * [`obj TableJsonViewCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstablejsonviewcelloptions)
-          * [`fn withType()`](#fn-fieldconfigdefaultscustomcelloptionstablejsonviewcelloptionswithtype)
-        * [`obj TableSparklineCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstablesparklinecelloptions)
-          * [`fn withAxisBorderShow(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithaxisbordershow)
-          * [`fn withAxisCenteredZero(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithaxiscenteredzero)
-          * [`fn withAxisColorMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithaxiscolormode)
-          * [`fn withAxisGridShow(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithaxisgridshow)
-          * [`fn withAxisLabel(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithaxislabel)
-          * [`fn withAxisPlacement(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithaxisplacement)
-          * [`fn withAxisSoftMax(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithaxissoftmax)
-          * [`fn withAxisSoftMin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithaxissoftmin)
-          * [`fn withAxisWidth(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithaxiswidth)
-          * [`fn withBarAlignment(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithbaralignment)
-          * [`fn withBarMaxWidth(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithbarmaxwidth)
-          * [`fn withBarWidthFactor(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithbarwidthfactor)
-          * [`fn withDrawStyle(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithdrawstyle)
-          * [`fn withFillBelowTo(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithfillbelowto)
-          * [`fn withFillColor(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithfillcolor)
-          * [`fn withFillOpacity(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithfillopacity)
-          * [`fn withGradientMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithgradientmode)
-          * [`fn withHideFrom(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithhidefrom)
-          * [`fn withHideFromMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithhidefrommixin)
-          * [`fn withHideValue(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithhidevalue)
-          * [`fn withInsertNulls(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithinsertnulls)
-          * [`fn withInsertNullsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithinsertnullsmixin)
-          * [`fn withLineColor(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithlinecolor)
-          * [`fn withLineInterpolation(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithlineinterpolation)
-          * [`fn withLineStyle(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithlinestyle)
-          * [`fn withLineStyleMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithlinestylemixin)
-          * [`fn withLineWidth(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithlinewidth)
-          * [`fn withPointColor(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithpointcolor)
-          * [`fn withPointSize(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithpointsize)
-          * [`fn withPointSymbol(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithpointsymbol)
-          * [`fn withScaleDistribution(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithscaledistribution)
-          * [`fn withScaleDistributionMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithscaledistributionmixin)
-          * [`fn withShowPoints(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithshowpoints)
-          * [`fn withSpanNulls(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithspannulls)
-          * [`fn withSpanNullsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithspannullsmixin)
-          * [`fn withStacking(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithstacking)
-          * [`fn withStackingMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithstackingmixin)
-          * [`fn withThresholdsStyle(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswiththresholdsstyle)
-          * [`fn withThresholdsStyleMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswiththresholdsstylemixin)
-          * [`fn withTransform(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithtransform)
-          * [`fn withType()`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionswithtype)
-          * [`obj hideFrom`](#obj-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionshidefrom)
-            * [`fn withLegend(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionshidefromwithlegend)
-            * [`fn withTooltip(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionshidefromwithtooltip)
-            * [`fn withViz(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionshidefromwithviz)
-          * [`obj lineStyle`](#obj-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionslinestyle)
-            * [`fn withDash(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionslinestylewithdash)
-            * [`fn withDashMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionslinestylewithdashmixin)
-            * [`fn withFill(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionslinestylewithfill)
-          * [`obj scaleDistribution`](#obj-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionsscaledistribution)
-            * [`fn withLinearThreshold(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionsscaledistributionwithlinearthreshold)
-            * [`fn withLog(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionsscaledistributionwithlog)
-            * [`fn withType(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionsscaledistributionwithtype)
-          * [`obj stacking`](#obj-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionsstacking)
-            * [`fn withGroup(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionsstackingwithgroup)
-            * [`fn withMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionsstackingwithmode)
-          * [`obj thresholdsStyle`](#obj-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionsthresholdsstyle)
-            * [`fn withMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablesparklinecelloptionsthresholdsstylewithmode)
+        * [`fn withTableCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtablecelloptions)
+        * [`fn withTableCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionswithtablecelloptionsmixin)
+        * [`obj TableCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptions)
+          * [`fn withTableActionsCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtableactionscelloptions)
+          * [`fn withTableActionsCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtableactionscelloptionsmixin)
+          * [`fn withTableAutoCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtableautocelloptions)
+          * [`fn withTableAutoCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtableautocelloptionsmixin)
+          * [`fn withTableBarGaugeCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtablebargaugecelloptions)
+          * [`fn withTableBarGaugeCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtablebargaugecelloptionsmixin)
+          * [`fn withTableColorTextCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtablecolortextcelloptions)
+          * [`fn withTableColorTextCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtablecolortextcelloptionsmixin)
+          * [`fn withTableColoredBackgroundCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtablecoloredbackgroundcelloptions)
+          * [`fn withTableColoredBackgroundCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtablecoloredbackgroundcelloptionsmixin)
+          * [`fn withTableDataLinksCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtabledatalinkscelloptions)
+          * [`fn withTableDataLinksCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtabledatalinkscelloptionsmixin)
+          * [`fn withTableImageCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtableimagecelloptions)
+          * [`fn withTableImageCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtableimagecelloptionsmixin)
+          * [`fn withTableJsonViewCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtablejsonviewcelloptions)
+          * [`fn withTableJsonViewCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtablejsonviewcelloptionsmixin)
+          * [`fn withTableSparklineCellOptions(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtablesparklinecelloptions)
+          * [`fn withTableSparklineCellOptionsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionswithtablesparklinecelloptionsmixin)
+          * [`obj TableActionsCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstableactionscelloptions)
+            * [`fn withType(value="actions")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstableactionscelloptionswithtype)
+            * [`fn withTypeMixin(value="actions")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstableactionscelloptionswithtypemixin)
+            * [`obj type`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstableactionscelloptionstype)
+              * [`fn withTableCellDisplayMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstableactionscelloptionstypewithtablecelldisplaymode)
+          * [`obj TableAutoCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstableautocelloptions)
+            * [`fn withType(value="auto")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstableautocelloptionswithtype)
+            * [`fn withTypeMixin(value="auto")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstableautocelloptionswithtypemixin)
+            * [`fn withWrapText(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstableautocelloptionswithwraptext)
+            * [`obj type`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstableautocelloptionstype)
+              * [`fn withTableCellDisplayMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstableautocelloptionstypewithtablecelldisplaymode)
+          * [`obj TableBarGaugeCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstablebargaugecelloptions)
+            * [`fn withMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablebargaugecelloptionswithmode)
+            * [`fn withType(value="gauge")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablebargaugecelloptionswithtype)
+            * [`fn withTypeMixin(value="gauge")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablebargaugecelloptionswithtypemixin)
+            * [`fn withValueDisplayMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablebargaugecelloptionswithvaluedisplaymode)
+            * [`obj type`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstablebargaugecelloptionstype)
+              * [`fn withTableCellDisplayMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablebargaugecelloptionstypewithtablecelldisplaymode)
+          * [`obj TableColorTextCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstablecolortextcelloptions)
+            * [`fn withType(value="color-text")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablecolortextcelloptionswithtype)
+            * [`fn withTypeMixin(value="color-text")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablecolortextcelloptionswithtypemixin)
+            * [`fn withWrapText(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablecolortextcelloptionswithwraptext)
+            * [`obj type`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstablecolortextcelloptionstype)
+              * [`fn withTableCellDisplayMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablecolortextcelloptionstypewithtablecelldisplaymode)
+          * [`obj TableColoredBackgroundCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstablecoloredbackgroundcelloptions)
+            * [`fn withApplyToRow(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablecoloredbackgroundcelloptionswithapplytorow)
+            * [`fn withMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablecoloredbackgroundcelloptionswithmode)
+            * [`fn withType(value="color-background")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablecoloredbackgroundcelloptionswithtype)
+            * [`fn withTypeMixin(value="color-background")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablecoloredbackgroundcelloptionswithtypemixin)
+            * [`fn withWrapText(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablecoloredbackgroundcelloptionswithwraptext)
+            * [`obj type`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstablecoloredbackgroundcelloptionstype)
+              * [`fn withTableCellDisplayMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablecoloredbackgroundcelloptionstypewithtablecelldisplaymode)
+          * [`obj TableDataLinksCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstabledatalinkscelloptions)
+            * [`fn withType(value="data-links")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstabledatalinkscelloptionswithtype)
+            * [`fn withTypeMixin(value="data-links")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstabledatalinkscelloptionswithtypemixin)
+            * [`obj type`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstabledatalinkscelloptionstype)
+              * [`fn withTableCellDisplayMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstabledatalinkscelloptionstypewithtablecelldisplaymode)
+          * [`obj TableImageCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstableimagecelloptions)
+            * [`fn withAlt(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstableimagecelloptionswithalt)
+            * [`fn withTitle(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstableimagecelloptionswithtitle)
+            * [`fn withType(value="image")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstableimagecelloptionswithtype)
+            * [`fn withTypeMixin(value="image")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstableimagecelloptionswithtypemixin)
+            * [`obj type`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstableimagecelloptionstype)
+              * [`fn withTableCellDisplayMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstableimagecelloptionstypewithtablecelldisplaymode)
+          * [`obj TableJsonViewCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstablejsonviewcelloptions)
+            * [`fn withType(value="json-view")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablejsonviewcelloptionswithtype)
+            * [`fn withTypeMixin(value="json-view")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablejsonviewcelloptionswithtypemixin)
+            * [`obj type`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstablejsonviewcelloptionstype)
+              * [`fn withTableCellDisplayMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablejsonviewcelloptionstypewithtablecelldisplaymode)
+          * [`obj TableSparklineCellOptions`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptions)
+            * [`fn withAxisBorderShow(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithaxisbordershow)
+            * [`fn withAxisCenteredZero(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithaxiscenteredzero)
+            * [`fn withAxisColorMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithaxiscolormode)
+            * [`fn withAxisGridShow(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithaxisgridshow)
+            * [`fn withAxisLabel(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithaxislabel)
+            * [`fn withAxisPlacement(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithaxisplacement)
+            * [`fn withAxisSoftMax(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithaxissoftmax)
+            * [`fn withAxisSoftMin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithaxissoftmin)
+            * [`fn withAxisWidth(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithaxiswidth)
+            * [`fn withBarAlignment(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithbaralignment)
+            * [`fn withBarMaxWidth(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithbarmaxwidth)
+            * [`fn withBarWidthFactor(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithbarwidthfactor)
+            * [`fn withDrawStyle(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithdrawstyle)
+            * [`fn withFillBelowTo(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithfillbelowto)
+            * [`fn withFillColor(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithfillcolor)
+            * [`fn withFillOpacity(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithfillopacity)
+            * [`fn withGradientMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithgradientmode)
+            * [`fn withHideFrom(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithhidefrom)
+            * [`fn withHideFromMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithhidefrommixin)
+            * [`fn withHideValue(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithhidevalue)
+            * [`fn withInsertNulls(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithinsertnulls)
+            * [`fn withInsertNullsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithinsertnullsmixin)
+            * [`fn withLineColor(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithlinecolor)
+            * [`fn withLineInterpolation(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithlineinterpolation)
+            * [`fn withLineStyle(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithlinestyle)
+            * [`fn withLineStyleMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithlinestylemixin)
+            * [`fn withLineWidth(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithlinewidth)
+            * [`fn withPointColor(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithpointcolor)
+            * [`fn withPointSize(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithpointsize)
+            * [`fn withPointSymbol(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithpointsymbol)
+            * [`fn withScaleDistribution(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithscaledistribution)
+            * [`fn withScaleDistributionMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithscaledistributionmixin)
+            * [`fn withShowPoints(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithshowpoints)
+            * [`fn withSpanNulls(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithspannulls)
+            * [`fn withSpanNullsMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithspannullsmixin)
+            * [`fn withStacking(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithstacking)
+            * [`fn withStackingMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithstackingmixin)
+            * [`fn withThresholdsStyle(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswiththresholdsstyle)
+            * [`fn withThresholdsStyleMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswiththresholdsstylemixin)
+            * [`fn withTransform(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithtransform)
+            * [`fn withType(value="sparkline")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithtype)
+            * [`fn withTypeMixin(value="sparkline")`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionswithtypemixin)
+            * [`obj hideFrom`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionshidefrom)
+              * [`fn withLegend(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionshidefromwithlegend)
+              * [`fn withTooltip(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionshidefromwithtooltip)
+              * [`fn withViz(value=true)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionshidefromwithviz)
+            * [`obj lineStyle`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionslinestyle)
+              * [`fn withDash(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionslinestylewithdash)
+              * [`fn withDashMixin(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionslinestylewithdashmixin)
+              * [`fn withFill(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionslinestylewithfill)
+            * [`obj scaleDistribution`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionsscaledistribution)
+              * [`fn withLinearThreshold(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionsscaledistributionwithlinearthreshold)
+              * [`fn withLog(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionsscaledistributionwithlog)
+              * [`fn withType(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionsscaledistributionwithtype)
+            * [`obj stacking`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionsstacking)
+              * [`fn withGroup(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionsstackingwithgroup)
+              * [`fn withMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionsstackingwithmode)
+            * [`obj thresholdsStyle`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionsthresholdsstyle)
+              * [`fn withMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionsthresholdsstylewithmode)
+            * [`obj type`](#obj-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionstype)
+              * [`fn withTableCellDisplayMode(value)`](#fn-fieldconfigdefaultscustomcelloptionstablecelloptionstablesparklinecelloptionstypewithtablecelldisplaymode)
 * [`obj libraryPanel`](#obj-librarypanel)
   * [`fn withName(value)`](#fn-librarypanelwithname)
   * [`fn withUid(value)`](#fn-librarypanelwithuid)
@@ -239,8 +273,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Table cell options. Each cell has a display mode
-and other potential options for that display.
+
 ###### fn fieldConfig.defaults.custom.withCellOptionsMixin
 
 ```jsonnet
@@ -251,8 +284,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Table cell options. Each cell has a display mode
-and other potential options for that display.
+
 ###### fn fieldConfig.defaults.custom.withDisplayMode
 
 ```jsonnet
@@ -262,7 +294,7 @@ fieldConfig.defaults.custom.withDisplayMode(value)
 PARAMETERS:
 
 * **value** (`string`)
-   - valid values: `"auto"`, `"color-text"`, `"color-background"`, `"color-background-solid"`, `"gradient-gauge"`, `"lcd-gauge"`, `"json-view"`, `"basic"`, `"image"`, `"gauge"`, `"sparkline"`, `"data-links"`, `"custom"`
+   - valid values: `"auto"`, `"color-text"`, `"color-background"`, `"color-background-solid"`, `"gradient-gauge"`, `"lcd-gauge"`, `"json-view"`, `"basic"`, `"image"`, `"gauge"`, `"sparkline"`, `"data-links"`, `"custom"`, `"actions"`
 
 Internally, this is the "type" of cell that's being displayed
 in the table such as colored text, JSON, gauge, etc.
@@ -341,10 +373,59 @@ PARAMETERS:
 ###### obj fieldConfig.defaults.custom.cellOptions
 
 
-####### fn fieldConfig.defaults.custom.cellOptions.withTableAutoCellOptions
+####### fn fieldConfig.defaults.custom.cellOptions.withTableCellOptions
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.withTableAutoCellOptions(value)
+fieldConfig.defaults.custom.cellOptions.withTableCellOptions(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+Table cell options. Each cell has a display mode
+and other potential options for that display.
+####### fn fieldConfig.defaults.custom.cellOptions.withTableCellOptionsMixin
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.withTableCellOptionsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+Table cell options. Each cell has a display mode
+and other potential options for that display.
+####### obj fieldConfig.defaults.custom.cellOptions.TableCellOptions
+
+
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableActionsCellOptions
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableActionsCellOptions(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+Show actions in the cell
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableActionsCellOptionsMixin
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableActionsCellOptionsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+Show actions in the cell
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableAutoCellOptions
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableAutoCellOptions(value)
 ```
 
 PARAMETERS:
@@ -352,10 +433,10 @@ PARAMETERS:
 * **value** (`object`)
 
 Auto mode table cell options
-####### fn fieldConfig.defaults.custom.cellOptions.withTableAutoCellOptionsMixin
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableAutoCellOptionsMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.withTableAutoCellOptionsMixin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableAutoCellOptionsMixin(value)
 ```
 
 PARAMETERS:
@@ -363,10 +444,10 @@ PARAMETERS:
 * **value** (`object`)
 
 Auto mode table cell options
-####### fn fieldConfig.defaults.custom.cellOptions.withTableBarGaugeCellOptions
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableBarGaugeCellOptions
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.withTableBarGaugeCellOptions(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableBarGaugeCellOptions(value)
 ```
 
 PARAMETERS:
@@ -374,10 +455,10 @@ PARAMETERS:
 * **value** (`object`)
 
 Gauge cell options
-####### fn fieldConfig.defaults.custom.cellOptions.withTableBarGaugeCellOptionsMixin
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableBarGaugeCellOptionsMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.withTableBarGaugeCellOptionsMixin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableBarGaugeCellOptionsMixin(value)
 ```
 
 PARAMETERS:
@@ -385,10 +466,10 @@ PARAMETERS:
 * **value** (`object`)
 
 Gauge cell options
-####### fn fieldConfig.defaults.custom.cellOptions.withTableColorTextCellOptions
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableColorTextCellOptions
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.withTableColorTextCellOptions(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableColorTextCellOptions(value)
 ```
 
 PARAMETERS:
@@ -396,10 +477,10 @@ PARAMETERS:
 * **value** (`object`)
 
 Colored text cell options
-####### fn fieldConfig.defaults.custom.cellOptions.withTableColorTextCellOptionsMixin
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableColorTextCellOptionsMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.withTableColorTextCellOptionsMixin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableColorTextCellOptionsMixin(value)
 ```
 
 PARAMETERS:
@@ -407,10 +488,10 @@ PARAMETERS:
 * **value** (`object`)
 
 Colored text cell options
-####### fn fieldConfig.defaults.custom.cellOptions.withTableColoredBackgroundCellOptions
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableColoredBackgroundCellOptions
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.withTableColoredBackgroundCellOptions(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableColoredBackgroundCellOptions(value)
 ```
 
 PARAMETERS:
@@ -418,10 +499,10 @@ PARAMETERS:
 * **value** (`object`)
 
 Colored background cell options
-####### fn fieldConfig.defaults.custom.cellOptions.withTableColoredBackgroundCellOptionsMixin
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableColoredBackgroundCellOptionsMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.withTableColoredBackgroundCellOptionsMixin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableColoredBackgroundCellOptionsMixin(value)
 ```
 
 PARAMETERS:
@@ -429,10 +510,10 @@ PARAMETERS:
 * **value** (`object`)
 
 Colored background cell options
-####### fn fieldConfig.defaults.custom.cellOptions.withTableDataLinksCellOptions
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableDataLinksCellOptions
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.withTableDataLinksCellOptions(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableDataLinksCellOptions(value)
 ```
 
 PARAMETERS:
@@ -440,10 +521,10 @@ PARAMETERS:
 * **value** (`object`)
 
 Show data links in the cell
-####### fn fieldConfig.defaults.custom.cellOptions.withTableDataLinksCellOptionsMixin
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableDataLinksCellOptionsMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.withTableDataLinksCellOptionsMixin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableDataLinksCellOptionsMixin(value)
 ```
 
 PARAMETERS:
@@ -451,10 +532,10 @@ PARAMETERS:
 * **value** (`object`)
 
 Show data links in the cell
-####### fn fieldConfig.defaults.custom.cellOptions.withTableImageCellOptions
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableImageCellOptions
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.withTableImageCellOptions(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableImageCellOptions(value)
 ```
 
 PARAMETERS:
@@ -462,10 +543,10 @@ PARAMETERS:
 * **value** (`object`)
 
 Json view cell options
-####### fn fieldConfig.defaults.custom.cellOptions.withTableImageCellOptionsMixin
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableImageCellOptionsMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.withTableImageCellOptionsMixin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableImageCellOptionsMixin(value)
 ```
 
 PARAMETERS:
@@ -473,10 +554,10 @@ PARAMETERS:
 * **value** (`object`)
 
 Json view cell options
-####### fn fieldConfig.defaults.custom.cellOptions.withTableJsonViewCellOptions
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableJsonViewCellOptions
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.withTableJsonViewCellOptions(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableJsonViewCellOptions(value)
 ```
 
 PARAMETERS:
@@ -484,10 +565,10 @@ PARAMETERS:
 * **value** (`object`)
 
 Json view cell options
-####### fn fieldConfig.defaults.custom.cellOptions.withTableJsonViewCellOptionsMixin
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableJsonViewCellOptionsMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.withTableJsonViewCellOptionsMixin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableJsonViewCellOptionsMixin(value)
 ```
 
 PARAMETERS:
@@ -495,10 +576,10 @@ PARAMETERS:
 * **value** (`object`)
 
 Json view cell options
-####### fn fieldConfig.defaults.custom.cellOptions.withTableSparklineCellOptions
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableSparklineCellOptions
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.withTableSparklineCellOptions(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableSparklineCellOptions(value)
 ```
 
 PARAMETERS:
@@ -506,10 +587,10 @@ PARAMETERS:
 * **value** (`object`)
 
 Sparkline cell options
-####### fn fieldConfig.defaults.custom.cellOptions.withTableSparklineCellOptionsMixin
+######## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableSparklineCellOptionsMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.withTableSparklineCellOptionsMixin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.withTableSparklineCellOptionsMixin(value)
 ```
 
 PARAMETERS:
@@ -517,21 +598,82 @@ PARAMETERS:
 * **value** (`object`)
 
 Sparkline cell options
-####### obj fieldConfig.defaults.custom.cellOptions.TableAutoCellOptions
+######## obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableActionsCellOptions
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableAutoCellOptions.withType
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableActionsCellOptions.withType
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableAutoCellOptions.withType()
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableActionsCellOptions.withType(value="actions")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"actions"`
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableAutoCellOptions.withWrapText
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableActionsCellOptions.withTypeMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableAutoCellOptions.withWrapText(value=true)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableActionsCellOptions.withTypeMixin(value="actions")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"actions"`
+
+
+######### obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableActionsCellOptions.type
+
+
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableActionsCellOptions.type.withTableCellDisplayMode
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableActionsCellOptions.type.withTableCellDisplayMode(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"color-text"`, `"color-background"`, `"color-background-solid"`, `"gradient-gauge"`, `"lcd-gauge"`, `"json-view"`, `"basic"`, `"image"`, `"gauge"`, `"sparkline"`, `"data-links"`, `"custom"`, `"actions"`
+
+Internally, this is the "type" of cell that's being displayed
+in the table such as colored text, JSON, gauge, etc.
+The color-background-solid, gradient-gauge, and lcd-gauge
+modes are deprecated in favor of new cell subOptions
+######## obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableAutoCellOptions
+
+
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableAutoCellOptions.withType
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableAutoCellOptions.withType(value="auto")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"auto"`
+
+
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableAutoCellOptions.withTypeMixin
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableAutoCellOptions.withTypeMixin(value="auto")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"auto"`
+
+
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableAutoCellOptions.withWrapText
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableAutoCellOptions.withWrapText(value=true)
 ```
 
 PARAMETERS:
@@ -540,13 +682,31 @@ PARAMETERS:
    - default value: `true`
 
 
-####### obj fieldConfig.defaults.custom.cellOptions.TableBarGaugeCellOptions
+######### obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableAutoCellOptions.type
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableBarGaugeCellOptions.withMode
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableAutoCellOptions.type.withTableCellDisplayMode
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableBarGaugeCellOptions.withMode(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableAutoCellOptions.type.withTableCellDisplayMode(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"color-text"`, `"color-background"`, `"color-background-solid"`, `"gradient-gauge"`, `"lcd-gauge"`, `"json-view"`, `"basic"`, `"image"`, `"gauge"`, `"sparkline"`, `"data-links"`, `"custom"`, `"actions"`
+
+Internally, this is the "type" of cell that's being displayed
+in the table such as colored text, JSON, gauge, etc.
+The color-background-solid, gradient-gauge, and lcd-gauge
+modes are deprecated in favor of new cell subOptions
+######## obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableBarGaugeCellOptions
+
+
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableBarGaugeCellOptions.withMode
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableBarGaugeCellOptions.withMode(value)
 ```
 
 PARAMETERS:
@@ -556,18 +716,34 @@ PARAMETERS:
 
 Enum expressing the possible display modes
 for the bar gauge component of Grafana UI
-######## fn fieldConfig.defaults.custom.cellOptions.TableBarGaugeCellOptions.withType
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableBarGaugeCellOptions.withType
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableBarGaugeCellOptions.withType()
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableBarGaugeCellOptions.withType(value="gauge")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"gauge"`
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableBarGaugeCellOptions.withValueDisplayMode
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableBarGaugeCellOptions.withTypeMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableBarGaugeCellOptions.withValueDisplayMode(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableBarGaugeCellOptions.withTypeMixin(value="gauge")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"gauge"`
+
+
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableBarGaugeCellOptions.withValueDisplayMode
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableBarGaugeCellOptions.withValueDisplayMode(value)
 ```
 
 PARAMETERS:
@@ -576,21 +752,55 @@ PARAMETERS:
    - valid values: `"color"`, `"text"`, `"hidden"`
 
 Allows for the table cell gauge display type to set the gauge mode.
-####### obj fieldConfig.defaults.custom.cellOptions.TableColorTextCellOptions
+######### obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableBarGaugeCellOptions.type
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableColorTextCellOptions.withType
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableBarGaugeCellOptions.type.withTableCellDisplayMode
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableColorTextCellOptions.withType()
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableBarGaugeCellOptions.type.withTableCellDisplayMode(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"color-text"`, `"color-background"`, `"color-background-solid"`, `"gradient-gauge"`, `"lcd-gauge"`, `"json-view"`, `"basic"`, `"image"`, `"gauge"`, `"sparkline"`, `"data-links"`, `"custom"`, `"actions"`
+
+Internally, this is the "type" of cell that's being displayed
+in the table such as colored text, JSON, gauge, etc.
+The color-background-solid, gradient-gauge, and lcd-gauge
+modes are deprecated in favor of new cell subOptions
+######## obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColorTextCellOptions
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableColorTextCellOptions.withWrapText
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColorTextCellOptions.withType
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableColorTextCellOptions.withWrapText(value=true)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColorTextCellOptions.withType(value="color-text")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"color-text"`
+
+
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColorTextCellOptions.withTypeMixin
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColorTextCellOptions.withTypeMixin(value="color-text")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"color-text"`
+
+
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColorTextCellOptions.withWrapText
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColorTextCellOptions.withWrapText(value=true)
 ```
 
 PARAMETERS:
@@ -599,13 +809,31 @@ PARAMETERS:
    - default value: `true`
 
 
-####### obj fieldConfig.defaults.custom.cellOptions.TableColoredBackgroundCellOptions
+######### obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColorTextCellOptions.type
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableColoredBackgroundCellOptions.withApplyToRow
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColorTextCellOptions.type.withTableCellDisplayMode
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableColoredBackgroundCellOptions.withApplyToRow(value=true)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColorTextCellOptions.type.withTableCellDisplayMode(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"color-text"`, `"color-background"`, `"color-background-solid"`, `"gradient-gauge"`, `"lcd-gauge"`, `"json-view"`, `"basic"`, `"image"`, `"gauge"`, `"sparkline"`, `"data-links"`, `"custom"`, `"actions"`
+
+Internally, this is the "type" of cell that's being displayed
+in the table such as colored text, JSON, gauge, etc.
+The color-background-solid, gradient-gauge, and lcd-gauge
+modes are deprecated in favor of new cell subOptions
+######## obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColoredBackgroundCellOptions
+
+
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColoredBackgroundCellOptions.withApplyToRow
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColoredBackgroundCellOptions.withApplyToRow(value=true)
 ```
 
 PARAMETERS:
@@ -614,10 +842,10 @@ PARAMETERS:
    - default value: `true`
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableColoredBackgroundCellOptions.withMode
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColoredBackgroundCellOptions.withMode
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableColoredBackgroundCellOptions.withMode(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColoredBackgroundCellOptions.withMode(value)
 ```
 
 PARAMETERS:
@@ -628,18 +856,34 @@ PARAMETERS:
 Display mode to the "Colored Background" display
 mode for table cells. Either displays a solid color (basic mode)
 or a gradient.
-######## fn fieldConfig.defaults.custom.cellOptions.TableColoredBackgroundCellOptions.withType
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColoredBackgroundCellOptions.withType
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableColoredBackgroundCellOptions.withType()
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColoredBackgroundCellOptions.withType(value="color-background")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"color-background"`
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableColoredBackgroundCellOptions.withWrapText
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColoredBackgroundCellOptions.withTypeMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableColoredBackgroundCellOptions.withWrapText(value=true)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColoredBackgroundCellOptions.withTypeMixin(value="color-background")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"color-background"`
+
+
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColoredBackgroundCellOptions.withWrapText
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColoredBackgroundCellOptions.withWrapText(value=true)
 ```
 
 PARAMETERS:
@@ -648,24 +892,76 @@ PARAMETERS:
    - default value: `true`
 
 
-####### obj fieldConfig.defaults.custom.cellOptions.TableDataLinksCellOptions
+######### obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColoredBackgroundCellOptions.type
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableDataLinksCellOptions.withType
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColoredBackgroundCellOptions.type.withTableCellDisplayMode
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableDataLinksCellOptions.withType()
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableColoredBackgroundCellOptions.type.withTableCellDisplayMode(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"color-text"`, `"color-background"`, `"color-background-solid"`, `"gradient-gauge"`, `"lcd-gauge"`, `"json-view"`, `"basic"`, `"image"`, `"gauge"`, `"sparkline"`, `"data-links"`, `"custom"`, `"actions"`
+
+Internally, this is the "type" of cell that's being displayed
+in the table such as colored text, JSON, gauge, etc.
+The color-background-solid, gradient-gauge, and lcd-gauge
+modes are deprecated in favor of new cell subOptions
+######## obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableDataLinksCellOptions
 
 
-####### obj fieldConfig.defaults.custom.cellOptions.TableImageCellOptions
-
-
-######## fn fieldConfig.defaults.custom.cellOptions.TableImageCellOptions.withAlt
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableDataLinksCellOptions.withType
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableImageCellOptions.withAlt(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableDataLinksCellOptions.withType(value="data-links")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"data-links"`
+
+
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableDataLinksCellOptions.withTypeMixin
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableDataLinksCellOptions.withTypeMixin(value="data-links")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"data-links"`
+
+
+######### obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableDataLinksCellOptions.type
+
+
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableDataLinksCellOptions.type.withTableCellDisplayMode
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableDataLinksCellOptions.type.withTableCellDisplayMode(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"color-text"`, `"color-background"`, `"color-background-solid"`, `"gradient-gauge"`, `"lcd-gauge"`, `"json-view"`, `"basic"`, `"image"`, `"gauge"`, `"sparkline"`, `"data-links"`, `"custom"`, `"actions"`
+
+Internally, this is the "type" of cell that's being displayed
+in the table such as colored text, JSON, gauge, etc.
+The color-background-solid, gradient-gauge, and lcd-gauge
+modes are deprecated in favor of new cell subOptions
+######## obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableImageCellOptions
+
+
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableImageCellOptions.withAlt
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableImageCellOptions.withAlt(value)
 ```
 
 PARAMETERS:
@@ -673,10 +969,10 @@ PARAMETERS:
 * **value** (`string`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableImageCellOptions.withTitle
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableImageCellOptions.withTitle
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableImageCellOptions.withTitle(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableImageCellOptions.withTitle(value)
 ```
 
 PARAMETERS:
@@ -684,32 +980,100 @@ PARAMETERS:
 * **value** (`string`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableImageCellOptions.withType
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableImageCellOptions.withType
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableImageCellOptions.withType()
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableImageCellOptions.withType(value="image")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"image"`
 
 
-####### obj fieldConfig.defaults.custom.cellOptions.TableJsonViewCellOptions
-
-
-######## fn fieldConfig.defaults.custom.cellOptions.TableJsonViewCellOptions.withType
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableImageCellOptions.withTypeMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableJsonViewCellOptions.withType()
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableImageCellOptions.withTypeMixin(value="image")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"image"`
 
 
-####### obj fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions
+######### obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableImageCellOptions.type
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisBorderShow
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableImageCellOptions.type.withTableCellDisplayMode
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisBorderShow(value=true)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableImageCellOptions.type.withTableCellDisplayMode(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"color-text"`, `"color-background"`, `"color-background-solid"`, `"gradient-gauge"`, `"lcd-gauge"`, `"json-view"`, `"basic"`, `"image"`, `"gauge"`, `"sparkline"`, `"data-links"`, `"custom"`, `"actions"`
+
+Internally, this is the "type" of cell that's being displayed
+in the table such as colored text, JSON, gauge, etc.
+The color-background-solid, gradient-gauge, and lcd-gauge
+modes are deprecated in favor of new cell subOptions
+######## obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableJsonViewCellOptions
+
+
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableJsonViewCellOptions.withType
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableJsonViewCellOptions.withType(value="json-view")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"json-view"`
+
+
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableJsonViewCellOptions.withTypeMixin
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableJsonViewCellOptions.withTypeMixin(value="json-view")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"json-view"`
+
+
+######### obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableJsonViewCellOptions.type
+
+
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableJsonViewCellOptions.type.withTableCellDisplayMode
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableJsonViewCellOptions.type.withTableCellDisplayMode(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"color-text"`, `"color-background"`, `"color-background-solid"`, `"gradient-gauge"`, `"lcd-gauge"`, `"json-view"`, `"basic"`, `"image"`, `"gauge"`, `"sparkline"`, `"data-links"`, `"custom"`, `"actions"`
+
+Internally, this is the "type" of cell that's being displayed
+in the table such as colored text, JSON, gauge, etc.
+The color-background-solid, gradient-gauge, and lcd-gauge
+modes are deprecated in favor of new cell subOptions
+######## obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions
+
+
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisBorderShow
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisBorderShow(value=true)
 ```
 
 PARAMETERS:
@@ -718,10 +1082,10 @@ PARAMETERS:
    - default value: `true`
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisCenteredZero
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisCenteredZero
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisCenteredZero(value=true)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisCenteredZero(value=true)
 ```
 
 PARAMETERS:
@@ -730,10 +1094,10 @@ PARAMETERS:
    - default value: `true`
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisColorMode
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisColorMode
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisColorMode(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisColorMode(value)
 ```
 
 PARAMETERS:
@@ -742,10 +1106,10 @@ PARAMETERS:
    - valid values: `"text"`, `"series"`
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisGridShow
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisGridShow
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisGridShow(value=true)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisGridShow(value=true)
 ```
 
 PARAMETERS:
@@ -754,10 +1118,10 @@ PARAMETERS:
    - default value: `true`
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisLabel
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisLabel
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisLabel(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisLabel(value)
 ```
 
 PARAMETERS:
@@ -765,10 +1129,10 @@ PARAMETERS:
 * **value** (`string`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisPlacement
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisPlacement
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisPlacement(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisPlacement(value)
 ```
 
 PARAMETERS:
@@ -777,10 +1141,10 @@ PARAMETERS:
    - valid values: `"auto"`, `"top"`, `"right"`, `"bottom"`, `"left"`, `"hidden"`
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisSoftMax
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisSoftMax
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisSoftMax(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisSoftMax(value)
 ```
 
 PARAMETERS:
@@ -788,10 +1152,10 @@ PARAMETERS:
 * **value** (`number`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisSoftMin
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisSoftMin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisSoftMin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisSoftMin(value)
 ```
 
 PARAMETERS:
@@ -799,10 +1163,10 @@ PARAMETERS:
 * **value** (`number`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisWidth
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisWidth
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withAxisWidth(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withAxisWidth(value)
 ```
 
 PARAMETERS:
@@ -810,22 +1174,22 @@ PARAMETERS:
 * **value** (`number`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withBarAlignment
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withBarAlignment
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withBarAlignment(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withBarAlignment(value)
 ```
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`integer`)
    - valid values: `-1`, `0`, `1`
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withBarMaxWidth
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withBarMaxWidth
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withBarMaxWidth(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withBarMaxWidth(value)
 ```
 
 PARAMETERS:
@@ -833,10 +1197,10 @@ PARAMETERS:
 * **value** (`number`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withBarWidthFactor
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withBarWidthFactor
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withBarWidthFactor(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withBarWidthFactor(value)
 ```
 
 PARAMETERS:
@@ -844,10 +1208,10 @@ PARAMETERS:
 * **value** (`number`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withDrawStyle
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withDrawStyle
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withDrawStyle(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withDrawStyle(value)
 ```
 
 PARAMETERS:
@@ -856,10 +1220,10 @@ PARAMETERS:
    - valid values: `"line"`, `"bars"`, `"points"`
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withFillBelowTo
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withFillBelowTo
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withFillBelowTo(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withFillBelowTo(value)
 ```
 
 PARAMETERS:
@@ -867,10 +1231,10 @@ PARAMETERS:
 * **value** (`string`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withFillColor
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withFillColor
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withFillColor(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withFillColor(value)
 ```
 
 PARAMETERS:
@@ -878,10 +1242,10 @@ PARAMETERS:
 * **value** (`string`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withFillOpacity
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withFillOpacity
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withFillOpacity(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withFillOpacity(value)
 ```
 
 PARAMETERS:
@@ -889,10 +1253,10 @@ PARAMETERS:
 * **value** (`number`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withGradientMode
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withGradientMode
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withGradientMode(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withGradientMode(value)
 ```
 
 PARAMETERS:
@@ -901,10 +1265,10 @@ PARAMETERS:
    - valid values: `"none"`, `"opacity"`, `"hue"`, `"scheme"`
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withHideFrom
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withHideFrom
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withHideFrom(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withHideFrom(value)
 ```
 
 PARAMETERS:
@@ -912,10 +1276,10 @@ PARAMETERS:
 * **value** (`object`)
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withHideFromMixin
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withHideFromMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withHideFromMixin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withHideFromMixin(value)
 ```
 
 PARAMETERS:
@@ -923,10 +1287,10 @@ PARAMETERS:
 * **value** (`object`)
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withHideValue
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withHideValue
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withHideValue(value=true)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withHideValue(value=true)
 ```
 
 PARAMETERS:
@@ -935,10 +1299,10 @@ PARAMETERS:
    - default value: `true`
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withInsertNulls
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withInsertNulls
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withInsertNulls(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withInsertNulls(value)
 ```
 
 PARAMETERS:
@@ -946,10 +1310,10 @@ PARAMETERS:
 * **value** (`boolean`,`number`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withInsertNullsMixin
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withInsertNullsMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withInsertNullsMixin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withInsertNullsMixin(value)
 ```
 
 PARAMETERS:
@@ -957,10 +1321,10 @@ PARAMETERS:
 * **value** (`boolean`,`number`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withLineColor
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withLineColor
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withLineColor(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withLineColor(value)
 ```
 
 PARAMETERS:
@@ -968,10 +1332,10 @@ PARAMETERS:
 * **value** (`string`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withLineInterpolation
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withLineInterpolation
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withLineInterpolation(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withLineInterpolation(value)
 ```
 
 PARAMETERS:
@@ -980,10 +1344,10 @@ PARAMETERS:
    - valid values: `"linear"`, `"smooth"`, `"stepBefore"`, `"stepAfter"`
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withLineStyle
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withLineStyle
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withLineStyle(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withLineStyle(value)
 ```
 
 PARAMETERS:
@@ -991,10 +1355,10 @@ PARAMETERS:
 * **value** (`object`)
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withLineStyleMixin
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withLineStyleMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withLineStyleMixin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withLineStyleMixin(value)
 ```
 
 PARAMETERS:
@@ -1002,10 +1366,10 @@ PARAMETERS:
 * **value** (`object`)
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withLineWidth
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withLineWidth
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withLineWidth(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withLineWidth(value)
 ```
 
 PARAMETERS:
@@ -1013,10 +1377,10 @@ PARAMETERS:
 * **value** (`number`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withPointColor
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withPointColor
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withPointColor(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withPointColor(value)
 ```
 
 PARAMETERS:
@@ -1024,10 +1388,10 @@ PARAMETERS:
 * **value** (`string`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withPointSize
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withPointSize
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withPointSize(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withPointSize(value)
 ```
 
 PARAMETERS:
@@ -1035,10 +1399,10 @@ PARAMETERS:
 * **value** (`number`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withPointSymbol
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withPointSymbol
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withPointSymbol(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withPointSymbol(value)
 ```
 
 PARAMETERS:
@@ -1046,10 +1410,10 @@ PARAMETERS:
 * **value** (`string`)
 
 
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withScaleDistribution
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withScaleDistribution
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withScaleDistribution(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withScaleDistribution(value)
 ```
 
 PARAMETERS:
@@ -1057,10 +1421,10 @@ PARAMETERS:
 * **value** (`object`)
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withScaleDistributionMixin
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withScaleDistributionMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withScaleDistributionMixin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withScaleDistributionMixin(value)
 ```
 
 PARAMETERS:
@@ -1068,10 +1432,10 @@ PARAMETERS:
 * **value** (`object`)
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withShowPoints
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withShowPoints
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withShowPoints(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withShowPoints(value)
 ```
 
 PARAMETERS:
@@ -1080,10 +1444,10 @@ PARAMETERS:
    - valid values: `"auto"`, `"never"`, `"always"`
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withSpanNulls
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withSpanNulls
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withSpanNulls(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withSpanNulls(value)
 ```
 
 PARAMETERS:
@@ -1093,10 +1457,10 @@ PARAMETERS:
 Indicate if null values should be treated as gaps or connected.
 When the value is a number, it represents the maximum delta in the
 X axis that should be considered connected.  For timeseries, this is milliseconds
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withSpanNullsMixin
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withSpanNullsMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withSpanNullsMixin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withSpanNullsMixin(value)
 ```
 
 PARAMETERS:
@@ -1106,10 +1470,10 @@ PARAMETERS:
 Indicate if null values should be treated as gaps or connected.
 When the value is a number, it represents the maximum delta in the
 X axis that should be considered connected.  For timeseries, this is milliseconds
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withStacking
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withStacking
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withStacking(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withStacking(value)
 ```
 
 PARAMETERS:
@@ -1117,10 +1481,10 @@ PARAMETERS:
 * **value** (`object`)
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withStackingMixin
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withStackingMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withStackingMixin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withStackingMixin(value)
 ```
 
 PARAMETERS:
@@ -1128,10 +1492,10 @@ PARAMETERS:
 * **value** (`object`)
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withThresholdsStyle
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withThresholdsStyle
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withThresholdsStyle(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withThresholdsStyle(value)
 ```
 
 PARAMETERS:
@@ -1139,10 +1503,10 @@ PARAMETERS:
 * **value** (`object`)
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withThresholdsStyleMixin
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withThresholdsStyleMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withThresholdsStyleMixin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withThresholdsStyleMixin(value)
 ```
 
 PARAMETERS:
@@ -1150,10 +1514,10 @@ PARAMETERS:
 * **value** (`object`)
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withTransform
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withTransform
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withTransform(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withTransform(value)
 ```
 
 PARAMETERS:
@@ -1162,21 +1526,37 @@ PARAMETERS:
    - valid values: `"constant"`, `"negative-Y"`
 
 TODO docs
-######## fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withType
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withType
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.withType()
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withType(value="sparkline")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"sparkline"`
 
 
-######## obj fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.hideFrom
-
-
-######### fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.hideFrom.withLegend
+######### fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withTypeMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.hideFrom.withLegend(value=true)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.withTypeMixin(value="sparkline")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"sparkline"`
+
+
+######### obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.hideFrom
+
+
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.hideFrom.withLegend
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.hideFrom.withLegend(value=true)
 ```
 
 PARAMETERS:
@@ -1185,10 +1565,10 @@ PARAMETERS:
    - default value: `true`
 
 
-######### fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.hideFrom.withTooltip
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.hideFrom.withTooltip
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.hideFrom.withTooltip(value=true)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.hideFrom.withTooltip(value=true)
 ```
 
 PARAMETERS:
@@ -1197,10 +1577,10 @@ PARAMETERS:
    - default value: `true`
 
 
-######### fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.hideFrom.withViz
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.hideFrom.withViz
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.hideFrom.withViz(value=true)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.hideFrom.withViz(value=true)
 ```
 
 PARAMETERS:
@@ -1209,13 +1589,13 @@ PARAMETERS:
    - default value: `true`
 
 
-######## obj fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.lineStyle
+######### obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.lineStyle
 
 
-######### fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.lineStyle.withDash
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.lineStyle.withDash
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.lineStyle.withDash(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.lineStyle.withDash(value)
 ```
 
 PARAMETERS:
@@ -1223,10 +1603,10 @@ PARAMETERS:
 * **value** (`array`)
 
 
-######### fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.lineStyle.withDashMixin
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.lineStyle.withDashMixin
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.lineStyle.withDashMixin(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.lineStyle.withDashMixin(value)
 ```
 
 PARAMETERS:
@@ -1234,10 +1614,10 @@ PARAMETERS:
 * **value** (`array`)
 
 
-######### fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.lineStyle.withFill
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.lineStyle.withFill
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.lineStyle.withFill(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.lineStyle.withFill(value)
 ```
 
 PARAMETERS:
@@ -1246,13 +1626,13 @@ PARAMETERS:
    - valid values: `"solid"`, `"dash"`, `"dot"`, `"square"`
 
 
-######## obj fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.scaleDistribution
+######### obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.scaleDistribution
 
 
-######### fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.scaleDistribution.withLinearThreshold
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.scaleDistribution.withLinearThreshold
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.scaleDistribution.withLinearThreshold(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.scaleDistribution.withLinearThreshold(value)
 ```
 
 PARAMETERS:
@@ -1260,10 +1640,10 @@ PARAMETERS:
 * **value** (`number`)
 
 
-######### fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.scaleDistribution.withLog
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.scaleDistribution.withLog
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.scaleDistribution.withLog(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.scaleDistribution.withLog(value)
 ```
 
 PARAMETERS:
@@ -1271,10 +1651,10 @@ PARAMETERS:
 * **value** (`number`)
 
 
-######### fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.scaleDistribution.withType
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.scaleDistribution.withType
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.scaleDistribution.withType(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.scaleDistribution.withType(value)
 ```
 
 PARAMETERS:
@@ -1283,13 +1663,13 @@ PARAMETERS:
    - valid values: `"linear"`, `"log"`, `"ordinal"`, `"symlog"`
 
 TODO docs
-######## obj fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.stacking
+######### obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.stacking
 
 
-######### fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.stacking.withGroup
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.stacking.withGroup
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.stacking.withGroup(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.stacking.withGroup(value)
 ```
 
 PARAMETERS:
@@ -1297,10 +1677,10 @@ PARAMETERS:
 * **value** (`string`)
 
 
-######### fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.stacking.withMode
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.stacking.withMode
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.stacking.withMode(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.stacking.withMode(value)
 ```
 
 PARAMETERS:
@@ -1309,13 +1689,13 @@ PARAMETERS:
    - valid values: `"none"`, `"normal"`, `"percent"`
 
 TODO docs
-######## obj fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.thresholdsStyle
+######### obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.thresholdsStyle
 
 
-######### fn fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.thresholdsStyle.withMode
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.thresholdsStyle.withMode
 
 ```jsonnet
-fieldConfig.defaults.custom.cellOptions.TableSparklineCellOptions.thresholdsStyle.withMode(value)
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.thresholdsStyle.withMode(value)
 ```
 
 PARAMETERS:
@@ -1324,6 +1704,24 @@ PARAMETERS:
    - valid values: `"off"`, `"line"`, `"dashed"`, `"area"`, `"line+area"`, `"dashed+area"`, `"series"`
 
 TODO docs
+######### obj fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.type
+
+
+########## fn fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.type.withTableCellDisplayMode
+
+```jsonnet
+fieldConfig.defaults.custom.cellOptions.TableCellOptions.TableSparklineCellOptions.type.withTableCellDisplayMode(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"color-text"`, `"color-background"`, `"color-background-solid"`, `"gradient-gauge"`, `"lcd-gauge"`, `"json-view"`, `"basic"`, `"image"`, `"gauge"`, `"sparkline"`, `"data-links"`, `"custom"`, `"actions"`
+
+Internally, this is the "type" of cell that's being displayed
+in the table such as colored text, JSON, gauge, etc.
+The color-background-solid, gradient-gauge, and lcd-gauge
+modes are deprecated in favor of new cell subOptions
 ### obj libraryPanel
 
 
@@ -1675,7 +2073,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+The datasource used in all targets.
 #### fn queryOptions.withHideTimeOverride
 
 ```jsonnet

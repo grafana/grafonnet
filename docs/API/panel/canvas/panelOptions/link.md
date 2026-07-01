@@ -8,6 +8,8 @@
 * [`fn withIcon(value)`](#fn-withicon)
 * [`fn withIncludeVars(value=true)`](#fn-withincludevars)
 * [`fn withKeepTime(value=true)`](#fn-withkeeptime)
+* [`fn withPlacement(value="inControlsMenu")`](#fn-withplacement)
+* [`fn withPlacementMixin(value="inControlsMenu")`](#fn-withplacementmixin)
 * [`fn withTags(value)`](#fn-withtags)
 * [`fn withTagsMixin(value)`](#fn-withtagsmixin)
 * [`fn withTargetBlank(value=true)`](#fn-withtargetblank)
@@ -15,6 +17,8 @@
 * [`fn withTooltip(value)`](#fn-withtooltip)
 * [`fn withType(value)`](#fn-withtype)
 * [`fn withUrl(value)`](#fn-withurl)
+* [`obj placement`](#obj-placement)
+  * [`fn withDashboardLinkPlacement(value)`](#fn-placementwithdashboardlinkplacement)
 
 ## Fields
 
@@ -65,6 +69,30 @@ PARAMETERS:
    - default value: `true`
 
 If true, includes current time range in the link as query params
+### fn withPlacement
+
+```jsonnet
+withPlacement(value="inControlsMenu")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"inControlsMenu"`
+
+Placement can be used to display the link somewhere else on the dashboard other than above the visualisations.
+### fn withPlacementMixin
+
+```jsonnet
+withPlacementMixin(value="inControlsMenu")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"inControlsMenu"`
+
+Placement can be used to display the link somewhere else on the dashboard other than above the visualisations.
 ### fn withTags
 
 ```jsonnet
@@ -144,3 +172,19 @@ PARAMETERS:
 * **value** (`string`)
 
 Link URL. Only required/valid if the type is link
+### obj placement
+
+
+#### fn placement.withDashboardLinkPlacement
+
+```jsonnet
+placement.withDashboardLinkPlacement(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"inControlsMenu"`
+
+Dashboard Link placement. Defines where the link should be displayed.
+- "inControlsMenu" renders the link in bottom part of the dashboard controls dropdown menu

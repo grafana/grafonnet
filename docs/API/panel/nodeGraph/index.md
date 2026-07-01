@@ -22,6 +22,7 @@ grafonnet.panel.nodeGraph
   * [`fn withEdgesMixin(value)`](#fn-optionswithedgesmixin)
   * [`fn withNodes(value)`](#fn-optionswithnodes)
   * [`fn withNodesMixin(value)`](#fn-optionswithnodesmixin)
+  * [`fn withZoomMode(value)`](#fn-optionswithzoommode)
   * [`obj edges`](#obj-optionsedges)
     * [`fn withMainStatUnit(value)`](#fn-optionsedgeswithmainstatunit)
     * [`fn withSecondaryStatUnit(value)`](#fn-optionsedgeswithsecondarystatunit)
@@ -162,6 +163,18 @@ PARAMETERS:
 * **value** (`object`)
 
 
+#### fn options.withZoomMode
+
+```jsonnet
+options.withZoomMode(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"cooperative"`, `"greedy"`
+
+How to handle zoom/scroll events in the node graph
 #### obj options.edges
 
 
@@ -379,7 +392,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+The datasource used in all targets.
 #### fn queryOptions.withHideTimeOverride
 
 ```jsonnet

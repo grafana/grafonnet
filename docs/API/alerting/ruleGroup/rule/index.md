@@ -90,7 +90,7 @@ withExecErrState(value)
 PARAMETERS:
 
 * **value** (`string`)
-   - valid values: `"OK"`, `"Alerting"`, `"Error"`
+   - valid values: `"Alerting"`, `"Error"`, `"OK"`, `"KeepLast"`
 
 
 ### fn withFolderUID
@@ -170,7 +170,7 @@ withNoDataState(value)
 PARAMETERS:
 
 * **value** (`string`)
-   - valid values: `"Alerting"`, `"NoData"`, `"OK"`
+   - valid values: `"OK"`, `"Alerting"`, `"NoData"`, `"KeepLast"`
 
 
 ### fn withOrgID

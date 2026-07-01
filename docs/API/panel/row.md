@@ -55,7 +55,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+Name of default datasource for the row
 ### fn withDatasourceMixin
 
 ```jsonnet
@@ -66,7 +66,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+Name of default datasource for the row
 ### fn withGridPos
 
 ```jsonnet

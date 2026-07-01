@@ -58,9 +58,11 @@ grafonnet.panel.pieChart
     * [`fn withLimit(value)`](#fn-optionsreduceoptionswithlimit)
     * [`fn withValues(value=true)`](#fn-optionsreduceoptionswithvalues)
   * [`obj text`](#obj-optionstext)
+    * [`fn withPercentSize(value)`](#fn-optionstextwithpercentsize)
     * [`fn withTitleSize(value)`](#fn-optionstextwithtitlesize)
     * [`fn withValueSize(value)`](#fn-optionstextwithvaluesize)
   * [`obj tooltip`](#obj-optionstooltip)
+    * [`fn withHideZeros(value=true)`](#fn-optionstooltipwithhidezeros)
     * [`fn withMaxHeight(value)`](#fn-optionstooltipwithmaxheight)
     * [`fn withMaxWidth(value)`](#fn-optionstooltipwithmaxwidth)
     * [`fn withMode(value)`](#fn-optionstooltipwithmode)
@@ -561,6 +563,17 @@ If true show each row value
 #### obj options.text
 
 
+##### fn options.text.withPercentSize
+
+```jsonnet
+options.text.withPercentSize(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+Explicit percent text size
 ##### fn options.text.withTitleSize
 
 ```jsonnet
@@ -584,6 +597,18 @@ PARAMETERS:
 
 Explicit value text size
 #### obj options.tooltip
+
+
+##### fn options.tooltip.withHideZeros
+
+```jsonnet
+options.tooltip.withHideZeros(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn options.tooltip.withMaxHeight
@@ -777,7 +802,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+The datasource used in all targets.
 #### fn queryOptions.withHideTimeOverride
 
 ```jsonnet

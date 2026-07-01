@@ -11,6 +11,7 @@ grafonnet.query.tempo
 
 * [`fn new(datasource, query, filters)`](#fn-new)
 * [`fn withDatasource(value)`](#fn-withdatasource)
+* [`fn withExemplars(value)`](#fn-withexemplars)
 * [`fn withFilters(value)`](#fn-withfilters)
 * [`fn withFiltersMixin(value)`](#fn-withfiltersmixin)
 * [`fn withGroupBy(value)`](#fn-withgroupby)
@@ -18,6 +19,7 @@ grafonnet.query.tempo
 * [`fn withHide(value=true)`](#fn-withhide)
 * [`fn withLimit(value)`](#fn-withlimit)
 * [`fn withMaxDuration(value)`](#fn-withmaxduration)
+* [`fn withMetricsQueryType(value)`](#fn-withmetricsquerytype)
 * [`fn withMinDuration(value)`](#fn-withminduration)
 * [`fn withQuery(value)`](#fn-withquery)
 * [`fn withQueryType(value)`](#fn-withquerytype)
@@ -61,6 +63,17 @@ PARAMETERS:
 * **value** (`string`)
 
 Set the datasource for this query.
+### fn withExemplars
+
+```jsonnet
+withExemplars(value)
+```
+
+PARAMETERS:
+
+* **value** (`integer`)
+
+For metric queries, how many exemplars to request, 0 means no exemplars
 ### fn withFilters
 
 ```jsonnet
@@ -139,6 +152,18 @@ PARAMETERS:
 * **value** (`string`)
 
 @deprecated Define the maximum duration to select traces. Use duration format, for example: 1.2s, 100ms
+### fn withMetricsQueryType
+
+```jsonnet
+withMetricsQueryType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"range"`, `"instant"`
+
+For metric queries, whether to run instant or range queries
 ### fn withMinDuration
 
 ```jsonnet

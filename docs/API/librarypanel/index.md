@@ -4,6 +4,7 @@ grafonnet.librarypanel
 
 ## Subpackages
 
+* [model.fieldConfig.defaults.actions](model/fieldConfig/defaults/actions/index.md)
 * [model.fieldConfig.defaults.links](model/fieldConfig/defaults/links.md)
 * [model.fieldConfig.defaults.thresholds.steps](model/fieldConfig/defaults/thresholds/steps.md)
 * [model.fieldConfig.overrides](model/fieldConfig/overrides/index.md)
@@ -62,6 +63,7 @@ grafonnet.librarypanel
   * [`fn withRepeatDirection(value="h")`](#fn-modelwithrepeatdirection)
   * [`fn withTargets(value)`](#fn-modelwithtargets)
   * [`fn withTargetsMixin(value)`](#fn-modelwithtargetsmixin)
+  * [`fn withTimeCompare(value)`](#fn-modelwithtimecompare)
   * [`fn withTimeFrom(value)`](#fn-modelwithtimefrom)
   * [`fn withTimeShift(value)`](#fn-modelwithtimeshift)
   * [`fn withTitle(value)`](#fn-modelwithtitle)
@@ -78,6 +80,8 @@ grafonnet.librarypanel
     * [`fn withOverrides(value)`](#fn-modelfieldconfigwithoverrides)
     * [`fn withOverridesMixin(value)`](#fn-modelfieldconfigwithoverridesmixin)
     * [`obj defaults`](#obj-modelfieldconfigdefaults)
+      * [`fn withActions(value)`](#fn-modelfieldconfigdefaultswithactions)
+      * [`fn withActionsMixin(value)`](#fn-modelfieldconfigdefaultswithactionsmixin)
       * [`fn withColor(value)`](#fn-modelfieldconfigdefaultswithcolor)
       * [`fn withColorMixin(value)`](#fn-modelfieldconfigdefaultswithcolormixin)
       * [`fn withCustom(value)`](#fn-modelfieldconfigdefaultswithcustom)
@@ -86,6 +90,7 @@ grafonnet.librarypanel
       * [`fn withDescription(value)`](#fn-modelfieldconfigdefaultswithdescription)
       * [`fn withDisplayName(value)`](#fn-modelfieldconfigdefaultswithdisplayname)
       * [`fn withDisplayNameFromDS(value)`](#fn-modelfieldconfigdefaultswithdisplaynamefromds)
+      * [`fn withFieldMinMax(value=true)`](#fn-modelfieldconfigdefaultswithfieldminmax)
       * [`fn withFilterable(value=true)`](#fn-modelfieldconfigdefaultswithfilterable)
       * [`fn withLinks(value)`](#fn-modelfieldconfigdefaultswithlinks)
       * [`fn withLinksMixin(value)`](#fn-modelfieldconfigdefaultswithlinksmixin)
@@ -107,7 +112,8 @@ grafonnet.librarypanel
         * [`obj RangeMap`](#obj-modelfieldconfigdefaultsmappingsrangemap)
           * [`fn withOptions(value)`](#fn-modelfieldconfigdefaultsmappingsrangemapwithoptions)
           * [`fn withOptionsMixin(value)`](#fn-modelfieldconfigdefaultsmappingsrangemapwithoptionsmixin)
-          * [`fn withType()`](#fn-modelfieldconfigdefaultsmappingsrangemapwithtype)
+          * [`fn withType(value="range")`](#fn-modelfieldconfigdefaultsmappingsrangemapwithtype)
+          * [`fn withTypeMixin(value="range")`](#fn-modelfieldconfigdefaultsmappingsrangemapwithtypemixin)
           * [`obj options`](#obj-modelfieldconfigdefaultsmappingsrangemapoptions)
             * [`fn withFrom(value)`](#fn-modelfieldconfigdefaultsmappingsrangemapoptionswithfrom)
             * [`fn withResult(value)`](#fn-modelfieldconfigdefaultsmappingsrangemapoptionswithresult)
@@ -118,10 +124,13 @@ grafonnet.librarypanel
               * [`fn withIcon(value)`](#fn-modelfieldconfigdefaultsmappingsrangemapoptionsresultwithicon)
               * [`fn withIndex(value)`](#fn-modelfieldconfigdefaultsmappingsrangemapoptionsresultwithindex)
               * [`fn withText(value)`](#fn-modelfieldconfigdefaultsmappingsrangemapoptionsresultwithtext)
+          * [`obj type`](#obj-modelfieldconfigdefaultsmappingsrangemaptype)
+            * [`fn withMappingType(value)`](#fn-modelfieldconfigdefaultsmappingsrangemaptypewithmappingtype)
         * [`obj RegexMap`](#obj-modelfieldconfigdefaultsmappingsregexmap)
           * [`fn withOptions(value)`](#fn-modelfieldconfigdefaultsmappingsregexmapwithoptions)
           * [`fn withOptionsMixin(value)`](#fn-modelfieldconfigdefaultsmappingsregexmapwithoptionsmixin)
-          * [`fn withType()`](#fn-modelfieldconfigdefaultsmappingsregexmapwithtype)
+          * [`fn withType(value="regex")`](#fn-modelfieldconfigdefaultsmappingsregexmapwithtype)
+          * [`fn withTypeMixin(value="regex")`](#fn-modelfieldconfigdefaultsmappingsregexmapwithtypemixin)
           * [`obj options`](#obj-modelfieldconfigdefaultsmappingsregexmapoptions)
             * [`fn withPattern(value)`](#fn-modelfieldconfigdefaultsmappingsregexmapoptionswithpattern)
             * [`fn withResult(value)`](#fn-modelfieldconfigdefaultsmappingsregexmapoptionswithresult)
@@ -131,10 +140,13 @@ grafonnet.librarypanel
               * [`fn withIcon(value)`](#fn-modelfieldconfigdefaultsmappingsregexmapoptionsresultwithicon)
               * [`fn withIndex(value)`](#fn-modelfieldconfigdefaultsmappingsregexmapoptionsresultwithindex)
               * [`fn withText(value)`](#fn-modelfieldconfigdefaultsmappingsregexmapoptionsresultwithtext)
+          * [`obj type`](#obj-modelfieldconfigdefaultsmappingsregexmaptype)
+            * [`fn withMappingType(value)`](#fn-modelfieldconfigdefaultsmappingsregexmaptypewithmappingtype)
         * [`obj SpecialValueMap`](#obj-modelfieldconfigdefaultsmappingsspecialvaluemap)
           * [`fn withOptions(value)`](#fn-modelfieldconfigdefaultsmappingsspecialvaluemapwithoptions)
           * [`fn withOptionsMixin(value)`](#fn-modelfieldconfigdefaultsmappingsspecialvaluemapwithoptionsmixin)
-          * [`fn withType()`](#fn-modelfieldconfigdefaultsmappingsspecialvaluemapwithtype)
+          * [`fn withType(value="special")`](#fn-modelfieldconfigdefaultsmappingsspecialvaluemapwithtype)
+          * [`fn withTypeMixin(value="special")`](#fn-modelfieldconfigdefaultsmappingsspecialvaluemapwithtypemixin)
           * [`obj options`](#obj-modelfieldconfigdefaultsmappingsspecialvaluemapoptions)
             * [`fn withMatch(value)`](#fn-modelfieldconfigdefaultsmappingsspecialvaluemapoptionswithmatch)
             * [`fn withResult(value)`](#fn-modelfieldconfigdefaultsmappingsspecialvaluemapoptionswithresult)
@@ -144,10 +156,15 @@ grafonnet.librarypanel
               * [`fn withIcon(value)`](#fn-modelfieldconfigdefaultsmappingsspecialvaluemapoptionsresultwithicon)
               * [`fn withIndex(value)`](#fn-modelfieldconfigdefaultsmappingsspecialvaluemapoptionsresultwithindex)
               * [`fn withText(value)`](#fn-modelfieldconfigdefaultsmappingsspecialvaluemapoptionsresultwithtext)
+          * [`obj type`](#obj-modelfieldconfigdefaultsmappingsspecialvaluemaptype)
+            * [`fn withMappingType(value)`](#fn-modelfieldconfigdefaultsmappingsspecialvaluemaptypewithmappingtype)
         * [`obj ValueMap`](#obj-modelfieldconfigdefaultsmappingsvaluemap)
           * [`fn withOptions(value)`](#fn-modelfieldconfigdefaultsmappingsvaluemapwithoptions)
           * [`fn withOptionsMixin(value)`](#fn-modelfieldconfigdefaultsmappingsvaluemapwithoptionsmixin)
-          * [`fn withType()`](#fn-modelfieldconfigdefaultsmappingsvaluemapwithtype)
+          * [`fn withType(value="value")`](#fn-modelfieldconfigdefaultsmappingsvaluemapwithtype)
+          * [`fn withTypeMixin(value="value")`](#fn-modelfieldconfigdefaultsmappingsvaluemapwithtypemixin)
+          * [`obj type`](#obj-modelfieldconfigdefaultsmappingsvaluemaptype)
+            * [`fn withMappingType(value)`](#fn-modelfieldconfigdefaultsmappingsvaluemaptypewithmappingtype)
       * [`obj thresholds`](#obj-modelfieldconfigdefaultsthresholds)
         * [`fn withMode(value)`](#fn-modelfieldconfigdefaultsthresholdswithmode)
         * [`fn withSteps(value)`](#fn-modelfieldconfigdefaultsthresholdswithsteps)
@@ -474,7 +491,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+The datasource used in all targets.
 #### fn model.withDatasourceMixin
 
 ```jsonnet
@@ -485,7 +502,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+The datasource used in all targets.
 #### fn model.withDescription
 
 ```jsonnet
@@ -685,6 +702,18 @@ PARAMETERS:
 * **value** (`array`)
 
 Depends on the panel plugin. See the plugin documentation for details.
+#### fn model.withTimeCompare
+
+```jsonnet
+model.withTimeCompare(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Compare the current time range with a previous period
+For example "1d" to compare current period but shifted back 1 day
 #### fn model.withTimeFrom
 
 ```jsonnet
@@ -856,6 +885,28 @@ Overrides are the options applied to specific fields overriding the defaults.
 ##### obj model.fieldConfig.defaults
 
 
+###### fn model.fieldConfig.defaults.withActions
+
+```jsonnet
+model.fieldConfig.defaults.withActions(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+Define interactive HTTP requests that can be triggered from data visualizations.
+###### fn model.fieldConfig.defaults.withActionsMixin
+
+```jsonnet
+model.fieldConfig.defaults.withActionsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+Define interactive HTTP requests that can be triggered from data visualizations.
 ###### fn model.fieldConfig.defaults.withColor
 
 ```jsonnet
@@ -950,6 +1001,18 @@ PARAMETERS:
 
 This can be used by data sources that return and explicit naming structure for values and labels
 When this property is configured, this value is used rather than the default naming strategy.
+###### fn model.fieldConfig.defaults.withFieldMinMax
+
+```jsonnet
+model.fieldConfig.defaults.withFieldMinMax(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
 ###### fn model.fieldConfig.defaults.withFilterable
 
 ```jsonnet
@@ -1194,9 +1257,25 @@ Range to match against and the result to apply when the value is within the rang
 ######## fn model.fieldConfig.defaults.mappings.RangeMap.withType
 
 ```jsonnet
-model.fieldConfig.defaults.mappings.RangeMap.withType()
+model.fieldConfig.defaults.mappings.RangeMap.withType(value="range")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"range"`
+
+
+######## fn model.fieldConfig.defaults.mappings.RangeMap.withTypeMixin
+
+```jsonnet
+model.fieldConfig.defaults.mappings.RangeMap.withTypeMixin(value="range")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"range"`
 
 
 ######## obj model.fieldConfig.defaults.mappings.RangeMap.options
@@ -1293,6 +1372,25 @@ PARAMETERS:
 * **value** (`string`)
 
 Text to display when the value matches
+######## obj model.fieldConfig.defaults.mappings.RangeMap.type
+
+
+######### fn model.fieldConfig.defaults.mappings.RangeMap.type.withMappingType
+
+```jsonnet
+model.fieldConfig.defaults.mappings.RangeMap.type.withMappingType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"value"`, `"range"`, `"regex"`, `"special"`
+
+Supported value mapping types
+`value`: Maps text values to a color or different display text and color. For example, you can configure a value mapping so that all instances of the value 10 appear as Perfection! rather than the number.
+`range`: Maps numerical ranges to a display text and color. For example, if a value is within a certain range, you can configure a range value mapping to display Low or High rather than the number.
+`regex`: Maps regular expressions to replacement text and a color. For example, if a value is www.example.com, you can configure a regex value mapping so that Grafana displays www and truncates the domain.
+`special`: Maps special values like Null, NaN (not a number), and boolean values like true and false to a display text and color. See SpecialValueMatch to see the list of special values. For example, you can configure a special value mapping so that null values appear as N/A.
 ####### obj model.fieldConfig.defaults.mappings.RegexMap
 
 
@@ -1321,9 +1419,25 @@ Regular expression to match against and the result to apply when the value match
 ######## fn model.fieldConfig.defaults.mappings.RegexMap.withType
 
 ```jsonnet
-model.fieldConfig.defaults.mappings.RegexMap.withType()
+model.fieldConfig.defaults.mappings.RegexMap.withType(value="regex")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"regex"`
+
+
+######## fn model.fieldConfig.defaults.mappings.RegexMap.withTypeMixin
+
+```jsonnet
+model.fieldConfig.defaults.mappings.RegexMap.withTypeMixin(value="regex")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"regex"`
 
 
 ######## obj model.fieldConfig.defaults.mappings.RegexMap.options
@@ -1409,6 +1523,25 @@ PARAMETERS:
 * **value** (`string`)
 
 Text to display when the value matches
+######## obj model.fieldConfig.defaults.mappings.RegexMap.type
+
+
+######### fn model.fieldConfig.defaults.mappings.RegexMap.type.withMappingType
+
+```jsonnet
+model.fieldConfig.defaults.mappings.RegexMap.type.withMappingType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"value"`, `"range"`, `"regex"`, `"special"`
+
+Supported value mapping types
+`value`: Maps text values to a color or different display text and color. For example, you can configure a value mapping so that all instances of the value 10 appear as Perfection! rather than the number.
+`range`: Maps numerical ranges to a display text and color. For example, if a value is within a certain range, you can configure a range value mapping to display Low or High rather than the number.
+`regex`: Maps regular expressions to replacement text and a color. For example, if a value is www.example.com, you can configure a regex value mapping so that Grafana displays www and truncates the domain.
+`special`: Maps special values like Null, NaN (not a number), and boolean values like true and false to a display text and color. See SpecialValueMatch to see the list of special values. For example, you can configure a special value mapping so that null values appear as N/A.
 ####### obj model.fieldConfig.defaults.mappings.SpecialValueMap
 
 
@@ -1437,9 +1570,25 @@ PARAMETERS:
 ######## fn model.fieldConfig.defaults.mappings.SpecialValueMap.withType
 
 ```jsonnet
-model.fieldConfig.defaults.mappings.SpecialValueMap.withType()
+model.fieldConfig.defaults.mappings.SpecialValueMap.withType(value="special")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"special"`
+
+
+######## fn model.fieldConfig.defaults.mappings.SpecialValueMap.withTypeMixin
+
+```jsonnet
+model.fieldConfig.defaults.mappings.SpecialValueMap.withTypeMixin(value="special")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"special"`
 
 
 ######## obj model.fieldConfig.defaults.mappings.SpecialValueMap.options
@@ -1526,6 +1675,25 @@ PARAMETERS:
 * **value** (`string`)
 
 Text to display when the value matches
+######## obj model.fieldConfig.defaults.mappings.SpecialValueMap.type
+
+
+######### fn model.fieldConfig.defaults.mappings.SpecialValueMap.type.withMappingType
+
+```jsonnet
+model.fieldConfig.defaults.mappings.SpecialValueMap.type.withMappingType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"value"`, `"range"`, `"regex"`, `"special"`
+
+Supported value mapping types
+`value`: Maps text values to a color or different display text and color. For example, you can configure a value mapping so that all instances of the value 10 appear as Perfection! rather than the number.
+`range`: Maps numerical ranges to a display text and color. For example, if a value is within a certain range, you can configure a range value mapping to display Low or High rather than the number.
+`regex`: Maps regular expressions to replacement text and a color. For example, if a value is www.example.com, you can configure a regex value mapping so that Grafana displays www and truncates the domain.
+`special`: Maps special values like Null, NaN (not a number), and boolean values like true and false to a display text and color. See SpecialValueMatch to see the list of special values. For example, you can configure a special value mapping so that null values appear as N/A.
 ####### obj model.fieldConfig.defaults.mappings.ValueMap
 
 
@@ -1554,11 +1722,46 @@ Map with <value_to_match>: ValueMappingResult. For example: { "10": { text: "Per
 ######## fn model.fieldConfig.defaults.mappings.ValueMap.withType
 
 ```jsonnet
-model.fieldConfig.defaults.mappings.ValueMap.withType()
+model.fieldConfig.defaults.mappings.ValueMap.withType(value="value")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"value"`
 
 
+######## fn model.fieldConfig.defaults.mappings.ValueMap.withTypeMixin
+
+```jsonnet
+model.fieldConfig.defaults.mappings.ValueMap.withTypeMixin(value="value")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"value"`
+
+
+######## obj model.fieldConfig.defaults.mappings.ValueMap.type
+
+
+######### fn model.fieldConfig.defaults.mappings.ValueMap.type.withMappingType
+
+```jsonnet
+model.fieldConfig.defaults.mappings.ValueMap.type.withMappingType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"value"`, `"range"`, `"regex"`, `"special"`
+
+Supported value mapping types
+`value`: Maps text values to a color or different display text and color. For example, you can configure a value mapping so that all instances of the value 10 appear as Perfection! rather than the number.
+`range`: Maps numerical ranges to a display text and color. For example, if a value is within a certain range, you can configure a range value mapping to display Low or High rather than the number.
+`regex`: Maps regular expressions to replacement text and a color. For example, if a value is www.example.com, you can configure a regex value mapping so that Grafana displays www and truncates the domain.
+`special`: Maps special values like Null, NaN (not a number), and boolean values like true and false to a display text and color. See SpecialValueMatch to see the list of special values. For example, you can configure a special value mapping so that null values appear as N/A.
 ###### obj model.fieldConfig.defaults.thresholds
 
 

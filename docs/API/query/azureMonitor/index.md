@@ -18,6 +18,7 @@ grafonnet.query.azureMonitor
 * [`fn withAzureResourceGraphMixin(value)`](#fn-withazureresourcegraphmixin)
 * [`fn withAzureTraces(value)`](#fn-withazuretraces)
 * [`fn withAzureTracesMixin(value)`](#fn-withazuretracesmixin)
+* [`fn withCustomNamespace(value)`](#fn-withcustomnamespace)
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withGrafanaTemplateVariableFn(value)`](#fn-withgrafanatemplatevariablefn)
 * [`fn withGrafanaTemplateVariableFnMixin(value)`](#fn-withgrafanatemplatevariablefnmixin)
@@ -241,6 +242,17 @@ PARAMETERS:
 * **value** (`object`)
 
 Application Insights Traces sub-query properties
+### fn withCustomNamespace
+
+```jsonnet
+withCustomNamespace(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Custom namespace used in template variable queries
 ### fn withDatasource
 
 ```jsonnet
@@ -296,7 +308,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Namespace used in template variable queries
 ### fn withQuery
 
 ```jsonnet
@@ -343,7 +355,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Region used in template variable queries
 ### fn withResource
 
 ```jsonnet
@@ -354,7 +366,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-
+Resource used in template variable queries
 ### fn withResourceGroup
 
 ```jsonnet
@@ -365,7 +377,7 @@ PARAMETERS:
 
 * **value** (`string`)
 
-Template variables params. These exist for backwards compatiblity with legacy template variables.
+Resource group used in template variable queries
 ### fn withSubscription
 
 ```jsonnet
@@ -377,6 +389,7 @@ PARAMETERS:
 * **value** (`string`)
 
 Azure subscription containing the resource(s) to be queried.
+Also used for template variable queries
 ### fn withSubscriptions
 
 ```jsonnet

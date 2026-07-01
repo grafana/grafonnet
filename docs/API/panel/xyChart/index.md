@@ -26,20 +26,16 @@ grafonnet.panel.xyChart
       * [`fn withAxisSoftMax(value)`](#fn-fieldconfigdefaultscustomwithaxissoftmax)
       * [`fn withAxisSoftMin(value)`](#fn-fieldconfigdefaultscustomwithaxissoftmin)
       * [`fn withAxisWidth(value)`](#fn-fieldconfigdefaultscustomwithaxiswidth)
+      * [`fn withFillOpacity(value=50)`](#fn-fieldconfigdefaultscustomwithfillopacity)
       * [`fn withHideFrom(value)`](#fn-fieldconfigdefaultscustomwithhidefrom)
       * [`fn withHideFromMixin(value)`](#fn-fieldconfigdefaultscustomwithhidefrommixin)
-      * [`fn withLabel(value="auto")`](#fn-fieldconfigdefaultscustomwithlabel)
-      * [`fn withLabelValue(value)`](#fn-fieldconfigdefaultscustomwithlabelvalue)
-      * [`fn withLabelValueMixin(value)`](#fn-fieldconfigdefaultscustomwithlabelvaluemixin)
-      * [`fn withLineColor(value)`](#fn-fieldconfigdefaultscustomwithlinecolor)
-      * [`fn withLineColorMixin(value)`](#fn-fieldconfigdefaultscustomwithlinecolormixin)
       * [`fn withLineStyle(value)`](#fn-fieldconfigdefaultscustomwithlinestyle)
       * [`fn withLineStyleMixin(value)`](#fn-fieldconfigdefaultscustomwithlinestylemixin)
       * [`fn withLineWidth(value)`](#fn-fieldconfigdefaultscustomwithlinewidth)
-      * [`fn withPointColor(value)`](#fn-fieldconfigdefaultscustomwithpointcolor)
-      * [`fn withPointColorMixin(value)`](#fn-fieldconfigdefaultscustomwithpointcolormixin)
+      * [`fn withPointShape(value)`](#fn-fieldconfigdefaultscustomwithpointshape)
       * [`fn withPointSize(value)`](#fn-fieldconfigdefaultscustomwithpointsize)
       * [`fn withPointSizeMixin(value)`](#fn-fieldconfigdefaultscustomwithpointsizemixin)
+      * [`fn withPointStrokeWidth(value)`](#fn-fieldconfigdefaultscustomwithpointstrokewidth)
       * [`fn withScaleDistribution(value)`](#fn-fieldconfigdefaultscustomwithscaledistribution)
       * [`fn withScaleDistributionMixin(value)`](#fn-fieldconfigdefaultscustomwithscaledistributionmixin)
       * [`fn withShow(value="points")`](#fn-fieldconfigdefaultscustomwithshow)
@@ -47,26 +43,14 @@ grafonnet.panel.xyChart
         * [`fn withLegend(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithlegend)
         * [`fn withTooltip(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithtooltip)
         * [`fn withViz(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithviz)
-      * [`obj labelValue`](#obj-fieldconfigdefaultscustomlabelvalue)
-        * [`fn withField(value)`](#fn-fieldconfigdefaultscustomlabelvaluewithfield)
-        * [`fn withFixed(value)`](#fn-fieldconfigdefaultscustomlabelvaluewithfixed)
-        * [`fn withMode(value)`](#fn-fieldconfigdefaultscustomlabelvaluewithmode)
-      * [`obj lineColor`](#obj-fieldconfigdefaultscustomlinecolor)
-        * [`fn withField(value)`](#fn-fieldconfigdefaultscustomlinecolorwithfield)
-        * [`fn withFixed(value)`](#fn-fieldconfigdefaultscustomlinecolorwithfixed)
       * [`obj lineStyle`](#obj-fieldconfigdefaultscustomlinestyle)
         * [`fn withDash(value)`](#fn-fieldconfigdefaultscustomlinestylewithdash)
         * [`fn withDashMixin(value)`](#fn-fieldconfigdefaultscustomlinestylewithdashmixin)
         * [`fn withFill(value)`](#fn-fieldconfigdefaultscustomlinestylewithfill)
-      * [`obj pointColor`](#obj-fieldconfigdefaultscustompointcolor)
-        * [`fn withField(value)`](#fn-fieldconfigdefaultscustompointcolorwithfield)
-        * [`fn withFixed(value)`](#fn-fieldconfigdefaultscustompointcolorwithfixed)
       * [`obj pointSize`](#obj-fieldconfigdefaultscustompointsize)
-        * [`fn withField(value)`](#fn-fieldconfigdefaultscustompointsizewithfield)
         * [`fn withFixed(value)`](#fn-fieldconfigdefaultscustompointsizewithfixed)
         * [`fn withMax(value)`](#fn-fieldconfigdefaultscustompointsizewithmax)
         * [`fn withMin(value)`](#fn-fieldconfigdefaultscustompointsizewithmin)
-        * [`fn withMode(value)`](#fn-fieldconfigdefaultscustompointsizewithmode)
       * [`obj scaleDistribution`](#obj-fieldconfigdefaultscustomscaledistribution)
         * [`fn withLinearThreshold(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithlinearthreshold)
         * [`fn withLog(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithlog)
@@ -75,20 +59,13 @@ grafonnet.panel.xyChart
   * [`fn withName(value)`](#fn-librarypanelwithname)
   * [`fn withUid(value)`](#fn-librarypanelwithuid)
 * [`obj options`](#obj-options)
-  * [`fn withDims(value)`](#fn-optionswithdims)
-  * [`fn withDimsMixin(value)`](#fn-optionswithdimsmixin)
   * [`fn withLegend(value)`](#fn-optionswithlegend)
   * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
+  * [`fn withMapping(value)`](#fn-optionswithmapping)
   * [`fn withSeries(value)`](#fn-optionswithseries)
-  * [`fn withSeriesMapping(value)`](#fn-optionswithseriesmapping)
   * [`fn withSeriesMixin(value)`](#fn-optionswithseriesmixin)
   * [`fn withTooltip(value)`](#fn-optionswithtooltip)
   * [`fn withTooltipMixin(value)`](#fn-optionswithtooltipmixin)
-  * [`obj dims`](#obj-optionsdims)
-    * [`fn withExclude(value)`](#fn-optionsdimswithexclude)
-    * [`fn withExcludeMixin(value)`](#fn-optionsdimswithexcludemixin)
-    * [`fn withFrame(value)`](#fn-optionsdimswithframe)
-    * [`fn withX(value)`](#fn-optionsdimswithx)
   * [`obj legend`](#obj-optionslegend)
     * [`fn withAsTable(value=true)`](#fn-optionslegendwithastable)
     * [`fn withCalcs(value=[])`](#fn-optionslegendwithcalcs)
@@ -101,6 +78,7 @@ grafonnet.panel.xyChart
     * [`fn withSortDesc(value=true)`](#fn-optionslegendwithsortdesc)
     * [`fn withWidth(value)`](#fn-optionslegendwithwidth)
   * [`obj tooltip`](#obj-optionstooltip)
+    * [`fn withHideZeros(value=true)`](#fn-optionstooltipwithhidezeros)
     * [`fn withMaxHeight(value)`](#fn-optionstooltipwithmaxheight)
     * [`fn withMaxWidth(value)`](#fn-optionstooltipwithmaxwidth)
     * [`fn withMode(value)`](#fn-optionstooltipwithmode)
@@ -278,6 +256,18 @@ PARAMETERS:
 * **value** (`number`)
 
 
+###### fn fieldConfig.defaults.custom.withFillOpacity
+
+```jsonnet
+fieldConfig.defaults.custom.withFillOpacity(value=50)
+```
+
+PARAMETERS:
+
+* **value** (`integer`)
+   - default value: `50`
+
+
 ###### fn fieldConfig.defaults.custom.withHideFrom
 
 ```jsonnet
@@ -300,63 +290,6 @@ PARAMETERS:
 * **value** (`object`)
 
 TODO docs
-###### fn fieldConfig.defaults.custom.withLabel
-
-```jsonnet
-fieldConfig.defaults.custom.withLabel(value="auto")
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-   - default value: `"auto"`
-   - valid values: `"auto"`, `"never"`, `"always"`
-
-TODO docs
-###### fn fieldConfig.defaults.custom.withLabelValue
-
-```jsonnet
-fieldConfig.defaults.custom.withLabelValue(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-###### fn fieldConfig.defaults.custom.withLabelValueMixin
-
-```jsonnet
-fieldConfig.defaults.custom.withLabelValueMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-###### fn fieldConfig.defaults.custom.withLineColor
-
-```jsonnet
-fieldConfig.defaults.custom.withLineColor(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-###### fn fieldConfig.defaults.custom.withLineColorMixin
-
-```jsonnet
-fieldConfig.defaults.custom.withLineColorMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
 ###### fn fieldConfig.defaults.custom.withLineStyle
 
 ```jsonnet
@@ -390,26 +323,16 @@ PARAMETERS:
 * **value** (`integer`)
 
 
-###### fn fieldConfig.defaults.custom.withPointColor
+###### fn fieldConfig.defaults.custom.withPointShape
 
 ```jsonnet
-fieldConfig.defaults.custom.withPointColor(value)
+fieldConfig.defaults.custom.withPointShape(value)
 ```
 
 PARAMETERS:
 
-* **value** (`object`)
-
-
-###### fn fieldConfig.defaults.custom.withPointColorMixin
-
-```jsonnet
-fieldConfig.defaults.custom.withPointColorMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
+* **value** (`string`)
+   - valid values: `"circle"`, `"square"`
 
 
 ###### fn fieldConfig.defaults.custom.withPointSize
@@ -432,6 +355,17 @@ fieldConfig.defaults.custom.withPointSizeMixin(value)
 PARAMETERS:
 
 * **value** (`object`)
+
+
+###### fn fieldConfig.defaults.custom.withPointStrokeWidth
+
+```jsonnet
+fieldConfig.defaults.custom.withPointStrokeWidth(value)
+```
+
+PARAMETERS:
+
+* **value** (`integer`)
 
 
 ###### fn fieldConfig.defaults.custom.withScaleDistribution
@@ -508,68 +442,6 @@ PARAMETERS:
    - default value: `true`
 
 
-###### obj fieldConfig.defaults.custom.labelValue
-
-
-####### fn fieldConfig.defaults.custom.labelValue.withField
-
-```jsonnet
-fieldConfig.defaults.custom.labelValue.withField(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-fixed: T -- will be added by each element
-####### fn fieldConfig.defaults.custom.labelValue.withFixed
-
-```jsonnet
-fieldConfig.defaults.custom.labelValue.withFixed(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-
-####### fn fieldConfig.defaults.custom.labelValue.withMode
-
-```jsonnet
-fieldConfig.defaults.custom.labelValue.withMode(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-   - valid values: `"fixed"`, `"field"`, `"template"`
-
-
-###### obj fieldConfig.defaults.custom.lineColor
-
-
-####### fn fieldConfig.defaults.custom.lineColor.withField
-
-```jsonnet
-fieldConfig.defaults.custom.lineColor.withField(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-fixed: T -- will be added by each element
-####### fn fieldConfig.defaults.custom.lineColor.withFixed
-
-```jsonnet
-fieldConfig.defaults.custom.lineColor.withFixed(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-color value
 ###### obj fieldConfig.defaults.custom.lineStyle
 
 
@@ -607,45 +479,9 @@ PARAMETERS:
    - valid values: `"solid"`, `"dash"`, `"dot"`, `"square"`
 
 
-###### obj fieldConfig.defaults.custom.pointColor
-
-
-####### fn fieldConfig.defaults.custom.pointColor.withField
-
-```jsonnet
-fieldConfig.defaults.custom.pointColor.withField(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-fixed: T -- will be added by each element
-####### fn fieldConfig.defaults.custom.pointColor.withFixed
-
-```jsonnet
-fieldConfig.defaults.custom.pointColor.withFixed(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-color value
 ###### obj fieldConfig.defaults.custom.pointSize
 
 
-####### fn fieldConfig.defaults.custom.pointSize.withField
-
-```jsonnet
-fieldConfig.defaults.custom.pointSize.withField(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-fixed: T -- will be added by each element
 ####### fn fieldConfig.defaults.custom.pointSize.withFixed
 
 ```jsonnet
@@ -654,7 +490,7 @@ fieldConfig.defaults.custom.pointSize.withFixed(value)
 
 PARAMETERS:
 
-* **value** (`number`)
+* **value** (`integer`)
 
 
 ####### fn fieldConfig.defaults.custom.pointSize.withMax
@@ -665,7 +501,7 @@ fieldConfig.defaults.custom.pointSize.withMax(value)
 
 PARAMETERS:
 
-* **value** (`number`)
+* **value** (`integer`)
 
 
 ####### fn fieldConfig.defaults.custom.pointSize.withMin
@@ -676,21 +512,9 @@ fieldConfig.defaults.custom.pointSize.withMin(value)
 
 PARAMETERS:
 
-* **value** (`number`)
+* **value** (`integer`)
 
 
-####### fn fieldConfig.defaults.custom.pointSize.withMode
-
-```jsonnet
-fieldConfig.defaults.custom.pointSize.withMode(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-   - valid values: `"linear"`, `"quad"`
-
-| *"linear"
 ###### obj fieldConfig.defaults.custom.scaleDistribution
 
 
@@ -756,28 +580,6 @@ Library panel uid
 ### obj options
 
 
-#### fn options.withDims
-
-```jsonnet
-options.withDims(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-Configuration for the Table/Auto mode
-#### fn options.withDimsMixin
-
-```jsonnet
-options.withDimsMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-Configuration for the Table/Auto mode
 #### fn options.withLegend
 
 ```jsonnet
@@ -800,6 +602,18 @@ PARAMETERS:
 * **value** (`object`)
 
 TODO docs
+#### fn options.withMapping
+
+```jsonnet
+options.withMapping(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"manual"`
+
+
 #### fn options.withSeries
 
 ```jsonnet
@@ -810,19 +624,7 @@ PARAMETERS:
 
 * **value** (`array`)
 
-Manual Mode
-#### fn options.withSeriesMapping
 
-```jsonnet
-options.withSeriesMapping(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-   - valid values: `"auto"`, `"manual"`
-
-Auto is "table" in the UI
 #### fn options.withSeriesMixin
 
 ```jsonnet
@@ -833,7 +635,7 @@ PARAMETERS:
 
 * **value** (`array`)
 
-Manual Mode
+
 #### fn options.withTooltip
 
 ```jsonnet
@@ -856,53 +658,6 @@ PARAMETERS:
 * **value** (`object`)
 
 TODO docs
-#### obj options.dims
-
-
-##### fn options.dims.withExclude
-
-```jsonnet
-options.dims.withExclude(value)
-```
-
-PARAMETERS:
-
-* **value** (`array`)
-
-
-##### fn options.dims.withExcludeMixin
-
-```jsonnet
-options.dims.withExcludeMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`array`)
-
-
-##### fn options.dims.withFrame
-
-```jsonnet
-options.dims.withFrame(value)
-```
-
-PARAMETERS:
-
-* **value** (`integer`)
-
-
-##### fn options.dims.withX
-
-```jsonnet
-options.dims.withX(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-
 #### obj options.legend
 
 
@@ -1028,6 +783,18 @@ PARAMETERS:
 
 
 #### obj options.tooltip
+
+
+##### fn options.tooltip.withHideZeros
+
+```jsonnet
+options.tooltip.withHideZeros(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
 
 
 ##### fn options.tooltip.withMaxHeight
@@ -1221,7 +988,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+The datasource used in all targets.
 #### fn queryOptions.withHideTimeOverride
 
 ```jsonnet

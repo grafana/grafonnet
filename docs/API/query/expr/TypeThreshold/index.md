@@ -69,7 +69,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+The datasource
 ### fn withDatasourceMixin
 
 ```jsonnet
@@ -80,7 +80,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+The datasource
 ### fn withExpression
 
 ```jsonnet

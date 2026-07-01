@@ -48,10 +48,16 @@ grafonnet.query.bigquery
   * [`obj orderBy`](#obj-sqlorderby)
     * [`fn withProperty(value)`](#fn-sqlorderbywithproperty)
     * [`fn withPropertyMixin(value)`](#fn-sqlorderbywithpropertymixin)
-    * [`fn withType()`](#fn-sqlorderbywithtype)
+    * [`fn withType(value="property")`](#fn-sqlorderbywithtype)
+    * [`fn withTypeMixin(value="property")`](#fn-sqlorderbywithtypemixin)
     * [`obj property`](#obj-sqlorderbyproperty)
       * [`fn withName(value)`](#fn-sqlorderbypropertywithname)
-      * [`fn withType(value)`](#fn-sqlorderbypropertywithtype)
+      * [`fn withType(value="string")`](#fn-sqlorderbypropertywithtype)
+      * [`fn withTypeMixin(value="string")`](#fn-sqlorderbypropertywithtypemixin)
+      * [`obj type`](#obj-sqlorderbypropertytype)
+        * [`fn withQueryEditorPropertyType(value)`](#fn-sqlorderbypropertytypewithqueryeditorpropertytype)
+    * [`obj type`](#obj-sqlorderbytype)
+      * [`fn withQueryEditorExpressionType(value)`](#fn-sqlorderbytypewithqueryeditorexpressiontype)
 
 ## Fields
 
@@ -88,7 +94,10 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+For mixed data sources the selected datasource is on the query level.
+For non mixed scenarios this is undefined.
+TODO find a better way to do this ^ that's friendly to schema
+TODO this shouldn't be unknown but DataSourceRef | null
 ### fn withDatasourceMixin
 
 ```jsonnet
@@ -99,7 +108,10 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+For mixed data sources the selected datasource is on the query level.
+For non mixed scenarios this is undefined.
+TODO find a better way to do this ^ that's friendly to schema
+TODO this shouldn't be unknown but DataSourceRef | null
 ### fn withEditorMode
 
 ```jsonnet
@@ -120,7 +132,7 @@ withFormat(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`integer`)
    - valid values: `0`, `1`
 
 
@@ -475,9 +487,25 @@ PARAMETERS:
 ##### fn sql.orderBy.withType
 
 ```jsonnet
-sql.orderBy.withType()
+sql.orderBy.withType(value="property")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"property"`
+
+
+##### fn sql.orderBy.withTypeMixin
+
+```jsonnet
+sql.orderBy.withTypeMixin(value="property")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"property"`
 
 
 ##### obj sql.orderBy.property
@@ -497,11 +525,53 @@ PARAMETERS:
 ###### fn sql.orderBy.property.withType
 
 ```jsonnet
-sql.orderBy.property.withType(value)
+sql.orderBy.property.withType(value="string")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"string"`
+
+
+###### fn sql.orderBy.property.withTypeMixin
+
+```jsonnet
+sql.orderBy.property.withTypeMixin(value="string")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"string"`
+
+
+###### obj sql.orderBy.property.type
+
+
+####### fn sql.orderBy.property.type.withQueryEditorPropertyType
+
+```jsonnet
+sql.orderBy.property.type.withQueryEditorPropertyType(value)
 ```
 
 PARAMETERS:
 
 * **value** (`string`)
    - valid values: `"string"`
+
+
+##### obj sql.orderBy.type
+
+
+###### fn sql.orderBy.type.withQueryEditorExpressionType
+
+```jsonnet
+sql.orderBy.type.withQueryEditorExpressionType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"property"`, `"operator"`, `"or"`, `"and"`, `"groupBy"`, `"function"`, `"functionParameter"`
 

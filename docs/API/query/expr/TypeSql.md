@@ -7,6 +7,7 @@ grafonnet.query.expr.TypeSql
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withDatasourceMixin(value)`](#fn-withdatasourcemixin)
 * [`fn withExpression(value)`](#fn-withexpression)
+* [`fn withFormat(value)`](#fn-withformat)
 * [`fn withHide(value=true)`](#fn-withhide)
 * [`fn withIntervalMs(value)`](#fn-withintervalms)
 * [`fn withMaxDataPoints(value)`](#fn-withmaxdatapoints)
@@ -41,7 +42,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+The datasource
 ### fn withDatasourceMixin
 
 ```jsonnet
@@ -52,11 +53,22 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+The datasource
 ### fn withExpression
 
 ```jsonnet
 withExpression(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+### fn withFormat
+
+```jsonnet
+withFormat(value)
 ```
 
 PARAMETERS:

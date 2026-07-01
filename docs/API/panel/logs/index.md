@@ -18,29 +18,19 @@ grafonnet.panel.logs
   * [`fn withUid(value)`](#fn-librarypanelwithuid)
 * [`obj options`](#obj-options)
   * [`fn withDedupStrategy(value)`](#fn-optionswithdedupstrategy)
-  * [`fn withDisplayedFields(value)`](#fn-optionswithdisplayedfields)
-  * [`fn withDisplayedFieldsMixin(value)`](#fn-optionswithdisplayedfieldsmixin)
+  * [`fn withDetailsMode(value)`](#fn-optionswithdetailsmode)
+  * [`fn withEnableInfiniteScrolling(value=true)`](#fn-optionswithenableinfinitescrolling)
   * [`fn withEnableLogDetails(value=true)`](#fn-optionswithenablelogdetails)
-  * [`fn withIsFilterLabelActive(value)`](#fn-optionswithisfilterlabelactive)
-  * [`fn withIsFilterLabelActiveMixin(value)`](#fn-optionswithisfilterlabelactivemixin)
-  * [`fn withOnClickFilterLabel(value)`](#fn-optionswithonclickfilterlabel)
-  * [`fn withOnClickFilterLabelMixin(value)`](#fn-optionswithonclickfilterlabelmixin)
-  * [`fn withOnClickFilterOutLabel(value)`](#fn-optionswithonclickfilteroutlabel)
-  * [`fn withOnClickFilterOutLabelMixin(value)`](#fn-optionswithonclickfilteroutlabelmixin)
-  * [`fn withOnClickFilterOutString(value)`](#fn-optionswithonclickfilteroutstring)
-  * [`fn withOnClickFilterOutStringMixin(value)`](#fn-optionswithonclickfilteroutstringmixin)
-  * [`fn withOnClickFilterString(value)`](#fn-optionswithonclickfilterstring)
-  * [`fn withOnClickFilterStringMixin(value)`](#fn-optionswithonclickfilterstringmixin)
-  * [`fn withOnClickHideField(value)`](#fn-optionswithonclickhidefield)
-  * [`fn withOnClickHideFieldMixin(value)`](#fn-optionswithonclickhidefieldmixin)
-  * [`fn withOnClickShowField(value)`](#fn-optionswithonclickshowfield)
-  * [`fn withOnClickShowFieldMixin(value)`](#fn-optionswithonclickshowfieldmixin)
+  * [`fn withFontSize(value)`](#fn-optionswithfontsize)
   * [`fn withPrettifyLogMessage(value=true)`](#fn-optionswithprettifylogmessage)
   * [`fn withShowCommonLabels(value=true)`](#fn-optionswithshowcommonlabels)
+  * [`fn withShowControls(value=true)`](#fn-optionswithshowcontrols)
+  * [`fn withShowFieldSelector(value=true)`](#fn-optionswithshowfieldselector)
   * [`fn withShowLabels(value=true)`](#fn-optionswithshowlabels)
   * [`fn withShowLogContextToggle(value=true)`](#fn-optionswithshowlogcontexttoggle)
   * [`fn withShowTime(value=true)`](#fn-optionswithshowtime)
   * [`fn withSortOrder(value)`](#fn-optionswithsortorder)
+  * [`fn withSyntaxHighlighting(value=true)`](#fn-optionswithsyntaxhighlighting)
   * [`fn withWrapLogMessage(value=true)`](#fn-optionswithwraplogmessage)
 * [`obj panelOptions`](#obj-paneloptions)
   * [`fn withDescription(value)`](#fn-paneloptionswithdescription)
@@ -142,26 +132,28 @@ PARAMETERS:
    - valid values: `"none"`, `"exact"`, `"numbers"`, `"signature"`
 
 
-#### fn options.withDisplayedFields
+#### fn options.withDetailsMode
 
 ```jsonnet
-options.withDisplayedFields(value)
+options.withDetailsMode(value)
 ```
 
 PARAMETERS:
 
-* **value** (`array`)
+* **value** (`string`)
+   - valid values: `"inline"`, `"sidebar"`
 
 
-#### fn options.withDisplayedFieldsMixin
+#### fn options.withEnableInfiniteScrolling
 
 ```jsonnet
-options.withDisplayedFieldsMixin(value)
+options.withEnableInfiniteScrolling(value=true)
 ```
 
 PARAMETERS:
 
-* **value** (`array`)
+* **value** (`boolean`)
+   - default value: `true`
 
 
 #### fn options.withEnableLogDetails
@@ -176,158 +168,16 @@ PARAMETERS:
    - default value: `true`
 
 
-#### fn options.withIsFilterLabelActive
+#### fn options.withFontSize
 
 ```jsonnet
-options.withIsFilterLabelActive(value)
+options.withFontSize(value)
 ```
 
 PARAMETERS:
 
-* **value** (`object`)
-
-
-#### fn options.withIsFilterLabelActiveMixin
-
-```jsonnet
-options.withIsFilterLabelActiveMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-#### fn options.withOnClickFilterLabel
-
-```jsonnet
-options.withOnClickFilterLabel(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-TODO: figure out how to define callbacks
-#### fn options.withOnClickFilterLabelMixin
-
-```jsonnet
-options.withOnClickFilterLabelMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-TODO: figure out how to define callbacks
-#### fn options.withOnClickFilterOutLabel
-
-```jsonnet
-options.withOnClickFilterOutLabel(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-#### fn options.withOnClickFilterOutLabelMixin
-
-```jsonnet
-options.withOnClickFilterOutLabelMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-#### fn options.withOnClickFilterOutString
-
-```jsonnet
-options.withOnClickFilterOutString(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-#### fn options.withOnClickFilterOutStringMixin
-
-```jsonnet
-options.withOnClickFilterOutStringMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-#### fn options.withOnClickFilterString
-
-```jsonnet
-options.withOnClickFilterString(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-#### fn options.withOnClickFilterStringMixin
-
-```jsonnet
-options.withOnClickFilterStringMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-#### fn options.withOnClickHideField
-
-```jsonnet
-options.withOnClickHideField(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-#### fn options.withOnClickHideFieldMixin
-
-```jsonnet
-options.withOnClickHideFieldMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-#### fn options.withOnClickShowField
-
-```jsonnet
-options.withOnClickShowField(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-#### fn options.withOnClickShowFieldMixin
-
-```jsonnet
-options.withOnClickShowFieldMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
+* **value** (`string`)
+   - valid values: `"default"`, `"small"`
 
 
 #### fn options.withPrettifyLogMessage
@@ -354,6 +204,30 @@ PARAMETERS:
    - default value: `true`
 
 
+#### fn options.withShowControls
+
+```jsonnet
+options.withShowControls(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+Display controls to jump to the last or first log line, and filters by log level.
+#### fn options.withShowFieldSelector
+
+```jsonnet
+options.withShowFieldSelector(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+Show a component to manage the displayed fields from the logs.
 #### fn options.withShowLabels
 
 ```jsonnet
@@ -402,6 +276,18 @@ PARAMETERS:
    - valid values: `"Descending"`, `"Ascending"`
 
 
+#### fn options.withSyntaxHighlighting
+
+```jsonnet
+options.withSyntaxHighlighting(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+Use a predefined coloring scheme to highlight relevant parts of the log lines.
 #### fn options.withWrapLogMessage
 
 ```jsonnet
@@ -559,7 +445,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+The datasource used in all targets.
 #### fn queryOptions.withHideTimeOverride
 
 ```jsonnet

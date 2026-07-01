@@ -12,6 +12,7 @@
 * [`fn withMatcherMixin(value)`](#fn-withmatchermixin)
 * [`fn withProperties(value)`](#fn-withproperties)
 * [`fn withPropertiesMixin(value)`](#fn-withpropertiesmixin)
+* [`fn withSystemRef(value)`](#fn-withsystemref)
 * [`obj matcher`](#obj-matcher)
   * [`fn withId(value="")`](#fn-matcherwithid)
   * [`fn withOptions(value)`](#fn-matcherwithoptions)
@@ -63,6 +64,17 @@ withPropertiesMixin(value)
 PARAMETERS:
 
 * **value** (`array`)
+
+
+### fn withSystemRef
+
+```jsonnet
+withSystemRef(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ### obj matcher

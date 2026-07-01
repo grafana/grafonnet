@@ -121,7 +121,7 @@ evaluator.withType(value)
 PARAMETERS:
 
 * **value** (`string`)
-   - valid values: `"gt"`, `"lt"`, `"within_range"`, `"outside_range"`
+   - valid values: `"gt"`, `"lt"`, `"eq"`, `"ne"`, `"gte"`, `"lte"`, `"within_range"`, `"outside_range"`, `"within_range_included"`, `"outside_range_included"`
 
 e.g. "gt"
 ### obj unloadEvaluator
@@ -158,6 +158,6 @@ unloadEvaluator.withType(value)
 PARAMETERS:
 
 * **value** (`string`)
-   - valid values: `"gt"`, `"lt"`, `"within_range"`, `"outside_range"`
+   - valid values: `"gt"`, `"lt"`, `"eq"`, `"ne"`, `"gte"`, `"lte"`, `"within_range"`, `"outside_range"`, `"within_range_included"`, `"outside_range_included"`
 
 e.g. "gt"

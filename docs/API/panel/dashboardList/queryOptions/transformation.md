@@ -101,6 +101,7 @@ PARAMETERS:
    - valid values: `"series"`, `"annotations"`, `"alertStates"`
 
 Where to pull DataFrames from as input to transformation
+replaced with common.DataTopic
 ### obj filter
 
 

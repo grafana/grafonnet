@@ -4,7 +4,6 @@
 
 ## Subpackages
 
-* [accesspolicy](accesspolicy/index.md)
 * [alerting](alerting/index.md)
 * [dashboard](dashboard/index.md)
 * [folder](folder.md)
@@ -13,7 +12,5 @@
 * [preferences](preferences.md)
 * [publicdashboard](publicdashboard.md)
 * [query](query/index.md)
-* [role](role.md)
-* [rolebinding](rolebinding.md)
 * [team](team.md)
 * [util](util.md)

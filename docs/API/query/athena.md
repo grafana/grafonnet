@@ -71,7 +71,10 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+For mixed data sources the selected datasource is on the query level.
+For non mixed scenarios this is undefined.
+TODO find a better way to do this ^ that's friendly to schema
+TODO this shouldn't be unknown but DataSourceRef | null
 ### fn withDatasourceMixin
 
 ```jsonnet
@@ -82,7 +85,10 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+For mixed data sources the selected datasource is on the query level.
+For non mixed scenarios this is undefined.
+TODO find a better way to do this ^ that's friendly to schema
+TODO this shouldn't be unknown but DataSourceRef | null
 ### fn withFormat
 
 ```jsonnet
@@ -91,7 +97,7 @@ withFormat(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`integer`)
    - valid values: `0`, `1`, `2`
 
 

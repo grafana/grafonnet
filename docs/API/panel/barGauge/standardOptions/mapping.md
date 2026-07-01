@@ -7,7 +7,8 @@
 * [`obj RangeMap`](#obj-rangemap)
   * [`fn withOptions(value)`](#fn-rangemapwithoptions)
   * [`fn withOptionsMixin(value)`](#fn-rangemapwithoptionsmixin)
-  * [`fn withType()`](#fn-rangemapwithtype)
+  * [`fn withType(value="range")`](#fn-rangemapwithtype)
+  * [`fn withTypeMixin(value="range")`](#fn-rangemapwithtypemixin)
   * [`obj options`](#obj-rangemapoptions)
     * [`fn withFrom(value)`](#fn-rangemapoptionswithfrom)
     * [`fn withResult(value)`](#fn-rangemapoptionswithresult)
@@ -18,10 +19,13 @@
       * [`fn withIcon(value)`](#fn-rangemapoptionsresultwithicon)
       * [`fn withIndex(value)`](#fn-rangemapoptionsresultwithindex)
       * [`fn withText(value)`](#fn-rangemapoptionsresultwithtext)
+  * [`obj type`](#obj-rangemaptype)
+    * [`fn withMappingType(value)`](#fn-rangemaptypewithmappingtype)
 * [`obj RegexMap`](#obj-regexmap)
   * [`fn withOptions(value)`](#fn-regexmapwithoptions)
   * [`fn withOptionsMixin(value)`](#fn-regexmapwithoptionsmixin)
-  * [`fn withType()`](#fn-regexmapwithtype)
+  * [`fn withType(value="regex")`](#fn-regexmapwithtype)
+  * [`fn withTypeMixin(value="regex")`](#fn-regexmapwithtypemixin)
   * [`obj options`](#obj-regexmapoptions)
     * [`fn withPattern(value)`](#fn-regexmapoptionswithpattern)
     * [`fn withResult(value)`](#fn-regexmapoptionswithresult)
@@ -31,10 +35,13 @@
       * [`fn withIcon(value)`](#fn-regexmapoptionsresultwithicon)
       * [`fn withIndex(value)`](#fn-regexmapoptionsresultwithindex)
       * [`fn withText(value)`](#fn-regexmapoptionsresultwithtext)
+  * [`obj type`](#obj-regexmaptype)
+    * [`fn withMappingType(value)`](#fn-regexmaptypewithmappingtype)
 * [`obj SpecialValueMap`](#obj-specialvaluemap)
   * [`fn withOptions(value)`](#fn-specialvaluemapwithoptions)
   * [`fn withOptionsMixin(value)`](#fn-specialvaluemapwithoptionsmixin)
-  * [`fn withType()`](#fn-specialvaluemapwithtype)
+  * [`fn withType(value="special")`](#fn-specialvaluemapwithtype)
+  * [`fn withTypeMixin(value="special")`](#fn-specialvaluemapwithtypemixin)
   * [`obj options`](#obj-specialvaluemapoptions)
     * [`fn withMatch(value)`](#fn-specialvaluemapoptionswithmatch)
     * [`fn withResult(value)`](#fn-specialvaluemapoptionswithresult)
@@ -44,10 +51,15 @@
       * [`fn withIcon(value)`](#fn-specialvaluemapoptionsresultwithicon)
       * [`fn withIndex(value)`](#fn-specialvaluemapoptionsresultwithindex)
       * [`fn withText(value)`](#fn-specialvaluemapoptionsresultwithtext)
+  * [`obj type`](#obj-specialvaluemaptype)
+    * [`fn withMappingType(value)`](#fn-specialvaluemaptypewithmappingtype)
 * [`obj ValueMap`](#obj-valuemap)
   * [`fn withOptions(value)`](#fn-valuemapwithoptions)
   * [`fn withOptionsMixin(value)`](#fn-valuemapwithoptionsmixin)
-  * [`fn withType()`](#fn-valuemapwithtype)
+  * [`fn withType(value="value")`](#fn-valuemapwithtype)
+  * [`fn withTypeMixin(value="value")`](#fn-valuemapwithtypemixin)
+  * [`obj type`](#obj-valuemaptype)
+    * [`fn withMappingType(value)`](#fn-valuemaptypewithmappingtype)
 
 ## Fields
 
@@ -79,9 +91,25 @@ Range to match against and the result to apply when the value is within the rang
 #### fn RangeMap.withType
 
 ```jsonnet
-RangeMap.withType()
+RangeMap.withType(value="range")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"range"`
+
+
+#### fn RangeMap.withTypeMixin
+
+```jsonnet
+RangeMap.withTypeMixin(value="range")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"range"`
 
 
 #### obj RangeMap.options
@@ -178,6 +206,25 @@ PARAMETERS:
 * **value** (`string`)
 
 Text to display when the value matches
+#### obj RangeMap.type
+
+
+##### fn RangeMap.type.withMappingType
+
+```jsonnet
+RangeMap.type.withMappingType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"value"`, `"range"`, `"regex"`, `"special"`
+
+Supported value mapping types
+`value`: Maps text values to a color or different display text and color. For example, you can configure a value mapping so that all instances of the value 10 appear as Perfection! rather than the number.
+`range`: Maps numerical ranges to a display text and color. For example, if a value is within a certain range, you can configure a range value mapping to display Low or High rather than the number.
+`regex`: Maps regular expressions to replacement text and a color. For example, if a value is www.example.com, you can configure a regex value mapping so that Grafana displays www and truncates the domain.
+`special`: Maps special values like Null, NaN (not a number), and boolean values like true and false to a display text and color. See SpecialValueMatch to see the list of special values. For example, you can configure a special value mapping so that null values appear as N/A.
 ### obj RegexMap
 
 
@@ -206,9 +253,25 @@ Regular expression to match against and the result to apply when the value match
 #### fn RegexMap.withType
 
 ```jsonnet
-RegexMap.withType()
+RegexMap.withType(value="regex")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"regex"`
+
+
+#### fn RegexMap.withTypeMixin
+
+```jsonnet
+RegexMap.withTypeMixin(value="regex")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"regex"`
 
 
 #### obj RegexMap.options
@@ -294,6 +357,25 @@ PARAMETERS:
 * **value** (`string`)
 
 Text to display when the value matches
+#### obj RegexMap.type
+
+
+##### fn RegexMap.type.withMappingType
+
+```jsonnet
+RegexMap.type.withMappingType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"value"`, `"range"`, `"regex"`, `"special"`
+
+Supported value mapping types
+`value`: Maps text values to a color or different display text and color. For example, you can configure a value mapping so that all instances of the value 10 appear as Perfection! rather than the number.
+`range`: Maps numerical ranges to a display text and color. For example, if a value is within a certain range, you can configure a range value mapping to display Low or High rather than the number.
+`regex`: Maps regular expressions to replacement text and a color. For example, if a value is www.example.com, you can configure a regex value mapping so that Grafana displays www and truncates the domain.
+`special`: Maps special values like Null, NaN (not a number), and boolean values like true and false to a display text and color. See SpecialValueMatch to see the list of special values. For example, you can configure a special value mapping so that null values appear as N/A.
 ### obj SpecialValueMap
 
 
@@ -322,9 +404,25 @@ PARAMETERS:
 #### fn SpecialValueMap.withType
 
 ```jsonnet
-SpecialValueMap.withType()
+SpecialValueMap.withType(value="special")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"special"`
+
+
+#### fn SpecialValueMap.withTypeMixin
+
+```jsonnet
+SpecialValueMap.withTypeMixin(value="special")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"special"`
 
 
 #### obj SpecialValueMap.options
@@ -411,6 +509,25 @@ PARAMETERS:
 * **value** (`string`)
 
 Text to display when the value matches
+#### obj SpecialValueMap.type
+
+
+##### fn SpecialValueMap.type.withMappingType
+
+```jsonnet
+SpecialValueMap.type.withMappingType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"value"`, `"range"`, `"regex"`, `"special"`
+
+Supported value mapping types
+`value`: Maps text values to a color or different display text and color. For example, you can configure a value mapping so that all instances of the value 10 appear as Perfection! rather than the number.
+`range`: Maps numerical ranges to a display text and color. For example, if a value is within a certain range, you can configure a range value mapping to display Low or High rather than the number.
+`regex`: Maps regular expressions to replacement text and a color. For example, if a value is www.example.com, you can configure a regex value mapping so that Grafana displays www and truncates the domain.
+`special`: Maps special values like Null, NaN (not a number), and boolean values like true and false to a display text and color. See SpecialValueMatch to see the list of special values. For example, you can configure a special value mapping so that null values appear as N/A.
 ### obj ValueMap
 
 
@@ -439,7 +556,43 @@ Map with <value_to_match>: ValueMappingResult. For example: { "10": { text: "Per
 #### fn ValueMap.withType
 
 ```jsonnet
-ValueMap.withType()
+ValueMap.withType(value="value")
 ```
 
+PARAMETERS:
 
+* **value** (`string`)
+   - default value: `"value"`
+
+
+#### fn ValueMap.withTypeMixin
+
+```jsonnet
+ValueMap.withTypeMixin(value="value")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"value"`
+
+
+#### obj ValueMap.type
+
+
+##### fn ValueMap.type.withMappingType
+
+```jsonnet
+ValueMap.type.withMappingType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"value"`, `"range"`, `"regex"`, `"special"`
+
+Supported value mapping types
+`value`: Maps text values to a color or different display text and color. For example, you can configure a value mapping so that all instances of the value 10 appear as Perfection! rather than the number.
+`range`: Maps numerical ranges to a display text and color. For example, if a value is within a certain range, you can configure a range value mapping to display Low or High rather than the number.
+`regex`: Maps regular expressions to replacement text and a color. For example, if a value is www.example.com, you can configure a regex value mapping so that Grafana displays www and truncates the domain.
+`special`: Maps special values like Null, NaN (not a number), and boolean values like true and false to a display text and color. See SpecialValueMatch to see the list of special values. For example, you can configure a special value mapping so that null values appear as N/A.

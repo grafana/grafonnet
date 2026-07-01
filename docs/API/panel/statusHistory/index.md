@@ -16,14 +16,29 @@ grafonnet.panel.statusHistory
 * [`obj fieldConfig`](#obj-fieldconfig)
   * [`obj defaults`](#obj-fieldconfigdefaults)
     * [`obj custom`](#obj-fieldconfigdefaultscustom)
+      * [`fn withAxisBorderShow(value=true)`](#fn-fieldconfigdefaultscustomwithaxisbordershow)
+      * [`fn withAxisCenteredZero(value=true)`](#fn-fieldconfigdefaultscustomwithaxiscenteredzero)
+      * [`fn withAxisColorMode(value)`](#fn-fieldconfigdefaultscustomwithaxiscolormode)
+      * [`fn withAxisGridShow(value=true)`](#fn-fieldconfigdefaultscustomwithaxisgridshow)
+      * [`fn withAxisLabel(value)`](#fn-fieldconfigdefaultscustomwithaxislabel)
+      * [`fn withAxisPlacement(value)`](#fn-fieldconfigdefaultscustomwithaxisplacement)
+      * [`fn withAxisSoftMax(value)`](#fn-fieldconfigdefaultscustomwithaxissoftmax)
+      * [`fn withAxisSoftMin(value)`](#fn-fieldconfigdefaultscustomwithaxissoftmin)
+      * [`fn withAxisWidth(value)`](#fn-fieldconfigdefaultscustomwithaxiswidth)
       * [`fn withFillOpacity(value=70)`](#fn-fieldconfigdefaultscustomwithfillopacity)
       * [`fn withHideFrom(value)`](#fn-fieldconfigdefaultscustomwithhidefrom)
       * [`fn withHideFromMixin(value)`](#fn-fieldconfigdefaultscustomwithhidefrommixin)
       * [`fn withLineWidth(value=1)`](#fn-fieldconfigdefaultscustomwithlinewidth)
+      * [`fn withScaleDistribution(value)`](#fn-fieldconfigdefaultscustomwithscaledistribution)
+      * [`fn withScaleDistributionMixin(value)`](#fn-fieldconfigdefaultscustomwithscaledistributionmixin)
       * [`obj hideFrom`](#obj-fieldconfigdefaultscustomhidefrom)
         * [`fn withLegend(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithlegend)
         * [`fn withTooltip(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithtooltip)
         * [`fn withViz(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithviz)
+      * [`obj scaleDistribution`](#obj-fieldconfigdefaultscustomscaledistribution)
+        * [`fn withLinearThreshold(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithlinearthreshold)
+        * [`fn withLog(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithlog)
+        * [`fn withType(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithtype)
 * [`obj libraryPanel`](#obj-librarypanel)
   * [`fn withName(value)`](#fn-librarypanelwithname)
   * [`fn withUid(value)`](#fn-librarypanelwithuid)
@@ -31,6 +46,7 @@ grafonnet.panel.statusHistory
   * [`fn withColWidth(value=0.9)`](#fn-optionswithcolwidth)
   * [`fn withLegend(value)`](#fn-optionswithlegend)
   * [`fn withLegendMixin(value)`](#fn-optionswithlegendmixin)
+  * [`fn withPerPage(value=20)`](#fn-optionswithperpage)
   * [`fn withRowHeight(value=0.9)`](#fn-optionswithrowheight)
   * [`fn withShowValue(value="auto")`](#fn-optionswithshowvalue)
   * [`fn withTimezone(value)`](#fn-optionswithtimezone)
@@ -49,6 +65,7 @@ grafonnet.panel.statusHistory
     * [`fn withSortDesc(value=true)`](#fn-optionslegendwithsortdesc)
     * [`fn withWidth(value)`](#fn-optionslegendwithwidth)
   * [`obj tooltip`](#obj-optionstooltip)
+    * [`fn withHideZeros(value=true)`](#fn-optionstooltipwithhidezeros)
     * [`fn withMaxHeight(value)`](#fn-optionstooltipwithmaxheight)
     * [`fn withMaxWidth(value)`](#fn-optionstooltipwithmaxwidth)
     * [`fn withMode(value)`](#fn-optionstooltipwithmode)
@@ -122,6 +139,110 @@ Creates a new statusHistory panel with a title.
 ##### obj fieldConfig.defaults.custom
 
 
+###### fn fieldConfig.defaults.custom.withAxisBorderShow
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisBorderShow(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn fieldConfig.defaults.custom.withAxisCenteredZero
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisCenteredZero(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn fieldConfig.defaults.custom.withAxisColorMode
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisColorMode(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"text"`, `"series"`
+
+TODO docs
+###### fn fieldConfig.defaults.custom.withAxisGridShow
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisGridShow(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn fieldConfig.defaults.custom.withAxisLabel
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisLabel(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+###### fn fieldConfig.defaults.custom.withAxisPlacement
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisPlacement(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"top"`, `"right"`, `"bottom"`, `"left"`, `"hidden"`
+
+TODO docs
+###### fn fieldConfig.defaults.custom.withAxisSoftMax
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisSoftMax(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+###### fn fieldConfig.defaults.custom.withAxisSoftMin
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisSoftMin(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+###### fn fieldConfig.defaults.custom.withAxisWidth
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisWidth(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
 ###### fn fieldConfig.defaults.custom.withFillOpacity
 
 ```jsonnet
@@ -168,6 +289,28 @@ PARAMETERS:
    - default value: `1`
 
 
+###### fn fieldConfig.defaults.custom.withScaleDistribution
+
+```jsonnet
+fieldConfig.defaults.custom.withScaleDistribution(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+TODO docs
+###### fn fieldConfig.defaults.custom.withScaleDistributionMixin
+
+```jsonnet
+fieldConfig.defaults.custom.withScaleDistributionMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+TODO docs
 ###### obj fieldConfig.defaults.custom.hideFrom
 
 
@@ -207,6 +350,43 @@ PARAMETERS:
    - default value: `true`
 
 
+###### obj fieldConfig.defaults.custom.scaleDistribution
+
+
+####### fn fieldConfig.defaults.custom.scaleDistribution.withLinearThreshold
+
+```jsonnet
+fieldConfig.defaults.custom.scaleDistribution.withLinearThreshold(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+####### fn fieldConfig.defaults.custom.scaleDistribution.withLog
+
+```jsonnet
+fieldConfig.defaults.custom.scaleDistribution.withLog(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+####### fn fieldConfig.defaults.custom.scaleDistribution.withType
+
+```jsonnet
+fieldConfig.defaults.custom.scaleDistribution.withType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"linear"`, `"log"`, `"ordinal"`, `"symlog"`
+
+TODO docs
 ### obj libraryPanel
 
 
@@ -269,6 +449,18 @@ PARAMETERS:
 * **value** (`object`)
 
 TODO docs
+#### fn options.withPerPage
+
+```jsonnet
+options.withPerPage(value=20)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+   - default value: `20`
+
+Enables pagination when > 0
 #### fn options.withRowHeight
 
 ```jsonnet
@@ -465,6 +657,18 @@ PARAMETERS:
 #### obj options.tooltip
 
 
+##### fn options.tooltip.withHideZeros
+
+```jsonnet
+options.tooltip.withHideZeros(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
 ##### fn options.tooltip.withMaxHeight
 
 ```jsonnet
@@ -656,7 +860,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+The datasource used in all targets.
 #### fn queryOptions.withHideTimeOverride
 
 ```jsonnet

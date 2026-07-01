@@ -6,6 +6,7 @@ grafonnet.query.loki
 
 * [`fn new(datasource, expr)`](#fn-new)
 * [`fn withDatasource(value)`](#fn-withdatasource)
+* [`fn withDirection(value)`](#fn-withdirection)
 * [`fn withEditorMode(value)`](#fn-witheditormode)
 * [`fn withExpr(value)`](#fn-withexpr)
 * [`fn withHide(value=true)`](#fn-withhide)
@@ -46,6 +47,18 @@ PARAMETERS:
 * **value** (`string`)
 
 Set the datasource for this query.
+### fn withDirection
+
+```jsonnet
+withDirection(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"forward"`, `"backward"`, `"scan"`
+
+
 ### fn withEditorMode
 
 ```jsonnet

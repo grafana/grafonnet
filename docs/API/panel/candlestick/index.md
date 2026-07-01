@@ -110,6 +110,7 @@ grafonnet.panel.candlestick
     * [`fn withSortDesc(value=true)`](#fn-optionslegendwithsortdesc)
     * [`fn withWidth(value)`](#fn-optionslegendwithwidth)
   * [`obj tooltip`](#obj-optionstooltip)
+    * [`fn withHideZeros(value=true)`](#fn-optionstooltipwithhidezeros)
     * [`fn withMaxHeight(value)`](#fn-optionstooltipwithmaxheight)
     * [`fn withMaxWidth(value)`](#fn-optionstooltipwithmaxwidth)
     * [`fn withMode(value)`](#fn-optionstooltipwithmode)
@@ -295,7 +296,7 @@ fieldConfig.defaults.custom.withBarAlignment(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`integer`)
    - valid values: `-1`, `0`, `1`
 
 TODO docs
@@ -1174,6 +1175,18 @@ PARAMETERS:
 #### obj options.tooltip
 
 
+##### fn options.tooltip.withHideZeros
+
+```jsonnet
+options.tooltip.withHideZeros(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
 ##### fn options.tooltip.withMaxHeight
 
 ```jsonnet
@@ -1365,7 +1378,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+The datasource used in all targets.
 #### fn queryOptions.withHideTimeOverride
 
 ```jsonnet

@@ -13,10 +13,19 @@
 * [`fn withFilterMixin(value)`](#fn-withfiltermixin)
 * [`fn withHide(value=true)`](#fn-withhide)
 * [`fn withIconColor(value)`](#fn-withiconcolor)
+* [`fn withMappings(value)`](#fn-withmappings)
+* [`fn withMappingsMixin(value)`](#fn-withmappingsmixin)
 * [`fn withName(value)`](#fn-withname)
+* [`fn withPlacement(value="inControlsMenu")`](#fn-withplacement)
+* [`fn withPlacementMixin(value="inControlsMenu")`](#fn-withplacementmixin)
+* [`fn withStep(value)`](#fn-withstep)
+* [`fn withTagKeys(value)`](#fn-withtagkeys)
 * [`fn withTarget(value)`](#fn-withtarget)
 * [`fn withTargetMixin(value)`](#fn-withtargetmixin)
+* [`fn withTextFormat(value)`](#fn-withtextformat)
+* [`fn withTitleFormat(value)`](#fn-withtitleformat)
 * [`fn withType(value)`](#fn-withtype)
+* [`fn withUseValueForTime(value=true)`](#fn-withusevaluefortime)
 * [`obj datasource`](#obj-datasource)
   * [`fn withType(value)`](#fn-datasourcewithtype)
   * [`fn withUid(value)`](#fn-datasourcewithuid)
@@ -24,12 +33,8 @@
   * [`fn withExclude(value=true)`](#fn-filterwithexclude)
   * [`fn withIds(value)`](#fn-filterwithids)
   * [`fn withIdsMixin(value)`](#fn-filterwithidsmixin)
-* [`obj target`](#obj-target)
-  * [`fn withLimit(value)`](#fn-targetwithlimit)
-  * [`fn withMatchAny(value=true)`](#fn-targetwithmatchany)
-  * [`fn withTags(value)`](#fn-targetwithtags)
-  * [`fn withTagsMixin(value)`](#fn-targetwithtagsmixin)
-  * [`fn withType(value)`](#fn-targetwithtype)
+* [`obj placement`](#obj-placement)
+  * [`fn withAnnotationQueryPlacement(value)`](#fn-placementwithannotationqueryplacement)
 
 ## Fields
 
@@ -55,7 +60,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+Datasource where the annotations data is
 ### fn withDatasourceMixin
 
 ```jsonnet
@@ -66,7 +71,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+Datasource where the annotations data is
 ### fn withEnable
 
 ```jsonnet
@@ -136,6 +141,28 @@ PARAMETERS:
 * **value** (`string`)
 
 Color to use for the annotation event markers
+### fn withMappings
+
+```jsonnet
+withMappings(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+Mappings define how to convert data frame fields to annotation event fields.
+### fn withMappingsMixin
+
+```jsonnet
+withMappingsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+Mappings define how to convert data frame fields to annotation event fields.
 ### fn withName
 
 ```jsonnet
@@ -147,6 +174,52 @@ PARAMETERS:
 * **value** (`string`)
 
 Name of annotation.
+### fn withPlacement
+
+```jsonnet
+withPlacement(value="inControlsMenu")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"inControlsMenu"`
+
+Placement can be used to display the annotation query somewhere else on the dashboard other than the default location.
+### fn withPlacementMixin
+
+```jsonnet
+withPlacementMixin(value="inControlsMenu")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"inControlsMenu"`
+
+Placement can be used to display the annotation query somewhere else on the dashboard other than the default location.
+### fn withStep
+
+```jsonnet
+withStep(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Legacy Prometheus annotation query step interval.
+### fn withTagKeys
+
+```jsonnet
+withTagKeys(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Comma-separated label keys used as annotation tags.
 ### fn withTarget
 
 ```jsonnet
@@ -157,8 +230,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-TODO: this should be a regular DataQuery that depends on the selected dashboard
-these match the properties of the "grafana" datasouce that is default in most dashboards
+TODO.. this should just be a normal query target
 ### fn withTargetMixin
 
 ```jsonnet
@@ -169,8 +241,29 @@ PARAMETERS:
 
 * **value** (`object`)
 
-TODO: this should be a regular DataQuery that depends on the selected dashboard
-these match the properties of the "grafana" datasouce that is default in most dashboards
+TODO.. this should just be a normal query target
+### fn withTextFormat
+
+```jsonnet
+withTextFormat(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Format for Prometheus annotation text. Label values can be interpolated with templates like {{instance}}.
+### fn withTitleFormat
+
+```jsonnet
+withTitleFormat(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Format for Prometheus and Loki annotation titles. Label values can be interpolated with templates like {{instance}}.
 ### fn withType
 
 ```jsonnet
@@ -182,6 +275,18 @@ PARAMETERS:
 * **value** (`string`)
 
 TODO -- this should not exist here, it is based on the --grafana-- datasource
+### fn withUseValueForTime
+
+```jsonnet
+withUseValueForTime(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+Use the Prometheus series value as the annotation timestamp.
 ### obj datasource
 
 
@@ -244,67 +349,19 @@ PARAMETERS:
 * **value** (`array`)
 
 Panel IDs that should be included or excluded
-### obj target
+### obj placement
 
 
-#### fn target.withLimit
-
-```jsonnet
-target.withLimit(value)
-```
-
-PARAMETERS:
-
-* **value** (`integer`)
-
-Only required/valid for the grafana datasource...
-but code+tests is already depending on it so hard to change
-#### fn target.withMatchAny
+#### fn placement.withAnnotationQueryPlacement
 
 ```jsonnet
-target.withMatchAny(value=true)
-```
-
-PARAMETERS:
-
-* **value** (`boolean`)
-   - default value: `true`
-
-Only required/valid for the grafana datasource...
-but code+tests is already depending on it so hard to change
-#### fn target.withTags
-
-```jsonnet
-target.withTags(value)
-```
-
-PARAMETERS:
-
-* **value** (`array`)
-
-Only required/valid for the grafana datasource...
-but code+tests is already depending on it so hard to change
-#### fn target.withTagsMixin
-
-```jsonnet
-target.withTagsMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`array`)
-
-Only required/valid for the grafana datasource...
-but code+tests is already depending on it so hard to change
-#### fn target.withType
-
-```jsonnet
-target.withType(value)
+placement.withAnnotationQueryPlacement(value)
 ```
 
 PARAMETERS:
 
 * **value** (`string`)
+   - valid values: `"inControlsMenu"`
 
-Only required/valid for the grafana datasource...
-but code+tests is already depending on it so hard to change
+Annotation Query placement. Defines where the annotation query should be displayed.
+- "inControlsMenu" renders the annotation query in the dashboard controls dropdown menu

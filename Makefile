@@ -7,7 +7,7 @@ generate: gen/grafonnet-latest
 gen/grafonnet-latest:
 	./scripts/generate.sh ${LATEST} && \
 	./scripts/generate_latest.sh ${LATEST} && \
-	sed -i 's/v11\..\.0/$(LATEST)/' examples/*/output.json
+	sed -i 's/v13\..\.0/$(LATEST)/' examples/*/output.json
 
 localmkdocs:
 	python -m venv .mkdocs/.venv; \

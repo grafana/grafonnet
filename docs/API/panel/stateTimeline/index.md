@@ -16,14 +16,33 @@ grafonnet.panel.stateTimeline
 * [`obj fieldConfig`](#obj-fieldconfig)
   * [`obj defaults`](#obj-fieldconfigdefaults)
     * [`obj custom`](#obj-fieldconfigdefaultscustom)
+      * [`fn withAxisBorderShow(value=true)`](#fn-fieldconfigdefaultscustomwithaxisbordershow)
+      * [`fn withAxisCenteredZero(value=true)`](#fn-fieldconfigdefaultscustomwithaxiscenteredzero)
+      * [`fn withAxisColorMode(value)`](#fn-fieldconfigdefaultscustomwithaxiscolormode)
+      * [`fn withAxisGridShow(value=true)`](#fn-fieldconfigdefaultscustomwithaxisgridshow)
+      * [`fn withAxisLabel(value)`](#fn-fieldconfigdefaultscustomwithaxislabel)
+      * [`fn withAxisPlacement(value)`](#fn-fieldconfigdefaultscustomwithaxisplacement)
+      * [`fn withAxisSoftMax(value)`](#fn-fieldconfigdefaultscustomwithaxissoftmax)
+      * [`fn withAxisSoftMin(value)`](#fn-fieldconfigdefaultscustomwithaxissoftmin)
+      * [`fn withAxisWidth(value)`](#fn-fieldconfigdefaultscustomwithaxiswidth)
       * [`fn withFillOpacity(value=70)`](#fn-fieldconfigdefaultscustomwithfillopacity)
       * [`fn withHideFrom(value)`](#fn-fieldconfigdefaultscustomwithhidefrom)
       * [`fn withHideFromMixin(value)`](#fn-fieldconfigdefaultscustomwithhidefrommixin)
+      * [`fn withInsertNulls(value)`](#fn-fieldconfigdefaultscustomwithinsertnulls)
+      * [`fn withInsertNullsMixin(value)`](#fn-fieldconfigdefaultscustomwithinsertnullsmixin)
       * [`fn withLineWidth(value=0)`](#fn-fieldconfigdefaultscustomwithlinewidth)
+      * [`fn withScaleDistribution(value)`](#fn-fieldconfigdefaultscustomwithscaledistribution)
+      * [`fn withScaleDistributionMixin(value)`](#fn-fieldconfigdefaultscustomwithscaledistributionmixin)
+      * [`fn withSpanNulls(value)`](#fn-fieldconfigdefaultscustomwithspannulls)
+      * [`fn withSpanNullsMixin(value)`](#fn-fieldconfigdefaultscustomwithspannullsmixin)
       * [`obj hideFrom`](#obj-fieldconfigdefaultscustomhidefrom)
         * [`fn withLegend(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithlegend)
         * [`fn withTooltip(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithtooltip)
         * [`fn withViz(value=true)`](#fn-fieldconfigdefaultscustomhidefromwithviz)
+      * [`obj scaleDistribution`](#obj-fieldconfigdefaultscustomscaledistribution)
+        * [`fn withLinearThreshold(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithlinearthreshold)
+        * [`fn withLog(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithlog)
+        * [`fn withType(value)`](#fn-fieldconfigdefaultscustomscaledistributionwithtype)
 * [`obj libraryPanel`](#obj-librarypanel)
   * [`fn withName(value)`](#fn-librarypanelwithname)
   * [`fn withUid(value)`](#fn-librarypanelwithuid)
@@ -51,6 +70,7 @@ grafonnet.panel.stateTimeline
     * [`fn withSortDesc(value=true)`](#fn-optionslegendwithsortdesc)
     * [`fn withWidth(value)`](#fn-optionslegendwithwidth)
   * [`obj tooltip`](#obj-optionstooltip)
+    * [`fn withHideZeros(value=true)`](#fn-optionstooltipwithhidezeros)
     * [`fn withMaxHeight(value)`](#fn-optionstooltipwithmaxheight)
     * [`fn withMaxWidth(value)`](#fn-optionstooltipwithmaxwidth)
     * [`fn withMode(value)`](#fn-optionstooltipwithmode)
@@ -124,6 +144,110 @@ Creates a new stateTimeline panel with a title.
 ##### obj fieldConfig.defaults.custom
 
 
+###### fn fieldConfig.defaults.custom.withAxisBorderShow
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisBorderShow(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn fieldConfig.defaults.custom.withAxisCenteredZero
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisCenteredZero(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn fieldConfig.defaults.custom.withAxisColorMode
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisColorMode(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"text"`, `"series"`
+
+TODO docs
+###### fn fieldConfig.defaults.custom.withAxisGridShow
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisGridShow(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
+###### fn fieldConfig.defaults.custom.withAxisLabel
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisLabel(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+###### fn fieldConfig.defaults.custom.withAxisPlacement
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisPlacement(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"auto"`, `"top"`, `"right"`, `"bottom"`, `"left"`, `"hidden"`
+
+TODO docs
+###### fn fieldConfig.defaults.custom.withAxisSoftMax
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisSoftMax(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+###### fn fieldConfig.defaults.custom.withAxisSoftMin
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisSoftMin(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+###### fn fieldConfig.defaults.custom.withAxisWidth
+
+```jsonnet
+fieldConfig.defaults.custom.withAxisWidth(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
 ###### fn fieldConfig.defaults.custom.withFillOpacity
 
 ```jsonnet
@@ -158,6 +282,28 @@ PARAMETERS:
 * **value** (`object`)
 
 TODO docs
+###### fn fieldConfig.defaults.custom.withInsertNulls
+
+```jsonnet
+fieldConfig.defaults.custom.withInsertNulls(value)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`,`integer`)
+
+
+###### fn fieldConfig.defaults.custom.withInsertNullsMixin
+
+```jsonnet
+fieldConfig.defaults.custom.withInsertNullsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`,`integer`)
+
+
 ###### fn fieldConfig.defaults.custom.withLineWidth
 
 ```jsonnet
@@ -168,6 +314,50 @@ PARAMETERS:
 
 * **value** (`integer`)
    - default value: `0`
+
+
+###### fn fieldConfig.defaults.custom.withScaleDistribution
+
+```jsonnet
+fieldConfig.defaults.custom.withScaleDistribution(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+TODO docs
+###### fn fieldConfig.defaults.custom.withScaleDistributionMixin
+
+```jsonnet
+fieldConfig.defaults.custom.withScaleDistributionMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+TODO docs
+###### fn fieldConfig.defaults.custom.withSpanNulls
+
+```jsonnet
+fieldConfig.defaults.custom.withSpanNulls(value)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`,`integer`)
+
+
+###### fn fieldConfig.defaults.custom.withSpanNullsMixin
+
+```jsonnet
+fieldConfig.defaults.custom.withSpanNullsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`,`integer`)
 
 
 ###### obj fieldConfig.defaults.custom.hideFrom
@@ -209,6 +399,43 @@ PARAMETERS:
    - default value: `true`
 
 
+###### obj fieldConfig.defaults.custom.scaleDistribution
+
+
+####### fn fieldConfig.defaults.custom.scaleDistribution.withLinearThreshold
+
+```jsonnet
+fieldConfig.defaults.custom.scaleDistribution.withLinearThreshold(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+####### fn fieldConfig.defaults.custom.scaleDistribution.withLog
+
+```jsonnet
+fieldConfig.defaults.custom.scaleDistribution.withLog(value)
+```
+
+PARAMETERS:
+
+* **value** (`number`)
+
+
+####### fn fieldConfig.defaults.custom.scaleDistribution.withType
+
+```jsonnet
+fieldConfig.defaults.custom.scaleDistribution.withType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"linear"`, `"log"`, `"ordinal"`, `"symlog"`
+
+TODO docs
 ### obj libraryPanel
 
 
@@ -492,6 +719,18 @@ PARAMETERS:
 #### obj options.tooltip
 
 
+##### fn options.tooltip.withHideZeros
+
+```jsonnet
+options.tooltip.withHideZeros(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+
 ##### fn options.tooltip.withMaxHeight
 
 ```jsonnet
@@ -683,7 +922,7 @@ PARAMETERS:
 
 * **value** (`object`)
 
-Ref to a DataSource instance
+The datasource used in all targets.
 #### fn queryOptions.withHideTimeOverride
 
 ```jsonnet

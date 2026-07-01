@@ -83,7 +83,7 @@ withType(value)
 PARAMETERS:
 
 * **value** (`string`)
-   - valid values: `"alertmanager"`, `" dingding"`, `" discord"`, `" email"`, `" googlechat"`, `" kafka"`, `" line"`, `" opsgenie"`, `" pagerduty"`, `" pushover"`, `" sensugo"`, `" slack"`, `" teams"`, `" telegram"`, `" threema"`, `" victorops"`, `" webhook"`, `" wecom"`
+   - valid values: `"alertmanager"`, `"dingding"`, `"discord"`, `"email"`, `"googlechat"`, `"kafka"`, `"line"`, `"opsgenie"`, `"pagerduty"`, `"pushover"`, `"sensugo"`, `"slack"`, `"teams"`, `"telegram"`, `"threema"`, `"victorops"`, `"webhook"`, `"wecom"`
 
 
 ### fn withUid

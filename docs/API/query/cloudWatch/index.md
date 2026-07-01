@@ -4,142 +4,166 @@ grafonnet.query.cloudWatch
 
 ## Subpackages
 
-* [CloudWatchLogsQuery.logGroups](CloudWatchLogsQuery/logGroups.md)
-* [CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.parameters](CloudWatchMetricsQuery/sql/from/QueryEditorFunctionExpression/parameters.md)
-* [CloudWatchMetricsQuery.sql.orderBy.parameters](CloudWatchMetricsQuery/sql/orderBy/parameters.md)
-* [CloudWatchMetricsQuery.sql.select.parameters](CloudWatchMetricsQuery/sql/select/parameters.md)
+* [LogsQuery.logGroups](LogsQuery/logGroups.md)
+* [MetricsQuery.sql.from.QueryEditorFunctionExpression.parameters](MetricsQuery/sql/from/QueryEditorFunctionExpression/parameters.md)
+* [MetricsQuery.sql.orderBy.parameters](MetricsQuery/sql/orderBy/parameters.md)
+* [MetricsQuery.sql.select.parameters](MetricsQuery/sql/select/parameters.md)
 
 ## Index
 
+* [`obj AnnotationQuery`](#obj-annotationquery)
+  * [`fn withAccountId(value)`](#fn-annotationquerywithaccountid)
+  * [`fn withActionPrefix(value)`](#fn-annotationquerywithactionprefix)
+  * [`fn withAlarmNamePrefix(value)`](#fn-annotationquerywithalarmnameprefix)
+  * [`fn withDatasource(value)`](#fn-annotationquerywithdatasource)
+  * [`fn withDatasourceMixin(value)`](#fn-annotationquerywithdatasourcemixin)
+  * [`fn withDimensions(value)`](#fn-annotationquerywithdimensions)
+  * [`fn withDimensionsMixin(value)`](#fn-annotationquerywithdimensionsmixin)
+  * [`fn withHide(value=true)`](#fn-annotationquerywithhide)
+  * [`fn withMatchExact(value=true)`](#fn-annotationquerywithmatchexact)
+  * [`fn withMetricName(value)`](#fn-annotationquerywithmetricname)
+  * [`fn withNamespace(value)`](#fn-annotationquerywithnamespace)
+  * [`fn withPeriod(value)`](#fn-annotationquerywithperiod)
+  * [`fn withPrefixMatching(value=true)`](#fn-annotationquerywithprefixmatching)
+  * [`fn withQueryMode(value="Annotations")`](#fn-annotationquerywithquerymode)
+  * [`fn withQueryType(value)`](#fn-annotationquerywithquerytype)
+  * [`fn withRefId(value)`](#fn-annotationquerywithrefid)
+  * [`fn withRegion(value)`](#fn-annotationquerywithregion)
+  * [`fn withStatistic(value)`](#fn-annotationquerywithstatistic)
+  * [`fn withStatistics(value)`](#fn-annotationquerywithstatistics)
+  * [`fn withStatisticsMixin(value)`](#fn-annotationquerywithstatisticsmixin)
+  * [`obj datasource`](#obj-annotationquerydatasource)
+    * [`fn withType(value)`](#fn-annotationquerydatasourcewithtype)
+    * [`fn withUid(value)`](#fn-annotationquerydatasourcewithuid)
 * [`obj CloudWatchAnnotationQuery`](#obj-cloudwatchannotationquery)
-  * [`fn withAccountId(value)`](#fn-cloudwatchannotationquerywithaccountid)
-  * [`fn withActionPrefix(value)`](#fn-cloudwatchannotationquerywithactionprefix)
-  * [`fn withAlarmNamePrefix(value)`](#fn-cloudwatchannotationquerywithalarmnameprefix)
   * [`fn withDatasource(value)`](#fn-cloudwatchannotationquerywithdatasource)
-  * [`fn withDimensions(value)`](#fn-cloudwatchannotationquerywithdimensions)
-  * [`fn withDimensionsMixin(value)`](#fn-cloudwatchannotationquerywithdimensionsmixin)
-  * [`fn withHide(value=true)`](#fn-cloudwatchannotationquerywithhide)
-  * [`fn withMatchExact(value=true)`](#fn-cloudwatchannotationquerywithmatchexact)
-  * [`fn withMetricName(value)`](#fn-cloudwatchannotationquerywithmetricname)
-  * [`fn withNamespace(value)`](#fn-cloudwatchannotationquerywithnamespace)
-  * [`fn withPeriod(value)`](#fn-cloudwatchannotationquerywithperiod)
-  * [`fn withPrefixMatching(value=true)`](#fn-cloudwatchannotationquerywithprefixmatching)
-  * [`fn withQueryMode(value="Annotations")`](#fn-cloudwatchannotationquerywithquerymode)
-  * [`fn withQueryType(value)`](#fn-cloudwatchannotationquerywithquerytype)
-  * [`fn withRefId(value)`](#fn-cloudwatchannotationquerywithrefid)
-  * [`fn withRegion(value)`](#fn-cloudwatchannotationquerywithregion)
-  * [`fn withStatistic(value)`](#fn-cloudwatchannotationquerywithstatistic)
-  * [`fn withStatistics(value)`](#fn-cloudwatchannotationquerywithstatistics)
-  * [`fn withStatisticsMixin(value)`](#fn-cloudwatchannotationquerywithstatisticsmixin)
-  * [`obj datasource`](#obj-cloudwatchannotationquerydatasource)
-    * [`fn withType(value)`](#fn-cloudwatchannotationquerydatasourcewithtype)
-    * [`fn withUid(value)`](#fn-cloudwatchannotationquerydatasourcewithuid)
 * [`obj CloudWatchLogsQuery`](#obj-cloudwatchlogsquery)
   * [`fn withDatasource(value)`](#fn-cloudwatchlogsquerywithdatasource)
-  * [`fn withExpression(value)`](#fn-cloudwatchlogsquerywithexpression)
-  * [`fn withHide(value=true)`](#fn-cloudwatchlogsquerywithhide)
-  * [`fn withId(value)`](#fn-cloudwatchlogsquerywithid)
-  * [`fn withLogGroupNames(value)`](#fn-cloudwatchlogsquerywithloggroupnames)
-  * [`fn withLogGroupNamesMixin(value)`](#fn-cloudwatchlogsquerywithloggroupnamesmixin)
-  * [`fn withLogGroups(value)`](#fn-cloudwatchlogsquerywithloggroups)
-  * [`fn withLogGroupsMixin(value)`](#fn-cloudwatchlogsquerywithloggroupsmixin)
-  * [`fn withQueryLanguage(value)`](#fn-cloudwatchlogsquerywithquerylanguage)
-  * [`fn withQueryMode(value="Logs")`](#fn-cloudwatchlogsquerywithquerymode)
-  * [`fn withQueryType(value)`](#fn-cloudwatchlogsquerywithquerytype)
-  * [`fn withRefId(value)`](#fn-cloudwatchlogsquerywithrefid)
-  * [`fn withRegion(value)`](#fn-cloudwatchlogsquerywithregion)
-  * [`fn withStatsGroups(value)`](#fn-cloudwatchlogsquerywithstatsgroups)
-  * [`fn withStatsGroupsMixin(value)`](#fn-cloudwatchlogsquerywithstatsgroupsmixin)
-  * [`obj datasource`](#obj-cloudwatchlogsquerydatasource)
-    * [`fn withType(value)`](#fn-cloudwatchlogsquerydatasourcewithtype)
-    * [`fn withUid(value)`](#fn-cloudwatchlogsquerydatasourcewithuid)
 * [`obj CloudWatchMetricsQuery`](#obj-cloudwatchmetricsquery)
-  * [`fn withAccountId(value)`](#fn-cloudwatchmetricsquerywithaccountid)
-  * [`fn withAlias(value)`](#fn-cloudwatchmetricsquerywithalias)
   * [`fn withDatasource(value)`](#fn-cloudwatchmetricsquerywithdatasource)
-  * [`fn withDimensions(value)`](#fn-cloudwatchmetricsquerywithdimensions)
-  * [`fn withDimensionsMixin(value)`](#fn-cloudwatchmetricsquerywithdimensionsmixin)
-  * [`fn withExpression(value)`](#fn-cloudwatchmetricsquerywithexpression)
-  * [`fn withHide(value=true)`](#fn-cloudwatchmetricsquerywithhide)
-  * [`fn withId(value)`](#fn-cloudwatchmetricsquerywithid)
-  * [`fn withLabel(value)`](#fn-cloudwatchmetricsquerywithlabel)
-  * [`fn withMatchExact(value=true)`](#fn-cloudwatchmetricsquerywithmatchexact)
-  * [`fn withMetricEditorMode(value)`](#fn-cloudwatchmetricsquerywithmetriceditormode)
-  * [`fn withMetricName(value)`](#fn-cloudwatchmetricsquerywithmetricname)
-  * [`fn withMetricQueryType(value)`](#fn-cloudwatchmetricsquerywithmetricquerytype)
-  * [`fn withNamespace(value)`](#fn-cloudwatchmetricsquerywithnamespace)
-  * [`fn withPeriod(value)`](#fn-cloudwatchmetricsquerywithperiod)
-  * [`fn withQueryMode(value="Metrics")`](#fn-cloudwatchmetricsquerywithquerymode)
-  * [`fn withQueryType(value)`](#fn-cloudwatchmetricsquerywithquerytype)
-  * [`fn withRefId(value)`](#fn-cloudwatchmetricsquerywithrefid)
-  * [`fn withRegion(value)`](#fn-cloudwatchmetricsquerywithregion)
-  * [`fn withSql(value)`](#fn-cloudwatchmetricsquerywithsql)
-  * [`fn withSqlExpression(value)`](#fn-cloudwatchmetricsquerywithsqlexpression)
-  * [`fn withSqlMixin(value)`](#fn-cloudwatchmetricsquerywithsqlmixin)
-  * [`fn withStatistic(value)`](#fn-cloudwatchmetricsquerywithstatistic)
-  * [`fn withStatistics(value)`](#fn-cloudwatchmetricsquerywithstatistics)
-  * [`fn withStatisticsMixin(value)`](#fn-cloudwatchmetricsquerywithstatisticsmixin)
-  * [`obj datasource`](#obj-cloudwatchmetricsquerydatasource)
-    * [`fn withType(value)`](#fn-cloudwatchmetricsquerydatasourcewithtype)
-    * [`fn withUid(value)`](#fn-cloudwatchmetricsquerydatasourcewithuid)
-  * [`obj sql`](#obj-cloudwatchmetricsquerysql)
-    * [`fn withFrom(value)`](#fn-cloudwatchmetricsquerysqlwithfrom)
-    * [`fn withFromMixin(value)`](#fn-cloudwatchmetricsquerysqlwithfrommixin)
-    * [`fn withGroupBy(value)`](#fn-cloudwatchmetricsquerysqlwithgroupby)
-    * [`fn withGroupByMixin(value)`](#fn-cloudwatchmetricsquerysqlwithgroupbymixin)
-    * [`fn withLimit(value)`](#fn-cloudwatchmetricsquerysqlwithlimit)
-    * [`fn withOrderBy(value)`](#fn-cloudwatchmetricsquerysqlwithorderby)
-    * [`fn withOrderByDirection(value)`](#fn-cloudwatchmetricsquerysqlwithorderbydirection)
-    * [`fn withOrderByMixin(value)`](#fn-cloudwatchmetricsquerysqlwithorderbymixin)
-    * [`fn withSelect(value)`](#fn-cloudwatchmetricsquerysqlwithselect)
-    * [`fn withSelectMixin(value)`](#fn-cloudwatchmetricsquerysqlwithselectmixin)
-    * [`fn withWhere(value)`](#fn-cloudwatchmetricsquerysqlwithwhere)
-    * [`fn withWhereMixin(value)`](#fn-cloudwatchmetricsquerysqlwithwheremixin)
-    * [`obj from`](#obj-cloudwatchmetricsquerysqlfrom)
-      * [`fn withQueryEditorFunctionExpression(value)`](#fn-cloudwatchmetricsquerysqlfromwithqueryeditorfunctionexpression)
-      * [`fn withQueryEditorFunctionExpressionMixin(value)`](#fn-cloudwatchmetricsquerysqlfromwithqueryeditorfunctionexpressionmixin)
-      * [`fn withQueryEditorPropertyExpression(value)`](#fn-cloudwatchmetricsquerysqlfromwithqueryeditorpropertyexpression)
-      * [`fn withQueryEditorPropertyExpressionMixin(value)`](#fn-cloudwatchmetricsquerysqlfromwithqueryeditorpropertyexpressionmixin)
-      * [`obj QueryEditorFunctionExpression`](#obj-cloudwatchmetricsquerysqlfromqueryeditorfunctionexpression)
-        * [`fn withName(value)`](#fn-cloudwatchmetricsquerysqlfromqueryeditorfunctionexpressionwithname)
-        * [`fn withParameters(value)`](#fn-cloudwatchmetricsquerysqlfromqueryeditorfunctionexpressionwithparameters)
-        * [`fn withParametersMixin(value)`](#fn-cloudwatchmetricsquerysqlfromqueryeditorfunctionexpressionwithparametersmixin)
-        * [`fn withType()`](#fn-cloudwatchmetricsquerysqlfromqueryeditorfunctionexpressionwithtype)
-      * [`obj QueryEditorPropertyExpression`](#obj-cloudwatchmetricsquerysqlfromqueryeditorpropertyexpression)
-        * [`fn withProperty(value)`](#fn-cloudwatchmetricsquerysqlfromqueryeditorpropertyexpressionwithproperty)
-        * [`fn withPropertyMixin(value)`](#fn-cloudwatchmetricsquerysqlfromqueryeditorpropertyexpressionwithpropertymixin)
-        * [`fn withType()`](#fn-cloudwatchmetricsquerysqlfromqueryeditorpropertyexpressionwithtype)
-        * [`obj property`](#obj-cloudwatchmetricsquerysqlfromqueryeditorpropertyexpressionproperty)
-          * [`fn withName(value)`](#fn-cloudwatchmetricsquerysqlfromqueryeditorpropertyexpressionpropertywithname)
-          * [`fn withType(value)`](#fn-cloudwatchmetricsquerysqlfromqueryeditorpropertyexpressionpropertywithtype)
-    * [`obj groupBy`](#obj-cloudwatchmetricsquerysqlgroupby)
-      * [`fn withExpressions(value)`](#fn-cloudwatchmetricsquerysqlgroupbywithexpressions)
-      * [`fn withExpressionsMixin(value)`](#fn-cloudwatchmetricsquerysqlgroupbywithexpressionsmixin)
-      * [`fn withType(value)`](#fn-cloudwatchmetricsquerysqlgroupbywithtype)
-    * [`obj orderBy`](#obj-cloudwatchmetricsquerysqlorderby)
-      * [`fn withName(value)`](#fn-cloudwatchmetricsquerysqlorderbywithname)
-      * [`fn withParameters(value)`](#fn-cloudwatchmetricsquerysqlorderbywithparameters)
-      * [`fn withParametersMixin(value)`](#fn-cloudwatchmetricsquerysqlorderbywithparametersmixin)
-      * [`fn withType()`](#fn-cloudwatchmetricsquerysqlorderbywithtype)
-    * [`obj select`](#obj-cloudwatchmetricsquerysqlselect)
-      * [`fn withName(value)`](#fn-cloudwatchmetricsquerysqlselectwithname)
-      * [`fn withParameters(value)`](#fn-cloudwatchmetricsquerysqlselectwithparameters)
-      * [`fn withParametersMixin(value)`](#fn-cloudwatchmetricsquerysqlselectwithparametersmixin)
-      * [`fn withType()`](#fn-cloudwatchmetricsquerysqlselectwithtype)
-    * [`obj where`](#obj-cloudwatchmetricsquerysqlwhere)
-      * [`fn withExpressions(value)`](#fn-cloudwatchmetricsquerysqlwherewithexpressions)
-      * [`fn withExpressionsMixin(value)`](#fn-cloudwatchmetricsquerysqlwherewithexpressionsmixin)
-      * [`fn withType(value)`](#fn-cloudwatchmetricsquerysqlwherewithtype)
+* [`obj LogsQuery`](#obj-logsquery)
+  * [`fn withDatasource(value)`](#fn-logsquerywithdatasource)
+  * [`fn withDatasourceMixin(value)`](#fn-logsquerywithdatasourcemixin)
+  * [`fn withExpression(value)`](#fn-logsquerywithexpression)
+  * [`fn withHide(value=true)`](#fn-logsquerywithhide)
+  * [`fn withId(value)`](#fn-logsquerywithid)
+  * [`fn withLogGroupNames(value)`](#fn-logsquerywithloggroupnames)
+  * [`fn withLogGroupNamesMixin(value)`](#fn-logsquerywithloggroupnamesmixin)
+  * [`fn withLogGroups(value)`](#fn-logsquerywithloggroups)
+  * [`fn withLogGroupsMixin(value)`](#fn-logsquerywithloggroupsmixin)
+  * [`fn withQueryLanguage(value)`](#fn-logsquerywithquerylanguage)
+  * [`fn withQueryMode(value="Logs")`](#fn-logsquerywithquerymode)
+  * [`fn withQueryType(value)`](#fn-logsquerywithquerytype)
+  * [`fn withRefId(value)`](#fn-logsquerywithrefid)
+  * [`fn withRegion(value)`](#fn-logsquerywithregion)
+  * [`fn withStatsGroups(value)`](#fn-logsquerywithstatsgroups)
+  * [`fn withStatsGroupsMixin(value)`](#fn-logsquerywithstatsgroupsmixin)
+  * [`obj datasource`](#obj-logsquerydatasource)
+    * [`fn withType(value)`](#fn-logsquerydatasourcewithtype)
+    * [`fn withUid(value)`](#fn-logsquerydatasourcewithuid)
+* [`obj MetricsQuery`](#obj-metricsquery)
+  * [`fn withAccountId(value)`](#fn-metricsquerywithaccountid)
+  * [`fn withAlias(value)`](#fn-metricsquerywithalias)
+  * [`fn withDatasource(value)`](#fn-metricsquerywithdatasource)
+  * [`fn withDatasourceMixin(value)`](#fn-metricsquerywithdatasourcemixin)
+  * [`fn withDimensions(value)`](#fn-metricsquerywithdimensions)
+  * [`fn withDimensionsMixin(value)`](#fn-metricsquerywithdimensionsmixin)
+  * [`fn withExpression(value)`](#fn-metricsquerywithexpression)
+  * [`fn withHide(value=true)`](#fn-metricsquerywithhide)
+  * [`fn withId(value)`](#fn-metricsquerywithid)
+  * [`fn withLabel(value)`](#fn-metricsquerywithlabel)
+  * [`fn withMatchExact(value=true)`](#fn-metricsquerywithmatchexact)
+  * [`fn withMetricEditorMode(value)`](#fn-metricsquerywithmetriceditormode)
+  * [`fn withMetricName(value)`](#fn-metricsquerywithmetricname)
+  * [`fn withMetricQueryType(value)`](#fn-metricsquerywithmetricquerytype)
+  * [`fn withNamespace(value)`](#fn-metricsquerywithnamespace)
+  * [`fn withPeriod(value)`](#fn-metricsquerywithperiod)
+  * [`fn withQueryMode(value="Metrics")`](#fn-metricsquerywithquerymode)
+  * [`fn withQueryType(value)`](#fn-metricsquerywithquerytype)
+  * [`fn withRefId(value)`](#fn-metricsquerywithrefid)
+  * [`fn withRegion(value)`](#fn-metricsquerywithregion)
+  * [`fn withSql(value)`](#fn-metricsquerywithsql)
+  * [`fn withSqlExpression(value)`](#fn-metricsquerywithsqlexpression)
+  * [`fn withSqlMixin(value)`](#fn-metricsquerywithsqlmixin)
+  * [`fn withStatistic(value)`](#fn-metricsquerywithstatistic)
+  * [`fn withStatistics(value)`](#fn-metricsquerywithstatistics)
+  * [`fn withStatisticsMixin(value)`](#fn-metricsquerywithstatisticsmixin)
+  * [`obj datasource`](#obj-metricsquerydatasource)
+    * [`fn withType(value)`](#fn-metricsquerydatasourcewithtype)
+    * [`fn withUid(value)`](#fn-metricsquerydatasourcewithuid)
+  * [`obj sql`](#obj-metricsquerysql)
+    * [`fn withFrom(value)`](#fn-metricsquerysqlwithfrom)
+    * [`fn withFromMixin(value)`](#fn-metricsquerysqlwithfrommixin)
+    * [`fn withGroupBy(value)`](#fn-metricsquerysqlwithgroupby)
+    * [`fn withGroupByMixin(value)`](#fn-metricsquerysqlwithgroupbymixin)
+    * [`fn withLimit(value)`](#fn-metricsquerysqlwithlimit)
+    * [`fn withOrderBy(value)`](#fn-metricsquerysqlwithorderby)
+    * [`fn withOrderByDirection(value)`](#fn-metricsquerysqlwithorderbydirection)
+    * [`fn withOrderByMixin(value)`](#fn-metricsquerysqlwithorderbymixin)
+    * [`fn withSelect(value)`](#fn-metricsquerysqlwithselect)
+    * [`fn withSelectMixin(value)`](#fn-metricsquerysqlwithselectmixin)
+    * [`fn withWhere(value)`](#fn-metricsquerysqlwithwhere)
+    * [`fn withWhereMixin(value)`](#fn-metricsquerysqlwithwheremixin)
+    * [`obj from`](#obj-metricsquerysqlfrom)
+      * [`fn withQueryEditorFunctionExpression(value)`](#fn-metricsquerysqlfromwithqueryeditorfunctionexpression)
+      * [`fn withQueryEditorFunctionExpressionMixin(value)`](#fn-metricsquerysqlfromwithqueryeditorfunctionexpressionmixin)
+      * [`fn withQueryEditorPropertyExpression(value)`](#fn-metricsquerysqlfromwithqueryeditorpropertyexpression)
+      * [`fn withQueryEditorPropertyExpressionMixin(value)`](#fn-metricsquerysqlfromwithqueryeditorpropertyexpressionmixin)
+      * [`obj QueryEditorFunctionExpression`](#obj-metricsquerysqlfromqueryeditorfunctionexpression)
+        * [`fn withName(value)`](#fn-metricsquerysqlfromqueryeditorfunctionexpressionwithname)
+        * [`fn withParameters(value)`](#fn-metricsquerysqlfromqueryeditorfunctionexpressionwithparameters)
+        * [`fn withParametersMixin(value)`](#fn-metricsquerysqlfromqueryeditorfunctionexpressionwithparametersmixin)
+        * [`fn withType(value="function")`](#fn-metricsquerysqlfromqueryeditorfunctionexpressionwithtype)
+        * [`fn withTypeMixin(value="function")`](#fn-metricsquerysqlfromqueryeditorfunctionexpressionwithtypemixin)
+        * [`obj type`](#obj-metricsquerysqlfromqueryeditorfunctionexpressiontype)
+          * [`fn withQueryEditorExpressionType(value)`](#fn-metricsquerysqlfromqueryeditorfunctionexpressiontypewithqueryeditorexpressiontype)
+      * [`obj QueryEditorPropertyExpression`](#obj-metricsquerysqlfromqueryeditorpropertyexpression)
+        * [`fn withProperty(value)`](#fn-metricsquerysqlfromqueryeditorpropertyexpressionwithproperty)
+        * [`fn withPropertyMixin(value)`](#fn-metricsquerysqlfromqueryeditorpropertyexpressionwithpropertymixin)
+        * [`fn withType(value="property")`](#fn-metricsquerysqlfromqueryeditorpropertyexpressionwithtype)
+        * [`fn withTypeMixin(value="property")`](#fn-metricsquerysqlfromqueryeditorpropertyexpressionwithtypemixin)
+        * [`obj property`](#obj-metricsquerysqlfromqueryeditorpropertyexpressionproperty)
+          * [`fn withName(value)`](#fn-metricsquerysqlfromqueryeditorpropertyexpressionpropertywithname)
+          * [`fn withType(value="string")`](#fn-metricsquerysqlfromqueryeditorpropertyexpressionpropertywithtype)
+          * [`fn withTypeMixin(value="string")`](#fn-metricsquerysqlfromqueryeditorpropertyexpressionpropertywithtypemixin)
+          * [`obj type`](#obj-metricsquerysqlfromqueryeditorpropertyexpressionpropertytype)
+            * [`fn withQueryEditorPropertyType(value)`](#fn-metricsquerysqlfromqueryeditorpropertyexpressionpropertytypewithqueryeditorpropertytype)
+        * [`obj type`](#obj-metricsquerysqlfromqueryeditorpropertyexpressiontype)
+          * [`fn withQueryEditorExpressionType(value)`](#fn-metricsquerysqlfromqueryeditorpropertyexpressiontypewithqueryeditorexpressiontype)
+    * [`obj groupBy`](#obj-metricsquerysqlgroupby)
+      * [`fn withExpressions(value)`](#fn-metricsquerysqlgroupbywithexpressions)
+      * [`fn withExpressionsMixin(value)`](#fn-metricsquerysqlgroupbywithexpressionsmixin)
+      * [`fn withType(value)`](#fn-metricsquerysqlgroupbywithtype)
+    * [`obj orderBy`](#obj-metricsquerysqlorderby)
+      * [`fn withName(value)`](#fn-metricsquerysqlorderbywithname)
+      * [`fn withParameters(value)`](#fn-metricsquerysqlorderbywithparameters)
+      * [`fn withParametersMixin(value)`](#fn-metricsquerysqlorderbywithparametersmixin)
+      * [`fn withType(value="function")`](#fn-metricsquerysqlorderbywithtype)
+      * [`fn withTypeMixin(value="function")`](#fn-metricsquerysqlorderbywithtypemixin)
+      * [`obj type`](#obj-metricsquerysqlorderbytype)
+        * [`fn withQueryEditorExpressionType(value)`](#fn-metricsquerysqlorderbytypewithqueryeditorexpressiontype)
+    * [`obj select`](#obj-metricsquerysqlselect)
+      * [`fn withName(value)`](#fn-metricsquerysqlselectwithname)
+      * [`fn withParameters(value)`](#fn-metricsquerysqlselectwithparameters)
+      * [`fn withParametersMixin(value)`](#fn-metricsquerysqlselectwithparametersmixin)
+      * [`fn withType(value="function")`](#fn-metricsquerysqlselectwithtype)
+      * [`fn withTypeMixin(value="function")`](#fn-metricsquerysqlselectwithtypemixin)
+      * [`obj type`](#obj-metricsquerysqlselecttype)
+        * [`fn withQueryEditorExpressionType(value)`](#fn-metricsquerysqlselecttypewithqueryeditorexpressiontype)
+    * [`obj where`](#obj-metricsquerysqlwhere)
+      * [`fn withExpressions(value)`](#fn-metricsquerysqlwherewithexpressions)
+      * [`fn withExpressionsMixin(value)`](#fn-metricsquerysqlwherewithexpressionsmixin)
+      * [`fn withType(value)`](#fn-metricsquerysqlwherewithtype)
 
 ## Fields
 
-### obj CloudWatchAnnotationQuery
+### obj AnnotationQuery
 
 
-#### fn CloudWatchAnnotationQuery.withAccountId
+#### fn AnnotationQuery.withAccountId
 
 ```jsonnet
-CloudWatchAnnotationQuery.withAccountId(value)
+AnnotationQuery.withAccountId(value)
 ```
 
 PARAMETERS:
@@ -147,10 +171,10 @@ PARAMETERS:
 * **value** (`string`)
 
 The ID of the AWS account to query for the metric, specifying `all` will query all accounts that the monitoring account is permitted to query.
-#### fn CloudWatchAnnotationQuery.withActionPrefix
+#### fn AnnotationQuery.withActionPrefix
 
 ```jsonnet
-CloudWatchAnnotationQuery.withActionPrefix(value)
+AnnotationQuery.withActionPrefix(value)
 ```
 
 PARAMETERS:
@@ -162,10 +186,10 @@ that use a certain alarm action. For example, you could specify the ARN of
 an SNS topic to find all alarms that send notifications to that topic.
 e.g. `arn:aws:sns:us-east-1:123456789012:my-app-` would match `arn:aws:sns:us-east-1:123456789012:my-app-action`
 but not match `arn:aws:sns:us-east-1:123456789012:your-app-action`
-#### fn CloudWatchAnnotationQuery.withAlarmNamePrefix
+#### fn AnnotationQuery.withAlarmNamePrefix
 
 ```jsonnet
-CloudWatchAnnotationQuery.withAlarmNamePrefix(value)
+AnnotationQuery.withAlarmNamePrefix(value)
 ```
 
 PARAMETERS:
@@ -175,6 +199,235 @@ PARAMETERS:
 An alarm name prefix. If you specify this parameter, you receive information
 about all alarms that have names that start with this prefix.
 e.g. `my-team-service-` would match `my-team-service-high-cpu` but not match `your-team-service-high-cpu`
+#### fn AnnotationQuery.withDatasource
+
+```jsonnet
+AnnotationQuery.withDatasource(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+For mixed data sources the selected datasource is on the query level.
+For non mixed scenarios this is undefined.
+TODO find a better way to do this ^ that's friendly to schema
+TODO this shouldn't be unknown but DataSourceRef | null
+#### fn AnnotationQuery.withDatasourceMixin
+
+```jsonnet
+AnnotationQuery.withDatasourceMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+For mixed data sources the selected datasource is on the query level.
+For non mixed scenarios this is undefined.
+TODO find a better way to do this ^ that's friendly to schema
+TODO this shouldn't be unknown but DataSourceRef | null
+#### fn AnnotationQuery.withDimensions
+
+```jsonnet
+AnnotationQuery.withDimensions(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.
+#### fn AnnotationQuery.withDimensionsMixin
+
+```jsonnet
+AnnotationQuery.withDimensionsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.
+#### fn AnnotationQuery.withHide
+
+```jsonnet
+AnnotationQuery.withHide(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+If hide is set to true, Grafana will filter out the response(s) associated with this query before returning it to the panel.
+#### fn AnnotationQuery.withMatchExact
+
+```jsonnet
+AnnotationQuery.withMatchExact(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+Only show metrics that exactly match all defined dimension names.
+#### fn AnnotationQuery.withMetricName
+
+```jsonnet
+AnnotationQuery.withMetricName(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Name of the metric
+#### fn AnnotationQuery.withNamespace
+
+```jsonnet
+AnnotationQuery.withNamespace(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+A namespace is a container for CloudWatch metrics. Metrics in different namespaces are isolated from each other, so that metrics from different applications are not mistakenly aggregated into the same statistics. For example, Amazon EC2 uses the AWS/EC2 namespace.
+#### fn AnnotationQuery.withPeriod
+
+```jsonnet
+AnnotationQuery.withPeriod(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+The length of time associated with a specific Amazon CloudWatch statistic. Can be specified by a number of seconds, 'auto', or as a duration string e.g. '15m' being 15 minutes
+#### fn AnnotationQuery.withPrefixMatching
+
+```jsonnet
+AnnotationQuery.withPrefixMatching(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+Enable matching on the prefix of the action name or alarm name, specify the prefixes with actionPrefix and/or alarmNamePrefix
+#### fn AnnotationQuery.withQueryMode
+
+```jsonnet
+AnnotationQuery.withQueryMode(value="Annotations")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"Annotations"`
+   - valid values: `"Metrics"`, `"Logs"`, `"Annotations"`
+
+Whether a query is a Metrics, Logs, or Annotations query
+#### fn AnnotationQuery.withQueryType
+
+```jsonnet
+AnnotationQuery.withQueryType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Specify the query flavor
+TODO make this required and give it a default
+#### fn AnnotationQuery.withRefId
+
+```jsonnet
+AnnotationQuery.withRefId(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+A unique identifier for the query within the list of targets.
+In server side expressions, the refId is used as a variable name to identify results.
+By default, the UI will assign A->Z; however setting meaningful names may be useful.
+#### fn AnnotationQuery.withRegion
+
+```jsonnet
+AnnotationQuery.withRegion(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+AWS region to query for the metric
+#### fn AnnotationQuery.withStatistic
+
+```jsonnet
+AnnotationQuery.withStatistic(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Metric data aggregations over specified periods of time. For detailed definitions of the statistics supported by CloudWatch, see https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.
+#### fn AnnotationQuery.withStatistics
+
+```jsonnet
+AnnotationQuery.withStatistics(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+@deprecated use statistic
+#### fn AnnotationQuery.withStatisticsMixin
+
+```jsonnet
+AnnotationQuery.withStatisticsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+@deprecated use statistic
+#### obj AnnotationQuery.datasource
+
+
+##### fn AnnotationQuery.datasource.withType
+
+```jsonnet
+AnnotationQuery.datasource.withType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+The plugin type-id
+##### fn AnnotationQuery.datasource.withUid
+
+```jsonnet
+AnnotationQuery.datasource.withUid(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Specific datasource instance
+### obj CloudWatchAnnotationQuery
+
+
 #### fn CloudWatchAnnotationQuery.withDatasource
 
 ```jsonnet
@@ -186,204 +439,6 @@ PARAMETERS:
 * **value** (`string`)
 
 Set the datasource for this query.
-#### fn CloudWatchAnnotationQuery.withDimensions
-
-```jsonnet
-CloudWatchAnnotationQuery.withDimensions(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.
-#### fn CloudWatchAnnotationQuery.withDimensionsMixin
-
-```jsonnet
-CloudWatchAnnotationQuery.withDimensionsMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.
-#### fn CloudWatchAnnotationQuery.withHide
-
-```jsonnet
-CloudWatchAnnotationQuery.withHide(value=true)
-```
-
-PARAMETERS:
-
-* **value** (`boolean`)
-   - default value: `true`
-
-If hide is set to true, Grafana will filter out the response(s) associated with this query before returning it to the panel.
-#### fn CloudWatchAnnotationQuery.withMatchExact
-
-```jsonnet
-CloudWatchAnnotationQuery.withMatchExact(value=true)
-```
-
-PARAMETERS:
-
-* **value** (`boolean`)
-   - default value: `true`
-
-Only show metrics that exactly match all defined dimension names.
-#### fn CloudWatchAnnotationQuery.withMetricName
-
-```jsonnet
-CloudWatchAnnotationQuery.withMetricName(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-Name of the metric
-#### fn CloudWatchAnnotationQuery.withNamespace
-
-```jsonnet
-CloudWatchAnnotationQuery.withNamespace(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-A namespace is a container for CloudWatch metrics. Metrics in different namespaces are isolated from each other, so that metrics from different applications are not mistakenly aggregated into the same statistics. For example, Amazon EC2 uses the AWS/EC2 namespace.
-#### fn CloudWatchAnnotationQuery.withPeriod
-
-```jsonnet
-CloudWatchAnnotationQuery.withPeriod(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-The length of time associated with a specific Amazon CloudWatch statistic. Can be specified by a number of seconds, 'auto', or as a duration string e.g. '15m' being 15 minutes
-#### fn CloudWatchAnnotationQuery.withPrefixMatching
-
-```jsonnet
-CloudWatchAnnotationQuery.withPrefixMatching(value=true)
-```
-
-PARAMETERS:
-
-* **value** (`boolean`)
-   - default value: `true`
-
-Enable matching on the prefix of the action name or alarm name, specify the prefixes with actionPrefix and/or alarmNamePrefix
-#### fn CloudWatchAnnotationQuery.withQueryMode
-
-```jsonnet
-CloudWatchAnnotationQuery.withQueryMode(value="Annotations")
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-   - default value: `"Annotations"`
-   - valid values: `"Metrics"`, `"Logs"`, `"Annotations"`
-
-Whether a query is a Metrics, Logs, or Annotations query
-#### fn CloudWatchAnnotationQuery.withQueryType
-
-```jsonnet
-CloudWatchAnnotationQuery.withQueryType(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-Specify the query flavor
-TODO make this required and give it a default
-#### fn CloudWatchAnnotationQuery.withRefId
-
-```jsonnet
-CloudWatchAnnotationQuery.withRefId(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-A unique identifier for the query within the list of targets.
-In server side expressions, the refId is used as a variable name to identify results.
-By default, the UI will assign A->Z; however setting meaningful names may be useful.
-#### fn CloudWatchAnnotationQuery.withRegion
-
-```jsonnet
-CloudWatchAnnotationQuery.withRegion(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-AWS region to query for the metric
-#### fn CloudWatchAnnotationQuery.withStatistic
-
-```jsonnet
-CloudWatchAnnotationQuery.withStatistic(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-Metric data aggregations over specified periods of time. For detailed definitions of the statistics supported by CloudWatch, see https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.
-#### fn CloudWatchAnnotationQuery.withStatistics
-
-```jsonnet
-CloudWatchAnnotationQuery.withStatistics(value)
-```
-
-PARAMETERS:
-
-* **value** (`array`)
-
-@deprecated use statistic
-#### fn CloudWatchAnnotationQuery.withStatisticsMixin
-
-```jsonnet
-CloudWatchAnnotationQuery.withStatisticsMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`array`)
-
-@deprecated use statistic
-#### obj CloudWatchAnnotationQuery.datasource
-
-
-##### fn CloudWatchAnnotationQuery.datasource.withType
-
-```jsonnet
-CloudWatchAnnotationQuery.datasource.withType(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-The plugin type-id
-##### fn CloudWatchAnnotationQuery.datasource.withUid
-
-```jsonnet
-CloudWatchAnnotationQuery.datasource.withUid(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-Specific datasource instance
 ### obj CloudWatchLogsQuery
 
 
@@ -398,218 +453,9 @@ PARAMETERS:
 * **value** (`string`)
 
 Set the datasource for this query.
-#### fn CloudWatchLogsQuery.withExpression
-
-```jsonnet
-CloudWatchLogsQuery.withExpression(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-The CloudWatch Logs Insights query to execute
-#### fn CloudWatchLogsQuery.withHide
-
-```jsonnet
-CloudWatchLogsQuery.withHide(value=true)
-```
-
-PARAMETERS:
-
-* **value** (`boolean`)
-   - default value: `true`
-
-If hide is set to true, Grafana will filter out the response(s) associated with this query before returning it to the panel.
-#### fn CloudWatchLogsQuery.withId
-
-```jsonnet
-CloudWatchLogsQuery.withId(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-
-#### fn CloudWatchLogsQuery.withLogGroupNames
-
-```jsonnet
-CloudWatchLogsQuery.withLogGroupNames(value)
-```
-
-PARAMETERS:
-
-* **value** (`array`)
-
-@deprecated use logGroups
-#### fn CloudWatchLogsQuery.withLogGroupNamesMixin
-
-```jsonnet
-CloudWatchLogsQuery.withLogGroupNamesMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`array`)
-
-@deprecated use logGroups
-#### fn CloudWatchLogsQuery.withLogGroups
-
-```jsonnet
-CloudWatchLogsQuery.withLogGroups(value)
-```
-
-PARAMETERS:
-
-* **value** (`array`)
-
-Log groups to query
-#### fn CloudWatchLogsQuery.withLogGroupsMixin
-
-```jsonnet
-CloudWatchLogsQuery.withLogGroupsMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`array`)
-
-Log groups to query
-#### fn CloudWatchLogsQuery.withQueryLanguage
-
-```jsonnet
-CloudWatchLogsQuery.withQueryLanguage(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-   - valid values: `"CWLI"`, `"SQL"`, `"PPL"`
-
-Language used for querying logs, can be CWLI, SQL, or PPL. If empty, the default language is CWLI.
-#### fn CloudWatchLogsQuery.withQueryMode
-
-```jsonnet
-CloudWatchLogsQuery.withQueryMode(value="Logs")
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-   - default value: `"Logs"`
-   - valid values: `"Metrics"`, `"Logs"`, `"Annotations"`
-
-Whether a query is a Metrics, Logs, or Annotations query
-#### fn CloudWatchLogsQuery.withQueryType
-
-```jsonnet
-CloudWatchLogsQuery.withQueryType(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-Specify the query flavor
-TODO make this required and give it a default
-#### fn CloudWatchLogsQuery.withRefId
-
-```jsonnet
-CloudWatchLogsQuery.withRefId(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-A unique identifier for the query within the list of targets.
-In server side expressions, the refId is used as a variable name to identify results.
-By default, the UI will assign A->Z; however setting meaningful names may be useful.
-#### fn CloudWatchLogsQuery.withRegion
-
-```jsonnet
-CloudWatchLogsQuery.withRegion(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-AWS region to query for the logs
-#### fn CloudWatchLogsQuery.withStatsGroups
-
-```jsonnet
-CloudWatchLogsQuery.withStatsGroups(value)
-```
-
-PARAMETERS:
-
-* **value** (`array`)
-
-Fields to group the results by, this field is automatically populated whenever the query is updated
-#### fn CloudWatchLogsQuery.withStatsGroupsMixin
-
-```jsonnet
-CloudWatchLogsQuery.withStatsGroupsMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`array`)
-
-Fields to group the results by, this field is automatically populated whenever the query is updated
-#### obj CloudWatchLogsQuery.datasource
-
-
-##### fn CloudWatchLogsQuery.datasource.withType
-
-```jsonnet
-CloudWatchLogsQuery.datasource.withType(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-The plugin type-id
-##### fn CloudWatchLogsQuery.datasource.withUid
-
-```jsonnet
-CloudWatchLogsQuery.datasource.withUid(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-Specific datasource instance
 ### obj CloudWatchMetricsQuery
 
 
-#### fn CloudWatchMetricsQuery.withAccountId
-
-```jsonnet
-CloudWatchMetricsQuery.withAccountId(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-The ID of the AWS account to query for the metric, specifying `all` will query all accounts that the monitoring account is permitted to query.
-#### fn CloudWatchMetricsQuery.withAlias
-
-```jsonnet
-CloudWatchMetricsQuery.withAlias(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-Deprecated: use label
-@deprecated use label
 #### fn CloudWatchMetricsQuery.withDatasource
 
 ```jsonnet
@@ -621,43 +467,52 @@ PARAMETERS:
 * **value** (`string`)
 
 Set the datasource for this query.
-#### fn CloudWatchMetricsQuery.withDimensions
+### obj LogsQuery
+
+
+#### fn LogsQuery.withDatasource
 
 ```jsonnet
-CloudWatchMetricsQuery.withDimensions(value)
+LogsQuery.withDatasource(value)
 ```
 
 PARAMETERS:
 
 * **value** (`object`)
 
-A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.
-#### fn CloudWatchMetricsQuery.withDimensionsMixin
+For mixed data sources the selected datasource is on the query level.
+For non mixed scenarios this is undefined.
+TODO find a better way to do this ^ that's friendly to schema
+TODO this shouldn't be unknown but DataSourceRef | null
+#### fn LogsQuery.withDatasourceMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.withDimensionsMixin(value)
+LogsQuery.withDatasourceMixin(value)
 ```
 
 PARAMETERS:
 
 * **value** (`object`)
 
-A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.
-#### fn CloudWatchMetricsQuery.withExpression
+For mixed data sources the selected datasource is on the query level.
+For non mixed scenarios this is undefined.
+TODO find a better way to do this ^ that's friendly to schema
+TODO this shouldn't be unknown but DataSourceRef | null
+#### fn LogsQuery.withExpression
 
 ```jsonnet
-CloudWatchMetricsQuery.withExpression(value)
+LogsQuery.withExpression(value)
 ```
 
 PARAMETERS:
 
 * **value** (`string`)
 
-Math expression query
-#### fn CloudWatchMetricsQuery.withHide
+The CloudWatch Logs Insights query to execute
+#### fn LogsQuery.withHide
 
 ```jsonnet
-CloudWatchMetricsQuery.withHide(value=true)
+LogsQuery.withHide(value=true)
 ```
 
 PARAMETERS:
@@ -666,114 +521,90 @@ PARAMETERS:
    - default value: `true`
 
 If hide is set to true, Grafana will filter out the response(s) associated with this query before returning it to the panel.
-#### fn CloudWatchMetricsQuery.withId
+#### fn LogsQuery.withId
 
 ```jsonnet
-CloudWatchMetricsQuery.withId(value)
+LogsQuery.withId(value)
 ```
 
 PARAMETERS:
 
 * **value** (`string`)
 
-ID can be used to reference other queries in math expressions. The ID can include numbers, letters, and underscore, and must start with a lowercase letter.
-#### fn CloudWatchMetricsQuery.withLabel
+
+#### fn LogsQuery.withLogGroupNames
 
 ```jsonnet
-CloudWatchMetricsQuery.withLabel(value)
+LogsQuery.withLogGroupNames(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+@deprecated use logGroups
+#### fn LogsQuery.withLogGroupNamesMixin
+
+```jsonnet
+LogsQuery.withLogGroupNamesMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+@deprecated use logGroups
+#### fn LogsQuery.withLogGroups
+
+```jsonnet
+LogsQuery.withLogGroups(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+Log groups to query
+#### fn LogsQuery.withLogGroupsMixin
+
+```jsonnet
+LogsQuery.withLogGroupsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+Log groups to query
+#### fn LogsQuery.withQueryLanguage
+
+```jsonnet
+LogsQuery.withQueryLanguage(value)
 ```
 
 PARAMETERS:
 
 * **value** (`string`)
+   - valid values: `"CWLI"`, `"SQL"`, `"PPL"`
 
-Change the time series legend names using dynamic labels. See https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/graph-dynamic-labels.html for more details.
-#### fn CloudWatchMetricsQuery.withMatchExact
-
-```jsonnet
-CloudWatchMetricsQuery.withMatchExact(value=true)
-```
-
-PARAMETERS:
-
-* **value** (`boolean`)
-   - default value: `true`
-
-Only show metrics that exactly match all defined dimension names.
-#### fn CloudWatchMetricsQuery.withMetricEditorMode
+Language used for querying logs, can be CWLI, SQL, or PPL. If empty, the default language is CWLI.
+#### fn LogsQuery.withQueryMode
 
 ```jsonnet
-CloudWatchMetricsQuery.withMetricEditorMode(value)
+LogsQuery.withQueryMode(value="Logs")
 ```
 
 PARAMETERS:
 
 * **value** (`string`)
-   - valid values: `0`, `1`
-
-Whether to use the query builder or code editor to create the query
-#### fn CloudWatchMetricsQuery.withMetricName
-
-```jsonnet
-CloudWatchMetricsQuery.withMetricName(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-Name of the metric
-#### fn CloudWatchMetricsQuery.withMetricQueryType
-
-```jsonnet
-CloudWatchMetricsQuery.withMetricQueryType(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-   - valid values: `0`, `1`
-
-Whether to use a metric search or metric insights query
-#### fn CloudWatchMetricsQuery.withNamespace
-
-```jsonnet
-CloudWatchMetricsQuery.withNamespace(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-A namespace is a container for CloudWatch metrics. Metrics in different namespaces are isolated from each other, so that metrics from different applications are not mistakenly aggregated into the same statistics. For example, Amazon EC2 uses the AWS/EC2 namespace.
-#### fn CloudWatchMetricsQuery.withPeriod
-
-```jsonnet
-CloudWatchMetricsQuery.withPeriod(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-The length of time associated with a specific Amazon CloudWatch statistic. Can be specified by a number of seconds, 'auto', or as a duration string e.g. '15m' being 15 minutes
-#### fn CloudWatchMetricsQuery.withQueryMode
-
-```jsonnet
-CloudWatchMetricsQuery.withQueryMode(value="Metrics")
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-   - default value: `"Metrics"`
+   - default value: `"Logs"`
    - valid values: `"Metrics"`, `"Logs"`, `"Annotations"`
 
 Whether a query is a Metrics, Logs, or Annotations query
-#### fn CloudWatchMetricsQuery.withQueryType
+#### fn LogsQuery.withQueryType
 
 ```jsonnet
-CloudWatchMetricsQuery.withQueryType(value)
+LogsQuery.withQueryType(value)
 ```
 
 PARAMETERS:
@@ -782,10 +613,10 @@ PARAMETERS:
 
 Specify the query flavor
 TODO make this required and give it a default
-#### fn CloudWatchMetricsQuery.withRefId
+#### fn LogsQuery.withRefId
 
 ```jsonnet
-CloudWatchMetricsQuery.withRefId(value)
+LogsQuery.withRefId(value)
 ```
 
 PARAMETERS:
@@ -795,90 +626,46 @@ PARAMETERS:
 A unique identifier for the query within the list of targets.
 In server side expressions, the refId is used as a variable name to identify results.
 By default, the UI will assign A->Z; however setting meaningful names may be useful.
-#### fn CloudWatchMetricsQuery.withRegion
+#### fn LogsQuery.withRegion
 
 ```jsonnet
-CloudWatchMetricsQuery.withRegion(value)
+LogsQuery.withRegion(value)
 ```
 
 PARAMETERS:
 
 * **value** (`string`)
 
-AWS region to query for the metric
-#### fn CloudWatchMetricsQuery.withSql
+AWS region to query for the logs
+#### fn LogsQuery.withStatsGroups
 
 ```jsonnet
-CloudWatchMetricsQuery.withSql(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-When the metric query type is set to `Insights` and the `metricEditorMode` is set to `Builder`, this field is used to build up an object representation of a SQL query.
-#### fn CloudWatchMetricsQuery.withSqlExpression
-
-```jsonnet
-CloudWatchMetricsQuery.withSqlExpression(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-When the metric query type is set to `Insights`, this field is used to specify the query string.
-#### fn CloudWatchMetricsQuery.withSqlMixin
-
-```jsonnet
-CloudWatchMetricsQuery.withSqlMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-When the metric query type is set to `Insights` and the `metricEditorMode` is set to `Builder`, this field is used to build up an object representation of a SQL query.
-#### fn CloudWatchMetricsQuery.withStatistic
-
-```jsonnet
-CloudWatchMetricsQuery.withStatistic(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-Metric data aggregations over specified periods of time. For detailed definitions of the statistics supported by CloudWatch, see https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.
-#### fn CloudWatchMetricsQuery.withStatistics
-
-```jsonnet
-CloudWatchMetricsQuery.withStatistics(value)
+LogsQuery.withStatsGroups(value)
 ```
 
 PARAMETERS:
 
 * **value** (`array`)
 
-@deprecated use statistic
-#### fn CloudWatchMetricsQuery.withStatisticsMixin
+Fields to group the results by, this field is automatically populated whenever the query is updated
+#### fn LogsQuery.withStatsGroupsMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.withStatisticsMixin(value)
+LogsQuery.withStatsGroupsMixin(value)
 ```
 
 PARAMETERS:
 
 * **value** (`array`)
 
-@deprecated use statistic
-#### obj CloudWatchMetricsQuery.datasource
+Fields to group the results by, this field is automatically populated whenever the query is updated
+#### obj LogsQuery.datasource
 
 
-##### fn CloudWatchMetricsQuery.datasource.withType
+##### fn LogsQuery.datasource.withType
 
 ```jsonnet
-CloudWatchMetricsQuery.datasource.withType(value)
+LogsQuery.datasource.withType(value)
 ```
 
 PARAMETERS:
@@ -886,10 +673,10 @@ PARAMETERS:
 * **value** (`string`)
 
 The plugin type-id
-##### fn CloudWatchMetricsQuery.datasource.withUid
+##### fn LogsQuery.datasource.withUid
 
 ```jsonnet
-CloudWatchMetricsQuery.datasource.withUid(value)
+LogsQuery.datasource.withUid(value)
 ```
 
 PARAMETERS:
@@ -897,13 +684,343 @@ PARAMETERS:
 * **value** (`string`)
 
 Specific datasource instance
-#### obj CloudWatchMetricsQuery.sql
+### obj MetricsQuery
 
 
-##### fn CloudWatchMetricsQuery.sql.withFrom
+#### fn MetricsQuery.withAccountId
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.withFrom(value)
+MetricsQuery.withAccountId(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+The ID of the AWS account to query for the metric, specifying `all` will query all accounts that the monitoring account is permitted to query.
+#### fn MetricsQuery.withAlias
+
+```jsonnet
+MetricsQuery.withAlias(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Deprecated: use label
+@deprecated use label
+#### fn MetricsQuery.withDatasource
+
+```jsonnet
+MetricsQuery.withDatasource(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+For mixed data sources the selected datasource is on the query level.
+For non mixed scenarios this is undefined.
+TODO find a better way to do this ^ that's friendly to schema
+TODO this shouldn't be unknown but DataSourceRef | null
+#### fn MetricsQuery.withDatasourceMixin
+
+```jsonnet
+MetricsQuery.withDatasourceMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+For mixed data sources the selected datasource is on the query level.
+For non mixed scenarios this is undefined.
+TODO find a better way to do this ^ that's friendly to schema
+TODO this shouldn't be unknown but DataSourceRef | null
+#### fn MetricsQuery.withDimensions
+
+```jsonnet
+MetricsQuery.withDimensions(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.
+#### fn MetricsQuery.withDimensionsMixin
+
+```jsonnet
+MetricsQuery.withDimensionsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+A name/value pair that is part of the identity of a metric. For example, you can get statistics for a specific EC2 instance by specifying the InstanceId dimension when you search for metrics.
+#### fn MetricsQuery.withExpression
+
+```jsonnet
+MetricsQuery.withExpression(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Math expression query
+#### fn MetricsQuery.withHide
+
+```jsonnet
+MetricsQuery.withHide(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+If hide is set to true, Grafana will filter out the response(s) associated with this query before returning it to the panel.
+#### fn MetricsQuery.withId
+
+```jsonnet
+MetricsQuery.withId(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+ID can be used to reference other queries in math expressions. The ID can include numbers, letters, and underscore, and must start with a lowercase letter.
+#### fn MetricsQuery.withLabel
+
+```jsonnet
+MetricsQuery.withLabel(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Change the time series legend names using dynamic labels. See https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/graph-dynamic-labels.html for more details.
+#### fn MetricsQuery.withMatchExact
+
+```jsonnet
+MetricsQuery.withMatchExact(value=true)
+```
+
+PARAMETERS:
+
+* **value** (`boolean`)
+   - default value: `true`
+
+Only show metrics that exactly match all defined dimension names.
+#### fn MetricsQuery.withMetricEditorMode
+
+```jsonnet
+MetricsQuery.withMetricEditorMode(value)
+```
+
+PARAMETERS:
+
+* **value** (`integer`)
+   - valid values: `0`, `1`
+
+Whether to use the query builder or code editor to create the query
+#### fn MetricsQuery.withMetricName
+
+```jsonnet
+MetricsQuery.withMetricName(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Name of the metric
+#### fn MetricsQuery.withMetricQueryType
+
+```jsonnet
+MetricsQuery.withMetricQueryType(value)
+```
+
+PARAMETERS:
+
+* **value** (`integer`)
+   - valid values: `0`, `1`
+
+Whether to use a metric search or metric insights query
+#### fn MetricsQuery.withNamespace
+
+```jsonnet
+MetricsQuery.withNamespace(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+A namespace is a container for CloudWatch metrics. Metrics in different namespaces are isolated from each other, so that metrics from different applications are not mistakenly aggregated into the same statistics. For example, Amazon EC2 uses the AWS/EC2 namespace.
+#### fn MetricsQuery.withPeriod
+
+```jsonnet
+MetricsQuery.withPeriod(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+The length of time associated with a specific Amazon CloudWatch statistic. Can be specified by a number of seconds, 'auto', or as a duration string e.g. '15m' being 15 minutes
+#### fn MetricsQuery.withQueryMode
+
+```jsonnet
+MetricsQuery.withQueryMode(value="Metrics")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"Metrics"`
+   - valid values: `"Metrics"`, `"Logs"`, `"Annotations"`
+
+Whether a query is a Metrics, Logs, or Annotations query
+#### fn MetricsQuery.withQueryType
+
+```jsonnet
+MetricsQuery.withQueryType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Specify the query flavor
+TODO make this required and give it a default
+#### fn MetricsQuery.withRefId
+
+```jsonnet
+MetricsQuery.withRefId(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+A unique identifier for the query within the list of targets.
+In server side expressions, the refId is used as a variable name to identify results.
+By default, the UI will assign A->Z; however setting meaningful names may be useful.
+#### fn MetricsQuery.withRegion
+
+```jsonnet
+MetricsQuery.withRegion(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+AWS region to query for the metric
+#### fn MetricsQuery.withSql
+
+```jsonnet
+MetricsQuery.withSql(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+When the metric query type is set to `Insights` and the `metricEditorMode` is set to `Builder`, this field is used to build up an object representation of a SQL query.
+#### fn MetricsQuery.withSqlExpression
+
+```jsonnet
+MetricsQuery.withSqlExpression(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+When the metric query type is set to `Insights`, this field is used to specify the query string.
+#### fn MetricsQuery.withSqlMixin
+
+```jsonnet
+MetricsQuery.withSqlMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+When the metric query type is set to `Insights` and the `metricEditorMode` is set to `Builder`, this field is used to build up an object representation of a SQL query.
+#### fn MetricsQuery.withStatistic
+
+```jsonnet
+MetricsQuery.withStatistic(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Metric data aggregations over specified periods of time. For detailed definitions of the statistics supported by CloudWatch, see https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/Statistics-definitions.html.
+#### fn MetricsQuery.withStatistics
+
+```jsonnet
+MetricsQuery.withStatistics(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+@deprecated use statistic
+#### fn MetricsQuery.withStatisticsMixin
+
+```jsonnet
+MetricsQuery.withStatisticsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+@deprecated use statistic
+#### obj MetricsQuery.datasource
+
+
+##### fn MetricsQuery.datasource.withType
+
+```jsonnet
+MetricsQuery.datasource.withType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+The plugin type-id
+##### fn MetricsQuery.datasource.withUid
+
+```jsonnet
+MetricsQuery.datasource.withUid(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+Specific datasource instance
+#### obj MetricsQuery.sql
+
+
+##### fn MetricsQuery.sql.withFrom
+
+```jsonnet
+MetricsQuery.sql.withFrom(value)
 ```
 
 PARAMETERS:
@@ -911,10 +1028,10 @@ PARAMETERS:
 * **value** (`object`)
 
 FROM part of the SQL expression
-##### fn CloudWatchMetricsQuery.sql.withFromMixin
+##### fn MetricsQuery.sql.withFromMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.withFromMixin(value)
+MetricsQuery.sql.withFromMixin(value)
 ```
 
 PARAMETERS:
@@ -922,10 +1039,10 @@ PARAMETERS:
 * **value** (`object`)
 
 FROM part of the SQL expression
-##### fn CloudWatchMetricsQuery.sql.withGroupBy
+##### fn MetricsQuery.sql.withGroupBy
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.withGroupBy(value)
+MetricsQuery.sql.withGroupBy(value)
 ```
 
 PARAMETERS:
@@ -933,10 +1050,10 @@ PARAMETERS:
 * **value** (`object`)
 
 GROUP BY part of the SQL expression
-##### fn CloudWatchMetricsQuery.sql.withGroupByMixin
+##### fn MetricsQuery.sql.withGroupByMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.withGroupByMixin(value)
+MetricsQuery.sql.withGroupByMixin(value)
 ```
 
 PARAMETERS:
@@ -944,10 +1061,10 @@ PARAMETERS:
 * **value** (`object`)
 
 GROUP BY part of the SQL expression
-##### fn CloudWatchMetricsQuery.sql.withLimit
+##### fn MetricsQuery.sql.withLimit
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.withLimit(value)
+MetricsQuery.sql.withLimit(value)
 ```
 
 PARAMETERS:
@@ -955,10 +1072,10 @@ PARAMETERS:
 * **value** (`integer`)
 
 LIMIT part of the SQL expression
-##### fn CloudWatchMetricsQuery.sql.withOrderBy
+##### fn MetricsQuery.sql.withOrderBy
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.withOrderBy(value)
+MetricsQuery.sql.withOrderBy(value)
 ```
 
 PARAMETERS:
@@ -966,10 +1083,10 @@ PARAMETERS:
 * **value** (`object`)
 
 ORDER BY part of the SQL expression
-##### fn CloudWatchMetricsQuery.sql.withOrderByDirection
+##### fn MetricsQuery.sql.withOrderByDirection
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.withOrderByDirection(value)
+MetricsQuery.sql.withOrderByDirection(value)
 ```
 
 PARAMETERS:
@@ -977,10 +1094,10 @@ PARAMETERS:
 * **value** (`string`)
 
 The sort order of the SQL expression, `ASC` or `DESC`
-##### fn CloudWatchMetricsQuery.sql.withOrderByMixin
+##### fn MetricsQuery.sql.withOrderByMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.withOrderByMixin(value)
+MetricsQuery.sql.withOrderByMixin(value)
 ```
 
 PARAMETERS:
@@ -988,10 +1105,10 @@ PARAMETERS:
 * **value** (`object`)
 
 ORDER BY part of the SQL expression
-##### fn CloudWatchMetricsQuery.sql.withSelect
+##### fn MetricsQuery.sql.withSelect
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.withSelect(value)
+MetricsQuery.sql.withSelect(value)
 ```
 
 PARAMETERS:
@@ -999,10 +1116,10 @@ PARAMETERS:
 * **value** (`object`)
 
 SELECT part of the SQL expression
-##### fn CloudWatchMetricsQuery.sql.withSelectMixin
+##### fn MetricsQuery.sql.withSelectMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.withSelectMixin(value)
+MetricsQuery.sql.withSelectMixin(value)
 ```
 
 PARAMETERS:
@@ -1010,10 +1127,10 @@ PARAMETERS:
 * **value** (`object`)
 
 SELECT part of the SQL expression
-##### fn CloudWatchMetricsQuery.sql.withWhere
+##### fn MetricsQuery.sql.withWhere
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.withWhere(value)
+MetricsQuery.sql.withWhere(value)
 ```
 
 PARAMETERS:
@@ -1021,10 +1138,10 @@ PARAMETERS:
 * **value** (`object`)
 
 WHERE part of the SQL expression
-##### fn CloudWatchMetricsQuery.sql.withWhereMixin
+##### fn MetricsQuery.sql.withWhereMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.withWhereMixin(value)
+MetricsQuery.sql.withWhereMixin(value)
 ```
 
 PARAMETERS:
@@ -1032,13 +1149,13 @@ PARAMETERS:
 * **value** (`object`)
 
 WHERE part of the SQL expression
-##### obj CloudWatchMetricsQuery.sql.from
+##### obj MetricsQuery.sql.from
 
 
-###### fn CloudWatchMetricsQuery.sql.from.withQueryEditorFunctionExpression
+###### fn MetricsQuery.sql.from.withQueryEditorFunctionExpression
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.from.withQueryEditorFunctionExpression(value)
+MetricsQuery.sql.from.withQueryEditorFunctionExpression(value)
 ```
 
 PARAMETERS:
@@ -1046,10 +1163,10 @@ PARAMETERS:
 * **value** (`object`)
 
 
-###### fn CloudWatchMetricsQuery.sql.from.withQueryEditorFunctionExpressionMixin
+###### fn MetricsQuery.sql.from.withQueryEditorFunctionExpressionMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.from.withQueryEditorFunctionExpressionMixin(value)
+MetricsQuery.sql.from.withQueryEditorFunctionExpressionMixin(value)
 ```
 
 PARAMETERS:
@@ -1057,10 +1174,10 @@ PARAMETERS:
 * **value** (`object`)
 
 
-###### fn CloudWatchMetricsQuery.sql.from.withQueryEditorPropertyExpression
+###### fn MetricsQuery.sql.from.withQueryEditorPropertyExpression
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.from.withQueryEditorPropertyExpression(value)
+MetricsQuery.sql.from.withQueryEditorPropertyExpression(value)
 ```
 
 PARAMETERS:
@@ -1068,10 +1185,10 @@ PARAMETERS:
 * **value** (`object`)
 
 
-###### fn CloudWatchMetricsQuery.sql.from.withQueryEditorPropertyExpressionMixin
+###### fn MetricsQuery.sql.from.withQueryEditorPropertyExpressionMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.from.withQueryEditorPropertyExpressionMixin(value)
+MetricsQuery.sql.from.withQueryEditorPropertyExpressionMixin(value)
 ```
 
 PARAMETERS:
@@ -1079,13 +1196,13 @@ PARAMETERS:
 * **value** (`object`)
 
 
-###### obj CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression
+###### obj MetricsQuery.sql.from.QueryEditorFunctionExpression
 
 
-####### fn CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.withName
+####### fn MetricsQuery.sql.from.QueryEditorFunctionExpression.withName
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.withName(value)
+MetricsQuery.sql.from.QueryEditorFunctionExpression.withName(value)
 ```
 
 PARAMETERS:
@@ -1093,10 +1210,10 @@ PARAMETERS:
 * **value** (`string`)
 
 
-####### fn CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.withParameters
+####### fn MetricsQuery.sql.from.QueryEditorFunctionExpression.withParameters
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.withParameters(value)
+MetricsQuery.sql.from.QueryEditorFunctionExpression.withParameters(value)
 ```
 
 PARAMETERS:
@@ -1104,10 +1221,10 @@ PARAMETERS:
 * **value** (`array`)
 
 
-####### fn CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.withParametersMixin
+####### fn MetricsQuery.sql.from.QueryEditorFunctionExpression.withParametersMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.withParametersMixin(value)
+MetricsQuery.sql.from.QueryEditorFunctionExpression.withParametersMixin(value)
 ```
 
 PARAMETERS:
@@ -1115,21 +1232,52 @@ PARAMETERS:
 * **value** (`array`)
 
 
-####### fn CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.withType
+####### fn MetricsQuery.sql.from.QueryEditorFunctionExpression.withType
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.from.QueryEditorFunctionExpression.withType()
+MetricsQuery.sql.from.QueryEditorFunctionExpression.withType(value="function")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"function"`
 
 
-###### obj CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression
-
-
-####### fn CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.withProperty
+####### fn MetricsQuery.sql.from.QueryEditorFunctionExpression.withTypeMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.withProperty(value)
+MetricsQuery.sql.from.QueryEditorFunctionExpression.withTypeMixin(value="function")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"function"`
+
+
+####### obj MetricsQuery.sql.from.QueryEditorFunctionExpression.type
+
+
+######## fn MetricsQuery.sql.from.QueryEditorFunctionExpression.type.withQueryEditorExpressionType
+
+```jsonnet
+MetricsQuery.sql.from.QueryEditorFunctionExpression.type.withQueryEditorExpressionType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"property"`, `"operator"`, `"or"`, `"and"`, `"groupBy"`, `"function"`, `"functionParameter"`
+
+
+###### obj MetricsQuery.sql.from.QueryEditorPropertyExpression
+
+
+####### fn MetricsQuery.sql.from.QueryEditorPropertyExpression.withProperty
+
+```jsonnet
+MetricsQuery.sql.from.QueryEditorPropertyExpression.withProperty(value)
 ```
 
 PARAMETERS:
@@ -1137,10 +1285,10 @@ PARAMETERS:
 * **value** (`object`)
 
 
-####### fn CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.withPropertyMixin
+####### fn MetricsQuery.sql.from.QueryEditorPropertyExpression.withPropertyMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.withPropertyMixin(value)
+MetricsQuery.sql.from.QueryEditorPropertyExpression.withPropertyMixin(value)
 ```
 
 PARAMETERS:
@@ -1148,21 +1296,37 @@ PARAMETERS:
 * **value** (`object`)
 
 
-####### fn CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.withType
+####### fn MetricsQuery.sql.from.QueryEditorPropertyExpression.withType
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.withType()
+MetricsQuery.sql.from.QueryEditorPropertyExpression.withType(value="property")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"property"`
 
 
-####### obj CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.property
-
-
-######## fn CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.property.withName
+####### fn MetricsQuery.sql.from.QueryEditorPropertyExpression.withTypeMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.property.withName(value)
+MetricsQuery.sql.from.QueryEditorPropertyExpression.withTypeMixin(value="property")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"property"`
+
+
+####### obj MetricsQuery.sql.from.QueryEditorPropertyExpression.property
+
+
+######## fn MetricsQuery.sql.from.QueryEditorPropertyExpression.property.withName
+
+```jsonnet
+MetricsQuery.sql.from.QueryEditorPropertyExpression.property.withName(value)
 ```
 
 PARAMETERS:
@@ -1170,10 +1334,37 @@ PARAMETERS:
 * **value** (`string`)
 
 
-######## fn CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.property.withType
+######## fn MetricsQuery.sql.from.QueryEditorPropertyExpression.property.withType
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.from.QueryEditorPropertyExpression.property.withType(value)
+MetricsQuery.sql.from.QueryEditorPropertyExpression.property.withType(value="string")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"string"`
+
+
+######## fn MetricsQuery.sql.from.QueryEditorPropertyExpression.property.withTypeMixin
+
+```jsonnet
+MetricsQuery.sql.from.QueryEditorPropertyExpression.property.withTypeMixin(value="string")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"string"`
+
+
+######## obj MetricsQuery.sql.from.QueryEditorPropertyExpression.property.type
+
+
+######### fn MetricsQuery.sql.from.QueryEditorPropertyExpression.property.type.withQueryEditorPropertyType
+
+```jsonnet
+MetricsQuery.sql.from.QueryEditorPropertyExpression.property.type.withQueryEditorPropertyType(value)
 ```
 
 PARAMETERS:
@@ -1182,13 +1373,28 @@ PARAMETERS:
    - valid values: `"string"`
 
 
-##### obj CloudWatchMetricsQuery.sql.groupBy
+####### obj MetricsQuery.sql.from.QueryEditorPropertyExpression.type
 
 
-###### fn CloudWatchMetricsQuery.sql.groupBy.withExpressions
+######## fn MetricsQuery.sql.from.QueryEditorPropertyExpression.type.withQueryEditorExpressionType
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.groupBy.withExpressions(value)
+MetricsQuery.sql.from.QueryEditorPropertyExpression.type.withQueryEditorExpressionType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"property"`, `"operator"`, `"or"`, `"and"`, `"groupBy"`, `"function"`, `"functionParameter"`
+
+
+##### obj MetricsQuery.sql.groupBy
+
+
+###### fn MetricsQuery.sql.groupBy.withExpressions
+
+```jsonnet
+MetricsQuery.sql.groupBy.withExpressions(value)
 ```
 
 PARAMETERS:
@@ -1196,10 +1402,10 @@ PARAMETERS:
 * **value** (`array`)
 
 
-###### fn CloudWatchMetricsQuery.sql.groupBy.withExpressionsMixin
+###### fn MetricsQuery.sql.groupBy.withExpressionsMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.groupBy.withExpressionsMixin(value)
+MetricsQuery.sql.groupBy.withExpressionsMixin(value)
 ```
 
 PARAMETERS:
@@ -1207,10 +1413,10 @@ PARAMETERS:
 * **value** (`array`)
 
 
-###### fn CloudWatchMetricsQuery.sql.groupBy.withType
+###### fn MetricsQuery.sql.groupBy.withType
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.groupBy.withType(value)
+MetricsQuery.sql.groupBy.withType(value)
 ```
 
 PARAMETERS:
@@ -1219,13 +1425,13 @@ PARAMETERS:
    - valid values: `"and"`, `"or"`
 
 
-##### obj CloudWatchMetricsQuery.sql.orderBy
+##### obj MetricsQuery.sql.orderBy
 
 
-###### fn CloudWatchMetricsQuery.sql.orderBy.withName
+###### fn MetricsQuery.sql.orderBy.withName
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.orderBy.withName(value)
+MetricsQuery.sql.orderBy.withName(value)
 ```
 
 PARAMETERS:
@@ -1233,10 +1439,10 @@ PARAMETERS:
 * **value** (`string`)
 
 
-###### fn CloudWatchMetricsQuery.sql.orderBy.withParameters
+###### fn MetricsQuery.sql.orderBy.withParameters
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.orderBy.withParameters(value)
+MetricsQuery.sql.orderBy.withParameters(value)
 ```
 
 PARAMETERS:
@@ -1244,10 +1450,10 @@ PARAMETERS:
 * **value** (`array`)
 
 
-###### fn CloudWatchMetricsQuery.sql.orderBy.withParametersMixin
+###### fn MetricsQuery.sql.orderBy.withParametersMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.orderBy.withParametersMixin(value)
+MetricsQuery.sql.orderBy.withParametersMixin(value)
 ```
 
 PARAMETERS:
@@ -1255,21 +1461,52 @@ PARAMETERS:
 * **value** (`array`)
 
 
-###### fn CloudWatchMetricsQuery.sql.orderBy.withType
+###### fn MetricsQuery.sql.orderBy.withType
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.orderBy.withType()
+MetricsQuery.sql.orderBy.withType(value="function")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"function"`
 
 
-##### obj CloudWatchMetricsQuery.sql.select
-
-
-###### fn CloudWatchMetricsQuery.sql.select.withName
+###### fn MetricsQuery.sql.orderBy.withTypeMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.select.withName(value)
+MetricsQuery.sql.orderBy.withTypeMixin(value="function")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"function"`
+
+
+###### obj MetricsQuery.sql.orderBy.type
+
+
+####### fn MetricsQuery.sql.orderBy.type.withQueryEditorExpressionType
+
+```jsonnet
+MetricsQuery.sql.orderBy.type.withQueryEditorExpressionType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"property"`, `"operator"`, `"or"`, `"and"`, `"groupBy"`, `"function"`, `"functionParameter"`
+
+
+##### obj MetricsQuery.sql.select
+
+
+###### fn MetricsQuery.sql.select.withName
+
+```jsonnet
+MetricsQuery.sql.select.withName(value)
 ```
 
 PARAMETERS:
@@ -1277,10 +1514,10 @@ PARAMETERS:
 * **value** (`string`)
 
 
-###### fn CloudWatchMetricsQuery.sql.select.withParameters
+###### fn MetricsQuery.sql.select.withParameters
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.select.withParameters(value)
+MetricsQuery.sql.select.withParameters(value)
 ```
 
 PARAMETERS:
@@ -1288,10 +1525,10 @@ PARAMETERS:
 * **value** (`array`)
 
 
-###### fn CloudWatchMetricsQuery.sql.select.withParametersMixin
+###### fn MetricsQuery.sql.select.withParametersMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.select.withParametersMixin(value)
+MetricsQuery.sql.select.withParametersMixin(value)
 ```
 
 PARAMETERS:
@@ -1299,21 +1536,52 @@ PARAMETERS:
 * **value** (`array`)
 
 
-###### fn CloudWatchMetricsQuery.sql.select.withType
+###### fn MetricsQuery.sql.select.withType
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.select.withType()
+MetricsQuery.sql.select.withType(value="function")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"function"`
 
 
-##### obj CloudWatchMetricsQuery.sql.where
-
-
-###### fn CloudWatchMetricsQuery.sql.where.withExpressions
+###### fn MetricsQuery.sql.select.withTypeMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.where.withExpressions(value)
+MetricsQuery.sql.select.withTypeMixin(value="function")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"function"`
+
+
+###### obj MetricsQuery.sql.select.type
+
+
+####### fn MetricsQuery.sql.select.type.withQueryEditorExpressionType
+
+```jsonnet
+MetricsQuery.sql.select.type.withQueryEditorExpressionType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"property"`, `"operator"`, `"or"`, `"and"`, `"groupBy"`, `"function"`, `"functionParameter"`
+
+
+##### obj MetricsQuery.sql.where
+
+
+###### fn MetricsQuery.sql.where.withExpressions
+
+```jsonnet
+MetricsQuery.sql.where.withExpressions(value)
 ```
 
 PARAMETERS:
@@ -1321,10 +1589,10 @@ PARAMETERS:
 * **value** (`array`)
 
 
-###### fn CloudWatchMetricsQuery.sql.where.withExpressionsMixin
+###### fn MetricsQuery.sql.where.withExpressionsMixin
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.where.withExpressionsMixin(value)
+MetricsQuery.sql.where.withExpressionsMixin(value)
 ```
 
 PARAMETERS:
@@ -1332,10 +1600,10 @@ PARAMETERS:
 * **value** (`array`)
 
 
-###### fn CloudWatchMetricsQuery.sql.where.withType
+###### fn MetricsQuery.sql.where.withType
 
 ```jsonnet
-CloudWatchMetricsQuery.sql.where.withType(value)
+MetricsQuery.sql.where.withType(value)
 ```
 
 PARAMETERS:

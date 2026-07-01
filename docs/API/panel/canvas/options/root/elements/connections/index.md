@@ -10,7 +10,8 @@
 
 * [`fn withColor(value)`](#fn-withcolor)
 * [`fn withColorMixin(value)`](#fn-withcolormixin)
-* [`fn withPath(value)`](#fn-withpath)
+* [`fn withPath(value="straight")`](#fn-withpath)
+* [`fn withPathMixin(value="straight")`](#fn-withpathmixin)
 * [`fn withSize(value)`](#fn-withsize)
 * [`fn withSizeMixin(value)`](#fn-withsizemixin)
 * [`fn withSource(value)`](#fn-withsource)
@@ -27,6 +28,8 @@
 * [`obj color`](#obj-color)
   * [`fn withField(value)`](#fn-colorwithfield)
   * [`fn withFixed(value)`](#fn-colorwithfixed)
+* [`obj path`](#obj-path)
+  * [`fn withConnectionPath(value)`](#fn-pathwithconnectionpath)
 * [`obj size`](#obj-size)
   * [`fn withField(value)`](#fn-sizewithfield)
   * [`fn withFixed(value)`](#fn-sizewithfixed)
@@ -73,13 +76,25 @@ PARAMETERS:
 ### fn withPath
 
 ```jsonnet
-withPath(value)
+withPath(value="straight")
 ```
 
 PARAMETERS:
 
 * **value** (`string`)
-   - valid values: `"straight"`
+   - default value: `"straight"`
+
+
+### fn withPathMixin
+
+```jsonnet
+withPathMixin(value="straight")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"straight"`
 
 
 ### fn withSize
@@ -250,6 +265,21 @@ PARAMETERS:
 * **value** (`string`)
 
 color value
+### obj path
+
+
+#### fn path.withConnectionPath
+
+```jsonnet
+path.withConnectionPath(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"straight"`
+
+
 ### obj size
 
 

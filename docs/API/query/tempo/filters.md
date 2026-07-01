@@ -45,7 +45,7 @@ withScope(value)
 PARAMETERS:
 
 * **value** (`string`)
-   - valid values: `"intrinsic"`, `"unscoped"`, `"resource"`, `"span"`
+   - valid values: `"intrinsic"`, `"unscoped"`, `"event"`, `"instrumentation"`, `"link"`, `"resource"`, `"span"`
 
 static fields are pre-set in the UI, dynamic fields are added by the user
 ### fn withTag

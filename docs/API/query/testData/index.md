@@ -16,6 +16,7 @@ grafonnet.query.testData
 * [`fn withCsvWaveMixin(value)`](#fn-withcsvwavemixin)
 * [`fn withDatasource(value)`](#fn-withdatasource)
 * [`fn withDropPercent(value)`](#fn-withdroppercent)
+* [`fn withErrorSource(value)`](#fn-witherrorsource)
 * [`fn withErrorType(value)`](#fn-witherrortype)
 * [`fn withFlamegraphDiff(value=true)`](#fn-withflamegraphdiff)
 * [`fn withHide(value=true)`](#fn-withhide)
@@ -190,6 +191,20 @@ PARAMETERS:
 * **value** (`number`)
 
 Drop percentage (the chance we will lose a point 0-100)
+### fn withErrorSource
+
+```jsonnet
+withErrorSource(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"plugin"`, `"downstream"`
+
+Possible enum values:
+ - `"plugin"` 
+ - `"downstream"` 
 ### fn withErrorType
 
 ```jsonnet
@@ -455,7 +470,7 @@ withScenarioId(value)
 PARAMETERS:
 
 * **value** (`string`)
-   - valid values: `"annotations"`, `"arrow"`, `"csv_content"`, `"csv_file"`, `"csv_metric_values"`, `"datapoints_outside_range"`, `"exponential_heatmap_bucket_data"`, `"flame_graph"`, `"grafana_api"`, `"linear_heatmap_bucket_data"`, `"live"`, `"logs"`, `"manual_entry"`, `"no_data_points"`, `"node_graph"`, `"predictable_csv_wave"`, `"predictable_pulse"`, `"random_walk"`, `"random_walk_table"`, `"random_walk_with_error"`, `"raw_frame"`, `"server_error_500"`, `"simulation"`, `"slow_query"`, `"streaming_client"`, `"table_static"`, `"trace"`, `"usa"`, `"variables-query"`
+   - valid values: `"annotations"`, `"arrow"`, `"csv_content"`, `"csv_file"`, `"csv_metric_values"`, `"datapoints_outside_range"`, `"error_with_source"`, `"exponential_heatmap_bucket_data"`, `"flame_graph"`, `"grafana_api"`, `"linear_heatmap_bucket_data"`, `"live"`, `"logs"`, `"manual_entry"`, `"no_data_points"`, `"node_graph"`, `"predictable_csv_wave"`, `"predictable_pulse"`, `"random_walk"`, `"random_walk_table"`, `"random_walk_with_error"`, `"raw_frame"`, `"server_error_500"`, `"simulation"`, `"slow_query"`, `"streaming_client"`, `"table_static"`, `"trace"`, `"usa"`, `"variables-query"`
 
 Possible enum values:
  - `"annotations"` 
@@ -464,6 +479,7 @@ Possible enum values:
  - `"csv_file"` 
  - `"csv_metric_values"` 
  - `"datapoints_outside_range"` 
+ - `"error_with_source"` 
  - `"exponential_heatmap_bucket_data"` 
  - `"flame_graph"` 
  - `"grafana_api"` 

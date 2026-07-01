@@ -11,7 +11,10 @@
 * [`fn withName(value)`](#fn-withname)
 * [`fn withParameters(value)`](#fn-withparameters)
 * [`fn withParametersMixin(value)`](#fn-withparametersmixin)
-* [`fn withType()`](#fn-withtype)
+* [`fn withType(value="function")`](#fn-withtype)
+* [`fn withTypeMixin(value="function")`](#fn-withtypemixin)
+* [`obj type`](#obj-type)
+  * [`fn withQueryEditorExpressionType(value)`](#fn-typewithqueryeditorexpressiontype)
 
 ## Fields
 
@@ -51,7 +54,38 @@ PARAMETERS:
 ### fn withType
 
 ```jsonnet
-withType()
+withType(value="function")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"function"`
+
+
+### fn withTypeMixin
+
+```jsonnet
+withTypeMixin(value="function")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"function"`
+
+
+### obj type
+
+
+#### fn type.withQueryEditorExpressionType
+
+```jsonnet
+type.withQueryEditorExpressionType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"property"`, `"operator"`, `"or"`, `"and"`, `"groupBy"`, `"function"`, `"functionParameter"`
 

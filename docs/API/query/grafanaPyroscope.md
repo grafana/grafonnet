@@ -9,6 +9,7 @@ grafonnet.query.grafanaPyroscope
 * [`fn withGroupByMixin(value)`](#fn-withgroupbymixin)
 * [`fn withHide(value=true)`](#fn-withhide)
 * [`fn withLabelSelector(value="{}")`](#fn-withlabelselector)
+* [`fn withLimit(value)`](#fn-withlimit)
 * [`fn withMaxNodes(value)`](#fn-withmaxnodes)
 * [`fn withProfileTypeId(value)`](#fn-withprofiletypeid)
 * [`fn withQueryType(value)`](#fn-withquerytype)
@@ -78,6 +79,17 @@ PARAMETERS:
    - default value: `"{}"`
 
 Specifies the query label selectors.
+### fn withLimit
+
+```jsonnet
+withLimit(value)
+```
+
+PARAMETERS:
+
+* **value** (`integer`)
+
+Sets the maximum number of time series.
 ### fn withMaxNodes
 
 ```jsonnet

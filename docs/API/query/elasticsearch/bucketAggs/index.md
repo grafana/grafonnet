@@ -13,56 +13,74 @@
   * [`fn withId(value)`](#fn-datehistogramwithid)
   * [`fn withSettings(value)`](#fn-datehistogramwithsettings)
   * [`fn withSettingsMixin(value)`](#fn-datehistogramwithsettingsmixin)
-  * [`fn withType()`](#fn-datehistogramwithtype)
+  * [`fn withType(value="date_histogram")`](#fn-datehistogramwithtype)
+  * [`fn withTypeMixin(value="date_histogram")`](#fn-datehistogramwithtypemixin)
   * [`obj settings`](#obj-datehistogramsettings)
     * [`fn withInterval(value)`](#fn-datehistogramsettingswithinterval)
     * [`fn withMinDocCount(value)`](#fn-datehistogramsettingswithmindoccount)
     * [`fn withOffset(value)`](#fn-datehistogramsettingswithoffset)
     * [`fn withTimeZone(value)`](#fn-datehistogramsettingswithtimezone)
     * [`fn withTrimEdges(value)`](#fn-datehistogramsettingswithtrimedges)
+  * [`obj type`](#obj-datehistogramtype)
+    * [`fn withBucketAggregationType(value)`](#fn-datehistogramtypewithbucketaggregationtype)
 * [`obj Filters`](#obj-filters)
   * [`fn withId(value)`](#fn-filterswithid)
   * [`fn withSettings(value)`](#fn-filterswithsettings)
   * [`fn withSettingsMixin(value)`](#fn-filterswithsettingsmixin)
-  * [`fn withType()`](#fn-filterswithtype)
+  * [`fn withType(value="filters")`](#fn-filterswithtype)
+  * [`fn withTypeMixin(value="filters")`](#fn-filterswithtypemixin)
   * [`obj settings`](#obj-filterssettings)
     * [`fn withFilters(value)`](#fn-filterssettingswithfilters)
     * [`fn withFiltersMixin(value)`](#fn-filterssettingswithfiltersmixin)
+  * [`obj type`](#obj-filterstype)
+    * [`fn withBucketAggregationType(value)`](#fn-filterstypewithbucketaggregationtype)
 * [`obj GeoHashGrid`](#obj-geohashgrid)
   * [`fn withField(value)`](#fn-geohashgridwithfield)
   * [`fn withId(value)`](#fn-geohashgridwithid)
   * [`fn withSettings(value)`](#fn-geohashgridwithsettings)
   * [`fn withSettingsMixin(value)`](#fn-geohashgridwithsettingsmixin)
-  * [`fn withType()`](#fn-geohashgridwithtype)
+  * [`fn withType(value="geohash_grid")`](#fn-geohashgridwithtype)
+  * [`fn withTypeMixin(value="geohash_grid")`](#fn-geohashgridwithtypemixin)
   * [`obj settings`](#obj-geohashgridsettings)
     * [`fn withPrecision(value)`](#fn-geohashgridsettingswithprecision)
+  * [`obj type`](#obj-geohashgridtype)
+    * [`fn withBucketAggregationType(value)`](#fn-geohashgridtypewithbucketaggregationtype)
 * [`obj Histogram`](#obj-histogram)
   * [`fn withField(value)`](#fn-histogramwithfield)
   * [`fn withId(value)`](#fn-histogramwithid)
   * [`fn withSettings(value)`](#fn-histogramwithsettings)
   * [`fn withSettingsMixin(value)`](#fn-histogramwithsettingsmixin)
-  * [`fn withType()`](#fn-histogramwithtype)
+  * [`fn withType(value="histogram")`](#fn-histogramwithtype)
+  * [`fn withTypeMixin(value="histogram")`](#fn-histogramwithtypemixin)
   * [`obj settings`](#obj-histogramsettings)
     * [`fn withInterval(value)`](#fn-histogramsettingswithinterval)
     * [`fn withMinDocCount(value)`](#fn-histogramsettingswithmindoccount)
+  * [`obj type`](#obj-histogramtype)
+    * [`fn withBucketAggregationType(value)`](#fn-histogramtypewithbucketaggregationtype)
 * [`obj Nested`](#obj-nested)
   * [`fn withField(value)`](#fn-nestedwithfield)
   * [`fn withId(value)`](#fn-nestedwithid)
   * [`fn withSettings(value)`](#fn-nestedwithsettings)
   * [`fn withSettingsMixin(value)`](#fn-nestedwithsettingsmixin)
-  * [`fn withType()`](#fn-nestedwithtype)
+  * [`fn withType(value="nested")`](#fn-nestedwithtype)
+  * [`fn withTypeMixin(value="nested")`](#fn-nestedwithtypemixin)
+  * [`obj type`](#obj-nestedtype)
+    * [`fn withBucketAggregationType(value)`](#fn-nestedtypewithbucketaggregationtype)
 * [`obj Terms`](#obj-terms)
   * [`fn withField(value)`](#fn-termswithfield)
   * [`fn withId(value)`](#fn-termswithid)
   * [`fn withSettings(value)`](#fn-termswithsettings)
   * [`fn withSettingsMixin(value)`](#fn-termswithsettingsmixin)
-  * [`fn withType()`](#fn-termswithtype)
+  * [`fn withType(value="terms")`](#fn-termswithtype)
+  * [`fn withTypeMixin(value="terms")`](#fn-termswithtypemixin)
   * [`obj settings`](#obj-termssettings)
     * [`fn withMinDocCount(value)`](#fn-termssettingswithmindoccount)
     * [`fn withMissing(value)`](#fn-termssettingswithmissing)
     * [`fn withOrder(value)`](#fn-termssettingswithorder)
     * [`fn withOrderBy(value)`](#fn-termssettingswithorderby)
     * [`fn withSize(value)`](#fn-termssettingswithsize)
+  * [`obj type`](#obj-termstype)
+    * [`fn withBucketAggregationType(value)`](#fn-termstypewithbucketaggregationtype)
 
 ## Fields
 
@@ -116,9 +134,25 @@ PARAMETERS:
 #### fn DateHistogram.withType
 
 ```jsonnet
-DateHistogram.withType()
+DateHistogram.withType(value="date_histogram")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"date_histogram"`
+
+
+#### fn DateHistogram.withTypeMixin
+
+```jsonnet
+DateHistogram.withTypeMixin(value="date_histogram")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"date_histogram"`
 
 
 #### obj DateHistogram.settings
@@ -179,6 +213,21 @@ PARAMETERS:
 * **value** (`string`)
 
 
+#### obj DateHistogram.type
+
+
+##### fn DateHistogram.type.withBucketAggregationType
+
+```jsonnet
+DateHistogram.type.withBucketAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"terms"`, `"filters"`, `"geohash_grid"`, `"date_histogram"`, `"histogram"`, `"nested"`
+
+
 ### obj Filters
 
 
@@ -218,9 +267,25 @@ PARAMETERS:
 #### fn Filters.withType
 
 ```jsonnet
-Filters.withType()
+Filters.withType(value="filters")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"filters"`
+
+
+#### fn Filters.withTypeMixin
+
+```jsonnet
+Filters.withTypeMixin(value="filters")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"filters"`
 
 
 #### obj Filters.settings
@@ -246,6 +311,21 @@ Filters.settings.withFiltersMixin(value)
 PARAMETERS:
 
 * **value** (`array`)
+
+
+#### obj Filters.type
+
+
+##### fn Filters.type.withBucketAggregationType
+
+```jsonnet
+Filters.type.withBucketAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"terms"`, `"filters"`, `"geohash_grid"`, `"date_histogram"`, `"histogram"`, `"nested"`
 
 
 ### obj GeoHashGrid
@@ -298,9 +378,25 @@ PARAMETERS:
 #### fn GeoHashGrid.withType
 
 ```jsonnet
-GeoHashGrid.withType()
+GeoHashGrid.withType(value="geohash_grid")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"geohash_grid"`
+
+
+#### fn GeoHashGrid.withTypeMixin
+
+```jsonnet
+GeoHashGrid.withTypeMixin(value="geohash_grid")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"geohash_grid"`
 
 
 #### obj GeoHashGrid.settings
@@ -315,6 +411,21 @@ GeoHashGrid.settings.withPrecision(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+#### obj GeoHashGrid.type
+
+
+##### fn GeoHashGrid.type.withBucketAggregationType
+
+```jsonnet
+GeoHashGrid.type.withBucketAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"terms"`, `"filters"`, `"geohash_grid"`, `"date_histogram"`, `"histogram"`, `"nested"`
 
 
 ### obj Histogram
@@ -367,9 +478,25 @@ PARAMETERS:
 #### fn Histogram.withType
 
 ```jsonnet
-Histogram.withType()
+Histogram.withType(value="histogram")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"histogram"`
+
+
+#### fn Histogram.withTypeMixin
+
+```jsonnet
+Histogram.withTypeMixin(value="histogram")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"histogram"`
 
 
 #### obj Histogram.settings
@@ -395,6 +522,21 @@ Histogram.settings.withMinDocCount(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+#### obj Histogram.type
+
+
+##### fn Histogram.type.withBucketAggregationType
+
+```jsonnet
+Histogram.type.withBucketAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"terms"`, `"filters"`, `"geohash_grid"`, `"date_histogram"`, `"histogram"`, `"nested"`
 
 
 ### obj Nested
@@ -447,9 +589,40 @@ PARAMETERS:
 #### fn Nested.withType
 
 ```jsonnet
-Nested.withType()
+Nested.withType(value="nested")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"nested"`
+
+
+#### fn Nested.withTypeMixin
+
+```jsonnet
+Nested.withTypeMixin(value="nested")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"nested"`
+
+
+#### obj Nested.type
+
+
+##### fn Nested.type.withBucketAggregationType
+
+```jsonnet
+Nested.type.withBucketAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"terms"`, `"filters"`, `"geohash_grid"`, `"date_histogram"`, `"histogram"`, `"nested"`
 
 
 ### obj Terms
@@ -502,9 +675,25 @@ PARAMETERS:
 #### fn Terms.withType
 
 ```jsonnet
-Terms.withType()
+Terms.withType(value="terms")
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"terms"`
+
+
+#### fn Terms.withTypeMixin
+
+```jsonnet
+Terms.withTypeMixin(value="terms")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `"terms"`
 
 
 #### obj Terms.settings
@@ -564,4 +753,19 @@ Terms.settings.withSize(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+#### obj Terms.type
+
+
+##### fn Terms.type.withBucketAggregationType
+
+```jsonnet
+Terms.type.withBucketAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"terms"`, `"filters"`, `"geohash_grid"`, `"date_histogram"`, `"histogram"`, `"nested"`
 

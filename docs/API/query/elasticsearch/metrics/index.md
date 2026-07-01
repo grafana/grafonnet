@@ -12,7 +12,10 @@
 * [`obj Count`](#obj-count)
   * [`fn withHide(value=true)`](#fn-countwithhide)
   * [`fn withId(value)`](#fn-countwithid)
-  * [`fn withType()`](#fn-countwithtype)
+  * [`fn withType(value)`](#fn-countwithtype)
+  * [`fn withTypeMixin(value)`](#fn-countwithtypemixin)
+  * [`obj type`](#obj-counttype)
+    * [`fn withPipelineMetricAggregationType(value)`](#fn-counttypewithpipelinemetricaggregationtype)
 * [`obj MetricAggregationWithSettings`](#obj-metricaggregationwithsettings)
   * [`obj Average`](#obj-metricaggregationwithsettingsaverage)
     * [`fn withField(value)`](#fn-metricaggregationwithsettingsaveragewithfield)
@@ -20,13 +23,16 @@
     * [`fn withId(value)`](#fn-metricaggregationwithsettingsaveragewithid)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingsaveragewithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingsaveragewithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingsaveragewithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingsaveragewithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingsaveragewithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingsaveragesettings)
       * [`fn withMissing(value)`](#fn-metricaggregationwithsettingsaveragesettingswithmissing)
       * [`fn withScript(value)`](#fn-metricaggregationwithsettingsaveragesettingswithscript)
       * [`fn withScriptMixin(value)`](#fn-metricaggregationwithsettingsaveragesettingswithscriptmixin)
       * [`obj script`](#obj-metricaggregationwithsettingsaveragesettingsscript)
         * [`fn withInline(value)`](#fn-metricaggregationwithsettingsaveragesettingsscriptwithinline)
+    * [`obj type`](#obj-metricaggregationwithsettingsaveragetype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingsaveragetypewithpipelinemetricaggregationtype)
   * [`obj BucketScript`](#obj-metricaggregationwithsettingsbucketscript)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingsbucketscriptwithhide)
     * [`fn withId(value)`](#fn-metricaggregationwithsettingsbucketscriptwithid)
@@ -34,12 +40,15 @@
     * [`fn withPipelineVariablesMixin(value)`](#fn-metricaggregationwithsettingsbucketscriptwithpipelinevariablesmixin)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingsbucketscriptwithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingsbucketscriptwithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingsbucketscriptwithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingsbucketscriptwithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingsbucketscriptwithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingsbucketscriptsettings)
       * [`fn withScript(value)`](#fn-metricaggregationwithsettingsbucketscriptsettingswithscript)
       * [`fn withScriptMixin(value)`](#fn-metricaggregationwithsettingsbucketscriptsettingswithscriptmixin)
       * [`obj script`](#obj-metricaggregationwithsettingsbucketscriptsettingsscript)
         * [`fn withInline(value)`](#fn-metricaggregationwithsettingsbucketscriptsettingsscriptwithinline)
+    * [`obj type`](#obj-metricaggregationwithsettingsbucketscripttype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingsbucketscripttypewithpipelinemetricaggregationtype)
   * [`obj CumulativeSum`](#obj-metricaggregationwithsettingscumulativesum)
     * [`fn withField(value)`](#fn-metricaggregationwithsettingscumulativesumwithfield)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingscumulativesumwithhide)
@@ -47,9 +56,12 @@
     * [`fn withPipelineAgg(value)`](#fn-metricaggregationwithsettingscumulativesumwithpipelineagg)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingscumulativesumwithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingscumulativesumwithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingscumulativesumwithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingscumulativesumwithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingscumulativesumwithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingscumulativesumsettings)
       * [`fn withFormat(value)`](#fn-metricaggregationwithsettingscumulativesumsettingswithformat)
+    * [`obj type`](#obj-metricaggregationwithsettingscumulativesumtype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingscumulativesumtypewithpipelinemetricaggregationtype)
   * [`obj Derivative`](#obj-metricaggregationwithsettingsderivative)
     * [`fn withField(value)`](#fn-metricaggregationwithsettingsderivativewithfield)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingsderivativewithhide)
@@ -57,9 +69,12 @@
     * [`fn withPipelineAgg(value)`](#fn-metricaggregationwithsettingsderivativewithpipelineagg)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingsderivativewithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingsderivativewithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingsderivativewithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingsderivativewithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingsderivativewithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingsderivativesettings)
       * [`fn withUnit(value)`](#fn-metricaggregationwithsettingsderivativesettingswithunit)
+    * [`obj type`](#obj-metricaggregationwithsettingsderivativetype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingsderivativetypewithpipelinemetricaggregationtype)
   * [`obj ExtendedStats`](#obj-metricaggregationwithsettingsextendedstats)
     * [`fn withField(value)`](#fn-metricaggregationwithsettingsextendedstatswithfield)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingsextendedstatswithhide)
@@ -68,7 +83,8 @@
     * [`fn withMetaMixin(value)`](#fn-metricaggregationwithsettingsextendedstatswithmetamixin)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingsextendedstatswithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingsextendedstatswithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingsextendedstatswithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingsextendedstatswithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingsextendedstatswithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingsextendedstatssettings)
       * [`fn withMissing(value)`](#fn-metricaggregationwithsettingsextendedstatssettingswithmissing)
       * [`fn withScript(value)`](#fn-metricaggregationwithsettingsextendedstatssettingswithscript)
@@ -76,40 +92,51 @@
       * [`fn withSigma(value)`](#fn-metricaggregationwithsettingsextendedstatssettingswithsigma)
       * [`obj script`](#obj-metricaggregationwithsettingsextendedstatssettingsscript)
         * [`fn withInline(value)`](#fn-metricaggregationwithsettingsextendedstatssettingsscriptwithinline)
+    * [`obj type`](#obj-metricaggregationwithsettingsextendedstatstype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingsextendedstatstypewithpipelinemetricaggregationtype)
   * [`obj Logs`](#obj-metricaggregationwithsettingslogs)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingslogswithhide)
     * [`fn withId(value)`](#fn-metricaggregationwithsettingslogswithid)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingslogswithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingslogswithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingslogswithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingslogswithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingslogswithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingslogssettings)
       * [`fn withLimit(value)`](#fn-metricaggregationwithsettingslogssettingswithlimit)
+    * [`obj type`](#obj-metricaggregationwithsettingslogstype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingslogstypewithpipelinemetricaggregationtype)
   * [`obj Max`](#obj-metricaggregationwithsettingsmax)
     * [`fn withField(value)`](#fn-metricaggregationwithsettingsmaxwithfield)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingsmaxwithhide)
     * [`fn withId(value)`](#fn-metricaggregationwithsettingsmaxwithid)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingsmaxwithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingsmaxwithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingsmaxwithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingsmaxwithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingsmaxwithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingsmaxsettings)
       * [`fn withMissing(value)`](#fn-metricaggregationwithsettingsmaxsettingswithmissing)
       * [`fn withScript(value)`](#fn-metricaggregationwithsettingsmaxsettingswithscript)
       * [`fn withScriptMixin(value)`](#fn-metricaggregationwithsettingsmaxsettingswithscriptmixin)
       * [`obj script`](#obj-metricaggregationwithsettingsmaxsettingsscript)
         * [`fn withInline(value)`](#fn-metricaggregationwithsettingsmaxsettingsscriptwithinline)
+    * [`obj type`](#obj-metricaggregationwithsettingsmaxtype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingsmaxtypewithpipelinemetricaggregationtype)
   * [`obj Min`](#obj-metricaggregationwithsettingsmin)
     * [`fn withField(value)`](#fn-metricaggregationwithsettingsminwithfield)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingsminwithhide)
     * [`fn withId(value)`](#fn-metricaggregationwithsettingsminwithid)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingsminwithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingsminwithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingsminwithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingsminwithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingsminwithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingsminsettings)
       * [`fn withMissing(value)`](#fn-metricaggregationwithsettingsminsettingswithmissing)
       * [`fn withScript(value)`](#fn-metricaggregationwithsettingsminsettingswithscript)
       * [`fn withScriptMixin(value)`](#fn-metricaggregationwithsettingsminsettingswithscriptmixin)
       * [`obj script`](#obj-metricaggregationwithsettingsminsettingsscript)
         * [`fn withInline(value)`](#fn-metricaggregationwithsettingsminsettingsscriptwithinline)
+    * [`obj type`](#obj-metricaggregationwithsettingsmintype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingsmintypewithpipelinemetricaggregationtype)
   * [`obj MovingAverage`](#obj-metricaggregationwithsettingsmovingaverage)
     * [`fn withField(value)`](#fn-metricaggregationwithsettingsmovingaveragewithfield)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingsmovingaveragewithhide)
@@ -117,7 +144,10 @@
     * [`fn withPipelineAgg(value)`](#fn-metricaggregationwithsettingsmovingaveragewithpipelineagg)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingsmovingaveragewithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingsmovingaveragewithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingsmovingaveragewithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingsmovingaveragewithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingsmovingaveragewithtypemixin)
+    * [`obj type`](#obj-metricaggregationwithsettingsmovingaveragetype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingsmovingaveragetypewithpipelinemetricaggregationtype)
   * [`obj MovingFunction`](#obj-metricaggregationwithsettingsmovingfunction)
     * [`fn withField(value)`](#fn-metricaggregationwithsettingsmovingfunctionwithfield)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingsmovingfunctionwithhide)
@@ -125,7 +155,8 @@
     * [`fn withPipelineAgg(value)`](#fn-metricaggregationwithsettingsmovingfunctionwithpipelineagg)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingsmovingfunctionwithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingsmovingfunctionwithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingsmovingfunctionwithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingsmovingfunctionwithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingsmovingfunctionwithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingsmovingfunctionsettings)
       * [`fn withScript(value)`](#fn-metricaggregationwithsettingsmovingfunctionsettingswithscript)
       * [`fn withScriptMixin(value)`](#fn-metricaggregationwithsettingsmovingfunctionsettingswithscriptmixin)
@@ -133,13 +164,16 @@
       * [`fn withWindow(value)`](#fn-metricaggregationwithsettingsmovingfunctionsettingswithwindow)
       * [`obj script`](#obj-metricaggregationwithsettingsmovingfunctionsettingsscript)
         * [`fn withInline(value)`](#fn-metricaggregationwithsettingsmovingfunctionsettingsscriptwithinline)
+    * [`obj type`](#obj-metricaggregationwithsettingsmovingfunctiontype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingsmovingfunctiontypewithpipelinemetricaggregationtype)
   * [`obj Percentiles`](#obj-metricaggregationwithsettingspercentiles)
     * [`fn withField(value)`](#fn-metricaggregationwithsettingspercentileswithfield)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingspercentileswithhide)
     * [`fn withId(value)`](#fn-metricaggregationwithsettingspercentileswithid)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingspercentileswithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingspercentileswithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingspercentileswithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingspercentileswithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingspercentileswithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingspercentilessettings)
       * [`fn withMissing(value)`](#fn-metricaggregationwithsettingspercentilessettingswithmissing)
       * [`fn withPercents(value)`](#fn-metricaggregationwithsettingspercentilessettingswithpercents)
@@ -148,32 +182,43 @@
       * [`fn withScriptMixin(value)`](#fn-metricaggregationwithsettingspercentilessettingswithscriptmixin)
       * [`obj script`](#obj-metricaggregationwithsettingspercentilessettingsscript)
         * [`fn withInline(value)`](#fn-metricaggregationwithsettingspercentilessettingsscriptwithinline)
+    * [`obj type`](#obj-metricaggregationwithsettingspercentilestype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingspercentilestypewithpipelinemetricaggregationtype)
   * [`obj Rate`](#obj-metricaggregationwithsettingsrate)
     * [`fn withField(value)`](#fn-metricaggregationwithsettingsratewithfield)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingsratewithhide)
     * [`fn withId(value)`](#fn-metricaggregationwithsettingsratewithid)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingsratewithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingsratewithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingsratewithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingsratewithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingsratewithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingsratesettings)
       * [`fn withMode(value)`](#fn-metricaggregationwithsettingsratesettingswithmode)
       * [`fn withUnit(value)`](#fn-metricaggregationwithsettingsratesettingswithunit)
+    * [`obj type`](#obj-metricaggregationwithsettingsratetype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingsratetypewithpipelinemetricaggregationtype)
   * [`obj RawData`](#obj-metricaggregationwithsettingsrawdata)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingsrawdatawithhide)
     * [`fn withId(value)`](#fn-metricaggregationwithsettingsrawdatawithid)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingsrawdatawithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingsrawdatawithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingsrawdatawithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingsrawdatawithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingsrawdatawithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingsrawdatasettings)
       * [`fn withSize(value)`](#fn-metricaggregationwithsettingsrawdatasettingswithsize)
+    * [`obj type`](#obj-metricaggregationwithsettingsrawdatatype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingsrawdatatypewithpipelinemetricaggregationtype)
   * [`obj RawDocument`](#obj-metricaggregationwithsettingsrawdocument)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingsrawdocumentwithhide)
     * [`fn withId(value)`](#fn-metricaggregationwithsettingsrawdocumentwithid)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingsrawdocumentwithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingsrawdocumentwithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingsrawdocumentwithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingsrawdocumentwithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingsrawdocumentwithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingsrawdocumentsettings)
       * [`fn withSize(value)`](#fn-metricaggregationwithsettingsrawdocumentsettingswithsize)
+    * [`obj type`](#obj-metricaggregationwithsettingsrawdocumenttype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingsrawdocumenttypewithpipelinemetricaggregationtype)
   * [`obj SerialDiff`](#obj-metricaggregationwithsettingsserialdiff)
     * [`fn withField(value)`](#fn-metricaggregationwithsettingsserialdiffwithfield)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingsserialdiffwithhide)
@@ -181,43 +226,55 @@
     * [`fn withPipelineAgg(value)`](#fn-metricaggregationwithsettingsserialdiffwithpipelineagg)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingsserialdiffwithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingsserialdiffwithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingsserialdiffwithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingsserialdiffwithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingsserialdiffwithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingsserialdiffsettings)
       * [`fn withLag(value)`](#fn-metricaggregationwithsettingsserialdiffsettingswithlag)
+    * [`obj type`](#obj-metricaggregationwithsettingsserialdifftype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingsserialdifftypewithpipelinemetricaggregationtype)
   * [`obj Sum`](#obj-metricaggregationwithsettingssum)
     * [`fn withField(value)`](#fn-metricaggregationwithsettingssumwithfield)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingssumwithhide)
     * [`fn withId(value)`](#fn-metricaggregationwithsettingssumwithid)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingssumwithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingssumwithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingssumwithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingssumwithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingssumwithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingssumsettings)
       * [`fn withMissing(value)`](#fn-metricaggregationwithsettingssumsettingswithmissing)
       * [`fn withScript(value)`](#fn-metricaggregationwithsettingssumsettingswithscript)
       * [`fn withScriptMixin(value)`](#fn-metricaggregationwithsettingssumsettingswithscriptmixin)
       * [`obj script`](#obj-metricaggregationwithsettingssumsettingsscript)
         * [`fn withInline(value)`](#fn-metricaggregationwithsettingssumsettingsscriptwithinline)
+    * [`obj type`](#obj-metricaggregationwithsettingssumtype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingssumtypewithpipelinemetricaggregationtype)
   * [`obj TopMetrics`](#obj-metricaggregationwithsettingstopmetrics)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingstopmetricswithhide)
     * [`fn withId(value)`](#fn-metricaggregationwithsettingstopmetricswithid)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingstopmetricswithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingstopmetricswithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingstopmetricswithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingstopmetricswithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingstopmetricswithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingstopmetricssettings)
       * [`fn withMetrics(value)`](#fn-metricaggregationwithsettingstopmetricssettingswithmetrics)
       * [`fn withMetricsMixin(value)`](#fn-metricaggregationwithsettingstopmetricssettingswithmetricsmixin)
       * [`fn withOrder(value)`](#fn-metricaggregationwithsettingstopmetricssettingswithorder)
       * [`fn withOrderBy(value)`](#fn-metricaggregationwithsettingstopmetricssettingswithorderby)
+    * [`obj type`](#obj-metricaggregationwithsettingstopmetricstype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingstopmetricstypewithpipelinemetricaggregationtype)
   * [`obj UniqueCount`](#obj-metricaggregationwithsettingsuniquecount)
     * [`fn withField(value)`](#fn-metricaggregationwithsettingsuniquecountwithfield)
     * [`fn withHide(value=true)`](#fn-metricaggregationwithsettingsuniquecountwithhide)
     * [`fn withId(value)`](#fn-metricaggregationwithsettingsuniquecountwithid)
     * [`fn withSettings(value)`](#fn-metricaggregationwithsettingsuniquecountwithsettings)
     * [`fn withSettingsMixin(value)`](#fn-metricaggregationwithsettingsuniquecountwithsettingsmixin)
-    * [`fn withType()`](#fn-metricaggregationwithsettingsuniquecountwithtype)
+    * [`fn withType(value)`](#fn-metricaggregationwithsettingsuniquecountwithtype)
+    * [`fn withTypeMixin(value)`](#fn-metricaggregationwithsettingsuniquecountwithtypemixin)
     * [`obj settings`](#obj-metricaggregationwithsettingsuniquecountsettings)
       * [`fn withMissing(value)`](#fn-metricaggregationwithsettingsuniquecountsettingswithmissing)
       * [`fn withPrecisionThreshold(value)`](#fn-metricaggregationwithsettingsuniquecountsettingswithprecisionthreshold)
+    * [`obj type`](#obj-metricaggregationwithsettingsuniquecounttype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-metricaggregationwithsettingsuniquecounttypewithpipelinemetricaggregationtype)
 * [`obj PipelineMetricAggregation`](#obj-pipelinemetricaggregation)
   * [`obj BucketScript`](#obj-pipelinemetricaggregationbucketscript)
     * [`fn withHide(value=true)`](#fn-pipelinemetricaggregationbucketscriptwithhide)
@@ -226,12 +283,15 @@
     * [`fn withPipelineVariablesMixin(value)`](#fn-pipelinemetricaggregationbucketscriptwithpipelinevariablesmixin)
     * [`fn withSettings(value)`](#fn-pipelinemetricaggregationbucketscriptwithsettings)
     * [`fn withSettingsMixin(value)`](#fn-pipelinemetricaggregationbucketscriptwithsettingsmixin)
-    * [`fn withType()`](#fn-pipelinemetricaggregationbucketscriptwithtype)
+    * [`fn withType(value)`](#fn-pipelinemetricaggregationbucketscriptwithtype)
+    * [`fn withTypeMixin(value)`](#fn-pipelinemetricaggregationbucketscriptwithtypemixin)
     * [`obj settings`](#obj-pipelinemetricaggregationbucketscriptsettings)
       * [`fn withScript(value)`](#fn-pipelinemetricaggregationbucketscriptsettingswithscript)
       * [`fn withScriptMixin(value)`](#fn-pipelinemetricaggregationbucketscriptsettingswithscriptmixin)
       * [`obj script`](#obj-pipelinemetricaggregationbucketscriptsettingsscript)
         * [`fn withInline(value)`](#fn-pipelinemetricaggregationbucketscriptsettingsscriptwithinline)
+    * [`obj type`](#obj-pipelinemetricaggregationbucketscripttype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-pipelinemetricaggregationbucketscripttypewithpipelinemetricaggregationtype)
   * [`obj CumulativeSum`](#obj-pipelinemetricaggregationcumulativesum)
     * [`fn withField(value)`](#fn-pipelinemetricaggregationcumulativesumwithfield)
     * [`fn withHide(value=true)`](#fn-pipelinemetricaggregationcumulativesumwithhide)
@@ -239,9 +299,12 @@
     * [`fn withPipelineAgg(value)`](#fn-pipelinemetricaggregationcumulativesumwithpipelineagg)
     * [`fn withSettings(value)`](#fn-pipelinemetricaggregationcumulativesumwithsettings)
     * [`fn withSettingsMixin(value)`](#fn-pipelinemetricaggregationcumulativesumwithsettingsmixin)
-    * [`fn withType()`](#fn-pipelinemetricaggregationcumulativesumwithtype)
+    * [`fn withType(value)`](#fn-pipelinemetricaggregationcumulativesumwithtype)
+    * [`fn withTypeMixin(value)`](#fn-pipelinemetricaggregationcumulativesumwithtypemixin)
     * [`obj settings`](#obj-pipelinemetricaggregationcumulativesumsettings)
       * [`fn withFormat(value)`](#fn-pipelinemetricaggregationcumulativesumsettingswithformat)
+    * [`obj type`](#obj-pipelinemetricaggregationcumulativesumtype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-pipelinemetricaggregationcumulativesumtypewithpipelinemetricaggregationtype)
   * [`obj Derivative`](#obj-pipelinemetricaggregationderivative)
     * [`fn withField(value)`](#fn-pipelinemetricaggregationderivativewithfield)
     * [`fn withHide(value=true)`](#fn-pipelinemetricaggregationderivativewithhide)
@@ -249,9 +312,12 @@
     * [`fn withPipelineAgg(value)`](#fn-pipelinemetricaggregationderivativewithpipelineagg)
     * [`fn withSettings(value)`](#fn-pipelinemetricaggregationderivativewithsettings)
     * [`fn withSettingsMixin(value)`](#fn-pipelinemetricaggregationderivativewithsettingsmixin)
-    * [`fn withType()`](#fn-pipelinemetricaggregationderivativewithtype)
+    * [`fn withType(value)`](#fn-pipelinemetricaggregationderivativewithtype)
+    * [`fn withTypeMixin(value)`](#fn-pipelinemetricaggregationderivativewithtypemixin)
     * [`obj settings`](#obj-pipelinemetricaggregationderivativesettings)
       * [`fn withUnit(value)`](#fn-pipelinemetricaggregationderivativesettingswithunit)
+    * [`obj type`](#obj-pipelinemetricaggregationderivativetype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-pipelinemetricaggregationderivativetypewithpipelinemetricaggregationtype)
   * [`obj MovingAverage`](#obj-pipelinemetricaggregationmovingaverage)
     * [`fn withField(value)`](#fn-pipelinemetricaggregationmovingaveragewithfield)
     * [`fn withHide(value=true)`](#fn-pipelinemetricaggregationmovingaveragewithhide)
@@ -259,7 +325,10 @@
     * [`fn withPipelineAgg(value)`](#fn-pipelinemetricaggregationmovingaveragewithpipelineagg)
     * [`fn withSettings(value)`](#fn-pipelinemetricaggregationmovingaveragewithsettings)
     * [`fn withSettingsMixin(value)`](#fn-pipelinemetricaggregationmovingaveragewithsettingsmixin)
-    * [`fn withType()`](#fn-pipelinemetricaggregationmovingaveragewithtype)
+    * [`fn withType(value)`](#fn-pipelinemetricaggregationmovingaveragewithtype)
+    * [`fn withTypeMixin(value)`](#fn-pipelinemetricaggregationmovingaveragewithtypemixin)
+    * [`obj type`](#obj-pipelinemetricaggregationmovingaveragetype)
+      * [`fn withPipelineMetricAggregationType(value)`](#fn-pipelinemetricaggregationmovingaveragetypewithpipelinemetricaggregationtype)
 
 ## Fields
 
@@ -292,9 +361,38 @@ PARAMETERS:
 #### fn Count.withType
 
 ```jsonnet
-Count.withType()
+Count.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+#### fn Count.withTypeMixin
+
+```jsonnet
+Count.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+#### obj Count.type
+
+
+##### fn Count.type.withPipelineMetricAggregationType
+
+```jsonnet
+Count.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 ### obj MetricAggregationWithSettings
@@ -362,9 +460,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.Average.withType
 
 ```jsonnet
-MetricAggregationWithSettings.Average.withType()
+MetricAggregationWithSettings.Average.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.Average.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.Average.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.Average.settings
@@ -415,6 +527,21 @@ MetricAggregationWithSettings.Average.settings.script.withInline(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj MetricAggregationWithSettings.Average.type
+
+
+###### fn MetricAggregationWithSettings.Average.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.Average.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj MetricAggregationWithSettings.BucketScript
@@ -490,9 +617,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.BucketScript.withType
 
 ```jsonnet
-MetricAggregationWithSettings.BucketScript.withType()
+MetricAggregationWithSettings.BucketScript.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.BucketScript.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.BucketScript.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.BucketScript.settings
@@ -532,6 +673,21 @@ MetricAggregationWithSettings.BucketScript.settings.script.withInline(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj MetricAggregationWithSettings.BucketScript.type
+
+
+###### fn MetricAggregationWithSettings.BucketScript.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.BucketScript.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj MetricAggregationWithSettings.CumulativeSum
@@ -607,9 +763,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.CumulativeSum.withType
 
 ```jsonnet
-MetricAggregationWithSettings.CumulativeSum.withType()
+MetricAggregationWithSettings.CumulativeSum.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.CumulativeSum.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.CumulativeSum.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.CumulativeSum.settings
@@ -624,6 +794,21 @@ MetricAggregationWithSettings.CumulativeSum.settings.withFormat(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj MetricAggregationWithSettings.CumulativeSum.type
+
+
+###### fn MetricAggregationWithSettings.CumulativeSum.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.CumulativeSum.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj MetricAggregationWithSettings.Derivative
@@ -699,9 +884,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.Derivative.withType
 
 ```jsonnet
-MetricAggregationWithSettings.Derivative.withType()
+MetricAggregationWithSettings.Derivative.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.Derivative.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.Derivative.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.Derivative.settings
@@ -716,6 +915,21 @@ MetricAggregationWithSettings.Derivative.settings.withUnit(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj MetricAggregationWithSettings.Derivative.type
+
+
+###### fn MetricAggregationWithSettings.Derivative.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.Derivative.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj MetricAggregationWithSettings.ExtendedStats
@@ -802,9 +1016,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.ExtendedStats.withType
 
 ```jsonnet
-MetricAggregationWithSettings.ExtendedStats.withType()
+MetricAggregationWithSettings.ExtendedStats.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.ExtendedStats.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.ExtendedStats.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.ExtendedStats.settings
@@ -868,6 +1096,21 @@ PARAMETERS:
 * **value** (`string`)
 
 
+##### obj MetricAggregationWithSettings.ExtendedStats.type
+
+
+###### fn MetricAggregationWithSettings.ExtendedStats.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.ExtendedStats.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
+
+
 #### obj MetricAggregationWithSettings.Logs
 
 
@@ -919,9 +1162,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.Logs.withType
 
 ```jsonnet
-MetricAggregationWithSettings.Logs.withType()
+MetricAggregationWithSettings.Logs.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.Logs.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.Logs.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.Logs.settings
@@ -936,6 +1193,21 @@ MetricAggregationWithSettings.Logs.settings.withLimit(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj MetricAggregationWithSettings.Logs.type
+
+
+###### fn MetricAggregationWithSettings.Logs.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.Logs.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj MetricAggregationWithSettings.Max
@@ -1000,9 +1272,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.Max.withType
 
 ```jsonnet
-MetricAggregationWithSettings.Max.withType()
+MetricAggregationWithSettings.Max.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.Max.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.Max.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.Max.settings
@@ -1053,6 +1339,21 @@ MetricAggregationWithSettings.Max.settings.script.withInline(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj MetricAggregationWithSettings.Max.type
+
+
+###### fn MetricAggregationWithSettings.Max.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.Max.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj MetricAggregationWithSettings.Min
@@ -1117,9 +1418,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.Min.withType
 
 ```jsonnet
-MetricAggregationWithSettings.Min.withType()
+MetricAggregationWithSettings.Min.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.Min.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.Min.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.Min.settings
@@ -1170,6 +1485,21 @@ MetricAggregationWithSettings.Min.settings.script.withInline(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj MetricAggregationWithSettings.Min.type
+
+
+###### fn MetricAggregationWithSettings.Min.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.Min.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj MetricAggregationWithSettings.MovingAverage
@@ -1245,9 +1575,38 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.MovingAverage.withType
 
 ```jsonnet
-MetricAggregationWithSettings.MovingAverage.withType()
+MetricAggregationWithSettings.MovingAverage.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.MovingAverage.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.MovingAverage.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### obj MetricAggregationWithSettings.MovingAverage.type
+
+
+###### fn MetricAggregationWithSettings.MovingAverage.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.MovingAverage.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj MetricAggregationWithSettings.MovingFunction
@@ -1323,9 +1682,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.MovingFunction.withType
 
 ```jsonnet
-MetricAggregationWithSettings.MovingFunction.withType()
+MetricAggregationWithSettings.MovingFunction.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.MovingFunction.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.MovingFunction.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.MovingFunction.settings
@@ -1387,6 +1760,21 @@ MetricAggregationWithSettings.MovingFunction.settings.script.withInline(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj MetricAggregationWithSettings.MovingFunction.type
+
+
+###### fn MetricAggregationWithSettings.MovingFunction.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.MovingFunction.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj MetricAggregationWithSettings.Percentiles
@@ -1451,9 +1839,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.Percentiles.withType
 
 ```jsonnet
-MetricAggregationWithSettings.Percentiles.withType()
+MetricAggregationWithSettings.Percentiles.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.Percentiles.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.Percentiles.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.Percentiles.settings
@@ -1528,6 +1930,21 @@ PARAMETERS:
 * **value** (`string`)
 
 
+##### obj MetricAggregationWithSettings.Percentiles.type
+
+
+###### fn MetricAggregationWithSettings.Percentiles.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.Percentiles.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
+
+
 #### obj MetricAggregationWithSettings.Rate
 
 
@@ -1590,9 +2007,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.Rate.withType
 
 ```jsonnet
-MetricAggregationWithSettings.Rate.withType()
+MetricAggregationWithSettings.Rate.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.Rate.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.Rate.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.Rate.settings
@@ -1618,6 +2049,21 @@ MetricAggregationWithSettings.Rate.settings.withUnit(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj MetricAggregationWithSettings.Rate.type
+
+
+###### fn MetricAggregationWithSettings.Rate.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.Rate.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj MetricAggregationWithSettings.RawData
@@ -1671,9 +2117,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.RawData.withType
 
 ```jsonnet
-MetricAggregationWithSettings.RawData.withType()
+MetricAggregationWithSettings.RawData.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.RawData.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.RawData.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.RawData.settings
@@ -1688,6 +2148,21 @@ MetricAggregationWithSettings.RawData.settings.withSize(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj MetricAggregationWithSettings.RawData.type
+
+
+###### fn MetricAggregationWithSettings.RawData.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.RawData.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj MetricAggregationWithSettings.RawDocument
@@ -1741,9 +2216,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.RawDocument.withType
 
 ```jsonnet
-MetricAggregationWithSettings.RawDocument.withType()
+MetricAggregationWithSettings.RawDocument.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.RawDocument.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.RawDocument.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.RawDocument.settings
@@ -1758,6 +2247,21 @@ MetricAggregationWithSettings.RawDocument.settings.withSize(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj MetricAggregationWithSettings.RawDocument.type
+
+
+###### fn MetricAggregationWithSettings.RawDocument.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.RawDocument.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj MetricAggregationWithSettings.SerialDiff
@@ -1833,9 +2337,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.SerialDiff.withType
 
 ```jsonnet
-MetricAggregationWithSettings.SerialDiff.withType()
+MetricAggregationWithSettings.SerialDiff.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.SerialDiff.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.SerialDiff.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.SerialDiff.settings
@@ -1850,6 +2368,21 @@ MetricAggregationWithSettings.SerialDiff.settings.withLag(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj MetricAggregationWithSettings.SerialDiff.type
+
+
+###### fn MetricAggregationWithSettings.SerialDiff.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.SerialDiff.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj MetricAggregationWithSettings.Sum
@@ -1914,9 +2447,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.Sum.withType
 
 ```jsonnet
-MetricAggregationWithSettings.Sum.withType()
+MetricAggregationWithSettings.Sum.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.Sum.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.Sum.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.Sum.settings
@@ -1967,6 +2514,21 @@ MetricAggregationWithSettings.Sum.settings.script.withInline(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj MetricAggregationWithSettings.Sum.type
+
+
+###### fn MetricAggregationWithSettings.Sum.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.Sum.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj MetricAggregationWithSettings.TopMetrics
@@ -2020,9 +2582,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.TopMetrics.withType
 
 ```jsonnet
-MetricAggregationWithSettings.TopMetrics.withType()
+MetricAggregationWithSettings.TopMetrics.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.TopMetrics.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.TopMetrics.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.TopMetrics.settings
@@ -2070,6 +2646,21 @@ MetricAggregationWithSettings.TopMetrics.settings.withOrderBy(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj MetricAggregationWithSettings.TopMetrics.type
+
+
+###### fn MetricAggregationWithSettings.TopMetrics.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.TopMetrics.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj MetricAggregationWithSettings.UniqueCount
@@ -2134,9 +2725,23 @@ PARAMETERS:
 ##### fn MetricAggregationWithSettings.UniqueCount.withType
 
 ```jsonnet
-MetricAggregationWithSettings.UniqueCount.withType()
+MetricAggregationWithSettings.UniqueCount.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn MetricAggregationWithSettings.UniqueCount.withTypeMixin
+
+```jsonnet
+MetricAggregationWithSettings.UniqueCount.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj MetricAggregationWithSettings.UniqueCount.settings
@@ -2162,6 +2767,21 @@ MetricAggregationWithSettings.UniqueCount.settings.withPrecisionThreshold(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj MetricAggregationWithSettings.UniqueCount.type
+
+
+###### fn MetricAggregationWithSettings.UniqueCount.type.withPipelineMetricAggregationType
+
+```jsonnet
+MetricAggregationWithSettings.UniqueCount.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 ### obj PipelineMetricAggregation
@@ -2240,9 +2860,23 @@ PARAMETERS:
 ##### fn PipelineMetricAggregation.BucketScript.withType
 
 ```jsonnet
-PipelineMetricAggregation.BucketScript.withType()
+PipelineMetricAggregation.BucketScript.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn PipelineMetricAggregation.BucketScript.withTypeMixin
+
+```jsonnet
+PipelineMetricAggregation.BucketScript.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj PipelineMetricAggregation.BucketScript.settings
@@ -2282,6 +2916,21 @@ PipelineMetricAggregation.BucketScript.settings.script.withInline(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj PipelineMetricAggregation.BucketScript.type
+
+
+###### fn PipelineMetricAggregation.BucketScript.type.withPipelineMetricAggregationType
+
+```jsonnet
+PipelineMetricAggregation.BucketScript.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj PipelineMetricAggregation.CumulativeSum
@@ -2357,9 +3006,23 @@ PARAMETERS:
 ##### fn PipelineMetricAggregation.CumulativeSum.withType
 
 ```jsonnet
-PipelineMetricAggregation.CumulativeSum.withType()
+PipelineMetricAggregation.CumulativeSum.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn PipelineMetricAggregation.CumulativeSum.withTypeMixin
+
+```jsonnet
+PipelineMetricAggregation.CumulativeSum.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj PipelineMetricAggregation.CumulativeSum.settings
@@ -2374,6 +3037,21 @@ PipelineMetricAggregation.CumulativeSum.settings.withFormat(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj PipelineMetricAggregation.CumulativeSum.type
+
+
+###### fn PipelineMetricAggregation.CumulativeSum.type.withPipelineMetricAggregationType
+
+```jsonnet
+PipelineMetricAggregation.CumulativeSum.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj PipelineMetricAggregation.Derivative
@@ -2449,9 +3127,23 @@ PARAMETERS:
 ##### fn PipelineMetricAggregation.Derivative.withType
 
 ```jsonnet
-PipelineMetricAggregation.Derivative.withType()
+PipelineMetricAggregation.Derivative.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn PipelineMetricAggregation.Derivative.withTypeMixin
+
+```jsonnet
+PipelineMetricAggregation.Derivative.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
 
 
 ##### obj PipelineMetricAggregation.Derivative.settings
@@ -2466,6 +3158,21 @@ PipelineMetricAggregation.Derivative.settings.withUnit(value)
 PARAMETERS:
 
 * **value** (`string`)
+
+
+##### obj PipelineMetricAggregation.Derivative.type
+
+
+###### fn PipelineMetricAggregation.Derivative.type.withPipelineMetricAggregationType
+
+```jsonnet
+PipelineMetricAggregation.Derivative.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 
 
 #### obj PipelineMetricAggregation.MovingAverage
@@ -2541,7 +3248,36 @@ PARAMETERS:
 ##### fn PipelineMetricAggregation.MovingAverage.withType
 
 ```jsonnet
-PipelineMetricAggregation.MovingAverage.withType()
+PipelineMetricAggregation.MovingAverage.withType(value)
 ```
 
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### fn PipelineMetricAggregation.MovingAverage.withTypeMixin
+
+```jsonnet
+PipelineMetricAggregation.MovingAverage.withTypeMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+
+
+##### obj PipelineMetricAggregation.MovingAverage.type
+
+
+###### fn PipelineMetricAggregation.MovingAverage.type.withPipelineMetricAggregationType
+
+```jsonnet
+PipelineMetricAggregation.MovingAverage.type.withPipelineMetricAggregationType(value)
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - valid values: `"moving_avg"`, `"moving_fn"`, `"derivative"`, `"serial_diff"`, `"cumulative_sum"`, `"bucket_script"`
 

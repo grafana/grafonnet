@@ -6,6 +6,7 @@ grafonnet.dashboard
 
 * [annotation](annotation.md)
 * [link](link.md)
+* [timepicker.quick_ranges](timepicker/quick_ranges.md)
 * [variable](variable.md)
 
 ## Index
@@ -42,10 +43,10 @@ grafonnet.dashboard
 * [`obj timepicker`](#obj-timepicker)
   * [`fn withHidden(value=true)`](#fn-timepickerwithhidden)
   * [`fn withNowDelay(value)`](#fn-timepickerwithnowdelay)
+  * [`fn withQuickRanges(value)`](#fn-timepickerwithquickranges)
+  * [`fn withQuickRangesMixin(value)`](#fn-timepickerwithquickrangesmixin)
   * [`fn withRefreshIntervals(value=["5s","10s","30s","1m","5m","15m","30m","1h","2h","1d"])`](#fn-timepickerwithrefreshintervals)
   * [`fn withRefreshIntervalsMixin(value=["5s","10s","30s","1m","5m","15m","30m","1h","2h","1d"])`](#fn-timepickerwithrefreshintervalsmixin)
-  * [`fn withTimeOptions(value=["5m","15m","1h","6h","12h","24h","2d","7d","30d"])`](#fn-timepickerwithtimeoptions)
-  * [`fn withTimeOptionsMixin(value=["5m","15m","1h","6h","12h","24h","2d","7d","30d"])`](#fn-timepickerwithtimeoptionsmixin)
 
 ## Fields
 
@@ -429,6 +430,28 @@ PARAMETERS:
 * **value** (`string`)
 
 Override the now time by entering a time delay. Use this option to accommodate known delays in data aggregation to avoid null values.
+#### fn timepicker.withQuickRanges
+
+```jsonnet
+timepicker.withQuickRanges(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+Quick ranges for time picker.
+#### fn timepicker.withQuickRangesMixin
+
+```jsonnet
+timepicker.withQuickRangesMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`array`)
+
+Quick ranges for time picker.
 #### fn timepicker.withRefreshIntervals
 
 ```jsonnet
@@ -453,27 +476,3 @@ PARAMETERS:
    - default value: `["5s","10s","30s","1m","5m","15m","30m","1h","2h","1d"]`
 
 Interval options available in the refresh picker dropdown.
-#### fn timepicker.withTimeOptions
-
-```jsonnet
-timepicker.withTimeOptions(value=["5m","15m","1h","6h","12h","24h","2d","7d","30d"])
-```
-
-PARAMETERS:
-
-* **value** (`array`)
-   - default value: `["5m","15m","1h","6h","12h","24h","2d","7d","30d"]`
-
-Selectable options available in the time picker dropdown. Has no effect on provisioned dashboard.
-#### fn timepicker.withTimeOptionsMixin
-
-```jsonnet
-timepicker.withTimeOptionsMixin(value=["5m","15m","1h","6h","12h","24h","2d","7d","30d"])
-```
-
-PARAMETERS:
-
-* **value** (`array`)
-   - default value: `["5m","15m","1h","6h","12h","24h","2d","7d","30d"]`
-
-Selectable options available in the time picker dropdown. Has no effect on provisioned dashboard.

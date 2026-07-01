@@ -4,169 +4,78 @@
 
 ## Index
 
-* [`fn withAxisBorderShow(value=true)`](#fn-withaxisbordershow)
-* [`fn withAxisCenteredZero(value=true)`](#fn-withaxiscenteredzero)
-* [`fn withAxisColorMode(value)`](#fn-withaxiscolormode)
-* [`fn withAxisGridShow(value=true)`](#fn-withaxisgridshow)
-* [`fn withAxisLabel(value)`](#fn-withaxislabel)
-* [`fn withAxisPlacement(value)`](#fn-withaxisplacement)
-* [`fn withAxisSoftMax(value)`](#fn-withaxissoftmax)
-* [`fn withAxisSoftMin(value)`](#fn-withaxissoftmin)
-* [`fn withAxisWidth(value)`](#fn-withaxiswidth)
+* [`fn withColor(value)`](#fn-withcolor)
+* [`fn withColorMixin(value)`](#fn-withcolormixin)
 * [`fn withFrame(value)`](#fn-withframe)
-* [`fn withHideFrom(value)`](#fn-withhidefrom)
-* [`fn withHideFromMixin(value)`](#fn-withhidefrommixin)
-* [`fn withLabel(value="auto")`](#fn-withlabel)
-* [`fn withLabelValue(value)`](#fn-withlabelvalue)
-* [`fn withLabelValueMixin(value)`](#fn-withlabelvaluemixin)
-* [`fn withLineColor(value)`](#fn-withlinecolor)
-* [`fn withLineColorMixin(value)`](#fn-withlinecolormixin)
-* [`fn withLineStyle(value)`](#fn-withlinestyle)
-* [`fn withLineStyleMixin(value)`](#fn-withlinestylemixin)
-* [`fn withLineWidth(value)`](#fn-withlinewidth)
+* [`fn withFrameMixin(value)`](#fn-withframemixin)
 * [`fn withName(value)`](#fn-withname)
-* [`fn withPointColor(value)`](#fn-withpointcolor)
-* [`fn withPointColorMixin(value)`](#fn-withpointcolormixin)
-* [`fn withPointSize(value)`](#fn-withpointsize)
-* [`fn withPointSizeMixin(value)`](#fn-withpointsizemixin)
-* [`fn withScaleDistribution(value)`](#fn-withscaledistribution)
-* [`fn withScaleDistributionMixin(value)`](#fn-withscaledistributionmixin)
-* [`fn withShow(value="points")`](#fn-withshow)
+* [`fn withNameMixin(value)`](#fn-withnamemixin)
+* [`fn withSize(value)`](#fn-withsize)
+* [`fn withSizeMixin(value)`](#fn-withsizemixin)
 * [`fn withX(value)`](#fn-withx)
+* [`fn withXMixin(value)`](#fn-withxmixin)
 * [`fn withY(value)`](#fn-withy)
-* [`obj hideFrom`](#obj-hidefrom)
-  * [`fn withLegend(value=true)`](#fn-hidefromwithlegend)
-  * [`fn withTooltip(value=true)`](#fn-hidefromwithtooltip)
-  * [`fn withViz(value=true)`](#fn-hidefromwithviz)
-* [`obj labelValue`](#obj-labelvalue)
-  * [`fn withField(value)`](#fn-labelvaluewithfield)
-  * [`fn withFixed(value)`](#fn-labelvaluewithfixed)
-  * [`fn withMode(value)`](#fn-labelvaluewithmode)
-* [`obj lineColor`](#obj-linecolor)
-  * [`fn withField(value)`](#fn-linecolorwithfield)
-  * [`fn withFixed(value)`](#fn-linecolorwithfixed)
-* [`obj lineStyle`](#obj-linestyle)
-  * [`fn withDash(value)`](#fn-linestylewithdash)
-  * [`fn withDashMixin(value)`](#fn-linestylewithdashmixin)
-  * [`fn withFill(value)`](#fn-linestylewithfill)
-* [`obj pointColor`](#obj-pointcolor)
-  * [`fn withField(value)`](#fn-pointcolorwithfield)
-  * [`fn withFixed(value)`](#fn-pointcolorwithfixed)
-* [`obj pointSize`](#obj-pointsize)
-  * [`fn withField(value)`](#fn-pointsizewithfield)
-  * [`fn withFixed(value)`](#fn-pointsizewithfixed)
-  * [`fn withMax(value)`](#fn-pointsizewithmax)
-  * [`fn withMin(value)`](#fn-pointsizewithmin)
-  * [`fn withMode(value)`](#fn-pointsizewithmode)
-* [`obj scaleDistribution`](#obj-scaledistribution)
-  * [`fn withLinearThreshold(value)`](#fn-scaledistributionwithlinearthreshold)
-  * [`fn withLog(value)`](#fn-scaledistributionwithlog)
-  * [`fn withType(value)`](#fn-scaledistributionwithtype)
+* [`fn withYMixin(value)`](#fn-withymixin)
+* [`obj color`](#obj-color)
+  * [`fn withMatcher(value)`](#fn-colorwithmatcher)
+  * [`fn withMatcherMixin(value)`](#fn-colorwithmatchermixin)
+  * [`obj matcher`](#obj-colormatcher)
+    * [`fn withId(value="")`](#fn-colormatcherwithid)
+    * [`fn withOptions(value)`](#fn-colormatcherwithoptions)
+    * [`fn withOptionsMixin(value)`](#fn-colormatcherwithoptionsmixin)
+* [`obj frame`](#obj-frame)
+  * [`fn withMatcher(value)`](#fn-framewithmatcher)
+  * [`fn withMatcherMixin(value)`](#fn-framewithmatchermixin)
+  * [`obj matcher`](#obj-framematcher)
+    * [`fn withId(value="")`](#fn-framematcherwithid)
+    * [`fn withOptions(value)`](#fn-framematcherwithoptions)
+    * [`fn withOptionsMixin(value)`](#fn-framematcherwithoptionsmixin)
+* [`obj name`](#obj-name)
+  * [`fn withFixed(value)`](#fn-namewithfixed)
+* [`obj size`](#obj-size)
+  * [`fn withMatcher(value)`](#fn-sizewithmatcher)
+  * [`fn withMatcherMixin(value)`](#fn-sizewithmatchermixin)
+  * [`obj matcher`](#obj-sizematcher)
+    * [`fn withId(value="")`](#fn-sizematcherwithid)
+    * [`fn withOptions(value)`](#fn-sizematcherwithoptions)
+    * [`fn withOptionsMixin(value)`](#fn-sizematcherwithoptionsmixin)
+* [`obj x`](#obj-x)
+  * [`fn withMatcher(value)`](#fn-xwithmatcher)
+  * [`fn withMatcherMixin(value)`](#fn-xwithmatchermixin)
+  * [`obj matcher`](#obj-xmatcher)
+    * [`fn withId(value="")`](#fn-xmatcherwithid)
+    * [`fn withOptions(value)`](#fn-xmatcherwithoptions)
+    * [`fn withOptionsMixin(value)`](#fn-xmatcherwithoptionsmixin)
+* [`obj y`](#obj-y)
+  * [`fn withMatcher(value)`](#fn-ywithmatcher)
+  * [`fn withMatcherMixin(value)`](#fn-ywithmatchermixin)
+  * [`obj matcher`](#obj-ymatcher)
+    * [`fn withId(value="")`](#fn-ymatcherwithid)
+    * [`fn withOptions(value)`](#fn-ymatcherwithoptions)
+    * [`fn withOptionsMixin(value)`](#fn-ymatcherwithoptionsmixin)
 
 ## Fields
 
-### fn withAxisBorderShow
+### fn withColor
 
 ```jsonnet
-withAxisBorderShow(value=true)
+withColor(value)
 ```
 
 PARAMETERS:
 
-* **value** (`boolean`)
-   - default value: `true`
+* **value** (`object`)
 
 
-### fn withAxisCenteredZero
+### fn withColorMixin
 
 ```jsonnet
-withAxisCenteredZero(value=true)
+withColorMixin(value)
 ```
 
 PARAMETERS:
 
-* **value** (`boolean`)
-   - default value: `true`
-
-
-### fn withAxisColorMode
-
-```jsonnet
-withAxisColorMode(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-   - valid values: `"text"`, `"series"`
-
-TODO docs
-### fn withAxisGridShow
-
-```jsonnet
-withAxisGridShow(value=true)
-```
-
-PARAMETERS:
-
-* **value** (`boolean`)
-   - default value: `true`
-
-
-### fn withAxisLabel
-
-```jsonnet
-withAxisLabel(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-
-### fn withAxisPlacement
-
-```jsonnet
-withAxisPlacement(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-   - valid values: `"auto"`, `"top"`, `"right"`, `"bottom"`, `"left"`, `"hidden"`
-
-TODO docs
-### fn withAxisSoftMax
-
-```jsonnet
-withAxisSoftMax(value)
-```
-
-PARAMETERS:
-
-* **value** (`number`)
-
-
-### fn withAxisSoftMin
-
-```jsonnet
-withAxisSoftMin(value)
-```
-
-PARAMETERS:
-
-* **value** (`number`)
-
-
-### fn withAxisWidth
-
-```jsonnet
-withAxisWidth(value)
-```
-
-PARAMETERS:
-
-* **value** (`number`)
+* **value** (`object`)
 
 
 ### fn withFrame
@@ -177,119 +86,18 @@ withFrame(value)
 
 PARAMETERS:
 
-* **value** (`number`)
+* **value** (`object`)
 
 
-### fn withHideFrom
+### fn withFrameMixin
 
 ```jsonnet
-withHideFrom(value)
+withFrameMixin(value)
 ```
 
 PARAMETERS:
 
 * **value** (`object`)
-
-TODO docs
-### fn withHideFromMixin
-
-```jsonnet
-withHideFromMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-TODO docs
-### fn withLabel
-
-```jsonnet
-withLabel(value="auto")
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-   - default value: `"auto"`
-   - valid values: `"auto"`, `"never"`, `"always"`
-
-TODO docs
-### fn withLabelValue
-
-```jsonnet
-withLabelValue(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-### fn withLabelValueMixin
-
-```jsonnet
-withLabelValueMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-### fn withLineColor
-
-```jsonnet
-withLineColor(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-### fn withLineColorMixin
-
-```jsonnet
-withLineColorMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-### fn withLineStyle
-
-```jsonnet
-withLineStyle(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-TODO docs
-### fn withLineStyleMixin
-
-```jsonnet
-withLineStyleMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-TODO docs
-### fn withLineWidth
-
-```jsonnet
-withLineWidth(value)
-```
-
-PARAMETERS:
-
-* **value** (`integer`)
 
 
 ### fn withName
@@ -300,13 +108,13 @@ withName(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`)
 
 
-### fn withPointColor
+### fn withNameMixin
 
 ```jsonnet
-withPointColor(value)
+withNameMixin(value)
 ```
 
 PARAMETERS:
@@ -314,10 +122,10 @@ PARAMETERS:
 * **value** (`object`)
 
 
-### fn withPointColorMixin
+### fn withSize
 
 ```jsonnet
-withPointColorMixin(value)
+withSize(value)
 ```
 
 PARAMETERS:
@@ -325,61 +133,15 @@ PARAMETERS:
 * **value** (`object`)
 
 
-### fn withPointSize
+### fn withSizeMixin
 
 ```jsonnet
-withPointSize(value)
+withSizeMixin(value)
 ```
 
 PARAMETERS:
 
 * **value** (`object`)
-
-
-### fn withPointSizeMixin
-
-```jsonnet
-withPointSizeMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-
-### fn withScaleDistribution
-
-```jsonnet
-withScaleDistribution(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-TODO docs
-### fn withScaleDistributionMixin
-
-```jsonnet
-withScaleDistributionMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`object`)
-
-TODO docs
-### fn withShow
-
-```jsonnet
-withShow(value="points")
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-   - default value: `"points"`
-   - valid values: `"points"`, `"lines"`, `"points+lines"`
 
 
 ### fn withX
@@ -390,7 +152,18 @@ withX(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`)
+
+
+### fn withXMixin
+
+```jsonnet
+withXMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
 
 
 ### fn withY
@@ -401,265 +174,361 @@ withY(value)
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`)
 
 
-### obj hideFrom
-
-
-#### fn hideFrom.withLegend
+### fn withYMixin
 
 ```jsonnet
-hideFrom.withLegend(value=true)
+withYMixin(value)
 ```
 
 PARAMETERS:
 
-* **value** (`boolean`)
-   - default value: `true`
+* **value** (`object`)
 
 
-#### fn hideFrom.withTooltip
+### obj color
+
+
+#### fn color.withMatcher
 
 ```jsonnet
-hideFrom.withTooltip(value=true)
+color.withMatcher(value)
 ```
 
 PARAMETERS:
 
-* **value** (`boolean`)
-   - default value: `true`
+* **value** (`object`)
 
-
-#### fn hideFrom.withViz
+NOTE: (copied from dashboard_kind.cue, since not exported)
+Matcher is a predicate configuration. Based on the config a set of field(s) or values is filtered in order to apply override / transformation.
+It comes with in id ( to resolve implementation from registry) and a configuration that’s specific to a particular matcher type.
+#### fn color.withMatcherMixin
 
 ```jsonnet
-hideFrom.withViz(value=true)
+color.withMatcherMixin(value)
 ```
 
 PARAMETERS:
 
-* **value** (`boolean`)
-   - default value: `true`
+* **value** (`object`)
+
+NOTE: (copied from dashboard_kind.cue, since not exported)
+Matcher is a predicate configuration. Based on the config a set of field(s) or values is filtered in order to apply override / transformation.
+It comes with in id ( to resolve implementation from registry) and a configuration that’s specific to a particular matcher type.
+#### obj color.matcher
 
 
-### obj labelValue
-
-
-#### fn labelValue.withField
-
-```jsonnet
-labelValue.withField(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-fixed: T -- will be added by each element
-#### fn labelValue.withFixed
+##### fn color.matcher.withId
 
 ```jsonnet
-labelValue.withFixed(value)
+color.matcher.withId(value="")
 ```
 
 PARAMETERS:
 
 * **value** (`string`)
+   - default value: `""`
 
-
-#### fn labelValue.withMode
+The matcher id. This is used to find the matcher implementation from registry.
+##### fn color.matcher.withOptions
 
 ```jsonnet
-labelValue.withMode(value)
+color.matcher.withOptions(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+The matcher options. This is specific to the matcher implementation.
+##### fn color.matcher.withOptionsMixin
+
+```jsonnet
+color.matcher.withOptionsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+The matcher options. This is specific to the matcher implementation.
+### obj frame
+
+
+#### fn frame.withMatcher
+
+```jsonnet
+frame.withMatcher(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+NOTE: (copied from dashboard_kind.cue, since not exported)
+Matcher is a predicate configuration. Based on the config a set of field(s) or values is filtered in order to apply override / transformation.
+It comes with in id ( to resolve implementation from registry) and a configuration that’s specific to a particular matcher type.
+#### fn frame.withMatcherMixin
+
+```jsonnet
+frame.withMatcherMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+NOTE: (copied from dashboard_kind.cue, since not exported)
+Matcher is a predicate configuration. Based on the config a set of field(s) or values is filtered in order to apply override / transformation.
+It comes with in id ( to resolve implementation from registry) and a configuration that’s specific to a particular matcher type.
+#### obj frame.matcher
+
+
+##### fn frame.matcher.withId
+
+```jsonnet
+frame.matcher.withId(value="")
 ```
 
 PARAMETERS:
 
 * **value** (`string`)
-   - valid values: `"fixed"`, `"field"`, `"template"`
+   - default value: `""`
 
-
-### obj lineColor
-
-
-#### fn lineColor.withField
+The matcher id. This is used to find the matcher implementation from registry.
+##### fn frame.matcher.withOptions
 
 ```jsonnet
-lineColor.withField(value)
+frame.matcher.withOptions(value)
 ```
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`)
 
-fixed: T -- will be added by each element
-#### fn lineColor.withFixed
+The matcher options. This is specific to the matcher implementation.
+##### fn frame.matcher.withOptionsMixin
 
 ```jsonnet
-lineColor.withFixed(value)
+frame.matcher.withOptionsMixin(value)
 ```
 
 PARAMETERS:
 
-* **value** (`string`)
+* **value** (`object`)
 
-color value
-### obj lineStyle
-
-
-#### fn lineStyle.withDash
-
-```jsonnet
-lineStyle.withDash(value)
-```
-
-PARAMETERS:
-
-* **value** (`array`)
+The matcher options. This is specific to the matcher implementation.
+### obj name
 
 
-#### fn lineStyle.withDashMixin
+#### fn name.withFixed
 
 ```jsonnet
-lineStyle.withDashMixin(value)
-```
-
-PARAMETERS:
-
-* **value** (`array`)
-
-
-#### fn lineStyle.withFill
-
-```jsonnet
-lineStyle.withFill(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-   - valid values: `"solid"`, `"dash"`, `"dot"`, `"square"`
-
-
-### obj pointColor
-
-
-#### fn pointColor.withField
-
-```jsonnet
-pointColor.withField(value)
-```
-
-PARAMETERS:
-
-* **value** (`string`)
-
-fixed: T -- will be added by each element
-#### fn pointColor.withFixed
-
-```jsonnet
-pointColor.withFixed(value)
+name.withFixed(value)
 ```
 
 PARAMETERS:
 
 * **value** (`string`)
 
-color value
-### obj pointSize
+
+### obj size
 
 
-#### fn pointSize.withField
+#### fn size.withMatcher
 
 ```jsonnet
-pointSize.withField(value)
+size.withMatcher(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+NOTE: (copied from dashboard_kind.cue, since not exported)
+Matcher is a predicate configuration. Based on the config a set of field(s) or values is filtered in order to apply override / transformation.
+It comes with in id ( to resolve implementation from registry) and a configuration that’s specific to a particular matcher type.
+#### fn size.withMatcherMixin
+
+```jsonnet
+size.withMatcherMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+NOTE: (copied from dashboard_kind.cue, since not exported)
+Matcher is a predicate configuration. Based on the config a set of field(s) or values is filtered in order to apply override / transformation.
+It comes with in id ( to resolve implementation from registry) and a configuration that’s specific to a particular matcher type.
+#### obj size.matcher
+
+
+##### fn size.matcher.withId
+
+```jsonnet
+size.matcher.withId(value="")
 ```
 
 PARAMETERS:
 
 * **value** (`string`)
+   - default value: `""`
 
-fixed: T -- will be added by each element
-#### fn pointSize.withFixed
+The matcher id. This is used to find the matcher implementation from registry.
+##### fn size.matcher.withOptions
 
 ```jsonnet
-pointSize.withFixed(value)
+size.matcher.withOptions(value)
 ```
 
 PARAMETERS:
 
-* **value** (`number`)
+* **value** (`object`)
 
-
-#### fn pointSize.withMax
+The matcher options. This is specific to the matcher implementation.
+##### fn size.matcher.withOptionsMixin
 
 ```jsonnet
-pointSize.withMax(value)
+size.matcher.withOptionsMixin(value)
 ```
 
 PARAMETERS:
 
-* **value** (`number`)
+* **value** (`object`)
+
+The matcher options. This is specific to the matcher implementation.
+### obj x
 
 
-#### fn pointSize.withMin
+#### fn x.withMatcher
 
 ```jsonnet
-pointSize.withMin(value)
+x.withMatcher(value)
 ```
 
 PARAMETERS:
 
-* **value** (`number`)
+* **value** (`object`)
 
-
-#### fn pointSize.withMode
+NOTE: (copied from dashboard_kind.cue, since not exported)
+Matcher is a predicate configuration. Based on the config a set of field(s) or values is filtered in order to apply override / transformation.
+It comes with in id ( to resolve implementation from registry) and a configuration that’s specific to a particular matcher type.
+#### fn x.withMatcherMixin
 
 ```jsonnet
-pointSize.withMode(value)
+x.withMatcherMixin(value)
 ```
 
 PARAMETERS:
 
-* **value** (`string`)
-   - valid values: `"linear"`, `"quad"`
+* **value** (`object`)
 
-| *"linear"
-### obj scaleDistribution
-
-
-#### fn scaleDistribution.withLinearThreshold
-
-```jsonnet
-scaleDistribution.withLinearThreshold(value)
-```
-
-PARAMETERS:
-
-* **value** (`number`)
+NOTE: (copied from dashboard_kind.cue, since not exported)
+Matcher is a predicate configuration. Based on the config a set of field(s) or values is filtered in order to apply override / transformation.
+It comes with in id ( to resolve implementation from registry) and a configuration that’s specific to a particular matcher type.
+#### obj x.matcher
 
 
-#### fn scaleDistribution.withLog
+##### fn x.matcher.withId
 
 ```jsonnet
-scaleDistribution.withLog(value)
-```
-
-PARAMETERS:
-
-* **value** (`number`)
-
-
-#### fn scaleDistribution.withType
-
-```jsonnet
-scaleDistribution.withType(value)
+x.matcher.withId(value="")
 ```
 
 PARAMETERS:
 
 * **value** (`string`)
-   - valid values: `"linear"`, `"log"`, `"ordinal"`, `"symlog"`
+   - default value: `""`
 
-TODO docs
+The matcher id. This is used to find the matcher implementation from registry.
+##### fn x.matcher.withOptions
+
+```jsonnet
+x.matcher.withOptions(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+The matcher options. This is specific to the matcher implementation.
+##### fn x.matcher.withOptionsMixin
+
+```jsonnet
+x.matcher.withOptionsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+The matcher options. This is specific to the matcher implementation.
+### obj y
+
+
+#### fn y.withMatcher
+
+```jsonnet
+y.withMatcher(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+NOTE: (copied from dashboard_kind.cue, since not exported)
+Matcher is a predicate configuration. Based on the config a set of field(s) or values is filtered in order to apply override / transformation.
+It comes with in id ( to resolve implementation from registry) and a configuration that’s specific to a particular matcher type.
+#### fn y.withMatcherMixin
+
+```jsonnet
+y.withMatcherMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+NOTE: (copied from dashboard_kind.cue, since not exported)
+Matcher is a predicate configuration. Based on the config a set of field(s) or values is filtered in order to apply override / transformation.
+It comes with in id ( to resolve implementation from registry) and a configuration that’s specific to a particular matcher type.
+#### obj y.matcher
+
+
+##### fn y.matcher.withId
+
+```jsonnet
+y.matcher.withId(value="")
+```
+
+PARAMETERS:
+
+* **value** (`string`)
+   - default value: `""`
+
+The matcher id. This is used to find the matcher implementation from registry.
+##### fn y.matcher.withOptions
+
+```jsonnet
+y.matcher.withOptions(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+The matcher options. This is specific to the matcher implementation.
+##### fn y.matcher.withOptionsMixin
+
+```jsonnet
+y.matcher.withOptionsMixin(value)
+```
+
+PARAMETERS:
+
+* **value** (`object`)
+
+The matcher options. This is specific to the matcher implementation.
