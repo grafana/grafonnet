@@ -1,4 +1,5 @@
 local alerting = import './alerting.libsonnet';
+local apps = import './apps.libsonnet';
 local core = import './core.libsonnet';
 local panel = import './panel.libsonnet';
 local query = import './query.libsonnet';
@@ -13,7 +14,8 @@ function(version, schemas)
     + panel.render(patchedSchemas.panel)
     + query.render(patchedSchemas.query)
     + row.render(patchedSchemas.row)
-    + alerting.render(patchedSchemas.alerting);
+    + alerting.render(patchedSchemas.alerting)
+    + apps.render(patchedSchemas.apps.resources, patchedSchemas.apps.metadata);
   {
     ['grafonnet-' + version + '/' + file]:
       '// This file is generated, do not manually edit.\n'

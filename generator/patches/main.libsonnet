@@ -40,7 +40,73 @@ local utils = import '../utils.libsonnet';
 
     alerting:
       [root.getAlertingSchema(schemas)],
+
+    apps: {
+      resources:
+        std.map(
+          root.sanitizeDashboardV2Schema,
+          std.filter(
+            function(schema)
+              utils.isAppPlatformSchema(schema)
+              // dashboardv2beta1 is superseded by dashboardv2
+              && schema.info.title != 'dashboardv2beta1',
+            schemas,
+          )
+        ),
+      // Shared Kubernetes-style object metadata, sourced from the app-platform
+      // `resource` schema.
+      metadata: root.getAppPlatformMetadataSchema(schemas),
+    },
   },
+
+  // Extracts the shared `Metadata` schema (name, namespace, labels, ...) from
+  // the app-platform `resource` schema, wrapped as a standalone schema for
+  // rendering.
+  getAppPlatformMetadataSchema(schemas):
+    local resourceSchema = std.filter(
+      function(s) s.info.title == 'resource',
+      schemas,
+    );
+    if std.length(resourceSchema) > 0
+       && 'Metadata' in resourceSchema[0].components.schemas
+    then resourceSchema[0] + {
+      info+: { title: 'metadata' },
+    }
+    else null,
+
+  // dashboardv2 has indirect recursion through the layout chain
+  // (RowsLayout -> RowsLayoutRow -> layout -> RowsLayout, and the same for
+  // TabsLayout) and conditional rendering groups. CRDsonnet resolves $refs
+  // recursively, so these cycles must be broken to prevent infinite recursion.
+  sanitizeDashboardV2Schema(schema):
+    if schema.info.title == 'dashboardv2'
+    then
+      schema
+      + {
+        components+: {
+          schemas+: {
+            RowsLayoutRowSpec+: {
+              properties+: {
+                // Break RowsLayout -> Row -> layout -> RowsLayout recursion.
+                layout: { type: 'object' },
+              },
+            },
+            TabsLayoutTabSpec+: {
+              properties+: {
+                // Break TabsLayout -> Tab -> layout -> TabsLayout recursion.
+                layout: { type: 'object' },
+              },
+            },
+            ConditionalRenderingGroupSpec+: {
+              properties+: {
+                // Break nested conditional rendering group recursion.
+                items: { type: 'array', items: { type: 'object' } },
+              },
+            },
+          },
+        },
+      }
+    else schema,
 
   sanitizeDashboardSchema(schema):
     schema

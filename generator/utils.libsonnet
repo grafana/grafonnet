@@ -42,4 +42,60 @@ local xtd = import 'github.com/jsonnet-libs/xtd/main.libsonnet';
       + split[1:]
     ),
 
+  // App-platform helpers
+  // ---------------------
+  // App-platform resource schemas (folder, playlist, preferences,
+  // dashboardv2, ...) have an empty `x-schema-kind`/`x-schema-identifier` but
+  // follow a naming convention: a `<Spec>ApiVersion` const, a `<Spec>Kind`
+  // const, and a `<Spec>` schema holding the spec.
+
+  // Returns the key of the primary `*ApiVersion` schema (case-insensitive
+  // suffix), or null when absent.
+  appPlatformApiVersionKey(schema):
+    local matches = std.filter(
+      function(k) std.endsWith(std.asciiLower(k), 'apiversion'),
+      std.objectFields(schema.components.schemas),
+    );
+    if std.length(matches) > 0
+    then matches[0]
+    else null,
+
+  // Derives the identity of an app-platform resource schema:
+  // { specName, kind, apiVersion, resource }.
+  // - specName: name of the spec schema (e.g. 'Folder', 'Dashboard')
+  // - kind: value of the `<specName>Kind` const (e.g. 'Folder')
+  // - apiVersion: value of the `<specName>ApiVersion` const
+  // - resource: lowercased specName (e.g. 'folder')
+  appPlatformIdentity(schema):
+    local schemas = schema.components.schemas;
+    local apiVersionKey = root.appPlatformApiVersionKey(schema);
+    // strip the (case-insensitive) 'ApiVersion' suffix
+    local specName = apiVersionKey[0:std.length(apiVersionKey) - std.length('ApiVersion')];
+    local kindKey = specName + 'Kind';
+    {
+      specName: specName,
+      resource: std.asciiLower(specName),
+      kind: schemas[kindKey].const,
+      apiVersion: schemas[apiVersionKey].const,
+    },
+
+  // Whether a schema is a supported app-platform resource: it has an empty
+  // `x-schema-kind`, a `*ApiVersion` schema, and a matching `<Spec>`/`<Spec>Kind`
+  // pair. This excludes shared type libraries (common, units) and the
+  // `resource` manifest wrapper, which have no `*ApiVersion` schema.
+  isAppPlatformSchema(schema):
+    std.get(schema.info, 'x-schema-kind', '') == ''
+    && root.appPlatformApiVersionKey(schema) != null
+    && (
+      local identity = root.appPlatformIdentity(schema);
+      identity.specName in schema.components.schemas
+      && (identity.specName + 'Kind') in schema.components.schemas
+      && 'const' in schema.components.schemas[identity.specName + 'Kind']
+    ),
+
+  // Extracts the version suffix from the schema title given the resource name
+  // (e.g. title 'folderv1beta1', resource 'folder' -> 'v1beta1').
+  appPlatformVersion(schema, resource):
+    schema.info.title[std.length(resource):],
+
 }

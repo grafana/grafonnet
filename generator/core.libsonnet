@@ -119,6 +119,10 @@ local utils = import './utils.libsonnet';
           a.id.new('alerting'),
           a.import_statement.new('alerting.libsonnet'),
         ),
+        a.field.new(
+          a.id.new('apps'),
+          a.import_statement.new('apps.libsonnet'),
+        ),
       ]
     ).toString(),
 
