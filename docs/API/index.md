@@ -5,6 +5,7 @@
 ## Subpackages
 
 * [alerting](alerting/index.md)
+* [apps](apps/index.md)
 * [dashboard](dashboard/index.md)
 * [folder](folder.md)
 * [librarypanel](librarypanel/index.md)

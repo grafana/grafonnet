@@ -20,4 +20,5 @@
   query: import 'query.libsonnet',
   util: import 'custom/util/main.libsonnet',
   alerting: import 'alerting.libsonnet',
+  apps: import 'apps.libsonnet',
 }
