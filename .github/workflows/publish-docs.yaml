@@ -8,14 +8,14 @@ jobs:
   publish-docs:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pages: write
 
     steps:
       - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
         with:
           fetch-depth: 0
-          persist-credentials: false
+          persist-credentials: true
 
       - uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548 # v6
 
