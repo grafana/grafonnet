@@ -19,8 +19,9 @@ jobs:
 
       - name: Install jsonnet
         run: |
-          wget -qO- https://github.com/google/go-jsonnet/releases/download/v${JSONNET_VERSION}/go-jsonnet_${JSONNET_VERSION}_Linux_x86_64.tar.gz \
-            | tar -xvz --one-top-level=$HOME/.local/bin
+          mkdir -p "$HOME/.local/bin"
+          wget -qO- "https://github.com/google/go-jsonnet/releases/download/v${JSONNET_VERSION}/go-jsonnet_${JSONNET_VERSION}_Linux_x86_64.tar.gz" \
+            | tar -xz -C "$HOME/.local/bin"
 
       - name: Install jsonnet-bundler
         run: |
